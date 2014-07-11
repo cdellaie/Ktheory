@@ -1,0 +1,11 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}K-th\IeC {\'e}orie des $C^*$-alg\IeC {\`e}bres}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}La suite exacte \IeC {\`a} six termes}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Produits crois\IeC {\'e}s de $C^*$-alg\IeC {\`e}bres}{5}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Th\IeC {\'e}or\IeC {\`e}mes g\IeC {\'e}n\IeC {\'e}raux}{5}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Extension de Toeplitz}{7}{subsubsection.1.2.2}
+\contentsline {subsection}{\numberline {1.3}Suite exacte de Pimsner-Voiculescu}{8}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}La preuve originale}{8}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.2}Un exemple : le tore non-commutatif}{12}{subsubsection.1.3.2}
+\contentsline {section}{\numberline {2}Annexes}{15}{section.2}
+\contentsline {subsection}{\numberline {2.1}Produits tensoriels de $C^*$-alg\IeC {\`e}bres}{15}{subsection.2.1}

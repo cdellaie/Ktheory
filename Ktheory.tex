@@ -1,0 +1,371 @@
+\textbf{Notations}\\
+Pour une $C^*$-algèbre $A$ non nécessairement unitale, on note $A^+$ la $C^*$-algèbre unitale qui la contient en tant qu'idéal bilatère, définie par :
+
+\[\begin{array}{c}A=\{(a,\lambda)\in A\times \C \} \\ (a,\lambda)(b,\mu)=(ab+\lambda b +\mu a,\lambda\mu)\end{array}\]
+
+
+\section{K-théorie des $C^*$-algèbres}
+
+Différentes définitions du foncteur $K_0$:
+\begin{itemize}
+\item groupe de Grothendieck associé au semi-groupe des classes d'équivalences de projections dans $M_\infty (A)$ muni de la somme directe.
+\item groupe de Grothendieck associé  par les sous-modules projectifs fermés de type fini de $\mathcal H_A$
+\end{itemize}
+ 
+\begin{definition}
+Soit $p$ et $q$ deux projections dans une $C^*$-algèbre $A$.\\
+$p\sim q$ s'il existe une isométrie partielle $u$ de $A$ telle que $p=u^*u $ et $q=uu^*$. ( équivalence de Murray-Von Neumann)\\
+$p\sim_u q$ s'il existe un unitaire $u$ de $A^+$ tel que $p=uqu^*$. (Similitude)\\
+$p\sim_h q$ s'il existe un chemin continu en norme de projections de $p$ à $q$.(Homotopie)\\
+\end{definition}
+
+En général, on a : $\sim_h \Rightarrow \sim_u \Rightarrow \sim$. Pour avoir les implications inverses, on peut se placer dans $M_\infty(A)$. (Doubler la dimension à chaque fois suffit) On peut alors considérer l'ensemble des projections de $M_\infty (A)$ et quotienter par l'unique relation d'équivalence définie ci-dessus. L'ensemble obtenu est un semi-groupe pour l'opération de somme directe de projecteur, nommé $V(A)$.\\
+
+\begin{definition}
+Le premier groupe de $K$-théorie de $A$ est :\\
+le groupe de Grothendieck de $V(A)$ si $A$ est unitale.\\
+le noyau de $K_0(A^+)\rightarrow K_0(\C)$ sinon.
+\end{definition}
+
+Pour passer aux groupes de $K$-théorie d'indices supérieurs de $A$, on se servira du foncteur de suspension $S(A)=A\times C_0(\R)$.
+\begin{definition}
+Les groupes de $K$-théorie d'ordre supérieurs de $A$ sont définis par suspension :
+\[\forall i\in \mathbb N, \quad K_i(A)=K_0(S(A)).\]
+\end{definition}
+ Ces foncteurs de la catégorie des $C^*$-algèbres dans celle des groupes abéliens sont semi-exacts, i.e. ils transforment toute suite exacte courte en suite exacte très courte.
+
+\subsection{La suite exacte à six termes}
+\begin{thm}
+Soit \begin{tikzcd}[column sep=small] 0 \arrow{r}  & J \arrow{r}{\iota}& A \arrow{r}{\pi} & B \arrow{r} & 0\end{tikzcd} une suite exacte de $C^*$-algèbres. Alors la suite à six termes suivantes est exacte :\\
+
+\[\begin{tikzcd}
+ K_0(J) \arrow{r}{\iota_*} & K_0(A)  \arrow{r}{\pi_*}  &    K_0(B)  \arrow{d}{\delta}  \\
+ K_1(B) \arrow{u}{\partial} & K_1(A)  \arrow{l}{\pi_*}  &    K_1(J) \arrow{l} {\iota_*}
+\end{tikzcd}\]
+\end{thm}
+
+C'est l'un des résultats fondamentaux en $K$-théorie, il permet des calculs effectifs. Le premier pas à faire est de construire l'indice associé à toute suite exacte $\partial : K_1(B)\rightarrow K_0(J)$, qui transforme toute suite exacte courte en suite exacte longue. On peut trouver $2$ isomorphismes naturels qui donnent la périodicité de Bott :
+\[K_{i+1}(A)\simeq K_i(A), i=0,1.\]
+Ces isomorphismes sont donnés par l'application de Bott $\beta : K_0 \rightarrow K_1 S$ et $\theta :  K_1 \rightarrow K_0 S$. La périodicité permet de conclure en enroulant la suite exacte longue grâce à l'application exponentielle $\delta : K_0(B)\rightarrow K_1(J)$ qui est la composition $\theta_J^{-1}\circ \partial \circ \beta_B$.\\
+
+\textbf{Remarque sur le nom d'application exponentielle.} Soit $J$ un idéal bilatère de la $C^*$-algèbre $A$. Si $p-p_n \in M_\infty (A/J)$ et $x\in M_\infty (A^{+})$ est un relevé auto-adjoint de $p$, alors :
+\[\delta([p]-[p_n])=[\exp(-2i\pi x)].\]
+De plus, si toutes les projections de $M_\infty(A/J^{+})$ peuvent se relever en des projections de $M_\infty(A^{+})$, alors l'application exponentielle est triviale :
+
+\[\exp(-2i\pi x )=\sum_{n=0}^\infty \frac{(-2i\pi x)^n}{n!}=1+(e^{-2i\pi}-1) x =1\]
+car $x=x^2$.\\
+
+\begin{dem}
+Rappelons que $\delta$ est la composée donnée par :
+\[
+\begin{tikzcd}
+K_0(A/J)  \arrow{r}{\delta}\arrow{d}{\beta_{A/J}}	& K_1(J) \arrow{d}{\theta_J} \\
+K_1(S A/J) \arrow{r}{\partial} 	& K_0(SJ)
+\end{tikzcd}
+\]
+
+Soient $p\in A/J$ et $x \in A$ un élément auto-adjoint tel que $\pi(x)=p$. Comme $e^{2i\pi tp}=1+(e^{2i\pi t}-1)p$, $f_x(t):=1+(e^{2i\pi t}-1)x$ relève $f_p(t)=e^{2i\pi tp}$. \\
+
+Notons, dans un premier temps, que tout élément $y$ d'une $C^*$-algèbre tel que le spectre de $y^*y$ soit inclus dans $[0;1]$ produit un unitaire $\begin{pmatrix} y & \sqrt{1-yy^*}\\ -\sqrt{1-y^*y} & y^* \end{pmatrix}$. \\
+On peut alors affirmer que 
+\[w_{f_x}:=\begin{pmatrix} f_x & \sqrt{1-f_xf_x^*}\\ -\sqrt{1-f_x^*f_x} & f^*_x \end{pmatrix}\]
+est un relevé unitaire de $\begin{pmatrix}f_p & 0\\ 0 & f_p^*\end{pmatrix}$, relevé qui nous donne l'indice de $[f_p]_1=\beta_{A/J}[p]_0$ :  
+\[\partial [f_p]_1= [w_{f_x} p_n w_{f_x^*}]-[p_n].\]
+
+Soit $g_x(t):=(1-t)1_{A^+}+t e^{2i \pi x}$ un chemin continu entre l'identité et $e^{2i\pi x}$. L'image de $e^{2i\pi x}$ par $\theta_J$ se calcule comme l'indice $[w_{g_x} p_n w_{g^*_x}]-[p_n]$. Montrer que $f_x$ et $g_x$ sont homotopes suffit donc à conclure. \\
+
+Pour cela, remarquons que, $t$ variant de $0$ à $1$ et le spectre de $x$ étant inclus dans $\{0,1\}$ %VERIFICATION
+, les éléments $f_x$ et $g_x$ ne dépendent que des valeurs des fonctions réelles
+\[\begin{array}{rl}f(t,x) &=1+(e^{2i\pi t}-1)x \\
+g(t,x) &=1-t+te^{2i\pi x}=f(x,t)\end{array}\]
+au voisinage du bord du carré $\partial [0;1]\times [0;1]$, homéomorphe au cercle $\mathbb S^1$. Les classes d'homotopie de fonctions continues sur le cercle sont classifiée par leur nombre de tours, voir le livre d'Hatcher par exemple~\cite{Hatcher}, et on vérifie que $f$ et $g$ sont ainsi homotopes, et donc que :
+\[[w_{f_x} p_n w_{f_x^*}]=[w_{g_x} p_n w_{g^*_x}].\]
+L'identité $\partial \circ \beta_B= \theta_J\circ \delta$ est démontrée, ce qui conclut.
+\qed
+\end{dem}
+
+
+\subsection{Produits croisés de $C^*$-algèbres}
+
+\subsubsection{Théorèmes généraux}
+
+Soit $A$ une $C^*$-algèbre et $\Gamma$ un groupe discret. On se donne de plus une action par automorphisme $\alpha : \Gamma \rightarrow Aut(A)$. On peut alors munir l'espace $C_c(\Gamma,A)$ des fonctions à support fini d'un produit de convolution tordu par $\alpha$ :
+\[f*_\alpha g = \sum_{s,t \in \Gamma} f(s)\alpha_s(g(t))st.\]
+
+Soit $\lambda_{\Gamma,A}$ la représentation régulière gauche de $C_c(\Gamma,A)$ sur $l^2(\Gamma,A)=\{\eta : \Gamma \rightarrow A : \sum_s \eta^*(s)\eta(s) <\infty\}$ :
+\[(\lambda_{\Gamma,A}(f)\eta)(\gamma) = \sum_{s\in \Gamma} \alpha_{\gamma^{-1}}(f(s))\eta(\gamma^{-1}s)\]
+pour tous $f\in C_c(\Gamma,A)$,$\eta \in l^2(\Gamma,A)$ et $\gamma \in \Gamma$. \\
+
+Le produit croisé réduit de $A$ par $\Gamma$, noté $A\times_\alpha \Gamma$, est défini comme la fermeture pour la norme d'opérateur de $\lambda_{\Gamma,A}(C_c(\Gamma,A))$ dans $B(l^2(\Gamma,A))$.\\
+
+Les actions habituelles de $A$ et de $\Gamma$ sur $l^2(\Gamma,A)$ sont combinées.
+\[(\pi(a)\eta)(s) = \alpha_{s^{-1}}(a)\eta(s)\]
+\[(\lambda(\gamma)\eta)(s)=\eta(\gamma^{-1}s)\]
+ On parle pour la paire $(\lambda, \pi)$ de représentation covariante du système $\{A,\Gamma,\alpha\}$, car la relation :
+\[\lambda(\gamma)\pi(a)\lambda(\gamma^{-1})=\pi(\alpha_\gamma(a))\]
+est vérifiée.
+
+
+\begin{thm}[Pimser-Voiculescu]\label{PV}
+Soit $A$ une $C^*$-algèbre et $\alpha \in Aut(A)$. Il existe alors une suite exacte à six termes :\\
+\begin{tikzcd}
+ K_0(A) \arrow{r}{1-\alpha_*} & K_0(A)  \arrow{r}{\iota_*}  &    K_0(A\times_\alpha \Z)  \arrow{d}  \\
+ K_1(A\times_\alpha \Z) \arrow{u} & K_1(A)  \arrow{l}{\iota_*} &    K_1(A) \arrow{l}{1-\alpha_*} 
+\end{tikzcd}
+.
+\end{thm}
+
+\begin{thm}[Connes-Thom]
+Soit $\alpha : \R \rightarrow Aut(A)$ un morphisme, alors :
+\[K_i(A\times_\alpha \R)\cong K_{1-i}(A)\quad,i =0,1.\]
+\end{thm}
+
+La première chose que l'on peut, et que l'on va, dire à propos des produits croisés est que les générateurs de leurs groupes de $K$-théorie prennent une forme sympathique, qui va nous permettre de faire des calculs explicites dans la preuve de la suite de Pimsner-Voiculescu.\\
+
+\begin{lem}\label{generateur}
+Soit $B$ une $C^*$-algèbre unitale, $1_B\in A$ une sous-$C^*$-algèbre de $B$, et $u$ un unitaire de $B$ tels que $A$ et $u$ engendrent $B$ et $uAu^*=A$.\\
+Alors $K_1(B)$ est engendré par les inversibles de la forme :
+\[1_B\otimes 1_n +x(u^*\otimes 1_n)\quad , x\in A\otimes \frak M_n.\]
+De plus, si $B=A\times_\alpha \Z$, alors on peut se limiter aux classes d'unitaires de la forme :
+\[1_B\otimes 1_n-F+Fx(u^*\otimes 1_n)F\quad F,x\in A\otimes\frak M_n\]
+où $F$ désigne une projection auto-adjointe. 
+\end{lem}
+
+La remarque suivante est importante pour la preuve du lemme \ref{isom} : dans le cas $B=A\times_\alpha \Z$, les classes concernées sont stables par somme, donc tout élément de $K_1(B)$ est la différence de deux générateurs.\\
+
+%FAIRE LA PREUVE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Extension de Toeplitz}
+
+
+Soient $A$ et $C$ deux $C^*$-algèbres. \\
+Par extension de $A$ par $C$, on entend un triplet $(B,\alpha,\beta)$ d'une $C^*$-algèbre et de deux morphismes telle que la suite :\\
+
+\begin{tikzcd}[column sep =small] 
+0 \arrow{r}  & A \arrow{r}{\alpha}  &  B \arrow{r}{\beta}  & C \arrow{r}& 0 \\ 
+\end{tikzcd}
+
+soit exacte.\\
+
+Cette section présente la construction d'une extension de $A\otimes \K$ par $A\times_\alpha \Z$ qui sera utile dans la preuve de l'exactitude de la suite de PV : l'extension de Toeplitz. Dans tout le document $\Hil$ dénote un espace de Hilbert, $l_2$ par exemple, dont on fixe une base hilbertienne $(e_n)$, et $\B$ et $\K$ sont respectivement l'algèbre des opérateurs bornés et compacts sur $\Hil$. $\K$ est un idéal bilatère et :
+\[\pi : \B \rightarrow \Cat\]
+est la projection naturelle sur l'algèbre de Catkin. \\
+
+Soit $S\in \B$ l'opérateur de shift unilatéral, qui envoie $e_n$ sur $e_{n+1}$. On note $C^*(S)$ la $C^*$-algèbre unitale engendrée par $S$. On voit que $S^*$ envoie $e_1$ sur $0$ et $e_n$ sur $e_{n-1}$ lorsque $n\geq 2$. Si on note $E_{ij}(x)=\langle x,e_j\rangle e_i$, on a :
+
+\[E_{ij} = S^{i-1}S^{*j-1}-S^{i}S^{*j}\in C^*(S)\]
+$\K $ est donc un idéal bilatère de $C^*(S)$ et $P=1-SS^* = E_{11}$ est de rang $1$ donc compact. On en déduit que $S$ est essentiellement normal et 
+\[Spec(\pi S)\subset \mathbb S^1\]
+Montrons que c'est en fait une égalité. Par l'absurde, si l'inclusion est stricte, alors \textbf{A FINIR } \\ %%%%afinir 
+
+Récapitulons : $C^*(S)/\K$ est $*$-isomorphe à l'algèbre des fonctions continues sur le tore $C(\mathbb S^1)$, et l'image de $S$ est la fonction identité sur $\mathbb S^1$, noté$z$. On a donc une extension, écrite sous la forme d'une suite exacte :
+\[\begin{tikzcd}[column sep =small] 0 \arrow{r} & \K \arrow{r} & C^*(S) \arrow{r} & C(\mathbb S ^1) \arrow{r} & 0 \end{tikzcd}\]
+
+On définit l'algèbre de Toeplitz $\mathcal T$ associée à la paire $(A,\alpha)$ comme la $C^*$-sous-algèbre de $(A\times_\alpha \Z)\otimes C^*(S)$ engendré par $A\otimes I$ et $u\otimes S$. Rappelons que l'on voit $A$ comme une sous-$*$-algèbre de $A\times_\alpha \Z$, et que l'on note $u$ l'unitaire qui rend intérieure l'action de $\alpha$ :
+\[\forall a\in A, n\in \Z, \quad \alpha(n)a=u^{*n} a u^n\]
+
+Observons maintenant $A\times_\alpha \Z$, dont on va montrer qu'elle se réalise comme un quotient de $\mathcal T$ par un idéal bilatère fermé. Soit donc $J$ l'idéal bilatère fermé engendré par la projection $1\otimes P$. La première chose à remarquer, c'est que l'on a un $*$-morphisme :
+\[\phi \left\{\begin{array}{ccc}\K & \rightarrow & \mathcal T\\
+				e_{ij} & \rightarrow & S^i P S^{*j}\end{array}\right. .\]
+
+Il est ici défini sur le système d'unités de $\K$, 
+\[e_{ij}(x)=\langle x,e_i\rangle e_j\]
+ce qui permet facilement de l'étendre à $\K$ entier. \\
+
+L'identité suivante permet d'étendre $\phi$ à $A\otimes \K$ :
+\[(u\otimes S)^i (a\otimes P) (u\otimes S)^{*j}=(u^i a u^{*j}) \otimes \phi (e_{ij})\]
+définit l'extension de $\phi$ à $A\otimes \K$. Alors $\phi(A\otimes \K)=J\subset \mathcal T$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Suite exacte de Pimsner-Voiculescu}
+\subsubsection{La preuve originale}
+
+Maintenant que le décor est planté, nous pouvons passer à la $K$-théorie. Nous allons d'abord démontré le :
+
+\begin{lem}\label{diagramme}
+Les diagrammes suivant :
+\[\begin{tikzcd}[column sep = huge]
+K_i(A\otimes K) \arrow{r}{\psi_*}& K_i(\mathcal T) \\
+K_i(A)   \arrow{u}{\simeq}\arrow{r}{(id_A)_*-\alpha(-1)_*}& K_i(A) \arrow{u}{d_*}
+\end{tikzcd}
+\]
+sont commutatifs pour $i\in\{0,1\}$ , et $d_* : K_1(A)\rightarrow K_1(\mathcal T)$ est injectif.
+\end{lem}
+
+L'isomorphisme $K_1(A)\rightarrow K_1(A\otimes\K)$ associe à une classe $[v]\in K_1(A)$ l'élément $[v\otimes e_{00}+(I-1\otimes e_{00})]$, dont l'image par $\psi_*$ est :
+\begin{equation}\label{identite}\psi_*[v\otimes e_{00}+(I-1\otimes e_{00})]= [v\otimes P]+[1\otimes I-1\otimes P] = [v\otimes P]+[1\otimes SS^*]\end{equation}
+
+Maintenant :
+\begin{equation}\label{calcul}d_*\circ \left(id_A-\alpha(-1)\right)_*[v]= [ v\otimes I]-[ u^*vu\otimes I]\end{equation}
+
+Soit l'unitaire :\quad\[\Omega = \begin{pmatrix}u\otimes S & Q \\ 0 & u^*\otimes S^*\end{pmatrix}\in \mathcal T \otimes M_2\]
+
+On remarque que :
+\[\Omega\begin{pmatrix}u^*vu\otimes I & 0 \\ 0 & 1\otimes I\end{pmatrix}\Omega^*= \begin{pmatrix}v\otimes SS^* +QQ^*& Q(u\otimes S) \\ (u^*\otimes S^*)Q^* & 1\otimes I\end{pmatrix}\]
+\[=\begin{pmatrix}v\otimes SS^* +QQ^*& 0 \\ 0 & 1\otimes I\end{pmatrix}\]
+
+
+Mais la classe dans $K_1$ est invariante par augmentation, i.e. $[x]=\left[\begin{pmatrix}x& 0 \\ 0 & 1\end{pmatrix}\right]$, et par conjugaison par un unitaire, donc :
+\[\left[\Omega\begin{pmatrix}u^*vu\otimes I & 0 \\ 0 & 1\otimes I\end{pmatrix}\Omega^*\right]=\left[u^*vu\otimes I\right]\]
+En remplaçant dans ~\eqref{calcul}, on obtient :
+\begin{align*}
+[ v\otimes I]-[v\otimes SS^* +Q]& =[( v\otimes I)(v\otimes SS^* +Q)^{-1}]\\\
+&=[v^*\otimes SS^* +Q]\\
+&=[1\otimes SS^* +v\otimes P]
+\end{align*}
+
+qui est l'expression que l'on avait trouvé pour l'image de $[v]$ par $\psi_*$ dans ~\eqref{identite}. La commutativité du diagramme $i=0$ suit la même preuve : il suffit de remarquer que si l'on prend une projection auto-adjointe $q\in A$, alors dans $K_0(\mathcal T)$ : 
+\begin{align*}
+[(\alpha(-1)q )\otimes I] & =\left[\Omega\begin{pmatrix}(\alpha(-1)q )\otimes I & 0\\ 0 & 0\end{pmatrix}\Omega^*\right] \\
+	& = \left[\begin{pmatrix}q \otimes SS^* & 0\\ 0 & 0\end{pmatrix}\right]\\
+	& = [q \otimes SS^*].
+\end{align*}
+Ceci assure que : \[d_*\circ \left( (id_A)_*-\alpha(-1)_*\right) [q\otimes e_{00}]=[q\otimes I]-[(\alpha(-1)q)\otimes I]=[q\otimes P] =\psi_*[q\otimes e_{00}].\]
+
+Les diagrammes commutent bien, il reste à montrer l'injectivité de $d_*$.\\
+
+Pour cela, montrons que si $v_0$ et $v_1$ sont des unitaires de $A$, et $t\mapsto w_t$ un chemin continu dans les unitaires de $\mathcal T$ d'origine $v_0\otimes I$ et d'arrivée $v_1\otimes I$, alors $[v_0]=[v_1]$ dans $K_1(A)$.\\
+
+Calculons :
+\[\begin{pmatrix}w_t & 0 \\ 0 & 1\otimes I\end{pmatrix}\Omega \begin{pmatrix} \tilde{\alpha}(-1)w^*_t & 0 \\ 0 & 1\otimes I\end{pmatrix}\Omega^*
+		=\begin{pmatrix}w_t (1\otimes S)w_t^*(1\otimes S^*) + w_t Q& 0 \\ 0 & 1\otimes I\end{pmatrix}.\]
+
+ Le chemin unitaire $y_t=w_t (1\otimes S)w_t^*(1\otimes S^*) + w_t Q\in \mathcal T$ vérifie :
+\[\forall t, \quad y_t \in 1\otimes I +J.\]
+En effet : 
+\[y_t -1\otimes I = (w_t-1\otimes I)Q+w_t\big((1\otimes S)w_t^*-w_t^*(1\otimes S)\big)(1\otimes S^*),\]
+mais un élément de la forme $(1\otimes S)w-w(1\otimes S)$ est toujours dans $B\otimes \phi(\K)$, si $w\in \mathcal T$. Si $w$ est dans $A\otimes I$ ou vaut $u\otimes S$, on obtient $0$, et si $w=u^*\otimes S^*$, le commutateur vaut $u^*\otimes P\in B\otimes \phi(\K)$. Ces éléments génèrent un algèbre dense dans $\mathcal T$ : l'assertion en découle.\\
+
+On a donc un chemin continu d'unitaires de $1\otimes SS^*+v_0\otimes P$ à $1\otimes SS^*+v_1\otimes P$, qui reste dans $1\otimes I +J$. Comme $\psi$ établit un isomorphisme de $\C1\otimes I +J$ sur $\tilde{A\otimes \K}$, on a donc, dans $K_1(\tilde{A\otimes \K})$ :
+\[[\tilde{I}-1\otimes e_{00}+v_0\otimes e_{00} ]=[ \tilde{I}-1\otimes e_{00}+v_1\otimes e_{00}]\]
+donc : $[v_0]=[v_1]$ dans $K_1(A)$, et l'injectivité de $d_*$ est démontrée.
+\qed\\
+
+En passant l'extension de Toeplitz en $K$-théorie, et en combinant avec le lemme \ref{diagramme}, on obtient le diagramme suivant :\\
+
+\begin{tikzcd}[column sep = large]
+K_1(A\otimes \K) \arrow{r}{\psi_*} 	& K_1(\mathcal T) \arrow{r}{\pi_*}	& K_1(A\times_\alpha \Z) \arrow{r}{\delta} &K_0(A\otimes \K) \\
+K_1(A) \arrow{u}{\simeq} \arrow{r}{(id_A-\alpha(-1))_*}	& K_1(A) \arrow{u}{d_*}	\arrow{ur}{\iota_*}
+\end{tikzcd}\\
+
+dont la première ligne est exacte, et le carré commute.\\
+
+\begin{lem}\label{isom} $d_* : K_1(A)\rightarrow K_1(\mathcal T)$ est un isomorphisme.\end{lem} 
+
+Montrons que $\text{Ker}\ \delta \subset \text{Im}\ \iota_*$. Cela suffit puisque si $d_*$ n'est pas surjectif, il existe un élément $x\in K_1(\mathcal T)\setminus \text{Im}\ d_*$ , dont l'image par $\pi_*$ n'est pas dans l'image de $\iota_*$. Pourtant : $\delta\circ\pi_*( z) =0$.\\
+
+Nous allons montrer que tout élément de $\text{Ker }\delta$ s'écrit :
+\[w=[1\otimes 1_n -F_1+F_1x_1(u^*\otimes 1_n)F_1]_1-[1\otimes 1_n -F_2+F_2x_2(u^*\otimes 1_n)F_2]_1\]
+pour certains $x_1$, $x_2$, $F_1$ et $F_2$ dans $A\otimes \frak M_n$ tels que $F_i$ soient des projections auto-adjointes unitairement équivalentes : il existe un unitaire $v\in A\otimes \frak M_n$ les entrelaçant $F_1=vF_2v^*$.\\
+
+Montrons que cela conclut. Dans $K_1(A\times_\alpha \Z)$, on a l'égalité :
+\begin{align*}
+[1\otimes 1_n -F_2+F_2x_2(u^*\otimes 1_n)F_2]_1 & =[1\otimes 1_n -F_1+F_1 v x_2(u^*\otimes 1_n)v^* F_1]_1 \\
+								& = [1\otimes 1_n -F_1+F_1 y (u^*\otimes 1_n)F_1]_1
+\end{align*}
+où $y=vx_2(\alpha(-1)\otimes id_n)v^*\in A\otimes \frak M_n$. Alors :
+
+\begin{align*}
+w & =[\left(1\otimes 1_n -F_1+F_1x_1(u^*\otimes 1_n)F_1\right)\left(1\otimes 1_n -F_1+F_1 y (u^*\otimes 1_n)F_1\right)^*]_1 \\
+    & = [1\otimes 1_n -F_1+F_1 x_1 (\alpha(-1)\otimes id_n) F_1 y^* F_1]_1
+\end{align*}
+L'élément entre crochets est dans $A\otimes \frak M_n$, ce qui veut dire que sa classe $w$ est dans l'image de $\iota_*$ : $\text{Ker}\ \delta \subset \text{Im}\ \iota_*$ est démontré.\\
+
+Montrons maintenat la remarque. Le lemme \ref{generateur} nous permet d'affirmer que tout élément de $K_1(A\times_\alpha \Z)$ s'écrit comme une différence de générateurs unitaires de la forme $[1_n-F+Fx(u^*\otimes 1_n)F]_1$. Si $n=1$, un tel élément a un relevé $w=(1-F)\otimes I+Fxu^*F\otimes S^*\in\mathcal T$. Mais alors :
+\begin{align*}
+ww^* &=(1-F)\otimes I + Fxu^*Fux^*F\otimes S^*S \\
+	&=(1-F)\otimes I +F\otimes I  \\
+            & = 1\otimes I  \\
+w^*w &=(1-F)\otimes I + Fux^*Fu^*xF\otimes SS^* \\
+	&=(1-F)\otimes I +F\otimes (I-P)\\
+           & = 1\otimes I-F\otimes P
+\end{align*}
+L'index est donc facilement calculable :
+\begin{align*}\delta[1_n-F+Fx(u^*\otimes 1_n)F]_1 & =[1\otimes I -w^*w]_0-[1\otimes I -ww^*]_0 \\
+&=[F\otimes P]_0\\
+&=[F\otimes e_{00}]_0
+\end{align*}
+
+Ce calcul assure que \[[1_n-F_1+F_1x_1(u^*\otimes 1_n)F_1]_1-[1_m-F_2+F_2x_2(u^*\otimes 1_m)F_2]_1\in \text{Ker }\delta\]
+\[ \text{ssi}\quad[F_1]_0=[F_2]_0\quad \text{dans } K_0(A).\]
+
+Quitte à remplacer $F_i$ et $x_i$ par $0_p \oplus F_i$ et $I_p\oplus x_i$, on peut supposer $m=n$. De même, quitte à remplacer $F_i$ et $x_i$ par $F_i\oplus 1\otimes 1_p$ et $x_i\oplus 1\otimes 1_{n+p}$, on peut supposer que $F_1$ et $F_2$ sont unitairement équivalentes.\\
+\qed
+
+On a donc montré que $d_*$ induisait un isomorphisme en $K_1$-théorie. On obtient donc une suite exacte à $6$ termes à partir de l'extension de Toeplitz, dont on voudrait déduire le théorème, ce que l'on peut faire à condition de montrer que $d_*$ induit un isomorphisme au niveau des $K_0$-groupes.\\
+
+\begin{lem}\label{isom} $d_* : K_0(A)\rightarrow K_0(\mathcal T)$ est un isomorphisme.\end{lem} 
+
+La suite exacte \begin{tikzcd}[column sep=small]0\arrow{r}& SA\arrow{r}&C(A\otimes \mathbb S^1)\arrow{r}&A\arrow{r}&0\end{tikzcd} est scindée, et induit, modulo la périodicité de Bott, le diagramme commutatif suivant :
+\[
+\begin{tikzcd}[column sep=small] K_1(A)\arrow{r}& K_0\left( C(A\otimes \mathbb S^1)\right)\arrow{r}&K_0(A)\arrow{d}\\
+					K_0(A)\arrow{u}& K_1\left( C(A\otimes \mathbb S^1)\right) \arrow{l}&K_1(A) \arrow{l}
+\end{tikzcd} .
+\]
+Mais, la suite étant scindée, tout élément de $K_i(A)$ se relève, et les flèches connectantes, qui mesurent l'obstruction à être relevé, sont donc nulles : on obtient deux suites exactes scindées :
+\[\begin{tikzcd}[column sep=small] 0\arrow{r}& K_{1-i}(A)\arrow{r}& K_i\left( C(A\otimes \mathbb S^1)\right)\arrow{r}&K_i(A)\arrow{r}&0\end{tikzcd} \]
+et donc $K_i\left( C(A\otimes \mathbb S^1)\right)\simeq K_0(A)\oplus K_1(A)$.\\
+
+Si on note $\phi^A : SA\oplus A \rightarrow A\otimes C(\mathbb S^1)$ l'isomorphisme obtenu à partir des suites exactes scindées, alors :
+\begin{equation}\label{rmq}
+(id_{ C(\mathbb S^1)}\otimes d )_*\circ \phi^A_*=\phi^{\mathcal T}_*\circ d_*.
+\end{equation} 
+Le lemme \ref{isom} appliqué à $id_{ C(\mathbb S^1)}\otimes d  : A\otimes C(\mathbb S^1)\rightarrow \mathcal T(A\otimes C(\mathbb S^1))$, et le fait que $\mathcal T(A\otimes C(\mathbb S^1))=\mathcal T(A)\otimes C(\mathbb S^1)$, assurent que $(id_{ C(\mathbb S^1)}\otimes d )_*$ établit un isomorphisme de $K_1(A\otimes C(\mathbb S^1))$ sur $K_1(\mathcal T \otimes C(\mathbb S^1))$, ce qui, avec la remarque \eqref{rmq} conclut.\\
+\qed
+
+Le théorème \ref{PV} découle directement des lemmes précédents : on passe l'extension de Toeplitz en $K$-théorie et on se sert de la stabilité $K_i(A\otimes \K)\simeq K_i(A)$ et de l'isomorphisme $K_i(A)\simeq K_i(\mathcal T)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Un exemple : le tore non-commutatif}
+ 
+Si on se fixe un automorphisme $\alpha \in Aut(A)$, on peut construire le produit croisé $A\times_\alpha \Z$ comme la $C^*$-algèbre universelle engendrée par $A$ et un unitaire $u$ vérifiant :
+\[\forall a \in A, uau^*=\alpha(a).\]
+Pour la construire effectivement, considérons $A[u]$. La relation de commutation nous donne le produit suivant :
+\[au^n bu^m = a \alpha^n(b)u^{n+m}\quad \forall a,b \in A, \forall n,m \in \Z\]
+Avec $A=C(\mathbb S^1)$ et $\alpha$ l'automorphisme induit par $z\mapsto e^{2i\pi\theta z}$, on obtient le tore non-commutatif $A_\theta$. Le chemin $\phi_t: z\mapsto e^{2it\pi\theta z}$ montre que $\alpha$ est homotope à l'identité et la suite exacte de Pimser-Voiculescu se transforme alors en :
+\begin{tikzcd}
+ K_0(C(\mathbb S^1)) \arrow{r}{0} & K_0(C(\mathbb S^1))  \arrow{r}{\iota_*}  &    K_0(A_\theta)  \arrow{d}  \\
+ K_1(A_\theta) \arrow{u} & K_1(C(\mathbb S^1))  \arrow{l}{\iota_*} &    K_1(C(\mathbb S^1)) \arrow{l}{0}.
+\end{tikzcd}
+
+Mais $K_i(C(\mathbb S^1))=K_i(S\C \oplus \C)=K_{1-i}(\C)\oplus K_i(\C)=\Z$, d'où : $K_i(A_\theta)=\Z \oplus\Z, i=0,1$. Nous avons donc calculé les groupes de $K$-théorie du tore non-commutatif, mais nous allons dire plus. On peut en effet calculer les générateurs de ces groupes. \\
+
+\begin{definition}
+Une projection de Rieffel de $A\times_\alpha \Z$ est un idemptotent autoadjoint de la forme $x_0+x_1 u +u^*x_1^*$, où $x_0,x_1 \in A$.\\
+\end{definition}
+
+\begin{prop}
+Soit $p=x_0+x_1 u +u^*x_1^*\in A\times_\alpha \Z$ une projection de Rieffel et $\Delta$ le support à gauche de $x_1$. Alors l'unitaire $\exp(2i\pi x_0 \Delta)$ est dans $A$ et :
+\[\delta [p]_0=[\exp(2i\pi x_0 \Delta)]_1.\] 
+\end{prop}
+
+Soit $p=x_0+x_1 u +u^*x_1^*\in A\times_\alpha \Z $ une projection de Rieffel. Montrons par récurrence que le relevé autoadjoint $a=u^*x_1\otimes S^*+x_0\otimes I +x_1 u\otimes S\in \mathcal T$ de $p$ vérifie :
+\[\forall n \geq 1, \quad a^n = a+(x_0^n-x_0)\Delta\otimes P.\]
+Si c'est vrai au rang $n$,\\
+
+\begin{align*}
+a^{n+1} &=a^2+a(x_0^n-x_0)\Delta\otimes P \\
+		& =a+a(x_0^2-x_0)\Delta\otimes P+x_0(x_0^n-x_0)\Delta\otimes P+x_1u(x_0^n-x_0)\Delta\otimes SP \\
+		& = a+(x_0^{n+1}-x_0)\Delta\otimes P+ u(\alpha(-1)x_1)(x_0^n-x_0)\Delta\otimes SP\\
+\end{align*}
+
+Le dernier terme étant nul, le principe de récurrence conclut.\\
+
+Ayant exhibé un relevé autoadjoint de $p$, on est en mesure de calculer son indice. Mais :
+\begin{align*}
+\exp(2i\pi a ) &=1\otimes I+\sum_{n\geq 1}\frac{1}{n!}( a+(x_0^n-x_0)\Delta\otimes P)\\
+		& = (e^{2i\pi}-1)(a-x_0\Delta \otimes P)+\exp(2i\pi x_0\Delta)\otimes P + 1\otimes (I-P)\\
+		& =\psi\left(\exp(2i\pi x_0\Delta)\otimes e_{00} + 1\otimes (I-e_{00})\right).\\
+\end{align*}
+Il vient : 
+\[\partial [p]_0=\left[\exp(2i\pi a )]_1=[\exp(2i\pi x_0\Delta)\otimes e_{00} + 1\otimes (I-e_{00}) \right]_1\]
+Le $*$-homomorphisme $\delta$ étant la composition du connectant $\partial : K_0(A\times_\alpha \Z)\rightarrow K_1(A\times \K)$ avec l'isomorphisme $K_1(A\times \K)\simeq K_1(A)$, on en déduit :
+\[\delta[p]_0=[\exp(2i\pi x_0\Delta)]_1.\]
+\qed
+
+Nous avons vu que la suite exacte à $6$ termes donnait deux suites exactes courtes, dont :\\
+\begin{tikzcd}0\arrow{r} & K_0(C(\mathbb S^1))\arrow{r}& K_0(A_\theta)\arrow{r}{\delta} & K_1(C(\mathbb S^1)))\arrow{r} & 0   \end{tikzcd}
+On sait que les groupes à gauche et à droite sont tous les deux $\Z$, l'un étant généré par laclasse de la projection $1\in C(\mathbb S^1)$, l'autre par la classe de l'unitaire $v=id_{\mathbb S^1}\in  C(\mathbb S^1)$. Si l'on trouve un projecteur $p$ tel que $\delta [p]_0=[v]_1$, on peut dire que $K_0(A_\theta)$ est engendré par $[1]_0$ et $[p]_0$.

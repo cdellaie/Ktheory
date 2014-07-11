@@ -1,0 +1,24 @@
+\section{Annexes}
+\subsection{Produits tensoriels de $C^*$-algèbres}
+
+\begin{lem}
+Soient $E$ et $F$ deux espaces vectoriels sur un corps $K$. S'il existe deux $K$-espaces vectoriels $V_1$ et $V_2$ munis d'applications bilinéaires $\pi_j : E\times F \rightarrow V_j$ telles que, pour tout espace vectoriel $W$, toute application bilinéaire $E\times F \rightarrow W$,  se factorise uniquement via $\pi_1$ et $\pi_2$, alors $V_1$ et $V_2$ sont isomorphes en tant que $K$-espaces vectoriels.
+\end{lem}
+
+
+\[\begin{tikzcd}
+V_1 \arrow{dr}& \arrow{l}{\pi_1}	E\times F \arrow{d}\arrow{r}{\pi_2}	& \arrow{dl}V_2 \\
+			 & 		W		&	\\
+\end{tikzcd}\]
+
+\begin{dem}
+En factorisant $\pi_j$ via $\pi_j$, il existe deux uniques applications linéaires $\phi_1 : V_2\rightarrow V_1$ et $\phi_2 : V_1\rightarrow V_2$ telles que :
+\[\begin{array}{c}\pi_1=\phi_1\circ \pi_2 \\ \pi_2=\phi_2\circ \pi_1.\end{array}\]
+
+Montrons que ces deux applications sont inverses. Comme :
+\[\phi_1\circ \phi_2 \circ \pi_1 = \phi_1\circ \pi_2 =\pi_1 ,\]
+$\phi_1\circ \phi_2 = id_{V_1}$ par unicité de la factorisation de $\pi_1$ via $\pi_1$.
+Symétriquement, on démontre que : $\phi_2\circ \phi_1 = id_{V_2}$, et le résultat est démontré.\\
+\qed
+\end{dem}
+

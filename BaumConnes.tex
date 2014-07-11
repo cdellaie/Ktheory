@@ -1,0 +1,180 @@
+\section{Conjecture de Baum-Connes}
+
+Dans toute cette section, $G$ un groupe localement compact.\\
+
+\subsection{$C^*$-algèbres de groupes}
+
+La question que l'on se pose dans cette section est celle de la complétion de l'algèbre $\C G$ du groupe $G$, qui est l'algèbre des fonctions de $G$ dans $\C$ à support fini, muni du produit de convolution.Tout élément $f\in \C G$ se réprésente au moyen d'une somme finie $\sum_g f(g).g$. En munissant $\C G $ de l'involution $f^*=\sum_g\overline{f(g)}.g$ , on en fait une $*$-algèbre.\\
+
+Si l'on se donne une représentation unitaire $(H,\pi)$ de $G$, on peut l'étendre linéairement à $\C G$ :
+\[\forall f\in \C G,\quad \pi(f)=\sum f(g)\pi(g).\]
+
+\begin{definition}
+La $C^*$-algèbre de $G$ associée à la représentation $(H,\pi)$, notée $C^*_\pi(G)$, est la fermeture de $\C G$ pour la norme d'opérateur de $\pi(\C G)$ dans $\mathcal L(H)$.
+\end{definition}
+
+On rappelle les définitions de : 
+\begin{enumerate}
+\item la représentation régulière gauche $(l^2(G),\lambda)$ : \[(\lambda(g)\xi)(s)=\psi(g^{-1}s)\quad ,\forall \xi \in l^2(G), g,s\in G\]
+\item la représentation universelle $un$ de $G$ qui est la somme directe, à équivalence près, de toutes les représentations unitaires irréductibles de $G$.
+\end{enumerate}
+
+\begin{definition}
+La $C^*$-algèbre réduite du groupe $G$ est $C_r^*(G):=C^*_\lambda(G)$.\\
+La $C^*$-algèbre maximale du groupe $G$ est $C^*(G):=C^*_{un}(G)$.
+\end{definition}
+
+\textbf{Remarques.}\begin{enumerate}
+ \item Le spectre de la $C^*$-algèbre maximale $C^*G$ coïncide avec le dual $\hat G$ du groupe $G$.
+\item On a un morphisme canonique $C^*(G)\rightarrow C^*_r(G)$, qui caractérise les groupes moyennables d'après le
+
+\begin{thm}
+$G$ est moyennable ssi $C^*(G)\rightarrow C^*_r(G)$ est un isomorphisme.
+\end{thm}
+\end{enumerate}
+
+\subsection{Espace classifiant des actions propres}
+
+Soit $X$ un espace métrique sur lequel un groupe $G$  agit par homéomorphismes. %revoir la def suivant Julg ou l'article de BaumConnesHigson
+\begin{definition}
+Un $G$-espace $X$ est dit propre si, pour tout point $p$ de $X$, il existe un voisinage $G$-stable de $p$, un sous-groupe compact $H$ de $G$ et une application $G$-équivariante continue $U\rightarrow G/H$.
+\end{definition}
+
+Pour chaque $G$, il existe un exemple universel $\mathcal E G$ de $G$-espace propre au sens où, pour tout $G$-espace propre $X$, il existe une application continue $G$-équivariante $X\rightarrow \mathcal E G$, qui est unique à homotopie près. Cet espace est alors unique à equivalence d'homotopie $G$-équivariante près : c'est le classifiant des actions propres de $G$.\\
+
+%\begin{dem}
+%Suivant Milnor, on observe $W$ l'union disjointe des espaces homogènes $G/H$ pour tous les sous-groupes compacts $H$ de $G$,
+%et on pose $E G (n)$ le quotient de :
+%\[G^{n+1}\times \Delta^n = \left\{(x_0,t_0, x_1,t_1,...,x_n,t_n) : x_i\in G , t_i\in [0,1], \sum t_i =1\right\}\] 
+%par la relation d'équivalence : $\langle x ,t \rangle \sim \langle x' ,t' \rangle \iff ( t_i=t'_i \ \text{et} \ t_i\neq 0 \Rightarrow  x_i=x'_i)$. L'espace 
+%\[\mathcal E G = \lim_{n\rightarrow \infty} \mathcal E G(n)\]
+%est universel : \textbf{A FINIR}
+%\end{dem}
+\begin{dem}
+Suivant Milnor, on observe $W$ l'union disjointe des espaces homogènes $G/H$ pour tous les sous-groupes compacts $H$ de $G$, puis on construit :
+\[\mathcal E G := W \star W\star W\star...\]
+comme l'espace de suites $(t_j,w_j)_j$ à valeurs dans le cône $CW=I\times W / \sim$ , telles que les $t_j$ soient presque tous nuls et de somme $1$. On le munit de la topologie la plus fine qui rendent les applications projections 
+\[\begin{array}{l} p_i : (x,t)\mapsto t_i  \\
+			q_i : (x,t)\mapsto x_i 
+\end{array}\]
+continues, $q_i$ n'étant définie que sur l'ouvert $U_i$ où $p_i$ est non-nulle. $G$ agit naturellement sur $\mathcal E G$.\\
+
+Pour voir que l'action est propre, remarquons d'abord que la famille des $U_i$ forment un recouvrement de $\mathcal E G$. De plus, chaque $U_i$ est envoyé par $q_i$ sur $W$, qui est une réunion disjointe : par continuité, $U_i$ est une réunion disjointe d'ouverts $V^i_H=q_i^{-1}(G/H)$, paramétrée par les sous-groupes compacts de $G$. On a donc un recouvrement ouvert de $\mathcal E G$ dont chaque $V_H^i$ est stable par $G$ et muni d'une application $G$-équivariante 
+\[q_i : V_H^i \rightarrow G/H.\]
+\qed
+\end{dem}
+Il existe un critère plus simple pour choisir un $G$-espace universel, donné par le théorème suivant.
+
+\begin{thm}
+Soit $X$ un $G$-espace propre. $X$ est universel ssi :
+\begin{itemize}
+\item tout sous-groupe compact $H$ admet un point invariant dans $X$,
+\item considérant $X\times X$ comme un $G$-espace par action diagonale, les deux projections $pr_1,pr_2 : X\times X\rightarrow X$ sont $G$-homotopes.
+\end{itemize}
+\end{thm}
+
+%FAIRE LA PREUVE
+
+\subsection{Exemples}
+
+Si $G$ est compact, tout $G$-espace est propre : on peut prendre pour $\mathcal E G$ le point $pt$. Si $G$ est sans torsion, on peut prendre $\mathcal E G=EG$ le revêtement universel du classifiant $BG$ de $G$. On va voir d'autres exemples plus intéressants où l'on peut choisir explicitement un modèle pour $\mathcal E G$. % Dans Julg et BCH
+
+\subsubsection{} Soit $(M^n,g)$ une variété riemannienne simplement connexe et complète à courbure sectionnelle négative : $sect_M \leq 0$ . Le théorème du point fixe de Cartan %en annexe ?
+assure que :
+\begin{thm}[Cartan]
+Toute action d'un groupe compact $G$ par isométries sur $M$ admet un point fixe.
+\end{thm}
+De plus, le théorème de Hopf-Rinow assur que pour tous points $p$ et $q$ de $M$, il existe une unique géodésique $\gamma_{pq}$ de longueur $l=d_M(p,q)$ reliant ces deux points. (On suppose que les géodésiques sont paramétrés par longueur d'arc.) \\
+
+Alors, $\rho_t(p,q)=\gamma_{pq}(t)$ définit une homotopie entre $pr_1,pr_2 : M\times M\rightarrow M$. Ces deux conditions assurent que $M$ peut servir d'espace classifiant des actions propres pour $G$.
+
+\subsection{$K$-homologie équivariante}
+
+\begin{definition}
+Un $G$-espace $X$ est dit $G$-compact si le quotient $X/G$ est compact.
+\end{definition}
+
+Rappelons que, lorsque l'on dispose d'une action de $G$ sur $A$ par automorphismes, une représentation covariante d'une $C^*$-algèbre $A$ est un homomorphisme $G$-équivariant $\pi : A\rightarrow B(H)$, où $H$ est un espace de Hilbert munie d'une représentation unitaire de $G$, que l'on notera le plus souvent $U$.\\
+
+\begin{definition}[$G$-Opérateur elliptique]
+Soit $X$ un $G$-espace propre $G$-compact, soient $(H_+,\pi_+)$ et $(H_-,\pi_-)$ deux représentations covariantes de la $C^*$-algèbre $C_0(X)$. Un \textit{opérateur elliptique abstrait $G$-équivariant} de $H_+$ dans $H_-$ est un opérateur borné $G$-équivariant $F$ tel que :
+\begin{enumerate}
+%\item $F\in \mathcal L(H_+,H_-)$ est un opérateur de Fredholm. %(différentes def selon BCH ou Julg)
+\item Les opérateurs $\pi_-(f)F-F\pi_+(f)$, $\pi_+(f)(1-F^*F)$ et $\pi_-(1-FF^*)$ sont compacts, pour toute fonction $f\in C_0(X)$.
+\item $F$ envoie $\pi_+(C_c(X))H_+$ sur $\pi_-(C_c(X))H_-$.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Cycles en $K$-homologie]
+La donnée de deux représentations covariantes et d'un $G$-opérateur elliptique de l'une dans l'autre définit un cycle pair de $K$-homologie équivariante de $X$.\\
+La donnée d'une représentation covariante et d'un $G$-opérateur elliptique \textit{autoadjoint} d'icelle dans elle-même définit un cycle impair de $K$-homologie équivariante de $X$.\\
+\end{definition}
+\begin{definition}[Homotopie entre cycle]
+Deux cycles entre les mêmes représentations covariantes sont homotopes s'il existe un chemin $F_t, t\in [0,1]$, de $G$-opérateurs elliptiques dont les représentations covariantes ne varient pas, continu pour la norme d'opérateur, de l'un à l'autre.\\
+\end{definition}
+
+\begin{definition}[$K$-homologie]
+Suivant Kasparov ainsi que Baum, Connes et Higson, on définit la $K$-homologie équivariante comme suit.
+\begin{enumerate}
+\item Si $X$ est $G$-compact,
+\begin{itemize}
+\item $K_0^G(X)$ dénote les classes d'homotopies de cycles pairs,\\
+\item et $K_1^G(X)$ les classes d'homotopies de cycles impairs.
+\end{itemize}
+\item Sinon, on prend la limite inductive sur les sous-$G$-espaces propres $G$-compacts $Y\subset X$ ordonnés par l'inclusion : $K^G_j(X)=\varinjlim K_j^G(Y)$. On obtient alors la $K$-homologie à support $G$-compact de $X$.
+\end{enumerate}
+\end{definition}
+%properly supported operator ?
+On se place pour l'instant dans le cas où $X$ est $G$-compact.\\
+Si l'on se donne une représentation covariante $(H,\pi)$ de $C_0(X)$, on peut lui associer un $C^*(G)$-module hilbertien $E$. Considérons l'espace vectoriel complexe et $C_c(G)$-module $\pi(C_c(X))H$, et complétons le par rapport au produit scalaire à valeur dans $C_c(G)$ (par propreté de l'action) donné par :
+\[\langle v_1,v_2\rangle ( g) =(v_1,U_\pm(g)v_2).\]
+On obtient alors le $C^*(G)$-module hilbertien annoncé.
+
+%à détailler
+
+\begin{prop}
+Si $F$ est un $G$-opérateur elliptique de $(H_+,\pi_+)$ dans $(H_-,\pi_-)$, alors $F$ définit un opérateur borné $\mathcal F$ de $E_+$ dans $E_-$, et les opérateurs $1-\mathcal F \mathcal F^*$ et $1-\mathcal F^*\mathcal F$ sont $C^*(G)$-compacts.
+\end{prop}
+ 
+Comme $\mathcal F$ est $C^*(G)$-compact, on peut lui associer un indice, élément de $K_0(C^*(G))$. Et s'il est de carré $1$ modulo les opérateurs $C^*(G)$-compacts, on peut lui associer un indice élément de $K_1(C^*(G))$. C'est ce procédé qui définit $ind_{G,X}: K_j^G(X)\rightarrow K_j(C^*(G))$.\\
+
+Revenons au cas où $X$ n'est pas $G$-compact. \\
+Si $Y_0$ et $Y_1$ sont deux sous-$G$-espaces $G$-compacts de $X$ ordonnés par l'inclusion $\iota : Y_0\hookrightarrow Y_1$, alors le diagramme :\\
+\[
+\begin{tikzcd}
+K_*^G(Y_0)\arrow{r}{\iota_*} \arrow{d}{ind_{G,Y_0}} & K_*^G(Y_1) \arrow{d}{ind_{G,Y_1}}\\
+K_*(C^*Y_0)\arrow{r}{\iota_*} & K_*(C^*Y_1)
+\end{tikzcd}\]
+commute, ie l'application $ind_G$ est compatible avec la limite inductive, ce qui donne notre application $ind_{G,X}:K^G_*(X)\rightarrow K_*(C^* X)$. Si on prend l'espace classifiant des actions propres $X=\mathcal E G$, on obtient les applications d'assemblage $\mu$ de Baum-Connes. \\
+
+On considère l'application $\mu_r$ qui est la composée obtenu en composant le morphisme canonique $C^*(G)\rightarrow C^*_r(G)$ avec $\mu$ dans le diagramme commutatif suivant :\\ 
+\[
+\begin{tikzcd}
+K_*^G(\mathcal E G)\arrow{dr}{\mu_r}\arrow{r}{\mu}     &  K_*(C^* G)\arrow{d}  \\
+									& K_*(C^*_r(G))
+\end{tikzcd}
+\]
+\begin{conj}[Baum-Connes]
+L'application 
+\[\mu_r : K_*^G(\mathcal E G)\rightarrow K_*(C^*_r(G))\]
+est un isomorphisme.
+\end{conj}
+%On va définir l'index d'un opérateur elliptique abstrait $G$-équivariant.\\
+%Observons les espaces vectoriels complexes $\mathcal H_{\pm}=\pi_\pm ( C_c(X))H_\pm$, qui sont des $C_c(G)$-modules. On les munis du produit hermitien à valeurs dans $C_c(G)$ :
+%\[\langle v_1,v_2\rangle ( g) =(v_1,U_\pm(g)v_2)\]
+%où $U_\pm$ désigne l'unitaire qui implémente l'action de $G$. On peut alors compléter ses $C_c(G)$-modules en des $C^*_r(G)$-modules hilbertiens $\mathcal H_\pm$, et l'opérateur $F$ se prolonge en un opérateur $\mathcal F \in \mathcal L_{C_r^*(G)}(\mathcal H_+,\mathcal H_-)$ qui est de Fredholm et possède un indice dans $K_1(C_r^*(G))$.
+%\begin{definition}
+%L'indice $G$-équivariant de $F$ dans le cas auto-adjoint est défini comme l'indice de $\mathcal F$ :
+%\[Index_G(F)=Index(\mathcal F)\in K_1(C^*_r(G)).\]
+%\end{definition} 
+
+\subsection{Exemples}
+% cf Béguin
+\subsubsection{Groupe trivial}
+Si $G=1$, on a vu que l'on pouvait prendre $\mathcal E G=pt$, et $C^*_r G=\C$. L'application devient :
+\[\mu_r : K_0^1(pt)\rightarrow \Z\] 
+
+\subsection{Groupes sans torsion}
+
+\subsection{Groupes libres}
+PV ?
