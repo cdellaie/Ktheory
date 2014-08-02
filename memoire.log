@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  11 JUL 2014 20:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  2 AUG 2014 14:45
 entering extended mode
 **C:/Users/Clément/Documents/GitHub/Ktheory/memoire.tex
 (C:/Users/Clément/Documents/GitHub/Ktheory/memoire.tex
@@ -991,49 +991,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--150
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--154
+Underfull \hbox (badness 10000) in paragraph at lines 152--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--161
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 173--175
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
 
  []
 
-
-Overfull \hbox (9.41624pt too wide) detected at line 233
-[] \OT1/cmr/m/n/10 
- [] 
-[] = [] \OML/cmm/m/it/10 :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 238--240
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 242--245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
@@ -1043,13 +1026,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--252
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
-
+Overfull \hbox (9.41624pt too wide) detected at line 255
+[] \OT1/cmr/m/n/10 
+ [] 
+[] = [] \OML/cmm/m/it/10 :
  []
 
 
@@ -1057,43 +1037,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--262
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 273--275
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--297
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 308--310
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 368--370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--348
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
-
- []
-
-[13])
-Overfull \hbox (2.10416pt too wide) in paragraph at lines 369--26
+)
+Overfull \hbox (2.10416pt too wide) in paragraph at lines 391--26
 [] \T1/cmr/m/n/10 On sait que les
  []
 
@@ -1134,13 +1144,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 16215 strings out of 493921
- 291987 string characters out of 3147330
- 362577 words of memory out of 3000000
+ 16217 strings out of 493921
+ 291997 string characters out of 3147330
+ 356049 words of memory out of 3000000
  19136 multiletter control sequences out of 15000+200000
  22774 words of font info for 69 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 58i,15n,75p,530b,931s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,15n,75p,581b,931s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\ProgramData\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <
 C:\ProgramData\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\P
 rogramData\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Progr
@@ -1163,9 +1173,9 @@ amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
 msbm7.pfb>
-Output written on memoire.pdf (16 pages, 362528 bytes).
+Output written on memoire.pdf (16 pages, 366818 bytes).
 PDF statistics:
- 514 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
+ 516 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

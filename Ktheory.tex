@@ -150,16 +150,38 @@ soit exacte.\\
 
 Cette section présente la construction d'une extension de $A\otimes \K$ par $A\times_\alpha \Z$ qui sera utile dans la preuve de l'exactitude de la suite de PV : l'extension de Toeplitz. Dans tout le document $\Hil$ dénote un espace de Hilbert, $l_2$ par exemple, dont on fixe une base hilbertienne $(e_n)$, et $\B$ et $\K$ sont respectivement l'algèbre des opérateurs bornés et compacts sur $\Hil$. $\K$ est un idéal bilatère et :
 \[\pi : \B \rightarrow \Cat\]
-est la projection naturelle sur l'algèbre de Catkin. \\
+est la projection naturelle sur l'algèbre de Calkin. \\
+$H^2(\mathbb S^1)$ désigne le sous-espace hilbertien de $L^2(\mathbb S ^1)$ engendré par les fonctions $z \mapsto z^n$ pour $n\geq 0$. Lorque l'on prendra $H^2(\mathbb S^1)$ pour $\Hil$, $e_n$ dénotera ces fonctions. Pour $f\in C(\mathbb S^1)$, on désigne par $T_f$ l'opérateur de $H^2(\mathbb S^1)$, appelé opérateur de Toeplitz associé à $f$, défini par $T_f(g)=\mathcal P(fg)$, où $\mathcal P$ est le projecteur orthogonal sur $H^2(\mathbb S^1)$. On appelle $f$ le symbole de $T_f$.\\
 
 Soit $S\in \B$ l'opérateur de shift unilatéral, qui envoie $e_n$ sur $e_{n+1}$. On note $C^*(S)$ la $C^*$-algèbre unitale engendrée par $S$. On voit que $S^*$ envoie $e_1$ sur $0$ et $e_n$ sur $e_{n-1}$ lorsque $n\geq 2$. Si on note $E_{ij}(x)=\langle x,e_j\rangle e_i$, on a :
 
 \[E_{ij} = S^{i-1}S^{*j-1}-S^{i}S^{*j}\in C^*(S)\]
-$\K $ est donc un idéal bilatère de $C^*(S)$ et $P=1-SS^* = E_{11}$ est de rang $1$ donc compact. On en déduit que $S$ est essentiellement normal et 
-\[Spec(\pi S)\subset \mathbb S^1\]
-Montrons que c'est en fait une égalité. Par l'absurde, si l'inclusion est stricte, alors \textbf{A FINIR } \\ %%%%afinir 
+$\K $ est donc un idéal bilatère de $C^*(S)$ et $P=1-SS^* = E_{11}$ est de rang $1$ donc compact.\\
 
-Récapitulons : $C^*(S)/\K$ est $*$-isomorphe à l'algèbre des fonctions continues sur le tore $C(\mathbb S^1)$, et l'image de $S$ est la fonction identité sur $\mathbb S^1$, noté$z$. On a donc une extension, écrite sous la forme d'une suite exacte :
+\begin{lem}
+L'application 
+\[\tau \left\{\begin{array}{rcl} C(\mathbb S^1)  & \rightarrow & B(H^2(\mathbb S^1))/K(H^2(\mathbb S^1)) \\ 
+f & \mapsto & \pi(T_f)\end{array}\right.\]
+est un $*$-homomorphisme injectif.
+\end{lem}
+
+\begin{dem}
+Si l'on confond $f\in C(\mathbb S^1)$ avec l'opérateur de multiplication associé dans $L^2(\mathbb S^1)$, alors $f\mathcal P -\mathcal Pf$ est un opérateur compact. En effet, si $f(z)=z$, on a un opérateur de rang $1$, et cette fonction génère $C(\mathbb S^1)$ par théorème de Stone-Weiertrass. \\
+
+Ceci permet d'écrire la relation suivante :
+\[T_f T_g =\mathcal P f\mathcal P g =\mathcal P (\mathcal P f + \text{compact}) g = \mathcal P f g + \text{compact}\]
+Donc $T_f T_g = T_{fg} \ \text{mod} \  \K$, et comme $T_f^*=T_{\overline f}$, $\tau$ est bien un $*$-homorphisme.\\
+
+Pour l'injectivité, observons le noyau de $\tau$. C'est un idéal bilatère de $C(\mathbb S^1)$, il existe donc un ouvert $X \subset \mathbb S^1$ tel que :
+\[\text{ker}\ \tau =\{f \in \mathbb C(S^1) : f(z)=0,\forall z \in X\}\]
+Mais si $f\in \text{ker}\ \tau$, alors $z\mapsto f(e^{i\theta}z)$ est aussi dans le noyau pour tout $\theta$, ce qui assure que $X=\mathbb S^1$ ou $\emptyset$. Mais comme $T_z$ n'est pas compact, $X=\mathbb S^1$ et l'injectivité est démontrée.
+
+\qed
+\end{dem}
+% On en déduit que $S$ est essentiellement normal et 
+%\[Spec(\pi S)\subset \mathbb S^1\]
+%Montrons que c'est en fait une égalité. Par l'absurde, si l'inclusion est stricte, alors \textbf{A FINIR } \\ %%%%afinir 
+Comme $C(\mathbb S^1)$ est généré par $z$, qui s'envoit sur $S$ par $T$, l'image de $T_{.}$ est $C^*(S)$. La remarque précédente permet d'affirmer que $C^*(S)/\K$ est $*$-isomorphe à l'algèbre des fonctions continues sur le tore $C(\mathbb S^1)$, et l'image de $S$ est la fonction identité sur $\mathbb S^1$, noté $z$. On a donc une extension, écrite sous la forme d'une suite exacte :
 \[\begin{tikzcd}[column sep =small] 0 \arrow{r} & \K \arrow{r} & C^*(S) \arrow{r} & C(\mathbb S ^1) \arrow{r} & 0 \end{tikzcd}\]
 
 On définit l'algèbre de Toeplitz $\mathcal T$ associée à la paire $(A,\alpha)$ comme la $C^*$-sous-algèbre de $(A\times_\alpha \Z)\otimes C^*(S)$ engendré par $A\otimes I$ et $u\otimes S$. Rappelons que l'on voit $A$ comme une sous-$*$-algèbre de $A\times_\alpha \Z$, et que l'on note $u$ l'unitaire qui rend intérieure l'action de $\alpha$ :
