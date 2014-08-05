@@ -6,6 +6,6 @@
 \contentsline {subsubsection}{\numberline {1.2.2}Extension de Toeplitz}{7}{subsubsection.1.2.2}
 \contentsline {subsection}{\numberline {1.3}Suite exacte de Pimsner-Voiculescu}{9}{subsection.1.3}
 \contentsline {subsubsection}{\numberline {1.3.1}La preuve originale}{9}{subsubsection.1.3.1}
-\contentsline {subsubsection}{\numberline {1.3.2}Un exemple : le tore non-commutatif}{13}{subsubsection.1.3.2}
-\contentsline {section}{\numberline {2}Annexes}{15}{section.2}
-\contentsline {subsection}{\numberline {2.1}Produits tensoriels de $C^*$-alg\IeC {\`e}bres}{15}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {1.3.2}Un exemple : le tore non-commutatif}{14}{subsubsection.1.3.2}
+\contentsline {section}{\numberline {2}Annexes}{16}{section.2}
+\contentsline {subsection}{\numberline {2.1}Produits tensoriels de $C^*$-alg\IeC {\`e}bres}{16}{subsection.2.1}

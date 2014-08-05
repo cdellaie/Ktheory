@@ -184,7 +184,10 @@ Mais si $f\in \text{ker}\ \tau$, alors $z\mapsto f(e^{i\theta}z)$ est aussi dans
 Comme $C(\mathbb S^1)$ est généré par $z$, qui s'envoit sur $S$ par $T$, l'image de $T_{.}$ est $C^*(S)$. La remarque précédente permet d'affirmer que $C^*(S)/\K$ est $*$-isomorphe à l'algèbre des fonctions continues sur le tore $C(\mathbb S^1)$, et l'image de $S$ est la fonction identité sur $\mathbb S^1$, noté $z$. On a donc une extension, écrite sous la forme d'une suite exacte :
 \[\begin{tikzcd}[column sep =small] 0 \arrow{r} & \K \arrow{r} & C^*(S) \arrow{r} & C(\mathbb S ^1) \arrow{r} & 0 \end{tikzcd}\]
 
-On définit l'algèbre de Toeplitz $\mathcal T$ associée à la paire $(A,\alpha)$ comme la $C^*$-sous-algèbre de $(A\times_\alpha \Z)\otimes C^*(S)$ engendré par $A\otimes I$ et $u\otimes S$. Rappelons que l'on voit $A$ comme une sous-$*$-algèbre de $A\times_\alpha \Z$, et que l'on note $u$ l'unitaire qui rend intérieure l'action de $\alpha$ :
+\begin{definition}
+On définit l'algèbre de Toeplitz $\mathcal T$ associée à la paire $(A,\alpha)$ comme la $C^*$-sous-algèbre de $(A\times_\alpha \Z)\otimes C^*(S)$ engendré par $A\otimes I$ et $u\otimes S$. 
+\end{definition}
+Rappelons que l'on voit $A$ comme une sous-$*$-algèbre de $A\times_\alpha \Z$, et que l'on note $u$ l'unitaire qui rend intérieure l'action de $\alpha$ :
 \[\forall a\in A, n\in \Z, \quad \alpha(n)a=u^{*n} a u^n\]
 
 Observons maintenant $A\times_\alpha \Z$, dont on va montrer qu'elle se réalise comme un quotient de $\mathcal T$ par un idéal bilatère fermé. Soit donc $J$ l'idéal bilatère fermé engendré par la projection $1\otimes P$. La première chose à remarquer, c'est que l'on a un $*$-morphisme :
@@ -197,14 +200,36 @@ ce qui permet facilement de l'étendre à $\K$ entier. \\
 
 L'identité suivante permet d'étendre $\phi$ à $A\otimes \K$ :
 \[(u\otimes S)^i (a\otimes P) (u\otimes S)^{*j}=(u^i a u^{*j}) \otimes \phi (e_{ij})\]
-définit l'extension de $\phi$ à $A\otimes \K$. Alors $\phi(A\otimes \K)=J\subset \mathcal T$.
+définit l'extension $\psi$ de $\phi$ à $A\otimes \K$. Alors $\psi(A\otimes \K)=J\subset \mathcal T$.\\
 
+Pimsner et Voiculescu montrent ~\cite{PV} que :
+\begin{equation}
+\text{im} \ \psi = (A\times _ \alpha \Z )\otimes \phi(\K) \ \cap \ \mathcal T
+\label{image}
+\end{equation}
 
+En effet, soit $y\in (A\times _ \alpha \Z )\otimes \phi(\K) \ \cap \ \mathcal T$. Comme $y$ est dans $(A\times _ \alpha \Z )\otimes \phi(\K) $,
+\[J \ni (1\otimes E_n) y (1\otimes E_n) \underset{n \rightarrow \infty}{\longrightarrow} y \]
+où $E_n = 1\otimes\phi(e_{00}+e_{11}+...+e_{nn})=\psi (1\otimes(e_{00}+e_{11}+...+e_{nn}) )\in J$ ( on utilise une unité approchée de $\K$). $J$ étant un idéal fermé, on en déduit que $y\in J$. L'inclusion inverse est directe.\\
+
+Les $C^*$-algèbres $\K$, $C^*(S)$ et $C(\mathbb S^1)$ sont nucléaires car commutative pour $C(\mathbb S^1)$ ou limite inductive de $C^*$-algèbres finie-dimensionnelles pour $\K$. %pour C*(S) ?
+Ceci assure qu'il n'y a qu'une seule norme de  $C^*$-algèbre sur leur produit tensoriel avec $A\times _\alpha \Z$. De plus, avec le théorème $T.2.6.26$ de l'appendice T du livre de Wegge-Olsen ~\cite{WeggeOlsen}, on a, sans ambiguité, une suite exacte :
+\[\begin{tikzcd}[column sep=small]
+0 \arrow{r} & (A\times _\alpha \Z)\otimes \K \arrow{r} &  (A\times _\alpha \Z)\otimes C^*(S) \arrow{r}  &  (A\times _\alpha \Z) \otimes C(\mathbb S^1) \arrow{r} & 0 \\ 
+\end{tikzcd}\] 
+Cette suite exacte et l'identité \ref{image} permet d'identifier $\mathcal T / J$ à la $C^*$-algèbre engendrée par $A\otimes 1$ et $u\otimes z$ où $z$ est l'inclusion $\mathbb S^1 \rightarrow \C$. Cette dernière étant $*$-isomorphe à $A\times_\alpha \Z$, on en déduit la suite exacte :
+
+\[\begin{tikzcd}[column sep=small]
+0 \arrow{r} &  A\otimes \K \arrow{r}{\psi} &  \mathcal T \arrow{r}{\pi}  &  (A\times _\alpha \Z) \arrow{r} & 0. \\ 
+\end{tikzcd}\] 
+C'est l'extension de Toeplitz associée à $(A,\alpha)$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Suite exacte de Pimsner-Voiculescu}
 \subsubsection{La preuve originale}
 
-Maintenant que le décor est planté, nous pouvons passer à la $K$-théorie. Nous allons d'abord démontré le :
+Maintenant que le décor est planté, nous pouvons passer à la $K$-théorie. 
+On pose :  \[d : \begin{array}{rcl}A & \rightarrow & \mathcal T \\ a & \mapsto & a\otimes I\end{array}.\]
+Nous allons d'abord démontré le :
 
 \begin{lem}\label{diagramme}
 Les diagrammes suivant :
