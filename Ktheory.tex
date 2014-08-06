@@ -2,15 +2,22 @@
 Pour une $C^*$-algèbre $A$ non nécessairement unitale, on note $A^+$ la $C^*$-algèbre unitale qui la contient en tant qu'idéal bilatère, définie par :
 
 \[\begin{array}{c}A=\{(a,\lambda)\in A\times \C \} \\ (a,\lambda)(b,\mu)=(ab+\lambda b +\mu a,\lambda\mu)\end{array}\]
+ On a alors une suite exacte :
+\[\begin{tikzcd}[column sep = small] 0 \arrow{r} &  A \arrow{r} & A^+ \arrow{r} & \C \arrow{r} & 0 \end{tikzcd}.\]
+
+On rappelle que pour tout semi-groupe abélien $S$, il existe un groupe $G_S$, appelé groupe de Grothendieck de $S$, et un morphisme de semi-groupe $\mu : S\rightarrow G_S$ tels que, pour tout groupe $G$ et tout morphisme de semi-groupe $\alpha : S\rightarrow G$, il existe un unique morphisme de groupe $\tilde \alpha : G_S \rightarrow G$ vérifiant $\alpha = \mu \circ \tilde\alpha$. 
+
+\[\begin{tikzcd} S \arrow{r}{\alpha} \arrow[dotted]{d}{\exists !\tilde\alpha}& G \\
+	G_S \arrow{ur}{\mu} & \end{tikzcd}\]
 
 
 \section{K-théorie des $C^*$-algèbres}
 
-Différentes définitions du foncteur $K_0$:
-\begin{itemize}
-\item groupe de Grothendieck associé au semi-groupe des classes d'équivalences de projections dans $M_\infty (A)$ muni de la somme directe.
-\item groupe de Grothendieck associé  par les sous-modules projectifs fermés de type fini de $\mathcal H_A$
-\end{itemize}
+%Différentes définitions du foncteur $K_0$:
+%\begin{itemize}
+%\item groupe de Grothendieck associé au semi-groupe des classes d'équivalences de projections dans $M_\infty (A)$ muni de la somme directe.
+%\item groupe de Grothendieck associé  par les sous-modules projectifs fermés de type fini de $\mathcal H_A$
+%\end{itemize}
  
 \begin{definition}
 Soit $p$ et $q$ deux projections dans une $C^*$-algèbre $A$.\\
@@ -28,10 +35,24 @@ le noyau de $K_0(A^+)\rightarrow K_0(\C)$ sinon.
 \end{definition}
 
 Pour passer aux groupes de $K$-théorie d'indices supérieurs de $A$, on se servira du foncteur de suspension $S(A)=A\times C_0(\R)$.
+
 \begin{definition}
-Les groupes de $K$-théorie d'ordre supérieurs de $A$ sont définis par suspension :
-\[\forall i\in \mathbb N, \quad K_i(A)=K_0(S(A)).\]
+Pour toute algèbre de Banach unitale, on pose \[GL_\infty(A) = \varinjlim GL_n(A) \quad \text{(limite inductive)}\]
+munie de la topologie de la limite inductive.\\
+Pour $n\geq 1$, on définit :
+\[K_n(A)=\pi_{n-1}\left(GL_\infty (A)\right)\] 
+où $\pi_n, n\geq 1$ désigne le $n^{ie}$-groupe d'homotopie, et $\pi_0$ le groupe des composantes connexes.
 \end{definition}
+
+Quelques remarques : 
+\begin{enumerate}
+\item Le groupe $K_1(A)$ est donc généré par les classes $[u]$ où est un unitaire ou un inversible de $GL_n(A)$, avec la présentation $[1]=0$, $[u]+[v]=[u\oplus v]$ et $[u]=[v]$ si $u$ et $v$ sont reliés par un chemin continu d'unitaires ou d'inversibles.
+\item On a en fait la relation suivante \[\forall i\in \mathbb N, \quad K_{i+1}(A)=K_i(S(A)).\]
+\item Dans le cas des $C^*$-algèbres comme en $K$-théorie topologique, on a périodicité de Bott : $K_{i+2}(A)\simeq K_i(A)$.\\
+\end{enumerate}
+%Les groupes de $K$-théorie d'ordre supérieurs de $A$ sont définis par suspension :
+%\[\forall i\in \mathbb N, \quad K_i(A)=K_0(S(A)).\]
+
  Ces foncteurs de la catégorie des $C^*$-algèbres dans celle des groupes abéliens sont semi-exacts, i.e. ils transforment toute suite exacte courte en suite exacte très courte.
 
 \subsection{La suite exacte à six termes}
