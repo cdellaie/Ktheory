@@ -514,4 +514,13 @@ Ce résultat met à notre disposition une autre méthode de calcul de l'image pa
 
 Nous avons vu que la suite exacte à $6$ termes donnait deux suites exactes courtes, dont :\\
 \begin{tikzcd}0\arrow{r} & K_0(C(\mathbb S^1))\arrow{r}& K_0(A_\theta)\arrow{r}{\delta} & K_1(C(\mathbb S^1)))\arrow{r} & 0   \end{tikzcd}
-On sait que les groupes à gauche et à droite sont tous les deux $\Z$, l'un étant généré par laclasse de la projection $1\in C(\mathbb S^1)$, l'autre par la classe de l'unitaire $v=id_{\mathbb S^1}\in  C(\mathbb S^1)$. Si l'on trouve un projecteur $p$ tel que $\delta [p]_0=[v]_1$, on peut dire que $K_0(A_\theta)$ est engendré par $[1]_0$ et $[p]_0$.
+On sait que les groupes à gauche et à droite sont tous les deux $\Z$, l'un étant généré par la classe de la projection $1\in C(\mathbb S^1)$, l'autre par la classe de l'unitaire $v=id_{\mathbb S^1}\in  C(\mathbb S^1)$. Si l'on trouve un projecteur $p$ tel que $\delta [p]_0=[v]_1$, on peut dire que $K_0(A_\theta)$ est engendré par $[1]_0$ et $[p]_0$.\\
+
+On note $\varphi$ la fonction définie par $\alpha (f) (z) = f(e^{2i\pi\theta}z)=f\circ \varphi (z)$.
+Soit $0<\delta<\theta$. Soit $f$ la fonction de $\R$, affine par morceaux et $1$ péridiodique, qui vaut $1$ si $t$ est dans $[\delta, \theta]$, $0$ si $t\in [\theta+\delta,1]$ et est nulle en $0$. On pose : 
+\[\left\{ \begin{array}{rl}x_0& =e^{2i\pi f }\\
+				x_1 &= \sqrt{x_0(1-x_0)}
+\end{array}\right.\]  
+
+On vérifie par un simple calcul que $p_\theta=x_0+x_1 u +u^*x_1^*$ définit un projecteur de Rieffel.
+
