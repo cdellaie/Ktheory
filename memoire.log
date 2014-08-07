@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  6 AUG 2014 19:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  7 AUG 2014 22:13
 entering extended mode
 **C:/Users/Clément/Documents/GitHub/Ktheory/memoire.tex
 (C:/Users/Clément/Documents/GitHub/Ktheory/memoire.tex
@@ -925,191 +925,190 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--71
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 76--78
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 
-Overfull \hbox (8.11699pt too wide) in paragraph at lines 90--92
+Overfull \hbox (8.11699pt too wide) in paragraph at lines 92--94
 \T1/cmr/m/n/10 spectre de $\OML/cmm/m/it/10 y[]y$ \T1/cmr/m/n/10 soit in-clus d
 ans $\OT1/cmr/m/n/10 [0; 1]$ \T1/cmr/m/n/10 pro-duit un uni-taire $[]$. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
 
 [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 109.
+(hyperref)                removing `math shift' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 109.
+(hyperref)                removing `superscript' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 109.
+(hyperref)                removing `math shift' on input line 111.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--119
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 128--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
 
 Package amsfonts Warning: Obsolete command \frak; \mathfrak should be used inst
-ead on input line 149.
+ead on input line 146.
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 149.
+LaTeX Font Info:    Try loading font information for U+euf on input line 146.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--176
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 179--181
+Overfull \hbox (75.0501pt too wide) in paragraph at lines 203--203
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--195
+Underfull \hbox (badness 10000) in paragraph at lines 224--226
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 219--221
+Underfull \hbox (badness 10000) in paragraph at lines 228--231
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--235
-
- []
-
-[9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 248--250
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 274--276
 
  []
 
 
-Overfull \hbox (9.41624pt too wide) detected at line 301
+Underfull \hbox (badness 10000) in paragraph at lines 278--280
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--290
+
+ []
+
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
+
+ []
+
+
+Overfull \hbox (9.41624pt too wide) detected at line 357
 [] \OT1/cmr/m/n/10 
  [] 
 [] = [] \OML/cmm/m/it/10 :
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--308
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 310--313
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--330
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 341--343
-
- []
-
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
+Underfull \hbox (badness 10000) in paragraph at lines 362--364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--369
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--388
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 376--378
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 414--416
+Underfull \hbox (badness 10000) in paragraph at lines 399--401
 
  []
 
@@ -1118,14 +1117,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 423--424
 
  []
 
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 434--436
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--492
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--514
+
+ []
+
 )
-Overfull \hbox (2.10416pt too wide) in paragraph at lines 437--26
+Overfull \hbox (2.10416pt too wide) in paragraph at lines 515--26
 [] \T1/cmr/m/n/10 On sait que les
  []
 
-[15] [16] (C:\Users\Clément\Documents\GitHub\Ktheory\memoire.bbl)
+[17] (C:\Users\Clément\Documents\GitHub\Ktheory\memoire.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
- [17
+ [18
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
@@ -1135,7 +1169,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 37.
 Package rerunfilecheck Info: File `memoire.out' has not changed.
-(rerunfilecheck)             Checksum: 742ED5A66554D547CBD4C34F14736123;664.
+(rerunfilecheck)             Checksum: 88C2BBBE0A20735DD116A6A41F01A001;668.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1143,10 +1177,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 16355 strings out of 493921
- 295464 string characters out of 3147330
- 359331 words of memory out of 3000000
- 19279 multiletter control sequences out of 15000+200000
+ 16365 strings out of 493921
+ 295535 string characters out of 3147330
+ 367044 words of memory out of 3000000
+ 19281 multiletter control sequences out of 15000+200000
  22066 words of font info for 66 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  58i,15n,75p,581b,932s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1172,9 +1206,9 @@ amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
 msbm7.pfb>
-Output written on memoire.pdf (17 pages, 370449 bytes).
+Output written on memoire.pdf (18 pages, 380997 bytes).
 PDF statistics:
- 511 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
+ 528 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
  82 words of extra memory for PDF output out of 10000 (max. 10000000)
 
