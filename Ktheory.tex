@@ -9,7 +9,57 @@ On rappelle que pour tout semi-groupe abélien $S$, il existe un groupe $G_S$, a
 
 \[\begin{tikzcd} S \arrow{r}{\alpha} \arrow[dotted]{d}{\exists !\tilde\alpha}& G \\
 	G_S \arrow{ur}{\mu} & \end{tikzcd}\]
+ 
+Une application bornée $\sigma : A \rightarrow B$ entre deux $C^*$-algèbres unitales est dite complètement positive si $\sigma (1)=1$ et :
+\[\sum_{i,j} b_i\sigma(a_i a_j^*) b_j^* \geq 0\]
+pour tout entier $n$, tout $a_1$, ...,$a_n$ dans $A$ et $b_1$, ..., $b_n$ dans $B$. \\
+Le résultat suivant caractérise les applications complètement positives.
 
+\begin{thm}[Stinespring]
+Soit $A$ une $C^*$-algèbre unitale. Une application unitale $\sigma : A \rightarrow B(H)$ est complètement positive ssi il existe :
+\begin{itemize}
+\item une isométrie $V : H \rightarrow H_1$  
+\item une représentation non-dégénérée $\rho : A \rightarrow B(H_1)$
+\end{itemize} 
+telles que $\sigma(a)=V^*\rho(a)V$ pour tout $a\in A$.
+\end{thm}
+
+Ce résultat permet de montrer que si $\sigma : A \rightarrow A'$ est une application complètement positive, alors l'application $\sigma \otimes 1$, définie sur le produit tensoriel algébrique de manière évidente, s'étend en une application complètement positive $\sigma \otimes 1 : A\otimes B\rightarrow A'\otimes B$.\\
+En effet, $\sigma$ étant complètement positive, elle est, en gardant les même notation, de la forme $\sigma(a)=V^*\rho(a)V$. Mais alors : 
+\[(\sigma\otimes 1)(a\otimes b)=(V^*\rho(a)V) \otimes b =(V\otimes 1)^* (a \otimes b) (V\otimes 1).\]
+ Les éléments $a \otimes b$ générant le produit tensoriel $A\otimes B$, l'extension par continuité de $\sigma \otimes 1$ est bien complètement positive. \\
+Cette remarque nous permettra plus loin de construire l'extension de Toeplitz sans passer par la nucléarité. Il suffira alors de remarquer que lorsque l'on a une suite exacte courte scindée de $C^*$-algèbres, si la section est complètement positive, alors elle s'étend en une section complètement positive de la suite obtenue en tensorisant par une $C^*$-algèbre quelconque.\\
+
+\begin{prop} Soit 
+\begin{tikzcd}[column sep = small , row sep = tiny]
+0 \arrow{r} & A' \arrow{r}{\varphi} & A \arrow{r}{\psi} & A'' \arrow{r} & 0 \\
+\end{tikzcd}
+une suite exacte de $C^*$-algèbres. Si la surjection $\psi$ a une section complètement positive, alors, pour toute $C^*$-algèbre $B$, la suite 
+\[\begin{tikzcd}[column sep = small, , row sep = tiny]
+0 \arrow{r} & A' \otimes B\arrow{r}{\tilde\varphi} & A\otimes B \arrow{r}{\tilde\psi} & A'' \otimes B\arrow{r} & 0 \\
+\end{tikzcd}\]
+reste exacte.
+\label{CPexactness}
+\end{prop}
+
+\begin{dem}
+Soit $a''\otimes b \in A''\otimes B$. Par surjectivité, il existe $a\in A$ tel que $\psi(a)=a''$, et donc $\tilde\psi(a\otimes b ) = a''\otimes b$. Les éléments $a''\otimes b$ générant $A''\otimes B$, $\tilde \psi$ est surjective.\\
+
+On va définir l'application $r : A\otimes B \rightarrow A' \otimes B$ sur les tenseurs élémentaires. A $a\otimes b= \varphi(a')\otimes b $ on associe $a'\otimes b$, qui est bien défini par injectivité de $\varphi$. Si $a$ n'est pas dans l'image de $\varphi$, on associe $0$. On étend ensuite par continuité cette application qui vérifie $r\circ \tilde\varphi = id_{A'}$ par construction, ce qui prouve l'injectivité de $\tilde\varphi$.\\
+
+On vérifie facilement que $\text{Im} \ \tilde\varphi \subset \text{ker}\ \tilde \psi $. Soit donc $R=\text{Im} \ \tilde\varphi$ et $f$ l'application canonique $(A\otimes B)/ R \rightarrow A''\otimes B$ obtenue en factorisant $\tilde \psi$. Nous allons construire une application $g : A''\otimes B \rightarrow (A\otimes B)/ R $ qui vérifie $g\circ f = id $. Cela montrera que $f$ est injective et donc que $\text{Im} \ \tilde\varphi = \text{ker}\ \tilde \psi $.\\
+
+Soit $a''\in A''$. On choisit $a\in A$ tels que $\psi(a)=a''$ et on définit : 
+\[\begin{array}{rcl}
+A''\times B & \rightarrow & (A\otimes B) /R \\
+a'', b          & \mapsto     & a\otimes b \ (\text{mod} \ R)\\
+\end{array}\] 
+
+Cette application ne dépend pas de la préimage de $a''$ choisie : si $\psi(a_1)=\psi(a_2)=a''$, alors $\psi(a_1-a_2)=0$ donc $a_1-a_2=\varphi(a')$ pour un certain $a'\in A'$, d'où $a_1\otimes b -a_2\otimes b = \varphi(a')\otimes b$ et donc $a_1\otimes b = a_2\otimes b \quad \text{mod}\ R$.\\
+Etant bilinéaire, cette application se factorise en l'application $g : A''\otimes B \rightarrow (A\otimes B) /R$ recherchée.\\
+
+\qed
+\end{dem}
 
 \section{K-théorie des $C^*$-algèbres}
 
@@ -293,6 +343,9 @@ Ceci assure qu'il n'y a qu'une seule norme de  $C^*$-algèbre sur leur produit t
 \[\begin{tikzcd}[column sep=small]
 0 \arrow{r} & (A\times _\alpha \Z)\otimes \K \arrow{r} &  (A\times _\alpha \Z)\otimes C^*(S) \arrow{r}  &  (A\times _\alpha \Z) \otimes C(\mathbb S^1) \arrow{r} & 0 \\ 
 \end{tikzcd}\] 
+Une autre méthode pour l'obtenir est d'utiliser la proposition \ref{CPexactness}. En effet, $f\mapsto T_f$ est une section complètement positive de la première suite exacte :
+\[\sum_{i,j} b_i T_{f_i f_j^*} b_j^*= (\sum_i b_i T_{f_i})(\sum_i b_i T_{f_i})^*.\]
+
 Cette suite exacte et l'identité \ref{image} permet d'identifier $\mathcal T / J$ à la $C^*$-algèbre engendrée par $A\otimes 1$ et $u\otimes z$ où $z$ est l'inclusion $\mathbb S^1 \rightarrow \C$. Cette dernière étant $*$-isomorphe à $A\times_\alpha \Z$, on en déduit la suite exacte :
 
 \[\begin{tikzcd}[column sep=small]
