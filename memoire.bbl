@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{GrothendieckNuc}
+Alexandre Grothendieck.
+\newblock Produits tensoriels d'espace topologiques et espaces nucl\'eaires.
+\newblock {\em S\'eminaire N. Bourbaki}, 69:193--200, 1951-1954.
+
 \bibitem{Hatcher}
 A.~Hatcher.
 \newblock {\em Algebraic Topology}.
@@ -10,6 +15,11 @@ D.~Voiculescu M.~Pimsner.
 \newblock Exact sequences for k-groups and ext-groups of certain cross-products
   of $c^*$-algebras.
 \newblock {\em Operator theory}, 4:93--118, 1980.
+
+\bibitem{Murphy}
+Gerard~J. Murphy.
+\newblock {\em $C^*$-algebras and operator theory}.
+\newblock Academic Press Inc., 1990.
 
 \bibitem{BaumConnes}
 Alain~Connes Paul~Baum.

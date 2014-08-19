@@ -1,4 +1,6 @@
-\textbf{Notations}\\
+\section{Introduction}
+\subsection{Notations}
+
 Pour une $C^*$-algèbre $A$ non nécessairement unitale, on note $A^+$ la $C^*$-algèbre unitale qui la contient en tant qu'idéal bilatère, définie par :
 
 \[\begin{array}{c}A^+=\{(a,\lambda)\in A\times \C \} \\ (a,\lambda)(b,\mu)=(ab+\lambda b +\mu a,\lambda\mu)\end{array}\]
@@ -10,6 +12,62 @@ On rappelle que pour tout semi-groupe abélien $S$, il existe un groupe $G_S$, a
 \[\begin{tikzcd} S \arrow{r}{\alpha} \arrow[dotted]{d}{\exists !\tilde\alpha}& G \\
 	G_S \arrow{ur}{\mu} & \end{tikzcd}\]
  
+\subsection{Rappels sur les produits tensoriels de $C^*$-algèbres}
+
+Cette section présente les résultats qui seront utilisés sur les produits tensoriels de $C^*$-algèbres. Toutes les preuves des affirmations non justifiées peuvent être trouvées dans le livre de Murphy ~\cite{Murphy} par exemple.\\
+
+On rappelle que le produit tensoriel de $2$ espaces vectoriels $E$ et $F$ est défini comme l'unique (à isomorphisme près) espace vectoriel $E\otimes F$ muni d'une application bilinéaire $\pi : E\times F \rightarrow E\otimes F$ tel que, pour tout espace vectoriel $W$ et toute application bilinéaire $\phi : E \times F \rightarrow W $, il existe une unique application linéaire $\varphi :E\otimes F \rightarrow W$ telle que $\phi = \varphi\circ \pi$. On note $\pi(x,y)=x\otimes y$. Ce sont ces éléments, appelés tenseurs élémentaires, qui engendrent $E\otimes F$ comme espace vectoriel.\\ 
+
+Le lemme suivant donne l'unicité à isomorphisme près :
+
+\begin{lem}
+Soient $E$ et $F$ deux espaces vectoriels sur un corps $K$. S'il existe deux $K$-espaces vectoriels $V_1$ et $V_2$ munis d'applications bilinéaires $\pi_j : E\times F \rightarrow V_j$ telles que, pour tout espace vectoriel $W$, toute application bilinéaire $E\times F \rightarrow W$,  se factorise uniquement via $\pi_1$ et $\pi_2$, alors $V_1$ et $V_2$ sont isomorphes en tant que $K$-espaces vectoriels.
+\end{lem}
+
+
+\[\begin{tikzcd}
+V_1 \arrow{dr}& \arrow{l}{\pi_1}	E\times F \arrow{d}\arrow{r}{\pi_2}	& \arrow{dl}V_2 \\
+			 & 		W		&	\\
+\end{tikzcd}\]
+
+\begin{dem}
+En factorisant $\pi_j$ via $\pi_j$, il existe deux uniques applications linéaires $\phi_1 : V_2\rightarrow V_1$ et $\phi_2 : V_1\rightarrow V_2$ telles que :
+\[\begin{array}{c}\pi_1=\phi_1\circ \pi_2 \\ \pi_2=\phi_2\circ \pi_1.\end{array}\]
+
+Montrons que ces deux applications sont inverses. Comme :
+\[\phi_1\circ \phi_2 \circ \pi_1 = \phi_1\circ \pi_2 =\pi_1 ,\]
+$\phi_1\circ \phi_2 = id_{V_1}$ par unicité de la factorisation de $\pi_1$ via $\pi_1$.
+Symétriquement, on démontre que : $\phi_2\circ \phi_1 = id_{V_2}$, et le résultat est démontré.\\
+\qed
+\end{dem}
+
+Le problème qui va se poser, si l'on veut définir des produits tensoriels d'espaces vectoriels topologiques par exemple, est celui de la topologie que l'on veut définir sur celui-ci. Alexandre Grothendieck a étudié ces constructions dans sa thèse, voir le séminiaire Bourbaki ~\cite{GrothendieckNuc} pour une présentation. C'est au cours de sa thèse que A. Grothendieck a d'ailleurs introduit la notion de nucléarité, notion clé pour les $C^*$-algèbres. On verra en effet que les $C^*$-algèbres nucléaires sont exactes : le foncteur obtenu en tensorisant par elle-même préserve l'exactitude des complexes de $C^*$-algèbres.\\
+
+Sur les espaces de Hilbert, notre travail est simplifié : il existe un unique produit scalaire sur le produit tensoriel algébrique vérifiant : $\langle x\otimes x', y\otimes y'\rangle=\langle x, y\rangle \langle x',y' \rangle$. La complétion du produit tensoriel algébrique de $H$ et $K$ par rapport à ce produit scalaire est noté $H\hat \otimes K$. Ce résultat peut alors être transféré aux $C^*$-algèbres, grâce à leurs représentations sur des espaces de Hilbert. 
+
+\begin{prop}
+Soit $A$ et $B$ deux $C^*$-algèbres et $(H,\varphi)$ et $(K,\psi)$ deux représentations associées. Alors, il existe un unique $*$-homomorphisme $\pi : A\otimes B \rightarrow B(H\hat\otimes K)$ tel que $\pi(a\otimes b)= \varphi(a)\otimes \psi(b)$. De plus, $\pi$ est injectif si $\varphi$ et $\psi$ le sont.
+\end{prop} 
+
+On appelle représentation universelle d'une $C^*$-algèbre $A$ la somme directe de toutes les représentations $(H_\tau,\phi_\tau)$, $\tau$ parcourant l'espace des états de $A$, la représentation associée dérivant de la construction GNS. On peut alors définir deux normes sur le produit tensoriel algébrique de $2$ $C^*$-algèbres $A$ et $B$.
+
+\begin{definition}
+Soit $A$ et $B$ deux $C^*$-algèbres de représentations universelles $(H_A, \phi_A)$ et $(H_B, \phi_B)$. Soit $\pi$ l'unique $*$-homomorphisme donné par la proposition précédente : $\pi(a\otimes b ) = \phi_A(a)\otimes \phi_B(b)$.
+\begin{itemize}
+\item Le produit tensoriel spatial $A\otimes_{min} B$ est défini comme la complétion du produit tensoriel algébrique $A\otimes B$ par rapport à la norme 
+\[||.||_{min}\left\{\begin{array}{rcl} A\otimes B & \rightarrow & \R_+ \\ c & \mapsto & ||\pi(c)||\end{array}\right.\]
+\item Le produit tensoriel maximal $A\otimes_{max} B$ est défini comme la complétion du produit tensoriel algébrique $A\otimes B$ par rapport à la norme 
+\[||.||_{max}\left\{\begin{array}{rcl} A\otimes B & \rightarrow & \R_+ \\ c & \mapsto & \max_{p} p(c)\end{array}\right.\]
+où $p$ parcourt l'ensemble des semi-$C^*$-normes sur $A\otimes B$.
+\end{itemize}
+\end{definition}
+
+\begin{definition}
+Une $C^*$-algèbre est dite nucléaire s'il n'existe qu'une seule $C^*$-norme sur le produit tensoriel algébrique $A\otimes B$, pour toute $C^*$-algèbre $B$.
+\end{definition}
+
+\subsection{Applications complètement positives et suites exactes}
+
 Une application bornée $\sigma : A \rightarrow B$ entre deux $C^*$-algèbres unitales est dite complètement positive si $\sigma (1)=1$ et :
 \[\sum_{i,j} b_i\sigma(a_i a_j^*) b_j^* \geq 0\]
 pour tout entier $n$, tout $a_1$, ...,$a_n$ dans $A$ et $b_1$, ..., $b_n$ dans $B$. \\
