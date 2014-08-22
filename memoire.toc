@@ -4,10 +4,10 @@
 \contentsline {subsection}{\numberline {1.2}Rappels sur les produits tensoriels de $C^*$-alg\IeC {\`e}bres}{3}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}Applications compl\IeC {\`e}tement positives et suites exactes}{6}{subsection.1.3}
 \contentsline {section}{\numberline {2}K-th\IeC {\'e}orie des $C^*$-alg\IeC {\`e}bres}{9}{section.2}
-\contentsline {subsection}{\numberline {2.1}La suite exacte \IeC {\`a} six termes}{10}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Produits crois\IeC {\'e}s de $C^*$-alg\IeC {\`e}bres}{12}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Suite exacte de Pimsner-Voiculescu}{12}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Extension de Toeplitz}{14}{subsubsection.2.2.2}
-\contentsline {subsection}{\numberline {2.3}Suite exacte de Pimsner-Voiculescu}{17}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}La preuve originale}{17}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Un exemple : le tore non-commutatif}{21}{subsubsection.2.3.2}
+\contentsline {subsection}{\numberline {2.1}La suite exacte \IeC {\`a} six termes}{11}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Produits crois\IeC {\'e}s de $C^*$-alg\IeC {\`e}bres}{13}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Suite exacte de Pimsner-Voiculescu}{13}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Extension de Toeplitz}{16}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Suite exacte de Pimsner-Voiculescu}{19}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}La preuve originale}{19}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Un exemple : le tore non-commutatif}{23}{subsubsection.2.3.2}

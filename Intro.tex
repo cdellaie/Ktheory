@@ -5,7 +5,7 @@ Pour une $C^*$-algèbre $A$ non nécessairement unitale, on note $A^+$ la $C^*$-
 
 \[\begin{array}{c}A^+=\{(a,\lambda)\in A\times \C \} \\ (a,\lambda)(b,\mu)=(ab+\lambda b +\mu a,\lambda\mu)\end{array}\]
  On a alors une suite exacte :
-\[\begin{tikzcd}[column sep = small] 0 \arrow{r} &  A \arrow{r} & A^+ \arrow{r} & \C \arrow{r} & 0 \end{tikzcd}.\]
+\[\begin{tikzcd}[column sep = small] 0 \arrow{r} &  A \arrow{r} & A^+ \arrow{r}{\pi_\C} & \C \arrow{r} & 0 \end{tikzcd}.\]
 
 On rappelle que pour tout semi-groupe abélien $S$, il existe un groupe $G_S$, appelé groupe de Grothendieck de $S$, et un morphisme de semi-groupe $\mu : S\rightarrow G_S$ tels que, pour tout groupe $G$ et tout morphisme de semi-groupe $\alpha : S\rightarrow G$, il existe un unique morphisme de groupe $\tilde \alpha : G_S \rightarrow G$ vérifiant $\alpha = \mu \circ \tilde\alpha$. 
 
@@ -41,7 +41,7 @@ Symétriquement, on démontre que : $\phi_2\circ \phi_1 = id_{V_2}$, et le résu
 \qed
 \end{dem}
 
-Le problème qui va se poser, si l'on veut définir des produits tensoriels d'espaces vectoriels topologiques par exemple, est celui de la topologie que l'on veut définir sur celui-ci. Alexandre Grothendieck a étudié ces constructions dans sa thèse, voir le séminiaire Bourbaki ~\cite{GrothendieckNuc} pour une présentation. C'est au cours de sa thèse que A. Grothendieck a d'ailleurs introduit la notion de nucléarité, notion clé pour les $C^*$-algèbres. On verra en effet que les $C^*$-algèbres nucléaires sont exactes : le foncteur obtenu en tensorisant par elle-même préserve l'exactitude des complexes de $C^*$-algèbres.\\
+Le problème qui va se poser, si l'on veut définir des produits tensoriels d'espaces vectoriels topologiques par exemple, est celui de la topologie que l'on veut définir sur celui-ci. Alexandre Grothendieck a étudié ces constructions dans sa thèse, voir le séminiaire Bourbaki ~\cite{GrothendieckNuc} pour une présentation. C'est au cours de sa thèse que A. Grothendieck a d'ailleurs introduit la nucléarité, notion clé pour les $C^*$-algèbres. On verra en effet que les $C^*$-algèbres nucléaires sont exactes : le foncteur obtenu en tensorisant par elle-même préserve l'exactitude des complexes de $C^*$-algèbres.\\
 
 Sur les espaces de Hilbert, notre travail est simplifié : il existe un unique produit scalaire sur le produit tensoriel algébrique vérifiant : $\langle x\otimes x', y\otimes y'\rangle=\langle x, y\rangle \langle x',y' \rangle$. La complétion du produit tensoriel algébrique de $H$ et $K$ par rapport à ce produit scalaire est noté $H\hat \otimes K$. Ce résultat peut alors être transféré aux $C^*$-algèbres, grâce à leurs représentations sur des espaces de Hilbert. 
 

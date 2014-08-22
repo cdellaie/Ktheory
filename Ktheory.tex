@@ -6,6 +6,8 @@
 %\item groupe de Grothendieck associé  par les sous-modules projectifs fermés de type fini de $\mathcal H_A$
 %\end{itemize}
  
+Avant de nous attaquer proprement dit au résultat de l'article de Pimsner et Voiculescu~\cite{PV}, nous allons citer les résultats de $K$-théorie des $C^*$-algèbres dont nous aurons besoin. Les preuves ne seront pas toujours détaillées, et peuvent être trouvées dans n'importe quel livre d'introduction au sujet, par exemple le livre de Wegge-Olsen~\cite{WeggeOlsen}.\\
+
 \begin{definition}
 Soit $p$ et $q$ deux projecteurs dans une $C^*$-algèbre $A$. On définit trois relations d'équivalences :\\
 $p\sim q$ s'il existe une isométrie partielle $u$ de $A$ telle que $p=u^*u $ et $q=uu^*$. ( équivalence de Murray-Von Neumann)\\
@@ -40,12 +42,51 @@ Quelques remarques :
 %Les groupes de $K$-théorie d'ordre supérieurs de $A$ sont définis par suspension :
 %\[\forall i\in \mathbb N, \quad K_i(A)=K_0(S(A)).\]
 
- Ces foncteurs de la catégorie des $C^*$-algèbres dans celle des groupes abéliens sont semi-exacts, i.e. ils transforment toute suite exacte courte en suite exacte très courte.\\
+ Ces foncteurs de la catégorie des $C^*$-algèbres dans celle des groupes abéliens sont semi-exacts, i.e. ils transforment toute suite exacte courte en suite exacte très courte. Un point remarquable, et qui sera utilisé plus tard : leur comportement vis à vis de la stabilisation est naturel.\\
+
+\begin{definition}
+Une $C^*$-algère $A$ est dite stable si $A\simeq A\otimes \K$, où $A\otimes \K$ est par défintion la stabilisation de $A$. On dit de deux $C^*$-algèbres qu'elles sont stablement isomorphes si $A\otimes \K \simeq B\otimes \K$ .
+\end{definition}
+
+L'agèbre des matrices se plonge naturellement (mais non canoniquement) dans l'algèbre de opérateurs bornés $\mathfrak M_n \simeq P_n \B P_n \subset \K $, où $P_n$ est le projecteur sur les $n$ premières coordonnées. Et le diagramme commutatif 
+
+\[\begin{tikzcd}
+\mathfrak M_m \arrow{r}{\iota_{nm}} \arrow{drr}{\phi_m}& \mathfrak M_n \arrow{r} \arrow{dr}{\phi_m}& \varinjlim \mathfrak M_n \arrow{d} \\
+				&				& \K
+\end{tikzcd}\]
+permet d'affirmer que l'algèbre des opérateurs compacts est limite inductive  du sytème inductif des matrices $\K \simeq \varinjlim \mathfrak M_n$. Ici, une matrice de taille $m\leq n$ est plongée dans $\mathfrak M_n$ en la positionnant dans le coin haut-gauche. L'injectivité de la flèche verticale provient de celle des $\phi_n$ et la surjectivité de la densité des opérateurs de rang fini dans $\K$. Finalement, comme $M_n(A) \simeq A\otimes \mathfrak M_n$, on obtient que $A\otimes \K = \varinjlim M_n(A)$.\\
+Il est facile de voir que homomorphismes $\iota_{nm*}=K_0\iota_{nm}$ sont de isomorphismes, on obtient ainsi un diagramme commutatif pour tout $n\geq m$, que l'universalité de la limite inductive permet de compléter par une unique flèche (en pointillés) :
+\[\begin{tikzcd}K_0(M_n(A)) \arrow{r}{\phi_{m*}}& K_0(A\otimes \K)\arrow[dotted]{d} \\
+			K_0(M_m(A)) \arrow{u}{\iota_{nm*}}\arrow{ur}{\phi_{n*}}& K_0(A)   \arrow{l}{\iota_{m1 *}}\arrow{ul }{\iota_{n1*}}
+\end{tikzcd}.\]
+Comme les $\iota_*$ sont des isomorphismes, cette flèche l'est. Mais le diagramme commute, donc son inverse est donnée par $\phi_{n*}\circ\iota_{n1*}=\phi_{1*}$. On vient de montrer que 
+\[\left\{\begin{array}{rcl} A & \rightarrow & A\otimes \K \\ a &\mapsto & a\otimes e_{11}\end{array}\right.\]
+induit un isomorphisme $K_0(A)\simeq K_0(A\otimes \K)$.\\
 
 Donnons en exemple quelques calculs de groupes de $K$-théorie. \\
 Deux projections dans $M_n(\C)$ sont équivalentes précisément lorsque elles ont même rang. Ceci assure que $K_0(\C)=G_{\mathbb N}=\Z$, un générateur étant n'importe quel projecteur de rang $1$. La $K$-théorie étant stable par augmentation et limite inductive, on a aussi : $\Z=K_0(M_n(\C))=K_0(\K)$ avec même générateur. \\
-$K_1(C(\mathbb S^1))=\Z$ avec pour générateur la classe de l'unitaire $z\mapsto \overline z$.
+$K_1(C(\mathbb S^1))=\Z$ avec pour générateur la classe de l'unitaire $z\mapsto \overline z$.\\
 
+Soit $p\in M_n(A^+)$ un projecteur. Posons 
+\[f_p(z):= zp-1_n+p\quad, \forall z\in \mathbb S^1.\]
+Pour tout $z\in \mathbb S^1$, $f_p(z)$ définit un unitaire, donc $[f_p]_1\in K_1(SA)$. De plus $||f_p-f_q||=\sup_{z\in \mathbb S^1}||(z-1)(p-q)||=2||p-q||$, ce qui montre que $p\mapsto f_p$ et $f_p\mapsto p$ sont continues. Enfin, la relation $f_p f_q=f_{p+q}$ lorsque $p$ et $q$ sont orthogonales assure que $p\mapsto [f_p]_1$ se factorise en un homomorphisme $V(A)\rightarrow K_1(SA)$. 
+
+\begin{definition}
+Soit $A$ une $C^*$-algèbre. L'application de Bott est l'homomorphisme de groupe défini par :
+\[\beta_A : \left\{ \begin{array}{rcl} K_0(A) & \rightarrow & K_1(SA) \\ 
+\ [p]_0-[q]_0 & \mapsto & [f_p f_q^*]_1\end{array}\right.\]
+\end{definition}
+
+Soit $u \in \mathcal U_n^+(A)$. Comme 
+\[\begin{pmatrix} u & 0 \\ 0 & u^*\end{pmatrix} \sim \begin{pmatrix} uu^* & 0 \\ 0 & 1_n \end{pmatrix},\]
+on peut trouver un chemin continu d'unitaires $t\mapsto w_t$ de $1_{2n}$ à $\begin{pmatrix} u & 0 \\ 0 & u^*\end{pmatrix}$. Mais alors $q_t := w_t p_n w_t^* \in M_{2n}(A^+)$ est un lacet continu de projecteurs d'origine $p_n$. Comme $\pi_\C(q_t)=p_n$, $q_t-p_n \in M_{2n}((SA)^+)$ et on peut définir l'application Theta.
+
+\begin{definition} L'application Theta est l'homomorphisme défini par :
+\[\theta_A : \left\{ \begin{array}{rcl} K_1(A) & \rightarrow & K_0(SA) \\ 
+\ [u]_1 & \mapsto & [q]_0 - [p_n]\end{array}\right.\]
+\end{definition}
+
+Ces deux applications, Bott et Theta, sont toutes deux des transformations naturelles entre les foncteurs $K_0$ et $K_1 S$ pour Bott, $K_1$ et $K_0 S $ pour Theta.\\
 \subsection{La suite exacte à six termes}
 \begin{thm}
 Soit \begin{tikzcd}[column sep=small] 0 \arrow{r}  & J \arrow{r}{\iota}& A \arrow{r}{\pi} & B \arrow{r} & 0\end{tikzcd} une suite exacte de $C^*$-algèbres. Alors la suite à six termes suivantes est exacte :\\
