@@ -12,6 +12,22 @@ On rappelle que pour tout semi-groupe abélien $S$, il existe un groupe $G_S$, a
 \[\begin{tikzcd} S \arrow{r}{\alpha} \arrow[dotted]{d}{\exists !\tilde\alpha}& G \\
 	G_S \arrow{ur}{\mu} & \end{tikzcd}\]
  
+Enfin, une remarque sur les limites inductives de $C^*$-algèbres. Par système inductif, on entend une famille de morphismes $\{\phi_{ij}:A_j\rightarrow A_i\}_{i>j}$, où $i$ et $j$ sont éléments d'un ensemble partiellement ordonné, vérifiant la condition de cohérence :
+\[\phi_{ij}\circ\phi_{jk}=\phi_{ik}\quad \text{si }\ i>j>k.\]
+Il existe alors un objet universel $A_\infty$, appelé la limite inductive algébrique du système $\{A_i; \phi_{ij}\}$, et des morphismes canoniques $\phi_i : A_i \rightarrow A_\infty$ qui rendent le diagramme suivant commutatif :
+\[\begin{tikzcd} A_i \arrow{r}{\phi_i} & A_\infty \\
+			A_j \arrow{ur}{\phi_j}\arrow{u}{\phi_{ij}} & 
+\end{tikzcd}\]
+et tel que $A_\infty = \cup \phi_j(A_j)$. Cet objet est universel au sens où, pour tout autre $A'_\infty$ et morphismes $\phi_i' : A_i\rightarrow A'_\infty$ qui font commuter le précédent diagramme, alors il existe un unique morphisme $A_\infty \rightarrow A'_\infty$ tel que le diagramme :
+\[\begin{tikzcd}A_i \arrow{r}{\phi_i}\arrow{dr}{\phi'_i}& A_\infty\arrow[dotted]{d} \\
+		    A_j \arrow{u}{\phi_{ij}}\arrow{ur}{\phi_j}\arrow{r}{\phi'_j}& A'_\infty
+\end{tikzcd}\] 
+commute. De plus, si chaque $\phi'_j$ est injectif, la flèche en pointillés l'est aussi. Et elle est surjective si $N= \cup \phi'_j A_j$. \\
+
+Si $x=\phi_j(a_j)$,
+\[\alpha(x):=\sup_i\{||\phi_{ij}(a_j)||\}\]
+définit une semi-$C*$-norme sur $A_\infty$. On peut alors quotienter par l'idéal des éléments qui annulent $\alpha$, puis compléter par rapport à la norme obtenue sur le quotient. On étend ainsi la limite inductive à la catégorie des $C^*$-algèbre. Dans la suite de ce rapport, lorsque l'on parlera de limite inductive, cela désignera par défaut cette construction.
+ 
 \subsection{Rappels sur les produits tensoriels de $C^*$-algèbres}
 
 Cette section présente les résultats qui seront utilisés sur les produits tensoriels de $C^*$-algèbres. Toutes les preuves des affirmations non justifiées peuvent être trouvées dans le livre de Murphy ~\cite{Murphy} par exemple.\\
@@ -69,6 +85,8 @@ De plus, $\pi $ est injective si $\varphi$ et $\psi$ le sont. On notera $\varphi
 \begin{definition}
 Une $C^*$-algèbre est dite nucléaire s'il n'existe qu'une seule $C^*$-norme sur le produit tensoriel algébrique $A\otimes B$, pour toute $C^*$-algèbre $B$.
 \end{definition}
+
+Dans les parties suivantes de ce rapport, lorsque l'on tensorisera par des $C^*$-algèbres nucléaires, on omettra le symbole $min$, et le produit tensoriel topologique sera noté comme  le produit tensoriel algébrique.
 
 \begin{thm}
 Soit $B$ une $C^*$-algèbre et

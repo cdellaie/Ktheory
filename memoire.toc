@@ -1,8 +1,8 @@
 \select@language {french}
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}
 \contentsline {subsection}{\numberline {1.1}Notations}{3}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Rappels sur les produits tensoriels de $C^*$-alg\IeC {\`e}bres}{3}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Applications compl\IeC {\`e}tement positives et suites exactes}{6}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.2}Rappels sur les produits tensoriels de $C^*$-alg\IeC {\`e}bres}{4}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Applications compl\IeC {\`e}tement positives et suites exactes}{7}{subsection.1.3}
 \contentsline {section}{\numberline {2}K-th\IeC {\'e}orie des $C^*$-alg\IeC {\`e}bres}{9}{section.2}
 \contentsline {subsection}{\numberline {2.1}La suite exacte \IeC {\`a} six termes}{11}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Produits crois\IeC {\'e}s de $C^*$-alg\IeC {\`e}bres}{13}{subsection.2.2}
