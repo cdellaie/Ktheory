@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  24 AUG 2014 20:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  26 AUG 2014 15:50
 entering extended mode
 **C:/Users/Clément/Documents/GitHub/Ktheory/memoire.tex
 (C:/Users/Clément/Documents/GitHub/Ktheory/memoire.tex
@@ -939,22 +939,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--161
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 187--189
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
 
  []
 
@@ -1265,12 +1255,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 548--549
  []
 
 
-Overfull \hbox (2.10416pt too wide) in paragraph at lines 550--553
-[] \T1/cmr/m/n/10 On sait que les
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 550--553
+Underfull \hbox (badness 10000) in paragraph at lines 551--553
 
  []
 
@@ -1325,9 +1310,9 @@ euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
 msbm5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm
 7.pfb>
-Output written on memoire.pdf (26 pages, 437862 bytes).
+Output written on memoire.pdf (26 pages, 438187 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
+ 634 PDF objects out of 1000 (max. 8388607)
  93 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

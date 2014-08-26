@@ -165,27 +165,22 @@ Cette remarque nous permettra plus loin de construire l'extension de Toeplitz sa
 \end{tikzcd}
 une suite exacte de $C^*$-algèbres. Si la surjection $\psi$ a une section complètement positive, alors, pour toute $C^*$-algèbre $B$, la suite 
 \[\begin{tikzcd}[column sep = small, , row sep = tiny]
-0 \arrow{r} & A' \otimes B\arrow{r}{\tilde\varphi} & A\otimes B \arrow{r}{\tilde\psi} & A'' \otimes B\arrow{r} & 0 \\
+0 \arrow{r} & A' \otimes_{min} B\arrow{r}{\tilde\varphi} & A\otimes_{min} B \arrow{r}{\tilde\psi} & A'' \otimes_{min} B\arrow{r} & 0 \\
 \end{tikzcd}\]
 reste exacte.
 \label{CPexactness}
 \end{prop}
 
 \begin{dem}
-Soit $a''\otimes b \in A''\otimes B$. Par surjectivité, il existe $a\in A$ tel que $\psi(a)=a''$, et donc $\tilde\psi(a\otimes b ) = a''\otimes b$. Les éléments $a''\otimes b$ générant $A''\otimes B$, $\tilde \psi$ est surjective.\\
+L'injectivité de $\tilde\varphi$ et la surjectivité de $\tilde\psi$ fonctionne comme pour la preuve du théorème \ref{NucExtension}. On réitère la même technique pour montrer que la suite tensorisée est exacte au milieu. Toutefois, on ne peut plus utiliser l'unicité d'une $C^*$-norme sur $A''\otimes_{min} B$, et on a aucune assurance que l'application 
+\[g : A''\times B \rightarrow (A\otimes_{min} B) / R\]
+se factorise depuis $A"\otimes B$. \\
 
-On va définir l'application $r : A\otimes B \rightarrow A' \otimes B$ sur les tenseurs élémentaires. A $a\otimes b= \varphi(a')\otimes b $ on associe $a'\otimes b$, qui est bien défini par injectivité de $\varphi$. Si $a$ n'est pas dans l'image de $\varphi$, on associe $0$. On étend ensuite par continuité cette application qui vérifie $r\circ \tilde\varphi = id_{A'}$ par construction, ce qui prouve l'injectivité de $\tilde\varphi$.\\
+On peut par contre étendre la section complètement positive $\sigma : A"\rightarrow A$ en une section complètement positive $\tilde\sigma : A"\otimes_{min} B\rightarrow A\otimes_{min} B$. Alors $\tilde\psi = f\circ\pi$ et $\tilde\psi \circ \tilde\sigma = id_{A"\otimes B}$, donc $f\circ \pi\circ\tilde\sigma= id$, où 
+\[\pi : A\otimes_{min} B \rightarrow (A\otimes_{min} B )/ R\]
+est la projection naturelle sur $R=\text{Im}\ \tilde\varphi$.\\
 
-On vérifie facilement que $\text{Im} \ \tilde\varphi \subset \text{ker}\ \tilde \psi $. Soit donc $R=\text{Im} \ \tilde\varphi$ et $f$ l'application canonique $(A\otimes B)/ R \rightarrow A''\otimes B$ obtenue en factorisant $\tilde \psi$. Nous allons construire une application $g : A''\otimes B \rightarrow (A\otimes B)/ R $ qui vérifie $g\circ f = id $. Cela montrera que $f$ est injective et donc que $\text{Im} \ \tilde\varphi = \text{ker}\ \tilde \psi $.\\
-
-Soit $a''\in A''$. On choisit $a\in A$ tels que $\psi(a)=a''$ et on définit : 
-\[\begin{array}{rcl}
-A''\times B & \rightarrow & (A\otimes B) /R \\
-a'', b          & \mapsto     & a\otimes b \ (\text{mod} \ R)\\
-\end{array}\] 
-
-Cette application ne dépend pas de la préimage de $a''$ choisie : si $\psi(a_1)=\psi(a_2)=a''$, alors $\psi(a_1-a_2)=0$ donc $a_1-a_2=\varphi(a')$ pour un certain $a'\in A'$, d'où $a_1\otimes b -a_2\otimes b = \varphi(a')\otimes b$ et donc $a_1\otimes b = a_2\otimes b \quad \text{mod}\ R$.\\
-Etant bilinéaire, cette application se factorise en l'application $g : A''\otimes B \rightarrow (A\otimes B) /R$ recherchée.\\
+ Pour montrer que $f$ est injective, il suffit donc de poser $g=\pi\circ \tilde\sigma$ qui est un inverse à droite de $f$.
 
 \qed
 \end{dem}

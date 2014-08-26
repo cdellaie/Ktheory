@@ -521,7 +521,7 @@ Soit $p=x_0+x_1 u +u^*x_1^*\in A\times_\alpha \Z$ une projection de Rieffel et $
 \end{prop}
 
 \begin{dem}
-Soit $p=x_0+x_1 u +u^*x_1^*\in A\times_\alpha \Z $ une projection de Rieffel. Montrons par récurrence que le relevé autoadjoint $a=u^*x_1\otimes S^*+x_0\otimes I +x_1 u\otimes S\in \mathcal T$ de $p$ vérifie :
+Soit $p=x_0+x_1 u +u^*x_1^*\in A\times_\alpha \Z $ une projection de Rieffel. Montrons par récurrence que le relevé autoadjoint $a=u^*x_1^*\otimes S^*+x_0\otimes I +x_1 u\otimes S\in \mathcal T$ de $p$ vérifie :
 \[\forall n \geq 1, \quad a^n = a+(x_0^n-x_0)\Delta\otimes P.\]
 Si c'est vrai au rang $n$,\\
 \begin{align*}
@@ -547,15 +547,15 @@ Le $*$-homomorphisme $\delta$ étant la composition du connectant $\partial : K_
 
 Ce résultat met à notre disposition une autre méthode de calcul de l'image par l'application exponentielle d'un projecteur dans le cas des projecteur de Rieffel. Il est à rapprocher de la proposition \ref{exp} : Pimsner et Voiculescu ~\cite{PV} décrive de manière effective l'application exponentielle dans le cas d'un produit croisé $A\times _\alpha \Z$.\\
 
-Nous avons vu que la suite exacte à $6$ termes donnait deux suites exactes courtes, dont :\\
-\begin{tikzcd}0\arrow{r} & K_0(C(\mathbb S^1))\arrow{r}& K_0(A_\theta)\arrow{r}{\delta} & K_1(C(\mathbb S^1)))\arrow{r} & 0   \end{tikzcd}
-On sait que les groupes à gauche et à droite sont tous les deux $\Z$, l'un étant généré par la classe de la projection $1\in C(\mathbb S^1)$, l'autre par la classe de l'unitaire $v=id_{\mathbb S^1}\in  C(\mathbb S^1)$. Si l'on trouve un projecteur $p$ tel que $\delta [p]_0=[v]_1$, on peut dire que $K_0(A_\theta)$ est engendré par $[1]_0$ et $[p]_0$.\\
+Nous avons vu que la suite exacte à $6$ termes donnait deux suites exactes courtes, dont :
+\[\begin{tikzcd}[column sep = small]0\arrow{r} & K_0(C(\mathbb S^1))\arrow{r}& K_0(A_\theta)\arrow{r}{\delta} & K_1(C(\mathbb S^1)))\arrow{r} & 0   \end{tikzcd}\]
+On sait que les groupes à gauche et à droite sont tous les deux $\Z$, l'un étant généré par la classe de la projection $1\in C(\mathbb S^1)$, l'autre par la classe de l'unitaire $z=id_{\mathbb S^1}\in  C(\mathbb S^1)$. Si l'on trouve un projecteur $p$ tel que $\delta [p]_0=[z]_1$, on peut dire que $K_0(A_\theta)$ est engendré par $[1]_0$ et $[p]_0$.\\
 
 On note $\varphi$ la fonction définie par $\alpha (f) (z) = f(e^{2i\pi\theta}z)=f\circ \varphi (z)$.
 Soit $0<\delta<\theta$. Soit $f$ la fonction de $\R$, affine par morceaux et $1$ péridiodique, qui vaut $1$ si $t$ est dans $[\delta, \theta]$, $0$ si $t\in [\theta+\delta,1]$ et est nulle en $0$. On pose : 
 \[\left\{ \begin{array}{rl}x_0& =e^{2i\pi f }\\
-				x_1 &= \sqrt{x_0(1-x_0)}
+				x_1 (e^{2i\pi t})&= \sqrt{x_0(1-x_0)} 1_{0<t<\delta}
 \end{array}\right.\]  
 
-On vérifie par un simple calcul que $p_\theta=x_0+x_1 u +u^*x_1^*$ définit un projecteur de Rieffel.
-
+On vérifie par un simple calcul que $p_\theta=x_0+x_1 u +u^*x_1^*$ définit un projecteur de Rieffel. Maintenant, $g$ étant auto-adjoint, son support gauche et droit coïncide (c'est le support de $g$), et $(x_0\Delta)(e^{2i\pi t}) = \frac{t}{\delta}1_{0<t<\delta}$. Cette fonction est homotope à $z$, et donc la proposition précédente conclut : 
+\[\delta [p_\theta]_0= [z]_1.\]
