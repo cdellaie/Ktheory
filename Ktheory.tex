@@ -65,7 +65,7 @@ induit un isomorphisme $K_0(A)\simeq K_0(A\otimes \K)$.\\
 
 Donnons en exemple quelques calculs de groupes de $K$-théorie. \\
 Deux projections dans $M_n(\C)$ sont équivalentes précisément lorsque elles ont même rang. Ceci assure que $K_0(\C)=G_{\mathbb N}=\Z$, un générateur étant n'importe quel projecteur de rang $1$. La $K$-théorie étant stable par augmentation et limite inductive, on a aussi : $\Z=K_0(M_n(\C))=K_0(\K)$ avec même générateur. \\
-$K_1(C(\mathbb S^1))=\Z$ avec pour générateur la classe de l'unitaire $z\mapsto \overline z$.\\
+$K_0(C(\mathbb S^1))=\Z$ est généré par la classe du projecteur $z\mapsto 1_\C$, et $K_1(C(\mathbb S^1))=\Z$ avec pour générateur la classe de l'unitaire $z\mapsto  z$. \\
 
 Soit $p\in M_n(A^+)$ un projecteur. Posons 
 \[f_p(z):= zp-1_n+p\quad, \forall z\in \mathbb S^1.\]
@@ -252,14 +252,18 @@ Soit donc un inversible $y=1_B\otimes 1_n +x(u^*\otimes 1_n)$ : $-1$ n'est donc 
 
 On note $U_-$ et $U_+$ les composantes connexes respectivement bornée et non-bornée de $\C - \mathbb S^1$. Alors la fonction $e_-$ qui vaut $1$ sur $U_-$ et $0$ sur $U_-$ est holomorphe sur $\C - \mathbb S^1$, et on peut définir $P_-=e_-(x(u^*\otimes 1_n))$ par calcul holomorphe. De même pour $P_+=e_+(x(u^*\otimes 1_n))$. Ces deux éléments sont des projecteurs (non auto-adjoints) car $e_*(z)^2=e_*(z)$, et sont appelés les projecteurs spectraux de $x(u^*\otimes 1_n)$ associés à $U_-$ et $U_+$.\\
 
-\[(\beta(z)\otimes id_n)P_{+/-}=P_{+/-}\] % Pourquoi ??
+Comme $x(u^*\otimes 1_n)$ et  $\overline z x(u^*\otimes 1_n)$ ont même spectre, les projecteur spectraux associés à $U_+$ et $U_-$ sont les mêmes et donc :
+\[(\beta(z)\otimes id_n)P_{+/-}=P_{+/-}.\] % Pourquoi : je trouve zP_+ ??
 
-Soit $0\leq \epsilon \leq 1$. On définit un chemin d'éléments inversibles par  
-\[y_\epsilon = \epsilon P_+ + x(u^*\otimes 1_n) P_+ + P_- + \epsilon x(u^*\otimes 1_n) P_-.\]
+Ceci assure que $P_{+/-}\in A\otimes \mathfrak M_n$, ce qui n'était pas évident a priori, $x(u^*\otimes 1_n)$ étant élément de $B\otimes\mathfrak M_n$.\\
+
+On définit un chemin d'éléments inversibles par  
+\[y_\epsilon = \epsilon P_+ + x(u^*\otimes 1_n) P_+ + P_- + \epsilon x(u^*\otimes 1_n) P_-,\]
+pour tout $ 0\leq \epsilon \leq 1$.
 On a donc $[y_0]=[y_1]=[y]$. Comme $y_0= 1-P_+ + P_+ x(u^*\otimes 1_n)P_+$, il suffit de montrer que l'on peut remplacer $P_+$ par un projecteur auto-adjoint pour conclure.\\
 
 Soit $F$ le projecteur orthogonal sur l'image de $P_+$. Alors il existe $T\in A\otimes \mathfrak M_n$ tel que :
-\[P_+=F + FT(1_A\otimes 1_n-F)\] %Pourquoi ??
+\[P_+=F + FT(1_A\otimes 1_n-F)\] %Pourquoi ne pas prendre T=P_+ ??
 Comme $Fx(u^*\otimes 1_n)F=x(u^*\otimes 1_n)F$, on vérifie par un simple calcul que :
 \[y_0=1_A\otimes 1_n -F+Fx(u^*\otimes 1_n)F+FS(1_A\otimes 1_n-F),\]
 où $S=-T-x(u^*\otimes 1_n)FT$. L'inversibilité de $y_0$ donne celle de 
