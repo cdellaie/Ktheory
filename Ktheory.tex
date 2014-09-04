@@ -45,7 +45,7 @@ Quelques remarques :
  Ces foncteurs de la catégorie des $C^*$-algèbres dans celle des groupes abéliens sont semi-exacts, i.e. ils transforment toute suite exacte courte en suite exacte très courte. Un point remarquable, et qui sera utilisé plus tard : leur comportement vis à vis de la stabilisation est naturel.\\
 
 \begin{definition}
-Une $C^*$-algère $A$ est dite stable si $A\simeq A\otimes \K$, où $A\otimes \K$ est par défintion la stabilisation de $A$. On dit de deux $C^*$-algèbres qu'elles sont stablement isomorphes si $A\otimes \K \simeq B\otimes \K$ .
+Une $C^*$-algèbre $A$ est dite stable si $A\simeq A\otimes \K$, où $A\otimes \K$ est par défintion la stabilisation de $A$. On dit de deux $C^*$-algèbres qu'elles sont stablement isomorphes si $A\otimes \K \simeq B\otimes \K$ .
 \end{definition}
 
 L'agèbre des matrices se plonge naturellement (mais non canoniquement) dans l'algèbre de opérateurs bornés $\mathfrak M_n \simeq P_n \B P_n \subset \K $, où $P_n$ est le projecteur sur les $n$ premières coordonnées. Et le diagramme commutatif 
@@ -184,7 +184,7 @@ où $F$ désigne une projection auto-adjointe.
 La remarque suivante est importante pour la preuve du lemme \ref{isom} : dans le cas $B=A\times_\alpha \Z$, les classes concernées sont stables par somme, donc tout élément de $K_1(B)$ est la différence de deux générateurs.\\
 
 \begin{dem}
-On note $\Gamma$ le sous-groupe de $K_1(B)$ engendré par les éléments de la forme $1_B\otimes 1_n+x(u\otimes 1_n)$.\\
+On note $\Gamma$ le sous-groupe de $K_1(B)$ engendré par les éléments de la forme $1_B\otimes 1_n+x(u^*\otimes 1_n)$.\\
 
 Comme $u$ est unitaire, le spectre de $t(1_B+2u^*) + (1-t)u^*=t1_B + (1+t)u^*$ ne contient pas $0$, et on a donc un chemin continu d'inversibles entre $1_B+2u^*$ et $u^*$, d'où :
 \begin{equation}[1_B+2u^*]_1=[u^*]_1.\label{homotop}\end{equation}
@@ -250,10 +250,18 @@ On note $\beta : \mathbb S^1 \rightarrow  Aut(B)$ l'automorphisme donné par l'i
 
 Soit donc un inversible $y=1_B\otimes 1_n +x(u^*\otimes 1_n)$ : $-1$ n'est donc pas dans le spectre de $x(u^*\otimes 1_n)$. Comme $\beta$ est un automorphisme qui fixe $A$, il laisse invariant les spectre : le spectre de $x(u^*\otimes 1_n)$ est le même que celui de $(\beta(z)\otimes id_n)x(u^*\otimes 1_n)=\overline z x(u^*\otimes 1_n)$, pour tout $z\in \mathbb S^1$. Donc tout l'orbite de $-1$ sous l'action du cercle, c'est-à-dire le cercle $\mathbb S^1$, est dans la résolvante de $x(u^*\otimes 1_n)$.\\
 
-On note $U_-$ et $U_+$ les composantes connexes respectivement bornée et non-bornée de $\C - \mathbb S^1$. Alors la fonction $e_-$ qui vaut $1$ sur $U_-$ et $0$ sur $U_-$ est holomorphe sur $\C - \mathbb S^1$, et on peut définir $P_-=e_-(x(u^*\otimes 1_n))$ par calcul holomorphe. De même pour $P_+=e_+(x(u^*\otimes 1_n))$. Ces deux éléments sont des projecteurs (non auto-adjoints) car $e_*(z)^2=e_*(z)$, et sont appelés les projecteurs spectraux de $x(u^*\otimes 1_n)$ associés à $U_-$ et $U_+$.\\
+On note $U_-$ et $U_+$ les composantes connexes respectivement bornée et non-bornée de $\C - \mathbb S^1$, et $T$ l'opérateur $x(u^*\otimes 1_n)$. Alors la fonction $e_-$ qui vaut $1$ sur $U_-$ et $0$ sur $U_-$ est holomorphe sur $\C - \mathbb S^1$, et on peut définir $P_-=e_-(T)$ par calcul holomorphe. De même pour $P_+=e_+(T)$. Ces deux éléments sont des projecteurs (non auto-adjoints) car $e_*(z)^2=e_*(z)$, et sont appelés les projecteurs spectraux de $x(u^*\otimes 1_n)$ associés à $U_-$ et $U_+$.\\
 
-Comme $x(u^*\otimes 1_n)$ et  $\overline z x(u^*\otimes 1_n)$ ont même spectre, les projecteur spectraux associés à $U_+$ et $U_-$ sont les mêmes et donc :
-\[(\beta(z)\otimes id_n)P_{+/-}=P_{+/-}.\] % Pourquoi : je trouve zP_+ ??
+Comme $x(u^*\otimes 1_n)$ et  $\overline z x(u^*\otimes 1_n)$ ont même spectre, les projecteur spectraux associés à $U_+$ et $U_-$, que l'on note $P_{+/-}^z$, peuvent se définir avec les mêmes fonctions holomorphes $e_+$ et $e_-$. Comme elles sont invariantes par rotation,  on obtient que :
+\begin{align*}
+P_+^z=e_+(\overline z T ) & =\frac{1}{2i\pi} \int_\gamma e_+(w)(w-\overline z T)^{-1} dw\\
+				&=\frac{z}{2i\pi} \int_\gamma e_+(w)(zw-\overline T)^{-1} dw \\
+				&=z\frac{1}{2i\pi} \int_\gamma e_+(\overline z w)(w-\overline T)^{-1} \frac{dw}{z}\quad \text{en posant } w'=zw\\
+				&= P_+.
+\end{align*}
+($\gamma$ est un lacet entourant le spectre de $T$.)\\
+On a donc montré que :
+\[(\beta(z)\otimes id_n)P_{+/-}=P_{+/-}.\] 
 
 Ceci assure que $P_{+/-}\in A\otimes \mathfrak M_n$, ce qui n'était pas évident a priori, $x(u^*\otimes 1_n)$ étant élément de $B\otimes\mathfrak M_n$.\\
 
