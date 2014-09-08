@@ -150,6 +150,16 @@ L'indice d'un élément $x\in K_1(A/J)$ décrit ci-dessus est défini comme
 \[\partial (x) = [wp_n w^*]-[p_n]\in K_0(J).\] 
 \end{definition}
 
+Si l'on se donne un relevé $w$ de $\begin{pmatrix}u & 0 \\ 0 &u^* \end{pmatrix}$, alors $v=(1-p_n)w*$ est une isométrie partielle :
+\begin{align*}
+vv^* &=1-p_n\\
+v^*v &=1-w p_n w^*
+\end{align*}
+sont en effet des projecteurs. Mais en remplaçant ces expressions dans la formule de l'indice, on obtient
+\[\partial [u]=[1-v^* v]-[1-vv^*].\]
+Est-on obligé de doubler la dimension ? Non, si $u$ se relève en une isométrie partielle $a$ par exemple. Alors $w=\begin{pmatrix}a & 1-aa^* \\ 1-a^*a & a^*\end{pmatrix}$ est un unitaire qui relève $\begin{pmatrix}u & 0 \\ 0 &u^* \end{pmatrix}$, et on peut calculer l'indice de $[u]$ avec des matrices de taille identique : 
+\[\partial [u]=[1-a^* a]-[1-aa^*].\]
+
 \begin{prop}
 Si la suite de $C^*$-algèbres \[\begin{tikzcd}[column sep = small] 0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0\end{tikzcd}\]
 est exacte, alors la suite de groupes abéliens
