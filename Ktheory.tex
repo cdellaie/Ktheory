@@ -15,7 +15,7 @@ $p\sim_u q$ s'il existe un unitaire $u$ de $A^+$ tel que $p=uqu^*$. (Similitude)
 $p\sim_h q$ s'il existe un chemin continu en norme de projections de $p$ à $q$.(Homotopie)\\
 \end{definition}
 
-En général, on a : $\sim_h \Rightarrow \sim_u \Rightarrow \sim$. Pour avoir les implications inverses, on peut se placer dans $M_\infty(A)$. (Doubler la dimension à chaque fois suffit) On peut alors considérer l'ensemble des projections de $M_\infty (A)$ et quotienter par l'unique relation d'équivalence définie ci-dessus. L'ensemble obtenu est un semi-groupe pour l'opération de somme directe de projecteur, nommé $V(A)$.\\
+En général, on a : $\sim_h \Rightarrow \sim_u \Rightarrow \sim$. Pour avoir les implications inverses, on peut se placer dans $M_\infty(A)$. (Doubler la dimension à chaque fois suffit) On peut alors considérer l'ensemble des projections de $M_\infty (A)$ et quotienter par l'unique relation d'équivalence définie ci-dessus. L'ensemble obtenu est un semi-groupe pour l'opération de somme directe de projecteur, nommé $V(A)$. On notera $p_n=\text{diag}(1,...,1,0,0,...)$ l'élément de $V(A)$ avec des $1$ sur les $n$ premiers emplacements diagonaux. \\
 
 \begin{definition}
 Le premier groupe de $K$-théorie de $A$ est :\\
@@ -23,7 +23,14 @@ le groupe de Grothendieck de $V(A)$ si $A$ est unitale.\\
 le noyau de $K_0(A^+)\rightarrow K_0(\C)$ sinon.
 \end{definition}
 
-Pour passer aux groupes de $K$-théorie d'indices supérieurs de $A$, on se servira du foncteur de suspension $S(A)=A\times C_0(\R)$.
+Tout élément de $K_0(A)$ se représente comme la différence de deux classes de projecteurs de $M_k(A^+)$, qui peuvent être choisis dans $M_k(A)$ si $A$ est unitale. Plus précisément, tout élément de $K_0(A)$ peut s'écrire
+\[[p]-[p_n]\]
+où $p\in M_k(A^+)$ est un projecteur avec $k\leq n$ tel que $p-p_n \in M_k(A)$.\\
+
+$K_0$ est un foncteur covariant de la catégorie des $C^*$-algèbres dans celle des groupes abéliens, c'est pourquoi l'on se permettra de noter, pour tout homomorphisme involutif $\varphi : A \rightarrow B$ entre deux $C^*$-algèbres, $K_0(\varphi)=\varphi_* : K_0(A)\rightarrow K_0(B)$ l'homomorphisme de groupes défini par 
+\[\varphi_*([p]-[q])=[\varphi(p)]-[\varphi(q)].\]
+
+Pour passer aux groupes de $K$-théorie d'indices supérieurs de $A$, on se servira du foncteur de suspension $S(A)=A\otimes C_0(\R)$.
 
 \begin{definition}
 Pour toute algèbre de Banach unitale, on pose \[GL_\infty(A) = \varinjlim GL_n(A) \quad \text{(limite inductive)}\]
@@ -38,11 +45,42 @@ Quelques remarques :
 \item Le groupe $K_1(A)$ est donc généré par les classes $[u]$ où est un unitaire ou un inversible de $GL_n(A)$, avec la présentation $[1]=0$, $[u]+[v]=[u\oplus v]$ et $[u]=[v]$ si $u$ et $v$ sont reliés par un chemin continu d'unitaires ou d'inversibles.
 \item On a en fait la relation suivante \[\forall i\in \mathbb N, \quad K_{i+1}(A)=K_i(S(A)).\]
 \item Dans le cas des $C^*$-algèbres comme en $K$-théorie topologique, on a périodicité de Bott : $K_{i+2}(A)\simeq K_i(A)$.\\
+\item $K_1(A)$ est bien un groupe abélien. Premièrement, notons que la matrice $\begin{pmatrix}1 & 0\\ 0 & 1\end{pmatrix}$ est connectée à  $\begin{pmatrix}0 & -1\\ 1 & 0\end{pmatrix}$ par l'arc $t\mapsto \begin{pmatrix}\cos t & -\sin t \\ \sin t  & \cos t\end{pmatrix}$ de $GL(2,\C)$. Ceci assure, par multiplication à gauche et à droite par des matrices élémentaires, que l'on peut échanger deux colonnes ou deux lignes d'une matrice sans changer sa classe dans $K_1(A)$. Si $\sim$ signifie "être dans la même composante connexe", alors :
+\begin{align*}
+\begin{pmatrix} xy & 0\\ 0 & 1\end{pmatrix} & \sim \begin{pmatrix} x & 0\\ 0 & 1\end{pmatrix} \begin{pmatrix}y & 0\\ 0 & 1\end{pmatrix}\\
+							&\sim \begin{pmatrix}x & 0\\ 0 & 1\end{pmatrix} \begin{pmatrix}1 & 0\\ 0 & y\end{pmatrix}\\
+							&\sim \begin{pmatrix}x & 0\\ 0 & y\end{pmatrix}.
+\end{align*}
+Le dernier terme étant symétrique, $K_1(A)$ est bien abélien. On a montré au passage que $\begin{pmatrix} xy & 0\\ 0 & 1\end{pmatrix}\sim \begin{pmatrix}x & 0\\ 0 & y\end{pmatrix}$, ce que l'on utilisera fréquemment, par exemple lorsque l'on affirmera que $\begin{pmatrix}u & 0\\ 0 & u^*\end{pmatrix}$ est connectée à l'identité si $u$ est unitaire.
 \end{enumerate}
+
+Cette dernière remarque nous amène à un autre résultat utile.
+\begin{prop} Soit $A$ une $C^*$-algèbre unitale. Un élément $z\in A$ est inversible et connecté à $1$ par un chemin d'inversibles ssi il existe $a_1,..., a_n\in A$ tels que $z=\prod_j e^{a_j}$.
+\end{prop}
+\begin{dem}
+Toute exponentielle est connectée par un chemin d'inversibles à l'identité par l'arc $t\mapsto e^{t a}, a\in A$ : le sens indirect est prouvé. On note $\exp(A)$ les éléments qui sont des produits d'exponentielles. Soit $z=\prod_j e^{a_j}$ un tel élément. Alors, si $z'$ est assez proche de $z$ : $||z-z'||<\frac{1}{||z^{-1}||}$, le spectre de $z'z^{-1}$ est contenu dans le disque ouvert de rayon $1$ et de centre $1$, on peut donc définir son $\log$. Donc $z'= \exp(\log (z'z^{-1} ) ) z $ est bien un produit d'exponentielles. Comme $\exp(A)$ est ouvert et fermé et qu'il contient $1$, $GL_1(A)_0=\exp(A)$.
+\qed
+\end{dem}
+
+Cette proposition a pour corollaire un résultat de relèvement important.
+\begin{prop}
+Soit $\psi : A \rightarrow A''$ un $*$-homomorphisme surjectif entre deux $C^*$-algèbres unitales. Alors tout unitaire (resp. inversible)de $A''$ qui est connecté à l'identité peut se relever en un unitaire (resp. inversible) de $A$. 
+\end{prop} 
+
+\begin{dem}Soit $a''\in A''$ un unitaire conectée à l'identité.
+La proposition précédente assure que $a'' = \prod_j e^{x_j}$. Par surjectivité de $\psi$, il existe des éléments $y_j$ de $A$ tels que $\psi(y_j)=x_j$. Mais alors $a=\prod_j e^{y_j}$ est un relevé inversible connecté à l'identité qui relève $a''$. Si $a''$ est unitaire, $a(a^*a)^{-\frac{1}{2}}$ convient.
+\qed
+\end{dem}
 %Les groupes de $K$-théorie d'ordre supérieurs de $A$ sont définis par suspension :
 %\[\forall i\in \mathbb N, \quad K_i(A)=K_0(S(A)).\]
 
- Ces foncteurs de la catégorie des $C^*$-algèbres dans celle des groupes abéliens sont semi-exacts, i.e. ils transforment toute suite exacte courte en suite exacte très courte. Un point remarquable, et qui sera utilisé plus tard : leur comportement vis à vis de la stabilisation est naturel.\\
+Ces foncteurs de la catégorie des $C^*$-algèbres dans celle des groupes abéliens sont semi-exacts, i.e. ils transforment toute suite exacte courte en suite exacte très courte. Un point remarquable, et qui sera utilisé plus tard : leur comportement vis à vis de la stabilisation est naturel.\\
+
+Donnons en exemple quelques calculs de groupes de $K$-théorie. \\
+
+Deux projections dans $M_n(\C)$ sont équivalentes précisément lorsque elles ont même rang. Ceci assure que $K_0(\C)=G_{\mathbb N}=\Z$, un générateur étant n'importe quel projecteur de rang $1$. La $K$-théorie étant stable par augmentation et limite inductive, on a aussi : $\Z=K_0(M_n(\C))=K_0(\K)$ avec même générateur. \\
+
+$K_0(C(\mathbb S^1))=\Z$ est généré par la classe du projecteur $z\mapsto 1_\C$, et $K_1(C(\mathbb S^1))=\Z$ avec pour générateur la classe de l'unitaire $z\mapsto  z$. En effet, $C(\mathbb S^1)$ n'admet que $0$ et $1$ comme projecteurs. De plus $K_1(C(\mathbb S^1))=\pi_0(GL_\infty(C(\mathbb S^1)))$ et $\pi_0(GL(n,C(\mathbb S^1) ))=\pi_1(GL(n,\C))=\Z$ pour tout entier $n$.\\
 
 \begin{definition}
 Une $C^*$-algèbre $A$ est dite stable si $A\simeq A\otimes \K$, où $A\otimes \K$ est par défintion la stabilisation de $A$. On dit de deux $C^*$-algèbres qu'elles sont stablement isomorphes si $A\otimes \K \simeq B\otimes \K$ .
@@ -63,10 +101,6 @@ Comme les $\iota_*$ sont des isomorphismes, cette flèche l'est. Mais le diagram
 \[\left\{\begin{array}{rcl} A & \rightarrow & A\otimes \K \\ a &\mapsto & a\otimes e_{11}\end{array}\right.\]
 induit un isomorphisme $K_0(A)\simeq K_0(A\otimes \K)$.\\
 
-Donnons en exemple quelques calculs de groupes de $K$-théorie. \\
-Deux projections dans $M_n(\C)$ sont équivalentes précisément lorsque elles ont même rang. Ceci assure que $K_0(\C)=G_{\mathbb N}=\Z$, un générateur étant n'importe quel projecteur de rang $1$. La $K$-théorie étant stable par augmentation et limite inductive, on a aussi : $\Z=K_0(M_n(\C))=K_0(\K)$ avec même générateur. \\
-$K_0(C(\mathbb S^1))=\Z$ est généré par la classe du projecteur $z\mapsto 1_\C$, et $K_1(C(\mathbb S^1))=\Z$ avec pour générateur la classe de l'unitaire $z\mapsto  z$. \\
-
 Soit $p\in M_n(A^+)$ un projecteur. Posons 
 \[f_p(z):= zp-1_n+p\quad, \forall z\in \mathbb S^1.\]
 Pour tout $z\in \mathbb S^1$, $f_p(z)$ définit un unitaire, donc $[f_p]_1\in K_1(SA)$. De plus $||f_p-f_q||=\sup_{z\in \mathbb S^1}||(z-1)(p-q)||=2||p-q||$, ce qui montre que $p\mapsto f_p$ et $f_p\mapsto p$ sont continues. Enfin, la relation $f_p f_q=f_{p+q}$ lorsque $p$ et $q$ sont orthogonales assure que $p\mapsto [f_p]_1$ se factorise en un homomorphisme $V(A)\rightarrow K_1(SA)$. 
@@ -86,7 +120,17 @@ on peut trouver un chemin continu d'unitaires $t\mapsto w_t$ de $1_{2n}$ à $\be
 \ [u]_1 & \mapsto & [q]_0 - [p_n]\end{array}\right.\]
 \end{definition}
 
-Ces deux applications, Bott et Theta, sont toutes deux des transformations naturelles entre les foncteurs $K_0$ et $K_1 S$ pour Bott, $K_1$ et $K_0 S $ pour Theta.\\
+Ces deux applications, Bott et Theta, sont toutes deux des transformations naturelles entre les foncteurs $K_0$ et $K_1 S$ pour Bott, $K_1$ et $K_0 S $ pour Theta. Cela signifie que tout $*$-homomorphisme $\alpha : A \rightarrow B$ entre deux $C^*$-algèbres induit deux diagrammes commutatifs :
+\[\begin{array}{cc}\begin{tikzcd}
+K_0 (A)\arrow{r}{\alpha_*}\arrow{d}{\beta_A} &  K_0(B) \arrow{d}{\beta_B}\\
+K_1(SA) \arrow{r}{\alpha_*} & K_1(SB) 
+\end{tikzcd} & 
+\begin{tikzcd}
+K_1 (A)\arrow{r}{\alpha_*}\arrow{d}{\theta_A} &  K_1(B) \arrow{d}{\theta_B}\\
+K_0(SA) \arrow{r}{\alpha_*} & K_0(SB) 
+\end{tikzcd}
+\end{array}\]
+
 \subsection{La suite exacte à six termes}
 \begin{thm}
 Soit \begin{tikzcd}[column sep=small] 0 \arrow{r}  & J \arrow{r}{\iota}& A \arrow{r}{\pi} & B \arrow{r} & 0\end{tikzcd} une suite exacte de $C^*$-algèbres. Alors la suite à six termes suivantes est exacte :\\
@@ -97,7 +141,23 @@ Soit \begin{tikzcd}[column sep=small] 0 \arrow{r}  & J \arrow{r}{\iota}& A \arro
 \end{tikzcd}\]
 \end{thm}
 
-C'est l'un des résultats fondamentaux en $K$-théorie, il permet des calculs effectifs. Le premier pas à faire est de construire l'indice associé à toute suite exacte $\partial : K_1(B)\rightarrow K_0(J)$, qui transforme toute suite exacte courte en suite exacte longue. On peut trouver $2$ isomorphismes naturels qui donnent la périodicité de Bott :
+C'est l'un des résultats fondamentaux en $K$-théorie, il permet des calculs effectifs. Le premier pas à faire est de construire l'indice associé à toute suite exacte $\partial : K_1(B)\rightarrow K_0(J)$, qui transforme toute suite exacte courte en suite exacte longue. \\
+
+Si $J$ est un idéal bilatère fermé de $A$, et $x=[u]\in K_1(A/J)$ pour un certain $u\in U^+_n(A)$, on choisit $v\in U^+_k(A)$ tel que $\begin{pmatrix}u & 0 \\ 0 & v\end{pmatrix}$ soit connectée à $1_{n+k}$ (par exemple $v=u^*$ convient). Alors on peut relever $\begin{pmatrix}u & 0 \\ 0 & v\end{pmatrix}$ en un unitaire $w\in U_{n+k}(A)$.
+
+\begin{definition}
+L'indice d'un élément $x\in K_1(A/J)$ décrit ci-dessus est défini comme  
+\[\partial (x) = [wp_n w^*]-[p_n]\in K_0(J).\] 
+\end{definition}
+
+\begin{prop}
+Si la suite de $C^*$-algèbres \[\begin{tikzcd}[column sep = small] 0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0\end{tikzcd}\]
+est exacte, alors la suite de groupes abéliens
+\[\begin{tikzcd}[column sep = small] K_1(J) \arrow{r} & K_1(A)\arrow{r} & K_1(A/J) \arrow{r}{\partial} &  K_0(J) \arrow{r} & K_0(A)\arrow{r} & K_0(A/J) \end{tikzcd}\]
+est exacte.
+\end{prop}
+
+On peut trouver $2$ isomorphismes naturels qui donnent la périodicité de Bott :
 \[K_{i+1}(A)\simeq K_i(A), i=0,1.\]
 Ces isomorphismes sont donnés par l'application de Bott $\beta : K_0 \rightarrow K_1 S$ et $\theta :  K_1 \rightarrow K_0 S$. La périodicité permet de conclure en enroulant la suite exacte longue grâce à l'application exponentielle $\delta : K_0(B)\rightarrow K_1(J)$ qui est la composition $\theta_J^{-1}\circ \partial \circ \beta_B$.\\
 
@@ -166,8 +226,7 @@ Soit $A$ une $C^*$-algèbre et $\alpha \in Aut(A)$. Il existe alors une suite ex
 \[\begin{tikzcd}
  K_0(A) \arrow{r}{1-\alpha_*} & K_0(A)  \arrow{r}{\iota_*}  &    K_0(A\times_\alpha \Z)  \arrow{d}  \\
  K_1(A\times_\alpha \Z) \arrow{u} & K_1(A)  \arrow{l}{\iota_*} &    K_1(A) \arrow{l}{1-\alpha_*} 
-\end{tikzcd}\]
-.
+\end{tikzcd}.\]
 \end{thm}
 
 La première chose que l'on peut, et que l'on va, dire à propos des produits croisés est que les générateurs de leurs groupes de $K$-théorie prennent une forme sympathique, qui va nous permettre de faire des calculs explicites dans la preuve de la suite de Pimsner-Voiculescu.\\
@@ -267,18 +326,18 @@ Ceci assure que $P_{+/-}\in A\otimes \mathfrak M_n$, ce qui n'était pas éviden
 
 On définit un chemin d'éléments inversibles par  
 \[y_\epsilon = \epsilon P_+ + x(u^*\otimes 1_n) P_+ + P_- + \epsilon x(u^*\otimes 1_n) P_-,\]
-pour tout $ 0\leq \epsilon \leq 1$.
+pour tout $ 0\leq \epsilon \leq 1$. Pour voir l'inversilbilité, il suffit de remarquer que l'on a scindé $x(u^*\otimes 1_n)$ sur l'image de $P_+$ et $P_-$, et que l'on lui a ajouté un scalaire qui ne se trouve pas dans le spectre relatif à ce projecteur.
 On a donc $[y_0]=[y_1]=[y]$. Comme $y_0= 1-P_+ + P_+ x(u^*\otimes 1_n)P_+$, il suffit de montrer que l'on peut remplacer $P_+$ par un projecteur auto-adjoint pour conclure.\\
 
 Soit $F$ le projecteur orthogonal sur l'image de $P_+$. Alors il existe $T\in A\otimes \mathfrak M_n$ tel que :
 \[P_+=F + FT(1_A\otimes 1_n-F)\] %Pourquoi ne pas prendre T=P_+ ??
-Comme $Fx(u^*\otimes 1_n)F=x(u^*\otimes 1_n)F$, on vérifie par un simple calcul que :
+(On peut prendre $T=P_+$ par exemple.) Comme $Fx(u^*\otimes 1_n)F=x(u^*\otimes 1_n)F$, on vérifie par un simple calcul que :
 \[y_0=1_A\otimes 1_n -F+Fx(u^*\otimes 1_n)F+FS(1_A\otimes 1_n-F),\]
 où $S=-T-x(u^*\otimes 1_n)FT$. L'inversibilité de $y_0$ donne celle de 
 \[1_A\otimes 1_n -F + F x(u^*\otimes 1_n) F +\epsilon FS (1_A\otimes 1_n-F)\]
 pour tout $\epsilon \in \C$, donc 
 \[[y]=[1_A\otimes 1_n -F+ F x(u^*\otimes 1_n)F].\]
-On aurait pu remplacer $y_0$ par $(y_0 y_0 ^*)^{-\frac{1}{2}} y_0$ qui est unitaire, ce qui conclut le lemme.
+On aurait pu remplacer $y_0$ par $(y_0 y_0 ^*)^{-\frac{1}{2}} y_0$ qui est unitaire et homotope à $y_0$, ce qui conclut le lemme.
 
 \qed
 \end{dem}

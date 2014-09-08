@@ -3,7 +3,9 @@
 
 Pour une $C^*$-algèbre $A$ non nécessairement unitale, on note $A^+$ la $C^*$-algèbre unitale qui la contient en tant qu'idéal bilatère, définie par :
 
-\[\begin{array}{c}A^+=\{(a,\lambda)\in A\times \C \} \\ (a,\lambda)(b,\mu)=(ab+\lambda b +\mu a,\lambda\mu)\end{array}\]
+\[\begin{array}{c}A^+=\{(a,\lambda)\in A\times \C \} \\ (a,\lambda)(b,\mu)=(ab+\lambda b +\mu a,\lambda\mu) \\ (a,\lambda)^*=(a^*,\overline\lambda)\end{array}\]
+et munie de la norme d'opérateur
+\[||(a,\lambda)||=\sup \{||ax+\lambda x|| : x\in A , ||x||=1\}.\]
  On a alors une suite exacte :
 \[\begin{tikzcd}[column sep = small] 0 \arrow{r} &  A \arrow{r} & A^+ \arrow{r}{\pi_\C} & \C \arrow{r} & 0 \end{tikzcd}.\]
 
@@ -11,7 +13,10 @@ On rappelle que pour tout semi-groupe abélien $S$, il existe un groupe $G_S$, a
 
 \[\begin{tikzcd} S \arrow{r}{\alpha} \arrow[dotted]{d}{\exists !\tilde\alpha}& G \\
 	G_S \arrow{ur}{\mu} & \end{tikzcd}\]
- 
+ Voici une construction explicite de $G_S$. On considère $S\times S$ que l'on muni de la relation d'équivalence 
+\[(x,y)\sim (x',y') \quad \text{ssi} \quad \exists r \in S/ x+y'+r=x'+y+r.\]
+Alors $S\times S/ \sim$ est un groupe où la classe de $(x,x)$ est constante pour tout $x\in S$, et donne le neutre du groupe. L'inverse de la classe de $(x,y)$ est quant à lui donné par la classe de $(y,x)$. On écrira $[x]-[y]$ pour la classe de $(x,y)$.\\
+
 Enfin, une remarque sur les limites inductives de $C^*$-algèbres. Par système inductif, on entend une famille de morphismes $\{\phi_{ij}:A_j\rightarrow A_i\}_{i>j}$, où $i$ et $j$ sont éléments d'un ensemble partiellement ordonné, vérifiant la condition de cohérence :
 \[\phi_{ij}\circ\phi_{jk}=\phi_{ik}\quad \text{si }\ i>j>k.\]
 Il existe alors un objet universel $A_\infty$, appelé la limite inductive algébrique du système $\{A_i; \phi_{ij}\}$, et des morphismes canoniques $\phi_i : A_i \rightarrow A_\infty$ qui rendent le diagramme suivant commutatif :
@@ -22,7 +27,7 @@ et tel que $A_\infty = \cup \phi_j(A_j)$. Cet objet est universel au sens où, p
 \[\begin{tikzcd}A_i \arrow{r}{\phi_i}\arrow{dr}{\phi'_i}& A_\infty\arrow[dotted]{d} \\
 		    A_j \arrow{u}{\phi_{ij}}\arrow{ur}{\phi_j}\arrow{r}{\phi'_j}& A'_\infty
 \end{tikzcd}\] 
-commute. De plus, si chaque $\phi'_j$ est injectif, la flèche en pointillés l'est aussi. Et elle est surjective si $N= \cup \phi'_j A_j$. \\
+commute. De plus, si chaque $\phi'_j$ est injectif, la flèche en pointillés l'est aussi. Et elle est surjective si $A_\infty= \cup \phi'_j A_j$. \\
 
 Si $x=\phi_j(a_j)$,
 \[\alpha(x):=\sup_i\{||\phi_{ij}(a_j)||\}\]
@@ -47,7 +52,7 @@ V_1 \arrow{dr}& \arrow{l}{\pi_1}	E\times F \arrow{d}\arrow{r}{\pi_2}	& \arrow{dl
 \end{tikzcd}\]
 
 \begin{dem}
-En factorisant $\pi_j$ via $\pi_j$, il existe deux uniques applications linéaires $\phi_1 : V_2\rightarrow V_1$ et $\phi_2 : V_1\rightarrow V_2$ telles que :
+En appliquant la propriété d'unique factorisation aux deux applications $\pi_j$ elles-mêmes, il existe deux uniques applications linéaires $\phi_1 : V_2\rightarrow V_1$ et $\phi_2 : V_1\rightarrow V_2$ telles que :
 \[\begin{array}{c}\pi_1=\phi_1\circ \pi_2 \\ \pi_2=\phi_2\circ \pi_1.\end{array}\]
 
 Montrons que ces deux applications sont inverses. Comme :
@@ -57,7 +62,7 @@ Symétriquement, on démontre que : $\phi_2\circ \phi_1 = id_{V_2}$, et le résu
 \qed
 \end{dem}
 
-Le problème qui va se poser, si l'on veut définir des produits tensoriels d'espaces vectoriels topologiques par exemple, est celui de la topologie que l'on veut définir sur celui-ci. Alexandre Grothendieck a étudié ces constructions dans sa thèse, voir le séminiaire Bourbaki ~\cite{GrothendieckNuc} pour une présentation. C'est au cours de sa thèse que A. Grothendieck a d'ailleurs introduit la nucléarité, notion clé pour les $C^*$-algèbres. On verra en effet que les $C^*$-algèbres nucléaires sont exactes : le foncteur obtenu en tensorisant par elle-même préserve l'exactitude des complexes de $C^*$-algèbres.\\
+Le problème qui va se poser, si l'on veut définir des produits tensoriels d'espaces vectoriels topologiques par exemple, est celui de la topologie que l'on veut définir sur celui-ci. Alexandre Grothendieck a étudié ces constructions dans sa thèse, voir le séminaire Bourbaki ~\cite{GrothendieckNuc} pour une présentation. C'est au cours de sa thèse que A. Grothendieck a d'ailleurs introduit la nucléarité, notion clé pour les $C^*$-algèbres. On verra en effet que les $C^*$-algèbres nucléaires sont exactes : le foncteur obtenu en tensorisant par elle-même préserve l'exactitude des complexes de $C^*$-algèbres.\\
 
 Sur les espaces de Hilbert, notre travail est simplifié : il existe un unique produit scalaire sur le produit tensoriel algébrique vérifiant : $\langle x\otimes x', y\otimes y'\rangle=\langle x, y\rangle \langle x',y' \rangle$. La complétion du produit tensoriel algébrique de $H$ et $K$ par rapport à ce produit scalaire est noté $H\hat \otimes K$. Ce résultat peut alors être transféré aux $C^*$-algèbres, grâce à leurs représentations sur des espaces de Hilbert. 
 
