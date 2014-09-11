@@ -32,7 +32,55 @@ commute. De plus, si chaque $\phi'_j$ est injectif, la flèche en pointillés l'
 Si $x=\phi_j(a_j)$,
 \[\alpha(x):=\sup_i\{||\phi_{ij}(a_j)||\}\]
 définit une semi-$C*$-norme sur $A_\infty$. On peut alors quotienter par l'idéal des éléments qui annulent $\alpha$, puis compléter par rapport à la norme obtenue sur le quotient. On étend ainsi la limite inductive à la catégorie des $C^*$-algèbre. Dans la suite de ce rapport, lorsque l'on parlera de limite inductive, cela désignera par défaut cette construction.
- 
+
+\subsection{Produits croisés discrets}
+
+Nous allons présenter dans cette section la construction d'un produit croisé d'une $C^*$-algèbre $A$ par un groupe $\Gamma$. Bien qu'il soit possible d'obtenir cette construction dans le cas des groupes localement compacts, on se limite aux cas où $\Gamma$ discret et dénombrable.\\
+
+On se donne un homomorphisme $\alpha : \gamma \rightarrow \text{Aut}(A)$, et on note $\alpha_s$ l'automorphisme donné par $\alpha$ évalué en $s$. Le triplet $(A,\Gamma, \alpha)$ définit ce que l'on appelle un $C^*$-système dynamique. Une paire $(\pi, U)$, où $\pi $ est une $*$-représentation de $A$ sur un espace de Hilbert $H$ et $s\mapsto U_s$ est une représentation unitaire de $\Gamma$, est appelée représentation covariante du $C^*$-système dynamique $(A,\Gamma,\alpha)$ si 
+\[U_s \pi(a) U_s^* = \pi(\alpha_s(a))\quad,\forall a\in A, s\in \Gamma.\]
+
+On considère l'algèbre des fonctions continues à support compact sur $\Gamma$ à valeurs dans $A$. Comme $\Gamma$ est discret, c'est simplement l'algèbre $A[\Gamma]$ des sommes finies du type 
+\[f=\sum_ {s\in \Gamma} a_s s,\]
+que l'on munit du produit de convolution tordu définit par 
+\[s a s^{-1} = \alpha(a) \quad,\forall a\in A, s\in \Gamma.\]
+L'adjoint est quant à lui défini par $(as)^*=s^{-1} a^*$. Cela donne explicitement, pour $f,g\in A[\Gamma]$ :
+\[fg= \sum_s \left(\sum_t f_{st^{-1}}\pi_{st^{-1}}(g_t)\right)s,\]
+\[f^*= \sum_s \pi_s(f^*_{s^{-1}})s.\] 
+Toute représentation covariante $(\pi,U)$ de $(A,\Gamma,\alpha)$ fournit une $*$-représentation de $A[\Gamma]$ par 
+\[\tilde\pi (f)=\sum_{s\in\Gamma} \pi(f_s)U_s.\]
+Réciproquement, toute $*$-représentation $\tilde \pi$ de $A[\Gamma]$ définit une représentation covariante par $\pi(a)=\tilde\pi(a1_\Gamma)$ et $U_s=\tilde\pi(1_A s)$. Si $A$ n'est pas unitale, on peut untilser une unité approché $u_\lambda$ de $A$ et poser $U_s=\lim_{\lambda \rightarrow \infty}\tilde\pi (u_\lambda s)$.\\
+
+\begin{definition} Le produit croisé de $A$ par $\Gamma$ est la $C^*$-algèbre enveloppante de $A[\Gamma]$, c'est-à-dire que l'on complète cette $*$-algèbre par rapport à la norme 
+\[||f|| = \sup_{\tilde\pi} ||\tilde \pi (f)||\]
+où $\tilde \pi$ parcourt l'ensemble des $*$-représentations de $A[\Gamma]$. 
+\end{definition}
+
+La norme définie est toujours majorée par $\sum_s ||f_s||$. Il est possible de construire des $*$-représentations de $A[\Gamma]$, donc le $\sup$ n'est pas pris sur un ensemble vide. On peut par exemple, à partir de n'importe quelle $*$-représentation de $A$ sur un espace de Hilbert $H$, construire une $*$-représentation de $A[\Gamma]$ à partir de la représentation régulière gauche de $\Gamma$. Pour cela, on considère l'espace des suites de carrés sommables 
+\[l^2(G,H)=\{x:G\rightarrow H : \sum||x_s||^2<\infty\} , \]
+et on définit un représentation covariante de $(A,\Gamma,\alpha)$ par :
+\[(\pi'(a)x)_s=\pi(\alpha_s(a))x_s\quad,\]
+\[(\Lambda_t x)_s=x(t^{-1}s)\quad. \]
+Dans le cas général, ces représentations construites à partir de la représentation régulière gauche ne suffisent pas à déterminer la norme sur $A\times_\alpha \Gamma$. Si on limite le $\sup$ à de telles représentations, on obtient ce que l'on appelle le produit croisé réduit de $A$ par $\Gamma$. Toutefois lorsque le groupe $\Gamma$ est moyennable, le produit croisé et le produit croisé réduit coïncident.
+%Mettre une référence
+Dans la suite de ce rapport, on s'intéressera uniquement à des produits croisés par $\Z$, qui est moyennable. \\
+
+Le produit croisé vérifie la propriété universelle suivante : pour toute représenatation covariante $(\pi,U)$ de $(A,\Gamma,\alpha)$, il existe une unique $*$-représentation de $A\times_\alpha \Gamma$ dans la $C^*$-algèbre engendré par $\pi(A)$ et $U(\Gamma)$. Elle est donnée par 
+\[\tilde\pi(f)=\sum_s \pi(f_s)U_s\]
+puis par extension par continuité.
+
+\subsubsection{Exemple : le tore non-commutatif}
+
+\begin{definition}
+Soit $\theta$ un nombre réel. On définit l'algèbre de rotation associée à $\theta$ $A_\theta$, ou tore non-commutatif, comme la $C^*$-algèbre unitale universelle engendrée par deux unitaire $u$ et $v$ vérifiant la relation 
+\[uvu^*= e^{i\theta}v.\]
+Cela signifie que pour toute $C^*$-algèbre $A'$ contenant deux unitaires $u'$ et $v'$ vérifiant cette même relation, il existe un unique $*$-homomorphisme $A_\theta\rightarrow A'$ qui envoie $u$ sur $u'$et $v$ sur $v'$. 
+\end{definition}
+
+On note $R_\theta$ l'automorphisme de $C(\mathbb S^1)$ qui à un fonction continue sur le cercle $f$ associe $z\mapsto f(e^{i\theta})$. Alors $A_\theta$ peut être réalisée fidèlement par $C(\mathbb S^1)\times_{R_\theta} \Z$.\\
+
+En effet, $C(\mathbb S^1)\times_{R_\theta} \Z$ est générée par la l'inclusion $z : \mathbb S^1\rightarrow \C$ (qui est un unitaire) et un autre unitaire $U$ vérifiant $UzU^*=R_\theta(z)=e^{i\theta} z$. Par propriété universelle de $A_\theta$, il existe un unique $*$-morphisme $A_\theta \rightarrow C(\mathbb S^1)\times_{R_\theta} \Z $ qui envoie $u$ sur $U$ et $v$ sur $z$. Mais $A_\theta$ fournit une représentation covariante de $(C(\mathbb S^1), \Z,\R_\theta)$, donc il existe un unique $*$-morphisme $C(\mathbb S^1)\times_{R_\theta} \Z \rightarrow A_\theta  $ qui envoie $U$ sur $u$ et $z$ sur $v$. Ces deux morphismes sont inverses l'un de l'autre et l'assertion est démontrée.\\
+
 \subsection{Rappels sur les produits tensoriels de $C^*$-algèbres}
 
 Cette section présente les résultats qui seront utilisés sur les produits tensoriels de $C^*$-algèbres. Toutes les preuves des affirmations non justifiées peuvent être trouvées dans le livre de Murphy ~\cite{Murphy} par exemple.\\
@@ -70,7 +118,7 @@ Sur les espaces de Hilbert, notre travail est simplifié : il existe un unique p
 Soit $A$ et $B$ deux $C^*$-algèbres et $(H,\varphi)$ et $(K,\psi)$ deux représentations associées. Alors, il existe un unique $*$-homomorphisme $\pi : A\otimes B \rightarrow B(H\hat\otimes K)$ tel que $\pi(a\otimes b)= \varphi(a)\otimes \psi(b)$. De plus, $\pi$ est injectif si $\varphi$ et $\psi$ le sont.
 \end{prop} 
 
-On appelle représentation universelle d'une $C^*$-algèbre $A$ la somme directe de toutes les représentations $(H_\tau,\phi_\tau)$, $\tau$ parcourant l'espace des états de $A$, la représentation associée dérivant de la construction GNS. On peut alors définir deux normes sur le produit tensoriel algébrique de $2$ $C^*$-algèbres $A$ et $B$.
+On appelle représentation universelle d'une $C^*$-algèbre $A$ la somme directe de toutes les représentations $(H_\tau,\phi_\tau)$, $\tau$ parcourant l'espace des états de $A$, la représentation associée dérivant de la construction GNS. On peut alors définir deux normes sur le produit tensoriel algébrique de deux $C^*$-algèbres $A$ et $B$.
 
 \begin{definition}
 Soit $A$ et $B$ deux $C^*$-algèbres de représentations universelles $(H_A, \phi_A)$ et $(H_B, \phi_B)$. Soit $\pi$ l'unique $*$-homomorphisme donné par la proposition précédente : $\pi(a\otimes b ) = \phi_A(a)\otimes \phi_B(b)$.
@@ -85,7 +133,7 @@ où $p$ parcourt l'ensemble des semi-$C^*$-normes sur $A\otimes B$.
 
 On se servira de la propriété suivante : pour tout $*$-homomorphismes de $C^*$-algèbres $\varphi : A\rightarrow B$ et $\psi :  A'\rightarrow B'$, il existe un unique $*$-homomorphisme $\pi : A\otimes_{min} A' \rightarrow B\otimes_{min} B'$ tel que 
 \[\pi(a\otimes a')=\varphi(a)\otimes \psi (a')\quad , \forall a\in A,a'\in A'.\]
-De plus, $\pi $ est injective si $\varphi$ et $\psi$ le sont. On notera $\varphi\otimes_{min}\psi$ à la place de $\pi$ .\\
+On a alors $\text{Im}\ \pi = \text{Im} \ \varphi \otimes_{min} \text{Im}\ \psi$. De plus, $\pi $ est injective si $\varphi$ et $\psi$ le sont. On notera $\varphi\otimes_{min}\psi$ à la place de $\pi$ .\\
 
 \begin{definition}
 Une $C^*$-algèbre est dite nucléaire s'il n'existe qu'une seule $C^*$-norme sur le produit tensoriel algébrique $A\otimes B$, pour toute $C^*$-algèbre $B$.
@@ -108,7 +156,7 @@ On a noté $\tilde\varphi=\varphi\otimes_{min} id_B$ et $\tilde\psi = \psi\otime
 \end{thm}
 
 \begin{dem}
-Soit $a''\otimes b \in A''\otimes B$. Par surjectivité, il existe $a\in A$ tel que $\psi(a)=a''$, et donc $\tilde\psi(a\otimes b ) = a''\otimes b$. Les éléments $a''\otimes b$ générant $A''\otimes B$, $\tilde \psi$ est surjective.\\
+Soit $a''\otimes b \in A''\otimes B$. Par surjectivité, il existe $a\in A$ tel que $\psi(a)=a''$, et donc $\tilde\psi(a\otimes b ) = a''\otimes b$. Les éléments $a''\otimes b$ générant $A''\otimes B$, l'image de $\tilde \psi$ est dense, donc $\tilde psi$ est surjective.\\
 
 L'identité de $B$ et $\varphi$ étant des $*$-homomorphismes injectifs, $\tilde\varphi = \varphi \otimes_{min}id_B$ est injectif.\\
 

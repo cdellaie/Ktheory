@@ -1,12 +1,15 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{Notations}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Rappels sur les produits tensoriels de C*-alg\350bres}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{Applications compl\350tement positives et suites exactes}{section.1}% 4
-\BOOKMARK [1][-]{section.2}{K-th\351orie des C*-alg\350bres}{}% 5
-\BOOKMARK [2][-]{subsection.2.1}{La suite exacte \340 six termes}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.2}{Produits crois\351s de C*-alg\350bres}{section.2}% 7
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Suite exacte de Pimsner-Voiculescu}{subsection.2.2}% 8
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Extension de Toeplitz}{subsection.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.3}{Suite exacte de Pimsner-Voiculescu}{section.2}% 10
-\BOOKMARK [3][-]{subsubsection.2.3.1}{La preuve originale}{subsection.2.3}% 11
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Un exemple : le tore non-commutatif}{subsection.2.3}% 12
+\BOOKMARK [2][-]{subsection.1.2}{Produits crois\351s discrets}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Exemple : le tore non-commutatif}{subsection.1.2}% 4
+\BOOKMARK [2][-]{subsection.1.3}{Rappels sur les produits tensoriels de C*-alg\350bres}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.4}{Applications compl\350tement positives et suites exactes}{section.1}% 6
+\BOOKMARK [1][-]{section.2}{K-th\351orie des C*-alg\350bres}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{D\351finitions et propri\351t\351s}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{La suite exacte \340 six termes}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.3}{Produits crois\351s de C*-alg\350bres}{section.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Suite exacte de Pimsner-Voiculescu}{subsection.2.3}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Extension de Toeplitz}{subsection.2.3}% 12
+\BOOKMARK [1][-]{section.3}{Suite exacte de Pimsner-Voiculescu}{}% 13
+\BOOKMARK [2][-]{subsection.3.1}{La preuve originale}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.2}{Un exemple : le tore non-commutatif}{section.3}% 15

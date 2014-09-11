@@ -22,3 +22,20 @@ Symétriquement, on démontre que : $\phi_2\circ \phi_1 = id_{V_2}$, et le résu
 \qed
 \end{dem}
 
+\subsection{Produits croisés par un groupe discret : version bimodule hilbertien}
+
+Soit $A$ une $C^*$-algèbre et $\Gamma$ un groupe discret. On se donne de plus une action par automorphisme $\alpha : \Gamma \rightarrow Aut(A)$. On peut alors munir l'espace $C_c(\Gamma,A)$ des fonctions à support fini d'un produit de convolution tordu par $\alpha$ :
+\[f*_\alpha g = \sum_{s,t \in \Gamma} f(s)\alpha_s(g(t))st.\]
+
+Soit $\lambda_{\Gamma,A}$ la représentation régulière gauche de $C_c(\Gamma,A)$ sur $l^2(\Gamma,A)=\{\eta : \Gamma \rightarrow A : \sum_s \eta^*(s)\eta(s) <\infty\}$ :
+\[(\lambda_{\Gamma,A}(f)\eta)(\gamma) = \sum_{s\in \Gamma} \alpha_{\gamma^{-1}}(f(s))\eta(\gamma^{-1}s)\]
+pour tous $f\in C_c(\Gamma,A)$,$\eta \in l^2(\Gamma,A)$ et $\gamma \in \Gamma$. \\
+
+Le produit croisé réduit de $A$ par $\Gamma$, noté $A\times_\alpha \Gamma$, est défini comme la fermeture pour la norme d'opérateur de $\lambda_{\Gamma,A}(C_c(\Gamma,A))$ dans $B(l^2(\Gamma,A))$.\\
+
+Les actions habituelles de $A$ et de $\Gamma$ sur $l^2(\Gamma,A)$ sont combinées.
+\[(\pi(a)\eta)(s) = \alpha_{s^{-1}}(a)\eta(s)\]
+\[(\lambda(\gamma)\eta)(s)=\eta(\gamma^{-1}s)\]
+ On parle pour la paire $(\lambda, \pi)$ de représentation covariante du système $\{A,\Gamma,\alpha\}$, car la relation :
+\[\lambda(\gamma)\pi(a)\lambda(\gamma^{-1})=\pi(\alpha_\gamma(a))\]
+est vérifiée.\\
