@@ -4,11 +4,10 @@ A level-1 auxiliary file: Ktheory.aux
 A level-1 auxiliary file: PimsnerVoiculescu.aux
 The style file: plain.bst
 Database file #1: biblio.bib
-I was expecting a `,' or a `}'---line 52 of file biblio.bib
+I was expecting a `,' or a `}'---line 62 of file biblio.bib
  : 
  : month = "Summer"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Bellissard"
 Warning--empty publisher in Hatcher
 (There was 1 error message)

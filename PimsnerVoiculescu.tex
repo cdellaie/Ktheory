@@ -3,10 +3,10 @@
 
 Maintenant que le décor est planté, nous pouvons passer à la $K$-théorie. 
 On pose :  \[d : \left\{\begin{array}{rcl}A & \rightarrow & \mathcal T \\ a & \mapsto & a\otimes I\end{array}\right.\]
-Nous allons d'abord démontré le :
+Nous allons d'abord démontrer le :
 
 \begin{lem}\label{diagramme}
-Les diagrammes suivant :
+Les diagrammes suivants :
 \[\begin{tikzcd}[column sep = huge]
 K_i(A\otimes K) \arrow{r}{\psi_*}& K_i(\mathcal T) \\
 K_i(A)   \arrow{u}{\simeq}\arrow{r}{(id_A)_*-\alpha(-1)_*}& K_i(A) \arrow{u}{d_*}
@@ -23,6 +23,7 @@ Maintenant :
 \begin{equation}\label{calcul}d_*\circ \left(id_A-\alpha(-1)\right)_*[v]= [ v\otimes I]-[ u^*vu\otimes I]\end{equation}
 
 Soit l'unitaire :\quad\[\Omega = \begin{pmatrix}u\otimes S & Q \\ 0 & u^*\otimes S^*\end{pmatrix}\in \mathcal T \otimes M_2\]
+où $Q$ est le projecteur auto-adjoint $1\otimes P$.\\
 
 On remarque que :
 \[\Omega\begin{pmatrix}u^*vu\otimes I & 0 \\ 0 & 1\otimes I\end{pmatrix}\Omega^*= \begin{pmatrix}v\otimes SS^* +QQ^*& Q(u\otimes S) \\ (u^*\otimes S^*)Q^* & 1\otimes I\end{pmatrix}\]
@@ -34,7 +35,7 @@ Mais la classe dans $K_1$ est invariante par augmentation, i.e. $[x]=\left[\begi
 En remplaçant dans ~\eqref{calcul}, on obtient :
 \begin{align*}
 [ v\otimes I]-[v\otimes SS^* +Q]& =[( v\otimes I)(v\otimes SS^* +Q)^{-1}]\\\
-&=[v^*\otimes SS^* +Q]\\
+&=[(v\otimes I)(v^*\otimes SS^* +Q)]\\
 &=[1\otimes SS^* +v\otimes P]
 \end{align*}
 
@@ -73,7 +74,7 @@ K_1(A\otimes \K) \arrow{r}{\psi_*} 	& K_1(\mathcal T) \arrow{r}{\pi_*}	& K_1(A\t
 K_1(A) \arrow{u}{\simeq} \arrow{r}{(id_A-\alpha(-1))_*}	& K_1(A) \arrow{u}{d_*}	\arrow{ur}{\iota_*}
 \end{tikzcd}\\
 
-dont la première ligne est exacte, et le carré commute.\\
+dont la première ligne est exacte, et le carré commute. Le triangle commute aussi : l'image de $a\in A$ par $d$ est $a\otimes I$, que l'on envoie sur $a\otimes I\text{ mod }J$ via $\pi$. Mais cette dernière coïncide avec $a\otimes 1$ dans $(A\times_\alpha \Z)\otimes C(\mathbb S^1)$, où $1$ est la fonction constante. C'est justement l'inclusion $A\rightarrow A\times_\alpha \Z$ modulo l'isomorphisme  entre $A\times_\alpha \Z$ et $(A\times_\alpha Z)\otimes C(\mathbb S^1)$. \\
 
 \begin{lem}\label{isom} $d_* : K_1(A)\rightarrow K_1(\mathcal T)$ est un isomorphisme.\end{lem} 
 
@@ -89,15 +90,15 @@ Montrons que cela conclut. Dans $K_1(A\times_\alpha \Z)$, on a l'égalité :
 [1\otimes 1_n -F_2+F_2x_2(u^*\otimes 1_n)F_2]_1 & =[1\otimes 1_n -F_1+F_1 v x_2(u^*\otimes 1_n)v^* F_1]_1 \\
 								& = [1\otimes 1_n -F_1+F_1 y (u^*\otimes 1_n)F_1]_1
 \end{align*}
-où $y=vx_2(\alpha(-1)\otimes id_n)v^*\in A\otimes \frak M_n$. Alors :
+où $y=vx_2(\alpha(-1)\otimes id_n)(v^*)\in A\otimes \frak M_n$. Alors :
 
 \begin{align*}
 w & =[\left(1\otimes 1_n -F_1+F_1x_1(u^*\otimes 1_n)F_1\right)\left(1\otimes 1_n -F_1+F_1 y (u^*\otimes 1_n)F_1\right)^*]_1 \\
-    & = [1\otimes 1_n -F_1+F_1 x_1 (\alpha(-1)\otimes id_n) F_1 y^* F_1]_1
+    & = [1\otimes 1_n -F_1+F_1 x_1 (\alpha(-1)\otimes id_n)( F_1) y^* F_1]_1
 \end{align*}
 L'élément entre crochets est dans $A\otimes \frak M_n$, ce qui veut dire que sa classe $w$ est dans l'image de $\iota_*$ : $\text{Ker}\ \delta \subset \text{Im}\ \iota_*$ est démontré.\\
 
-Montrons maintenat la remarque. Le lemme \ref{generateur} nous permet d'affirmer que tout élément de $K_1(A\times_\alpha \Z)$ s'écrit comme une différence de générateurs unitaires de la forme $[1_n-F+Fx(u^*\otimes 1_n)F]_1$. Si $n=1$, un tel élément a un relevé $w=(1-F)\otimes I+Fxu^*F\otimes S^*\in\mathcal T$. Mais alors :
+Montrons maintenant la remarque. Le lemme \ref{generateur} nous permet d'affirmer que tout élément de $K_1(A\times_\alpha \Z)$ s'écrit comme une différence de générateurs unitaires de la forme $[1_n-F+Fx(u^*\otimes 1_n)F]_1$. Si $n=1$, un tel élément a un relevé $w=(1-F)\otimes I+Fxu^*F\otimes S^*\in\mathcal T$. Mais alors :
 \begin{align*}
 ww^* &=(1-F)\otimes I + Fxu^*Fux^*F\otimes S^*S \\
 	&=(1-F)\otimes I +F\otimes I  \\
@@ -161,14 +162,14 @@ Mais $K_i(C(\mathbb S^1))=K_i(S\C \oplus \C)=K_{1-i}(\C)\oplus K_i(\C)=\Z$, d'o�
 \begin{definition}
 Un projecteur de Rieffel de $A\times_\alpha \Z$ est un idemptotent autoadjoint de la forme $x_0+x_1 u +u^*x_1^*$, où $x_0,x_1 \in A$.\\
 \end{definition}
-Un projecteur de Rieffel étant autoadjoint, nous pouvons immédiatement en déduire que $x_0$ aussi. L'idempotence conduit elle au trois relations suivantes : %changer les items
+Un projecteur de Rieffel étant autoadjoint, nous pouvons immédiatement en déduire que $x_0$ aussi. L'idempotence conduit elle aux trois relations suivantes : %changer les items
 \begin{itemize}
 \item $x_0=x_0^2+\alpha^{-1}(x_1^* x_1)+x_1 x_1^*$
 \item $x_1= x_0 x_1 +x_1 \alpha(x_0)$
 \item $0=\alpha^{-1}(x_1)x_1$.
 \end{itemize}
 
-Rappelons que l'algèbre de Von Neumann enveloppante d'une $C^*$-algèbre $A$ est défnie par le bicommutant dans $\mathcal L(H_u)$ de $\pi_u(A)$, où $\pi_u : A\rightarrow \mathcal L(H_u)$ est la représentation universelle de $A$, c'est-à-dire la somme hilbertienne de toutes les représentations irréductibles de $A$.
+Rappelons que l'algèbre de Von Neumann enveloppante d'une $C^*$-algèbre $A$ est définie par le bicommutant dans $\mathcal L(H_u)$ de $\pi_u(A)$, où $\pi_u : A\rightarrow \mathcal L(H_u)$ est la représentation universelle de $A$, c'est-à-dire la somme hilbertienne de toutes les représentations irréductibles de $A$.
 
 \begin{definition}
 Soit $x\in A$ un élément d'une $C^*$-algèbre.\\
@@ -203,22 +204,24 @@ Ayant exhibé un relevé autoadjoint de $p$, on est en mesure de calculer son in
 \end{align*}
 Il vient : 
 \[\partial [p]_0=\left[\exp(2i\pi a )]_1=[\exp(2i\pi x_0\Delta)\otimes e_{00} + 1\otimes (I-e_{00}) \right]_1\]
+
+La calcul montre au passage que $e^{2i\pi x_0 \Delta}\in A$. En effet, $\pi(e^{2i\pi a})= 1$ donc $(e^{2i\pi x_0 \Delta}-1)\otimes P\in \text{Ker }\pi=\text{Im } \psi$ donc $e^{2i\pi x_0 \Delta}\otimes e_{00}\in A\otimes \K$.\\
+
 Le $*$-homomorphisme $\delta$ étant la composition du connectant $\partial : K_0(A\times_\alpha \Z)\rightarrow K_1(A\times \K)$ avec l'isomorphisme $K_1(A\times \K)\simeq K_1(A)$, on en déduit :
 \[\delta[p]_0=[\exp(2i\pi x_0\Delta)]_1.\]
 \qed
 \end{dem}
 
-Ce résultat met à notre disposition une autre méthode de calcul de l'image par l'application exponentielle d'un projecteur dans le cas des projecteur de Rieffel. Il est à rapprocher de la proposition \ref{exp} : Pimsner et Voiculescu ~\cite{PV} décrivent de manière effective l'application exponentielle dans le cas d'un produit croisé $A\times _\alpha \Z$.\\
+Ce résultat met à notre disposition une autre méthode de calcul de l'image par l'application exponentielle d'un projecteur dans le cas des projecteurs de Rieffel. Il est à rapprocher de la proposition \ref{exp} : Pimsner et Voiculescu ~\cite{PV} décrivent de manière effective l'application exponentielle dans le cas d'un produit croisé $A\times _\alpha \Z$.\\
 
 Nous avons vu que la suite exacte à $6$ termes donnait deux suites exactes courtes, dont :
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & K_0(C(\mathbb S^1))\arrow{r}& K_0(A_\theta)\arrow{r}{\delta} & K_1(C(\mathbb S^1)))\arrow{r} & 0   \end{tikzcd}\]
 On sait que les groupes à gauche et à droite sont tous les deux $\Z$, l'un étant généré par la classe de la projection $1\in C(\mathbb S^1)$, l'autre par la classe de l'unitaire $z=id_{\mathbb S^1}\in  C(\mathbb S^1)$. Si l'on trouve un projecteur $p$ tel que $\delta [p]_0=[z]_1$, on peut dire que $K_0(A_\theta)$ est engendré par $[1]_0$ et $[p]_0$.\\
 
 On note $\varphi$ la fonction définie par $\alpha (f) (z) = f(e^{2i\pi\theta}z)=f\circ \varphi (z)$.
-Soit $0<\delta<\theta$. Soit $f$ la fonction de $\R$, affine par morceaux et $1$ péridiodique, qui vaut $1$ si $t$ est dans $[\delta, \theta]$, $0$ si $t\in [\theta+\delta,1]$ et est nulle en $0$. On pose : 
-\[\left\{ \begin{array}{rl}x_0& =e^{2i\pi f }\\
-				x_1 (e^{2i\pi t})&= \sqrt{x_0(1-x_0)} 1_{0<t<\delta}
-\end{array}\right.\]  
+Soit $0<\delta<\theta$. Soit $f$ la fonction de $\R$, affine par morceaux et $1$ périodique, qui vaut $1$ si $t$ est dans $[\delta, \theta]$, $0$ si $t\in [\theta+\delta,1]$ et est nulle en $0$. 
+On relève $f$ en une fonction $x_0:\mathbb S^1\rightarrow \R$ telle que $f(t)=x_0(e^{2i\pi t})$, ainsi que $1_{0<t<\delta}$ (prolongée par $1$-périodicité) en $\xi$. Enfin on pose : 
+\[x_1= \sqrt{x_0(1-x_0)} \xi.\]  
 
 On vérifie par un simple calcul que $p_\theta=x_0+x_1 u +u^*x_1^*$ définit un projecteur de Rieffel. Maintenant, $g$ étant auto-adjoint, son support gauche et droit coïncide (c'est le support de $g$), et $(x_0\Delta)(e^{2i\pi t}) = \frac{t}{\delta}1_{0<t<\delta}$. Cette fonction est homotope à $z$, et donc la proposition précédente conclut : 
 \[\delta [p_\theta]_0= [z]_1.\]
@@ -230,7 +233,7 @@ Grâce aux lemmes \ref{generateur} et \ref{isom}, on sait que $K_1(A_\theta)$ es
 \[\delta [1-F+Fx(u^*\otimes 1_n)]_1= [F\otimes e_{00}]_0.\]
 L'indice de $u^*$ est donc directement calculable :
 \[\delta [u^*]_1= [1]_0,\]
-et c'est un générateur de $K_0(C(\mathbb S^1))$. Donc $K_1(A_\theta)$ est isomorphe à $\Z$, généré par les classes de $u$ et $v$. Ici $u$ représente l'unitaire qui rend intérieure l'action de $\Z$ sur $C(\mathbb S^1)$, et $A_theta$ est engendrée par les deux unitaires $u$ et $v$ soumis à la relation $u^*vu =e^{2i\pi\theta} v$.\\
+et c'est un générateur de $K_0(C(\mathbb S^1))$. Donc $K_1(A_\theta)$ est isomorphe à $\Z^2$, généré par les classes de $u$ et $v$. Ici, $u$ représente l'unitaire qui rend intérieure l'action de $\Z$ sur $C(\mathbb S^1)$, et $A_\theta$ est engendrée par les deux unitaires $u$ et $v$ soumis à la relation $u^*vu =e^{2i\pi\theta} v$.\\
 
 Tout élément de $A_\theta$ peut se décomposer en <<série de Fourier>> sous la forme 
 \[x=\sum_{n\in \Z}f_n u^n\quad, f_n \in C(\mathbb S^1) \]
@@ -238,14 +241,14 @@ avec convergence en norme des séries partielles. Alors $\tau(x):=\int_{\mathbb 
 
 Quelques remarques :
 \begin{enumerate}
-\item On voit que $K_*(A_\theta)=\Z\oplus \Z$, pour tout $\theta$ irrationnel. En particulier les groupes de $K$-théorie ne distinguent pas entre les différentes algèbres de rotation irrationnelles. 
+\item On voit que $K_*(A_\theta)=\Z\oplus \Z$, pour tout $\theta$ irrationnel. En particulier les groupes de $K$-théorie ne distinguent pas entre les différentes algèbres de rotations irrationnelles. 
 % Quels sont les groupes de Ktheorie de Atheta pour un angle rationel
 \item Le résultat précédent permet en particulier de montrer que l'image du morphisme induit $\tau_* : K_0(A_\theta)\rightarrow \C$ est exactement $\Z+\theta \Z$, en calculant $\tau(1)=1$ et $\tau(p_\theta)=\theta$. Ceci a permis à M. Rieffel de montrer dans~\cite{Rieffel} que, si $\theta$ et $\theta'$ sont irrationnels, alors $A_\theta$ et $A_\theta'$ sont isomorphes ssi les parties fractionnaires de $\theta$ et $\theta'$ ou celles de $\theta$ et $1-\theta'$ sont égales.
 \end{enumerate}
 
 En guise de conclusion, le lecteur interessé est invité à lire l'article de Pimsner écrit en $1997$, \textit{A class of $C^*$-algebras generalizing both Cuntz-Krieger algebras and crossed products by $\mathbb Z$}~\cite{Pimsner}, qui généralise la suite exacte à six-termes pour les produits croisés. Dans ce papier, Pimsner construit pour tout $A-A$-bimodule hilbertien $E$ deux $C^*$-algèbres $\mathcal O _E$ et $\mathcal T_E$. Il montre alors que lorsque l'on considère $A$ comme bimodule hilbertien sur lui-même, on retrouve $\mathcal O_A = A\times_\alpha \Z$ pour un certain automorphisme $\alpha$. De la même façon que dans~\cite{PV}, il prouve une $K$-équivalence entre $\mathcal T _E$ et $A$, et en déduit des suites exactes à six-termes en $KK$-théorie.\\
 
-Côté applications, le tore non-commutatif apparaît dans des modèles appelés modèles de Harper, dont l'objectif est de décrire un électron se déplaçant dans un réseau cristallin soumi à un champ magnétique uniforme :  l'électron se déplace dans un solide constitué de noyaux immobiles positionnés aux noeuds du réseau. Par exemple, on peut considérer le réseau $\Z^2$ sur lequel on applique un champ magnétique perpendiculaire constant, dont le flux normalisé est $2\pi\alpha=2\pi \frac{\phi}{\phi_0}$, $\phi_0=\hbar/e$ étant le quantum de flux et $\phi$ le flux par maille. L'espace de Hilbert naturellement associée à ce problème est $l^2(\Z^2)$, et on considère alors l'algèbre d'opérateurs définis par
+Côté applications, le tore non-commutatif apparaît dans des modèles appelés modèles de Harper, dont l'objectif est de décrire un électron se déplaçant dans un réseau cristallin soumi à un champ magnétique uniforme :  l'électron se déplace dans un solide constitué de noyaux immobiles positionnés aux noeuds du réseau. Par exemple, on peut considérer le réseau $\Z^2$ sur lequel on applique un champ magnétique perpendiculaire constant, dont le flux normalisé est $2\pi\alpha=2\pi \frac{\phi}{\phi_0}$, $\phi_0=\hbar/e$ étant le quantum de flux et $\phi$ le flux par maille. L'espace de Hilbert naturellement associée à ce problème est $l^2(\Z^2)$, et on considère alors l'algèbre d'opérateurs définie par
 \[W(m)\psi(x) = e^{i\pi \alpha \{x,m\} }\psi(x-m)\quad, \forall m,x\in \Z^2,\psi\in l^2(\Z^2) \]
 où $\{x,m\}=x_1 m_2 -x_2 m_1$.\\
 
@@ -263,7 +266,7 @@ On peut montrer qu'en un certain sens, le spectre est continu en $\alpha$. Si le
 On obtient alors ce que l'on appelle le papillon de Hoftstadter i.e. l'ensemble $\{(x,\alpha) : \alpha \in ]0,1[, x\in Spec(H_\alpha)\}$ du plan. Voici une image générée avec Scilab.
 
 \begin{figure}[h]\centering
-\includegraphics[scale=0.6]{Hofstadter.png}
+\includegraphics[scale=0.6]{HofstadterRed.png}
 \caption{Papillon de Hofstadter}
 \label{fig:Hoftstadter}
 \end{figure}

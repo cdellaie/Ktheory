@@ -43,7 +43,7 @@ où $\pi_n, n\geq 1$ désigne le $n^{ie}$-groupe d'homotopie, et $\pi_0$ le grou
 
 Quelques remarques : 
 \begin{enumerate}
-\item Le groupe $K_1(A)$ est donc généré par les classes $[u]$ où est un unitaire ou un inversible de $GL_n(A)$, avec la présentation $[1]=0$, $[u]+[v]=[u\oplus v]$ et $[u]=[v]$ si $u$ et $v$ sont reliés par un chemin continu d'unitaires ou d'inversibles.
+\item Le groupe $K_1(A)$ est donc généré par les classes $[u]$ où $u$ est un unitaire ou un inversible de $GL_n(A)$, avec la présentation $[1]=0$, $[u]+[v]=[u\oplus v]$ et $[u]=[v]$ si $u$ et $v$ sont reliés par un chemin continu d'unitaires ou d'inversibles.
 \item On a en fait la relation suivante \[\forall i\in \mathbb N, \quad K_{i+1}(A)=K_i(S(A)).\]
 \item Dans le cas des $C^*$-algèbres comme en $K$-théorie topologique, on a périodicité de Bott : $K_{i+2}(A)\simeq K_i(A)$.\\
 \item $K_1(A)$ est bien un groupe abélien. Premièrement, notons que la matrice $\begin{pmatrix}1 & 0\\ 0 & 1\end{pmatrix}$ est connectée à  $\begin{pmatrix}0 & -1\\ 1 & 0\end{pmatrix}$ par l'arc $t\mapsto \begin{pmatrix}\cos t & -\sin t \\ \sin t  & \cos t\end{pmatrix}$ de $GL(2,\C)$. Ceci assure, par multiplication à gauche et à droite par des matrices élémentaires, que l'on peut échanger deux colonnes ou deux lignes d'une matrice sans changer sa classe dans $K_1(A)$. Si $\sim$ signifie "être dans la même composante connexe", alors :
@@ -68,7 +68,7 @@ Cette proposition a pour corollaire un résultat de relèvement important.
 Soit $\psi : A \rightarrow A''$ un $*$-homomorphisme surjectif entre deux $C^*$-algèbres unitales. Alors tout unitaire (resp. inversible)de $A''$ qui est connecté à l'identité peut se relever en un unitaire (resp. inversible) de $A$. 
 \end{prop} 
 
-\begin{dem}Soit $a''\in A''$ un unitaire conectée à l'identité.
+\begin{dem}Soit $a''\in A''$ un unitaire connecté à l'identité.
 La proposition précédente assure que $a'' = \prod_j e^{x_j}$. Par surjectivité de $\psi$, il existe des éléments $y_j$ de $A$ tels que $\psi(y_j)=x_j$. Mais alors $a=\prod_j e^{y_j}$ est un relevé inversible connecté à l'identité qui relève $a''$. Si $a''$ est unitaire, $a(a^*a)^{-\frac{1}{2}}$ convient.
 \qed
 \end{dem}
@@ -134,7 +134,7 @@ K_0(SA) \arrow{r}{\alpha_*} & K_0(SB)
 
 \subsection{La suite exacte à six termes}
 \begin{thm}
-Soit \begin{tikzcd}[column sep=small] 0 \arrow{r}  & J \arrow{r}{\iota}& A \arrow{r}{\pi} & B \arrow{r} & 0\end{tikzcd} une suite exacte de $C^*$-algèbres. Alors la suite à six termes suivantes est exacte :\\
+Soit \begin{tikzcd}[column sep=small] 0 \arrow{r}  & J \arrow{r}{\iota}& A \arrow{r}{\pi} & B \arrow{r} & 0\end{tikzcd} une suite exacte de $C^*$-algèbres. Alors la suite à six termes suivante est exacte :\\
 
 \[\begin{tikzcd}
  K_0(J) \arrow{r}{\iota_*} & K_0(A)  \arrow{r}{\pi_*}  &    K_0(B)  \arrow{d}{\delta}  \\
@@ -200,11 +200,11 @@ est un relevé unitaire de $\begin{pmatrix}f_p & 0\\ 0 & f_p^*\end{pmatrix}$, re
 
 Soit $g_x(t):=(1-t)1_{A^+}+t e^{2i \pi x}$ un chemin continu entre l'identité et $e^{2i\pi x}$. L'image de $e^{2i\pi x}$ par $\theta_J$ se calcule comme l'indice $[w_{g_x} p_n w_{g^*_x}]-[p_n]$. Montrer que $f_x$ et $g_x$ sont homotopes suffit donc à conclure. \\
 
-Pour cela, remarquons que, $t$ variant de $0$ à $1$ et le spectre de $x$ étant inclus dans $\{0,1\}$ %VERIFICATION
+Pour cela, remarquons que, $t$ variant de $0$ à $1$ et le spectre de $x$ étant inclu dans $[0,1]$ %VERIFICATION
 , les éléments $f_x$ et $g_x$ ne dépendent que des valeurs des fonctions réelles
 \[\begin{array}{rl}f(t,x) &=1+(e^{2i\pi t}-1)x \\
 g(t,x) &=1-t+te^{2i\pi x}=f(x,t)\end{array}\]
-au voisinage du bord du carré $\partial [0;1]\times [0;1]$, homéomorphe au cercle $\mathbb S^1$. Les classes d'homotopie de fonctions continues sur le cercle sont classifiée par leur nombre de tours, voir le livre d'Hatcher par exemple~\cite{Hatcher}, et on vérifie que $f$ et $g$ sont ainsi homotopes en tant que fonctions sur le cercle, et donc que :
+au voisinage du bord du carré $\partial [0;1]\times [0;1]$, homéomorphe au cercle $\mathbb S^1$. Les classes d'homotopie de fonctions continues sur le cercle sont classifiées par leur nombre de tours, voir le livre d'Hatcher par exemple~\cite{Hatcher}, et on vérifie que $f$ et $g$ sont ainsi homotopes en tant que fonctions sur le cercle à valeurs dans le cercle, et donc que :
 \[[w_{f_x} p_n w_{f_x^*}]=[w_{g_x} p_n w_{g^*_x}].\]
 L'identité $\partial \circ \beta_B= \theta_J\circ \delta$ est démontrée, ce qui conclut.
 \qed
@@ -240,7 +240,7 @@ La remarque suivante est importante pour la preuve du lemme \ref{isom} : dans le
 \begin{dem}
 On note $\Gamma$ le sous-groupe de $K_1(B)$ engendré par les éléments de la forme $1_B\otimes 1_n+x(u^*\otimes 1_n)$.\\
 
-Comme $u$ est unitaire, le spectre de $t(1_B+2u^*) + (1-t)u^*=t1_B + (1+t)u^*$ ne contient pas $0$, et on a donc un chemin continu d'inversibles entre $1_B+2u^*$ et $u^*$, d'où :
+Comme $u$ est unitaire, si $0\leq t\leq 1$, le spectre de $t(1_B+2u^*) + (1-t)u^*=t1_B + (1+t)u^*$ ne contient pas $0$, et on a donc un chemin continu d'inversibles entre $1_B+2u^*$ et $u^*$, d'où :
 \begin{equation}[1_B+2u^*]_1=[u^*]_1.\label{homotop}\end{equation}
 Les éléments $\sum_{s\leq j\leq t}a_j(u^j\otimes 1_p), a_j \in A\otimes \mathfrak M_p,s,t\in \Z$ sont denses dans $B\otimes \mathfrak M_p$. Il suffit donc de prouver notre assertion pour ce type d'éléments. Mais, d'après l'équation \ref{homotop}, $[u]_1\in \Gamma$, donc $s=0$ suffit.\\
 
@@ -302,7 +302,7 @@ les générateurs peuvent être donnés plus explicitement.\\
 
 On note $\beta : \mathbb S^1 \rightarrow  Aut(B)$ l'automorphisme donné par l'identité sur $A$ et $\beta(z)u=zu$ pour tout $z\in \mathbb S^1$. La $C^*$-algèbre $A$ est exactement l'algèbre des points fixes de $\beta$. Vu la première partie du lemme, il suffit de montrer que, pour tout générateur de la forme $1_B\otimes 1_n +x(u^*\otimes 1_n)$ où $x\in A\otimes\mathfrak M_n$, on peut trouver un unitaire $1_B\otimes 1_n-F+Fx(u^*\otimes 1_n)F$, où $F$ est un projecteur auto-adjoint.\\
 
-Soit donc un inversible $y=1_B\otimes 1_n +x(u^*\otimes 1_n)$ : $-1$ n'est donc pas dans le spectre de $x(u^*\otimes 1_n)$. Comme $\beta$ est un automorphisme qui fixe $A$, il laisse invariant les spectre : le spectre de $x(u^*\otimes 1_n)$ est le même que celui de $(\beta(z)\otimes id_n)x(u^*\otimes 1_n)=\overline z x(u^*\otimes 1_n)$, pour tout $z\in \mathbb S^1$. Donc tout l'orbite de $-1$ sous l'action du cercle, c'est-à-dire le cercle $\mathbb S^1$, est dans la résolvante de $x(u^*\otimes 1_n)$.\\
+Soit donc un inversible $y=1_B\otimes 1_n +x(u^*\otimes 1_n)$ : $-1$ n'est donc pas dans le spectre de $x(u^*\otimes 1_n)$. Comme $\beta$ est un automorphisme qui fixe $A$, il laisse invariant les spectres : le spectre de $x(u^*\otimes 1_n)$ est le même que celui de $(\beta(z)\otimes id_n)x(u^*\otimes 1_n)=\overline z x(u^*\otimes 1_n)$, pour tout $z\in \mathbb S^1$. Donc tout l'orbite de $-1$ sous l'action du cercle, c'est-à-dire le cercle $\mathbb S^1$, est dans la résolvante de $x(u^*\otimes 1_n)$.\\
 
 On note $U_-$ et $U_+$ les composantes connexes respectivement bornée et non-bornée de $\C - \mathbb S^1$, et $T$ l'opérateur $x(u^*\otimes 1_n)$. Alors la fonction $e_-$ qui vaut $1$ sur $U_-$ et $0$ sur $U_-$ est holomorphe sur $\C - \mathbb S^1$, et on peut définir $P_-=e_-(T)$ par calcul holomorphe. De même pour $P_+=e_+(T)$. Ces deux éléments sont des projecteurs (non auto-adjoints) car $e_*(z)^2=e_*(z)$, et sont appelés les projecteurs spectraux de $x(u^*\otimes 1_n)$ associés à $U_-$ et $U_+$.\\
 
@@ -321,7 +321,7 @@ Ceci assure que $P_{+/-}\in A\otimes \mathfrak M_n$, ce qui n'était pas éviden
 
 On définit un chemin d'éléments inversibles par  
 \[y_\epsilon = \epsilon P_+ + x(u^*\otimes 1_n) P_+ + P_- + \epsilon x(u^*\otimes 1_n) P_-,\]
-pour tout $ 0\leq \epsilon \leq 1$. Pour voir l'inversilbilité, il suffit de remarquer que l'on a scindé $x(u^*\otimes 1_n)$ sur l'image de $P_+$ et $P_-$, et que l'on lui a ajouté un scalaire qui ne se trouve pas dans le spectre relatif à ce projecteur.
+pour tout $ 0\leq \epsilon \leq 1$. Pour voir l'inversibilité, il suffit de remarquer que l'on a scindé $x(u^*\otimes 1_n)$ sur l'image de $P_+$ et $P_-$, et que l'on lui a ajouté un scalaire qui ne se trouve pas dans le spectre relatif à ce projecteur.
 On a donc $[y_0]=[y_1]=[y]$. Comme $y_0= 1-P_+ + P_+ x(u^*\otimes 1_n)P_+$, il suffit de montrer que l'on peut remplacer $P_+$ par un projecteur auto-adjoint pour conclure.\\
 
 Soit $F$ le projecteur orthogonal sur l'image de $P_+$. Alors il existe $T\in A\otimes \mathfrak M_n$ tel que :
@@ -400,7 +400,7 @@ ce qui permet facilement de l'étendre à $\K$ entier. \\
 
 L'identité suivante permet d'étendre $\phi$ à $A\otimes \K$ :
 \[(u\otimes S)^i (a\otimes P) (u\otimes S)^{*j}=(u^i a u^{*j}) \otimes \phi (e_{ij})\]
-définit l'extension $\psi$ de $\phi$ à $A\otimes \K$. Alors $\psi(A\otimes \K)=J\subset \mathcal T$.\\
+définit l'extension $\psi$ de $\phi$ à $A\otimes \K$. Alors $\psi(A\otimes \K)=J\subset \mathcal T$ et $\psi $ est injective.\\
 
 Pimsner et Voiculescu montrent ~\cite{PV} que :
 \begin{equation}
