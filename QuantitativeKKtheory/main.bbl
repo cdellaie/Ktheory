@@ -1,0 +1,76 @@
+\begin{thebibliography}{10}
+
+\bibitem{GrothendieckNuc}
+Alexandre Grothendieck.
+\newblock Produits tensoriels d'espace topologiques et espaces nucl\'eaires.
+\newblock {\em S\'eminaire N. Bourbaki}, 69:193--200, 1951-1954.
+
+\bibitem{Hatcher}
+A.~Hatcher.
+\newblock {\em Algebraic Topology}.
+\newblock 2001.
+
+\bibitem{PV}
+D.~Voiculescu M.~Pimsner.
+\newblock Exact sequences for $k$-groups and $ext$-groups of certain
+  cross-products of $c^*$-algebras.
+\newblock {\em Operator theory}, 4:93--118, 1980.
+
+\bibitem{Murphy}
+Gerard~J. Murphy.
+\newblock {\em $C^*$-algebras and operator theory}.
+\newblock Academic Press Inc., 1990.
+
+\bibitem{BaumConnes}
+Alain~Connes Paul~Baum.
+\newblock Geometric $k$-theory for lie groups and foliations.
+\newblock {\em Enseign. Math.}, 46:3--42, 2000.
+
+\bibitem{BaumConnesHigson}
+Nigel~Higson Paul~Baum, Alain~Connes.
+\newblock Classifying space for proper actions and $k$-theory of group
+  $c^*$-algebras.
+\newblock {\em Contemporary Mathematics}, 197:241--291, 1994.
+
+\bibitem{Pimsner}
+Michael~V. Pimsner.
+\newblock A class of $c^*$-algebras generalizing both cuntz-krieger algebras
+  and crossed products by $\mathbb z$.
+\newblock {\em Fields Institute Communications}, 12:189--212, 1997.
+
+\bibitem{Renault}
+Jean Renault.
+\newblock {\em A groupoid approach to $C^*$-algebras}.
+\newblock Springer-Verlag, 1980.
+
+\bibitem{Rieffel}
+Marc Rieffel.
+\newblock $c^*$-algebras associated with irrational rotations.
+\newblock {\em Pacific Journal of Mathematics.}, 93(2):415--429, 1981.
+
+\bibitem{SkTuYu}
+Tu~J.L. Yu~G. Skandalis, G.
+\newblock The coarse baum-connes conjecture and groupoids.
+\newblock {\em Topology}, 41(4):807--834, 2002.
+
+\bibitem{TuNovikov}
+Jean-Louis Tu.
+\newblock a conjceture de novikov pour les feuilletages hyperboliques.
+\newblock {\em $K$-theory}, 16(2):129--184, 1999.
+
+\bibitem{TuBC}
+Jean-Louis Tu.
+\newblock The baum-connes conjecture for groupoids.
+\newblock {\em $C^*$-algebras}, 18:227--242, 1999.
+
+\bibitem{TuBC2}
+Jean-Louis Tu.
+\newblock The coarse baum-connes conjecture and groupoids ii.
+\newblock {\em New York J. Math.}, 18:1--27, 2012.
+
+\bibitem{WeggeOlsen}
+N.E. Wegge-Olsen.
+\newblock {\em K-theory and $C^*$-algebras, a friendly approach}.
+\newblock Oxford University Press, 1993.
+
+\end{thebibliography}

@@ -1,0 +1,6 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Groupo\IeC {\"\i }ds}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Definitions}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Principal \textit {\IeC {\'e}tale} groupoids}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Asymptotic dimension}{6}{section.2}
+\contentsline {section}{\numberline {3}Correspondance between the coarse $K$-homology of a space and the one of its coarse groupoid}{7}{section.3}

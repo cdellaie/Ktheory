@@ -1,0 +1,46 @@
+\section{Correspondance between the coarse $K$-homology of a space and the one of its coarse groupoid}
+
+The aim of this section is to give a proof of a result of ~\cite{TuBC}, in which it is stated that the following diagramm commutes :
+
+\[\begin{tikzcd}KX_* (X,B)\arrow{r}{A}\arrow{d}{\simeq} & K_*(C^*X,B) \arrow{d}{\simeq}\\
+K_*(G(X),l^{\infty}(X,B))\arrow{r}{\mu} & K_*(C_r(G(X)),B).
+\end{tikzcd}\]
+
+The vertical arrow from the left comes from an isomorphism at the $C^*$-algebraic level, as
+\[C^*(X) \simeq l^\infty(X)\times G(X).\] % mieux decrire : il y en a deux. Et le prouver avant ou en appendice
+The rest of this section is devoted to describe the vertical arrow from the right in the langage of Kasparov $KK$-theory, i.e.
+\[\varinjlim_d KK(C_0(P_d(X)),B)\rightarrow \varinjlim_{Y\subset \mathcal E G(X)} KK(C_0(Y),B),\]
+were the inductive limite on the right is taken among the proper $G(X)$-compact subsets $Y$ of the universal classifying space for proper actions of $G(X)$.\\
+
+Recall from ~\cite{TuNovikov} that we can take for $\mathcal E G(X) $ the space $\mathfrak M$ of positive measures $\mu$ on $G(X)$ satisfying :
+\begin{itemize}
+\item $\frac{1}{2}<\mu(G(X))\leq 1$, 
+\item $s^*\mu$ is a Dirac measure, i.e. its support consists of arrows of $G(X)$ that all source from the same base point of $\beta X$.\\
+\end{itemize}
+
+If $\mathfrak M_d$ denotes the space of measures $\mu$ of $\mathfrak M$ such that :
+\begin{itemize}
+\item $\mu$ is a probability measure
+\item for all $\gamma$ and $\gamma'$ in the support of $\mu$, $\gamma'\gamma^{-1}$ is $d$-controlled, i.e. $d(r(\gamma),r(\gamma'))\leq d$, 
+\end{itemize}
+then $\mathfrak M=\varinjlim \mathfrak M_d$.\\ % à vérifier
+
+The Rips complex of $X$, denoted $P_d(X)$, is the topological space of the complexes of diameter less than $d$, identified with probability measures on $X$ with support of diameter less than $d$, with the weak topology coming from $C_c(C)$. We will write $[y,t]$ for a point of a simplex defined by barycentric coordinates of $k$ points $y_1,...,y_k$, ie $\sum t_j \delta_{y_j}$. To such a point $[y,t]$ and an element of the Stone-Cech compactification $w\in \beta X$, we can associate a measure of $\mathfrak M_d$ in the following way. As $G(X)$ is a principal and transitive groupoid, there exists only one arrow $\gamma_j$ such that $s(\gamma_j)=x$ and $r(\gamma_j)=y_j$. To $z=([y,t],w)=(z_w,w)$, we associate 
+\[\phi_d(z)=\sum_{j=1,k} t_j \delta_{\gamma_j}\in\mathfrak M_d.\]
+
+\begin{prop}
+The map
+\[\phi_d: P_d(X)\times \beta X \rightarrow \mathfrak M_d\]
+is an homeomorphism.
+\end{prop}
+\begin{dem}
+It is clearly bijective. The bicontinuity comes from the identity :
+\[\langle z_w,f\rangle=\langle \phi_d(z),f\circ r\rangle\]
+for all $z=(z_w,w)\in P_d(X)\times \beta X$, and $f\in C_c(X)$.
+\qed
+\end{dem}
+
+This homeomorphism $\phi_d$ gives an $*$-isomorphism at the level of $C^*$-algebras
+\[\Psi_d : C_0(\mathfrak M_d)\rightarrow C_0(P_d(X)\times \beta X).\]
+
+Let $(\mathcal E, \pi, F)\in \mathbb E(C_0(P_d(X)),B)$ be an elliptic operator. 

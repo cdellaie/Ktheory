@@ -1,0 +1,87 @@
+\section{Groupoïds}
+
+\subsection{Definitions}
+\begin{definition}
+A groupoid is a small category whose arrows are all invertible. More concretly, it is the data of a set $G$ together with a set of units $G^{(0)}$ and two maps $r,s : G \rightarrow G^{(0)}$. We can compose two arrows when the range of the first agrees with the source of the second. If we denote, for $x\in G^{(0)}$,  $G_x=\{\gamma \in G : s(\gamma)=x\}$ and $G^x=\{ \gamma\in G : r(\gamma)=x\}$, this can be rephrase as the existence of a family of maps
+\[\left\{\begin{array}{lcr} G_x\times G^x & \rightarrow & G  \\ (\gamma,\gamma') & \mapsto & \gamma\gamma'\end{array}\right.\quad ,\forall x\in G^{(0)}.\]
+An automorphism of a groupoid is just an endofunctor which is invertible.
+\end{definition}
+
+Depending on the situation, we will require these to be topological spaces with continuous maps, manifolds with smooth functions, etc. In these cases, we will talk about topological or smooth groupoïds. For now on, $L_\gamma$ denotes the left translation $G^{s(\gamma)}\rightarrow G^{r(\gamma)}; \gamma'\mapsto \gamma\gamma'$, and $X=G^{(0)}$ is the set of units.\\
+
+\begin{definition}
+A Haar system $\lambda=(\lambda^x)_{x\in G^{(0)}}$ is a family of borelian measures $\lambda^x$ with support $G^x$ such that :
+\begin{enumerate}
+\item for all continuous function with compact support $f\in C_c(G)$, the map $x\mapsto \int_{G^x} f d\lambda^x$ is continuous.
+\item $\lambda$ is left-invariant w.r.t $G$, i.e. $L_{\gamma,*}\lambda^{s(\gamma)}= \lambda^{r(\gamma)}\forall \gamma\in G$ or 
+\[\int_{G^{s(\gamma)}} f(\gamma\gamma')d^{s(\gamma)}\gamma' = \int_{G^{r(\gamma)}} f(\gamma')d^{r(\gamma)}\gamma'.\]
+\end{enumerate}
+\end{definition}
+
+From $ L_\gamma \circ\alpha = \alpha \circ L_{\alpha^{-1}(\gamma)}$, we deduce 
+\[
+\int_{G^{s(\alpha^{-1}(\gamma))}} f(\gamma\alpha(\gamma')) d\gamma'= \int_{G^{r(\gamma)}} f(\gamma')\frac{1}{\rho(\alpha^{-1}(\gamma^{-1}\gamma'))}d\gamma'  
+\]
+
+\[\int_{G^{s(\alpha^{-1}(\gamma))}} f(\alpha(\alpha^{-1}(\gamma)\gamma')) = \int_{G^{r(\gamma)}}   f(\gamma')\frac {1}{\rho(\alpha^{-1}(\gamma'))} d\gamma'
+\]
+and $\rho(\gamma^{-1}\gamma')=\rho(\gamma')$. In particular, $\rho$ is constant on $G_x$, for all $x\in X$.
+\begin{definition}
+An automorphism $\alpha$ of $G$ preserves a Haar system $\lambda$ if, for each $x\in X$, $\alpha_* \lambda^x$ is absolutely continuous w.r.t $\lambda^{\alpha(x)}$ and there exists a continuous function $\rho_\alpha : G\rightarrow \R^+$ such that $\rho_\alpha$ restricted to $G^{\alpha(x)}$ is the Radon-Nikodym derivative $\frac{d\alpha_* \lambda^x}{d\lambda^{\alpha(x)}}$.\\
+\end{definition}
+
+\begin{definition}
+Given an automorphism $\alpha$ of a groupoid $G$, we can form the suspension groupoid relative to $\alpha$ as follow. It is the groupoid with arrows
+\[G_\alpha = G\times \R /\sim\quad\text{where }(\gamma,t)\sim(\alpha(\gamma),t-1)\]
+and units
+\[X_\alpha = X\times \R /\sim\quad\text{where }(x,t)\sim(\alpha_X(x),t-1).\]
+If $[\gamma,t]$ and $[x,t]$ denote the equivalence classes in $G_\alpha$ and $X_\alpha$ respectively, then the source and the range map are given by
+\[s([\gamma,t])]=[s(\gamma),t]\quad \text{and}\quad r([\gamma,t])]=[r(\gamma),t].\]
+The composition is $[\gamma,t][\gamma',t]=[\gamma\gamma',t]$.
+\end{definition}
+
+\begin{lem}
+If $\rho_\alpha \circ \alpha = \rho_\alpha$, then the suspension groupoid $G_\alpha$ admits a Haar system $\lambda_\alpha$, given by 
+\[\lambda^{[x,t]}(f)=\int_{G^x} \rho_\alpha(\gamma)^{-t}f([\gamma,t])d\lambda^x(\gamma).\]
+\end{lem}
+
+\begin{dem}
+We shall first demonstrate that this definition does make sense, i.e. that it is independent of the representant of the class $[x,t]$.
+\begin{align*}
+\lambda^{[x,t]}(f) & =\int _{G^x} \rho (\alpha(\gamma))^{-t} f([\gamma,t]) d^x \gamma \\
+			& =\int_{G^{\alpha(x)}}\rho(\gamma)^{-t}     f([\alpha^{-1}(\gamma),t])  \frac{d^{\alpha(x)} \gamma}{\rho(\gamma)} \\
+			& =\int_{G^{\alpha(x)}}\rho(\gamma)^{-t+1}f([\gamma,t-1])d^{\alpha(x)} \gamma
+			& = \lambda^{[\alpha(x),t-1]}(f).
+\end{align*}
+
+As the continuity is clear, we can conclude by showing the left-invariance.
+\begin{align*}
+\int_{G_\alpha^{[s(\gamma),t]}} f([\gamma\gamma',t])d^{[s(\gamma),t]}[\gamma',t] &= \int_{G^{s(\gamma)}} \rho^{-t}(\gamma') f([\gamma\gamma',t])d^{s(\gamma)} \gamma' \\
+			&= \int_{G^{r(\gamma)}} \rho^{-t}(\gamma^{-1}\gamma') f([\gamma',t]) d^{r(\gamma)}\gamma' 		\\
+			&= \int_{G^{r(\gamma)}} \rho^{-t}(\gamma') f([\gamma',t]) d^{r(\gamma)}\gamma'
+\end{align*}
+The last equality follows from the fact that $\rho$ is constant on $G_x$, for all $x\in X$, and then
+\[\int_{G_\alpha^{[s(\gamma),t]}} f([\gamma\gamma',t])d^{[s(\gamma),t]}[\gamma',t] = \int_{G_\alpha^{[r(\gamma),t]}} f([\gamma',t])d^{[r(\gamma),t]}[\gamma',t]. \] 
+\qed 
+\end{dem}
+
+\subsection{Principal \textit{étale} groupoids}
+In this section, we are interested in locally compact groupoids. The maps $r,s :G\rightarrow X$, the composition and inverse maps are continuous.
+
+\begin{definition}
+A groupoid is said to be \textit{étale} if $r: G\rightarrow X$ is a local homeomorphism.\\
+It is principal if the product map $s\times r : G\rightarrow X \times X$ is one-to-one. 
+\end{definition}
+
+Let $x\in X$ and $\gamma\in G^x$. If $G$ is \textit{étale},there exists a neighborhood $U$ of $\gamma$ such that $r_{|U}$ is a homeomorphism. So $G^x\cap U=\{\gamma\}$ is open in $G^x$. That show that the fibers $G^x$ are discrete for all $x\in X$.\\ 
+
+\begin{prop}
+If $G$ is a principal étale groupoid, the fibers $G^x$ are discrete for all $x\in X$ and the only Haar systems are the multiple of the counting measure on the fibers.
+\end{prop}
+\begin{dem}
+If $\lambda$ is a non-zero Haar system and $G$ is principal, $\lambda^x$ is a measure on the discrete space $G^x$, which entails that there exists a $\gamma\in G^x$ such that $\lambda({\gamma})>0$. By left-invariance, 
+\[\lambda^{r(\gamma')}\{\gamma'\gamma\}=\lambda\{\gamma\}>0.\]
+Replacing $\gamma'=\gamma^{-1}$ in this relation, we have $\lambda^x\{x\}>0$, which we can suppose equal to $1$. The left invariane assures then that
+\[\lambda^x\{\gamma\}=1\quad \forall \gamma\in G^x.\]
+\qed
+\end{dem}
