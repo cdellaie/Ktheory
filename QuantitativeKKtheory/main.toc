@@ -2,5 +2,9 @@
 \contentsline {section}{\numberline {1}Groupo\IeC {\"\i }ds}{3}{section.1}
 \contentsline {subsection}{\numberline {1.1}Definitions}{3}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Principal \textit {\IeC {\'e}tale} groupoids}{4}{subsection.1.2}
-\contentsline {section}{\numberline {2}Asymptotic dimension}{6}{section.2}
-\contentsline {section}{\numberline {3}Correspondance between the coarse $K$-homology of a space and the one of its coarse groupoid}{7}{section.3}
+\contentsline {section}{\numberline {2}Stone-Cech compactification}{6}{section.2}
+\contentsline {section}{\numberline {3}Asymptotic dimension}{7}{section.3}
+\contentsline {section}{\numberline {4}Assembly maps for groupoids and for coarse spaces}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}The case of a finitely generated group}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Relation between the coarse and the groupoid assembly maps}{8}{subsection.4.2}
+\contentsline {section}{\numberline {5}Correspondance between the coarse $K$-homology of a space and the one of its coarse groupoid}{9}{section.5}
