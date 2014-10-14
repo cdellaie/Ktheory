@@ -84,4 +84,20 @@ for all $z=(z_w,w)\in P_d(X)\times \beta X$, and $f\in C_c(X)$.
 This homeomorphism $\phi_d$ gives an $*$-isomorphism at the level of $C^*$-algebras
 \[\Psi_d : C_0(\mathfrak M_d)\rightarrow C_0(P_d(X)\times \beta X).\]
 
-Let $(\mathcal E, \pi, F)\in \mathbb E(C_0(P_d(X)),B)$ be an elliptic operator. 
+Let $(\mathcal E, \pi, F)\in \mathbb E(C_0(P_d(X)),B)$ be an elliptic operator. \textbf{A FINIR}\\
+
+%A FINIR
+
+Let $X_0\subset X_1\subset ...\subset X_j \subset ...$ the $n$-skeleton decomposition associated to the simplicial structure of the Rips complex $P_d(X)$, and similarly $\tilde X_0\subset \tilde X_1\subset ...\subset \tilde X_j \subset ...$ for $\mathfrak M_d$, and 
+\[Z_j = C_0(X_j)\quad \text{and}\quad\tilde Z_j = C_0(\tilde X_j).\]
+\[Z^j_{j-1} = C_0(X_j-X_{j-1})\quad \text{and}\quad\tilde Z^j_{j-1} = C_0(\tilde X_j-\tilde X_{j-1}).\]
+
+We will show the isomorphism by a Mayer-Vietoris type argument. By applying the $KK$-theory to the exact sequence :
+\[\begin{tikzcd}0 \arrow{r}& C_0(X_j - X_{j-1})\arrow{r} & C_0(X_j)\arrow{r} & C_0(X_{j-1})\arrow{r} & 0\end{tikzcd}\]
+we have a commutative diagramm with exact lines :
+
+\[\begin{tikzcd}
+KK_*(Z^j_{j-1},B)\arrow{r}{\delta}\arrow{d}{\theta^j_{j-1}} & KK_*(Z_{j-1},B)\arrow{r}\arrow{d}{\theta_{j-1}} & KK_*(Z_j,B)\arrow{r}\arrow{d}{\theta_j} & KK_*(Z^j_{j-1},B)\arrow{r}{\delta} \arrow{d}{\theta^j_{j-1}} & KK_*(Z_{j-1},B)\arrow{d}{\theta_{j-1}}\\
+KK_*(\tilde Z^j_{j-1},B)\arrow{r}{\delta} & KK_*(\tilde Z_{j-1},B)\arrow{r} & KK_*(\tilde Z_j,B)\arrow{r} & KK_*(\tilde Z^j_{j-1},B)\arrow{r}{\delta} & KK_*(\tilde Z_{j-1},B)\\
+\end{tikzcd}\]
+The five lemma assures that if $\theta_{j-1}$ and $\theta^j_{j-1}$ are isomorphisms, then so is $\theta_j$. Moreover, $X_j-X_{j-1}$ is equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicty assures then that, if $\theta_{j-1}$ is an isomorphism, then so is $\theta^j_{j-1}$. By induction, proving that $\theta_0$ is an isomorphism concludes the proof.
