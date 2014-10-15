@@ -1,0 +1,115 @@
+\section{Séminaire $KK$-théorie et groupe quantique, exposé du 17 Octobre 2014}
+
+Ce court rapport a pour but de présenter les bases de la $K$-théorie des $C^*$-algèbres. Nous irons des définitions à la suite exacte à $6$ termes. 
+
+\subsection{Motivations}
+
+Comme Lorenzo Pittau vous a tout raconté sur $K_0$ la semaine dernière, je vais me permettre d'aller plus vite sur les détails techniques. \\
+
+Le foncteur $K$ a été introduit par Grothendieck dans sa démonstration du théorème de Riemann-Roch à la fin des années $50$, voir l'article de Borel et Serre~\cite{BorelSerre}. Ces travaux ont inspiré Atiyah et Singer dans la démonstration de leur fameux théorème de l'indice. \\
+
+Voici une version très simplifiée d'un théorème de l'indice trouvée dans un article de Jean Bellissard~\cite{Bellissard}, que je trouve très pédagogique. Soit $f\in C(\mathbb S^1,\C^\times)$. Cette fonction définit un lacet $\gamma$, donc un élément du premier groupe d'homologie du cercle $[\gamma]=f^*(\mathbb S^1)\in H_1(\mathbb S^1)=\Z$, dont la classe est représentée via cet isomorphisme par le degré de $f$. Si l'on suppose que $f$ est une fonction holomorphe, on peut même calculer ce degré : 
+\[\text{deg}(f)=\frac{1}{2i\pi}\int_{f(\mathbb S^1)} f(z)\frac{dz}{-z}= -\langle [w],[f]\rangle_{H^1\times H_1},\] 
+où $w=\frac{dz}{2i\pi z}$ est une forme fermée qui définit une classe de cohomologie de $\mathbb S^1$, et le crochet est la dualité usuelle entre cohomologie et homologie.\\
+
+Cette formule a aussi une interprétation opératorielle. Soit $\mathcal H$ l'espace des fonctions holomorphes sur le disque unité ouvert $\{z\in \C : |z|<1\}$ possédant un prolongement de carré intégrable sur le bord du disque $\mathbb S^1$. Cet espace $\mathcal H$, appelé espace de Hardy, est un sous-espace fermé de l'espace de Hilbert $L^2(\mathbb S^1)$, et on note $\mathcal P$ la projection orthogonale sur $\mathcal H$. On peut montrer que l'espace de Hardy est celui des fonctions dont les coefficients de Fourier strictement négatifs sont nuls.\\
+
+A toute fonction continue sur le cercle $f\in C(\mathbb S^1)$, on associe un opérateur dit de Toeplitz $T_f\in \mathcal L(\mathcal H)$
+\[T_f : g \mapsto \mathcal P fg. \]
+Cet opérateur induit un $*$-morphisme de $C(\mathbb S^1)\rightarrow \B/\K$ à valeur dans l'algèbre de Calkin (les opérateurs bronés quotientés par l'idéal des opérateurs compacts), et donc $T_f T_{\overline f}= T_{\overline f} T_f \ \text{mod}\ \K  = 1 \ \text{mod}\ \K$. On a donc un opérateur de Fredholm, dont on sait que le noyau et le conoyau sont de dimension finie : il a un indice
+\[\text{Ind}(T_f)=\text{dim}(Ker(T))- \text{dim} (coker(T))\in \Z.\]
+Le "théorème-$0$" de l'indice affirme que cette indice est précisément le degré de $f$, ce que l'on peut réécrire comme 
+\[\text{Ind}(T_f)= \langle [w],f^*(\mathbb S^1)\rangle_{H^1\times H_1}.\]
+
+Pour le montrer, remarquez d'abord que l'indice est invariant par perturbation compacte et par homotopie. Il suffit alors de le montrer pour les fonctions $z^n$, or $T_{z^n}=S^n$, où $S$ est le shift unilatéral, qui est injectif. Le noyau de $S^{*n}$ étant de dimension $n$, $Ind(T_{z^n})=-n$.\qed \\
+
+Atiyah et Singer ont profondément généralisé ce type de résultat au cadre des fibrés vectoriels. L'exemple typique est celui d'un opérateur de Dirac  sur un variété munie d'une structure $\text{spin}^c$, dont on peut montrer qu'il est inversible modulo les opérateurs pseudo-différentiels réguliers. On verra comment calculer des indices associés à toute extension de $C^*$-algèbre, et ici l'extension pertinente est celle des opérateurs pseudo-différentiels. On a alors un indice associé à cet opérateur de Dirac, qui est un entier. Dans certains cas, lorsque votre variété est un espace homogène par exemple, on peut relever notre opérateur de Dirac, sur le revêtement universel dans notre exemple. Le receptacle pour l'indice de cet opérateur est alors la $K$-théorie : l'indice n'est plus un entier mais un élément d'un certain groupe de $K$-théorie.\\
+
+Il se trouve que la $K$-théorie se généralise bien au cadre non-commutatif. Pour cela, rappelons le théorème de Serre-Swan :
+
+\begin{thm}
+Soit $X$ un espace topologique compact et $\Phi$ le foncteur qui va de la catégorie des fibrés vectoriels complexes de base $X$ dans celle des $C(X)$-modules projectifs de type fini qui, à un fibré \begin{tikzcd}[row sep = small]E \arrow{d}{\pi}\\ X\end{tikzcd} associe l'espace des sections continues $\Phi : E\mapsto \Gamma(E)=\{s : X\rightarrow E / \pi\circ s = id\}$.\\
+Alors $\Phi$ réalise une équivalence de catégories.
+\end{thm}
+
+Ce théorème assure que se donner un fibré, c'est se donner un $C(X)$-module projectif de type fini. C'est ainsi que les algébristes définissent le premier groupe de $K$-théorie d'un anneau $A$ comme le groupe de Grothendieck du monoïde des classes d'équivalence des $A$-modules projectifs de type fini. C'est d'ailleurs une définition que l'on peut prendre pour les $C^*$-algèbres, si l'on utilise la théorie des $C^*$-modules hilbertiens (voir les prochains exposés !). Pour mémoire, rappelons qu'un $A$-module $P$ est dit projectif si pour tout $A$-modules $N$ et $M$ et tout morphisme $f : N\rightarrow P$ et tout épimorphisme $g: M\rightarrow P$, il existe une unique flèche $h : N\rightarrow M$ tel que le diagramme suivant commute :
+\[\begin{tikzcd}  . & M \arrow[two heads]{d}{g} \\
+	N \arrow[dotted]{ur}{h}\arrow{r}{f} & P
+\end{tikzcd}\]
+
+Que se passe t'il pour un $A$-module projectif de type fini $\mathcal E $? On a un morphisme surjectif $g : A^n \rightarrow \mathcal E$, et on peut relever l'identité grâce à la propriété universelle
+\[\begin{tikzcd}
+ . 		& A^n \arrow[two heads]{d}{g} \\
+	\mathcal E \arrow[dotted]{ur}{f}\arrow{r}{id_{\mathcal E}} & \mathcal E
+\end{tikzcd}\]
+Il existe donc $f : \mathcal E \rightarrow A^n$ telle que $g\circ f = id_{\mathcal E}$. Alors $p = f\circ g$ est un projecteur, et on a un isomorphisme $ \mathcal E \simeq pA^n$. Ainsi, un module projectif de type fini est donné par un projecteur de $\mathfrak M_n (A)$.
+
+\subsection{Propriétés de $K_0$}
+
+\begin{definition}
+Soit $p$ et $q$ deux projecteurs dans une $C^*$-algèbre $A$. On définit trois relations d'équivalences :\\
+$p\sim q$ s'il existe une isométrie partielle $u$ de $A$ telle que $p=u^*u $ et $q=uu^*$. ( équivalence de Murray-Von Neumann)\\
+$p\sim_u q$ s'il existe un unitaire $u$ de $A^+$ tel que $p=uqu^*$. (Similitude)\\
+$p\sim_h q$ s'il existe un chemin continu en norme de projections de $p$ à $q$.(Homotopie)\\
+\end{definition}
+
+\begin{lem}\label{conj}
+Soit $A$ une $C^*$-algèbre unitale et $p$ et $q$ deux projecteurs de $A$ tels que $||p-q||<1$. Alors il existe un unitaire $u\in A$ vérifiant
+\[p=uqu^*.\]
+\end{lem}
+
+\begin{dem}
+Pour tout projecteur $\in A$, on pose $s_p = 2p-1$ : c'est une symmétrie. De plus 
+\[s_p-s_q = 2(p-q),\]
+ce qui assure que si $||p-q||<1$, $v:= \frac{s_p s_q+1}{2}$ est inversible. Mais $pv=pq$ et donc par symmétrie $qv^* = qp$ d'où $pv=vq$. La décomposition polaire de $v$ assure alors que l'unitaire $v |v|^{-1}$ entrelace $p$ et $q$.
+\qed\\
+\end{dem}
+Une remarque : on vient finalement de montrer qu'il existe une application continue sur un voisinage de $p$ (la boule de centre $p$ et de rayon $||2p-1||$ par exemple,
+\[\Psi\left\{\begin{array}{rcl} B_p &\rightarrow & A^{-1} \\
+ q & \mapsto &  \frac{s_p s_q +1}{2}|\frac{s_p s_q +1}{2}|^{-1}		
+\end{array}\right.\]
+telle que $\Psi(q) p \Psi(q)^* = q$. \\
+
+\begin{prop}
+Les relations d'équivalence sur les projecteurs sont ordonnées comme suit : $\sim_h \Rightarrow \sim_u \Rightarrow \sim$. De plus,
+\[\text{si }\ p\sim q \ \text{alors }\ \begin{pmatrix}p & 0 \\ 0 & 0 \end{pmatrix}\sim_u \begin{pmatrix}q & 0 \\ 0 & 0 \end{pmatrix} \]
+\[\text{et si }\ p\sim_u q \ \text{alors }\ \begin{pmatrix}p & 0 \\ 0 & 0 \end{pmatrix}\sim_h \begin{pmatrix}q & 0 \\ 0 & 0 \end{pmatrix}. \]
+\end{prop}
+\begin{dem}
+Si $p\sim_h q$, il existe un chemin continu de projecteurs $[0,1]\rightarrow P(A);t\mapsto p_t$. En découpant l'intervalle $[0,1]$ en segment assez petits, le lemme \ref{conj} donne l'existence d'un chemin d'unitaires $t\mapsto u_t$ tel que $t\mapsto u_t p u_t^*$ soit un chemin continu de projecteurs de $p$ à $q$. En particulier, $p\sim_u q$.\\
+
+Si $p\sim_u q$, alors il existe un unitaire $u$ vérifiant
+\[p= u q u^* = (u q)(u q)^*\]
+comme $uq$ est une isométrie partielle, $p\sim q$.\\
+
+Si $p\sim q$. Soit $v$ une isométrie partielle de $A$ telle que $p=v^*v$ et $q = vv^*$. Alors 
+\[w=\begin{pmatrix} v & 1-vv^*\\1-v^* v  & v^*\end{pmatrix}\]
+est une isométrie de $\mathfrak M_2 (A)$. De plus
+\[w\begin{pmatrix}p & 0 \\ 0 & 0 \end{pmatrix}w^*=\begin{pmatrix}q & 0 \\ 0 & 0 \end{pmatrix}.\]
+
+Si $p\sim_u q$, soit $u$ un unitaire qui entrelace $p$ et $q$. Alors 
+\[\begin{pmatrix}u & 0 \\ 0 & u^* \end{pmatrix}\]
+est un unitaire homotope à $1\otimes I_2$, et un tel chemin continu d'unitaire $t\mapsto w_t$ assure que
+\[\begin{pmatrix}p & 0 \\ 0 & 0 \end{pmatrix}\sim_h \begin{pmatrix}q & 0 \\ 0 & 0 \end{pmatrix}.\] 
+\qed
+\end{dem}
+
+Cette propostion montre que les différentes relations d'équivalence coïncident si l'on se place dans $\mathfrak M_\infty(A)$.
+\subsection{Exercices}
+
+On a vu que le foncteur $K_*$ est stable par limite inductive. Pour autant certains exemples demandent un peu d'attention. Soit $A$ une $C^*$-algèbre unitale et $q$ un entier positif. On note $A_j=\mathfrak M_{q^j}(A)$, et $\phi_j^{j+1}:A_j  \rightarrow  A_{j+1}$ défini par
+\[\phi_j^{j+1}: 
+a  \mapsto  \begin{pmatrix} a & 0 &   &  &   \\
+                              0 & a &   &  &   \\
+			        &   & a &  &    \\
+				&   &   & ..  &   \\
+				&   &   &   & a 
+\end{pmatrix}=a \otimes 1_q 
+\] 
+En composant on obtient des $*$-morphismes, où $i\leq j$ :
+\[\phi^j_i :\left\{\begin{array}{lcr}A_i & \rightarrow & A_j \\
+ a &\mapsto & a\otimes 1_{q^{j-i}}\end{array}\right.\]
+qui nous définissent un système inductif $\{A_i, \phi^j_i\}$. Comme $K_*(A_j)=K_*(A)$, on serait tenter de conclure que la $K$-théorie de la limite inductive est celle de $A$. Il n'en n'est rien comme on peut facilement le voir avec $A=\C$. Les morphismes $\phi_{i*}^j$ sont donnés par la multiplication 
+\[\phi_{i*}^j\left\{\begin{array}{lcr} K_*(A_i) & \rightarrow & K_*(A_j)\\
+			\ [x]   & \mapsto     &  q^{j-i} [x] \end{array}\right.\]
+et même si lorsque $A=\C$, $K_0(A_j)=K_0(\C)=\Z$, on obtient $K_0(\varinjlim A_j))=\Z[\frac{1}{q}]$.

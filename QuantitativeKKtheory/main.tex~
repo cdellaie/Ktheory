@@ -24,8 +24,6 @@
 \include{Asdim}
 \include{Isom}
 
-\include{GDT}
-
 \bibliographystyle{plain}
 \bibliography{biblio} 
 \nocite{*}

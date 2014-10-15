@@ -8,3 +8,7 @@
 \contentsline {subsection}{\numberline {4.1}The case of a finitely generated group}{8}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Relation between the coarse and the groupoid assembly maps}{8}{subsection.4.2}
 \contentsline {section}{\numberline {5}Correspondance between the coarse $K$-homology of a space and the one of its coarse groupoid}{9}{section.5}
+\contentsline {section}{\numberline {6}S\IeC {\'e}minaire $KK$-th\IeC {\'e}orie et groupe quantique, expos\IeC {\'e} du 17 Octobre 2014}{12}{section.6}
+\contentsline {subsection}{\numberline {6.1}Motivations}{12}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Propri\IeC {\'e}t\IeC {\'e}s de $K_0$}{14}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Exercices}{15}{subsection.6.3}

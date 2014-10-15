@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  14 OCT 2014 17:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  15 OCT 2014 14:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -748,7 +748,8 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 18.
 \c@cor=\count139
 \c@conj=\count140
 )
-(./main.aux (./Groupoids.aux) (./StoneCech.aux) (./Asdim.aux) (./Isom.aux))
+(./main.aux (./Groupoids.aux) (./StoneCech.aux) (./Asdim.aux) (./Isom.aux)
+(./GDT.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -928,9 +929,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 42.
 
 
+LaTeX Warning: Citation `TuBC' on page 9 undefined on input line 44.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
+
+
+LaTeX Warning: Citation `TuNovikov' on page 9 undefined on input line 56.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
@@ -963,28 +970,137 @@ Overfull \hbox (107.51123pt too wide) detected at line 102
 []
  []
 
-[10]) [11] (./main.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
- [12
+[10]) [11]
+\openout2 = `GDT.aux'.
+
+ (./GDT.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+LaTeX Warning: Citation `BorelSerre' on page 12 undefined on input line 9.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+LaTeX Warning: Citation `Bellissard' on page 12 undefined on input line 11.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+[12
+
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+[13]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 47.
+
+
+Overfull \hbox (1.77931pt too wide) in paragraph at lines 50--54
+\OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 ^^X[] \OML/cmm/m/it/10 q$ \OT1/cmr/m/n/10 s
+'il existe un che-min continu en norme de pro-jec-tions de $\OML/cmm/m/it/10 p$
+ \OT1/cmr/m/n/10 ^^Ra $\OML/cmm/m/it/10 q$\OT1/cmr/m/n/10 .(Homotopie) 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
+
+ []
+
+[14]) [15] (./main.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
+ [16
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
  (./main.aux (./Groupoids.aux) (./StoneCech.aux)
-(./Asdim.aux) (./Isom.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3F3C23224798B34DE56E2F3DDACEDC1C;704.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 32.
+(./Asdim.aux) (./Isom.aux) (./GDT.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: BA873BDD297B2E5B38919681B537C486;949
+(rerunfilecheck)             After:  2075DC9DA142C5110AEE05D9D0BCFD48;1008.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 34.
  ) 
 Here is how much of TeX's memory you used:
- 15859 strings out of 494958
- 281269 string characters out of 6179263
- 366889 words of memory out of 5000000
- 18706 multiletter control sequences out of 15000+600000
- 14399 words of font info for 56 fonts, out of 8000000 for 9000
+ 16008 strings out of 494958
+ 284363 string characters out of 6179263
+ 366485 words of memory out of 5000000
+ 18834 multiletter control sequences out of 15000+600000
+ 15107 words of font info for 59 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 58i,15n,75p,746b,845s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,15n,75p,928b,854s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
@@ -997,17 +1113,18 @@ lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (12 pages, 240324 bytes).
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (16 pages, 272221 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 52 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 265 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
