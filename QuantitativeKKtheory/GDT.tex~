@@ -1,4 +1,4 @@
-\section{Séminaire $KK$-théorie et groupe quantique, exposé du 17 Octobre 2014}
+\section{Séminaire $KK$-théorie et groupe quantique, exposés du 17 et 24 Octobre 2014}
 
 Ce court rapport a pour but de présenter les bases de la $K$-théorie des $C^*$-algèbres. Nous irons des définitions à la suite exacte à $6$ termes. 
 
@@ -46,6 +46,7 @@ Il existe donc $f : \mathcal E \rightarrow A^n$ telle que $g\circ f = id_{\mathc
 
 \subsection{Propriétés de $K_0$}
 
+On rappelle la description standard du premier groupe de $K$-théorie. 
 \begin{definition}
 Soit $p$ et $q$ deux projecteurs dans une $C^*$-algèbre $A$. On définit trois relations d'équivalences :\\
 $p\sim q$ s'il existe une isométrie partielle $u$ de $A$ telle que $p=u^*u $ et $q=uu^*$. ( équivalence de Murray-Von Neumann)\\
@@ -53,6 +54,13 @@ $p\sim_u q$ s'il existe un unitaire $u$ de $A^+$ tel que $p=uqu^*$. (Similitude)
 $p\sim_h q$ s'il existe un chemin continu en norme de projections de $p$ à $q$.(Homotopie)\\
 \end{definition}
 
+\begin{prop}[Description standard]
+Soit $A$ une $C^*$-algèbre. Tout élément $x$ de $K_0(A)$ peut être représenté par une différence
+\[x=[p]-[p_n]\ \text{tels que } p = p_n \ \text{mod}\ \mathfrak M_k(A)\]
+où $k$ et $n$ sont deux entiers tels que $k\geq n$, $p\in\mathfrak M_k(A^+)$ est un projecteur et $p_n$ est l'élément de $\mathfrak M_k(A^+)$ avec des $0$ partout et des $1$ sur les $n$ premiers emplacements diagonaux.
+\end{prop}
+
+\subsubsection{Equivalence entre les relations d'équivalences sur les projecteurs modulo stabilisation}
 \begin{lem}\label{conj}
 Soit $A$ une $C^*$-algèbre unitale et $p$ et $q$ deux projecteurs de $A$ tels que $||p-q||<1$. Alors il existe un unitaire $u\in A$ vérifiant
 \[p=uqu^*.\]
@@ -69,6 +77,15 @@ Une remarque : on vient finalement de montrer qu'il existe une application conti
  q & \mapsto &  \frac{s_p s_q +1}{2}|\frac{s_p s_q +1}{2}|^{-1}		
 \end{array}\right.\]
 telle que $\Psi(q) p \Psi(q)^* = q$. \\
+
+\begin{lem} Soit $v$ une isométrie partielle d'une $C^*$-algèbre unitale $A$ i.e. $v^* v $ et $vv^*$ sont des projecteurs. Alors 
+\[\begin{pmatrix}v & 1-vv^* \\ v^*v-1 & v^*\end{pmatrix}\]
+est un unitaire de $\mathfrak M_2(A)$ homotope à l'identité $1_{A}\otimes I_2 $.
+\end{lem}
+\begin{dem}Un calcul suffit à montrer l'unitarité. Le chemin
+\[t\mapsto \cos(\frac{\pi}{2} t)\begin{pmatrix}v & 0 \\ 0 & v^*\end{pmatrix} + (1-\sin(\frac{\pi}{2}t))\begin{pmatrix}0 & -vv^* \\ v^*v & 0\end{pmatrix}+\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}\]
+connecte la matrice en question à $\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$ dans les unitaires.\qed
+\end{dem}
 
 \begin{prop}
 Les relations d'équivalence sur les projecteurs sont ordonnées comme suit : $\sim_h \Rightarrow \sim_u \Rightarrow \sim$. De plus,
@@ -94,8 +111,26 @@ est un unitaire homotope à $1\otimes I_2$, et un tel chemin continu d'unitaire 
 \qed
 \end{dem}
 
-Cette propostion montre que les différentes relations d'équivalence concordent si l'on se place dans $\mathfrak_\infty(A)$.
-\subsection{Exercices}
+Cette propostion montre que les différentes relations d'équivalence coïncident si l'on se place dans $\mathfrak M_\infty(A)$.
+
+\subsubsection{Limites inductives}
+
+\begin{prop}
+Soit $\{A_i, \phi^j_i\}$ un système inductif de $C^*$-algèbres. Alors $\{K_0(A_i), \phi^j_{i*}\}$ est un système inductif de groupes abéliens et
+\[K_0( \varinjlim A_j)= \varinjlim K_0(A_j).\]
+\end{prop}
+\begin{dem}
+Par définition, pour tout $i\leq j$, il existe des morphismes $\phi_i$ et $\phi_j$ qui font commuter le diagramme suivant :
+\[\begin{tikzcd}A_i \arrow{r}{\phi_i}\arrow{d}{\phi^j_i} & \varinjlim A_j \\
+A_j \arrow{ur}{\phi_j}\end{tikzcd}.\]
+En passant ce diagramme en $K_0$-théorie, on obtient un second diagramme commutatif que la propriété universelle de la limite inductive nous permet de compléter en pointillés :
+\[\begin{tikzcd}K_0(A_i) \arrow{r}{\phi_{i*}}\arrow{d}{\phi^j_ {i*}}\arrow[dotted]{dr} & K_0(\varinjlim A_j) \\
+K_0(A_j) \arrow[dotted]{r}\arrow{ur}{\phi_{j*}} & \varinjlim K_0(A_j)\arrow[dotted]{u}{\exists ! \phi}\end{tikzcd}.\]
+L'injectivité de $\phi$ est claire puisque tous les $\phi_{j*}$ le sont. Soit $[p]-[p_n]\in K_0(\varinjlim A_j)$. Pour tout $\epsilon >0$, il existe un $j>0$ et élément $a$ autoadjoint de $A_j$ tel que $||a-p||<\epsilon$. Alors le spectre de $a$ est inclus dans la réunion de $2$ intervalles centrés en $0$ et $1$. Par calcul fonctionnel continu, on peut alors définir un projecteur $q=f(a)$ tel que $||q-a||$ soit borné par $O(\epsilon)$. Pour $\epsilon$ assez petit, $||p-q||<1$ et donc $[p]=[q]$ dans $K_0(\varinjlim A)$. Mais $[q]\in K_0(A_j)\subset \varinjlim K_0(A_j)$ : la surjectivité est démontrée.
+\qed
+\end{dem}
+
+Voici un exercice sur ce thème.\\
 
 On a vu que le foncteur $K_*$ est stable par limite inductive. Pour autant certains exemples demandent un peu d'attention. Soit $A$ une $C^*$-algèbre unitale et $q$ un entier positif. On note $A_j=\mathfrak M_{q^j}(A)$, et $\phi_j^{j+1}:A_j  \rightarrow  A_{j+1}$ défini par
 \[\phi_j^{j+1}: 
@@ -113,3 +148,115 @@ qui nous définissent un système inductif $\{A_i, \phi^j_i\}$. Comme $K_*(A_j)=
 \[\phi_{i*}^j\left\{\begin{array}{lcr} K_*(A_i) & \rightarrow & K_*(A_j)\\
 			\ [x]   & \mapsto     &  q^{j-i} [x] \end{array}\right.\]
 et même si lorsque $A=\C$, $K_0(A_j)=K_0(\C)=\Z$, on obtient $K_0(\varinjlim A_j))=\Z[\frac{1}{q}]$.
+
+\subsubsection{Suites exactes}
+\begin{prop}
+Soit $\begin{tikzcd}0 \arrow{r}& J\arrow{r}{\iota} & A\arrow{r}{\pi} & A/J\arrow{r} & 0\end{tikzcd}$ une suite exacte de $C^*$-algèbres. Alors la suite de groupes abéliens
+\[\begin{tikzcd}K_0(J)\arrow{r}{\iota_*} & K_0(A)\arrow{r}{\pi_*}& K_0(A/J)\end{tikzcd}\]
+est exacte.
+\end{prop}
+
+\begin{dem}
+Soit $[p]-[p_n]\in K_0(J)$ avec $p=p_n \ \text{mod} \ \mathfrak M_k(J), k\geq n $. Cela assure que $\pi(p)=p_n$ et 
+\[\pi_*([p]-[p_n])=[\pi(p)]-[p_n]=0\]
+donc $\pi_*\circ \iota_*=0$.\\
+
+Soit $[p]-[p_n]\in K_0(A)$ avec $p=p_n \ \text{mod} \ \mathfrak M_k(A), k\geq n $, d'image nulle par $\pi_*$. Alors $[\pi(p)]=[p_n]$. Il existe donc deux entiers $r\leq r'$ et un unitaire $u\in \mathfrak M_{k+r'}((A/J)^+)$ tels que 
+\[u\begin{pmatrix}\pi(p) & 0 \\ 0 & p_r \end{pmatrix} u^* = \begin{pmatrix}p_n & 0 \\0 & p_r\end{pmatrix}.\]
+Soit $w\in \mathfrak M_{2(k+r')}(A^+)$ un unitaire qui relève $\begin{pmatrix}u & 0 \\ 0 & u^*\end{pmatrix}$. Alors la relation ci-dessus assure que 
+\[w(p \oplus p_r )w^* = p_n\oplus p_r \mod \mathfrak M_{2(k+r')}(J)\]
+donc $[p]-[p_n]= [w(p\oplus p_r)w^*]-[p_n\oplus p_r]\in K_0(J)$ et donc $\text{ker} \pi_*\subset \text{im} \iota_* $.
+\qed
+\end{dem}
+
+\subsection{Foncteur $K_1$}
+\subsubsection{Définition}
+On rappelle que, si $A$ est une $C^*$-algèbre, non nécessairement unitale, 
+\[GL_n(A):= \{x\in GL_n(A^+) : x= 1_n \ \text{mod }\mathfrak M_n(A) \},\]
+et c'est un sous-groupe fermé distingué de $GL_n(A^+)$. On peut naturellement plonger $GL_n(A)$ dans $GL_{n+1}(A)$ par 
+$a\mapsto \begin{pmatrix}a & 0\\0 & 1_{A^+}\end{pmatrix}$, et ces morphismes définissent
+\[GL_\infty(A)= \varinjlim GL_n(A),\]
+que l'on peut voir comme des matrices infinies à valeurs dans $1_{A^+}+A$ sur la diagonale, dans $A$ ailleurs, et dont tous les termes sont nuls ou égaux à $1_{A^+}$ sur la diagonale, sauf un nombre fini. Les inclusion envoient $GL_n(A)_0$ dans $GL_{n+1}(A)_0$, on a donc 
+\[GL_\infty(A)_0=\varinjlim GL_n(A)_0.\]
+
+\begin{definition}
+Soit $A$ un $C^*$-algèbre. On définit le groupe
+\[\begin{array}{ccc}K_1(A) &= GL_\infty(A)/GL_\infty(A)_0 & = \varinjlim GL_n(A)/GL_n(A)_0 \\
+			& = U_\infty(A)/U_\infty(A)_0 & = \varinjlim U_n(A)/U_n(A)_0 
+\end{array}\] La seconde ligne provient de la décomposition polaire, qui assure que $U_n(A)$ est un retract de $GL_n(A)$.
+\end{definition}
+
+On voit que le groupe $K_1$ est généré par les classes $[u]$ où $u$ est un unitaire de $\mathfrak M_n(A)$, soumis aux relations $[uv]=[u]+[v]=[u\oplus v]$. En effet
+\begin{prop}Le groupe $K_1(A)$ est abélien.\end{prop}
+\begin{dem}
+Le chemin $t\mapsto \begin{pmatrix}\cos t & -\sin t \\ \sin t & \cos t \end{pmatrix}$ connecte l'identité à $\begin{pmatrix}0& -1 \\ 1 & 0\end{pmatrix}$, ce qui assure que l'on peut permuter des lignes et des colonnes (modulo un signe) sans changer la classe dans $K_1(A)$. Si $\sim$ dénote la relation <<être homotope>>, alors pour $x$ et $y$ dans $A$:
+\begin{align*}
+\begin{pmatrix}xy & 0 \\ 0 & 1\end{pmatrix} & = \begin{pmatrix}x & 0 \\ 0 & 1\end{pmatrix}\begin{pmatrix}y & 0 \\ 0 & 1\end{pmatrix} \\
+						&\sim \begin{pmatrix}x & 0 \\ 0 & 1\end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & y \end{pmatrix}\\
+					& =\begin{pmatrix} x& 0 \\ 0 & y\end{pmatrix}
+\end{align*}
+Alors, par symmétrie : $[xy]=[yx]=[x]+[y]$.
+\qed
+\end{dem}
+
+Voici un lemme, et surtout son corollaire, qui sont utiles dans le maniement des suites exactes avec $K_1$.
+
+\begin{lem}
+Soit $A$ une $C^*$-algèbre unitale. Alors, si $\langle \exp(A)\rangle$ dénote le sous-groupe multiplicatif de $GL_1(A)$ algébriquement engendré par les exponentielles du type $\exp(a)$, alors
+\[GL_1(A)_0 = \langle \exp(A)\rangle. \]
+\end{lem}
+
+\begin{dem}
+Soit $z=\prod_{j=1}^n e^{a_j}\in \langle \exp(A)\rangle$. Si $||z-z'||<\frac{1}{||z^{-1}||}$, alors le logarithme de $z'z^{-1}$ est defini et donc 
+$z'=\exp(\log(z'z^{-1}) ) z $ est dans $\langle \exp(A)\rangle$. Le sous-groupe $\langle \exp(A)\rangle$ est donc un ouvert d'un groupe de Lie, donc fermé, et il contient l'identité : c'est la composante connexe $GL_1(A)_0$.
+\qed
+\end{dem}
+Le corollaire découle directement du lemme.
+\begin{cor} Soit $\Psi : A\rightarrow A''$ un $*$-morphisme surjectif. Alors \[\Psi^{-1}(GL_1(A'')_0)\subset GL_1(A)_0.\]
+\end{cor}
+
+\subsubsection{Suspension}
+\begin{definition}
+On définit la suspension d'une $C^{*}$-algèbre $A$ comme la $C^*$-algèbre 
+\[SA = C_0(\R) \otimes A.\]
+\end{definition}
+
+Comme $C_0(\R)$ est abélienne, elle est nucléaire et le produit tensoriel est unique. De plus, on a directement la 
+\begin{prop}
+$S$ est un foncteur covariant exact de la catégorie des $C^*$-algèbres dans la catégorie des $C^*$-algèbres non-unitales.
+\end{prop}
+
+Bien-sûr, cette définition peut être remplacée par une construction plus à la main, que l'on va décrire pour se familiariser avec cet objet. Cette façon de faire à la mérite de donner directement l'exactitude.\\
+La suspension peut aussi se voir comme 
+\[SA = \{f : \R\rightarrow A / f \ \text{continue telle que }\lim_{x\rightarrow \infty}||f(x)||=0\},\]
+munie des opérations point par point et de la norme sup. Attention, $(SA)^+\neq S(A^+)$. D'ailleurs, cela nous servira beaucoup dans les preuves suivantes, $(SA)^+ \simeq\{f: \mathbb S^1 \rightarrow A^+ : f(z)=\lambda 1_{A^+}+g(z)\ \text{où }g\in SA \}$.
+
+\begin{thm}
+Il existe un isomorphisme naturel  entre $K_1$ et $K_0 S$, i.e. pour toute $C^*$-algèbre $A$, il existe un isomorphisme de groupe abéliens $\theta_A : K_1(A) \rightarrow K_0(SA)$ tel que, pour tout $C^*$-algèbre $B$ et tout $*$-morphisme $\phi : A\rightarrow B$, le diagramme 
+\[\begin{tikzcd}K_1(A) \arrow{r}{\phi_*}\arrow{d}{\theta_A} & K_1(B) \arrow{d}{\theta_B} \\ K_0(SA)\arrow{r}{\phi_*} & K_0(SB)\end{tikzcd}\]
+commute.
+\end{thm}
+
+\begin{thm}
+Pour toute suite exacte de $C^*$-algèbres $\begin{tikzcd}0\arrow{r} & A' \arrow{r}{\iota} & A\arrow{r}{\pi} & A''\arrow{r} & 0\end{tikzcd}$, la suite de groupes abéliens
+\[\begin{tikzcd} K_*(A') \arrow{r}{\iota_*} & K_*(A)\arrow{r}{\pi_*} & K_*(A'')\end{tikzcd}\] est exacte.
+\end{thm}
+
+\subsubsection{Indice}
+Dans cette section, nous allons définir un morphisme $\delta : K_1(A/J)\rightarrow K_0(J)$, appelé indice, qui rende exacte la suite
+\begin{equation}\begin{tikzcd} K_1(J) \arrow{r}{\iota_*} & K_1(A)\arrow{r}{\pi_*} & K_1(A/J)\arrow{r}{\delta} 
+& K_0(J) \arrow{r}{\iota_*} & K_0(A)\arrow{r}{\pi_*} & K_0(A/J)
+\end{tikzcd}.\label{longue}\end{equation}
+\begin{definition}
+Soit $u\in GL_n(A/J)$ et $w\in GL_{2n}(A)$ un relevé de $\begin{pmatrix}u & 0 \\ 0 & u^{-1}\end{pmatrix}$. On définit l'indice de $[u]\in K_1(A/J)$ par \[\delta [u]=[wp_n w^{-1}]-[p_n].\]
+\end{definition}
+
+\begin{prop}
+La suite \ref{longue} est exacte en $K_1(A/J)$.
+\end{prop}
+
+\begin{prop}
+La suite \ref{longue} est exacte en $K_0(J)$.
+\end{prop}
+
+\subsection{Periodicité de Bott}

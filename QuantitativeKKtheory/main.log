@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  15 OCT 2014 14:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  20 OCT 2014 14:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -929,15 +929,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 42.
 
 
-LaTeX Warning: Citation `TuBC' on page 9 undefined on input line 44.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
-
-
-LaTeX Warning: Citation `TuNovikov' on page 9 undefined on input line 56.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
@@ -988,15 +982,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 
-LaTeX Warning: Citation `BorelSerre' on page 12 undefined on input line 9.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
-
-
-LaTeX Warning: Citation `Bellissard' on page 12 undefined on input line 11.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--14
@@ -1035,40 +1023,103 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 47.
 
 
-Overfull \hbox (1.77931pt too wide) in paragraph at lines 50--54
+Overfull \hbox (1.77931pt too wide) in paragraph at lines 51--55
 \OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 ^^X[] \OML/cmm/m/it/10 q$ \OT1/cmr/m/n/10 s
 'il existe un che-min continu en norme de pro-jec-tions de $\OML/cmm/m/it/10 p$
  \OT1/cmr/m/n/10 ^^Ra $\OML/cmm/m/it/10 q$\OT1/cmr/m/n/10 .(Homotopie) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--54
+Underfull \hbox (badness 10000) in paragraph at lines 51--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--66
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--72
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--84
+Overfull \hbox (24.5025pt too wide) in paragraph at lines 119--120
+[][]\OT1/cmr/bx/n/10 Proposition 5. []\OT1/cmr/m/n/10 Soit $\OMS/cmsy/m/n/10 f\
+OML/cmm/m/it/10 A[]; ^^^[]\OMS/cmsy/m/n/10 g$ \OT1/cmr/m/n/10 un syst^^Reme in-
+duc-tif de $\OML/cmm/m/it/10 C[]$\OT1/cmr/m/n/10 -alg^^Rebres. Alors $\OMS/cmsy
+/m/n/10 f\OML/cmm/m/it/10 K[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]\OT1/cmr/m/n/
+10 )\OML/cmm/m/it/10 ; ^^^[]\OMS/cmsy/m/n/10 g$
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-[14]) [15] (./main.bbl)
+[16]
+Overfull \hbox (4.96182pt too wide) in paragraph at lines 154--155
+[][]\OT1/cmr/bx/n/10 Proposition 6. []\OT1/cmr/m/n/10 Soit $[]$ une suite exact
+e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--163
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 172.
+
+
+Overfull \hbox (11.82393pt too wide) in paragraph at lines 175--178
+\OT1/cmr/m/n/10 plon-ger $\OML/cmm/m/it/10 GL[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 A\OT1/cmr/m/n/10 )$ dans $\OML/cmm/m/it/10 GL[]\OT1/cmr/m/n/10 (\OML/cmm/m/it
+/10 A\OT1/cmr/m/n/10 )$ par $\OML/cmm/m/it/10 a \OMS/cmsy/m/n/10 7! []$\OT1/cmr
+/m/n/10 , et ces mor-phismes d^^Sefinissent 
+ []
+
+[17] [18]
+Overfull \hbox (6.00934pt too wide) in paragraph at lines 231--233
+\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]\OT1/cmr/m/n/10 )$. D'ai
+lleurs, cela nous ser-vira beau-coup dans les preuves sui-vantes, $(\OML/cmm/m/
+it/10 SA\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 '
+ []
+
+
+Overfull \hbox (73.39255pt too wide) in paragraph at lines 241--242
+[][]\OT1/cmr/bx/n/10 Th^^Seor^^Reme 3. []\OT1/cmr/m/n/10 Pour toute suite exact
+e de $\OML/cmm/m/it/10 C[]$\OT1/cmr/m/n/10 -alg^^Rebres $[]$,
+ []
+
+
+Overfull \hbox (24.17543pt too wide) detected at line 249
+[][]\OML/cmm/m/it/10 :
+ []
+
+[19]) [20] (./main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
- [16
+ [21
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
@@ -1076,31 +1127,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
 (./Asdim.aux) (./Isom.aux) (./GDT.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: BA873BDD297B2E5B38919681B537C486;949
-(rerunfilecheck)             After:  2075DC9DA142C5110AEE05D9D0BCFD48;1008.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: B5AFBECD0A423A4B614C9EA7087724DF;1600.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 34.
  ) 
 Here is how much of TeX's memory you used:
- 16008 strings out of 494958
- 284363 string characters out of 6179263
- 366485 words of memory out of 5000000
- 18834 multiletter control sequences out of 15000+600000
+ 16376 strings out of 494958
+ 292943 string characters out of 6179263
+ 372244 words of memory out of 5000000
+ 19167 multiletter control sequences out of 15000+600000
  15107 words of font info for 59 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 58i,15n,75p,928b,854s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,27n,75p,928b,924s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
@@ -1121,10 +1159,10 @@ onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (16 pages, 272221 bytes).
+Output written on main.pdf (21 pages, 301237 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 223 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 377 PDF objects out of 1000 (max. 8388607)
+ 329 compressed objects within 4 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

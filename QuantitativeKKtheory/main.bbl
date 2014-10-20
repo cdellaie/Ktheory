@@ -1,5 +1,15 @@
 \begin{thebibliography}{10}
 
+\bibitem{BorelSerre}
+J.P.~Serre A.~Borel.
+\newblock Le th\'eor\`eme de riemann-roch.
+\newblock {\em Bulletin de la S.M.F}, 86:97--136, 1958.
+
+\bibitem{Bellissard}
+J.~Bellissard.
+\newblock Gap labelling theorems for schrödinger operators.
+\newblock {\em From Number theory to Physics, Les Houches}, 89:538--630, 1993.
+
 \bibitem{GrothendieckNuc}
 Alexandre Grothendieck.
 \newblock Produits tensoriels d'espace topologiques et espaces nucl\'eaires.
