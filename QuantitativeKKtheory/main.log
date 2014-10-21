@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  20 OCT 2014 14:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  21 OCT 2014 15:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1117,9 +1117,44 @@ Overfull \hbox (24.17543pt too wide) detected at line 249
 [][]\OML/cmm/m/it/10 :
  []
 
-[19]) [20] (./main.bbl)
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--276
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+
+ []
+
+[20]
+Overfull \hbox (135.68115pt too wide) detected at line 340
+[]
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+
+ []
+
+
+Overfull \hbox (38.14764pt too wide) detected at line 361
+[]
+ []
+
+) [22] (./main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
- [21
+ [23
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
@@ -1127,18 +1162,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
 (./Asdim.aux) (./Isom.aux) (./GDT.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B5AFBECD0A423A4B614C9EA7087724DF;1600.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 2AEC3677BBE1A97618F04D4F34AC8FB4;1736
+(rerunfilecheck)             After:  9049E60B74F78E70D4589DE75EB4FF6F;1821.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 34.
  ) 
 Here is how much of TeX's memory you used:
- 16376 strings out of 494958
- 292943 string characters out of 6179263
- 372244 words of memory out of 5000000
- 19167 multiletter control sequences out of 15000+600000
+ 16932 strings out of 494958
+ 306952 string characters out of 6179263
+ 390805 words of memory out of 5000000
+ 19706 multiletter control sequences out of 15000+600000
  15107 words of font info for 59 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 58i,27n,75p,928b,924s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,27n,75p,928b,993s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
@@ -1159,10 +1201,10 @@ onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (21 pages, 301237 bytes).
+Output written on main.pdf (23 pages, 316550 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 329 compressed objects within 4 object streams
- 101 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 414 PDF objects out of 1000 (max. 8388607)
+ 364 compressed objects within 4 object streams
+ 118 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -260,3 +260,112 @@ La suite \ref{longue} est exacte en $K_0(J)$.
 \end{prop}
 
 \subsection{Periodicité de Bott}
+
+Dans cette section, nous allons montrer un résultat central en $K$-théorie des $C^*$-algèbres, celui de la périodicité de Bott : il existe un isomorphisme naturel $\beta_A : K_0 (A) \rightarrow K_1(SA)$ pour toute $C^*$-algèbre $A$, et donc la $K$-théorie est $2$-périodique : $K(S^2 A )\simeq K(A)$.\\
+
+La preuve donnée dans le cadre de la $K$-théorie topologique s'adapte facilement au cadre non-commutatif, nous la proposerons sous forme d'exercice. Celle que nous avons choisi de détailler utilise la non-commutativité de l'algèbre de Toeplitz. Elle est due à Cuntz~\cite{Cuntz}, et est détaillée dans le livre de Wegge-Olsen~\cite{WeggeOlsen}. Nous exposerons donc un point de vue moins $C^*$-algébrique, où la $K$-théorie est vue comme une théorie de l'homologie sur la catégorie des $C^*$-algèbres.\\
+
+\subsubsection{Rappels}
+
+\begin{definition}
+On définit le cône d'une $C^*$-algèbre $A$ comme 
+\[CA= \{f:\R \rightarrow A / f \ \text{continue bornée telle que }\lim_{x\rightarrow -\infty} ||f(x)||=0\}.\]
+$SA$ est clairement un idéal de $CA$ et on a une suite exacte 
+\[\begin{tikzcd} 0\arrow{r} & SA \arrow{r}& CA \arrow{r}{\epsilon_1} & A \arrow{r} & 0\end{tikzcd}\]
+grâce à l'évaluation en $1$, notée $\epsilon_1$.\\
+\end{definition}
+
+Le cône $CA$ est toujours contractile : $t\mapsto f(st)$ pour $s$ allant de $0$ à $1$ donne une homotopie entre $0$ et $id_{CA}$.\\
+
+\begin{definition}
+Pour tout $*$-morphisme $\pi: A\rightarrow A''$, on peut définir le cône de $\pi$ comme le pullback de $A''$ via $\pi$ et 
+$\epsilon_1 : CA''\rightarrow A''$ :
+\[\begin{tikzcd}
+C_\pi \arrow[dotted]{r}\arrow[dotted]{d}& A \arrow{d}{\pi} \\
+CA'' \arrow{r}{\epsilon_1} & A''.
+\end{tikzcd}\]
+\end{definition}
+Attention, $C_\pi$ n'est pas forcément contractile.
+
+Le lemme suivant est simple, mais technique, et il sera utile pour la suite.
+
+\begin{lem}
+Soit \[\begin{tikzcd}
+0\arrow{r} & A' \arrow{r}{\iota} & A \arrow{r}{\pi} & A'' \arrow{r} & 0
+\end{tikzcd}\]
+une suite exacte de $C^*$-algèbre. On a alors trois suites exactes :
+\[\begin{tikzcd}
+0\arrow{r} & SA'' \arrow{r}{\iota_1} & C_\pi \arrow{r}{\pi_1} & A \arrow{r} & 0 \\
+0\arrow{r} & A' \arrow{r}{\iota_2} & C_\pi \arrow{r}{\pi_2} & CA'' \arrow{r} & 0\\
+0\arrow{r} & CA' \arrow{r}{\iota_3} & D \arrow{r}{\pi_3} & C_\pi \arrow{r} & 0\\
+\end{tikzcd}\]
+avec $D=\{f:\R\rightarrow A /\ f  \text{ continue bornée telle que }\lim_{x\rightarrow -\infty} f (x) \in \iota ( A')\}$ et 
+\begin{align*}
+\iota_1(f)=0\oplus f & \pi_1(a\oplus f) = a ,\\
+\iota_2(a')=\iota(a')\oplus 0 & \pi_2(a\oplus f )=f,\\
+\iota_3(f) = \{t\mapsto \iota(f(1-t))\} & \pi_3(g)=g(1)\oplus (\pi\circ g ) .
+\end{align*}
+De plus, on a une équivalence d'homotopie $\left\{\begin{array}{ccc} A' &\rightarrow& D\\ a' &\mapsto &\iota(a')\end{array}\right.$ telle que le diagramme suivant commute :
+\[\begin{tikzcd}A'\arrow{r}{\iota}\arrow{d} & A\arrow{d}{\pi_1}\\ D \arrow{r}{\pi_3} & C_\pi .\end{tikzcd}\]
+\end{lem}
+
+\subsubsection{Homologie}
+
+\begin{definition}
+Deux $*$-morphismes $\phi,\Psi : A\rightarrow B$ sont dit hommotopes s'il existe une fammile $\phi_t : A\rightarrow B$ de $*$-morphismes telle que $\phi_0=\phi$, $\phi_1=\Psi$ et $t\mapsto \phi_t(a) $ est continue pour tout $a$. On note $\phi\sim\Psi$.\\
+Un foncteur $F$ de la catégorie des $C^*$-algèbres dans celle des groupes abéliens est dit foncteur d'homologie s'il est exacte au milieu et invariant par homotopie.
+\end{definition}
+
+\begin{prop}
+Soit $F$ un foncteur covariant de la catégorie des $C^*$-algèbres dans celle des groupes abéliens qui est invariant par homotopie. Alors toute équivalence $\phi: A \rightarrow B$ induit un isomorphisme de groupe $F(\phi):F(A)\rightarrow F(B)$.
+\end{prop}
+
+\begin{dem} Si $\phi$ est une équivalence, il existe $\psi : B\rightarrow A $ telle que $\phi \circ \psi \sim id_B $ et $\psi\circ \phi\sim id_B$. Alors $F(\psi)F(\phi)=id_{F(A)}$ et $F(\phi)F(\psi)=id_{F(B)}$, donc $F(\phi)$ est un isomorphisme. \qed
+\end{dem}
+
+Ce lemme assure que :
+\begin{itemize}
+\item si $B$ est une rétraction de $A$, alors $F(A)\simeq F(B)$,
+\item si $A$ est contractile, $F(A)=0$.
+\end{itemize}
+
+\begin{definition}
+Une théorie de l'homologie sur la catégorie des $C^*$-algèbres est une suite de foncteurs d'homologie $H_n$ telle que, pour toute suite exacte 
+\[\begin{tikzcd}
+0\arrow{r} & A' \arrow{r}{\iota} & A \arrow{r}{\pi} & A'' \arrow{r} & 0,
+\end{tikzcd}\]
+il existe des morphismes connectant $\delta_n : H_n(A'')\rightarrow H_{n+1}(A')$ qui rendent la suite longue 
+\[\begin{tikzcd}
+...\arrow{r} & H_n( A') \arrow{r}{\iota_*} & H_n(A) \arrow{r}{\pi_*} & H_n(A'') \arrow{r}{\delta_n} & H_{n+1}(A')\arrow{r}{\iota} & H_{n+1}(A) \arrow{r}{\pi_*} & H_{n+1}(A'')\arrow{r}{\delta}& ....
+\end{tikzcd}\]
+exacte, et telle que chaque $\delta$ soit une application naturelle. \\
+On distingue les théories infinies à gauche ($n\leq 0$), à droite ($n\geq 0$), ou doublement infinie. 
+\end{definition}
+
+On voit que la partie précédente montre que $H_{-n}(A)=K_0(C_0(\R^n)\otimes A)$ définit une théorie de l'homolgie pour les $C^*$-algèbres.\\
+
+\begin{prop}
+Soit $(H_n)$ une théorie de l'homologie pour les $C^*$-algèbres, infinie à gauche ou doublement infinie. Alors pour toute suite exacte scindée, l'application connectante est nulle. 
+\end{prop}
+
+\begin{prop}
+Soit $F$ un foncteur d'homologie et \[\begin{tikzcd}
+0\arrow{r} & A' \arrow{r}{\iota} & A \arrow{r}{\pi} & A'' \arrow{r} & 0
+\end{tikzcd}\]
+une suite exacte. Alors 
+\begin{itemize}
+\item si $A''$ est contractile, $ \iota_*$ est un isomorphisme,
+\item il existe un morphisme de groupes abéliens $\delta : F(SA'')\rightarrow F(A')$ telle que la suite suivante soit exacte :
+\[\begin{tikzcd}
+F(SA') \arrow{r}{\iota_*} & F(SA) \arrow{r}{\pi_*} & F(SA'') \arrow{r}{\delta} & F(A)' \arrow{r}{\iota_*} & F(A) \arrow{r}{\pi_*} & F(A'').\\
+\end{tikzcd}\] 
+\end{itemize}
+\end{prop}
+
+\begin{cor}Tout foncteur d'homologie $F$ définit une théorie de l'homologie pour les $C^*$-algèbres par 
+\[\left\{\begin{array}{c} H_0(A)=F(A) \\ H_{-n}(A) = F(S^n A)\quad, n\geq 0.\end{array}\right.\]
+\end{cor}
+
+\subsubsection{Périodicité de Bott}
+
+\begin{thm}Tout foncteur $F$ de la catégorie des $C^*$-algèbres dans celle des groupes abéliens qui est exact au mileu, invariant par homotopie et stableadmet une periodicité de Bott, c'est-à-dire que $F(S^2 A)$ et $F(A)$ sont naturellement isomorphes.\end{thm}

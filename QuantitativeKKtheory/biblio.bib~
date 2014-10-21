@@ -18,6 +18,16 @@
     pages   = "241-291"
 }
 
+@article{Bellissard,
+    author  = "J. Bellissard",
+    title   = "Gap labelling theorems for Schrödinger operators",
+    year    = "1993",
+    journal = "From Number theory to Physics, Les Houches",
+    volume  = "89",
+    number  = "",
+    pages   = "538-630"
+}
+
 @article{BorelSerre,
     author  = "A. Borel, J.P. Serre",
     title   = "Le th\'eor\`eme de Riemann-Roch",
