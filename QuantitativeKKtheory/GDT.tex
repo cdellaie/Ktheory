@@ -237,13 +237,32 @@ Il existe un isomorphisme naturel  entre $K_1$ et $K_0 S$, i.e. pour toute $C^*$
 commute.
 \end{thm}
 
+\begin{dem}
+Nous allons d'abors définir l'application $\theta_A$. Si $u\in GL_n(A)$, on peut construire un chemin continu $t\mapsto z_t $ d'unitaires dans $GL_{2n}(A)$ connectant $\begin{pmatrix}u & 0 \\ 0 & u^{-1}\end{pmatrix}$ à l'identité $1_{2n}$ et vérifiant $z_t = 1_{2n} \ \text{mod } \mathfrak M_n(A)$. Alors $e_t = z_t p_n z_t^{-1}$ est une boucle de projecteurs de base $p_n$ : $e\in \mathfrak M_{2n}((SA)^+)$. On pose :
+\[\theta_A [u] = [e]-[p_n].\]
+Cette application est bien définie car si $[u]=[v]$ dans $ K_1(A)$, alors pour un $n$ assez grand, on peut trouver deux chemins d'unitaires
+\[\begin{array}{c} a_t : uv^{-1} \sim 1_n \\ b_t : u^{-1}v \sim 1_n\end{array}.\]
+Et si $z_t : \begin{pmatrix}u & 0 \\ 0 & u^{-1}\end{pmatrix} \sim 1_{2n} $ et $w_t : \begin{pmatrix}v & 0 \\ 0 & v^{-1}\end{pmatrix} \sim 1_{2n} $ avec $\theta_A [u]= [e]-[p_n]=[zp_n z^{-1}]-[p_n]$ et $\theta_A [v]= [f]-[p_n]=[wp_n w^{-1}]-[p_n]$, on pose $\begin{pmatrix}a_t & 0 \\ 0 & b_t \end{pmatrix}$, alors 
+\[e_t = z_t x_t p_n x_t^{-1} z_t^{-1} = y_t f_t y_t^{-1}\] 
+où $y_t = z_t x_t w_t^{-1}$ définit un inversible de $\mathfrak M_{2n}((SA)^+)$ car $y_0=y_1=1_{2n}$. Comme $e$ et $f$ sont unitairement équivalents, $\theta_A [u]=\theta_A [v]$.\\
+
+Montrons que $\theta_A$ est injective. Si $\theta_A [u]=\theta_A [v]$, alors, avec les mêmes notations, $[e]=[f]$, donc pour $k$ assez grand, il existe un inversible $x$ de $\mathfrak M_k((SA)^+)$ tel que $xex^{-1}=f$. Cette relation assure que 
+\[ x_t z_t p_n z_t^{-1}  = w_t p_n w_t^{-1} x_t \]
+donc $y_t= w_t^{-1} x_t z_t $ commute à $p_n$ et est donc de la forme $\begin{pmatrix} a_t & 0 \\ 0 & b_t\end{pmatrix}$. Comme $x_0=x_1=1_k$, $a_t$ connecte $1_n$ à $v^{-1} u$, qui sont donc homotopes : $[u]=[v]$.\\
+
+Montrons la surjectivité. Soit $[f]-[p_n]\in K_0(SA)$ : $f\in \mathfrak M_k ((SA)^+)$ tel que $f=p_n \ \text{mod } \mathfrak M_k(SA)$, $k\geq n$. Chaque $f_t$ est dans $\mathfrak M_k(A^+)$ et $f_0=f_1=p_n$ donc il existe un chemin d'unitaires $t \mapsto w_t$ connectés à l'identité tel que $f_t = w_t p_n w^{-1}_t$. Comme $w_1 p_n = p_n w_1$, $w_1$ est de la forme $\begin{pmatrix}u & 0\\ 0 & v\end{pmatrix}$ où $u \in \mathfrak M_{n}(A^+)$ et $v \in \mathfrak M_{K-n}(A^+)$ sont deux inversibles. Mais $v$ est connecté par un chemin $b_t$ à $\begin{pmatrix}1_{k-n} & 0\\ 0 & u^{-1}\end{pmatrix}$, et on a un chemin $z_t$ qui connecte $1_k$ à $\begin{pmatrix} u & 0 & 0 \\ 0 & u^{-1} & 0\\ 0 & 0 & 1_{k-n}\end{pmatrix}$. Si on pose $e_t = z_t p_n z_t^{-1}$, on obtient que $z_t \begin{pmatrix}1 & 0 \\ 0 & v^{-1} b_t \end{pmatrix}w_t^{-1}$ entrelace $e_t$ et $f_t$. Comme précédement, ses valeurs coïncident en $0$ et $1$ avec $1_{2k}$ : c'est un inversible de $\mathfrak M_k ((SA)^+)$. Donc 
+\[\theta_A [u] = [e]-[p_n]= [f]-[p_n],\]
+$\theta_A$ est surjective. La naturalité est immédiate, la définition de l'application utilisant des sommes directes.
+\qed
+\end{dem}
+
 \begin{thm}
-Pour toute suite exacte de $C^*$-algèbres $\begin{tikzcd}0\arrow{r} & A' \arrow{r}{\iota} & A\arrow{r}{\pi} & A''\arrow{r} & 0\end{tikzcd}$, la suite de groupes abéliens
+Pour toute suite exacte de $C^*$-algèbres \[\begin{tikzcd}[row sep = small] 0\arrow{r} & A' \arrow{r}{\iota} & A\arrow{r}{\pi} & A''\arrow{r} & 0\end{tikzcd},\] la suite de groupes abéliens
 \[\begin{tikzcd} K_*(A') \arrow{r}{\iota_*} & K_*(A)\arrow{r}{\pi_*} & K_*(A'')\end{tikzcd}\] est exacte.
 \end{thm}
 
 \subsubsection{Indice}
-Dans cette section, nous allons définir un morphisme $\delta : K_1(A/J)\rightarrow K_0(J)$, appelé indice, qui rende exacte la suite
+Dans cette section, nous allons définir un morphisme $\delta : K_1(A/J)\rightarrow K_0(J)$, appelé indice, qui rend exacte la suite
 \begin{equation}\begin{tikzcd} K_1(J) \arrow{r}{\iota_*} & K_1(A)\arrow{r}{\pi_*} & K_1(A/J)\arrow{r}{\delta} 
 & K_0(J) \arrow{r}{\iota_*} & K_0(A)\arrow{r}{\pi_*} & K_0(A/J)
 \end{tikzcd}.\label{longue}\end{equation}
@@ -312,7 +331,7 @@ De plus, on a une équivalence d'homotopie $\left\{\begin{array}{ccc} A' &\right
 \subsubsection{Homologie}
 
 \begin{definition}
-Deux $*$-morphismes $\phi,\Psi : A\rightarrow B$ sont dit hommotopes s'il existe une fammile $\phi_t : A\rightarrow B$ de $*$-morphismes telle que $\phi_0=\phi$, $\phi_1=\Psi$ et $t\mapsto \phi_t(a) $ est continue pour tout $a$. On note $\phi\sim\Psi$.\\
+Deux $*$-morphismes $\phi,\Psi : A\rightarrow B$ sont dit homotopes s'il existe une fammile $\phi_t : A\rightarrow B$ de $*$-morphismes telle que $\phi_0=\phi$, $\phi_1=\Psi$ et $t\mapsto \phi_t(a) $ est continue pour tout $a$. On note $\phi\sim\Psi$.\\
 Un foncteur $F$ de la catégorie des $C^*$-algèbres dans celle des groupes abéliens est dit foncteur d'homologie s'il est exacte au milieu et invariant par homotopie.
 \end{definition}
 
@@ -335,14 +354,14 @@ Une théorie de l'homologie sur la catégorie des $C^*$-algèbres est une suite 
 0\arrow{r} & A' \arrow{r}{\iota} & A \arrow{r}{\pi} & A'' \arrow{r} & 0,
 \end{tikzcd}\]
 il existe des morphismes connectant $\delta_n : H_n(A'')\rightarrow H_{n+1}(A')$ qui rendent la suite longue 
-\[\begin{tikzcd}
+\[\begin{tikzcd}[row sep =small]
 ...\arrow{r} & H_n( A') \arrow{r}{\iota_*} & H_n(A) \arrow{r}{\pi_*} & H_n(A'') \arrow{r}{\delta_n} & H_{n+1}(A')\arrow{r}{\iota} & H_{n+1}(A) \arrow{r}{\pi_*} & H_{n+1}(A'')\arrow{r}{\delta}& ....
 \end{tikzcd}\]
 exacte, et telle que chaque $\delta$ soit une application naturelle. \\
 On distingue les théories infinies à gauche ($n\leq 0$), à droite ($n\geq 0$), ou doublement infinie. 
 \end{definition}
 
-On voit que la partie précédente montre que $H_{-n}(A)=K_0(C_0(\R^n)\otimes A)$ définit une théorie de l'homolgie pour les $C^*$-algèbres.\\
+On voit que la partie précédente montre que $H_{-n}(A)=K_0(C_0(\R^n)\otimes A)$ définit une théorie de l'homologie pour les $C^*$-algèbres.\\
 
 \begin{prop}
 Soit $(H_n)$ une théorie de l'homologie pour les $C^*$-algèbres, infinie à gauche ou doublement infinie. Alors pour toute suite exacte scindée, l'application connectante est nulle. 
@@ -356,7 +375,7 @@ une suite exacte. Alors
 \begin{itemize}
 \item si $A''$ est contractile, $ \iota_*$ est un isomorphisme,
 \item il existe un morphisme de groupes abéliens $\delta : F(SA'')\rightarrow F(A')$ telle que la suite suivante soit exacte :
-\[\begin{tikzcd}
+\[\begin{tikzcd}[row sep = small]
 F(SA') \arrow{r}{\iota_*} & F(SA) \arrow{r}{\pi_*} & F(SA'') \arrow{r}{\delta} & F(A)' \arrow{r}{\iota_*} & F(A) \arrow{r}{\pi_*} & F(A'').\\
 \end{tikzcd}\] 
 \end{itemize}
@@ -368,4 +387,6 @@ F(SA') \arrow{r}{\iota_*} & F(SA) \arrow{r}{\pi_*} & F(SA'') \arrow{r}{\delta} &
 
 \subsubsection{Périodicité de Bott}
 
-\begin{thm}Tout foncteur $F$ de la catégorie des $C^*$-algèbres dans celle des groupes abéliens qui est exact au mileu, invariant par homotopie et stableadmet une periodicité de Bott, c'est-à-dire que $F(S^2 A)$ et $F(A)$ sont naturellement isomorphes.\end{thm}
+\begin{thm}Tout foncteur $F$ de la catégorie des $C^*$-algèbres dans celle des groupes abéliens qui est exact au mileu, invariant par homotopie et stable admet une periodicité de Bott, c'est-à-dire que $F(S^2 A)$ et $F(A)$ sont naturellement isomorphes.\end{thm}
+
+
