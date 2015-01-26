@@ -1,0 +1,40 @@
+In a serie of papers, H. Oyono-Oyono and G. Yu have defined a controlled version of operator $K$-theory, ~\cite{OY1}~\cite{OY2}~\cite{OY3}, that allows them to define a quantitative and local assembly map, and a related Baum-Connes Conjecture. The aim of this work is to extend their work to the realm of groupoids. In a second part, we shall see how this setting can help us understand better the relation between the coarse-Baum-Connes conjecture and the Baum-Connes Conjecture with coefficient for groupoids. Indeed, in ~\cite{TuBC} and ~\cite{SkTuYu}, G. Skandalis, J-L.Tu and G. Yu proved that there is a commutative diagramm
+\[\begin{tikzcd}
+K_*(X) \arrow{r}{A}\arrow{d}{\simeq} & K_*(C^*X)\arrow{d}{\simeq} \\
+K_*(\mathcal E \Gamma)\arrow{r}{\mu_r} & K_*(C_r \Gamma)
+\end{tikzcd}\]
+where :
+\begin{itemize}
+\item the left sides are $K$-homology of certain spaces, the left sides are $K$-theory of certain $C^*$-algebras,
+\item the first line is the coarse assembly map associated to a coarse space $X$, the second being the assembly map for groupoids associated to the coarse groupoid of $X$, namely $\Gamma = G(X)$,
+\item the vertical arrows are isomorphisms on the level of $KK$-groups. The left one will be studied later, the right one derives from an isomomorphism on the level of the $C^*$-algebras. Indeed, it has been shown that the Roe algebra is $*$-isomorphic to the crossed product of $l^\infty (X)$ by $\Gamma$ : $C^*(X) \simeq l^\infty(X)\times \Gamma$.\\
+\end{itemize}
+
+We shall see that this relation is already true "locally" and factorises through quantitative $K$-theory. Locally here means that we can factorize the assembly map through $KK(C_0(P_d(X),B)$. Indeed, the $K$-homology can be expressed as an inductive limit 
+\[K_*(X,B)=\varinjlim_{d\rightarrow \infty}  KK(C_0(P_d(X)), B ) \quad \text{and}\quad\] 
+hence the local. \\
+
+The local quantitative assembly maps defined in \cite{OY2} are of the form
+\[KK^F(C_0(P_d(F)), B  ) \rightarrow K^{\epsilon, r}_*(B\times_r \Gamma)\]
+where $F$ is a finite group. \\
+
+We will be using the bivariant functor $KK^\Gamma$ introduced by P-Y. Le Gall in his thesis ~\cite{LeGall}, which is a generalization of Kasparov's bifunctor for the case where $\Gamma$ is a Hausdorff locally compact groupoid with Haar system. As for the $KK$-theory for Banach algebras introduced by V. Lafforgue~\cite{Lafforgue}, there is no (not yet?) a Kasparox product in quantitative $K$-theory. The crucial point to define an assembly map is the existence of a morphism 
+\[\hat J : KK^{\Gamma}(A,B)\rightarrow Hom^*(\hat K_*(A),\hat K_*(B))\]
+which allows us, for every element $x\in K_*(A)$, to consider the related index
+\[Ind_x \left\{ \begin{array}{ccc} KK_*(A,B) & \rightarrow  & K_*(B)\\
+	z & \mapsto & \hat J(z)(x)
+\end{array}\right.\]
+to construct $\hat J$, we will mimic the construction for $\mathcal J$ in ~\cite{OY2}, which gives the right morphism when considering finite groups. The starting point is the following 
+
+\begin{lem}
+Let $\Gamma$ be a Hausdorff locally compact groupoid with Haar system. Then, if $A$ is a $\Gamma-C^*$-algebra, forming the reduced (and maximal) crossed product $A\times_r \Gamma$ is functorial in $A$. Moreover, if $\Gamma$ is \textit{étale}, then it preserves short semi-split filtered exact sequences of $\Gamma-C^*$-algebras, meaning that if 
+\[\begin{tikzcd}[column sep = small] 0\arrow{r} & A' \arrow{r} & A\arrow{r} & A'' \arrow{r} & 0\end{tikzcd}\]
+is a semi-split filtered exact sequence of $\Gamma-C^*$-algebras, then 
+\[\begin{tikzcd}[column sep = small] 0\arrow{r} & A' \times_r \Gamma\arrow{r} & A\times_r \Gamma\arrow{r} & A'' \times_r \Gamma\arrow{r} & 0\end{tikzcd}\]
+is too.
+\end{lem}
+
+\begin{dem}
+Let $f\in C_c(\Gamma, A)$ such that $\Phi_\Gamma(f)=0$. For every $\gamma \in \Gamma$, there exists a unique $g(\gamma)\in A'$ such that $\Psi(g(\gamma))=f(\gamma)$. But, as $\Psi$ and $\Phi$ commute with the action of $\Gamma$, we have $g(\gamma'^{-1}\gamma)=\gamma' . g(\gamma)$, so that $g$ is continuous.
+\qed
+\end{dem}

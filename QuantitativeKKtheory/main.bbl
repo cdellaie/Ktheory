@@ -16,15 +16,39 @@ Joachim Cuntz.
 \newblock {\em Algebraic K-theory, Number Theory, Geometry and Analysis}, pages
   55--79, 1982.
 
+\bibitem{LeGall}
+Pierre-Yves~Le Gall.
+\newblock Thesis.
+
 \bibitem{GrothendieckNuc}
 Alexandre Grothendieck.
 \newblock Produits tensoriels d'espace topologiques et espaces nucl\'eaires.
 \newblock {\em S\'eminaire N. Bourbaki}, 69:193--200, 1951-1954.
 
+\bibitem{OY2}
+G.~Yu H.~Oyono-Oyono.
+\newblock On quantitative operator k-theory.
+\newblock {\em Annales de l'Institut Fourier}.
+
+\bibitem{OY3}
+G.~Yu H.~Oyono-Oyono.
+\newblock Persitance approximation property and controlled k-theory.
+
+\bibitem{OY1}
+G.~Yu H.~Oyono-Oyono.
+\newblock Ktheory for the maximal roe algebra of certain expanders.
+\newblock {\em Journal of functionnal analysis}, 257:3239--3292, 2009.
+
 \bibitem{Hatcher}
 A.~Hatcher.
 \newblock {\em Algebraic Topology}.
 \newblock 2001.
+
+\bibitem{Lafforgue}
+Vincent Lafforgue.
+\newblock Banach $kk$-theory and the baum-connes conjecture.
+\newblock {\em Proceedings of the International Congress of Mathematicians},
+  Vol. II (Beijing, 2002)(Higher Ed. Press, Beijing):795--812, 2002.
 
 \bibitem{PV}
 D.~Voiculescu M.~Pimsner.
