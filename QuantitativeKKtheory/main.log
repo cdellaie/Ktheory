@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  26 JAN 2015 18:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  28 JAN 2015 11:05
 entering extended mode
 **C:/Users/Clément/Documents/GitHub/Ktheory/QuantitativeKKtheory/main.tex
 (C:/Users/Clément/Documents/GitHub/Ktheory/QuantitativeKKtheory/main.tex
@@ -991,8 +991,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--20
 [12
 
 
-]) [13]
-(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\GDT.tex
+]
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+) [13] (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\GDT.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -1204,10 +1213,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
- 16778 strings out of 493921
- 310174 string characters out of 3147330
- 382751 words of memory out of 3000000
- 19609 multiletter control sequences out of 15000+200000
+ 16824 strings out of 493921
+ 311345 string characters out of 3147330
+ 383617 words of memory out of 3000000
+ 19655 multiletter control sequences out of 15000+200000
  15107 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  58i,27n,75p,1108b,981s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1230,7 +1239,7 @@ cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (26 pages, 378587 bytes).
+Output written on main.pdf (26 pages, 379974 bytes).
 PDF statistics:
  445 PDF objects out of 1000 (max. 8388607)
  129 named destinations out of 1000 (max. 500000)

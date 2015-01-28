@@ -35,6 +35,14 @@ is too.
 \end{lem}
 
 \begin{dem}
-Let $f\in C_c(\Gamma, A)$ such that $\Phi_\Gamma(f)=0$. For every $\gamma \in \Gamma$, there exists a unique $g(\gamma)\in A'$ such that $\Psi(g(\gamma))=f(\gamma)$. But, as $\Psi$ and $\Phi$ commute with the action of $\Gamma$, we have $g(\gamma'^{-1}\gamma)=\gamma' . g(\gamma)$, so that $g$ is continuous.
+Let 
+\[\begin{tikzcd}[column sep = small] 0\arrow{r} & A' \arrow{r}{\Psi} & A\arrow{r}{\Phi} & A'' \arrow{r} & 0\end{tikzcd}\]
+be a semi-split filtered exact sequence of $\Gamma-C^*$-algebras.\\
+
+Let $f\in C_c(\Gamma, A)$ such that $\Phi_\Gamma(f)=0$. For every $\gamma \in \Gamma$, there exists a unique $g(\gamma)\in A'$ such that $\Psi(g(\gamma))=f(\gamma)$. But, as $\Psi$ and $\Phi$ commute with the action of $\Gamma$, we have $g(\gamma'^{-1}\gamma)=\gamma' . g(\gamma)$, so that $g$ is continuous.\\
+
+Let $a\in A\times \Gamma$ such that $\Phi_\Gamma(a)=0$. We can approximate $a$ by a sequence of $f_n\in C_c(\Gamma,A)$. But, with the preceeding work on compactly supported continuous functions, there exist a sequence $g_n\in C_c(\Gamma, A')$ such that :
+\[f_n = \Psi(g_n)+\sigma\circ \Phi(f_n).\]
+Moreover, $\text{Im}\ \Psi$ is a closed ideal in $A$, and $\lim ||f_n-\Psi(g_n)||=0$ so that $a\in \text{Im} \ \Psi$ : the sequence is exact in the middle.
 \qed
 \end{dem}
