@@ -1,0 +1,50 @@
+\section{Application d'assemblage quantitative}
+
+Dans la suite, $\Gamma$ dénote un groupoïde localement compact de base $\Gamma^{(0)}=X$ et muni d'un système de Haar $(\lambda^x)_{x\in X}$. On rappelle qu'une suite exacte courte est dite semi-scindée si elle admet une section complètement positive. Pour éviter les phrases à rallonge, on parlera de bonne extension de $C^*$-algèbres pour une suite exacte courte semi-scindée et filtrée. Par équivalence de Morita, on entend les isomorphismes de groupes 
+\[M_A^{\epsilon , r} : K_*^{\epsilon, r }(A)\rightarrow K_*^{\epsilon,r}(A\otimes \K)\quad, \forall r\geq 0,\forall \epsilon\in (0,\frac{1}{4})\]
+induit par $A\rightarrow A\otimes \K ; x\mapsto x\otimes e$, où $e$ est n'importe quel projecteur de rang $1$, $A$ une $C^*$-algèbre, et $\K$ l'idéal des opérateurs compacts sur l'espace de Hilbert séparable.\\
+
+\begin{lem} On suppose le groupoïde $\Gamma$ muni d'une longueur $l$.\\
+Soit 
+$\begin{tikzcd}[column sep = small]
+0 \arrow{r} & J\arrow{r}& A \arrow{r} & A/J \arrow{r} & 0
+\end{tikzcd}$ une suite exacte semi-scindée et de $\Gamma$-$C^*$-algèbres. Alors la suite 
+$\begin{tikzcd}[column sep = small]
+0 \arrow{r} & J\times \Gamma\arrow{r}& A\times \Gamma \arrow{r} & A/J\times \Gamma \arrow{r} & 0
+\end{tikzcd}$ est une bonne extension.
+\end{lem}
+
+\begin{dem}
+Voir mes notes en anglais.\qed
+\end{dem}
+
+Si l'élément $z\in KK^\Gamma(A,B)$ est représenté par un cycle $(H,\pi,T)$, nous allons définir sa transformée de Kasparov $J_\Gamma(z)\in KK(A\times_r \Gamma, B\times_r\Gamma)$. \\
+
+Tout d'abord, le cas pair. Notons $P_\Gamma=P\otimes_B id_{B\times_r \Gamma}$ l'opérateur sur $H\otimes B\times_r \Gamma$ induit par $P=\frac{T+id_{H\otimes B}}{2}$. Si l'on pose 
+\[\mathcal E :=\{(x,y)\in A\times_r \Gamma \oplus \mathcal L (H\otimes B\times_r \Gamma) : P_\Gamma \pi_\Gamma(x) P_\Gamma = y \ mod \ \K\otimes B\times_r \Gamma\}, \]
+observons l'extension
+\[(E): \begin{tikzcd}[column sep = small]
+0\arrow{r} & \K \otimes B\times_r \Gamma \arrow{r} & \mathcal E \arrow{r} & A\times_r \Gamma \arrow{r} & 0
+\end{tikzcd}.\] 
+
+Toute extension $(Ext):\begin{tikzcd}[column sep = small]0\arrow{r}& A' \arrow{r} & A \arrow{r} & A'' \arrow{r} & 0\end{tikzcd}$ induit une application contrôlée 
+\[D_{\text{Ext}}=D_{A'}^A : \hat K(A'') \rightarrow \hat K(A'). \]
+Montrons que $D_{E}$ ne dépend que de la classe de $z$, et pas de $\pi$ et $T$.\\
+\textbf{A FAIRE}\\
+
+\begin{definition}
+La transformée de Kasparov d'un élément $z$ de $KK^\Gamma(A,B)$ est le morphisme contrôlé 
+\[J_\Gamma (z) = M_{B\times_r \Gamma}^{-1} \circ D_E : \hat K_*(A\times_r \Gamma)\rightarrow \hat K_* (B\times_r \Gamma),\]
+où $(E)$ est l'extension précédemment décrite.
+\end{definition}
+
+Ce morphisme $J_\Gamma : KK^\Gamma(A,B)\rightarrow \text{Hom}_0(\hat K(A\times_r \Gamma),\hat K(B\times_r \Gamma))$ nous permet de définir l'application d'assemblage associée à n'importe quel élément de $\hat K(A\times_r \Gamma)$ par simple évaluation :
+\[Ind_x (z)= J_\Gamma ( z ) (x).\]
+
+La conjecture de Baum-Connes s'intéresse à l'application d'assemblage associé à un certain élément. Dans le cas des groupoïdes, il existe une fonction continue à support compact $h :P_d(\Gamma) \rightarrow [0,1]$ telle que 
+\[\sum_{\gamma\in \Gamma} \gamma (h^2)=1.\]
+Alors $ \gamma \rightarrow \sum_{\gamma\in \Gamma} h \gamma(h)$ définit un projecteur de $A=C_0(P_d(\Gamma))\times_r \Gamma$ de propagation finie, majorée par une certaine constante $s$. Comme les fonctions $h$ admissibles forment un ensemble convexe, la classe de $[e_h, 0]\in K_0^{\epsilon,r (A)}$ ne dépend pas de la fonction $h$ choisie, et l'application d'assemblage de Baum-Connes est définie par l'évaluation en cette classe.
+
+\section{Géométrie asymptotique}
+
+Pour tout $z\in KK^\Gamma(A,B)$, il existe un morphisme contrôlé \[\tau_X (z) : K_*(C^*(X,A))\rightarrow K_*(C^*(X,B)) \]

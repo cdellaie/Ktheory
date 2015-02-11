@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  28 JAN 2015 11:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  11 FEB 2015 22:25
 entering extended mode
 **C:/Users/Clément/Documents/GitHub/Ktheory/QuantitativeKKtheory/main.tex
 (C:/Users/Clément/Documents/GitHub/Ktheory/QuantitativeKKtheory/main.tex
@@ -794,6 +794,7 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 18.
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\Isom.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\QuantitativeAs
 semblyMapForGroupoids.aux)
+(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\rapport.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\GDT.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
@@ -1001,7 +1002,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-) [13] (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\GDT.tex
+) [13]
+(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\rapport.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Overfull \hbox (4.26614pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/n/10 algebres. Alors la suite $[]$ est une bonne
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
+
+ []
+
+[14
+
+
+]) [15]
+(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\GDT.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -1035,7 +1061,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[14
+[16
 
 
 ]
@@ -1043,7 +1069,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[15]
+[17]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 47.
@@ -1078,7 +1104,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
 
-[16]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
@@ -1097,12 +1123,12 @@ tif de $\OML/cmm/m/it/10 C[]$\OT1/cmr/m/n/10 -algebres. Alors $\OMS/cmsy/m/n/1
 ML/cmm/m/it/10 ; []\OMS/cmsy/m/n/10 g$
  []
 
-[17]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-[18]
+[20]
 Overfull \hbox (4.96182pt too wide) in paragraph at lines 154--155
 [][]\OT1/cmr/bx/n/10 Proposition 6. []\OT1/cmr/m/n/10 Soit $[]$ une suite exact
 e
@@ -1133,7 +1159,7 @@ Overfull \hbox (11.82393pt too wide) in paragraph at lines 175--178
 /m/n/10 , et ces mor-phismes definissent 
  []
 
-[19] [20]
+[21] [22]
 Overfull \hbox (6.00934pt too wide) in paragraph at lines 231--233
 $\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]\OT1/cmr/m/n/10 )$. D'a
 illeurs, cela nous ser-vira beau-coup dans les preuves sui-vantes, $(\OML/cmm/m
@@ -1145,7 +1171,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--248
 
  []
 
-[21]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 250--252
 
  []
@@ -1155,7 +1181,7 @@ Overfull \hbox (24.17543pt too wide) detected at line 268
 [][]\OML/cmm/m/it/10 :
  []
 
-[22]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
@@ -1175,7 +1201,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 297--298
 
  []
 
-[23] [24]
+[25] [26]
 Overfull \hbox (135.68115pt too wide) detected at line 359
 []
  []
@@ -1190,14 +1216,14 @@ Overfull \hbox (18.14763pt too wide) detected at line 380
 []
  []
 
-) [25]
+) [27]
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\main.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
 
-[26
+[28
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
  (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\main.aux
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\Groupoids.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\StoneCech.aux)
@@ -1205,18 +1231,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\Isom.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\QuantitativeAs
 semblyMapForGroupoids.aux)
+(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\rapport.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\GDT.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 37.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B137A347C3282D4363E4D3ABEF50F41C;1844.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
+(rerunfilecheck)             Checksum: 9F16BAEC41357639F1B977427E6B4CDF;1983.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 16824 strings out of 493921
- 311345 string characters out of 3147330
- 383617 words of memory out of 3000000
- 19655 multiletter control sequences out of 15000+200000
+ 17025 strings out of 493921
+ 316582 string characters out of 3147330
+ 388459 words of memory out of 3000000
+ 19842 multiletter control sequences out of 15000+200000
  15107 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  58i,27n,75p,1108b,981s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1239,9 +1266,9 @@ cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (26 pages, 379974 bytes).
+Output written on main.pdf (28 pages, 391207 bytes).
 PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 129 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 467 PDF objects out of 1000 (max. 8388607)
+ 136 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
