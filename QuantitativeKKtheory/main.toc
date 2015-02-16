@@ -26,3 +26,4 @@
 \contentsline {subsubsection}{\numberline {8.4.3}P\IeC {\'e}riodicit\IeC {\'e} de Bott}{27}{subsubsection.8.4.3}
 \contentsline {section}{\numberline {9}Introduction}{28}{section.9}
 \contentsline {section}{\numberline {10}M\IeC {\'e}thode Dirac-Dual-Dirac}{29}{section.10}
+\contentsline {subsection}{\numberline {10.1}Travaux de Vincent Lafforgue}{31}{subsection.10.1}

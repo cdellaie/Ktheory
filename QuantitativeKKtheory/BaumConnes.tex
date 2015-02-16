@@ -29,9 +29,9 @@ où $p : Y\rightarrow *$ est la projection sur le point. \\
 Pour rappel, la projection induit un morphisme de groupoïdes $Y \rtimes G\rightarrow G$, et la $KK$-théorie bivariante généralisée par P-Y. Le Gall est contravariante en le groupoïde, donc $p^* : KK^G(\C,\C)\rightarrow KK^{G\rtimes Y}(p_* \C,p_* \C)$, et bien sûr $p_*\C \simeq C_0(Y)$.
 \end{definition}%vérifier les etoiles sur p
 
-La condition $p^*(\gamma)$ assure que $\gamma$ agit sur $K^{top}(G)$ par l'identité. En effet...
+La condition $p^*(\gamma)$ assure que $\gamma$ agit sur $K^{top}(G)$ par l'identité. En effet...\\
 
-Cet élément $\gamma$ a été introduit par Kasparov dans ses travaux sur la conjectue de Novikov. Voici entre autres ce qu'il démontre :
+Cet élément $\gamma$ a été introduit par Kasparov dans ses travaux sur la conjecture de Novikov. Voici entre autres ce qu'il démontre :
 \begin{itemize}
 \item tout groupe presque connexe ($G/G_0$ est compact, $G_0$ étant la composante connexe de l'identité) admet un élément $\gamma$.
 \item un tel élément est unique et c'est un idempotent,
@@ -58,12 +58,12 @@ L'existence d'un élément $\gamma$ a été démontrée pour tous les groupes lo
 \item un immeuble de Bruhat-Ttis affine, (Kasparov Skandalis '$91$)
 \item un espace métrique unifomément locallement fini, faiblement géodésique et faiblement "bolique". (Kasparov Skandalis '$03$)
 \end{itemize}
-Vincent Lafforgue note la classe formée de ces groupes $\mathcal C$. Elle contient tous les sous-groupes de Lie (et ses sous-groupes fermés), donc leurs réseaux. On sait donc que $SL(3,\R)$ et $SL(3\Z)$ ont un élément $\gamma$.\\
+Vincent Lafforgue note la classe formée de ces groupes $\mathcal C$. Elle contient tous les sous-groupes de Lie (et ses sous-groupes fermés), donc leurs réseaux. On sait donc que $SL(3,\R)$ et $SL(3,\Z)$ ont un élément $\gamma$.\\
 
 On sait que $\gamma = 1\in KK^G(\C,\C)$ pour tous les groupes a-$T$-menables, i.e. qui admettent un action propre et isométrique sur un espace de Hilbert affine. \\
 \end{Res}
 
-Bien que ces travaux soient encourageants, rien n'étaient su pour des groupes ayant la propriété (T).\\
+Bien que ces travaux soient encourageants, rien n'était su pour des groupes ayant la propriété (T).\\
 
 \begin{definition}
 Soit $G$ un groupe localement compact et $\pi : G\rightarrow U(H)$ une représentation unitaire. \\
@@ -73,7 +73,41 @@ Un ensemble $Q$ de $G$ est dit de Kazdhan s'il existe $\epsilon>0$ tel que toute
 Le groupe $G$ a la propriété (T) s'il possède un ensemble de Kazhdan compact.\\
 \end{definition}
 
-La propriété (T) est équivalente au fait que la représentation triviale $1_G$ soit isolée dans le dual unitaire du groupe. Il existe alors un projecteur $p$ dans la $C^*$-algèbre maximale $C^*G$ du groupe tel que, pour toute représentation unitaire $(\pi,H)$, $\pi(p)$ soit le projecteur orthogonal $P_\pi$ sur le sous-espace des vecteurs invariants $H^G$. De plus, il est alors impossible de construire une homotpie entre n'importe quelle représentation unitaire et $1_G$ : $\gamma \neq 1$ dans $KK^G(\C,\C)$. Il est impossible de montrer la surjectivité de l'application d'assemblage grâce à l'existence de l'élément $\gamma$ et aux méthodes utilisées jusque ici.\\
+La propriété (T) est équivalente au fait que la représentation triviale $1_G$ soit isolée dans le dual unitaire du groupe. Il est alors impossible de construire une homotpie entre n'importe quelle représentation unitaire et $1_G$ : $\gamma \neq 1$ dans $KK^G(\C,\C)$. L'existence de l'élément $\gamma$ et les méthodes utilisées jusque ici ne permettent donc pas de montrer la surjectivité de l'application d'assemblage pour un groupe qui a (T).\\
+
+Pour un tel groupe, il existe un projecteur $p$ dans la $C^*$-algèbre maximale $C^*G$ du groupe tel que, pour toute représentation unitaire $(\pi,H)$, $\pi(p)$ soit le projecteur orthogonal $P_\pi$ sur le sous-espace des vecteurs invariants $H^G$. On nomme $p$ le projecteur de Kazhdan. Comme on va le voir, ce projecteur est invisible du point de vue de la $C^*$-algèbre réduite. La représentation régulière gauche
+\[\lambda_G : G\rightarrow U(L^2(G))\]
+se prolonge en un $*$-homomorphisme $C^*G\rightarrow C^*_r G$ toujours noté $\lambda_G$. Alors si $G$ est infini, les fonctions constantes ne sont pas dans $L^2(G)$, ce sont pourtant les seules qui pourraient être invariantes sous l'action de $\lambda_G$ : le sous-espace des vecteurs invariants est nul. Mais $\lambda_G(p)$ est le projecteur orthogonal sur ce sous-espace, donc est nul :
+\[\lambda_G(p)=0.\]
+Cela assure que la méthode Dirac-Dual-Dirac ne permet pas de montrer Baum-Connes pour les groupes qui ont (T) : en effet, (qui ?) a montré que si $G$ vérifie Baum-Connes, alors 
+\[\lambda_G^*: K_*(C^* G)\rightarrow K_*(C^*_r G)\]
+est un isomorphisme. Mais l'existence d'un projecteur de Kazdhan, équivalente à la propriété (T), en empêche l'injectivité.\\
+
+\subsection{Travaux de Vincent Lafforgue}
+
+Si $n$ est un entier supérieur à $3$, $SL(n,\R)$ et $SL(n,\Z)$ ont la propriété (T). De façon générale, tous les groupes de Lie semi-simples de rang réel supérieur à $2$ ont (T). La conjecture de Connes-Kasparov pour $SL(n,\R)$ ( ou pour tout groupe de Lie réductif connexe ) donne l'injectivité de ses réseaux, propriété stable par passage aux sous-groupes fermés. Toutefois, comme expliqué dans la section précédente, on ne peut montrer que $\gamma=1$, ce qui assurerait la surjectivité. Avant de continuer, mentionnons que même après les travaux de Lafforgue, la conjecture de Baum-Connes est toujours ouverte pour $SL(3,\Z)$.\\
+
+La première idée de Lafforgue est de remplacer $KK^G$ par un bifoncteur $KK^G_{ban}$ définit sur la catégorie des espaces de Banach. Cette généralisation permet de passer des représentations unitaires d'un groupe localement compact à des représentations plus générales $G\rightarrow GL(E)$ sur des espaces de Banach $E$. On peut aussi prendre des représentations sur des espaces de Hilbert, mais non nécessairement isométrique. Lafforgue considère des représentations qu'il appelle "à croissance modérée", qui vérifient
+\[||\pi(g)||_E \leq C e^{l(g)},\forall g\in G\]
+où $l:G\rightarrow \R_+$ est une longueur sur le groupe. Il démontre alors que pour tous les groupes de Lie et leurs réseaux, 
+\[\gamma = 1 \ \text{dans }KK^G_{ban}(\C,\C).\]
+Toutefois, le changement de théorie bivariante a un prix, et l'espace d'arrivée de l'application d'assemblage associée n'est plus $K_*(C^*_rG)$ mais $K_*(L^1(G))$. Cela démontre tout de même la conjecture de Bost : pour tout groupe de Lie, $\mu_{L^1(G)} : K^{top}(G)\rightarrow K(L^1(G))$ est un isomorphisme. De plus, on a une factorisation 
+\[\begin{tikzcd}[column sep = small]
+K^{top}(G) \arrow{r}{\mu_{L^1}}\arrow{dr}{\mu_r} & K(L^1(G)) \arrow{d}\\
+					& K(C^*_r)G)
+\end{tikzcd},\]
+le problème étant de déterminer l'isomorphie ou non de la flèche verticale.\\
+
+De manière plus géérale, Lafforgue définit ce qu'il appelle des complétion inconditionnelle de $C_c(G)$. Munissant l'algèbre $C_c(G)$ d'une norme $||.||_{\mathcal A(G)}$ telle que
+\[\text{si } |f_1(g)|\leq |f_2(g)|\quad \text{alors } ||f_1||_{\mathcal A(G)}\leq||f_2||_{\mathcal A(G)},\]
+il la complète en une algèbre de Banach $\mathcal A(G)$, et montre qu'elle s'injecte dans $C^*_r G$, ce qui impose une factorisation 
+\[\begin{tikzcd}[column sep = small]
+K^{top}(G) \arrow{r}{\mu_{\mathcal A(G)}}\arrow{dr}{\mu_r} & K(\mathcal A(G)) \arrow{d}\\
+					& K(C^*_r)G)
+\end{tikzcd}.\]
+Si l'on trouve une telle complétion inconditionnelle $\mathcal A(G)$ qui soit stable par calcul fonctionnel holomorphe, et dense dans $C^*_r G$, alors le diagramme commutatif précédent montre que Baum-Connes est vraie pour $G$, par principe d'Oka.(a détailler) Lafforque a montrer cela pour les groupes de Lie, et leurs réseaux qui ont la propriété de décroissance rapide (RD).\\
+
+Voici quelques exemples pour finir cette section. Pour $SL(n,\R)$, on retrouve l'algèbre de Scwartz. Pour tous les sous-groupes discrets des groupes de Lie qui ont (RD), c'est l'algèbre de Jolissaint qui apparaît. Tous les réseaux cocompacts de $SL(3,\R)$ ( pour $n> 3$, c'est ouvert !), ainsi que ceux des groupes hyperboliques ou encore de $2$ groupes exceptionnels, ont (RD).  
 
 
 
