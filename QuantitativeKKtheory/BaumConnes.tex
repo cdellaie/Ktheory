@@ -1,0 +1,101 @@
+\section{Introduction}
+
+La conjecture de Baum-Connes dérive de problèmes posés au départ en théorie des représentations. Les analogies entre la théorie de Fourier et les représentations des groupes finis ont ouvert une voie vers les représentations des groupes localement compacts : faire de l'analyse harmonique sur un groupe revient à décomposer en composantes irréductibles la représentation régulière gauche sur les fonctions de carrés intégrables sur le groupe $L^2(G)$. Ce problème est complètement compris pour les groupes compacts ainsi que pour les groupes abéliens localement compacts. A partir des travaux de Harish-Chandra, le cas des groupes de Lie reductifs commence à être attaquable. Ses travaux ont permis, entre autres, de determiner la mesure de Plancherel du groupe, donc de décomposer la représentation régulière gauche modulo les ensemble de représentations de mesure nulle. A l'époque de ces travaux, envisager l'étude des groupe de Lie réductifs comme une classe n'était pas une démarche évidente : les mathématiciens de l'époque pensaient que les techniques d'algèbre d'opérateurs et d'analyse fonctionnelle permetraient de généraliser les résultats obtenus à tous les groupes localement compacts.\\
+
+Fixons quelques notations. On note $G$ un groupe localement compact; si le groupe est discret, on le notera plus volontier $\Gamma$. Le but visé est donc l'étude des classes d'équivalence des représentations unitaires du groupe, c'est un ensemble appelé dual unitaire du groupe et noté $\hat G$. Les représentations $\pi : G \rightarrow U(H)$ ne sont pas nécessairement finies dimensionnelles, $H$ peut être un espace de Hilbert de dimension infinie, mais on demande tout de même à $\pi$ d'être fortement continue : pour tout $g\in G$, la fonction $v\mapsto \pi(g) v$ est continue.\\
+
+Le point de vue développé par Alain Connes et appelé par lui \textit{géometrie non-commutative} s'applique lorsque les techniques d'études habituelles sont mises en défaut lors de l'attaque de $\hat G$. Par exemple, si le dual unitaire n'est pas séparé, ou pire, si chaque point est dense. Un remarque : cela arrive avec des groupes faciles à construire. Par exemple, le groupe formé du produit croisé de $\Z^2$ par l'action de $\Z$, donné par l'automorphisme $\begin{pmatrix}1 & 1 \\ 1 & 2 \end{pmatrix}$, voir AC. Dans un tel cas, l'algèbre des fonctions continues sur $\hat G$ tendant vers $0$ à l'infini ne donnent aucune infomations et identifient le dual unitaire à un point. Le cadre non-commutatif permet de s'extraire de la difficulté en associant à notre espace une $C^*$-algèbre, non-nécessairement commutative, à la place de $C_0(\hat G)$. Cette algèbre est construite comme la complétion de $C_c(G)$ pour la norme d'opérateur donnée par représentation réguliaire gauche, et est appelée $C^*$-algèbre réduite du groupe $C_r^*G$.\\
+
+Pour étudier une $C^*$-algèbre, une bonne idée est de commencer par calculer sa $K$-théorie. C'est exactement ce que propose la conjecture de Baum-Connes, le calcul de $K_*(C_r^* G)$. Bien que $C_r^* G $ soit un objet plutôt mystérieux, Baum et Connes ont conjecturé en '$82$ l'existence d'un groupe abélien de nature "géométrique" $K^{top}(G)$ et d'un morphisme 
+\[\mu_r : K^{top}_*(G)\rightarrow K_*(G)\]
+censé être un isomorphisme. La point important est que le membre de gauche peut se calculer facilement, et donc donne le membre de droite en cas d'isomorpisme. Pourquoi observer la $K-$-théorie de $C^*_r G$ ? Par exemple, dans le cas abélien, $C_r^*G\simeq C_0(\hat G_r)$ et donc $K_*(C_r^*G)\simeq K_*(\hat G_r)$, où la $K$-théorie du membre de droite est la théorie de Atiyah-Hirzebruch, qui est une théorie homologique généralisée (au sens de Steenrod) A VERIFIER. Ici $\hat G_r$ est le dual tempréré du groupe, c'est-à-dire l'ensemble des classes d'équivalences de représentations unitaires du groupe faiblement contenues dans la régulière gauche, muni de la topologie de Fell. Si $G$ n'est pas abélien, cet espace peut ne pas être $T1$ ! Par contre, chaque point isolé de $\hat G_r$ fournit un projecteur de $C_r^* G$, donc un élément de $K$-théorie. \\
+
+En '$94$, Baum, Connes et Higson construisent effectivement ce groupe $K^{top}(G)$ et l'application d'assemblage $\mu_r$ en utilisant la $KK$-théorie bivariante de Kasparov : 
+\[K^{top}(G)=\varinjlim_{X G\text{-compact propre }} KK(C_0(X), \C).\]
+
+Une remarque : les travaux de Harish-Chandra permettent le calcul de $K_*(C^*_r G)$ pour $G$ un groupe de Lie réductif connexe, et on sait calculer la $K$-homologie équivariante $K^{top}(G)$ d'un tel groupe. Wasserman a donné une preuve dans une note de l'Académie des Sciences en '$87$ de la conjecture de Connes-Kasparov pour ces groupes, et on sait depuis que cette conjecture est équivalente, pour $G$ réductif connexe, à la conjceture de Baum-Connes.\\
+
+Dans la suite, nous présenterons différentes méthodes qui servent à démontrer la conjecture de Baum-Connes.\\
+
+\section{Méthode Dirac-Dual-Dirac}
+
+\begin{definition}
+Un élément $\gamma \in KK^{G}(\C,\C)$ est dit <<de Kasparov>> s'il existe une $G$-$C^*$-algèbre $A$ et deux éléments $d\in KK^{G}(A,\C)$ et $\eta \in KK^{G}(\C,A)$ tels que
+\[\gamma = \eta \otimes_A d \]
+et pour tout $G$-espace propre $Y$,
+\[p^*(\gamma)=1\in KK^{G\rtimes Y}(C_0(Y),C_0(Y)),\]
+où $p : Y\rightarrow *$ est la projection sur le point. \\
+
+Pour rappel, la projection induit un morphisme de groupoïdes $Y \rtimes G\rightarrow G$, et la $KK$-théorie bivariante généralisée par P-Y. Le Gall est contravariante en le groupoïde, donc $p^* : KK^G(\C,\C)\rightarrow KK^{G\rtimes Y}(p_* \C,p_* \C)$, et bien sûr $p_*\C \simeq C_0(Y)$.
+\end{definition}%vérifier les etoiles sur p
+
+La condition $p^*(\gamma)$ assure que $\gamma$ agit sur $K^{top}(G)$ par l'identité. En effet...
+
+Cet élément $\gamma$ a été introduit par Kasparov dans ses travaux sur la conjectue de Novikov. Voici entre autres ce qu'il démontre :
+\begin{itemize}
+\item tout groupe presque connexe ($G/G_0$ est compact, $G_0$ étant la composante connexe de l'identité) admet un élément $\gamma$.
+\item un tel élément est unique et c'est un idempotent,
+\item si un groupe $G$ possède un élément $\gamma$, alors 
+\[\mu_r(K^{top}(G)) = \gamma.K(C^*_r G) := \{x\otimes j_{G,r}(\gamma) : x\in K(C^*_r G)\}.\]
+\end{itemize}
+
+\begin{Res}[Tu] 
+\begin{itemize}
+\item Si $G$ a un élément $\gamma$, alors $\mu_r$ est injective.
+\item Si de plus $\gamma = 1$ dans $KK^G(\C,\C)$, alors $\mu_r$ est surjective.\\
+\end{itemize}
+\end{Res}
+
+Une propriété assure que l'injectivité passe aux sous-groupes fermés :\\
+\begin{prop}
+Si $G$ a un élément de Kasparov, alors tout sous-groupe fermé de $G$ en a un.\\
+\end{prop}
+
+\begin{Res}
+L'existence d'un élément $\gamma$ a été démontrée pour tous les groupes localement compacts agissant de façon continue, propre et isométrique sur :
+\begin{itemize}
+\item une variété riemannienne $(M,g)$ complète simplement connexe àcourbure sectionnelle négative ou nulle, (Kasparov '$88$)
+\item un immeuble de Bruhat-Ttis affine, (Kasparov Skandalis '$91$)
+\item un espace métrique unifomément locallement fini, faiblement géodésique et faiblement "bolique". (Kasparov Skandalis '$03$)
+\end{itemize}
+Vincent Lafforgue note la classe formée de ces groupes $\mathcal C$. Elle contient tous les sous-groupes de Lie (et ses sous-groupes fermés), donc leurs réseaux. On sait donc que $SL(3,\R)$ et $SL(3\Z)$ ont un élément $\gamma$.\\
+
+On sait que $\gamma = 1\in KK^G(\C,\C)$ pour tous les groupes a-$T$-menables, i.e. qui admettent un action propre et isométrique sur un espace de Hilbert affine. \\
+\end{Res}
+
+Bien que ces travaux soient encourageants, rien n'étaient su pour des groupes ayant la propriété (T).\\
+
+\begin{definition}
+Soit $G$ un groupe localement compact et $\pi : G\rightarrow U(H)$ une représentation unitaire. \\
+On dit que $\pi$ admet des vecteurs presque invariants si, pour tout $\epsilon>0$ et pour tout compact $K$ de $G$, il existe un vecteur $\xi$ $(K,\epsilon)$-invariant, i.e. tel que 
+\[\sup_{h\in K}||\pi(h)\xi - \xi||<||\xi||.\]
+Un ensemble $Q$ de $G$ est dit de Kazdhan s'il existe $\epsilon>0$ tel que toute représentation unitaire admettant des vecteurs $(Q,\epsilon)$-invariants admet aussi un vecteurs non nul et invariant. \\
+Le groupe $G$ a la propriété (T) s'il possède un ensemble de Kazhdan compact.\\
+\end{definition}
+
+La propriété (T) est équivalente au fait que la représentation triviale $1_G$ soit isolée dans le dual unitaire du groupe. Il existe alors un projecteur $p$ dans la $C^*$-algèbre maximale $C^*G$ du groupe tel que, pour toute représentation unitaire $(\pi,H)$, $\pi(p)$ soit le projecteur orthogonal $P_\pi$ sur le sous-espace des vecteurs invariants $H^G$. De plus, il est alors impossible de construire une homotpie entre n'importe quelle représentation unitaire et $1_G$ : $\gamma \neq 1$ dans $KK^G(\C,\C)$. Il est impossible de montrer la surjectivité de l'application d'assemblage grâce à l'existence de l'élément $\gamma$ et aux méthodes utilisées jusque ici.\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
