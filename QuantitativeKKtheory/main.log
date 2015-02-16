@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  16 FEB 2015 18:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  16 FEB 2015 19:15
 entering extended mode
 **C:/Users/Clément/Documents/GitHub/Ktheory/QuantitativeKKtheory/main.tex
 (C:/Users/Clément/Documents/GitHub/Ktheory/QuantitativeKKtheory/main.tex
@@ -796,12 +796,12 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 19.
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\StoneCech.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\Asdim.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\Isom.aux)
-(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\QuantitativeAs
-semblyMapForGroupoids.aux)
-(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\rapport.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\GDT.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\BaumConnes.aux
-))
+) (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\rapport.aux)
+
+(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\QuantitativeAs
+semblyMapForGroupoids.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
@@ -979,60 +979,6 @@ Overfull \hbox (107.51123pt too wide) detected at line 102
  []
 
 [10]) [11]
-(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\QuantitativeAs
-semblyMapForGroupoids.tex
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
-
- []
-
-[12
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-) [13]
-(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\rapport.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
-
- []
-
-
-Overfull \hbox (4.26614pt too wide) in paragraph at lines 7--15
-\OT1/cmr/m/n/10 algebres. Alors la suite $[]$ est une bonne
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--34
-
- []
-
-[14
-
-
-]) [15]
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\GDT.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1067,7 +1013,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[16
+[12
 
 
 ]
@@ -1075,7 +1021,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[17]
+[13]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 47.
@@ -1110,7 +1056,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
 
-[18]
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
@@ -1129,12 +1075,12 @@ tif de $\OML/cmm/m/it/10 C[]$\OT1/cmr/m/n/10 -algebres. Alors $\OMS/cmsy/m/n/1
 ML/cmm/m/it/10 ; []\OMS/cmsy/m/n/10 g$
  []
 
-[19]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-[20]
+[16]
 Overfull \hbox (4.96182pt too wide) in paragraph at lines 154--155
 [][]\OT1/cmr/bx/n/10 Proposition 6. []\OT1/cmr/m/n/10 Soit $[]$ une suite exact
 e
@@ -1165,7 +1111,7 @@ Overfull \hbox (11.82393pt too wide) in paragraph at lines 175--178
 /m/n/10 , et ces mor-phismes definissent 
  []
 
-[21] [22]
+[17] [18]
 Overfull \hbox (6.00934pt too wide) in paragraph at lines 231--233
 $\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]\OT1/cmr/m/n/10 )$. D'a
 illeurs, cela nous ser-vira beau-coup dans les preuves sui-vantes, $(\OML/cmm/m
@@ -1177,7 +1123,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--248
 
  []
 
-[23]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 250--252
 
  []
@@ -1187,7 +1133,7 @@ Overfull \hbox (24.17543pt too wide) detected at line 268
 [][]\OML/cmm/m/it/10 :
  []
 
-[24]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
@@ -1207,7 +1153,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 297--298
 
  []
 
-[25] [26]
+[21] [22]
 Overfull \hbox (135.68115pt too wide) detected at line 359
 []
  []
@@ -1222,7 +1168,7 @@ Overfull \hbox (18.14763pt too wide) detected at line 380
 []
  []
 
-) [27]
+) [23]
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\BaumConnes.tex
 
 Overfull \hbox (2.89597pt too wide) in paragraph at lines 3--4
@@ -1263,7 +1209,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
-[28
+[24
 
 
 ]
@@ -1277,112 +1223,188 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
-
- []
-
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 
-Overfull \hbox (10.43849pt too wide) in paragraph at lines 71--74
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
+
+Overfull \hbox (10.43849pt too wide) in paragraph at lines 72--75
 \OT1/cmr/m/n/10 Un en-semble $\OML/cmm/m/it/10 Q$ \OT1/cmr/m/n/10 de $\OML/cmm/
 m/it/10 G$ \OT1/cmr/m/n/10 est dit de Kazd-han s'il existe $\OML/cmm/m/it/10  
 > \OT1/cmr/m/n/10 0$ tel que toute representation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--74
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 83--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
-
- []
-
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 84--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--109
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-) [32]
-(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\main.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
-[33
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+
+ []
+
+[28]
+Overfull \hbox (7.06927pt too wide) detected at line 127
+[]
+ []
+
+
+Overfull \hbox (6.86128pt too wide) in paragraph at lines 130--131
+[][]\OT1/cmr/bx/n/10 Conjecture 1 \OT1/cmr/m/n/10 (Baum--Connes asymp-to-tique)
+\OT1/cmr/bx/n/10 . []\OT1/cmr/m/n/10 Si $\OML/cmm/m/it/10 X$ \OT1/cmr/m/n/10 es
+t a geometrie uni-formement
+ []
+
+) [29]
+(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\rapport.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Overfull \hbox (4.26614pt too wide) in paragraph at lines 7--15
+\OT1/cmr/m/n/10 algebres. Alors la suite $[]$ est une bonne
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
+
+ []
+
+[30
+
+
+]) [31]
+(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\QuantitativeAs
+semblyMapForGroupoids.tex
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+[32
+
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+) [33]
+(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\main.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
+
+[34
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
  (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\main.aux
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\Groupoids.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\StoneCech.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\Asdim.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\Isom.aux)
-(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\QuantitativeAs
-semblyMapForGroupoids.aux)
-(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\rapport.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\GDT.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\BaumConnes.aux
-))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 38.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 38.
+) (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\rapport.aux)
+
+(C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\QuantitativeAs
+semblyMapForGroupoids.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 37.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EF302452685C1491A7AD6CDE2F3DF3AA;2178.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
+(rerunfilecheck)             Checksum: E4811C16351144CC61759081C6BB0536;2322.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 17326 strings out of 493921
- 320839 string characters out of 3147330
- 389048 words of memory out of 3000000
- 20121 multiletter control sequences out of 15000+200000
+ 17392 strings out of 493921
+ 322464 string characters out of 3147330
+ 385843 words of memory out of 3000000
+ 20183 multiletter control sequences out of 15000+200000
  15107 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  58i,27n,75p,1354b,981s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1405,9 +1427,9 @@ cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (33 pages, 419016 bytes).
+Output written on main.pdf (34 pages, 426660 bytes).
 PDF statistics:
- 510 PDF objects out of 1000 (max. 8388607)
- 148 named destinations out of 1000 (max. 500000)
- 237 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 526 PDF objects out of 1000 (max. 8388607)
+ 152 named destinations out of 1000 (max. 500000)
+ 253 words of extra memory for PDF output out of 10000 (max. 10000000)
 

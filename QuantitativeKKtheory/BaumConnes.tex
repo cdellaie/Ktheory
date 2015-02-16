@@ -18,6 +18,7 @@ Une remarque : les travaux de Harish-Chandra permettent le calcul de $K_*(C^*_r 
 Dans la suite, nous présenterons différentes méthodes qui servent à démontrer la conjecture de Baum-Connes.\\
 
 \section{Méthode Dirac-Dual-Dirac}
+Cette section se base sur un exposé donné par Maria Paula Gomez Aparicio lors du groupe de travail "KK-théorie et groupes quantiques" à Paris Diderot en janvier $2015$.\\
 
 \begin{definition}
 Un élément $\gamma \in KK^{G}(\C,\C)$ est dit <<de Kasparov>> s'il existe une $G$-$C^*$-algèbre $A$ et deux éléments $d\in KK^{G}(A,\C)$ et $\eta \in KK^{G}(\C,A)$ tels que
@@ -109,15 +110,27 @@ Si l'on trouve une telle complétion inconditionnelle $\mathcal A(G)$ qui soit s
 
 Voici quelques exemples pour finir cette section. Pour $SL(n,\R)$, on retrouve l'algèbre de Scwartz. Pour tous les sous-groupes discrets des groupes de Lie qui ont (RD), c'est l'algèbre de Jolissaint qui apparaît. Tous les réseaux cocompacts de $SL(3,\R)$ ( pour $n> 3$, c'est ouvert !), ainsi que ceux des groupes hyperboliques ou encore de $2$ groupes exceptionnels, ont (RD).  
 
+\subsection{Construction de la flèche}
+\section{Géométrie à l'infini}
 
+Nous l'avons vu, l'application d'assemblage peut se construire comme la composée de l'homomorphisme de descente $j_{G,r}$ avec l'évaluation en un élément de $K$-théorie de $C_0(X)$:
+\[\begin{tikzcd}
+KK^G(C_0(X),B)\arrow{r}{j_{G,r}}& KK(C_0(X)\rtimes_r G,B \rtimes_r G) \arrow{r}{-\otimes_{C_0(X)} [e_G]} & K(B\rtimes_r G) 
+\end{tikzcd}\]
+puis en passant à la limite inductive sur les $G$-espaces propres et $G$-compacts $X$. Grâce à la théorie bivariante pour les actions de groupoïdes développée par P-Y. LeGall, cette approche fonctionne également pour $G$ une groupoïde localement compact muni d'un système de Haar, et l'on peut parler de conjecture de Baum-Connes pour un tel groupoïde.  \\
 
+Yu a définit une application d'assemblage sur les espaces métriques munis d'une structure "à l'infini" (\textit{coarse} en anglais), ce que j'appellerai espaces asymptotiques. Pour tout espace asymptotique $(X,d,\mathcal E)$ et toute $C^*$-algèbre $B$, il existe une $C^*$-algèbre $C^*(X,B)$, appelée algèbre de Roe de $X$ à coefficients dans $B$, construite comme une certaine complétion de l'algèbre des opérateur de propagation finie localement compacts. De plus, pour toutes $C^*$-algèbres $A$ et $B$, il existe un homomorphisme
+\[\tau_X : KK(A,B)\rightarrow KK(C^*(X,A),C^*(X,B))\]
+analogue à la transformation de Kasparov $j_G$. L'application d'assemblage "à l'infini" $A_{X,B}$, à coefficient dans $B$, est alors définie par la limite inductive sur $d$ des composées
+\[\begin{tikzcd}[column sep= small]
+KK(C_0(P_d(X)),B)\arrow{r}{\tau_X}& KK(C^*(X,C_0(P_d(X))),C^*(X,B)) \arrow{r}{-\otimes [\lambda]} & K(C^*(X,B)) .
+\end{tikzcd}\]
 
+Cela définit une application d'assemblage asymptotique $A_{X,B} : KX_*(X,B)\rightarrow K(C^*(X,B))$, où $KX_*(X,B)=\varinjlim_{d\rightarrow \infty} KK(C_0(P_d(X)),B)$ est une version non équivariante de la $K$-homologie de $X$.
+\begin{conj}[Baum-Connes asymptotique] Si $X$ est à géométrie uniformément bornée, alors $A_X$ est un ismorphisme.
+\end{conj}
 
-
-
-
-
-
+Ce point de vue constitue une des stratégies possibles pour démontrer Baum-Connes pour une certaines classe de groupes. Si $\Gamma$ est un groupe discret finiement engendré, on peut construire, relativement à n'importe quel système de générateurs $S$, une métrique unique à équivalence asymptotique près. Il existe donc une structure "à l'infini " naturelle sur le groupe $\Gamma$, et l'on peut observer l'application d'assemblage asymptotique sur cet espace. Bien qu'a priori la conjecture de Baum-Connes pour $\Gamma$ soit complètement décorrélée de cette situation, Yu a montré que l'application d'assemblage pour l'espace asymptotique $(\Gamma, d_S)$ est naturellement équivalente à l'application d'assemblage pour $\Gamma$ à coefficients dans $l^\infty(\Gamma, H)$, $H$ étant l'espace de Hilbert séparable.
 
 
 
