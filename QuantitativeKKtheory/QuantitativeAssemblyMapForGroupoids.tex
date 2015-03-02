@@ -65,17 +65,31 @@ We can now construct an explicit $R$ inverse for $\iota^*$. Let $z=(\hat H_{\til
 If $T' = \iota^*\circ R(T)$, it is the constant operator with fiber $T_x\in \mathcal L_B(\hat H_B)$ on the trivial Hilbert module $\bigoplus_{y\in X}(H_{\tilde B})_x $. Define $V=\bigoplus_{\gamma \in \Gamma} V_\gamma$. It is unitary and intertwines $T$ and $T'$, i.e. the cycles are homotopic and $\iota^*\circ R = 1$.
 
 \qed
+\end{dem}
 
 \begin{lem}
 Let $B$ be a coefficient $C^*$-algebra. The uniform Roe algebra of $X$  and the Roe algebra of $X$ are $*$-isomorphic to crossed-product algebras by $\Gamma$, respectively : 
-\[\begin{array}{ll} C_u^* X \simeq l^\infty(X) \rtimes \Gamma \\ C^* (X,B) \simeq l^\infty(X,\K\otimes B) \rtimes \Gamma \end{array}.\]
+\[\begin{array}{ll} C_u^* (X,B) \simeq l^\infty(X,B) \rtimes \Gamma \\ C^* (X,B) \simeq l^\infty(X,\K\otimes B) \rtimes_r \Gamma \end{array}.\]
 \end{lem}
 
 \begin{dem}
-
+A faire
 \qed
 \end{dem}
-\end{dem}
+
+This $*$-isomorphism gives an isomorphism at the level of $K$-theory 
+\[ K_*(C^* (X,B))\rightarrow K_*(l^\infty(X,\K\otimes B)\rtimes_r \Gamma).\]
+These lemmas allows us to state a reffinement of a result of G. Skandalis, J-L.Tu and G. Yu \cite{SkTuYu}, namely that the two isomorphisms described above intertwine the (local quantitative ?) assembly maps for the groupoid $\Gamma$ with coefficients in $l^\infty(X)$ with the coarse assembly map of $X$. (If local and quantitative :) This result at the level of controlled $K$-theory on the right side entails that of \cite{SkTuYu}
+
+\begin{thm}
+The following diagram
+\[\begin{tikzcd}[column sep = small]
+A : KK_*(A,B)\arrow{r}\arrow{d}{\simeq} & K_*(C^*(X,B)) \arrow{d}{\simeq}\\
+\mu_{r} : KK^\Gamma \arrow{r} & K_*(l^\infty(X,\K\otimes B)\rtimes_r \Gamma)
+\end{tikzcd}\]
+commutes, and the vertical arrows are isomorphisms.
+\end{thm}
+
 
 
 
