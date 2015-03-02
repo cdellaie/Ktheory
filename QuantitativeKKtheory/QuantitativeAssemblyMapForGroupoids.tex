@@ -1,3 +1,5 @@
+\section{English Notes}
+
 In a serie of papers, H. Oyono-Oyono and G. Yu have defined a controlled version of operator $K$-theory, ~\cite{OY1}~\cite{OY2}~\cite{OY3}, that allows them to define a quantitative and local assembly map, and a related Baum-Connes Conjecture. The aim of this work is to extend their work to the realm of groupoids. In a second part, we shall see how this setting can help us understand better the relation between the coarse-Baum-Connes conjecture and the Baum-Connes Conjecture with coefficient for groupoids. Indeed, in ~\cite{TuBC} and ~\cite{SkTuYu}, G. Skandalis, J-L.Tu and G. Yu proved that there is a commutative diagramm
 \[\begin{tikzcd}
 K_*(X) \arrow{r}{A}\arrow{d}{\simeq} & K_*(C^*X)\arrow{d}{\simeq} \\
@@ -46,3 +48,49 @@ Let $a\in A\times \Gamma$ such that $\Phi_\Gamma(a)=0$. We can approximate $a$ b
 Moreover, $\text{Im}\ \Psi$ is a closed ideal in $A$, and $\lim ||f_n-\Psi(g_n)||=0$ so that $a\in \text{Im} \ \Psi$ : the sequence is exact in the middle.
 \qed
 \end{dem}
+
+\subsection{}
+Let $X$ be a discrete metric space with bounded geometry and $\Gamma$ its coarse groupoid. We denote by $\tilde A $ the $C(\Gamma)$-algebra $C_0(P_d(\Gamma))$, and by $A$ the $C^*$-algebra $C_0(P_d(X))$. As $P_d(\Gamma)$ is equivariantly homeomorphic to $\beta X \times P_d(X)$, the fiber $\tilde A_x$ is isomorphic to $A$ as a $C^*$-algebra.\\
+ 
+\begin{lem}
+Let $B$ be a $C^*$-algebra and $x\in X$. The morphism of groupoids $\iota : \{e_x\}\rightarrow \Gamma$ induces an isomorphism in $KK$-theory 
+\[\begin{tikzcd}[column sep = small] KK_*^\Gamma(\tilde A, l^\infty(X, B))\arrow{r}{\simeq} & KK_*(A, B)\end{tikzcd}.\]
+\end{lem}
+
+\begin{dem}
+Let us first check that the fiber over $x\in X$ of $\tilde B :=l^\infty(X,B)$ is $B$ : easily, if $I_x$ denotes the kernel of the evaluation map $\tilde B \rightarrow B$ at $x$, $\tilde B_x = \tilde B / I_x \tilde B\simeq B $. Moreover, as $\tilde A_x \simeq A$, functoriality assures that $\iota$ induces $\iota^* : KK_*^\Gamma(\tilde A, l^\infty(X, B))\rightarrow KK_*(A, B)$.\\
+
+We can now construct an explicit $R$ inverse for $\iota^*$. Let $z=(\hat H_{\tilde B},\Phi, T)\in \mathbb E^\Gamma(\tilde A,\tilde B)$ be a $K$-cycle. By stabilization theorem, we can suppose that the Hilbert $\tilde B$ module is in canonical form, that is the standard separable Hilbert module over $\tilde B$ with usual grading. We will also suppose that $T$ is $\Gamma$-equivariant, which is always true up to compact perturbation. The image of $z$ under $R$ is defined to be its restriction to $x$, $(\hat H_B,\Phi_x,T_x)$. This definition gives immediatly $R\circ \iota^* = 1$. Now let $V : s^* \hat H_{\tilde B}\rightarrow \hat H_{\tilde B}$ be the unitary implementing the action of $\Gamma$ on $\hat H_{\tilde B}$. The equivariance of $T$ can be written as 
+\[V_\gamma T_{s(\gamma)} V_\gamma^* = T_{r(\gamma)}\quad,\forall \gamma \in \Gamma. \]
+If $T' = \iota^*\circ R(T)$, it is the constant operator with fiber $T_x\in \mathcal L_B(\hat H_B)$ on the trivial Hilbert module $\bigoplus_{y\in X}(H_{\tilde B})_x $. Define $V=\bigoplus_{\gamma \in \Gamma} V_\gamma$. It is unitary and intertwines $T$ and $T'$, i.e. the cycles are homotopic and $\iota^*\circ R = 1$.
+
+\qed
+
+\begin{lem}
+Let $B$ be a coefficient $C^*$-algebra. The uniform Roe algebra of $X$  and the Roe algebra of $X$ are $*$-isomorphic to crossed-product algebras by $\Gamma$, respectively : 
+\[\begin{array}{ll} C_u^* X \simeq l^\infty(X) \rtimes \Gamma \\ C^* (X,B) \simeq l^\infty(X,\K\otimes B) \rtimes \Gamma \end{array}.\]
+\end{lem}
+
+\begin{dem}
+
+\qed
+\end{dem}
+\end{dem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

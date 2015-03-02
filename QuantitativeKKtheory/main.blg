@@ -1,12 +1,8 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
-A level-1 auxiliary file: Groupoids.aux
-A level-1 auxiliary file: StoneCech.aux
-A level-1 auxiliary file: Asdim.aux
-A level-1 auxiliary file: Isom.aux
-A level-1 auxiliary file: GDT.aux
 A level-1 auxiliary file: BaumConnes.aux
 A level-1 auxiliary file: rapport.aux
 A level-1 auxiliary file: QuantitativeAssemblyMapForGroupoids.aux
+A level-1 auxiliary file: Isom.aux
 The style file: plain.bst
 Database file #1: biblio.bib
 I was expecting a `,' or a `}'---line 100 of file biblio.bib
