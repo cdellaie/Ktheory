@@ -83,9 +83,9 @@ Let us recall how one construct the left regular representation of $\Gamma$. For
 
 To any couple $(x,y)\in \beta X\times \beta X$, there exists a unique $\gamma_x^y\in \Gamma$ such that $s(\gamma)=x$ and $r(\gamma)=y$. The map
 \[T\rightarrow \sum_{x,y} T_{xy} \lambda_x(\gamma_x^y)\]
-establishes an $*$-isomorphism between $\C[X]$ and the algebra of finitely supported functions from $\Gamma$ to $l^\infty(X,\K)$, its inverse being the $*$-morphism that associates to a function $a$ the multiplication operator : 
-\[\big(a(\gamma)(\eta\otimes \xi)\big) (x)= a(\gamma)(x)\eta(x)\xi , \eta\in l^2(X),\xi\in H. \]
-That is it of finite propagation and locally compact follows from the finiteness of the support. As this two rules are continuous and their domain are respectivly dense in the Roe algebra and in the crossed product, the morphism extends to the $*$-isomorphism we were looking for.
+establishes an $*$-isomorphism between $\C[X]$ and the algebra of finitely supported functions from $\Gamma$ to $l^\infty(X,\K)$, its inverse being the $*$-morphism that associates to a function $a$ the convolution operator : 
+\[\big(a(\gamma)(\eta\otimes \xi)\big) (x)= (a(\gamma)\ast\eta)(x)\xi \quad, x\in X,\eta\in l^2(X),\xi\in H. \]
+That is it of finite propagation and locally compact follows from the finiteness of the support (it is of propagation the diameter of the support of $a$!). As this two maps are continuous and their domain are respectivly dense in the Roe algebra and in the crossed product, the morphism extends to the $*$-isomorphism we were looking for.
 \qed
 \end{dem}
 
