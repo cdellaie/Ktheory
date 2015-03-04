@@ -50,8 +50,8 @@ Moreover, $\text{Im}\ \Psi$ is a closed ideal in $A$, and $\lim ||f_n-\Psi(g_n)|
 \end{dem}
 
 \subsection{}
-Let $X$ be a discrete metric space with bounded geometry and $\Gamma$ its coarse groupoid. We denote by $\tilde A $ the $C(\Gamma)$-algebra $C_0(P_d(\Gamma))$, and by $A$ the $C^*$-algebra $C_0(P_d(X))$. As $P_d(\Gamma)$ is equivariantly homeomorphic to $\beta X \times P_d(X)$, the fiber $\tilde A_x$ is isomorphic to $A$ as a $C^*$-algebra.\\
- 
+Let $X$ be a discrete metric space with bounded geometry and $\Gamma$ its coarse groupoid. $\C[X]$ is the algebra of locally compacts operators with finite propagation on $l^2(X)\otimes H$. We denote by $\tilde A $ the $C(\Gamma)$-algebra $C_0(P_d(\Gamma))$, and by $A$ the $C^*$-algebra $C_0(P_d(X))$. As $P_d(\Gamma)$ is equivariantly homeomorphic to $\beta X \times P_d(X)$, the fiber $\tilde A_x$ is isomorphic to $A$ as a $C^*$-algebra.\\
+
 \begin{lem}
 Let $B$ be a $C^*$-algebra and $x\in X$. The morphism of groupoids $\iota : \{e_x\}\rightarrow \Gamma$ induces an isomorphism in $KK$-theory 
 \[\begin{tikzcd}[column sep = small] KK_*^\Gamma(\tilde A, l^\infty(X, B))\arrow{r}{\simeq} & KK_*(A, B)\end{tikzcd}.\]
@@ -67,13 +67,25 @@ If $T' = \iota^*\circ R(T)$, it is the constant operator with fiber $T_x\in \mat
 \qed
 \end{dem}
 
+Another result of interest for our study is the expression of the Roe algebras of our discrete space $X$ as crossed products. It was first proven by G. Yu in the case of $X$ being a finitely generated group with the word metric, the general version can be found in the article of G. Skandalis, J-L. Tu and G. Yu. \cite{SkTuYu}
+
 \begin{lem}
 Let $B$ be a coefficient $C^*$-algebra. The uniform Roe algebra of $X$  and the Roe algebra of $X$ are $*$-isomorphic to crossed-product algebras by $\Gamma$, respectively : 
-\[\begin{array}{ll} C_u^* (X,B) \simeq l^\infty(X,B) \rtimes \Gamma \\ C^* (X,B) \simeq l^\infty(X,\K\otimes B) \rtimes_r \Gamma \end{array}.\]
+\[\begin{array}{ll} C_u^* (X,B) \simeq l^\infty(X,B) \rtimes_r \Gamma \\ C^* (X,B) \simeq l^\infty(X,\K\otimes B) \rtimes_r \Gamma \end{array}.\]
 \end{lem}
 
 \begin{dem}
-A faire
+If $T\in \C[X]$. For $x,y\in X$, $T_{xy}\in \K$ is the compact operator defined by Riesz representation theorem as 
+\[\langle T(\delta_x \otimes \xi),\delta_y \otimes \eta\rangle =\langle T_{xy}\xi,\eta\rangle \ ,\xi, \eta\in H.\]
+
+Let us recall how one construct the left regular representation of $\Gamma$. For $x\in \Gamma^{(0)}=\beta X$, $\Gamma^x$ has a natural action on $l^2(\Gamma^x)$ :
+\[(\lambda_x(\gamma)\eta)(\gamma')=\eta(\gamma^{-1}\gamma')\quad,\gamma,\gamma'\in \Gamma^x,\eta\in l^2(\Gamma^x) .\] 
+
+To any couple $(x,y)\in \beta X\times \beta X$, there exists a unique $\gamma_x^y\in \Gamma$ such that $s(\gamma)=x$ and $r(\gamma)=y$. The map
+\[T\rightarrow \sum_{x,y} T_{xy} \lambda_x(\gamma_x^y)\]
+establishes an $*$-isomorphism between $\C[X]$ and the algebra of finitely supported functions from $\Gamma$ to $l^\infty(X,\K)$, its inverse being the $*$-morphism that associates to a function $a$ the multiplication operator : 
+\[\big(a(\gamma)(\eta\otimes \xi)\big) (x)= a(\gamma)(x)\eta(x)\xi , \eta\in l^2(X),\xi\in H. \]
+That is it of finite propagation and locally compact follows from the finiteness of the support. As this two rules are continuous and their domain are respectivly dense in the Roe algebra and in the crossed product, the morphism extends to the $*$-isomorphism we were looking for.
 \qed
 \end{dem}
 
