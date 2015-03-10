@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  4 MAR 2015 16:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  10 MAR 2015 19:48
 entering extended mode
 **C:/Users/Clément/Documents/GitHub/Ktheory/QuantitativeKKtheory/main.tex
 (C:/Users/Clément/Documents/GitHub/Ktheory/QuantitativeKKtheory/main.tex
@@ -1037,14 +1037,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--34
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
 
  []
 
 [9
 
 
-]) [10]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
+
+ []
+
+) [10]
 (C:\Users\Clément\Documents\GitHub\Ktheory\QuantitativeKKtheory\QuantitativeAs
 semblyMapForGroupoids.tex
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
@@ -1172,10 +1177,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 16310 strings out of 493921
- 295285 string characters out of 3147330
- 365676 words of memory out of 3000000
- 19208 multiletter control sequences out of 15000+200000
+ 16398 strings out of 493921
+ 297506 string characters out of 3147330
+ 368276 words of memory out of 3000000
+ 19296 multiletter control sequences out of 15000+200000
  14040 words of font info for 55 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  58i,16n,75p,1356b,926s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1197,7 +1202,7 @@ sfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/e
 uler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
 sbm7.pfb>
-Output written on main.pdf (19 pages, 317534 bytes).
+Output written on main.pdf (19 pages, 320738 bytes).
 PDF statistics:
  304 PDF objects out of 1000 (max. 8388607)
  74 named destinations out of 1000 (max. 500000)
