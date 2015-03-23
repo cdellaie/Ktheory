@@ -1,6 +1,6 @@
 \section{Introduction}
 
-La conjecture de Baum-Connes dérive de problèmes posés au départ en théorie des représentations. Les analogies entre la théorie de Fourier et les représentations des groupes finis ont ouvert une voie vers les représentations des groupes localement compacts : faire de l'analyse harmonique sur un groupe revient à décomposer en composantes irréductibles la représentation régulière gauche sur les fonctions de carrés intégrables sur le groupe $L^2(G)$. Ce problème est complètement compris pour les groupes compacts ainsi que pour les groupes abéliens localement compacts. A partir des travaux de Harish-Chandra, le cas des groupes de Lie reductifs commence à être attaquable. Ses travaux ont permis, entre autres, de determiner la mesure de Plancherel du groupe, donc de décomposer la représentation régulière gauche modulo les ensembles de représentations de mesure nulle. A l'époque de ces travaux, envisager l'étude des groupe de Lie réductifs comme une classe n'était pas une démarche évidente : les mathématiciens de l'époque pensaient que les techniques d'algèbres d'opérateurs et d'analyse fonctionnelle permetraient de généraliser les résultats obtenus à tous les groupes localement compacts.\\
+La conjecture de Baum-Connes dérive de problèmes posés au départ en théorie des représentations. Les analogies entre la théorie de Fourier et les représentations des groupes finis ont ouvert une voie vers les représentations des groupes localement compacts : faire de l'analyse harmonique sur un groupe revient à décomposer en composantes irréductibles la représentation régulière gauche sur les fonctions de carrés intégrables sur le groupe $L^2(G)$. Ce problème est complètement compris pour les groupes compacts ainsi que pour les groupes abéliens localement compacts. A partir des travaux de Harish-Chandra, le cas des groupes de Lie réductifs commence à être attaquable. Ses travaux ont permis, entre autres, de déterminer la mesure de Plancherel du groupe, donc de décomposer la représentation régulière gauche modulo les ensembles de représentations de mesure nulle. A l'époque de ces travaux, envisager l'étude des groupe de Lie réductifs comme une classe n'était pas une démarche évidente : les mathématiciens de l'époque pensaient que les techniques d'algèbres d'opérateurs et d'analyse fonctionnelle permetraient de généraliser les résultats obtenus à tous les groupes localement compacts.\\
 
 Fixons quelques notations. On note $G$ un groupe localement compact; si le groupe est discret, on le notera plus volontier $\Gamma$. Le but visé est donc l'étude des classes d'équivalence des représentations unitaires du groupe, c'est un ensemble appelé dual unitaire du groupe et noté $\hat G$. Les représentations $\pi : G \rightarrow U(H)$ ne sont pas nécessairement finies dimensionnelles, $H$ peut être un espace de Hilbert de dimension infinie, mais on demande tout de même à $\pi$ d'être fortement continue : pour tout $g\in G$, la fonction $v\mapsto \pi(g) v$ est continue.\\
 
@@ -55,7 +55,7 @@ Si $G$ a un élément de Kasparov, alors tout sous-groupe fermé de $G$ en a un.
 \begin{Res}
 L'existence d'un élément $\gamma$ a été démontrée pour tous les groupes localement compacts agissant de façon continue, propre et isométrique sur :
 \begin{itemize}
-\item une variété riemannienne $(M,g)$ complète simplement connexe àcourbure sectionnelle négative ou nulle, (Kasparov '$88$)
+\item une variété riemannienne $(M,g)$ complète simplement connexe à courbure sectionnelle négative ou nulle, (Kasparov '$88$)
 \item un immeuble de Bruhat-Ttis affine, (Kasparov Skandalis '$91$)
 \item un espace métrique unifomément locallement fini, faiblement géodésique et faiblement "bolique". (Kasparov Skandalis '$03$)
 \end{itemize}
@@ -99,16 +99,16 @@ K^{top}(G) \arrow{r}{\mu_{L^1}}\arrow{dr}{\mu_r} & K(L^1(G)) \arrow{d}\\
 \end{tikzcd},\]
 le problème étant de déterminer l'isomorphie ou non de la flèche verticale.\\
 
-De manière plus géérale, Lafforgue définit ce qu'il appelle des complétion inconditionnelle de $C_c(G)$. Munissant l'algèbre $C_c(G)$ d'une norme $||.||_{\mathcal A(G)}$ telle que
+De manière plus géérale, Lafforgue définit ce qu'il appelle des complétions inconditionnelles de $C_c(G)$. Munissant l'algèbre $C_c(G)$ d'une norme $||.||_{\mathcal A(G)}$ telle que
 \[\text{si } |f_1(g)|\leq |f_2(g)|\quad \text{alors } ||f_1||_{\mathcal A(G)}\leq||f_2||_{\mathcal A(G)},\]
 il la complète en une algèbre de Banach $\mathcal A(G)$, et montre qu'elle s'injecte dans $C^*_r G$, ce qui impose une factorisation 
 \[\begin{tikzcd}[column sep = small]
 K^{top}(G) \arrow{r}{\mu_{\mathcal A(G)}}\arrow{dr}{\mu_r} & K(\mathcal A(G)) \arrow{d}\\
-					& K(C^*_r)G)
+					& K(C^*_r G)
 \end{tikzcd}.\]
-Si l'on trouve une telle complétion inconditionnelle $\mathcal A(G)$ qui soit stable par calcul fonctionnel holomorphe, et dense dans $C^*_r G$, alors le diagramme commutatif précédent montre que Baum-Connes est vraie pour $G$, par principe d'Oka.(a détailler) Lafforque a montrer cela pour les groupes de Lie, et leurs réseaux qui ont la propriété de décroissance rapide (RD).\\
+Si l'on trouve une telle complétion inconditionnelle $\mathcal A(G)$ qui soit stable par calcul fonctionnel holomorphe, et dense dans $C^*_r G$, alors le diagramme commutatif précédent montre que Baum-Connes est vraie pour $G$, par principe d'Oka.(a détailler) Lafforque a montré cela pour les groupes de Lie, et leurs réseaux qui ont la propriété de décroissance rapide (RD).\\
 
-Voici quelques exemples pour finir cette section. Pour $SL(n,\R)$, on retrouve l'algèbre de Scwartz. Pour tous les sous-groupes discrets des groupes de Lie qui ont (RD), c'est l'algèbre de Jolissaint qui apparaît. Tous les réseaux cocompacts de $SL(3,\R)$ ( pour $n> 3$, c'est ouvert !), ainsi que ceux des groupes hyperboliques ou encore de $2$ groupes exceptionnels, ont (RD).  
+Voici quelques exemples pour finir cette section. Pour $SL(n,\R)$, on retrouve l'algèbre de Schwartz. Pour tous les sous-groupes discrets des groupes de Lie qui ont (RD), c'est l'algèbre de Jolissaint qui apparaît. Tous les réseaux cocompacts de $SL(3,\R)$ ( pour $n> 3$, c'est ouvert !), ainsi que ceux des groupes hyperboliques ou encore de $2$ groupes exceptionnels, ont (RD).  
 
 \subsection{Construction de la flèche}
 \section{Géométrie à l'infini}
