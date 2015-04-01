@@ -38,6 +38,5 @@
 \newcommand{\K}{\mathbb K}
 \newcommand{\B}{\mathbb B}
 \newcommand{\Cat}{\mathbb B / \mathbb K}
-\newcommand{\G}{\mathcal G }
 
 \setlength\parindent{0pt}

@@ -22,6 +22,11 @@
 \include{Groupoids}
 \include{StoneCech}
 \include{Asdim}
+
+\include{GDT}
+\include{BaumConnes}
+\include{rapport}
+\include{QuantitativeAssemblyMapForGroupoids}
 \include{Isom}
 
 \bibliographystyle{plain}

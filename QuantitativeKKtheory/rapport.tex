@@ -1,37 +1,135 @@
 \section{Application d'assemblage quantitative}
 
-Dans la suite, $\Gamma$ dénote un groupoïde localement compact de base $\Gamma^{(0)}=X$ et muni d'un système de Haar $(\lambda^x)_{x\in X}$. On rappelle qu'une suite exacte courte est dite semi-scindée si elle admet une section complètement positive. Pour éviter les phrases à rallonge, on parlera de bonne extension de $C^*$-algèbres pour une suite exacte courte semi-scindée et filtrée. Par équivalence de Morita, on entend les isomorphismes de groupes 
-\[M_A^{\epsilon , r} : K_*^{\epsilon, r }(A)\rightarrow K_*^{\epsilon,r}(A\otimes \K)\quad, \forall r\geq 0,\forall \epsilon\in (0,\frac{1}{4})\]
+\subsection{Longueur, propagation et suite exacte à six termes.}
+
+Dans la suite, $\G$ dénote un groupoïde localement compact de base $\G^{(0)}=X$ et muni d'un système de Haar $(\lambda^x)_{x\in X}$. On rappelle qu'une suite exacte courte est dite semi-scindée si elle admet une section complètement positive. 
+%Pour éviter les phrases à rallonge, on parlera de bonne extension de $C^*$-algèbres pour une suite exacte courte semi-scindée et filtrée. 
+Par équivalence de Morita, on entend les isomorphismes de groupes 
+\[\mathcal M_A^{\epsilon , r} : K_*^{\epsilon, r }(A)\rightarrow K_*^{\epsilon,r}(A\otimes \K)\quad, \forall r\geq 0,\forall \epsilon\in (0,\frac{1}{4})\]
 induit par $A\rightarrow A\otimes \K ; x\mapsto x\otimes e$, où $e$ est n'importe quel projecteur de rang $1$, $A$ une $C^*$-algèbre, et $\K$ l'idéal des opérateurs compacts sur l'espace de Hilbert séparable.\\
 
-\begin{lem} On suppose le groupoïde $\Gamma$ muni d'une longueur $l$.\\
+On suppose que le groupoïde est muni d'un système de longueur $l$, i.e. d'une famille d'applications $(l^x)_{x\in X}$ définies sur les fibres $\G^x$ à valeurs dans $\R_+$, telles que 
+\[\begin{array}{l}
+l^x(e_x)=0 \\
+l^{r(\gamma)}(\gamma)=l^{s(\gamma)}(\gamma^{-1}) \\
+l^x (\gamma_1^{-1} \gamma_2)	\leq l^x(\gamma_1)+l^x(\gamma_2) 	
+\end{array}\]
+
+ce qui permet de définir une filtration sur les algèbres produits croisés associées au groupoïde par :
+\[(A\rtimes \G)_r = \{f\in C_c(\G, A) : \text{ supp }f \subset \cup_{x\in X} B_x(e_x, r)\}\]
+où $B_x(e_x, r)$ dénote la boule $\{\gamma \in \G : l^{r(\gamma)}\leq r\}$. Ici, $\rtimes$ peut être à loisir $\rtimes_{red}$ ou $\rtimes_{max}$. On rapelle que $A\rtimes \G$ est fonctoriel en $A$, de la catégorie des $\G$-$C^*$-algèbres avec $*$-morphismes équivariants, dans celle des $C^*$-algèbres avec $*$-moprhismes. Pour $\phi : A\rightarrow B$ un $*$-morphisme, on note $\phi_\G : A\rtimes \G \rightarrow B\rtimes \G$ le morphisme induit. 
+
+\begin{lem} On suppose le groupoïde $\G$ localement compact, muni d'un système de Haar et d'une longueur $l$.\\
 Soit 
 $\begin{tikzcd}[column sep = small]
-0 \arrow{r} & J\arrow{r}& A \arrow{r} & A/J \arrow{r} & 0
-\end{tikzcd}$ une suite exacte semi-scindée et de $\Gamma$-$C^*$-algèbres. Alors la suite 
+0 \arrow{r} & J\arrow{r}{\phi}& A \arrow{r}{\psi} & A/J \arrow{r} & 0
+\end{tikzcd}$ une suite exacte semi-scindée de $\G$-$C^*$-algèbres. Alors la suite 
 $\begin{tikzcd}[column sep = small]
-0 \arrow{r} & J\times \Gamma\arrow{r}& A\times \Gamma \arrow{r} & A/J\times \Gamma \arrow{r} & 0
-\end{tikzcd}$ est une bonne extension.
+0 \arrow{r} & J\rtimes \G\arrow{r}{\phi_\G}& A\rtimes \G \arrow{r}{\psi_\G} & A/J\rtimes \G \arrow{r} & 0
+\end{tikzcd}$ est une suite exacte semi-scindée et filtrée.
 \end{lem}
 
 \begin{dem}
-Voir mes notes en anglais.\qed
+Par fonctorialité, $\psi_\G \circ \phi_\G = 0$. Soit $f\in C_c(G,A)$ telle que $\phi_\G(f)=0$, i.e. $\phi(f(\gamma))=0,\forall \gamma\in \G$. Alors, pour chaque $\gamma$, il existe un unique $g(\gamma)\in A'$ telle que $\Psi(g(\gamma))=f(\gamma)$. De plus, $\gamma \mapsto g(\gamma)$ est continue, de support contenu dans celui de $f$, donc $g\in C_c(\G,A')$ et $\phi_\G(g)=f$.\\
+
+Si maintenant $a\in A\rtimes \G$, il existe une suite de fonctions $f_n\in C_c(\G, A)$ telle que $||a-f_n||\rightarrow 0$. Mais $f_n-s_\G\circ \psi_\G (f_n)$ est annulée par $\psi_\G$, donc il existe $g_n\in  C_c(\G,J)$ telle que $\phi_\G(g_n)=f_n-s_\G\circ \psi_\G (f_n)$. Alors 
+\[\lim_{n}||a-\phi_\G(g_n)||=0\]
+et comme $\text{Im }\phi_ \G $ est fermé, $\text{Ker }\psi_G = \text{ Im } \phi_\G$.\\
+La suite est bien scindée par $\sigma_\G$, et les morphismes respecte la propagation, elle est donc filtrée.\\
+\qed
 \end{dem}
 
-Si l'élément $z\in KK^\Gamma(A,B)$ est représenté par un cycle $(H,\pi,T)$, nous allons définir sa transformée de Kasparov $J_\Gamma(z)\in KK(A\rtimes_r \Gamma, B\rtimes_r\Gamma)$. \\
+La proposition suivante découle du lemme.
+\begin{prop}
+Il existe une paire de contrôle $(\lambda,h)$ telle que pour toute extension semi-scindée de $\G$-$C^*$-algèbres
+\[\begin{tikzcd}[column sep = small]
+0 \arrow{r} & J\arrow{r}{\phi}& A \arrow{r}{\psi} & A/J \arrow{r} & 0
+\end{tikzcd},\]
+les diagrammes suivant soient commutatifs et exacts :
+\[\begin{tikzcd}[column sep = small]
+\hat K_0(J\rtimes_r \G) \arrow{r}{\phi_{\G,*}}&\hat K_0( A\rtimes_r \G ) \arrow{r}{\psi_{\G,*}} & \hat K_0( A/J\rtimes_r \G) \arrow{d} \\
+\hat K_1(A/J\rtimes_r \G) \arrow{u} \arrow{r}{\phi_{\G,*}}& \hat K_1( A\rtimes_r \G ) \arrow{r}{\psi_{\G,*}} & \hat K_1( J\rtimes_r \G)
+\end{tikzcd},\]
+\[\begin{tikzcd}[column sep = small]
+\hat K_0(J\rtimes_{max} \G) \arrow{r}{\phi_{\G,*}}&\hat K_0( A\rtimes_{max} \G ) \arrow{r}{\psi_{\G,*}} & \hat K_0( A/J\rtimes_{max} \G) \arrow{d} \\
+\hat K_1(A/J\rtimes_{max} \G) \arrow{u} \arrow{r}{\phi_{\G,*}}& \hat K_1( A\rtimes_{max} \G ) \arrow{r}{\psi_{\G,*}} & \hat K_1( J\rtimes_{max} \G)
+\end{tikzcd}.\]
+\end{prop}
 
-Tout d'abord, le cas pair. Notons $P_\Gamma=P\otimes_B id_{B\rtimes_r \Gamma}$ l'opérateur sur $H\otimes B\rtimes_r \Gamma$ induit par $P=\frac{T+id_{H\otimes B}}{2}$, et $\pi_\Gamma = \pi \otimes id$. Si l'on pose 
-\[\mathcal E :=\{(x,y)\in A\rtimes_r \Gamma \oplus \mathcal L (H\otimes B\rtimes_r \Gamma) : P_\Gamma \pi_\Gamma(x) P_\Gamma = y \ mod \ \K\otimes B\rtimes_r \Gamma\}, \]
+\subsection{Transformée de Kasparov}
+Soient $A$ et $B$ deux $\G$-$C^*$-algèbres. On notera $H$ un espace de Hilbert séparable, $l^2(\Z)$ par exemple, et $H_\G = H\otimes L^2(\G,\lambda)$. Le module hilbertien standard pour $B$ est noté $H_B=H_G\otimes B$, et la $C^*$-algèbre des opérateurs compacts pour $H_B$ est noté $K_B = K\otimes L^2(\G,\lambda)\otimes B$.\\
+
+Tout $K$-cycle $z\in KK^\G(A,B)$ peut être représenté comme la classe d'un triplet $(H_B,\pi ,T)$ où :\\
+
+\begin{itemize}
+\item[$\bullet$] $\pi : A \rightarrow \mathcal L_B(H_B)$ est une $*$-représentation de $A$ sur $H_B$.
+\item[$\bullet$] $T\in \mathcal L_B(H_B)$ est un opérateur autoadjoint
+\item[$\bullet$] $\pi$ et $T$ vérifient les conditions de $K$-cycles, i.e. $[T,\pi(a)]$, $\pi(a)(T^2-id_{H_B})$ et $\pi(a)(\gamma.T-T)$ sont des opérateurs compacts, pour tout $a\in A$, $\gamma\in \G$.\\
+\end{itemize} 
+
+On peut définir $T_\G = T\otimes id_{B\rtimes_r \G} \in \mathcal L_B(H_B\otimes (B\rtimes_r\G))\simeq \mathcal L_B(H_{B\rtimes_r \G})$, et $\pi_G : A\rtimes_r \G\rightarrow \L_B(H_{B\rtimes_r\G})$. Le $K$-cycle $(H_{B\rtimes_r \G},\pi_\G,T_\G)$ représente l'élément $j_{red,\G}(z)\in KK(A\rtimes_r \G,B\rtimes_r \G)$. Nous allons construire un morphisme contrôlé associé à $z$,  
+\[J_{red,\G}(z) : \hat K_(A\rtimes_r \G)\rightarrow \hat K(B\rtimes \G),\]
+qui induit la multiplication à droite par $j_{red,\G}(z)$ en $K$-théorie.\\
+
+\subsubsection{Cas impair} Considérons tout d'abord le cas où $z\in KK_1(A,B)$. Soit $(H_B,\pi, T)$ un $K$-cycle représentant $z$. On pose $P=\frac{1+T}{2}$ et $P_\G = P\otimes id_{B\rtimes_r \G}$. Définissons
+\[E^{(\pi,T)}_r :=\{(x,P_\G\pi_\G(x)P_\G+y) : x\in (A\rtimes_r \G)_r,  y\in K\otimes(B\rtimes_r \G)_r\}\]
+ce qui nous donne une extension de $C^*$-algèbres filtrées
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{B\rtimes_r\G}\arrow{r} & E^{(\pi,T)} \arrow{r} & A\rtimes_r \G \arrow{r}& 0
+\end{tikzcd}\]
+et semi-scindée par $s : \left\{\begin{array}{lll}A\rtimes_r \G & \rightarrow & E^{(\pi,T)} \\ x & \mapsto & (x, P_\G \pi_\G(x)P_\G)\end{array}\right.$.\\
+
+Montrons que le bord de cette extension ne dépend que de la classe $z$ du $K$-cycle. Soit donc $(H_B, \pi_j,T_j), j=0,1$ deux $K$-cycles homotopes via $(H_{B[0,1]},\pi,T)$. On note $e_t$ l'évaluation en $t\in[0,1]$ pour un élément de $B[0,1]$. L'application  
+\[\phi : \left\{\begin{array}{lll}E^{(\pi,T)} & \rightarrow & E^{(\pi_t,T_t)} \\ (x,y) & \mapsto & (x, y_t)\end{array}\right.\]
+vérifie $\phi(K_{B[0,1] \rtimes_r \G})\subset K_{B \rtimes_r \G})$ et fait commuter le diagramme
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{B[0,1] \rtimes_r \G}\arrow{r}\arrow{d}{\phi_{|K_{B[0,1] \rtimes_r \G}}} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi} & A\rtimes_r \G \arrow{r}\arrow{d}{=}& 0 \\
+0\arrow{r} & K_{B \rtimes_r \G}\arrow{r} &  E^{(\pi_t,T_t)} \arrow{r} & A\rtimes_r \G \arrow{r} & 0
+\end{tikzcd}.\]
+
+D'après la remarque $3.7$ de \cite{OY2}, on a donc la relation suivante sur les bords contrôlés
+\[D_{K_{B\rtimes_r\G,E^{(\pi_t,T_t)}}} = \phi_* \circ D_{K_{B[0,1]\rtimes_r\G},E^{(\pi,T)}}.\]
+Comme $id \otimes e_t$ établit une homotopie entre $id\otimes e_0$ et $id\otimes e_1$, et que si $2$ $*$-morphismes sont homotopes, alors ils sont égaux en $K$-théorie contrôlée, on obtient que 
+\[D_{K_{B\rtimes_r \G}, E^{(\pi_0,T_0)}}=D_{K_{B\rtimes_r \G}, E^{(\pi_1,T_1)}}\]
+et le bord de l'extension $E^{(\pi,T)}$ ne dépend que de $z$.\\
+
+\begin{definition}
+La transformée de Kasparov contrôlée d'un élément $z\in KK_1^\G(A,B)$ est définie comme la composition
+\[J_{red,\G}(z)=\mathcal M_{B\rtimes_r \G}^{-1}\circ D_{K_{B\rtimes_r \G}, E^{(\pi,T)}}.\]
+\end{definition}
+
+\begin{prop}
+Soient $A$ et $B$ deux $\G$-$C^*$-algèbres. Pour tout élément $z\in KK^\G_1(A,B)$, il existe un morphisme contrôlé
+\[J_{red,\G}(z) : \hat K_*(A\rtimes_r \G)\rightarrow \hat K_{*+1}(B\rtimes_r \G)\]
+tel que :
+\begin{enumerate}
+\item[(i)] $J_{red,\G}(z)$ induit en $K$-théorie la multiplication à droite par $j_{red,\G}(z)$;
+\item[(ii)] $J_{red,\G}$ est additif, i.e.
+\[J_{red,\G}(z+z')=J_{red,\G}(z)+J_{red,\G}(z').\]
+\item[(iii)] Pour tout $\G$-morphisme $f : A_1\rightarrow A_2$,
+\[J_{red,\G}(f^*(z))=J_{red,\G}(z)\circ f_{\G,red,*}\] pour tout $z\in KK_1^G(A_2,B)$.
+\end{enumerate}
+\end{prop}
+
+\begin{dem}
+\begin{enumerate}
+\item[(i)] Le bord $[\delta_{K_{B\rtimes_r \G},E^{(_pi,T)}}]\in KK_1(A\rtimes_r \G, B\rtimes_r \G)$ associé à l'extension $E^{(\pi,T)}$ induit par définition, modulo équivalence de Morita, l'application $j_{red,\G}$, ce qui assure directement ce point.
+\item[(ii)] 
+\end{enumerate}
+\end{dem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Transformée de Kasparov ancien}
+Si l'élément $z\in KK^\G(A,B)$ est représenté par un cycle $(H,\pi,T)$, nous allons définir sa transformée de Kasparov $J_\G(z)\in KK(A\rtimes_r \G, B\rtimes_r\G)$. \\
+
+Tout d'abord, le cas pair. Notons $P_\G=P\otimes_B id_{B\times_r \G}$ l'opérateur sur $H\otimes B\times_r \G$ induit par $P=\frac{T+id_{H\otimes B}}{2}$. Si l'on pose 
+\[\mathcal E :=\{(x,y)\in A\times_r \G \oplus \mathcal L (H\otimes B\times_r \G) : P_\G \pi_\G(x) P_\G = y \ mod \ \K\otimes B\times_r \G\}, \]
 observons l'extension
 \[(E): \begin{tikzcd}[column sep = small]
-0\arrow{r} & \K \otimes B\rtimes_r \Gamma \arrow{r} & \mathcal E \arrow{r} & A\rtimes_r \Gamma \arrow{r} & 0
+0\arrow{r} & \K \otimes B\times_r \G \arrow{r} & \mathcal E \arrow{r} & A\times_r \G \arrow{r} & 0
 \end{tikzcd}.\] 
-
-Remarquons que $\mathcal E$ est le pull-back du diagramme commutatif
-\[\begin{tikzcd}[column sep= small]
- \mathcal E \arrow[dashed]{r} \arrow[dashed]{d} & A\rtimes_r \Gamma \arrow{d}{P_\Gamma \pi_\Gamma(-)P_\Gamma}\\
-\mathcal L(H\otimes B \rtimes_r \Gamma)\arrow{r} & \mathcal L(H\otimes B\rtimes_r \Gamma) / (\K\otimes B\rtimes_r \Gamma)
-\end{tikzcd}\]
 
 Toute extension $(Ext):\begin{tikzcd}[column sep = small]0\arrow{r}& A' \arrow{r} & A \arrow{r} & A'' \arrow{r} & 0\end{tikzcd}$ induit une application contrôlée 
 \[D_{\text{Ext}}=D_{A'}^A : \hat K(A'') \rightarrow \hat K(A'). \]
@@ -39,17 +137,17 @@ Montrons que $D_{E}$ ne dépend que de la classe de $z$, et pas de $\pi$ et $T$.
 \textbf{A FAIRE}\\
 
 \begin{definition}
-La transformée de Kasparov d'un élément $z$ de $KK^\Gamma(A,B)$ est le morphisme contrôlé 
-\[J_\Gamma (z) = M_{B\rtimes_r \Gamma}^{-1} \circ D_E : \hat K_*(A\rtimes_r \Gamma)\rightarrow \hat K_* (B\rtimes_r \Gamma),\]
+La transformée de Kasparov d'un élément $z$ de $KK^\G(A,B)$ est le morphisme contrôlé 
+\[J_\G (z) = M_{B\times_r \G}^{-1} \circ D_E : \hat K_*(A\times_r \G)\rightarrow \hat K_* (B\times_r \G),\]
 où $(E)$ est l'extension précédemment décrite.
 \end{definition}
 
-Ce morphisme $J_\Gamma : KK^\Gamma(A,B)\rightarrow \text{Hom}_0(\hat K(A\rtimes_r \Gamma),\hat K(B\rtimes_r \Gamma))$ nous permet de définir l'application d'assemblage associée à n'importe quel élément de $\hat K(A\rtimes_r \Gamma)$ par simple évaluation :
-\[Ind_x (z)= J_\Gamma ( z ) (x).\]
+Ce morphisme $J_\G : KK^\G(A,B)\rightarrow \text{Hom}_0(\hat K(A\times_r \G),\hat K(B\times_r \G))$ nous permet de définir l'application d'assemblage associée à n'importe quel élément de $\hat K(A\times_r \G)$ par simple évaluation :
+\[Ind_x (z)= J_\G ( z ) (x).\]
 
-La conjecture de Baum-Connes s'intéresse à l'application d'assemblage associé à un certain élément. Dans le cas des groupoïdes, il existe une fonction continue à support compact $h :P_d(\Gamma) \rightarrow [0,1]$ telle que 
-\[\sum_{\gamma\in \Gamma} \gamma (h^2)=1.\]
-Alors $ \gamma \rightarrow \sum_{\gamma\in \Gamma} h \gamma(h)$ définit un projecteur de $A=C_0(P_d(\Gamma))\rtimes_r \Gamma$ de propagation finie, majorée par une certaine constante $s$. Comme les fonctions $h$ admissibles forment un ensemble convexe, la classe de $[e_h, 0]\in K_0^{\epsilon,r (A)}$ ne dépend pas de la fonction $h$ choisie, et l'application d'assemblage de Baum-Connes est définie par l'évaluation en cette classe.
+La conjecture de Baum-Connes s'intéresse à l'application d'assemblage associé à un certain élément. Dans le cas des groupoïdes, il existe une fonction continue à support compact $h :P_d(\G) \rightarrow [0,1]$ telle que 
+\[\sum_{\gamma\in \G} \gamma (h^2)=1.\]
+Alors $ \gamma \rightarrow \sum_{h\in \G} h \gamma(h)$ définit un projecteur de $A=C_0(P_d(\G))\times_r \G$ de propagation finie, majorée par une certaine constante $s$. Comme les fonctions $h$ admissibles forment un ensemble convexe, la classe de $[e_h, 0]\in K_0^{\epsilon,r (A)}$ ne dépend pas de la fonction $h$ choisie, et l'application d'assemblage de Baum-Connes est définie par l'évaluation en cette classe.
 
 \section{Géométrie asymptotique}
 
