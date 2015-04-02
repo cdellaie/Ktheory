@@ -135,7 +135,7 @@ vérifie
 \end{tikzcd}.\]
 \item[$\bullet$] Elle entrelace les sections de ces deux extensions.
 \end{enumerate}
-La remarque $3.7$ de \cite{OY2} assure donc que $D_{K_{B\rtimes_r \G}, E^{f^*(\pi,T)} } =  D_{K_{B\rtimes_r \G}, E^{(\pi,T)} }\circ f_{\G,*}$, et l'assertion est claire en composant par $\mathcal M_{B\rtimes_r \G}^{-1}$.
+La remarque $3.7$ de \cite{OY2} assure donc que \[D_{K_{B\rtimes_r \G}, E^{f^*(\pi,T)} } =  D_{K_{B\rtimes_r \G}, E^{(\pi,T)} }\circ f_{\G,*}\], et l'assertion est claire en composant par $\mathcal M_{B\rtimes_r \G}^{-1}$.
 \end{enumerate}
 \end{dem}
 
