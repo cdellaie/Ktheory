@@ -1,10 +1,10 @@
 \select@language {french}
-\contentsline {section}{\numberline {1}Application d'assemblage quantitative}{4}{section.1}
-\contentsline {subsection}{\numberline {1.1}Longueur, propagation et suite exacte \IeC {\`a} six termes.}{4}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Transform\IeC {\'e}e de Kasparov}{5}{subsection.1.2}
-\contentsline {subsubsection}{\numberline {1.2.1}Cas impair}{6}{subsubsection.1.2.1}
-\contentsline {subsection}{\numberline {1.3}Transform\IeC {\'e}e de Kasparov ancien}{7}{subsection.1.3}
-\contentsline {section}{\numberline {2}G\IeC {\'e}om\IeC {\'e}trie asymptotique}{8}{section.2}
+\contentsline {section}{\numberline {1}Application d'assemblage quantitative}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Longueur, propagation et suite exacte \IeC {\`a} six termes.}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Transform\IeC {\'e}e de Kasparov}{4}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Cas impair}{5}{subsubsection.1.2.1}
+\contentsline {subsection}{\numberline {1.3}Transform\IeC {\'e}e de Kasparov, ancienne version}{7}{subsection.1.3}
+\contentsline {section}{\numberline {2}G\IeC {\'e}om\IeC {\'e}trie asymptotique}{7}{section.2}
 \contentsline {section}{\numberline {3}English Notes}{9}{section.3}
 \contentsline {subsection}{\numberline {3.1}}{10}{subsection.3.1}
 \contentsline {section}{\numberline {4}Assembly maps for groupoids and for coarse spaces}{13}{section.4}

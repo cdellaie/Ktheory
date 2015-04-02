@@ -113,15 +113,36 @@ tel que :
 
 \begin{dem}
 \begin{enumerate}
-\item[(i)] Le bord $[\delta_{K_{B\rtimes_r \G},E^{(_pi,T)}}]\in KK_1(A\rtimes_r \G, B\rtimes_r \G)$ associé à l'extension $E^{(\pi,T)}$ induit par définition, modulo équivalence de Morita, l'application $j_{red,\G}$, ce qui assure directement ce point.
-\item[(ii)] 
+
+\item[(i)] Le bord $[\delta_{K_{B\rtimes_r \G},E^{(\pi,T)}}]\in KK_1(A\rtimes_r \G, B\rtimes_r \G)$ associé à l'extension $E^{(\pi,T)}$ induit par définition, modulo équivalence de Morita, l'application $j_{red,\G}$, ce qui assure directement ce point.
+
+\item[(ii)] Si $z,z'$ sont deux eléments de $KK_1^G(A,B)$, repésentés par des $K$-cycles $(H_B,\pi_j,T_j)$, et si l'on note $(H_B,\pi,T)$ un $K$-cycle représentant la somme $z+z'$, alors $E^{(\pi,T)}$ est naturellement isomorphe à l'extension somme des $E_j:=E^{(\pi_j,T_j)}$
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{B\rtimes_r \G} \arrow{r} & D \arrow{r} & A\rtimes_r \G \arrow{r} & 0
+\end{tikzcd}\]
+où 
+\[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K(E_j,E_i)\right\}.\]
+Par naturalité du bord contrôlé \cite{OY2}, le bord de la somme de deux extensions est la somme des bords de chaque extension, d'où le résultat.
+\item[(iii)] Soit $z\in KK_1^\G(A_2,B)$, représenté par un cycle $(H_B,\pi,T)$. Un représentant de $f^*(z)$ est $(H_B,f^*\pi,T)$ avec bien sûr $f^*\pi=\pi \circ f$. L'application 
+\[\phi : \left\{\begin{array}{lll} E^{f^*(\pi,T)} & \rightarrow & E^{(\pi,T)} \\
+( x, P_\G(f^*\pi)(x)P_\G+y) & \rightarrow & ( f_\G(x), P_\G(f^*\pi)(x)P_\G+y) \end{array}\right. \]
+vérifie
+\begin{enumerate}
+\item[$\bullet$] $\phi(K_{B\rtimes_r \G})\subset K_{B\rtimes_r \G}$, et s'insère dans le diagramme
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{B\rtimes_r \G}\arrow{r}\arrow{d}{=} & E^{f^*(\pi,T)} \arrow{r}\arrow{d}{\phi}& A_1\rtimes_r \G\arrow{r}\arrow{d}{f_\G} & 0\\
+0\arrow{r} & K_{B\rtimes_r \G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A_r\rtimes_r \G\arrow{r} & 0
+\end{tikzcd}.\]
+\item[$\bullet$] Elle entrelace les sections de ces deux extensions.
+\end{enumerate}
+La remarque $3.7$ de \cite{OY2} assure donc que \[D_{K_{B\rtimes_r \G}, E^{f^*(\pi,T)} } =  D_{K_{B\rtimes_r \G}, E^{(\pi,T)} }\circ f_{\G,*}\], et l'assertion est claire en composant par $\mathcal M_{B\rtimes_r \G}^{-1}$.
 \end{enumerate}
 \end{dem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Transformée de Kasparov ancien}
+\subsection{Transformée de Kasparov, ancienne version}
 Si l'élément $z\in KK^\G(A,B)$ est représenté par un cycle $(H,\pi,T)$, nous allons définir sa transformée de Kasparov $J_\G(z)\in KK(A\rtimes_r \G, B\rtimes_r\G)$. \\
 
 Tout d'abord, le cas pair. Notons $P_\G=P\otimes_B id_{B\times_r \G}$ l'opérateur sur $H\otimes B\times_r \G$ induit par $P=\frac{T+id_{H\otimes B}}{2}$. Si l'on pose 
