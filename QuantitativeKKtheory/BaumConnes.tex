@@ -13,11 +13,30 @@ censé être un isomorphisme. La point important est que le membre de gauche peu
 En '$94$, Baum, Connes et Higson construisent effectivement ce groupe $K^{top}(G)$ et l'application d'assemblage $\mu_r$ en utilisant la $KK$-théorie bivariante de Kasparov : 
 \[K^{top}(G)=\varinjlim_{X G\text{-compact propre }} KK(C_0(X), \C).\]
 
-Une remarque : les travaux de Harish-Chandra permettent le calcul de $K_*(C^*_r G)$ pour $G$ un groupe de Lie réductif connexe, et on sait calculer la $K$-homologie équivariante $K^{top}(G)$ d'un tel groupe. Wasserman a donné une preuve dans une note de l'Académie des Sciences en '$87$ de la conjecture de Connes-Kasparov pour ces groupes, et on sait depuis que cette conjecture est équivalente, pour $G$ réductif connexe, à la conjceture de Baum-Connes.\\
+Une remarque : les travaux de Harish-Chandra permettent le calcul de $K_*(C^*_r G)$ pour $G$ un groupe de Lie réductif connexe, et on sait calculer la $K$-homologie équivariante $K^{top}(G)$ d'un tel groupe. Wasserman a donné une preuve dans une note de l'Académie des Sciences en '$87$ de la conjecture de Connes-Kasparov pour ces groupes, et on sait depuis que cette conjecture est équivalente, pour $G$ réductif connexe, à la conjecture de Baum-Connes.\\
 
 Dans la suite, nous présenterons différentes méthodes qui servent à démontrer la conjecture de Baum-Connes.\\
 
 \section{Méthode Dirac-Dual-Dirac}
+
+\subsection{Premières occurences de l'élément $\gamma$}
+
+L'élément $\gamma$ apparaît pour la première fois lors du spectaculaire tour de force de Higson et Kasparov, lorsqu'ils arrivent à prouver en $1996$ la conjecture de Baum-Connes pour tous les groupes ayant la propriétés de Haagerup, dans leur article \textit{Operator $K$-theory for groups which act properly and isometrically on Euclidean Spaces}, ainsi que dans l'article
+\textit{$E$-theory and $KK$-theory for groups which act properly and isometrically on Hilbert spaces}.\cite{HigsonKasparov} Rappelons qu'un groupe $G$ localement compact a Haagerup s'il agit par isométries affines et proprement sur un espace de Hilbert $\mathcal H$. Si l'on note l'action
+\[g\xi = \pi(g)\xi + b(g) \quad,\forall g\in G ,\xi\in \mathcal H\]
+où $\pi$ est une représentation unitaire et $b$ un cocycle associé à $\pi$, alors la proprété est équivalente à la condition $\lim_{g\rightarrow\infty} ||b(g)||=\infty$.\\
+
+Leur stratégie consiste à associer à tout espace de Hilbert $H$ une $C^*$-algèbre $A(H)$, ainsi qu'un champ de $C^*$-algèbres au dessus de $[0,1]$ dont la fibre au dessus de zéro est $A(H)$, d'où une extension
+\[0\rightarrow (A_t(H))_{t\in (0,1]}\rightarrow (A_t(H))_{t\in [0,1]}\rightarrow A(H)\rightarrow 0.\]
+Lorsque l'on prend pour espace de Hilbert l'espace $\mathcal H$ sur lequel $G$ agit proprement par isométries affines, ils montrent que $A(H)$ est une $G$-$C^*$-algèbre propre. Puis sont construits deux éléments dit de Dirac $D\in KK^G(\C,A(\mathcal H))$ et Dual-Dirac $\eta\in KK^G(A(\mathcal H),\C)$ dont le produit $\gamma = D\otimes_{A(\mathcal H)}\eta\in K^G(\C,\C)$ vaut $1$. \\
+
+Dans l'article original, Higson et Kasparov utilisent la $E$-théorie et construisent en fait deux éléments $\alpha\in E^G(\C,A(\mathcal H))$ et Dual-Dirac $\beta\in E^G(A(\mathcal H),\C)$, dont ils montrent que la composition $\alpha \circ \beta \in E^G(\C,\C)$ vaut $1$ en $E$-théorie. Les résultats de compatibilité entre $E$-théorie et $KK$-théorie, notamment entre produit de Kasparov et composition des morphismes asymptotiques, leur permet d'affirmer l'égalité analogue pour les éléments correspondants en $KK$-théorie. \\
+
+La thèse de J-L. Tu contient une preuve d'une généralisation de ce résultat à tout groupoïde localement compact à base dénombrable muni d'un système de Haar. Si un tel groupoïde agit de façon continue par isométries affines sur un champ d'espaces de Hibert affines, alors les applications d'assemblages réduite et maximale sont des isomorphisme, ainsi que l'application canonique $\lambda : K_*(C^*G)\rightarrow K_*(C_r^* G)$. N'utilisant que la $KK$-théorie, il obtient des résultats plus forts, notamment que tout groupe localement compact qui a Haagerup est $K$-moyennable.\\ 
+
+Le reste de la section est dédié au rappel des constructions principales. Préférant utiliser la $KK$-théorie, nous avons préféré suivre l'article de J-L. Tu \cite{TuThese}. 
+
+\subsection{}
 Cette section se base sur un exposé donné par Maria Paula Gomez Aparicio lors du groupe de travail "KK-théorie et groupes quantiques" à Paris Diderot en janvier $2015$.\\
 
 \begin{definition}
@@ -127,7 +146,7 @@ KK(C_0(P_d(X)),B)\arrow{r}{\tau_X}& KK(C^*(X,C_0(P_d(X))),C^*(X,B)) \arrow{r}{-\
 \end{tikzcd}\]
 
 Cela définit une application d'assemblage asymptotique $A_{X,B} : KX_*(X,B)\rightarrow K(C^*(X,B))$, où $KX_*(X,B)=\varinjlim_{d\rightarrow \infty} KK(C_0(P_d(X)),B)$ est une version non équivariante de la $K$-homologie de $X$.
-\begin{conj}[Baum-Connes asymptotique] Si $X$ est à géométrie uniformément bornée, alors $A_X$ est un ismorphisme.
+\begin{conj}[Baum-Connes asymptotique] Si $X$ est à géométrie uniformément bornée, alors $A_X$ est un isomorphisme.
 \end{conj}
 
 Ce point de vue constitue une des stratégies possibles pour démontrer Baum-Connes pour une certaines classe de groupes. Si $\Gamma$ est un groupe discret finiement engendré, on peut construire, relativement à n'importe quel système de générateurs $S$, une métrique invariante à gauche, et elle est unique à équivalence asymptotique près. Il existe donc une structure "à l'infini " naturelle sur le groupe $\Gamma$, et l'on peut observer l'application d'assemblage asymptotique sur cet espace. Bien qu'a priori la conjecture de Baum-Connes pour $\Gamma$ soit complètement décorrélée de cette situation, Yu a montré que l'application d'assemblage pour l'espace asymptotique $(\Gamma, d_S)$ est naturellement équivalente à l'application d'assemblage pour $\Gamma$ à coefficients dans $l^\infty(\Gamma, H)$, $H$ étant l'espace de Hilbert séparable.

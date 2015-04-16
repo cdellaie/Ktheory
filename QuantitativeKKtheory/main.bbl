@@ -61,6 +61,12 @@ Gerard~J. Murphy.
 \newblock {\em $C^*$-algebras and operator theory}.
 \newblock Academic Press Inc., 1990.
 
+\bibitem{HigsonKasparov}
+Gennadi~Kasparov Nigel~Higson.
+\newblock $e$-theory and $kk$-theory for groups which act properly and
+  isometrically on hilbert spaces.
+\newblock {\em Inventiones Mathematicae}, 144:23--74, 2001.
+
 \bibitem{BaumConnes}
 Alain~Connes Paul~Baum.
 \newblock Geometric $k$-theory for lie groups and foliations.
@@ -93,15 +99,20 @@ Tu~J.L. Yu~G. Skandalis, G.
 \newblock The coarse baum-connes conjecture and groupoids.
 \newblock {\em Topology}, 41(4):807--834, 2002.
 
-\bibitem{TuNovikov}
-Jean-Louis Tu.
-\newblock a conjceture de novikov pour les feuilletages hyperboliques.
-\newblock {\em $K$-theory}, 16(2):129--184, 1999.
-
 \bibitem{TuBC}
 Jean-Louis Tu.
 \newblock The baum-connes conjecture for groupoids.
 \newblock {\em $C^*$-algebras}, 18:227--242, 1999.
+
+\bibitem{TuThese}
+Jean-Louis Tu.
+\newblock La conjecture de baum-connes pour les feuilletages moyennables.
+\newblock {\em $K$-theory}, 17:215--264, 1999.
+
+\bibitem{TuNovikov}
+Jean-Louis Tu.
+\newblock La conjecture de novikov pour les feuilletages hyperboliques.
+\newblock {\em $K$-theory}, 16(2):129--184, 1999.
 
 \bibitem{TuBC2}
 Jean-Louis Tu.
