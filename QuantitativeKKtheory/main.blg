@@ -1,15 +1,13 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
-A level-1 auxiliary file: BaumConnes.aux
+A level-1 auxiliary file: rapport.aux
+A level-1 auxiliary file: QuantitativeAssemblyMapForGroupoids.aux
+A level-1 auxiliary file: Isom.aux
+A level-1 auxiliary file: MayerVietoris.aux
 The style file: plain.bst
 Database file #1: biblio.bib
-I was expecting a `,' or a `}'---line 109 of file biblio.bib
- : 
- : month = "10"
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 119 of file biblio.bib
  : 
- : month = ""
+ : month = "10"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 129 of file biblio.bib
@@ -18,6 +16,11 @@ I was expecting a `,' or a `}'---line 129 of file biblio.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 139 of file biblio.bib
+ : 
+ : month = ""
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 149 of file biblio.bib
  : 
  : month = "Summer"
 (Error may have been on previous line)

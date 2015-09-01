@@ -16,6 +16,12 @@ Joachim Cuntz.
 \newblock {\em Algebraic K-theory, Number Theory, Geometry and Analysis}, pages
   55--79, 1982.
 
+\bibitem{GTY}
+G.~Yu E.~Guentner, R.~Tessera.
+\newblock A notion of geometric complexity and its application to topological
+  rigidity.
+\newblock {\em Inventiones Mathematicae}, 189:315--357, 2012.
+
 \bibitem{LeGall}
 Pierre-Yves~Le Gall.
 \newblock Thesis.
@@ -123,5 +129,16 @@ Jean-Louis Tu.
 N.E. Wegge-Olsen.
 \newblock {\em K-theory and $C^*$-algebras, a friendly approach}.
 \newblock Oxford University Press, 1993.
+
+\bibitem{Yu1}
+G.~Yu.
+\newblock The novikov conjecture for groups with finite asymptotic dimension.
+\newblock {\em Ann. of Math.}, 2(2):325--355, 1998.
+
+\bibitem{Yu2}
+G.~Yu.
+\newblock The coarse baum-connes conjecture for spaces which admit a uniform
+  embedding into hilbert space.
+\newblock {\em Invent. Math.}, 139(1):201--240, 2000.
 
 \end{thebibliography}
