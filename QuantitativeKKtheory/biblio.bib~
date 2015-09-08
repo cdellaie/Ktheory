@@ -38,6 +38,13 @@
     pages   = "97-136"
 }
 
+@article{Cuntz,
+    title = "K-theory and $C^*$-algebras",
+    author = "Joachim Cuntz",
+    journal = "Algebraic K-theory, Number Theory, Geometry and Analysis",
+    year = "1982",
+    pages="55-79",
+ }
 
 @article{GrothendieckNuc,
     author  = "Alexandre Grothendieck",
@@ -49,6 +56,16 @@
     pages   = "193-200"
 }
 
+@article{GTY,
+    author  = "E. Guentner, R. Tessera, G. Yu",
+    title   = "A notion of geometric complexity and its application to topological rigidity",
+    year    = "2012",
+    journal = "Inventiones Mathematicae",
+    volume  = "189",
+    number  = "",
+    pages   = "315-357"
+}
+
 @book{Hatcher,
     title = "Algebraic Topology",
     author = "A. Hatcher",
@@ -56,12 +73,71 @@
     year = "2001"
  }
 
+@article{HigsonKasparov,
+    author  = "Nigel Higson, Gennadi Kasparov",
+    title   = "$E$-theory and $KK$-theory for groups which act properly and isometrically on Hilbert spaces",
+    year    = "2001",
+    journal = "Inventiones Mathematicae",
+    volume  = "144",
+    pages   = "23-74"
+}
+
+@article{Lafforgue,
+    author  = "Vincent Lafforgue",
+    title   = "Banach $KK$-theory and the Baum-Connes Conjecture",
+    year    = "2002",
+    journal = "Proceedings of the International Congress of Mathematicians",
+    volume  = "Vol. II (Beijing, 2002)",
+    number  = "Higher Ed. Press, Beijing",
+    pages   = "795-812"
+}
+
+@article{LeGall,
+    author  = "Pierre-Yves Le Gall",
+    title   = "Thesis",
+    year    = "",
+    journal = "",
+    volume  = "",
+    number  = "",
+    pages   = ""
+}
+
 @book{Murphy,
     title = "$C^*$-algebras and operator theory",
     author = "Gerard J. Murphy",
     publisher = "Academic Press Inc.",
     year = "1990"
  }
+
+@article{OY1,
+title = "Ktheory for the maximal Roe algebra of certain expanders",
+author = "H. Oyono-Oyono, G. Yu",
+journal = "Journal of functionnal analysis",
+volume = "257",
+year = "2009",
+pages = "3239--3292"
+month = "10"
+}
+
+@article{OY2,
+title = "On Quantitative operator K-theory",
+author = "H. Oyono-Oyono, G. Yu",
+journal = "Annales de l'Institut Fourier",
+volume = "",
+year = "",
+pages = ""
+month = ""
+}
+
+@article{OY3,
+title = "Persitance Approximation Property and controlled K-theory",
+author = "H. Oyono-Oyono, G. Yu",
+journal = "",
+volume = "",
+year = "",
+pages = ""
+month = ""
+}
 
 @article{PV,
 title = "Exact sequences for $K$-groups and $Ext$-groups of certain cross-products of $C^*$-algebras",
@@ -100,6 +176,12 @@ month = "Summer"
     pages   = "415-429"
 }
 
+@book{Roe,
+    title = "Index theory, Coarse Geometry, and Topology of Manifolds",
+    author = "John Roe",
+    publisher = "Regional conference series in mathematics, ISSN 0160-7642, no. 90",
+    year = "1996"
+ }
 @article{SkTuYu,
     author  = "Skandalis, G, Tu, J.L. , Yu, G.",
     title   = "The Coarse Baum-Connes conjecture and groupoids",
@@ -110,16 +192,19 @@ month = "Summer"
     pages   = "807-834"
 }
 
-@book{WeggeOlsen,
-    title = "K-theory and $C^*$-algebras, a friendly approach",
-    author = "N.E. Wegge-Olsen",
-    publisher = "Oxford University Press",
-    year = "1993"
- }
+
+@article{TuThese,
+    author  = "Jean-Louis Tu",
+    title   = "La conjecture de Baum-Connes pour les feuilletages moyennables",
+    year    = "1999",
+    journal = "$K$-theory",
+    volume  = "17",
+    pages   = "215-264"
+}
 
 @article{TuNovikov,
     author  = "Jean-Louis Tu",
-    title   = "a conjceture de Novikov pour les feuilletages hyperboliques",
+    title   = "La conjecture de Novikov pour les feuilletages hyperboliques",
     year    = "1999",
     journal = "$K$-theory",
     volume  = "16",
@@ -145,4 +230,31 @@ month = "Summer"
     volume  = "18",
     number  = "",
     pages   = "1-27"
+}
+
+@book{WeggeOlsen,
+    title = "K-theory and $C^*$-algebras, a friendly approach",
+    author = "N.E. Wegge-Olsen",
+    publisher = "Oxford University Press",
+    year = "1993"
+ }
+
+@article{Yu1,
+    author  = "G. Yu",
+    title   = "The Novikov conjecture for groups with finite asymptotic dimension",
+    year    = "1998",
+    journal = "Ann. of Math. ",
+    volume  = "2",
+    number  = "2",
+    pages   = "325-355"
+}
+
+@article{Yu2,
+    author  = "G. Yu",
+    title   = "The coarse Baum-Connes conjecture for spaces which admit a uniform embedding into Hilbert space",
+    year    = "2000",
+    journal = "Invent. Math. ",
+    volume  = "139",
+    number  = "1",
+    pages   = "201-240"
 }

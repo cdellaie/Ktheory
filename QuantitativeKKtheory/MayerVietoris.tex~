@@ -176,7 +176,7 @@ such that
 \item[(i)] $J_{red,\G}(z)$ induces right multiplication by $j_{red,\G}(z)$ in $K$-theory ;
 \item[(ii)] $J_{red,\G}$ is additive, i.e.
 \[J_{red,\G}(z+z')=J_{red,\G}(z)+J_{red,\G}(z').\]
-\item[(iii)] For every $\G$-morphism $f : A_1\rightarrow A_2$,
+\item[(iii)] for every $\G$-morphism $f : A_1\rightarrow A_2$,
 \[J_{red,\G}(f^*(z))=J_{red,\G}(z)\circ f_{\G,red,*}\] for all $z\in KK_1^G(A_2,B)$.
 \end{enumerate}
 \end{prop}

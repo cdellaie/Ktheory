@@ -1,19 +1,11 @@
 \select@language {french}
-\contentsline {section}{\numberline {1}Application d'assemblage quantitative}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}Longueur, propagation et suite exacte \IeC {\`a} six termes.}{3}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Transform\IeC {\'e}e de Kasparov}{4}{subsection.1.2}
-\contentsline {subsubsection}{\numberline {1.2.1}Cas impair}{5}{subsubsection.1.2.1}
-\contentsline {subsection}{\numberline {1.3}Transform\IeC {\'e}e de Kasparov, ancienne version}{7}{subsection.1.3}
-\contentsline {section}{\numberline {2}G\IeC {\'e}om\IeC {\'e}trie asymptotique}{7}{section.2}
-\contentsline {section}{\numberline {3}English Notes}{9}{section.3}
-\contentsline {subsection}{\numberline {3.1}}{10}{subsection.3.1}
-\contentsline {section}{\numberline {4}Assembly maps for groupoids and for coarse spaces}{13}{section.4}
-\contentsline {subsection}{\numberline {4.1}The case of a finitely generated group}{13}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Relation between the coarse and the groupoid assembly maps}{13}{subsection.4.2}
-\contentsline {section}{\numberline {5}Correspondance between the coarse $K$-homology of a space and the one of its coarse groupoid}{14}{section.5}
-\contentsline {section}{\numberline {6}Review of quantitative $K$-theory}{18}{section.6}
-\contentsline {subsection}{\numberline {6.1}Morita equivalence}{18}{subsection.6.1}
-\contentsline {section}{\numberline {7}Quantitative statements}{18}{section.7}
-\contentsline {subsection}{\numberline {7.1}The Kasparov transform}{18}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Quantitative assembly maps}{18}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Quantitative statements}{18}{subsection.7.3}
+\contentsline {section}{\numberline {1}Review of quantitative $K$-theory}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Roe algebras and filtration}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Definition of quantitative $K$-theory}{5}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Morita equivalence}{5}{subsection.1.3}
+\contentsline {section}{\numberline {2}Quantitative statements}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Length, propagation and controlled six-terms exact sequence}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}The Kasparov transform}{7}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Odd case}{7}{subsubsection.2.2.1}
+\contentsline {subsection}{\numberline {2.3}Quantitative assembly maps}{9}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Quantitative statements}{9}{subsection.2.4}

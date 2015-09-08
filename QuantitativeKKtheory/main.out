@@ -1,18 +1,10 @@
-\BOOKMARK [1][-]{section.1}{Application d'assemblage quantitative}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Longueur, propagation et suite exacte \340 six termes.}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Transform\351e de Kasparov}{section.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.2.1}{Cas impair}{subsection.1.2}% 4
-\BOOKMARK [2][-]{subsection.1.3}{Transform\351e de Kasparov, ancienne version}{section.1}% 5
-\BOOKMARK [1][-]{section.2}{G\351om\351trie asymptotique}{}% 6
-\BOOKMARK [1][-]{section.3}{English Notes}{}% 7
-\BOOKMARK [2][-]{subsection.3.1}{}{section.3}% 8
-\BOOKMARK [1][-]{section.4}{Assembly maps for groupoids and for coarse spaces}{}% 9
-\BOOKMARK [2][-]{subsection.4.1}{The case of a finitely generated group}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.2}{Relation between the coarse and the groupoid assembly maps}{section.4}% 11
-\BOOKMARK [1][-]{section.5}{Correspondance between the coarse K-homology of a space and the one of its coarse groupoid}{}% 12
-\BOOKMARK [1][-]{section.6}{Review of quantitative K-theory}{}% 13
-\BOOKMARK [2][-]{subsection.6.1}{Morita equivalence}{section.6}% 14
-\BOOKMARK [1][-]{section.7}{Quantitative statements}{}% 15
-\BOOKMARK [2][-]{subsection.7.1}{The Kasparov transform}{section.7}% 16
-\BOOKMARK [2][-]{subsection.7.2}{Quantitative assembly maps}{section.7}% 17
-\BOOKMARK [2][-]{subsection.7.3}{Quantitative statements}{section.7}% 18
+\BOOKMARK [1][-]{section.1}{Review of quantitative K-theory}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Roe algebras and filtration}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Definition of quantitative K-theory}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Morita equivalence}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Quantitative statements}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Length, propagation and controlled six-terms exact sequence}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{The Kasparov transform}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Odd case}{subsection.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.3}{Quantitative assembly maps}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.4}{Quantitative statements}{section.2}% 10

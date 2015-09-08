@@ -19,15 +19,18 @@
 
 \newpage
 
-\include{Groupoids}
-\include{StoneCech}
-\include{Asdim}
+%\include{Groupoids}
+%\include{StoneCech}
+%\include{Asdim}
 
-\include{GDT}
-\include{BaumConnes}
+%\include{GDT}
+%\include{BaumConnes}
 \include{rapport}
 \include{QuantitativeAssemblyMapForGroupoids}
 \include{Isom}
+
+\newpage
+\include{MayerVietoris}
 
 \bibliographystyle{plain}
 \bibliography{biblio} 
