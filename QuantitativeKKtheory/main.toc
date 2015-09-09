@@ -7,6 +7,6 @@
 \contentsline {subsection}{\numberline {2.1}Length, propagation and controlled six-terms exact sequence}{6}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}The Kasparov transform}{7}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Odd case}{7}{subsubsection.2.2.1}
-\contentsline {subsection}{\numberline {2.3}Quantitative assembly maps}{10}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Quantitative assembly maps}{11}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Classifying space for proper actions}{11}{subsubsection.2.3.1}
-\contentsline {subsection}{\numberline {2.4}Quantitative statements}{12}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Quantitative statements}{13}{subsection.2.4}

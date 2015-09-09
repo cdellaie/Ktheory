@@ -138,10 +138,10 @@ which induces right multiplication by $j_\G(z)$ in $K$-theory.\\
 
 \subsubsection{Odd case}
 
-Let first do the for work for $z\in KK_1^\G$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_\G=P\otimes id_{B\rtimes \G}$. We define
-\[E^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in A\rtimes \G, y_in K_{B\rtimes\G}\}\]
+Let us first do the for work for $z\in KK_1^\G(A,B)$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_\G=P\otimes id_{B\rtimes \G}$. We define
+\[E^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in A\rtimes \G, y\in K_{B\rtimes\G}\}\]
 a $C^*$-algebra which is filtered by
-\[E_R^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in (A\rtimes \G)_R, y_in K\otimes (B\rtimes\G)_R\}\]
+\[E_R^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in (A\rtimes \G)_R, y\in K\otimes (B\rtimes\G)_R\}\]
 which gives us a filtered extension
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & K_{B\rtimes_r\G}\arrow{r} & E^{(\pi,T)} \arrow{r} & A\rtimes_r \G \arrow{r}& 0
@@ -151,7 +151,7 @@ and semi split by  $s :\left\{\begin{array}{lll}A\rtimes_r \G & \rightarrow & E^
 Let us show that the controlled boundary map of this extension does not depend on the representant chosen, but only on the class $z$.\\
 Let $(H_B, \pi_j,T_j), j=0,1$ two $K$-cycles which are homotopic via $(H_{B[0,1]},\pi,T)$. We denote $e_t$ the evaluation at $t\in[0,1]$ for an element of $B[0,1]$, and set $y_t=e_t(y)$ for such a $y$. The $*$-morphism
 \[\phi : \left\{\begin{array}{lll}E^{(\pi,T)} & \rightarrow & E^{(\pi_t,T_t)} \\ (x,y) & \mapsto & (x, y_t)\end{array}\right.\]
-satisfies $\phi(K_{B[0,1] \rtimes_r \G})\subset K_{B \rtimes_r \G})$ and makes the following diagram commute
+satisfies $\phi(K_{B[0,1] \rtimes_r \G})\subset K_{B \rtimes_r \G}$ and makes the following diagram commute
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & K_{B[0,1] \rtimes_r \G}\arrow{r}\arrow{d}{\phi_{|K_{B[0,1] \rtimes_r \G}}} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi} & A\rtimes_r \G \arrow{r}\arrow{d}{=}& 0 \\
 0\arrow{r} & K_{B \rtimes_r \G}\arrow{r} &  E^{(\pi_t,T_t)} \arrow{r} & A\rtimes_r \G \arrow{r} & 0
@@ -203,13 +203,33 @@ vérifie
 \item[$\bullet$] $\phi(K_{B\rtimes_r \G})\subset K_{B\rtimes_r \G}$, et s'insère dans le diagramme
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & K_{B\rtimes_r \G}\arrow{r}\arrow{d}{=} & E^{f^*(\pi,T)} \arrow{r}\arrow{d}{\phi}& A_1\rtimes_r \G\arrow{r}\arrow{d}{f_\G} & 0\\
-0\arrow{r} & K_{B\rtimes_r \G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A_r\rtimes_r \G\arrow{r} & 0
+0\arrow{r} & K_{B\rtimes_r \G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A_2\rtimes_r \G\arrow{r} & 0
 \end{tikzcd}.\]
 \item[$\bullet$] Elle entrelace les sections de ces deux extensions.
 \end{enumerate}
 La remarque $3.7$ de \cite{OY2} assure donc que \[D_{K_{B\rtimes_r \G}, E^{f^*(\pi,T)} } =  D_{K_{B\rtimes_r \G}, E^{(\pi,T)} }\circ f_{\G,*}\], et l'assertion est claire en composant par $\mathcal M_{B\rtimes_r \G}^{-1}$.
 
-\item[(iv)] \textbf{A FAIRE}
+\item[(iv)] Let $\mathcal E = H_{B_1}\otimes_g B_2$, which is a countably generated Hilbert $B_2$-module. The homomorphism $g:B_1\rightarrow B_2$ gives rise to $g_* : \mathcal L_{B_1}(H_{B_1})\rightarrow \mathcal L_{B_2}(\mathcal E)$, which preserves compact operators : $g_*(K_{B_1})\subset K(\mathcal E)$. We have a similar statement for $g_G : B_1\rtimes\G\rightarrow B_2\rtimes\G$. We denote $\mathcal E_G$ the Hilbert $B_2\rtimes\G$-module $\mathcal E\rtimes\G\simeq H_{B_1\rtimes \G}\otimes_g (B_2\rtimes \G)$.\\
+
+Let $z\in KK^\G(A,B_1)$ be represented by the $K$-cycle $(H_{B_1},\pi,T)$. Then $(H_{B_1}\otimes_g B_2,g_*\circ\pi, g_*(T))=(\mathcal E, \tilde\pi,\tilde T)$ represents $g_*(z)$.\\
+
+The map $(x,y)\mapsto (x, (g_G)_*(y))$ induces $\Psi :E^{(\pi,T)}\rightarrow  E^{g_*(\pi,T)} $ such that
+\[\Psi(x,P_G \pi_G(x) P_G +y)\mapsto (x,\tilde P_G \tilde\pi_G(x) \tilde P_G+(g_G)_*(y)).\]
+Indeed, the crossed-product functor commutes with pull-back by $\G$-morphisms, and $(g_G)*\circ\pi_G=(g_*\circ\pi)_G=\tilde \pi_G$ and $(g_G)_*(P_G) = g_*(P)_G=\tilde P_G$ so that 
+\[(g_G)_*(P_G \pi_G(x) P_G)=\tilde P_G \tilde\pi_G(x) \tilde P_G. \]
+Now, by the equivariant stabilisation of Le Gall \cite{LeGall}, we know that the countably generated Hilbert module $\mathcal E_G$ sits as a complemented module of $H_{B_2\rtimes\G}$, and there exists a projection $p\in L(H_{B_2\rtimes\G})$ such that $pH_{B_2\rtimes\G}\simeq \mathcal E$ and $pK_{B_2\rtimes\G}p\simeq K(\mathcal E_G)$. Let $\psi$ be the composition $K_{B_1\rtimes \G}\rightarrow_{(g_G)_*} K(\mathcal E)\rightarrow K_{B_2\rtimes \G}$. This gives a commutative diagram 
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{B_1\rtimes \G}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& A\rtimes_r \G\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & K_{B_2\rtimes \G}\arrow{r} & E^{g_*(\pi,T)} \arrow{r}& A\rtimes \G\arrow{r} & 0
+\end{tikzcd}.\]
+and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi_{|K_{B_1\rtimes \G}}\subset K_{B_2\rtimes\G}$, so that we can again apply the remark $3.7$ of \cite{OY2} to state
+\[ D_{K_{B_2\rtimes \G},E^{g_*(\pi,T)}}=\psi_*\circ D_{K_{B_1\rtimes \G},E^{(\pi,T)}},\]
+which we compose by the Morita equivalence on the left $M_{B_2\rtimes\G}^{-1}$
+\[J_\G(g_*(z)) = M_{B_2\rtimes\G}^{-1}\circ g_{G,*}\circ D_{K_{B_1\rtimes \G},E^{(\pi,T)}}.\]
+The homomorphisms inducing the Morita equivalence make the following diagram commutes,
+\[\begin{tikzcd}B_1\rtimes\G\arrow{r}{g}\arrow{d} & B_2\rtimes \G\arrow{d} \\ K_{B_1\rtimes\G } \arrow{r}{\psi}& K_{B_2\rtimes\G }\end{tikzcd},\]
+and $J_\G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes\G}^{-1}\circ D_{K_{B_1\rtimes \G},E^{(\pi,T)}}=g_{G,*}\circ J_\G(z)$.\\
+\qed
 \end{enumerate}
 \end{dem}
 

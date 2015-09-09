@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  8 SEP 2015 20:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  9 SEP 2015 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -984,56 +984,49 @@ e par un cycle $(\OML/cmm/m/it/10 H[]; ^^Y; T\OT1/cmr/m/n/10 )$. Un repr^^Sesen
 tant
  []
 
-[9]
 
-LaTeX Warning: Citation `LaffOY' on page 10 undefined on input line 223.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
+
+ []
+
+
+Overfull \hbox (22.48785pt too wide) in paragraph at lines 217--219
+\OT1/cmr/m/n/10 Indeed, the crossed-product func-tor com-mutes with pull-back b
+y $\OMS/cmsy/m/n/10 G$\OT1/cmr/m/n/10 -morphisms,
+ []
+
+[10]
+
+LaTeX Warning: Citation `LaffOY' on page 11 undefined on input line 243.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 255--258
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 294--296
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 275--278
 
  []
 
 [12]
-Overfull \hbox (22.8243pt too wide) in paragraph at lines 314--317
-\OT1/cmr/m/n/10 But then the quan-ti-ta-tive in-jec-ti-vity condi-tion as-sures
- that $\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 = 0$ in $\OML/cmm/m/it/10 KK[]\OT1/cm
-r/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n
-/10 )\OML/cmm/m/it/10 ; A\OT1/cmr/m/n/10 )$
+Underfull \hbox (badness 10000) in paragraph at lines 314--316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+
  []
 
 
@@ -1041,11 +1034,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
-) [13] (./main.bbl [14
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
+
+ []
+
+
+Overfull \hbox (22.8243pt too wide) in paragraph at lines 334--337
+\OT1/cmr/m/n/10 But then the quan-ti-ta-tive in-jec-ti-vity condi-tion as-sures
+ that $\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 = 0$ in $\OML/cmm/m/it/10 KK[]\OT1/cm
+r/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n
+/10 )\OML/cmm/m/it/10 ; A\OT1/cmr/m/n/10 )$
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+
+ []
+
+) [14] (./main.bbl [15
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
- [15]
+ [16]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
  (./main.aux (./MayerVietoris.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
@@ -1059,10 +1075,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 16441 strings out of 494958
- 292330 string characters out of 6179263
- 368188 words of memory out of 5000000
- 19296 multiletter control sequences out of 15000+600000
+ 16566 strings out of 494958
+ 295547 string characters out of 6179263
+ 370705 words of memory out of 5000000
+ 19420 multiletter control sequences out of 15000+600000
  13096 words of font info for 51 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  58i,16n,74p,1363b,1074s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1084,10 +1100,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (15 pages, 262740 bytes).
+Output written on main.pdf (16 pages, 268899 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
+ 293 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
