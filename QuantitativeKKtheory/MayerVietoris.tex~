@@ -63,6 +63,11 @@ induces an $\Z_2$-graded isomorphism
 for every $R>0$ and $0< \epsilon <\frac{1}{4}$.
 \end{prop}
 
+\subsection{Quantitative boundary maps}
+\textbf{METTRE LA RQ 3.7 de OY2}
+
+\subsection{A remainder on groupoids action}
+
 \section{Quantitative statements}
 
 The more general setting of the Baum-Connes conjecture \cite{TuBC} is that of a locally compact $\sigma$-compact Hausdorff groupoid $\G$ endowed with a Haar system, together with a coefficient $C^*$-algebra $B$ acted upon by $\G$, which give rise to an assembly map
@@ -186,15 +191,15 @@ such that
 \begin{dem}
 \begin{enumerate}
 
-\item[(i)] Le bord $[\delta_{K_{B\rtimes_r \G},E^{(\pi,T)}}]\in KK_1(A\rtimes_r \G, B\rtimes_r \G)$ associé à l'extension $E^{(\pi,T)}$ induit par définition, modulo équivalence de Morita, l'application $j_{red,\G}$, ce qui assure directement ce point.
+\item[(i)]The $K$-cycle $[\delta_{K_{B\rtimes_r \G},E^{(\pi,T)}}]\in KK_1(A\rtimes_r \G, B\rtimes_r \G)$ implementing the boundary of the extension $E^{(\pi,T)}$ induces the map $j_{red,\G}$ by definition, and modulo Morita equivalence, which immediately gives the first point.
 
-\item[(ii)] Si $z,z'$ sont deux eléments de $KK_1^G(A,B)$, repésentés par des $K$-cycles $(H_B,\pi_j,T_j)$, et si l'on note $(H_B,\pi,T)$ un $K$-cycle représentant la somme $z+z'$, alors $E^{(\pi,T)}$ est naturellement isomorphe à l'extension somme des $E_j:=E^{(\pi_j,T_j)}$
+\item[(ii)] If $z,z'$ are elements of $KK_1^G(A,B)$, represented by two $K$-cycles $(H_B,\pi_j,T_j)$, and if $(H_B,\pi,T)$ is a $K$-cycle representing the sum $z+z'$, then $E^{(\pi,T)}$ is naturally isomorphic to the extension sum of the $E_j:=E^{(\pi_j,T_j)}$, namely
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & K_{B\rtimes_r \G} \arrow{r} & D \arrow{r} & A\rtimes_r \G \arrow{r} & 0
 \end{tikzcd}\]
-où 
+where 
 \[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K(E_j,E_i)\right\}.\]
-Par naturalité du bord contrôlé \cite{OY2}, le bord de la somme de deux extensions est la somme des bords de chaque extension, d'où le résultat.
+Naturality of the controlled boundary maps \cite{OY2} ensures that the boudary of the sum of two extensions is the sum of the boudary of each, thus the result.
 \item[(iii)] Soit $z\in KK_1^\G(A_2,B)$, représenté par un cycle $(H_B,\pi,T)$. Un représentant de $f^*(z)$ est $(H_B,f^*\pi,T)$ avec bien sûr $f^*\pi=\pi \circ f$. L'application 
 \[\phi : \left\{\begin{array}{lll} E^{f^*(\pi,T)} & \rightarrow & E^{(\pi,T)} \\
 ( x, P_\G(f^*\pi)(x)P_\G+y) & \rightarrow & ( f_\G(x), P_\G(f^*\pi)(x)P_\G+y) \end{array}\right. \]
@@ -253,6 +258,10 @@ J_\G (\alpha\otimes z) & \sim &  J_\G(\alpha\otimes z)\circ J_\G(\alpha\otimes [
 because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes. \textbf{METTRE EXPLICITEMENT LES EXPOSANTS DE PROPAGATION}
 \end{dem}
 
+\subsubsection{Even case}
+
+We can now define $J_\G$ for even $K$-cycles. Let $A$ and $B$ be two $\G$-algebras. Let $[\delta_{SB}]\in KK_1(B,SB)$ be the $K$-cycle implementing the boundary of the extension $0\rightarrow SB\rightarrow CB\rightarrow B\rightarrow 0$, and $[\delta]\in KK_1(\C,S)$ be the Bott generator. As $z\otimes_B [\delta_{SB}]$ is an odd $K$-cycle, we can define
+\[J_\G(z):= \tau_{B\rtimes \G}([\delta]^{-1})\circ J_\G(z\otimes[\delta_{SB}]).\] 
 \subsection{Quantitative assembly maps}
 
 Following the article of J.-L. Tu \cite{TuBC}, we recall that a locally compact, $\sigma$-compact and Hausdorff groupoid $G$, endowed with a Haar system $\lambda$, is said to be proper if there exists a cut-off function $c:G^{(0)}\rightarrow \R_+$ continuous such that 

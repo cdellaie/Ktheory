@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  9 SEP 2015 19:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  10 SEP 2015 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -977,11 +977,11 @@ rov trans-form of an ele-ment $\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 2 \OML/cmm/m
  []
 
 [8]
-Overfull \hbox (2.76233pt too wide) in paragraph at lines 203--204
-[]\OT1/cmr/m/n/10 Soit $\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 
-KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]; B\OT1/cmr/m/n/10 )$, repr^^Sesent^^S
-e par un cycle $(\OML/cmm/m/it/10 H[]; ^^Y; T\OT1/cmr/m/n/10 )$. Un repr^^Sesen
-tant
+Overfull \hbox (14.45294pt too wide) in paragraph at lines 196--197
+[]\OT1/cmr/m/n/10 If $\OML/cmm/m/it/10 z; z[]$ \OT1/cmr/m/n/10 are ele-ments of
+ $\OML/cmm/m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
+, re-pre-sen-ted by two $\OML/cmm/m/it/10 K$\OT1/cmr/m/n/10 -cycles $(\OML/cmm/
+m/it/10 H[]; ^^Y[]; T[]\OT1/cmr/m/n/10 )$,
  []
 
 [9]
@@ -1009,28 +1009,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 280--283
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--287
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 319--321
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+Underfull \hbox (badness 10000) in paragraph at lines 323--325
 
  []
 
@@ -1039,13 +1029,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
-
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
-[13]
-Overfull \hbox (22.8243pt too wide) in paragraph at lines 339--342
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
+
+ []
+
+
+Overfull \hbox (22.8243pt too wide) in paragraph at lines 343--346
 \OT1/cmr/m/n/10 But then the quan-ti-ta-tive in-jec-ti-vity condi-tion as-sures
  that $\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 = 0$ in $\OML/cmm/m/it/10 KK[]\OT1/cm
 r/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n
@@ -1053,7 +1053,7 @@ r/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
@@ -1067,7 +1067,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 965D785D1968D722280039B1FAD0E29D;998.
+(rerunfilecheck)             Checksum: 45EDE068660E10112FFB4DC668DAF1A2;1067.
 
 
 LaTeX Warning: There were undefined references.
@@ -1075,13 +1075,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 16570 strings out of 494958
- 295607 string characters out of 6179263
- 373193 words of memory out of 5000000
- 19422 multiletter control sequences out of 15000+600000
+ 16568 strings out of 494958
+ 295615 string characters out of 6179263
+ 373186 words of memory out of 5000000
+ 19419 multiletter control sequences out of 15000+600000
  13096 words of font info for 51 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 58i,16n,74p,1363b,1074s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,16n,74p,1363b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -1100,10 +1100,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (16 pages, 271728 bytes).
+Output written on main.pdf (16 pages, 272665 bytes).
 PDF statistics:
- 303 PDF objects out of 1000 (max. 8388607)
- 263 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 270 compressed objects within 3 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
