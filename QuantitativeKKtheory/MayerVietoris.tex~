@@ -138,7 +138,7 @@ Every $K$-cycle $z\in KK^G(A,B)$ can be represented as a triplet $(H_B, \pi, T)$
 \end{itemize}
 
 Set $T_\G= T\otimes id_{B\rtimes \G}\in \mathcal L_{B\rtimes \G}(H_B\otimes (B\rtimes \G))\simeq \mathcal L_{B\rtimes \G}(H_{B\rtimes\G})$, and $\pi_G: A\rtimes \G v\rightarrow L_{B\rtimes \G}(H_{B\rtimes\G})$. Then, according to Le Gall \cite{LeGall}, $(H_{B\rtimes\G, \pi_\G, T_\G})$ represents the $K$-cycle $j_\G(z)\in KK(A\rtimes \G,B\rtimes \G)$. Let us construct a controlled morphism associated to $z$,
-\[J_\G(z) : \hat K(A\rtimes \G)\rightarrow K(B\rtimes\G), \]
+\[J_\G(z) : \hat K(A\rtimes \G)\rightarrow \hat K(B\rtimes\G), \]
 which induces right multiplication by $j_\G(z)$ in $K$-theory.\\
 
 \subsubsection{Odd case}
@@ -173,8 +173,8 @@ The controlled Kasparov transform of an element $z\in KK_1^\G(A,B)$ is defined a
 \[J_{red,\G}(z)=\mathcal M_{B\rtimes_r \G}^{-1}\circ D_{K_{B\rtimes_r \G}, E^{(\pi,T)}}.\]
 \end{definition}
 
-\begin{prop}
-Let $A$ and $B$ two $\G$-$C^*$-algebras. For every $z\in KK^\G_1(A,B)$, there exists a controlled morphism
+\begin{prop}\label{Kasparov1}
+Let $A$ and $B$ two $\G$-$C^*$-algebras. There exists a control pair $(\alpha_J,k_J)$ such that for every $z\in KK^\G_1(A,B)$, there exists a $(\alpha_J,k_J)$-controlled morphism
 \[J_{red,\G}(z) : \hat K_*(A\rtimes_r \G)\rightarrow \hat K_{*+1}(B\rtimes_r \G)\]
 such that
 \begin{enumerate}
@@ -185,6 +185,8 @@ such that
 \[J_{red,\G}(f^*(z))=J_{red,\G}(z)\circ f_{\G,red,*}\] for all $z\in KK_1^G(A_2,B)$.
 \item[(iv)] For every $\G$-morphism $g : B_1\rightarrow B_2$,
 \[J_{red,\G}(g_*(z))= g_{\G,red,*}\circ J_{red,\G}(z)\] for all $z\in KK_1^G(A,B_1)$.
+\item[(v)] Let $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ be a semi-split equivariant extension of $\G$-algebras and $[\delta_J]\in KK_1^\G(A/J,J)$ be its boundary element. Then 
+\[J_\G([\delta_J])=D_{J\rtimes G,A\rtimes\G}.\] 
 \end{enumerate}
 \end{prop}
 
@@ -200,19 +202,19 @@ such that
 where 
 \[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K(E_j,E_i)\right\}.\]
 Naturality of the controlled boundary maps \cite{OY2} ensures that the boudary of the sum of two extensions is the sum of the boudary of each, thus the result.
-\item[(iii)] Soit $z\in KK_1^\G(A_2,B)$, représenté par un cycle $(H_B,\pi,T)$. Un représentant de $f^*(z)$ est $(H_B,f^*\pi,T)$ avec bien sûr $f^*\pi=\pi \circ f$. L'application 
+\item[(iii)] Let $z\in KK_1^\G(A_2,B)$, represented by a cycle $(H_B,\pi,T)$. Representing $f^*(z)$ is $(H_B,f^*\pi,T)$ with off course $f^*\pi=\pi \circ f$. The map 
 \[\phi : \left\{\begin{array}{lll} E^{f^*(\pi,T)} & \rightarrow & E^{(\pi,T)} \\
 ( x, P_\G(f^*\pi)(x)P_\G+y) & \rightarrow & ( f_\G(x), P_\G(f^*\pi)(x)P_\G+y) \end{array}\right. \]
-vérifie
+satisfies
 \begin{enumerate}
-\item[$\bullet$] $\phi(K_{B\rtimes_r \G})\subset K_{B\rtimes_r \G}$, et s'insère dans le diagramme
+\item[$\bullet$] $\phi(K_{B\rtimes_r \G})\subset K_{B\rtimes_r \G}$, and makes the following diagram commute
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & K_{B\rtimes_r \G}\arrow{r}\arrow{d}{=} & E^{f^*(\pi,T)} \arrow{r}\arrow{d}{\phi}& A_1\rtimes_r \G\arrow{r}\arrow{d}{f_\G} & 0\\
 0\arrow{r} & K_{B\rtimes_r \G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A_2\rtimes_r \G\arrow{r} & 0
 \end{tikzcd}.\]
-\item[$\bullet$] Elle entrelace les sections de ces deux extensions.
+\item[$\bullet$] It intertwines the sections of the two extensions.
 \end{enumerate}
-La remarque $3.7$ de \cite{OY2} assure donc que \[D_{K_{B\rtimes_r \G}, E^{f^*(\pi,T)} } =  D_{K_{B\rtimes_r \G}, E^{(\pi,T)} }\circ f_{\G,*}\], et l'assertion est claire en composant par $\mathcal M_{B\rtimes_r \G}^{-1}$.
+Remark $3.7$ of \cite{OY2} assures that \[D_{K_{B\rtimes_r \G}, E^{f^*(\pi,T)} } =  D_{K_{B\rtimes_r \G}, E^{(\pi,T)} }\circ f_{\G,*}\], and the claim is clear from composition by $\mathcal M_{B\rtimes_r \G}^{-1}$.
 
 \item[(iv)] Let $\mathcal E = H_{B_1}\otimes_g B_2$, which is a countably generated Hilbert $B_2$-module. The homomorphism $g:B_1\rightarrow B_2$ gives rise to $g_* : \mathcal L_{B_1}(H_{B_1})\rightarrow \mathcal L_{B_2}(\mathcal E)$, which preserves compact operators : $g_*(K_{B_1})\subset K(\mathcal E)$. We have a similar statement for $g_G : B_1\rtimes\G\rightarrow B_2\rtimes\G$. We denote $\mathcal E_G$ the Hilbert $B_2\rtimes\G$-module $\mathcal E\rtimes\G\simeq H_{B_1\rtimes \G}\otimes_g (B_2\rtimes \G)$.\\
 
@@ -234,14 +236,47 @@ which we compose by the Morita equivalence on the left $M_{B_2\rtimes\G}^{-1}$
 The homomorphisms inducing the Morita equivalence make the following diagram commutes,
 \[\begin{tikzcd}B_1\rtimes\G\arrow{r}{g_\G}\arrow{d} & B_2\rtimes \G\arrow{d} \\ K_{B_1\rtimes\G } \arrow{r}{\psi}& K_{B_2\rtimes\G }\end{tikzcd},\]
 and $J_\G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes\G}^{-1}\circ D_{K_{B_1\rtimes \G},E^{(\pi,T)}}=g_{G,*}\circ J_\G(z)$.\\
+\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\delta_J]$. Then we apply remark $3.7$ of \cite{OY2} to the commutative diagram
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & J\rtimes \G\arrow{r}\arrow{d} & A\rtimes \G \arrow{r}\arrow{d}{s\circ q_\G}& A/J\rtimes_r \G\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & K_{J\rtimes \G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A/J\rtimes \G\arrow{r} & 0
+\end{tikzcd},\]
+where the first vertical arrow is the canonical mapping that induces the Morita equivalence. \\
 \qed
 \end{enumerate}
 \end{dem}
 
+\subsubsection{Even case}
+
+We can now define $J_\G$ for even $K$-cycles. Let $A$ and $B$ be two $\G$-algebras. Let $[\delta_{SB}]\in KK_1(B,SB)$ be the $K$-cycle implementing the boundary of the extension $0\rightarrow SB\rightarrow CB\rightarrow B\rightarrow 0$, and $[\delta]\in KK_1(\C,S)$ be the Bott generator. As $z\otimes_B [\delta_{SB}]$ is an odd $K$-cycle, we can define
+\[J_\G(z):= \tau_{B\rtimes \G}([\delta]^{-1})\circ J_\G(z\otimes[\delta_{SB}]).\] 
+
+Here $\tau_D$ refers to the $(\alpha_\tau,k_\tau)$-controlled map $\hat K (A_1\otimes D )\rightarrow \hat K(A_2\otimes D)$, that H. Oyono-Oyono and G. Yu constructed in \cite{OY2} for any $C^*$-algebras $D,A_1,A_2$ and $z\in KK_*(A_1,A_2)$. It enjoys many natural properties, and induces right multiplication by $\tau_D(z)\in KK(A_1\otimes D,A_2\otimes D)$ in $K$-theory.\\
+
+\begin{prop}
+Let $A$ and $B$ two $\G$-$C^*$-algebras. For every $z\in KK^\G_*(A,B)$, there exists a control pair $(\alpha_J,k_J)$ and a $(\alpha_J,k_J)$-controlled morphism
+\[J_{red,\G}(z) : \hat K(A\rtimes_r \G)\rightarrow \hat K(B\rtimes_r \G)\]
+of the same degree as $z$, such that
+\begin{enumerate}
+\item[(i)] $J_{red,\G}(z)$ induces right multiplication by $j_{red,\G}(z)$ in $K$-theory ;
+\item[(ii)] $J_{red,\G}$ is additive, i.e.
+\[J_{red,\G}(z+z')=J_{red,\G}(z)+J_{red,\G}(z').\]
+\item[(iii)] For every $\G$-morphism $f : A_1\rightarrow A_2$,
+\[J_{red,\G}(f^*(z))=J_{red,\G}(z)\circ f_{\G,red,*}\] for all $z\in KK_*^G(A_2,B)$.
+\item[(iv)] For every $\G$-morphism $g : B_1\rightarrow B_2$,
+\[J_{red,\G}(g_*(z))= g_{\G,red,*}\circ J_{red,\G}(z)\] for all $z\in KK_*^G(A,B_1)$.
+\end{enumerate}
+\end{prop}
+
+\begin{dem}
+The point $(iii)$ is a consequence of the previous proposition \ref{Kasparov1}, and of the equality $f^*(x)\otimes y = f^*(x\otimes y)$.\\
+\qed
+\end{dem}
+
 We now show that the controlled Kasparov transform respects in a quantitative way the Kasparov product.
 
-\begin{prop} There exists a control pair $(\alpha,h)$ such that for every $\G$-$C^*$-algebra $A$, $B$ and $C$, and every $z\in KK^\G(A,B),z'\in KK^\G(B,C)$, the controlled equality
-\[J_\G(z\otimes_B z') \sim_{\alpha,h} J_\G(z')\circ J_\G(z)\]
+\begin{prop} There exists a control pair $(\alpha_J,k_J)$ such that for every $\G$-$C^*$-algebra $A$, $B$ and $C$, and every $z\in KK^\G(A,B),z'\in KK^\G(B,C)$, the controlled equality
+\[J_\G(z\otimes_B z') \sim_{\alpha_J,k_J} J_\G(z')\circ J_\G(z)\]
 holds.
 \end{prop}
 \begin{dem}
@@ -255,13 +290,9 @@ J_\G (\alpha\otimes z) & \sim &  J_\G(\alpha\otimes z)\circ J_\G(\alpha\otimes [
 			& \sim & J_\G(\theta^*(\alpha\otimes z))\circ J_\G(\alpha)\\
 			& \sim & J_\G(z)\circ J_\G(\alpha) \\
 \end{array}\] 
-because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes. \textbf{METTRE EXPLICITEMENT LES EXPOSANTS DE PROPAGATION}
+because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes. \textbf{METTRE EXPLICITEMENT LES EXPOSANTS DE PROPAGATION}\\
+\qed
 \end{dem}
-
-\subsubsection{Even case}
-
-We can now define $J_\G$ for even $K$-cycles. Let $A$ and $B$ be two $\G$-algebras. Let $[\delta_{SB}]\in KK_1(B,SB)$ be the $K$-cycle implementing the boundary of the extension $0\rightarrow SB\rightarrow CB\rightarrow B\rightarrow 0$, and $[\delta]\in KK_1(\C,S)$ be the Bott generator. As $z\otimes_B [\delta_{SB}]$ is an odd $K$-cycle, we can define
-\[J_\G(z):= \tau_{B\rtimes \G}([\delta]^{-1})\circ J_\G(z\otimes[\delta_{SB}]).\] 
 \subsection{Quantitative assembly maps}
 
 Following the article of J.-L. Tu \cite{TuBC}, we recall that a locally compact, $\sigma$-compact and Hausdorff groupoid $G$, endowed with a Haar system $\lambda$, is said to be proper if there exists a cut-off function $c:G^{(0)}\rightarrow \R_+$ continuous such that 
@@ -309,9 +340,9 @@ because $J_\G(z)$ induces the right multiplication by $j_\G(z)$ and also $\mu_\G
 There exists a projection $P_X$ without propagation, and the local quantitative assembly map is defined as 
 \[A_{X,B}^{\epsilon,r,d}(z)=\sigma_X^{\epsilon,r}(z)([P_X]_{\epsilon,r})\] for $z\in KK(C_0(P_d(X)),B)$, where $P_d(X)$ is the classical Rips complex of $X$. This bunch of assembly maps induce the usual coarse assembly map of $X$ 
 \[A_{X,B} : KX_*(X,B)\rightarrow K_*(C^*(X,B)\]
-in $K$-theory. Now let $\G$ be the coarse groupoid of $X$. It is an étale groupoid with compact base space $\G^{(0)}=\beta X$, the Stone-Cech compactification of $X$. A classical result of G. Skandalis, J.-L. Tu and G. Yu \cite{SkTuYu} claims that the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ is equivalent to the Baum-Connes conjecture for the groupoid $G$ with coefficient in $l^\infty(X,B)$. More precisely, there is an isomorphism of $C^*$-algebras $l^\infty(X,B)\rtimes_r \G \simeq_\phi C^*(X,B)$ and the following diagram commutes :
+in $K$-theory. Now let $\G$ be the coarse groupoid of $X$. It is an étale groupoid with compact base space $\G^{(0)}=\beta X$, the Stone-Cech compactification of $X$. A classical result of G. Skandalis, J.-L. Tu and G. Yu \cite{SkTuYu} claims that the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ is equivalent to the Baum-Connes conjecture for the groupoid $G$ with coefficient in $l^\infty(X,K_B)$. More precisely, there is an isomorphism of $C^*$-algebras $l^\infty(X,K_B)\rtimes_r \G \simeq_\phi C^*(X,B)$ and the following diagram commutes :
 \[\begin{tikzcd}
-KK_*^\G(C_0(P_d(\G),l^\infty(X,B)) \arrow{r}{\mu_{\G,l^\infty(X,B)}^d}\arrow{d}{\iota^*}& K_*(l^\infty(X,B)\rtimes_r G)\arrow{d}{\phi_*}\\
+KK_*^\G(C_0(P_d(\G),l^\infty(X,K_B)) \arrow{r}{\mu_{\G,l^\infty(X,K_B)}^d}\arrow{d}{\iota^*}& K_*(l^\infty(X, K_B)\rtimes_r G)\arrow{d}{\phi_*}\\
 KK_*(C_0(P_d(X),B) \arrow{r}{A_{X,B}^d}& K_*(C^*(X,B))
 \end{tikzcd}\]
 where the left vertical arrow comes from the inclusion of groupoid $\iota :\{x\}\rightarrow \G$ for any $x\in X$. We claim that we can prove a controlled analogue of this result which induces it in $K$-theory. \textbf{A FINIR} 
@@ -342,18 +373,30 @@ Let $x\in KK(C_0(P_d(\G)),A)$ which satisfies $\mu_{\G,A}(x)=0$, then $\iota_{\e
 			& = & \mu_{\G,A}^{\lambda\epsilon,r',d}(x).
 \end{array}\]
 But then the quantitative injectivity condition assures that $x=0$ in $KK^\G(C_0(P_{d'}),A)$ and $x=0$ in the inductive limite over $d$ $K^{top}(G,A)$.\\
-The second point is immediate. 
+The second point is immediate. \\
+\qed
 \end{dem}
 
 To prove the theorem, we will need a lemma.\\
 
 \begin{lem}
-Let $\G$ be an étale groupoid, $\Delta$ a CW-complex \textbf{conditions}, $\{B_j\}_{j\geq 0}$ a family of $\G$-algebras and $K$ the algebra of compact operators over a separable Hilbert space. Then we have an $\Z_2$-graded ismorphism 
+Let $\G$ be a locally compact, $\sigma$-compact étale groupoid, $\{B_j\}_{j\geq 0}$ a family of $\G$-algebras and $K$ the algebra of compact operators over a separable Hilbert space. Set $\Delta=P_d(\G)$, then we have an $\Z_2$-graded ismorphism 
 \[KK^\G(C_0(\Delta),\prod_j B_j\otimes K)\simeq \prod_j KK^\G(C_0(\Delta),B_j)\]
 \end{lem}
 
 \begin{dem}
-\textbf{A FAIRE}
+For all $j$ and any locally compact $\G$-space $X$, the projection $\prod_j B_j\otimes K\rightarrow B_j \otimes K$ induces a morphism
+\[\theta^X : KK^G(C_0(X),\prod_j B_j\otimes K )\rightarrow \prod_j  KK^G(C_0(X),B_j\otimes K ).\]
+Let $X_0\subset X_1 \subset ...\subset X_n$ be the $n$-skeleton decomposition associated to the simplicial structure of the Rips complex $\Delta$ and let $Z_j = C_0(X_j)$, $Z^j_{j-1} = C_0(X_j-X_{j-1})$ and $\theta_j = \theta^{X_j}$.
+We will show the claim by induction on the dimension of $\Delta$.\\
+
+The extension of $\G$-algebras $0\rightarrow Z^j_{j-1} \rightarrow Z_j \rightarrow Z_{j-1}\rightarrow 0$ gives a commutative diagram with exact lines :
+\[\begin{tikzcd}
+KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta}\arrow{d}{\theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\theta_{j-1}} & KK_*(Z_j,\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\theta_j} & KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta} \arrow{d}{\theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}{\theta_{j-1}}\\
+KK_*(\tilde Z^j_{j-1},B)\arrow{r}{\delta} & KK_*(\tilde Z_{j-1},B)\arrow{r} & KK_*(\tilde Z_j,B)\arrow{r} & KK_*(\tilde Z^j_{j-1},B)\arrow{r}{\delta} & KK_*(\tilde Z_{j-1},B)\\
+\end{tikzcd}\]
+The five lemma assures that if $\theta_{j-1}$ and $\theta^j_{j-1}$ are isomorphisms, then so is $\theta_j$. Moreover, $X_j-X_{j-1}$ is equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicty assures then that, if $\theta_{j-1}$ is an isomorphism, then so is $\theta^j_{j-1}$. By induction, proving that $\theta_0$ is an isomorphism would concludes the proof.\\
+\qed
 \end{dem}
 
 

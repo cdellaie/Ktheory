@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  10 SEP 2015 13:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  10 SEP 2015 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -977,7 +977,7 @@ rov trans-form of an ele-ment $\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 2 \OML/cmm/m
  []
 
 [8]
-Overfull \hbox (14.45294pt too wide) in paragraph at lines 196--197
+Overfull \hbox (14.45294pt too wide) in paragraph at lines 198--199
 []\OT1/cmr/m/n/10 If $\OML/cmm/m/it/10 z; z[]$ \OT1/cmr/m/n/10 are ele-ments of
  $\OML/cmm/m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
 , re-pre-sen-ted by two $\OML/cmm/m/it/10 K$\OT1/cmr/m/n/10 -cycles $(\OML/cmm/
@@ -985,67 +985,77 @@ m/it/10 H[]; ^^Y[]; T[]\OT1/cmr/m/n/10 )$,
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
 
-Overfull \hbox (22.48785pt too wide) in paragraph at lines 222--224
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+
+Overfull \hbox (22.48785pt too wide) in paragraph at lines 224--226
 \OT1/cmr/m/n/10 Indeed, the crossed-product func-tor com-mutes with pull-back b
 y $\OMS/cmsy/m/n/10 G$\OT1/cmr/m/n/10 -morphisms,
  []
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
-LaTeX Warning: Citation `LaffOY' on page 11 undefined on input line 248.
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
+
+LaTeX Warning: Citation `LaffOY' on page 12 undefined on input line 283.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--287
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 323--325
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 315--318
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 354--356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
 
 
-Overfull \hbox (22.8243pt too wide) in paragraph at lines 343--346
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+
+ []
+
+
+Overfull \hbox (22.8243pt too wide) in paragraph at lines 374--378
 \OT1/cmr/m/n/10 But then the quan-ti-ta-tive in-jec-ti-vity condi-tion as-sures
  that $\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 = 0$ in $\OML/cmm/m/it/10 KK[]\OT1/cm
 r/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n
@@ -1053,15 +1063,25 @@ r/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--349
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
 
-) [14] (./main.bbl [15
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--392
+
+ []
+
+
+Overfull \hbox (309.84613pt too wide) detected at line 397
+[]
+ []
+
+[15]) [16] (./main.bbl [17
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
- [16]
+ [18]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
  (./main.aux (./MayerVietoris.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
@@ -1075,13 +1095,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 16568 strings out of 494958
- 295615 string characters out of 6179263
- 373186 words of memory out of 5000000
- 19419 multiletter control sequences out of 15000+600000
+ 16755 strings out of 494958
+ 300384 string characters out of 6179263
+ 378374 words of memory out of 5000000
+ 19602 multiletter control sequences out of 15000+600000
  13096 words of font info for 51 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 58i,16n,74p,1363b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,16n,75p,1363b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -1100,10 +1120,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (16 pages, 272665 bytes).
+Output written on main.pdf (18 pages, 282724 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 270 compressed objects within 3 object streams
- 73 named destinations out of 1000 (max. 500000)
+ 323 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
+ 77 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
