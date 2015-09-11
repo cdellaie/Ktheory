@@ -1,18 +1,14 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
-A level-1 auxiliary file: rapport.aux
-A level-1 auxiliary file: QuantitativeAssemblyMapForGroupoids.aux
-A level-1 auxiliary file: Isom.aux
 A level-1 auxiliary file: MayerVietoris.aux
 The style file: plain.bst
 Database file #1: biblio.bib
-I was expecting a `,' or a `}'---line 119 of file biblio.bib
- : 
- : month = "10"
-(Error may have been on previous line)
+You're missing a field part---line 100 of file biblio.bib
+ :     volume  = 
+ :               ,
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 129 of file biblio.bib
  : 
- : month = ""
+ : month = "10"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 139 of file biblio.bib
@@ -21,6 +17,11 @@ I was expecting a `,' or a `}'---line 139 of file biblio.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 149 of file biblio.bib
+ : 
+ : month = ""
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 159 of file biblio.bib
  : 
  : month = "Summer"
 (Error may have been on previous line)
@@ -36,11 +37,10 @@ Warning--empty year in LeGall
 Warning--empty year in OY2
 Warning--empty journal in OY3
 Warning--empty year in OY3
-Warning--empty publisher in Hatcher
 Too many commas in name 1 of "Skandalis, G, Tu, J.L. , Yu, G." for entry SkTuYu
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Skandalis, G, Tu, J.L. , Yu, G." for entry SkTuYu
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Skandalis, G, Tu, J.L. , Yu, G." for entry SkTuYu
 while executing---line 1090 of file plain.bst
-(There were 10 error messages)
+(There were 11 error messages)
