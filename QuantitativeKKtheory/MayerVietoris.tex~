@@ -343,9 +343,9 @@ There exists a projection $P_X$ without propagation, and the local quantitative 
 in $K$-theory. Now let $\G$ be the coarse groupoid of $X$. It is an étale groupoid with compact base space $\G^{(0)}=\beta X$, the Stone-Cech compactification of $X$ defined as
 \[\G := \cup_{E \in \mathcal C} \overline E,\] 
 where $\overline E$ is the closure of $E$ in $\beta (X \times X)$. 
-A classical result of G. Skandalis, J.-L. Tu and G. Yu \cite{SkTuYu} claims that the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ is equivalent to the Baum-Connes conjecture for the groupoid $G$ with coefficient in $l^\infty(X,K_B)$. More precisely, there is an isomorphism of $C^*$-algebras $\Psi_B : l^\infty(X,K_B)\rtimes_r \G \simeq_\phi C^*(X,B)$ and the following diagram commutes :
+A classical result of G. Skandalis, J.-L. Tu and G. Yu \cite{SkTuYu} claims that the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ is equivalent to the Baum-Connes conjecture for the groupoid $G$ with coefficient in $l^\infty(X,K_B)$. More precisely, there is an isomorphism of $C^*$-algebras $\Psi_B : l^\infty(X,K_B)\rtimes_r \G \simeq C^*(X,B)$ and the following diagram commutes :
 \[\begin{tikzcd}
-KK_*^\G(C_0(P_d(\G),l^\infty(X,K_B)) \arrow{r}{\mu_{\G,l^\infty(X,K_B)}^d}\arrow{d}{\iota^*}& K_*(l^\infty(X, K_B)\rtimes_r G)\arrow{d}{\phi_*}\\
+KK_*^\G(C_0(P_d(\G),l^\infty(X,K_B)) \arrow{r}{\mu_{\G,l^\infty(X,K_B)}^d}\arrow{d}{\iota^*}& K_*(l^\infty(X, K_B)\rtimes_r G)\arrow{d}{(\Psi_B)_*}\\
 KK_*(C_0(P_d(X),B) \arrow{r}{A_{X,B}^d}& K_*(C^*(X,B))
 \end{tikzcd}\]
 where the left vertical arrow comes from the inclusion of groupoid $\iota :\{x\}\rightarrow \G$ for any $x\in X$. We claim that we can prove a controlled analogue of this result which induces it in $K$-theory.
