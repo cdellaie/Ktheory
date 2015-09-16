@@ -12,4 +12,4 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Even case}{11}{subsubsection.2.2.2}
 \contentsline {subsection}{\numberline {2.3}Quantitative assembly maps}{12}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Classifying space for proper actions}{13}{subsubsection.2.3.1}
-\contentsline {subsection}{\numberline {2.4}Quantitative statements}{14}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Quantitative statements}{16}{subsection.2.4}

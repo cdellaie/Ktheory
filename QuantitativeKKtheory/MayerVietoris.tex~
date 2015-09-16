@@ -335,17 +335,47 @@ KK^G(C_0(P_d(\G)),B) \arrow{r}{\mu_B^{\epsilon,R,d}}\arrow{dr}{\mu_\G^d} &  K_*^
 \end{tikzcd}\]
 because $J_\G(z)$ induces the right multiplication by $j_\G(z)$ and also $\mu_\G^d(z)=[\mathcal L_d]\otimes j_\G(z)$. But, as ${{\mathcal L}_{d'}}_{|P_d(\G)}=\mathcal L_d$ as soon as $d\leq d'$, this diagram commutes with inductive limit over $d$.
 
-\item[(3)] In \cite{OY3}, H. Oyono-Oyono and G. Yu defined a bunch of local quantitative coarse assembly maps for a metric space $X$. For the sake of simplicity, we take $X$ to be discrete and uniformly bounded. Then, for any $C^*$-algebras $A$ and $B$ and a $K$-cycle $z\in KK(A,B)$, they construct a controlled morphism
+\item[(3)] In \cite{OY3}, H. Oyono-Oyono and G. Yu defined a bunch of local quantitative coarse assembly maps for a metric space $X$. For the sake of simplicity, we take $X$ to be discrete and uniformly bounded. Let $\mathcal C$ be its coarse structure, that is the set of all its controlled subsets. Then, for any $C^*$-algebras $A$ and $B$ and a $K$-cycle $z\in KK(A,B)$, they construct a controlled morphism
 \[\sigma_X(z) : \hat K(C^*(X,A))\rightarrow \hat K(C^*(X,B)).\]
 There exists a projection $P_X$ without propagation, and the local quantitative assembly map is defined as 
 \[A_{X,B}^{\epsilon,r,d}(z)=\sigma_X^{\epsilon,r}(z)([P_X]_{\epsilon,r})\] for $z\in KK(C_0(P_d(X)),B)$, where $P_d(X)$ is the classical Rips complex of $X$. This bunch of assembly maps induce the usual coarse assembly map of $X$ 
 \[A_{X,B} : KX_*(X,B)\rightarrow K_*(C^*(X,B)\]
-in $K$-theory. Now let $\G$ be the coarse groupoid of $X$. It is an étale groupoid with compact base space $\G^{(0)}=\beta X$, the Stone-Cech compactification of $X$. A classical result of G. Skandalis, J.-L. Tu and G. Yu \cite{SkTuYu} claims that the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ is equivalent to the Baum-Connes conjecture for the groupoid $G$ with coefficient in $l^\infty(X,K_B)$. More precisely, there is an isomorphism of $C^*$-algebras $l^\infty(X,K_B)\rtimes_r \G \simeq_\phi C^*(X,B)$ and the following diagram commutes :
+in $K$-theory. Now let $\G$ be the coarse groupoid of $X$. It is an étale groupoid with compact base space $\G^{(0)}=\beta X$, the Stone-Cech compactification of $X$ defined as
+\[\G := \cup_{E \in \mathcal C} \overline E,\] 
+where $\overline E$ is the closure of $E$ in $\beta (X \times X)$. 
+A classical result of G. Skandalis, J.-L. Tu and G. Yu \cite{SkTuYu} claims that the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ is equivalent to the Baum-Connes conjecture for the groupoid $G$ with coefficient in $l^\infty(X,K_B)$. More precisely, there is an isomorphism of $C^*$-algebras $\Psi_B : l^\infty(X,K_B)\rtimes_r \G \simeq_\phi C^*(X,B)$ and the following diagram commutes :
 \[\begin{tikzcd}
 KK_*^\G(C_0(P_d(\G),l^\infty(X,K_B)) \arrow{r}{\mu_{\G,l^\infty(X,K_B)}^d}\arrow{d}{\iota^*}& K_*(l^\infty(X, K_B)\rtimes_r G)\arrow{d}{\phi_*}\\
 KK_*(C_0(P_d(X),B) \arrow{r}{A_{X,B}^d}& K_*(C^*(X,B))
 \end{tikzcd}\]
-where the left vertical arrow comes from the inclusion of groupoid $\iota :\{x\}\rightarrow \G$ for any $x\in X$. We claim that we can prove a controlled analogue of this result which induces it in $K$-theory. \textbf{A FINIR} 
+where the left vertical arrow comes from the inclusion of groupoid $\iota :\{x\}\rightarrow \G$ for any $x\in X$. We claim that we can prove a controlled analogue of this result which induces it in $K$-theory.
+
+To prove this, we shall describe $\Psi$ more precisely. For any $C^*$-algebra $B$, let $\tilde B = l^\infty (X,K_B)$. It is naturaly a $\G$-algebra, and the fiber over any $x\in\beta X$ is easily seen to be $\tilde B_x = B$. Now, if $f\in C_c(\G, \tilde B)$, as $\overline E$ are the compact-open of $\G$, $f$ is continuous over a $\overline E$, so it is just a bounded function over $E$.\\
+Define for $g=(x,y)\in X\times X\subset \G$,
+$\Psi_B(f)_{xy}=f(g)(x)\in \tilde B$,
+so that $\Psi_B(f)=(\Psi_B(f)_{xy})_{x,y\in X}$ is a locally compact operator of finite propagation (its support is in $E$). This is a $*$-morphism which extends to the annouced isomorphism. Moreover, $\tilde B$ is naturally a $C^*$-subalgebra of both $\tilde B\rtimes_r \G$ and $C^*(X,B)$, and the two inclusion commute modulo $\Psi_B$. We have a commutative diagram :
+\[\begin{tikzcd} 
+  \  & B \arrow[bend left]{rdd}{\iota_3^B}& \\
+  \ &\tilde B \arrow{u}{ev_x}\arrow[hookrightarrow]{ld}{\iota_1^B}\arrow[hookrightarrow]{rd}{\iota_2^B} &  \\ 
+\tilde B\rtimes_r\G \arrow{rr}{\Psi_B} &  &  C^*(X,B) 
+\end{tikzcd}\] 
+Off course, $\Psi_B$ induces $\Psi_{B*} : \mathcal L_{\tilde B\rtimes_r \G}(H_{B\rtimes_r \G})\rightarrow \mathcal L_{C^*(X,B)}(\mathcal E)$ where $\mathcal E = H_{B\rtimes_r \G}\otimes_{\Psi_B} C^*(X,B)$. \\
+Let $A$ and $B$ be two $C^*$-algebra and $z\in KK_1^\G(\tilde A,\tilde B)$, represented by $(H_{\tilde B}, \psi, T)$. As $T_\G = (\iota_1)_*(T)$, we have $(\Psi_B)_*(T_\G)=(\iota_2)_*(T)=(T_x)_X$. Also, the relations $(\iota_1^A)_*\circ\psi = \psi_\G\circ \iota_1^A$ and $(\iota_2^A)_*\circ\psi_x = (\psi_x)_X\circ \iota_2^A$ are easy to derive, which lead to $(\Psi_B)_*\circ \psi_G \circ \iota_1^A= (\iota_2^B)_*\circ \psi_x = (\psi_x)_X\circ \Psi_A\circ \iota_1^A$. By extending $\G$-equivariantly to $\tilde A  \rtimes_r G$, we have $(\Psi_B)_*(\psi_\G(a))=(\psi_x)_X(\Psi_A(a))$. The map $(x,y)\mapsto (\Psi_A(x), (\Psi_B)_*(y))$ induces a morphism $\Psi_E : E^{(\psi,T)}  \rightarrow  E^{((\psi_x,T_x))}$ which sends 
+$(x,P_\G \psi_\G(x)P_\G + y)$ to $(\Psi_A(x), (P_x)_X(\psi_x)_X(\Psi_A(x))(P_x)_X+(\Psi_B)_*(y))$ by the previous computations. This map makes the following diagram commute
+\[
+\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{\tilde B\rtimes \G}\arrow{r}\arrow{d}{(\Psi_B)_*} & E^{(\psi,T)} \arrow{r}\arrow{d}{\Psi_E}& \tilde A\rtimes_r \G\arrow{r}\arrow{d}{\Psi_A} & 0\\
+0\arrow{r} & K_{C^*(X,B)}\arrow{r} & E^{(\psi_x,T_x)} \arrow{r}& C^*(X,A)\arrow{r} & 0
+\end{tikzcd}.
+\]
+Now the remark $3.7$ of \cite{OY2} gives $((\Psi_B)_*)_*\circ D_{\tilde A\rtimes_r\G}^{K_{\tilde B\rtimes_\G}} = D_{C^*(X,A)}^{K_{C^*(X,B)}}\circ (\Psi_A)_*$, and if we compose by the Morita equivalence, we get 
+\[\sigma(\iota^*(z)) \circ (\Psi_A)_* = (\Psi_B)_*\circ J_\G(z),\]
+where $\iota^*(z)$ is indeed the class of $(H_B, \psi_x,T_x)$.\\
+
+As $C_0(P_d(\G))$ is a $\G$-algebra whose fiber over any $w\in\beta X$ is isomorphic to $C_0(P_d(X))$, if $A=C_0(P_d(\G))$, then $(\Psi_A)_*[\mathcal L_d]\in K^{\epsilon , R}_0(C^(X,C_0(P_d(X)))$. It remains to show that it is equal to $[P_X]$, and
+\[(\Psi_B)_*\circ\mu^{\epsilon,R}_\G (z) = A^{\epsilon,R}(\iota^*(z)).\]
+This, passing to $K$-theory, implies the result of \cite{SkTuYu}.\\
+ \textbf{A FINIR} 
 \end{itemize}
 
 \subsection{Quantitative statements}
@@ -393,7 +423,7 @@ We will show the claim by induction on the dimension of $\Delta$.\\
 The extension of $\G$-algebras $0\rightarrow Z^j_{j-1} \rightarrow Z_j \rightarrow Z_{j-1}\rightarrow 0$ gives a commutative diagram with exact lines :
 \[\begin{tikzcd}
 KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta}\arrow{d}{\theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\theta_{j-1}} & KK_*(Z_j,\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\theta_j} & KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta} \arrow{d}{\theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}{\theta_{j-1}}\\
-KK_*(\tilde Z^j_{j-1},B)\arrow{r}{\delta} & KK_*(\tilde Z_{j-1},B)\arrow{r} & KK_*(\tilde Z_j,B)\arrow{r} & KK_*(\tilde Z^j_{j-1},B)\arrow{r}{\delta} & KK_*(\tilde Z_{j-1},B)\\
+\prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z_j,B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\\
 \end{tikzcd}\]
 The five lemma assures that if $\theta_{j-1}$ and $\theta^j_{j-1}$ are isomorphisms, then so is $\theta_j$. Moreover, $X_j-X_{j-1}$ is equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicty assures then that, if $\theta_{j-1}$ is an isomorphism, then so is $\theta^j_{j-1}$. By induction, proving that $\theta_0$ is an isomorphism would concludes the proof.\\
 \qed
