@@ -372,7 +372,7 @@ Now the remark $3.7$ of \cite{OY2} gives $((\Psi_B)_*)_*\circ D_{\tilde A\rtimes
 \[\sigma(\iota^*(z)) \circ (\Psi_A)_* = (\Psi_B)_*\circ J_\G(z),\]
 where $\iota^*(z)$ is indeed the class of $(H_B, \psi_x,T_x)$.\\
 
-As $C_0(P_d(\G))$ is a $\G$-algebra whose fiber over any $w\in\beta X$ is isomorphic to $C_0(P_d(X))$, if $A=C_0(P_d(\G))$, then $(\Psi_A)_*[\mathcal L_d]\in K^{\epsilon , R}_0(C^(X,C_0(P_d(X)))$. It remains to show that it is equal to $[P_X]$, and
+As $C_0(P_d(\G))$ is a $\G$-algebra whose fiber over any $w\in\beta X$ is isomorphic to $C_0(P_d(X))$, if $A=C_0(P_d(\G))$, then $(\Psi_A)_*[\mathcal L_d]\in K^{\epsilon , R}_0(C^*(X,C_0(P_d(X)))$. It remains to show that it is equal to $[P_X]$, and
 \[(\Psi_B)_*\circ\mu^{\epsilon,R}_\G (z) = A^{\epsilon,R}(\iota^*(z)).\]
 This, passing to $K$-theory, implies the result of \cite{SkTuYu}.\\
  \textbf{A FINIR} 
