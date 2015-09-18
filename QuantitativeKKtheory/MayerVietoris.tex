@@ -406,29 +406,65 @@ The second point is immediate. \\
 \qed
 \end{dem}
 
-To prove the theorem, we will need a lemma.\\
+This kind of statement leads us to define the following proprieties, following \cite{OY3}.\\
+\begin{itemize}
+\item[$\bullet$] $QI_{\G,B}(d,d',R,\epsilon)$ : for any $x\in KK^\G(C_0(P_d(\G)), B )$, $\mu^{\epsilon,R}_\G(x) = 0$ implies $\iota_d^{d'}(x)=0$ in $KK^\G(P_{d'}(\G),B)$.
+\item[$\bullet$] $QS_{\G,B}(d,R,R',\epsilon,\epsilon')$ : for any $y\in K^{(\epsilon,R}$, there exists $x\in KK^\G(P_d(\G),B)$ such that $\mu^{\epsilon',R'}_\G(x)=\iota_{\epsilon,R}^{\epsilon',R'}(y)$.
+\end{itemize} 
+
+\begin{thm}\label{Quant1}
+Let $B$ a $\G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then $\mu_{\G,\tilde B}$ is injective if and only if for all $d,\epsilon,r\geq r_{\G,d,\epsilon}$, there exists $d'\geq d$ such that $QI(d,d',\epsilon,R)$. 
+\end{thm}
+
+To prove the theorem, we will need a serie of lemmas.\\
 
 \begin{lem}
+Let $Z$ be a $\G$-compact proper $\G$-space such that the anchor map $p:Z\rightarrow \G^{(0)}$ is locally injective, and let $(B_j)$ be a countable family of $\G$-algebras. Then the projection $\prod_j B_j \otimes K \rightarrow B_j\otimes K$ induces an isomorphism
+\[KK^\G(C_0(Z),\prod_j B_j\otimes K)\rightarrow\prod_j KK^\G(C_0(Z),B_j\otimes K).\]
+\label{LocalInjectivity}
+\end{lem}
+
+\begin{dem}
+Let $B_\infty = \prod B_j\otimes K$ and $p_k : B\infty \rightarrow B_k$ the projection.\\
+Let $(\mathcal E ,\varphi,F)\in E^\G(C_0(Z), B_\infty)$ be a cycle such that every 
+\[(\mathcal E_k , \varphi_k,F_k)=(p_k)_*(\mathcal E ,\varphi,F)\] 
+is homotopic to $0$. 
+%Up to replace $F_k$ with $\frac{F_k+F_k^*}{2}$, we can suppose that $F_k$ is self adjoint.
+According to \cite{OY3}, we can choose a homotopy which is $C$-Lipschitz on the Calkin algebra for a universal constant $C>0$, hence (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a family of compact operators $T_{s,t}\in K(\mathcal E)$ such that $||F_s-F_t+T_{s,t}||\leq C|s-t|$. But $t\mapsto F'_t= F_{t}+T_{0,t}$ is a compact perturbation of $s\mapsto F_s$ in $\mathcal L(\mathcal E)$ which is $C$-Lipschitzian. Up to replace $(F_s)_s$ with $(F'_t)$, we can suppose the homotopies are uniformly Lipschitzian, and $\tilde F=\prod F_j$ defines a bounded operator.\\
+We now use an idea of \cite{TuBC2}, lemma $3.6$. Namely, using the local injectivity of $p$, we show that $F$ can be supposed to commute with $\varphi$ and $\G$. For the sake of completness, we recall the proof. First, choose a finite open cover $(U_j)_j$ of a compact fundamental domain $K$ for the action of $\G$ such that $p_{|U_j}$ is injective, and take compactly supported continuous functions $\phi_j : Z\rightarrow \R_+$ such that $\text{supp }\phi_j \subset U_j$ and $K\subset \cup \phi_j^{-1}(0,+\infty)$. We can suppose $\sum_{j,g\in \G^{p(z)}} \phi_j (zg) = 1,\forall z\in Z$. Now define $F'_x = \sum_{j, g\in \G^x} \alpha_g (\phi^{\frac{1}{2}} F_{s(g)}\phi^{\frac{1}{2}})$. It is an $\G$-invariant operator which commutes with the action of $C_0(Z)$.\\
+Now we can see that $(\prod_j \mathcal E , \prod \varphi_j , \prod_j F_j)$ defines a cycle as $[\varphi(a),\tilde F]=0$ and $\varphi(a)(\alpha_g(F_{s(g)}-\tilde F_{r(g)})=0$. Moreover it is unitarly equivalent to $(\mathcal E,\varphi, \tilde F )$, and homotopic to $0$.\\
+For the surjectivity, just take $[(\prod \mathcal E_j,\prod \varphi_j,\prod F_j)]$ as a preimage of $\prod_j [(\mathcal E_j, \varphi_j,F_j)]$, using the previous construction.\\
+\qed  
+\end{dem}
+
+\begin{lem}\label{prod}
 Let $\G$ be a locally compact, $\sigma$-compact étale groupoid, $\{B_j\}_{j\geq 0}$ a family of $\G$-algebras and $K$ the algebra of compact operators over a separable Hilbert space. Set $\Delta=P_d(\G)$, then we have an $\Z_2$-graded ismorphism 
 \[KK^\G(C_0(\Delta),\prod_j B_j\otimes K)\simeq \prod_j KK^\G(C_0(\Delta),B_j)\]
 \end{lem}
 
 \begin{dem}
 For all $j$ and any locally compact $\G$-space $X$, the projection $\prod_j B_j\otimes K\rightarrow B_j \otimes K$ induces a morphism
-\[\theta^X : KK^G(C_0(X),\prod_j B_j\otimes K )\rightarrow \prod_j  KK^G(C_0(X),B_j\otimes K ).\]
-Let $X_0\subset X_1 \subset ...\subset X_n$ be the $n$-skeleton decomposition associated to the simplicial structure of the Rips complex $\Delta$ and let $Z_j = C_0(X_j)$, $Z^j_{j-1} = C_0(X_j-X_{j-1})$ and $\theta_j = \theta^{X_j}$.
+\[\Theta^X : KK^G(C_0(X),\prod_j B_j\otimes K )\rightarrow \prod_j  KK^G(C_0(X),B_j\otimes K ).\]
+Let $X_0\subset X_1 \subset ...\subset X_n$ be the $n$-skeleton decomposition associated to the simplicial structure of the Rips complex $\Delta$ and let $Z_j = C_0(X_j)$, $Z^j_{j-1} = C_0(X_j-X_{j-1})$ and $\Theta_j = \Theta^{X_j}$.
 We will show the claim by induction on the dimension of $\Delta$.\\
 
 The extension of $\G$-algebras $0\rightarrow Z^j_{j-1} \rightarrow Z_j \rightarrow Z_{j-1}\rightarrow 0$ gives a commutative diagram with exact lines :
 \[\begin{tikzcd}
-KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta}\arrow{d}{\theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\theta_{j-1}} & KK_*(Z_j,\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\theta_j} & KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta} \arrow{d}{\theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}{\theta_{j-1}}\\
+KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta}\arrow{d}{\Theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\Theta_{j-1}} & KK_*(Z_j,\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\Theta_j} & KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta} \arrow{d}{\Theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}{\Theta_{j-1}}\\
 \prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z_j,B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\\
 \end{tikzcd}\]
-The five lemma assures that if $\theta_{j-1}$ and $\theta^j_{j-1}$ are isomorphisms, then so is $\theta_j$. Moreover, $X_j-X_{j-1}$ is equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicty assures then that, if $\theta_{j-1}$ is an isomorphism, then so is $\theta^j_{j-1}$. By induction, proving that $\theta_0$ is an isomorphism would concludes the proof.\\
+The five lemma assures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, $X_j-X_{j-1}$ is equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicty assures then that, if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta^j_{j-1}$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $\G$-compact proper $\G$-space, and its anchor map is just the target map $r:\G\rightarrow \G^{(0)}$, which is supposed to be étale, so locally injective.\\
 \qed
 \end{dem}
 
+We can now prove the theorem \ref{Quant1}.\\
 
+\begin{dem}
+Let $x\in KK^\G(P_d(\G),\tilde B)$ such that $\mu_{G,\tilde B}(x)=0$. Then, as the quantitative assembly maps factorize $\mu_{G,\tilde B}$, there exist $\epsilon>0$ and $R\geq r_{\G,\tilde B,d}$, such that $\mu_{\G,\tilde B}^{\epsilon,R}(x)=0$. Using the isomorphism of lemma \ref{prod} and the Morita equivalence, we can identify $x$ with $(x_j)_j$ under $KK^\G(P_d(\G),\tilde A)\simeq\prod_j KK^\G(P_d(\G),A)$. Now let $d'\geq d$ such that $QI_{A}(d,d',\epsilon,R)$ holds. That assures that $x_j=0$ in $KK^\G(P_{d'}(\G),B)$, and $x=0$.\\
+
+For the converse, suppose one can find $d,\epsilon,R$ such that $QI_{\G,A}(d,d',\epsilon,R)$ is NOT true for all $d'\geq d$. Then one can extract a increasing sequence $d_j$ diverging to $+\infty$ and $x_j\in KK^\G(P_d(\G),A)$ such that $\mu_{\G,\tilde B}^{\epsilon,R}(x_j)=0$ and $x_j\neq 0$ in $KK^\G(P_{d_j},A)$. Let $x\in KK^\G(P_d,\tilde A)$ be the image of $(x_j)\in \prod KK^\G(P_d,A)$. We have $\mu_{\G,\tilde A}(x)=0$, and $x\neq 0$ in $KK^\G(P_{d'}(\G),\tilde A)$ for all $d'\geq d$, so $\mu_{\G,\tilde A}$ is not injective. \\
+\qed   
+\end{dem}
 
 
 
