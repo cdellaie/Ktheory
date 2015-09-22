@@ -64,9 +64,25 @@ for every $R>0$ and $0< \epsilon <\frac{1}{4}$.
 \end{prop}
 
 \subsection{Quantitative boundary maps}
-\textbf{METTRE LA RQ 3.7 de OY2}
+\textbf{METTRE LA RQ 3.7 de OY2 et celle $1.8$ sur le $\lambda$}
 
 \subsection{A remainder on groupoids action}
+
+For the rest of the article, $\G$ will denote a groupoid, $X=\G^{(0)}$ its space of units, $s,r: \G\rightrightarrow X$ respectively the source and target maps. The fibers over $x\in X$ are denoted by $\G^x = r^{-1}(x)$ and $\G_x=s^{-1}(x)$. In this report, all the groupoids are supposed to be locally compact, $\sigma$-compact and étale, that is $r$ is a local homeomorphism, which entails that the fibers are discrete, hence $\G$ is naturally endowed with a Haar system $(\lambda^x)_{x\in X}$.\\
+For any $C(X)$-algebra $B$, $B_x = B\otimes_{ev_x} \C$ is the fiber over $x\in X$, where $ev_x$ is the evaluation at $x$. The pull-back $r^*B$ and $s^*B$ are respectively defined to be $B\otimes_r C_0(\G) $ and $B\otimes_s C_0(\G) $. They are $C(\G)$-algebras with fiber over $g\in \G$ equal to $B_{r(g)}$ (resp. $B_{s(g)}$).\\
+An action of $\G$ on $B$ is an isomorphism of $C(\G)$-algebras $\alpha : s^*B\rightarrow r^*B$ which respects the product : $\alpha_g\circ\alpha_{g'}=\alpha_{gg'}$ for all composable pairs $(g,g')$.\\
+For a right $B$-Hilbert module $\mathcal E$, we can also define the pull-backs $r^*\mathcal E = \mathcal E\otimes_r C_0(\G) $ and $s^*\mathcal E = \mathcal E\otimes_s C_0(\G) $ : they are respectively right and left $s^*B$-Hilbert module (the $s^*B$-module structure on $r^*\mathcal E$ being obtained by the inverse of the action $\alpha^{-1}: r^*B\rightarrow s^*B$) with fiber over $g$ given by $\mathcal E_{r(g)}$ and $\mathcal E_{s(g)}$.\\
+An action of $\G$ on $\mathcal E$ is a unitary $U\in \mathcal L(s^*\mathcal E,r^*\mathcal E) $ such that $U_g U_{g'}=U_{gg'}$ for all composable pairs $(g,g')$.\\
+We will call any $C(X)$-algebra $B$ endowed with an action of $\G$ a \textbf{$\G$-algebra}. If we have at our disposition a family of representations $\mathcal F$ of $\G$, we can then form the crossed-product $B\rtimes_{\mathcal F} \G$ : it is the completion-reduction of $C_c(\G,B)$ for the norm operator $||f||_{\mathcal F}= \sup_{\pi\in \mathcal F} ||\pi(f)||$. Classical examples are that of the reduced crossed product $B\rtimes_r \G$ for which $\mathcal F$ is the left-regular representation, and the maximal crossed-product $B\rtimes_{max}\G$ for which $\mathcal F$ is the family of all unitary representations. 
+The formula 
+\[\langle \psi, \eta\rangle_x = \int_{\G^x} \langle \psi(g),\eta(g)\rangle d\lambda^x(g)\] 
+defines a $C(X)$-hermitian product on $C_c(\G,B)$, which we can complete to get the right-$B\rtimes \G$-Hilbert module $\mathcal E\rtimes \G$. So the functor $B\mapsto B\rtimes \G $ carries to $\mathcal E\mapsto \mathcal E\rtimes \G$. \\
+
+We will be mainly interested in the properties of the functor $B\mapsto B\rtimes \G$, and the majority of the constructions are carriable with "good" crossed product functors. We will discuss the property needed for a crossed-product functor to be "good".\\  
+The first property is \textbf{semi-split--exactness}. We recall that an extension of $\G$-algebra \[\begin{tikzcd}[column sep = small]0\arrow{r} & J \arrow{r} & A\arrow{r}{p} & A/J \arrow{r} & 0\end{tikzcd}\] is said to be semi-split if there exists a completely positive map $s : A/J \rightarrow A$ such that $p\circ s = 1$. The functor $-\rtimes \G$ is said to be semi-split exact if for any such extension, \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\rtimes \G \arrow{r} & A\rtimes \G\arrow{r}{p_\G} & A/J\rtimes \G \arrow{r} & 0\end{tikzcd}\] is a semi-split extension of $C^*$-algebras.
+The second property implies the first. We say that $-\rtimes \G$ has the $CP$-property if it preserves completely positive maps, so that from any $\G$-completely positive map $\phi: A\rightarrow B$, we can induce a $CP$ map $\phi_\G: A\rtimes\G\rightarrow B\rtimes \G$. This assures that the action of $\G$ on any $\G$-module $\mathcal E$ descends to an isomorphism $K(\mathcal E)\rtimes \G \simeq K(\mathcal E\rtimes \G)$.
+ \textbf{A FINIR, faire une preuve entre autre ...}
+  
 
 \section{Quantitative statements}
 
