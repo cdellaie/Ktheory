@@ -389,7 +389,7 @@ then $\mu_{\G,A}$ is injective.\\
 
 On the other hand, if this statement is true : \\
 
-$\bullet$(Quantitative Surjectivity) there exists $\epsilon'\in (0,\frac{1}{4})$ such that $\forall r'\geq r_{d,\epsilon},\exists \epsilon,r$ such that $\epsilon'\leq \epsilon<frac{1}{4}$ and $r_{d,\epsilon}\leq r\leq r'$, such that for all $y\in K_*^{\epsilon',r'}(A\rtimes\G),\exists x \in KK_*^\G(C_0(P_d(\G)),A)$ such that $\mu_{\G,A}^{\epsilon',r',d}=\iota_{\epsilon,r}^{\epsilon',r'}(y)$;\\
+$\bullet$(Quantitative Surjectivity) there exists $\epsilon'\in (0,\frac{1}{4})$ such that $\forall r'\geq r_{d,\epsilon},\exists \epsilon,r$ such that $\epsilon'\leq \epsilon<\frac{1}{4}$ and $r_{d,\epsilon}\leq r\leq r'$, such that for all $y\in K_*^{\epsilon',r'}(A\rtimes\G),\exists x \in KK_*^\G(C_0(P_d(\G)),A)$ such that $\mu_{\G,A}^{\epsilon',r',d}=\iota_{\epsilon,r}^{\epsilon',r'}(y)$;\\
 
 then $\mu_{\G,A}$ is surjective.
 \end{prop}
@@ -409,11 +409,11 @@ The second point is immediate. \\
 This kind of statement leads us to define the following proprieties, following \cite{OY3}.\\
 \begin{itemize}
 \item[$\bullet$] $QI_{\G,B}(d,d',R,\epsilon)$ : for any $x\in KK^\G(C_0(P_d(\G)), B )$, $\mu^{\epsilon,R}_\G(x) = 0$ implies $\iota_d^{d'}(x)=0$ in $KK^\G(P_{d'}(\G),B)$.
-\item[$\bullet$] $QS_{\G,B}(d,R,R',\epsilon,\epsilon')$ : for any $y\in K^{(\epsilon,R}$, there exists $x\in KK^\G(P_d(\G),B)$ such that $\mu^{\epsilon',R'}_\G(x)=\iota_{\epsilon,R}^{\epsilon',R'}(y)$.
+\item[$\bullet$] $QS_{\G,B}(d,R,R',\epsilon,\epsilon')$ : for any $y\in K^{\epsilon,R}(B\rtimes \G)$, there exists $x\in KK^\G(P_d(\G),B)$ such that $\mu^{\epsilon',R'}_\G(x)=\iota_{\epsilon,R}^{\epsilon',R'}(y)$.
 \end{itemize} 
 
 \begin{thm}\label{Quant1}
-Let $B$ a $\G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then $\mu_{\G,\tilde B}$ is injective if and only if for all $d,\epsilon,r\geq r_{\G,d,\epsilon}$, there exists $d'\geq d$ such that $QI(d,d',\epsilon,R)$. 
+Let $B$ a $\G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then $\mu_{\G,\tilde B}$ is injective if and only if for all $d,\epsilon,r\geq r_{\G,d,\epsilon}$, there exists $d'\geq d$ such that $QI_{\G,B}(d,d',\epsilon,R)$. 
 \end{thm}
 
 To prove the theorem, we will need a serie of lemmas.\\
@@ -466,6 +466,18 @@ For the converse, suppose one can find $d,\epsilon,R$ such that $QI_{\G,A}(d,d',
 \qed   
 \end{dem}
 
+We also have a theorem relating quantitative surjectivity for $\mu_{\G,B}$ and surjecitvity of $\mu_{\G,\tilde B}$.
+
+\begin{thm}
+Let $B$ a $\G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then there exists $\lambda>1$ such that $\mu_{\G,\tilde B}$ is onto if and only if for any $0<\epsilon<\frac{1}{4\lambda}$ and $R>0$, there exist $R'\geq \max(R,r_{\G,d,\epsilon})$ and $d>0$ such that $QS_{B,\G}(d,R,R',\epsilon,\lambda\epsilon)$ holds.
+\end{thm}
+
+\begin{dem}
+Let $\lambda>0$ the universal constant of remark $1.18$ of \cite{OY2} : for any $C^*$-algebra and $x,y\in K^{\epsilon, R}(A)$ such that $\iota_{\epsilon,R} x =\iota_{\epsilon,R}y$, there exists $R'\geq R$ such that $\iota_{\epsilon,R}^{\lambda\epsilon,R'} x =\iota_{\epsilon,R}^{\lambda\epsilon,R'}y$.\\
+
+Let $y\in K_*(\tilde B\rtimes \G)$, and take $z\in K^{\epsilon,R}$, where $R>0,\epsilon<\frac{1}{4\lambda}$, such that $\iota_{\epsilon,R}z = y$. The projection on the $j^{th}$ component $\tilde B \rightarrow K_B $ used in $K$-theory then composed with Morita equivalence gives a map $K^{\epsilon,R}(\tilde B\rtimes \G)\rightarrow K^{\epsilon ,R}(B\rtimes \G)$, and $z_j$ denotes the image of $z$ under this map. We can pick $d$ and $R'\geq\max (r_{\G,d,\epsilon})$ such that $QS(d,R,R',\epsilon,\lambda\epsilon)$ : for every $j$, there exists $x_j\in KK^\G(P_d,B) $ such that $\mu_{\G,B}^{d,\lambda\epsilon,R'}(x_j)=\iota_{\epsilon,R}^{\lambda\epsilon,R'}z_j$. As $KK^\G(P_d,\tilde B)\simeq \prod_j KK^\G(P_d,B)$, $(x_j)$ can be taken as an element $x$ of $KK^\G(P_d,\tilde B)$. Naturality of the assembly maps, and compatibility of quantitative assembly maps with the usual one assures that $\mu_{\G,\tilde B}(x)=z$, whereby $\mu_{\G,\tilde B}$ is onto.\\
+
+\end{dem}
 
 
 
