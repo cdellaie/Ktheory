@@ -466,7 +466,7 @@ For the converse, suppose one can find $d,\epsilon,R$ such that $QI_{\G,A}(d,d',
 \qed   
 \end{dem}
 
-We also have a theorem relating quantitative surjectivity for $\mu_{\G,B}$ and surjecitvity of $\mu_{\G,\tilde B}$.
+We also have a theorem relating quantitative surjectivity for $\mu_{\G,B}$ and surjectivity of $\mu_{\G,\tilde B}$.
 
 \begin{thm}
 Let $B$ a $\G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then there exists $\lambda>1$ such that $\mu_{\G,\tilde B}$ is onto if and only if for any $0<\epsilon<\frac{1}{4\lambda}$ and $R>0$, there exist $R'\geq \max(R,r_{\G,d,\epsilon})$ and $d>0$ such that $QS_{B,\G}(d,R,R',\epsilon,\lambda\epsilon)$ holds.
@@ -477,6 +477,10 @@ Let $\lambda>0$ the universal constant of remark $1.18$ of \cite{OY2} : for any 
 
 Let $y\in K_*(\tilde B\rtimes \G)$, and take $z\in K^{\epsilon,R}$, where $R>0,\epsilon<\frac{1}{4\lambda}$, such that $\iota_{\epsilon,R}z = y$. The projection on the $j^{th}$ component $\tilde B \rightarrow K_B $ used in $K$-theory then composed with Morita equivalence gives a map $K^{\epsilon,R}(\tilde B\rtimes \G)\rightarrow K^{\epsilon ,R}(B\rtimes \G)$, and $z_j$ denotes the image of $z$ under this map. We can pick $d$ and $R'\geq\max (r_{\G,d,\epsilon})$ such that $QS(d,R,R',\epsilon,\lambda\epsilon)$ : for every $j$, there exists $x_j\in KK^\G(P_d,B) $ such that $\mu_{\G,B}^{d,\lambda\epsilon,R'}(x_j)=\iota_{\epsilon,R}^{\lambda\epsilon,R'}z_j$. As $KK^\G(P_d,\tilde B)\simeq \prod_j KK^\G(P_d,B)$, $(x_j)$ can be taken as an element $x$ of $KK^\G(P_d,\tilde B)$. Naturality of the assembly maps, and compatibility of quantitative assembly maps with the usual one assures that $\mu_{\G,\tilde B}(x)=z$, whereby $\mu_{\G,\tilde B}$ is onto.\\
 
+Suppose that there exist $0<\epsilon<\frac{1}{4\lambda}$ and $R>0$ such that for every positive numbers $d>0$ and $R'\geq\max (r_{\G,B},R)$, $QS(d,R,R',\epsilon,\lambda\epsilon)$ does not hold. Let $(d_j)$ and $(R_j)$ be unbounded increasing sequences of positive numbers and $y_j\in K^{\epsilon,R}(B\rtimes \G)$ such that $\iota_{\epsilon,R}^{\lambda\epsilon,R_j}(y_j)$ is not in the range of $\mu_{\G,B}^{d_j,\lambda\epsilon,R_j}$. Let $y\in K^{\epsilon,R}(\tilde B\rtimes \G)$ be an element such that its image with the previous map coincides with $y_j$. If there exists $x\in KK^\G(P_{s},\tilde B)$ for a $s\geq d$ such that $\iota_{\epsilon,R}( y) =\mu_{\G,\tilde B}^s(x)$ then there would exists a $R'\geq R$ such that
+\[\iota_{\epsilon,R}^{\lambda\epsilon, R'}( y) =\mu_{\G,\tilde B}^{s,\lambda\epsilon,R'}(x) = \iota_{\epsilon,R}^{\lambda\epsilon, R'}\circ\mu_{\G,\tilde B}^{s,\epsilon,R}(x).\]
+Now choose $j$ such that $d_j\geq s$ and $R_j>R'$, and compose the previous equality with $\iota_{\lambda\epsilon,R'}^{\lambda\epsilon,R_j}$ and $q_s^{d_j}$ to obtain $\iota_{\epsilon,R}^{\lambda\epsilon,R_j}(y_j)=\mu_{\G,B}^{d_j,\lambda\epsilon,R_j}$ which contradicts our assumption.\\
+\qed
 \end{dem}
 
 
