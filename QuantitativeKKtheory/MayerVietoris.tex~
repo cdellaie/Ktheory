@@ -81,22 +81,45 @@ To be more flexible, we allow our morphisms between quantitative objets to incre
 \item[$\bullet$] A control pair $(\alpha,h)$ is a positive number $\alpha>1$ and a map $h:(0,\frac{1}{4\alpha})\rightarrow \R_*^+$ such that $h\leq  F $ for $F$ a non-increasing function. We define a partial order on the control pair by $(\alpha,h)\leq (\beta,k)$ if $\alpha\leq \beta$ and $h\leq k$ on $(0,\frac{1}{4\beta})$.
 \item[$\bullet$] A quantitative object is a family of abelian groups $\hat H=(H^{\epsilon,R})_{\epsilon\in(0,\frac{1}{4}),R>0}$ and group morphisms $\phi_{\epsilon,R}^{\epsilon',R'}: G^{\epsilon,R}\rightarrow G^{\epsilon',R'}$ any time $R\leq R'$ and $\epsilon\leq \epsilon'$, such that $\phi_{\epsilon,R}^{\epsilon,R}=id_{H^{\epsilon,R}}$ and $\phi_{\epsilon_1,R_1}^{\epsilon_2,R_2}\circ \phi_{\epsilon_0,R_0}^{\epsilon_1,R_1}=\phi_{\epsilon,R}^{\epsilon_2,R_2}$.
 \item[$\bullet$] For a control pair $(\alpha,k)$ and two quantitative objects $H$ and $H'$, a $(\alpha,k)$-controlled (quantitative) morphism $F:H\rightarrow H'$ is a family of group morphisms
-\[F^{\epsilon,R}: H^{\epsilon,R}\rightarrow H'^{\alpha\epsilon,k_\epsilon R}, \forall \epsilon\in (0,\frac{1}{4\alpha}),R>0.\]
+\[F^{\epsilon,R}: H^{\epsilon,R}\rightarrow H'^{\alpha\epsilon,k_\epsilon R}\quad\forall \epsilon\in (0,\frac{1}{4\alpha}),R>0.\]
 \end{itemize}
 \end{definition}
+
+\begin{Expl}
+The basic example of quantitative object is of course quantitative $K$-theory.\\
+A morphism $\phi : A \rightarrow B$ between filtered $C^*$-algebras is filtered if $\phi(A_R)\subset B_R$. If so, $\phi$ naturally induces a $(1,1)$-controlled morphism $\phi_* : \hat K(A)\rightarrow \hat K(B)$.\\
+Another (important) examples will be that of the controlled Morita equivalence and quantitative boundary maps. 
+\end{Expl}
 
 \subsection{Morita equivalence}
 
 As in classical $K$-theory, we have an isomorphism which we call the (controlled) Morita equivalence.
 \begin{prop}
 Let $A$ be a filtered $C^*$-algebra and $H$ a separable Hilbert space. We denote by $K_A$ the $C^*$-algebra of compact operators of the standard Hilbert module $H_A$, which is $C^*$-isomorphic to $A\otimes K(H)$. Let $e$ be any rank-one projection in $K(H)$. Then the $C^*$-morphism 
-\[\begin{array}{lll} A & \rightarrow & K_A \\ a &\mapsto & a\otimes e\end{array}\]
+\[\left\{\begin{array}{lll} A & \rightarrow & K_A \\ a &\mapsto & a\otimes e\end{array}\right.\]
 induces an $\Z_2$-graded isomorphism
 \[M_A^{\epsilon, R} : K^{\epsilon , R}(A)\rightarrow K^{\epsilon , R}(K_A)\]
 for every $R>0$ and $0< \epsilon <\frac{1}{4}$.
 \end{prop}
 
 \subsection{Quantitative boundary maps}
+
+Let $0\rightarrow J \rightarrow A\rightarrow A/J\rightarrow 0$ be an extension of $C^*$-algebras. We denote $\partial_{J,A}: K_*(A/J)\rightarrow K_{*+1}(J)$ the associated boundary map.
+
+\begin{prop}
+There exist a control pair $(\alpha_D,k_D)$ such that for any semi-split extension of filtered $C^*$-algebras $0\rightarrow J \rightarrow A\rightarrow A/J\rightarrow 0$, there exists a $(\alpha_D,k_D)$-controlled morphism of odd degree
+\[D_{J,A} : \hat K(A/J)\rightarrow \hat K(J)\quad \epsilon \in (1,\frac{1}{4\alpha_D}),R>0\]
+which induces $\partial_{J,A}$ in $K$-theory.
+\end{prop}
+
+We have to recall what we will refer as the remark $3.7$ of \cite{OY2}, a property of quantitative assembly maps that we shall intensively.\\
+Let $\phi: A \rightarrow B$ be a filtered morphism between two filtered $C^*$-algebras. We suppose we have extensions $0\rightarrow I \rightarrow A\rightarrow A/I\rightarrow 0$ and $0\rightarrow J \rightarrow B\rightarrow B/J\rightarrow 0$. If 
+\begin{itemize}
+\item[$\bullet$]$\phi(I)\subset J$
+\item[$\bullet$]$\phi$ intertwines two completely positive sections of the extensions : $\phi \circ s_A = s_B \circ \phi_{I}^J$, where $\phi_{I}^J$ is the induced map $A/I_rightarrow B/J$.
+\end{itemize} 
+then $D_{J,B}\circ (\phi_{I}^J)_*=\phi_*\circ D_{I,A}$.
+
 \textbf{METTRE LA RQ 3.7 de OY2 et celle $1.8$ sur le $\lambda$}
 
 \subsection{A remainder on groupoids action}
@@ -164,7 +187,7 @@ There exists a control pair $(\lambda,h)$ such that for every semi-split extensi
 \[\begin{tikzcd}[column sep = small]
 0 \arrow{r} & J\arrow{r}{\phi}& A \arrow{r}{\psi} & A/J \arrow{r} & 0
 \end{tikzcd},\]
-the following diagrams commutes and are exact 
+the following diagrams $(\lambda,h)$-commutes and are exact 
 \[\begin{tikzcd}[column sep = small]
 \hat K_0(J\rtimes_r \G) \arrow{r}{\phi_{\G,*}}&\hat K_0( A\rtimes_r \G ) \arrow{r}{\psi_{\G,*}} & \hat K_0( A/J\rtimes_r \G) \arrow{d} \\
 \hat K_1(A/J\rtimes_r \G) \arrow{u} \arrow{r}{\phi_{\G,*}}& \hat K_1( A\rtimes_r \G ) \arrow{r}{\psi_{\G,*}} & \hat K_1( J\rtimes_r \G)
@@ -502,7 +525,7 @@ The extension of $\G$-algebras $0\rightarrow Z^j_{j-1} \rightarrow Z_j \rightarr
 KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta}\arrow{d}{\Theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\Theta_{j-1}} & KK_*(Z_j,\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\Theta_j} & KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta} \arrow{d}{\Theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}{\Theta_{j-1}}\\
 \prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z_j,B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\\
 \end{tikzcd}\]
-The five lemma assures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, $X_j-X_{j-1}$ is equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicty assures then that, if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta^j_{j-1}$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $\G$-compact proper $\G$-space, and its anchor map is just the target map $r:\G\rightarrow \G^{(0)}$, which is supposed to be étale, so locally injective.\\
+The five lemma assures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, because $\Delta$ is a typed simplicial simplex (see \cite{TuBC2}), $X_j-X_{j-1}$ is equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicty assures then that, if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta^j_{j-1}$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $\G$-compact proper $\G$-space, and its anchor map is just the target map $r:\G\rightarrow \G^{(0)}$, which is supposed to be étale, so locally injective.\\
 \qed
 \end{dem}
 
