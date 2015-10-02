@@ -10,7 +10,7 @@ Following the route of these articles \cite{OY2}\cite{OY3}, we will define quant
 
 \section{Review of quantitative $K$-theory}
 
-This section presents basic constructions of quantitative $K$-theory for operator algebras that we shall use. For more details, see the original article of H. Oyono-Oyono and G. Yu.\cite{OY2} We will refer either to quantitative or controlled $K$-theory for the same object, namely a family of abelian groups $\hat K(A)= (K^{\epsilon,R})$ where $R>0, 0<\epsilon<\frac{1}{4}$, defined for a filtered $C^*$-algebra $A$. The motivating idea is to keep track of propagation of an operator while taking his (possibly higher) index. The main example is that of Roe algebras. \\
+This section presents basic constructions of quantitative $K$-theory for operator algebras that we shall use. For more details, see the original article of H. Oyono-Oyono and G. Yu.\cite{OY2} We will refer either to quantitative or controlled $K$-theory for the same object, namely a family of abelian groups $\hat K(A)= (K^{\epsilon,R}(A))$ where $R>0, 0<\epsilon<\frac{1}{4}$, defined for a filtered $C^*$-algebra $A$. The motivating idea is to keep track of propagation of an operator while taking his (possibly higher) index. The main example is that of Roe algebras. \\
 
 \subsection{Roe algebras and filtration}
 
@@ -51,6 +51,39 @@ with the norm operator
 When $A$ is not unital and filtered by $(A_R)_{R>0}$, $A^+$ is filtered by $A_R^+= \{(x,\lambda) : x\in A_R,\lambda\in \C\}$.
 
 \subsection{Definition of quantitative $K$-theory} 
+
+Let $A$ be unital and filtered, and $\epsilon\in (0,\frac{1}{4}),R>0$.
+\begin{itemize}
+\item[$\bullet$] $p$ is a $\epsilon$-$R$-projection if $p\in A_R$ and $||p^2-p||<\epsilon$.
+\item[$\bullet$] $u$ is a $\epsilon$-$R$-unitary if $u\in A_R$ and $||u^*u-1||<\epsilon$ and $||uu^*-1||<\epsilon$.\\
+\end{itemize}
+
+Let $P^{\epsilon, R}_n(A)$ be the set of $\epsilon$-$R$-projections and $U^{\epsilon,R}_n(A)$ the set of $\epsilon$-$R$-unitaries of $M_n(A)$. We can also define the inductive limits $P^{\epsilon, R}_\infty(A)=\varinjlim P^{\epsilon,R}_n(A)$ and $U^{\epsilon, R}_\infty(A)=\varinjlim U^{\epsilon,R}_n(A)$ under the inductive system of morphisms 
+\[p\mapsto \begin{pmatrix} p & 0 \\0 & 0\end{pmatrix}\text{ and }u\mapsto \begin{pmatrix} u & 0 \\0 & 1\end{pmatrix}.\]
+ The following defines equivalence relation on $P^{\epsilon,R}_\infty(A)\times \N$ and $U_\infty^{\epsilon,R}(A)$ :
+\begin{itemize}
+\item[$\bullet$] $(p,m)\sim (q,n)$ if there exists $h\in P^{\epsilon,R}_\infty(A[0,1])$ and $k>0$ such that $h(0)=\begin{pmatrix} p & 0 \\0 & I_{m+k}\end{pmatrix}$ and $h(0)=\begin{pmatrix} q & 0 \\0 & I_{n+k}\end{pmatrix}$.
+\item[$\bullet$] $u\sim v$ if there exists $h\in U^{3\epsilon,2R}_\infty(A[0,1])$ such that $h(0)=u$ and $h(1)=v$.
+\end{itemize}
+
+\begin{definition}
+Let $\epsilon\in (0,\frac{1}{4}),R>0$.\\
+\begin{itemize}
+\item[$\bullet$] $K_0^{\epsilon,R}(A)=P_\infty^{\epsilon,R}(A)\times\N / \sim$ if $A$ is unital, or $\{[p,n]\in P^{\epsilon,R}_\infty(A^+)\times\N\text{ such that tr}\rho_A(\kappa (p))=n\}$ if $A$ is not unital.
+\item[$\bullet$] $K_1^{\epsilon,R}(A)=U^{\epsilon,R}_\infty(A^+)/\sim$ where $A=A^+$ if $A$ is unital.
+\end{itemize}
+\end{definition}
+
+These are abelian groups (see \cite{OY2},\cite{OY3}) with laws described by $[p,m]_{epsilon,R}+[q,n]_{epsilon,R}=[diag(p,q),m+n]_{\epsilon,R}$ and $[u]_{epsilon,R}+[v]_{epsilon,R}=[diag(u,v)]_{epsilon,R}$.
+\begin{definition}
+To be more flexible, we allow our morphisms between quantitative objets to increase propagation, but in a controlled way. That control is implemented by what Oyono-Oyono and Yu call a control pair.
+\begin{itemize}
+\item[$\bullet$] A control pair $(\alpha,h)$ is a positive number $\alpha>1$ and a map $h:(0,\frac{1}{4\alpha})\rightarrow \R_*^+$ such that $h\leq  F $ for $F$ a non-increasing function. We define a partial order on the control pair by $(\alpha,h)\leq (\beta,k)$ if $\alpha\leq \beta$ and $h\leq k$ on $(0,\frac{1}{4\beta})$.
+\item[$\bullet$] A quantitative object is a family of abelian groups $\hat H=(H^{\epsilon,R})_{\epsilon\in(0,\frac{1}{4}),R>0}$ and group morphisms $\phi_{\epsilon,R}^{\epsilon',R'}: G^{\epsilon,R}\rightarrow G^{\epsilon',R'}$ any time $R\leq R'$ and $\epsilon\leq \epsilon'$, such that $\phi_{\epsilon,R}^{\epsilon,R}=id_{H^{\epsilon,R}}$ and $\phi_{\epsilon_1,R_1}^{\epsilon_2,R_2}\circ \phi_{\epsilon_0,R_0}^{\epsilon_1,R_1}=\phi_{\epsilon,R}^{\epsilon_2,R_2}$.
+\item[$\bullet$] For a control pair $(\alpha,k)$ and two quantitative objects $H$ and $H'$, a $(\alpha,k)$-controlled (quantitative) morphism $F:H\rightarrow H'$ is a family of group morphisms
+\[F^{\epsilon,R}: H^{\epsilon,R}\rightarrow H'^{\alpha\epsilon,k_\epsilon R}\quad\forall \epsilon\in (0,\frac{1}{4\alpha}),R>0.\]
+\end{itemize}
+\end{definition}
 
 \subsection{Morita equivalence}
 

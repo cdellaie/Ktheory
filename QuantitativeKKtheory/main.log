@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  22 SEP 2015 19:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  2 OCT 2015 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -909,18 +909,38 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 53.
 
-! Undefined control sequence.
-l.71 ...s space of units, $s,r: \G\rightrightarrow
-                                                   X$ respectively the sourc...
 
-? 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+
+Overfull \hbox (29.04703pt too wide) in paragraph at lines 77--78
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 q; n\OT1/cmr/m/n/10 ][] = [\OML/cmm/m/it/10 d
+iag\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p; q\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; m 
+\OT1/cmr/m/n/10 + \OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ][]$ and $[\OML/cmm/m/it/10
+ u\OT1/cmr/m/n/10 ][] + [\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 ][] = [\OML/cmm/m/it
+/10 diag\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; v\OT1/cmr/m/n/10 )][]$. 
+ []
+
+[5]
+! Undefined control sequence.
+l.104 ... space of units, $s,r: \G\rightrightarrow
+                                                   X$ respectively the sourc...
+
+? 
 [6]
-Overfull \hbox (6.12057pt too wide) in paragraph at lines 93--95
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
+
+ []
+
+
+Overfull \hbox (6.12057pt too wide) in paragraph at lines 126--128
 \OT1/cmr/m/n/10 Then $\OML/cmm/m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[
 ]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 G\OT1/c
 mr/m/n/10 ))\OML/cmm/m/it/10 ; B\OT1/cmr/m/n/10 )$ is de-fi-ned to be the in-du
@@ -929,85 +949,69 @@ T1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; B\OT1/cmr/
 m/n/10 )$
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
-
- []
-
 [7]
-Overfull \hbox (0.92775pt too wide) in paragraph at lines 122--128
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
+
+ []
+
+
+Overfull \hbox (0.92775pt too wide) in paragraph at lines 155--161
 []\OT1/cmr/m/n/10 If $[]$ is a semi-split exact se-quence of $\OMS/cmsy/m/n/10 
 G$\OT1/cmr/m/n/10 -$\OML/cmm/m/it/10 C[]$\OT1/cmr/m/n/10 -algebras,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--128
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 155--161
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 157--159
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--171
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 202--204
 
  []
 
 
-Overfull \hbox (1.51024pt too wide) in paragraph at lines 188--189
-[][]\OT1/cmr/bx/n/10 D^^Sefinition 3. []\OT1/cmr/m/n/10 The control-led Kas-pa-
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
+
+ []
+
+
+Overfull \hbox (1.51024pt too wide) in paragraph at lines 221--222
+[][]\OT1/cmr/bx/n/10 D^^Sefinition 5. []\OT1/cmr/m/n/10 The control-led Kas-pa-
 rov trans-form of an ele-ment $\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 2 \OML/cmm/m
 /it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
  []
 
-[9]
-Overfull \hbox (14.45294pt too wide) in paragraph at lines 214--215
+[10]
+Overfull \hbox (14.45294pt too wide) in paragraph at lines 247--248
 []\OT1/cmr/m/n/10 If $\OML/cmm/m/it/10 z; z[]$ \OT1/cmr/m/n/10 are ele-ments of
  $\OML/cmm/m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
 , re-pre-sen-ted by two $\OML/cmm/m/it/10 K$\OT1/cmr/m/n/10 -cycles $(\OML/cmm/
 m/it/10 H[]; ^^Y[]; T[]\OT1/cmr/m/n/10 )$,
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
-
- []
-
-
-Overfull \hbox (22.48785pt too wide) in paragraph at lines 240--242
-\OT1/cmr/m/n/10 Indeed, the crossed-product func-tor com-mutes with pull-back b
-y $\OMS/cmsy/m/n/10 G$\OT1/cmr/m/n/10 -morphisms,
- []
-
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 253--255
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
@@ -1016,58 +1020,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
+
+Overfull \hbox (22.48785pt too wide) in paragraph at lines 273--275
+\OT1/cmr/m/n/10 Indeed, the crossed-product func-tor com-mutes with pull-back b
+y $\OMS/cmsy/m/n/10 G$\OT1/cmr/m/n/10 -morphisms,
+ []
+
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--334
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
-[14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 388--390
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 364--367
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 392--394
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 399--401
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 421--423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 425--427
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
+Underfull \hbox (badness 10000) in paragraph at lines 432--434
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
 
 
-Overfull \hbox (22.8243pt too wide) in paragraph at lines 419--423
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
+
+ []
+
+
+Overfull \hbox (22.8243pt too wide) in paragraph at lines 452--456
 \OT1/cmr/m/n/10 But then the quan-ti-ta-tive in-jec-ti-vity condi-tion as-sures
  that $\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 = 0$ in $\OML/cmm/m/it/10 KK[]\OT1/cm
 r/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n
@@ -1075,12 +1095,12 @@ r/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--426
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
 
  []
 
 
-Overfull \hbox (25.43657pt too wide) in paragraph at lines 428--429
+Overfull \hbox (25.43657pt too wide) in paragraph at lines 461--462
 []$\OML/cmm/m/it/10 QS[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 d; R; R[]; ^^O; ^^O[]
 \OT1/cmr/m/n/10 )$ : for any $\OML/cmm/m/it/10 y \OMS/cmsy/m/n/10 2 \OML/cmm/m/
 it/10 K[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 B \U/msb/m/n/10 o \OMS/cmsy/m/n/10 G
@@ -1090,54 +1110,54 @@ m/m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 (\OMS/cmsy/m
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
+Underfull \hbox (badness 10000) in paragraph at lines 468--469
 
  []
 
-[17]
+[18]
 
-LaTeX Warning: Citation `WeggeOlsen' on page 18 undefined on input line 449.
+LaTeX Warning: Citation `WeggeOlsen' on page 19 undefined on input line 482.
 
 
-Overfull \hbox (8.88527pt too wide) in paragraph at lines 446--454
+Overfull \hbox (8.88527pt too wide) in paragraph at lines 479--487
 \OT1/cmr/m/n/10 For the sur-jec-ti-vity, just take $[([] \OMS/cmsy/m/n/10 E[]\O
 ML/cmm/m/it/10 ; [] '[]; [] F[]\OT1/cmr/m/n/10 )]$ as a prei-mage of $[][][(\OM
 S/cmsy/m/n/10 E[]\OML/cmm/m/it/10 ; '[]; F[]\OT1/cmr/m/n/10 )]$,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--466
+Underfull \hbox (badness 10000) in paragraph at lines 496--499
 
  []
 
 
-Overfull \hbox (309.84613pt too wide) detected at line 471
+Overfull \hbox (309.84613pt too wide) detected at line 504
 []
  []
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 476--477
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 479--480
+Underfull \hbox (badness 10000) in paragraph at lines 512--513
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--493
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--495
+Underfull \hbox (badness 10000) in paragraph at lines 527--528
 
  []
 
-[19]) [20] (./main.bbl)
+[20]) [21] (./main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
- [21
+ [22
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
@@ -1153,8 +1173,8 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 16986 strings out of 494958
- 306595 string characters out of 6179263
+ 16989 strings out of 494958
+ 306626 string characters out of 6179263
  384031 words of memory out of 5000000
  19841 multiletter control sequences out of 15000+600000
  13096 words of font info for 51 fonts, out of 8000000 for 9000
@@ -1178,10 +1198,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (21 pages, 308138 bytes).
+Output written on main.pdf (22 pages, 314423 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
+ 342 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
