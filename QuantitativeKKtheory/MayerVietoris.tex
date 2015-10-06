@@ -1,10 +1,10 @@
 %\section{The Novikov conjecture for groups with finite decomposition complexity (maybe)}
 
-During the past years, there has been a growing interest on the links between several conjectures involving assembly maps. This report will focus on the link between the coarse Baum-Connes conjecture and the Novikov conjecture. If $\Gamma$ is a finitely generated group, the descent principle assures that if the coarse Baum-Connes map for $\Gamma$ as a metric space with the word length is an isomorphism, then the Baum-Connes assembly map for $\Gamma$ is injective, thus the Novikov conjecture holds for $\Gamma$.\\
+During the past years, there has been a growing interest on the links between several conjectures involving assembly maps. This report will focus on the link between the coarse Baum-Connes conjecture and the Novikov conjecture. If $\Gamma$ is a finitely generated group, the descent principle assures that if the coarse Baum-Connes assembly map for $\Gamma$ as a metric space with the word length is an isomorphism, then the Baum-Connes assembly map for $\Gamma$ is rationnaly injective, thus the Novikov conjecture holds for $\Gamma$.\\
 
-Following ideas of M. Gromov, G. Yu introduced new coarse concepts in the study of these assembly maps. He was able to prove the coarse Baum-Connes conjecture for proper metric spaces with finite asymptotic dimension, which is a coarse analogue of the topological covering dimension. Later on, in a paper with Guenter and R. Tessera \cite{GTY}, they defined decomposition complexity for metric spaces, which is a broad generalization of asymptotic dimension. In particular, proper metric spaces with finite asymptotic dimension are of finite decomposition complexity. At the end of \cite{GTY}, as concluding remarks, the authors point out that one should be able to derive a new proof of the coarse Baum-Connes conjecture for spaces with finite decomposition complexity. We should emphasize that this is already known : a space which is finitely decomposable has property (A), hence verifies the coarse Baum-Connes conjecture by the work of G. Yu. \cite{Yu2} But the techniques of this proof is highly analytical, it uses a Dirac-Dual Dirac type construction, which involves infinite dimensional analysis. The suggestion of \cite{GTY} is to give a geometrical proof, using a coarse Mayer-Vietoris argument in the spirit of the proof of the Baum-Connes conjecture for spaces with finite asymptotic dimension.\\
+Following ideas of M. Gromov, G. Yu introduced new coarse concepts in the study of these assembly maps. He was able to prove the coarse Baum-Connes conjecture for proper metric spaces with finite asymptotic dimension \cite{Yu1}, which is a coarse analogue of the topological covering dimension. Later on, in a paper with Guenter and R. Tessera \cite{GTY}, they defined decomposition complexity for metric spaces, which is a broad generalization of asymptotic dimension. In particular, proper metric spaces with finite asymptotic dimension are of finite decomposition complexity. At the end of \cite{GTY}, as concluding remarks, the authors point out that one should be able to derive a new proof of the coarse Baum-Connes conjecture for spaces with finite decomposition complexity. We should emphasize that this is already known : a space which is finitely decomposable has property (A), hence verifies the coarse Baum-Connes conjecture by the work of G. Yu. \cite{Yu2} But the techniques of this proof is highly analytical, it uses a Dirac-Dual Dirac type construction, which involves infinite dimensional analysis. The suggestion of \cite{GTY} is to give a geometrical proof, using a coarse Mayer-Vietoris argument in the spirit of the proof of the Baum-Connes conjecture for spaces with finite asymptotic dimension.\\
 
-Such a proof was given in the setting of algebraic $K$-theory in a paper of D. A. Ramras, R. Tessera and G. Yu where they established the integral Novikov conjecture for algebraic $K$-theory of group rings $R[\Gamma]$ when the group $\Gamma$ has FDC (finite decomposition complexity). Their proof uses the continuously controlled algebraic $K$-theory groups very intensively : their key lemma is a vanishing theorem of these groups. In a series of papers \cite{OY2}\cite{OY3}, H. Oyono-Oyono and G. Yu developed an analogue of this controlled $K$-theory for operator algebras, which they named quantitative $K$-theory. It consists of a family of groups $\hat K (A) = (K^{\epsilon,r}(A))$ for $r\geq 0,0< \epsilon <\frac{1}{4}$ and $A$ a filtered $C^*$-algebra, which we shall describe later. They were able to define quantitative assembly maps that factorize the usual ones, and to give equivalence between isomorphisms of the assembly map and quantitative statements.\\
+Such a proof was given in the setting of algebraic $K$-theory in a paper of D. A. Ramras, R. Tessera and G. Yu where they established the integral Novikov conjecture for algebraic $K$-theory of group rings $R[\Gamma]$ when the group $\Gamma$ has FDC (finite decomposition complexity). Their proof uses the continuously controlled algebraic $K$-theory groups very intensively : their key lemma is a vanishing theorem of these groups. In a series of papers \cite{OY2}\cite{OY3}, H. Oyono-Oyono and G. Yu developed an analogue of this controlled $K$-theory for operator algebras, which they named quantitative $K$-theory. It consists of a family of groups $\hat K (A) = (K^{\epsilon,r}(A))$ for $r\geq 0,\epsilon \in (0,\frac{1}{4})$ and $A$ a filtered $C^*$-algebra, which we shall describe later. They were able to define quantitative assembly maps that factorize the usual ones, and to give equivalence between isomorphisms of the assembly map and quantitative statements.\\
 
 Following the route of these articles \cite{OY2}\cite{OY3}, we will define quantitative assembly maps for étale groupoids with a proper length. These assembly maps are equivalent to the coarse quantitative assembly maps for proper metric spaces $X$ defined in \cite{OY3} if one takes $G= G(X)$, the coarse groupoid of $X$. We give also quantitative statements equivalent to a certain isomorphism. \textbf{(rerédiger ce paragraphe de façon plus précise une fois les résultats écrits)}\\
 
@@ -25,7 +25,7 @@ Let $H$ be a $X$-module.
 \end{itemize}
 \end{definition} 
  
-An simple example is given by $l^2(X)\otimes H$ with $H$ a separable Hilbert space, in which $C_R[X]$ is the algebra of operators $(T_{xy})_{x,y\in X}$ such that $T_{x,y}\in K(H)$ for every $x,y\in X$, and $T_{xy}=0$ as soon as $d(x,y)>R$.\\
+A simple example is given by $l^2(X)\otimes H$ with $H$ a separable Hilbert space, in which case $C_R[X]$ is the algebra of operators $(T_{xy})_{x,y\in X}$ such that $T_{x,y}\in K(H)$ for every $x,y\in X$, and $T_{xy}=0$ as soon as $d(x,y)>R$.\\
 Remark : one coulde replace Hilbert spaces by Hilbert modules $E$ over a $C^*$-algebra $B$ in this definition, $\mathcal L(H)$ by adjoinable operators $\mathcal L_B(E)$ and $K(H)$ by compact operators $K_B(E)$, to obtain $C^*(X,B)$, the Roe algebra with coefficient in $B$. The Roe algebra $C^*(X,B)$ enjoys functorial properties in $B$.\\
 
 This example motivates the following definition.\\
@@ -58,9 +58,11 @@ Let $A$ be unital and filtered, and $\epsilon\in (0,\frac{1}{4}),R>0$.
 \item[$\bullet$] $u$ is a $\epsilon$-$R$-unitary if $u\in A_R$ and $||u^*u-1||<\epsilon$ and $||uu^*-1||<\epsilon$.\\
 \end{itemize}
 
+A $\epsilon$-$R$-projection has its spectrum localized around $0$ and $1$, with a spectral gap in between, which allows to define a true projection $\kappa(p)$ by functional calculus.\\ 
+
 Let $P^{\epsilon, R}_n(A)$ be the set of $\epsilon$-$R$-projections and $U^{\epsilon,R}_n(A)$ the set of $\epsilon$-$R$-unitaries of $M_n(A)$. We can also define the inductive limits $P^{\epsilon, R}_\infty(A)=\varinjlim P^{\epsilon,R}_n(A)$ and $U^{\epsilon, R}_\infty(A)=\varinjlim U^{\epsilon,R}_n(A)$ under the inductive system of morphisms 
 \[p\mapsto \begin{pmatrix} p & 0 \\0 & 0\end{pmatrix}\text{ and }u\mapsto \begin{pmatrix} u & 0 \\0 & 1\end{pmatrix}.\]
- The following defines equivalence relation on $P^{\epsilon,R}_\infty(A)\times \N$ and $U_\infty^{\epsilon,R}(A)$ :
+ The following defines equivalence relations on $P^{\epsilon,R}_\infty(A)\times \N$ and $U_\infty^{\epsilon,R}(A)$ :
 \begin{itemize}
 \item[$\bullet$] $(p,m)\sim (q,n)$ if there exists $h\in P^{\epsilon,R}_\infty(A[0,1])$ and $k>0$ such that $h(0)=\begin{pmatrix} p & 0 \\0 & I_{m+k}\end{pmatrix}$ and $h(0)=\begin{pmatrix} q & 0 \\0 & I_{n+k}\end{pmatrix}$.
 \item[$\bullet$] $u\sim v$ if there exists $h\in U^{3\epsilon,2R}_\infty(A[0,1])$ such that $h(0)=u$ and $h(1)=v$.
@@ -74,7 +76,7 @@ Let $\epsilon\in (0,\frac{1}{4}),R>0$.\\
 \end{itemize}
 \end{definition}
 
-These are abelian groups (see \cite{OY2},\cite{OY3}) with laws described by $[p,m]_{epsilon,R}+[q,n]_{epsilon,R}=[diag(p,q),m+n]_{\epsilon,R}$ and $[u]_{epsilon,R}+[v]_{epsilon,R}=[diag(u,v)]_{epsilon,R}$.
+These are abelian groups (see \cite{OY2},\cite{OY3}) with laws described by $[p,m]_{\epsilon,R}+[q,n]_{\epsilon,R}=[diag(p,q),m+n]_{\epsilon,R}$ and $[u]_{\epsilon,R}+[v]_{\epsilon,R}=[diag(u,v)]_{\epsilon,R}$.
 \begin{definition}
 To be more flexible, we allow our morphisms between quantitative objets to increase propagation, but in a controlled way. That control is implemented by what Oyono-Oyono and Yu call a control pair.
 \begin{itemize}
@@ -85,9 +87,11 @@ To be more flexible, we allow our morphisms between quantitative objets to incre
 \end{itemize}
 \end{definition}
 
+We have natural morphisms of abelian groups $\iota_{\epsilon,R}^{\epsilon',R'} : K_*^{\epsilon,R}(A)\rightarrow K^{\epsilon',R'}_*(A)$ if $\epsilon\leq\epsilon', R\leq R'$ and $\iota_{\epsilon,R} : K_*^{\epsilon,R}(A)\rightarrow K_*(A)$, and $\iota_{\epsilon',R'}\circ\iota_{\epsilon,R}^{\epsilon',R'}=\iota_{\epsilon,R}$ holds. This fact gives sense to saying that a controlled morphism induced a morphism in $K$-theory. 
+
 \begin{Expl}
 The basic example of quantitative object is of course quantitative $K$-theory.\\
-A morphism $\phi : A \rightarrow B$ between filtered $C^*$-algebras is filtered if $\phi(A_R)\subset B_R$. If so, $\phi$ naturally induces a $(1,1)$-controlled morphism $\phi_* : \hat K(A)\rightarrow \hat K(B)$.\\
+If $\phi : A \rightarrow B$ is a filtered $C^*$-morphism, it naturally induces a $(1,1)$-controlled morphism $\phi_* : \hat K(A)\rightarrow \hat K(B)$.\\
 Another (important) examples will be that of the controlled Morita equivalence and quantitative boundary maps. 
 \end{Expl}
 
@@ -122,30 +126,33 @@ then $D_{J,B}\circ (\phi_{I}^J)_*=\phi_*\circ D_{I,A}$.
 
 \textbf{METTRE LA RQ 3.7 de OY2 et celle $1.8$ sur le $\lambda$}
 
-\subsection{A remainder on groupoids action}
 
-For the rest of the article, $\G$ will denote a groupoid, $X=\G^{(0)}$ its space of units, $s,r: \G\rightrightarrow X$ respectively the source and target maps. The fibers over $x\in X$ are denoted by $\G^x = r^{-1}(x)$ and $\G_x=s^{-1}(x)$. In this report, all the groupoids are supposed to be locally compact, $\sigma$-compact and étale, that is $r$ is a local homeomorphism, which entails that the fibers are discrete, hence $\G$ is naturally endowed with a Haar system $(\lambda^x)_{x\in X}$.\\
+
+\section{Quantitative statements}
+
+\subsection{A reminder on groupoids action}
+
+For the rest of the article, $\G$ will denote a topological groupoid, $X=\G^{(0)}$ its space of units, $s,r: \G\rightrightarrow X$ respectively the source and target maps. The fibers over $x\in X$ are denoted by $\G^x = r^{-1}(x)$ and $\G_x=s^{-1}(x)$. In this report, all the groupoids are supposed to be locally compact, $\sigma$-compact and étale, that is $r$ is a local homeomorphism, which entails that the fibers are discrete, hence $\G$ is naturally endowed with a Haar system $(\lambda^x)_{x\in X}$.\\
 For any $C(X)$-algebra $B$, $B_x = B\otimes_{ev_x} \C$ is the fiber over $x\in X$, where $ev_x$ is the evaluation at $x$. The pull-back $r^*B$ and $s^*B$ are respectively defined to be $B\otimes_r C_0(\G) $ and $B\otimes_s C_0(\G) $. They are $C(\G)$-algebras with fiber over $g\in \G$ equal to $B_{r(g)}$ (resp. $B_{s(g)}$).\\
 An action of $\G$ on $B$ is an isomorphism of $C(\G)$-algebras $\alpha : s^*B\rightarrow r^*B$ which respects the product : $\alpha_g\circ\alpha_{g'}=\alpha_{gg'}$ for all composable pairs $(g,g')$.\\
-For a right $B$-Hilbert module $\mathcal E$, we can also define the pull-backs $r^*\mathcal E = \mathcal E\otimes_r C_0(\G) $ and $s^*\mathcal E = \mathcal E\otimes_s C_0(\G) $ : they are respectively right and left $s^*B$-Hilbert module (the $s^*B$-module structure on $r^*\mathcal E$ being obtained by the inverse of the action $\alpha^{-1}: r^*B\rightarrow s^*B$) with fiber over $g$ given by $\mathcal E_{r(g)}$ and $\mathcal E_{s(g)}$.\\
+For a right $B$-Hilbert module $\mathcal E$, we can also define the pull-backs $r^*\mathcal E = \mathcal E\otimes_r C_0(\G) $ and $s^*\mathcal E = \mathcal E\otimes_s C_0(\G) $ : they are respectively right and left $s^*B$-Hilbert modules (the $s^*B$-module structure on $r^*\mathcal E$ being obtained by the inverse of the action $\alpha^{-1}: r^*B\rightarrow s^*B$) with fiber over $g$ given by $\mathcal E_{r(g)}$ and $\mathcal E_{s(g)}$.\\
 An action of $\G$ on $\mathcal E$ is a unitary $U\in \mathcal L(s^*\mathcal E,r^*\mathcal E) $ such that $U_g U_{g'}=U_{gg'}$ for all composable pairs $(g,g')$.\\
-We will call any $C(X)$-algebra $B$ endowed with an action of $\G$ a \textbf{$\G$-algebra}. If we have at our disposition a family of representations $\mathcal F$ of $\G$, we can then form the crossed-product $B\rtimes_{\mathcal F} \G$ : it is the completion-reduction of $C_c(\G,B)$ for the norm operator $||f||_{\mathcal F}= \sup_{\pi\in \mathcal F} ||\pi(f)||$. Classical examples are that of the reduced crossed product $B\rtimes_r \G$ for which $\mathcal F$ is the left-regular representation, and the maximal crossed-product $B\rtimes_{max}\G$ for which $\mathcal F$ is the family of all unitary representations. 
+We will call any $C(X)$-algebra $B$ endowed with an action of $\G$ a \textbf{$\G$-algebra}. If we have at our disposition a family of representations $\mathcal F$ of $\G$, we can then form the crossed-product $B\rtimes_{\mathcal F} \G$ : it is the completion-reduction of $C_c(\G,B)$ for the norm operator $||f||_{\mathcal F}= \sup_{\pi\in \mathcal F} ||\pi(f)||$. Classical examples are that of the reduced crossed product $B\rtimes_r \G$ for which $\mathcal F$ is the left-regular representation, and the maximal crossed-product $B\rtimes_{max}\G$ for which $\mathcal F$ is the family of all unitary representations. If $\phi : A\rightarrow B$ is a $\G$-morphism, $f\mapsto \phi\circ f$ gives rise to a $C^*$-morphism $\phi_\G : A\rtimes \G\rightarrow B\rtimes \G$. The crossed-product is easily seen to be a functor from $\G$-algebras to $C^*$-algebras.
+
 The formula 
 \[\langle \psi, \eta\rangle_x = \int_{\G^x} \langle \psi(g),\eta(g)\rangle d\lambda^x(g)\] 
 defines a $C(X)$-hermitian product on $C_c(\G,B)$, which we can complete to get the right-$B\rtimes \G$-Hilbert module $\mathcal E\rtimes \G$. So the functor $B\mapsto B\rtimes \G $ carries to $\mathcal E\mapsto \mathcal E\rtimes \G$. \\
 
-We will be mainly interested in the properties of the functor $B\mapsto B\rtimes \G$, and the majority of the constructions are carriable with "good" crossed product functors. We will discuss the property needed for a crossed-product functor to be "good".\\  
+We will be mainly interested in the properties of the functor $B\mapsto B\rtimes \G$, and the majority of the constructions performed in this section are carriable with "good" crossed product functors. We will discuss the property needed for a crossed-product functor to be "good".\\  
 The first property is \textbf{semi-split--exactness}. We recall that an extension of $\G$-algebra \[\begin{tikzcd}[column sep = small]0\arrow{r} & J \arrow{r} & A\arrow{r}{p} & A/J \arrow{r} & 0\end{tikzcd}\] is said to be semi-split if there exists a completely positive map $s : A/J \rightarrow A$ such that $p\circ s = 1$. The functor $-\rtimes \G$ is said to be semi-split exact if for any such extension, \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\rtimes \G \arrow{r} & A\rtimes \G\arrow{r}{p_\G} & A/J\rtimes \G \arrow{r} & 0\end{tikzcd}\] is a semi-split extension of $C^*$-algebras.
 The second property implies the first. We say that $-\rtimes \G$ has the $CP$-property if it preserves completely positive maps, so that from any $\G$-completely positive map $\phi: A\rightarrow B$, we can induce a $CP$ map $\phi_\G: A\rtimes\G\rightarrow B\rtimes \G$. This assures that the action of $\G$ on any $\G$-module $\mathcal E$ descends to an isomorphism $K(\mathcal E)\rtimes \G \simeq K(\mathcal E\rtimes \G)$.
  \textbf{A FINIR, faire une preuve entre autre ...}
   
-
-\section{Quantitative statements}
-
+\subsection{The Baum-Connes conjecture}
 The more general setting of the Baum-Connes conjecture \cite{TuBC} is that of a locally compact $\sigma$-compact Hausdorff groupoid $\G$ endowed with a Haar system, together with a coefficient $C^*$-algebra $B$ acted upon by $\G$, which give rise to an assembly map
 \[\mu_r : K^{top}_*(\G,B)\rightarrow K_*(B\rtimes_r \G).\]
 
-The left hand side $K^{top}_*(\G,B)$ is the $K$-homology of the classifying space $\mathcal E \G$ for proper actions of $\G$ in coefficient in $B$. We give a sketch of the construction when $\G$ is étale. Let $d\geq 0$ and $P_d(\G)$ be the Rips complex of $\G$, i.e. the space of probabilities supported on a fiber $\G^x$ for a $x\in \G^{(0)}$
+The left hand side $K^{top}_*(\G,B)$ is the $K$-homology of the classifying space $\mathcal E \G$ for proper actions of $\G$ with coefficients in $B$. We give a sketch of the construction when $\G$ is étale. Let $d\geq 0$ and $P_d(\G)$ be the Rips complex of $\G$, i.e. the space of probabilities supported on a fiber $\G^x$ for a $x\in \G^{(0)}$
 \[P_d(\G) = \{p\in \mathcal P(\G) : \exists x\in \G^{(0)}, r^*p=\delta_x, \text{supp }p \subset B(e_x,d)\}.\]
 Then $KK^\G( C_0(P_d(\G)),B)$ is defined to be the inductive limite of $KK^\G( C_0(X),B)$ for $X$ $\G$-proper $\G$-spaces (such that $X/G$ is compact). If $d\leq d'$, we have a morphism $KK^\G( C_0(P_d(\G)),B)\rightarrow KK^\G( C_0(P_{d'}(\G)),B)$ naturally induced by the inclusion $P_d(\G)\subset P_{d'}(\G)$, and the $K$-homology of $\G$ is defined as
 \[K^{top}_*(\G,B)=\lim_{d\rightarrow \infty} KK^\G( C_0(P_d(\G)),B).\]
@@ -172,8 +179,8 @@ l^x (\gamma_1^{-1} \gamma_2)	\leq l^x(\gamma_1)+l^x(\gamma_2) .
 \end{array}\]
 
 That length allows us to define a filtration on crossed-product algebras of $\G$ by
-\[(A\rtimes \G)_r = \{f\in C_c(\G, A) : \text{ supp }f \subset \cup_{x\in X} B_x(e_x, r)\}\]
-for any $\G$-algebra $A$. Here, $B_x(e_x,r)$ is the ball $\{\gamma \in \G : l^{r(\gamma)}\leq r\}$, and $\rtimes$ can be either the reduced cross-product $\rtimes_r$ or the maximal one $\rtimes_{max}$. Recall that $A\rtimes \G$ is functorial in $A$, from the category of $\G$-$C^*$-algebras with $\G$-equivariant $C^*$-morphisms to the category of $C^*$-algebras with $C^*$-morphisms. For $\phi : A\rightarrow B$ a $\G$-equivariant $C^*$-morphism, we denote by $\phi_\G : A\rtimes\G \rightarrow B\rtimes\G$ the induced $C^*$-morphism.\\
+\[(A\rtimes \G)_r = \{f\in C_c(\G, A) : \text{ supp }f \subset \cup_{x\in X} B_x(r)\}\]
+for any $\G$-algebra $A$. Here, $B_x(r)$ is the ball $\{\gamma \in \G^x : l^x(\gamma)\leq r\}$, and $\rtimes$ can be either the reduced cross-product $\rtimes_r$ or the maximal one $\rtimes_{max}$. Recall that $A\rtimes \G$ is functorial in $A$, from the category of $\G$-$C^*$-algebras with $\G$-equivariant $C^*$-morphisms to the category of $C^*$-algebras with $C^*$-morphisms. For $\phi : A\rightarrow B$ a $\G$-equivariant $C^*$-morphism, we denote by $\phi_\G : A\rtimes\G \rightarrow B\rtimes\G$ the induced $C^*$-morphism.\\
 
 If $\begin{tikzcd}[column sep = small]
 0 \arrow{r} & J\arrow{r}{\phi}& A \arrow{r}{\psi} & A/J \arrow{r} & 0
@@ -245,6 +252,8 @@ The controlled Kasparov transform of an element $z\in KK_1^\G(A,B)$ is defined a
 \[J_{red,\G}(z)=\mathcal M_{B\rtimes_r \G}^{-1}\circ D_{K_{B\rtimes_r \G}, E^{(\pi,T)}}.\]
 \end{definition}
 
+As the boundary map is a $(\alpha_D,k_D)$-controlled morphism and the Morita equivalence preserves the filtration, $J_{red,\G(z)}$ is  $(\alpha_D,k_D)$-controlled. 
+
 \begin{prop}\label{Kasparov1}
 Let $A$ and $B$ two $\G$-$C^*$-algebras. There exists a control pair $(\alpha_J,k_J)$ such that for every $z\in KK^\G_1(A,B)$, there exists a $(\alpha_J,k_J)$-controlled morphism
 \[J_{red,\G}(z) : \hat K_*(A\rtimes_r \G)\rightarrow \hat K_{*+1}(B\rtimes_r \G)\]
@@ -257,15 +266,15 @@ such that
 \[J_{red,\G}(f^*(z))=J_{red,\G}(z)\circ f_{\G,red,*}\] for all $z\in KK_1^G(A_2,B)$.
 \item[(iv)] For every $\G$-morphism $g : B_1\rightarrow B_2$,
 \[J_{red,\G}(g_*(z))= g_{\G,red,*}\circ J_{red,\G}(z)\] for all $z\in KK_1^G(A,B_1)$.
-\item[(v)] Let $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ be a semi-split equivariant extension of $\G$-algebras and $[\delta_J]\in KK_1^\G(A/J,J)$ be its boundary element. Then 
-\[J_\G([\delta_J])=D_{J\rtimes G,A\rtimes\G}.\] 
+\item[(v)] Let $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ be a semi-split equivariant extension of $\G$-algebras and $[\partial_J]\in KK_1^\G(A/J,J)$ be its boundary element. Then 
+\[J_\G([\partial_J])=D_{J\rtimes G,A\rtimes\G}.\] 
 \end{enumerate}
 \end{prop}
 
 \begin{dem}
 \begin{enumerate}
 
-\item[(i)]The $K$-cycle $[\delta_{K_{B\rtimes_r \G},E^{(\pi,T)}}]\in KK_1(A\rtimes_r \G, B\rtimes_r \G)$ implementing the boundary of the extension $E^{(\pi,T)}$ induces the map $j_{red,\G}$ by definition, and modulo Morita equivalence, which immediately gives the first point.
+\item[(i)]The $K$-cycle $[\partial_{K_{B\rtimes_r \G},E^{(\pi,T)}}]\in KK_1(A\rtimes_r \G, B\rtimes_r \G)$ implementing the boundary of the extension $E^{(\pi,T)}$ induces the map $j_{red,\G}$ by definition, and modulo Morita equivalence, which immediately gives the first point.
 
 \item[(ii)] If $z,z'$ are elements of $KK_1^G(A,B)$, represented by two $K$-cycles $(H_B,\pi_j,T_j)$, and if $(H_B,\pi,T)$ is a $K$-cycle representing the sum $z+z'$, then $E^{(\pi,T)}$ is naturally isomorphic to the extension sum of the $E_j:=E^{(\pi_j,T_j)}$, namely
 \[\begin{tikzcd}[column sep = small]
@@ -273,7 +282,7 @@ such that
 \end{tikzcd}\]
 where 
 \[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K(E_j,E_i)\right\}.\]
-Naturality of the controlled boundary maps \cite{OY2} ensures that the boudary of the sum of two extensions is the sum of the boudary of each, thus the result.
+Naturality of the controlled boundary maps \cite{OY2} ensures that the boundary of the sum of two extensions is the sum of the boundary of each, thus the result.
 \item[(iii)] Let $z\in KK_1^\G(A_2,B)$, represented by a cycle $(H_B,\pi,T)$. Representing $f^*(z)$ is $(H_B,f^*\pi,T)$ with off course $f^*\pi=\pi \circ f$. The map 
 \[\phi : \left\{\begin{array}{lll} E^{f^*(\pi,T)} & \rightarrow & E^{(\pi,T)} \\
 ( x, P_\G(f^*\pi)(x)P_\G+y) & \rightarrow & ( f_\G(x), P_\G(f^*\pi)(x)P_\G+y) \end{array}\right. \]
@@ -308,7 +317,7 @@ which we compose by the Morita equivalence on the left $M_{B_2\rtimes\G}^{-1}$
 The homomorphisms inducing the Morita equivalence make the following diagram commutes,
 \[\begin{tikzcd}B_1\rtimes\G\arrow{r}{g_\G}\arrow{d} & B_2\rtimes \G\arrow{d} \\ K_{B_1\rtimes\G } \arrow{r}{\psi}& K_{B_2\rtimes\G }\end{tikzcd},\]
 and $J_\G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes\G}^{-1}\circ D_{K_{B_1\rtimes \G},E^{(\pi,T)}}=g_{G,*}\circ J_\G(z)$.\\
-\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\delta_J]$. Then we apply remark $3.7$ of \cite{OY2} to the commutative diagram
+\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_J]$. Then we apply remark $3.7$ of \cite{OY2} to the commutative diagram
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & J\rtimes \G\arrow{r}\arrow{d} & A\rtimes \G \arrow{r}\arrow{d}{s\circ q_\G}& A/J\rtimes_r \G\arrow{r}\arrow{d}{=} & 0\\
 0\arrow{r} & K_{J\rtimes \G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A/J\rtimes \G\arrow{r} & 0
@@ -320,10 +329,10 @@ where the first vertical arrow is the canonical mapping that induces the Morita 
 
 \subsubsection{Even case}
 
-We can now define $J_\G$ for even $K$-cycles. Let $A$ and $B$ be two $\G$-algebras. Let $[\delta_{SB}]\in KK_1(B,SB)$ be the $K$-cycle implementing the boundary of the extension $0\rightarrow SB\rightarrow CB\rightarrow B\rightarrow 0$, and $[\delta]\in KK_1(\C,S)$ be the Bott generator. As $z\otimes_B [\delta_{SB}]$ is an odd $K$-cycle, we can define
-\[J_\G(z):= \tau_{B\rtimes \G}([\delta]^{-1})\circ J_\G(z\otimes[\delta_{SB}]).\] 
+We can now define $J_\G$ for even $K$-cycles. Let $A$ and $B$ be two $\G$-algebras. Let $[\partial_{SB}]\in KK_1(B,SB)$ be the $K$-cycle implementing the boundary of the extension $0\rightarrow SB\rightarrow CB\rightarrow B\rightarrow 0$, and $[\partial]\in KK_1(\C,S)$ be the Bott generator. As $z\otimes_B [\partial_{SB}]$ is an odd $K$-cycle, we can define
+\[J_\G(z):= \tau_{B\rtimes \G}([\partial]^{-1})\circ J_\G(z\otimes[\partial_{SB}]).\] 
 
-Here $\tau_D$ refers to the $(\alpha_\tau,k_\tau)$-controlled map $\hat K (A_1\otimes D )\rightarrow \hat K(A_2\otimes D)$, that H. Oyono-Oyono and G. Yu constructed in \cite{OY2} for any $C^*$-algebras $D,A_1,A_2$ and $z\in KK_*(A_1,A_2)$. It enjoys many natural properties, and induces right multiplication by $\tau_D(z)\in KK(A_1\otimes D,A_2\otimes D)$ in $K$-theory.\\
+Here $\tau_D$ refers to the $(\alpha_\tau,k_\tau)$-controlled map $\hat K (A_1\otimes D )\rightarrow \hat K(A_2\otimes D)$, that H. Oyono-Oyono and G. Yu constructed in \cite{OY2} for any $C^*$-algebras $D,A_1,A_2$ and $z\in KK_*(A_1,A_2)$. It enjoys many natural properties, and induces right multiplication by $\tau_D(z)\in KK(A_1\otimes D,A_2\otimes D)$ in $K$-theory. We can see that, if we set $\alpha_J=\alpha_\tau \alpha_D$ and $k_J=k_\tau * k_D$, $J_\G(z)$ is $(\alpha_J,k_J)$-controlled.\\
 
 \begin{prop}
 Let $A$ and $B$ two $\G$-$C^*$-algebras. For every $z\in KK^\G_*(A,B)$, there exists a control pair $(\alpha_J,k_J)$ and a $(\alpha_J,k_J)$-controlled morphism
@@ -337,6 +346,7 @@ of the same degree as $z$, such that
 \[J_{red,\G}(f^*(z))=J_{red,\G}(z)\circ f_{\G,red,*}\] for all $z\in KK_*^G(A_2,B)$.
 \item[(iv)] For every $\G$-morphism $g : B_1\rightarrow B_2$,
 \[J_{red,\G}(g_*(z))= g_{\G,red,*}\circ J_{red,\G}(z)\] for all $z\in KK_*^G(A,B_1)$.
+\item[(v)] $J_G([id_A]) \sim_{(\alpha_J,k_J)} id_{\hat K(A\rtimes \G)}$
 \end{enumerate}
 \end{prop}
 
@@ -347,8 +357,8 @@ The point $(iii)$ is a consequence of the previous proposition \ref{Kasparov1}, 
 
 We now show that the controlled Kasparov transform respects in a quantitative way the Kasparov product.
 
-\begin{prop} There exists a control pair $(\alpha_J,k_J)$ such that for every $\G$-$C^*$-algebra $A$, $B$ and $C$, and every $z\in KK^\G(A,B),z'\in KK^\G(B,C)$, the controlled equality
-\[J_\G(z\otimes_B z') \sim_{\alpha_J,k_J} J_\G(z')\circ J_\G(z)\]
+\begin{prop} There exists a control pair $(\alpha_K,k_K)$ such that for every $\G$-$C^*$-algebra $A$, $B$ and $C$, and every $z\in KK^\G(A,B),z'\in KK^\G(B,C)$, the controlled equality
+\[J_\G(z\otimes_B z') \sim_{\alpha_K,k_K} J_\G(z')\circ J_\G(z)\]
 holds.
 \end{prop}
 \begin{dem}
@@ -356,13 +366,13 @@ We will use the following fact : there exists a positive integer $d$ such that e
 
 This property reduces the proof to the special case of $\alpha$ being the inverse of a morphism in $KK^\G$-theory : $\alpha\otimes[\theta]=1$, then :
 \[\begin{array}{rcl}
-J_\G (\alpha\otimes z) & \sim &  J_\G(\alpha\otimes z)\circ J_\G(\alpha\otimes [\theta]) \\
+J_\G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_\G(\alpha\otimes z)\circ J_\G(\alpha\otimes [\theta]) \\
 			& \sim & J_\G(\alpha\otimes z)\circ J_\G(\theta_*(\alpha))\\
 			& \sim & J_\G(\alpha\otimes z)\circ \theta_{\G,*}\circ J_\G(\alpha)\\
 			& \sim & J_\G(\theta^*(\alpha\otimes z))\circ J_\G(\alpha)\\
 			& \sim & J_\G(z)\circ J_\G(\alpha) \\
 \end{array}\] 
-because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes. \textbf{METTRE EXPLICITEMENT LES EXPOSANTS DE PROPAGATION}\\
+because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The control on the propagation of the first line follows from remark $2.5$ of \cite{OY2} and point $(v)$, the other lines are equal by points $(iii)$ and $(iv)$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes, and $(\alpha_K,k_K)$ can be taken to be $(d \alpha_J^{2d},( k_J*k_J)^{*d})$.
 \qed
 \end{dem}
 \subsection{Quantitative assembly maps}
