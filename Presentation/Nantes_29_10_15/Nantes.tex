@@ -98,7 +98,7 @@ alors
 \end{frame}
 
 \begin{frame}
-\begin{prop}[Formule de Lin??]
+\begin{prop}[Formule de Weitzenböck]
 \[\slashed D^2 =\nabla \nabla^* +\frac{1}{4} Sc \]
 \end{prop}
 
@@ -145,15 +145,16 @@ $C^* R :=$ la $C^*$-algèbre engendrée par les opérateurs $(T_{xy})_{(x,y)\in 
 \begin{definition}
 Un espace de Hilbert $H$ est un $X$-module s'il existe un $*$-morphisme $\phi : C_0(X)\rightarrow \mathcal L(H)$. On le dira standard si aucune fonction non nulle agit comme un opérateur compact, et non dégénéré si $\overline{C_0(X)H}=H$.
 \end{definition}
-On notera $f\xi= \phi(f)\xi$.
+On notera $f\xi= \phi(f)\xi$.\\
+Toutes les définitions que l'on donnera par la suite ne dépendent pas du $X$-module choisi s'il est standard et non dégénéré, on s'en fixera donc un une fois pour toute, que l'on note $H_X$.
 \end{frame}
 
 \begin{frame}
-\begin{definition}Soit $H$ un $X$-module. 
+\begin{definition}%Soit $H$ un $X$-module. 
 \begin{itemize}
-\item[$\bullet$]Un opérateur $T\in \mathcal L(H)$ est dit de propagation $\leq R$ si, pour toute fonctions $f,g\in C_0(X)$ telle que $d(supp\ f, supp\ g) >R$, on a $fTg=0$.
-\item[$\bullet$] Un opérateur $T\in \mathcal L(H)$ est dit localement compact si pour toute $f\in C_0(X)$, $fT$ et $Tf$ sont des opérateurs compacts.
-\item[$\bullet$] on note $C_R[X]:=\{T\in \mathcal L(H) : prop(T)\leq R, T \text{ loc. compact}\}$ et l'algèbre de Roe est  \[C^*X:=\overline{\cup_{R>0} C_R[X]}^{||.||_{op}}\]
+\item[$\bullet$]Un opérateur $T\in \mathcal L(H_X)$ est dit de propagation $\leq R$ si, pour toute fonctions $f,g\in C_0(X)$ telle que $d(supp\ f, supp\ g) >R$, on a $fTg=0$.
+\item[$\bullet$] Un opérateur $T\in \mathcal L(H_X)$ est dit localement compact si pour toute $f\in C_0(X)$, $fT$ et $Tf$ sont des opérateurs compacts.
+\item[$\bullet$] on note $C_R[X]:=\{T\in \mathcal L(H_X) : prop(T)\leq R, T \text{ loc. compact}\}$ et l'algèbre de Roe est  \[C^*X:=\overline{\cup_{R>0} C_R[X]}^{||.||_{op}}\]
 \end{itemize}
 \end{definition}
 Si $(M,g)$ est une variété reimannienne complète, et $D$ un opérateur de Dirac généralisé sur $M$, alors pour toute $\phi\in C_0(M)$,
@@ -199,4 +200,42 @@ Soit $(M,g)$ une variété riemannienne complète et $D$ un opérateur de Dirac 
 Si $M$ est compacte, $C^*M = \mathfrak K(H)$ et $D^*X = \mathcal L(H)$. Alors on retrouve la définition usuelle de l'indice.
 \end{frame}
 
+\subsection{Application d'assemblage}
+\begin{frame}
+\textbf{But :}donner une formule topologique pour $Ind\ D\in K_0(C^*X)$.\\
+
+$K_*(C^*X)$ : objet analytique, difficile à calculer, mais intéressant (réceptacle pour les indices)\\
+
+On va construire 
+\begin{enumerate}
+\item un objet géométrique $K_*(X)$, la $K$-homologie de $X$, objet de la topologie algébrique usuelle. 
+\item une application d'assemblage qui permet de passer de l'un à l'autre
+\[A : K_*(X)\rightarrow K(C^*(X))\]
+\end{enumerate} 
+ 
+\end{frame}
+
+\begin{frame}
+\begin{definition}[Module de Fredholm]
+Un module pair (resp. impair) de Fredholm sur $X$ est la donnée d'un $X$-module $H$, d'un opérateur $U$ (resp. $P$) sur $H$ tel que
+\begin{itemize}
+\item[$\bullet$] \textbf{cas pair :} $UU^*-1$, $U^*U-1$ et les commutateurs $[U,f]$ soit localement compacts, pour toute $f\in C_0(X)$.
+\item[$\bullet$] \textbf{cas impair :} $P^2-P$, $P^*-P$ et les commutateurs $[P,f]$ soit localement compacts, pour toute $f\in C_0(X)$.
+\end{itemize}
+Il existe des relations d'équivalences (homotopies) sur les modules de Fredholm et une somme directe. Kasparov montre que la somme directe munit l'ensemble des classes d'équivalence d'une structure de groupe abélien, noté $K_0(X)$ pour le cas pair, et $K_1(X)$ pour le cas impair. 
+\end{definition}
+\end{frame}
+
+\begin{frame}
+On peut montrer que $K_*(X)\simeq K_*(D^*X/C^*X)$. La suite exacte à six termes pour l'extension 
+\[\begin{tikzcd}[ampersand replacement=\&,column sep = small]
+0 \arrow{r} \& C^*X \arrow{r}{\iota} \& D^*X\arrow{r}{p} \& D^*X/C^*X\arrow{r} \& 0  
+\end{tikzcd}\]
+devient alors
+\[\begin{tikzcd}[ampersand replacement=\&,column sep = small]
+ K_1(C^*X)\arrow{r}{\iota_*}\& K_1(D^*X)\arrow{r}{p_*}\& K_1(X)\arrow{d}{A}\\
+K_0(X)\arrow{u}{A}\& K_0(D^*X)\arrow{l}{p_*}\& K_0(C^*X)\arrow{l}{\iota_*}
+\end{tikzcd}\]
+et l'application d'assemblage correspond aux bords de cette suite.
+\end{frame}
 \end{document}
