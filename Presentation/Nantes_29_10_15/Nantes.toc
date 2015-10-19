@@ -4,3 +4,4 @@
 \beamer@subsectionintoc {1}{1}{Exemples}{7}{0}{1}
 \beamer@sectionintoc {2}{G\IeC {\'e}om\IeC {\'e}trie asymptotique}{12}{0}{2}
 \beamer@subsectionintoc {2}{1}{$C^*$-alg\IeC {\`e}bres}{12}{0}{2}
+\beamer@subsectionintoc {2}{2}{$K$-th\IeC {\'e}orie}{16}{0}{2}

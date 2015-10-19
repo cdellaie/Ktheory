@@ -27,7 +27,7 @@ Soit $M$ une variété différentielle, et $d$ la différentielle extérieure d�
 \begin{frame}
 Une métrique riemannienne $g$ sur $M$ induit une mesure $\mu$ sur $M$ et un produit scalaire $(,)$ sur le cotangent $T^* M$ que l'on peut étendre aux formes :
 \[\langle \alpha,\beta\rangle = \int_M (\alpha(x),\beta(x))\mu(dx)\]
-On complète $\Omega^j_c(M)$par rapport à $\langle\rangle$ pour obtenir un complexe d'espaces de Hilbert $\Omega^*_{L^2}(M)$
+On complète $\Omega^j_c(M)$par rapport à $\langle,\rangle$ pour obtenir un complexe d'espaces de Hilbert $\Omega^*_{L^2}(M)$
 \[\begin{tikzcd}[ampersand replacement=\&,column sep = small]
 \Omega_{L^2}^0(M) \arrow{r}{d} \& \Omega_{L^2}^1(M) \arrow{r}{d} \& .. \arrow{r}{d} \& \Omega_{L^2}^n(M)  
 \end{tikzcd}\]
@@ -90,7 +90,7 @@ alors
 \end{frame}
 
 \begin{frame}
-\textbf{BUT :} Etendre ces techniques au cas non-compact.\\
+\textbf{But :} Etendre ces techniques au cas non-compact.\\
 
 \textbf{Problème :} $\phi(D)$ n'est plus un opérateur compact.\\
 
@@ -120,6 +120,83 @@ Lorsque $t\rightarrow 0$, cette formule devient locale en $t$ et le terme domina
 \item[$\bullet$]$C_0(X)$ pour un espace localement compact $X$.
 \item[$\bullet$] l'algèbre des opérateurs bornés $\mathcal L(H)$, des opérateurs compacts $\mathfrak K(H)$.
 \end{itemize}
+
+\textbf{Remarque :} le théorème de Gelfand Naimark assure que toute $C^*$-algèbre commutative est isomorphe à une $C^*$-algèbre du type $C_0(X)$ : les $C^*$-algèbres doivent être pensée comme des espaces localment compacts "non-commutatifs".
+\end{frame}
+
+\begin{frame}
+\textbf{Pourquoi ?} 
+Pour étudier les mauvais quotients. Soit $X$ un espace topologique localement compact et $R$ une relation d'équivalence.\\
+$C^* R :=$ la $C^*$-algèbre engendrée par les opérateurs $(T_{xy})_{(x,y)\in R}$ de $l^2(X)\otimes H$.\\
+\textbf{Exemples :}
+\begin{itemize}
+\item[$\bullet$] $X=\{p,q\}$ , $R=X\times X$, $C^* R = \mathfrak M_2(\C)$. Le quotient classique est la sous-algèbre diagonale $\C I_2$.
+\item[$\bullet$] Feuilletage de Kronecker d'angle $\theta\in \R-\mathbb Q$ sur le tore $\mathbb T_2$
+\item[$\bullet$] Si $\Gamma$ est un groupe discret, $\hat\Gamma$ l'espace des classes d'équivalences unitaires de représentations irréductibles muni de la topologie de Fell peut être non séparé. On peut même avoir $C_0(\hat \Gamma)\simeq \C$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item[$\bullet$] Soit $X$ un espace métrique propre. %On suppose que $X$ est discret, propre et à géométrie bornée : pour tout $R>0$, il existe un entier $N>0$ tel que toute les boules de rayon $R$ contiennent moins de $N$ éléments.\\
+\item[$\bullet$] Pour notre problème, on voudrait identifier les points qui sont à distance plus petite que $R>0$ et ensuite faire $R\rightarrow \infty$. On va construire un $C^*$-algèbre qui encode cela : l'algèbre de Roe $C^* X$.\\
+\end{itemize}
+
+\begin{definition}
+Un espace de Hilbert $H$ est un $X$-module s'il existe un $*$-morphisme $\phi : C_0(X)\rightarrow \mathcal L(H)$. On le dira standard si aucune fonction non nulle agit comme un opérateur compact, et non dégénéré si $\overline{C_0(X)H}=H$.
+\end{definition}
+On notera $f\xi= \phi(f)\xi$.
+\end{frame}
+
+\begin{frame}
+\begin{definition}Soit $H$ un $X$-module. 
+\begin{itemize}
+\item[$\bullet$]Un opérateur $T\in \mathcal L(H)$ est dit de propagation $\leq R$ si, pour toute fonctions $f,g\in C_0(X)$ telle que $d(supp\ f, supp\ g) >R$, on a $fTg=0$.
+\item[$\bullet$] Un opérateur $T\in \mathcal L(H)$ est dit localement compact si pour toute $f\in C_0(X)$, $fT$ et $Tf$ sont des opérateurs compacts.
+\item[$\bullet$] on note $C_R[X]:=\{T\in \mathcal L(H) : prop(T)\leq R, T \text{ loc. compact}\}$ et l'algèbre de Roe est  \[C^*X:=\overline{\cup_{R>0} C_R[X]}^{||.||_{op}}\]
+\end{itemize}
+\end{definition}
+Si $(M,g)$ est une variété reimannienne complète, et $D$ un opérateur de Dirac généralisé sur $M$, alors pour toute $\phi\in C_0(M)$,
+\[\phi(D)\in C^*M.\]
+\end{frame}
+
+\subsection{$K$-théorie}
+\begin{frame}
+On a un foncteur de cohomologie sur les $C^*$-algèbre : la $K$-théorie.
+\begin{itemize}
+\item[$\bullet$] A une $C^*$-algèbre $A$ on associe une suite de groupes abéliens $K_n(A)$.
+\item[$\bullet$] Tout $*$-morphisme $\varphi : A\rightarrow B$ entre $2$ $C^*$-algèbres induit un homomorphisme 
+\[\varphi_*: K_*(A)\rightarrow K_*(B)\]
+\item[$\bullet$] Ces règles respectent la somme directe, la composition des morphismes, l'homotopie,... 
+\end{itemize}
+\textbf{Remarques :}\\
+$K_*(C_0(X))\simeq K^*(X)$ : $K$-théorie topologique d'Atiyah-Hirzebruch, i.e. le groupe généré par les classes d'équivalences de fibrés vectoriels.\\
+Une description de ces groupes.
+$K_0(A) = \{[p]-[q] : p,q\in \mathfrak M_n(A) \text{ projecteurs} ,n\text{ assez grand}\}$\\
+$K_1(A) = \{[u] : u\in \mathfrak M_n(A) \text{ unitaire} ,n\text{ assez grand}\}$\\
+Ces foncteurs sont les seuls : $K_{n+2}(A)\simeq K_n(A)$.
+\end{frame}
+
+\begin{frame}
+\begin{thm}
+Si $\begin{tikzcd}[ampersand replacement=\&,column sep = small]
+0 \arrow{r} \& J \arrow{r}{\iota} \& A\arrow{r}{p} \& A/J\arrow{r} \& 0  
+\end{tikzcd}$ est une suite exacte de $C^*$-algèbre, alors il existe des applications bords $\partial$ tel que le diagramme suivant commute
+\[\begin{tikzcd}[ampersand replacement=\&,column sep = small]
+ K_1(J)\arrow{r}{\iota_*}\& K_1(A)\arrow{r}{p_*}\& K_1(A/J)\arrow{d}{\partial}\\
+K_0(A/J)\arrow{u}{\partial}\& K_0(A)\arrow{l}{p_*}\& K_0(J)\arrow{l}{\iota_*}
+\end{tikzcd}\]
+\end{thm}
+\end{frame}
+
+\begin{frame}
+On va appliquer cela à l'extension \[\begin{tikzcd}[ampersand replacement=\&,column sep = small]
+0 \arrow{r} \& C^*X \arrow{r}{\iota} \& D^*X\arrow{r}{p} \& D^*X/C^*X\arrow{r} \& 0  
+\end{tikzcd}\]
+Soit $(M,g)$ une variété riemannienne complète et $D$ un opérateur de Dirac généralisé sur $M$. Si $\chi$ est une fonction de troncature, alors $\chi(D)\in D^*M$, et $\chi(D)^2-1\in C^*M$, $\chi_1(D)-\chi_2(D)\in C^*M$ : $\chi(D)$ est un unitaire de $A/J$ dont la classe ne dépend pas de $\chi$. On définit alors 
+\[Ind \ D = \partial [\chi(D)] \in K_0(C^*X)\]
+\textbf{Exemple :}\\
+Si $M$ est compacte, $C^*M = \mathfrak K(H)$ et $D^*X = \mathcal L(H)$. Alors on retrouve la définition usuelle de l'indice.
 \end{frame}
 
 \end{document}
