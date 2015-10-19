@@ -1,0 +1,125 @@
+\documentclass{beamer}
+\input{macro}
+ %\usepackage[utf8]{inputenc}
+\usetheme{CambridgeUS}
+
+\title{Propagation en K-théorie}
+\author{Clément Dell'Aiera}\institute{Université de Lorraine}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Théorèmes de l'indice sur des variétés compactes}
+
+\begin{frame}
+On rappelle qu'un opérateur compact est un opérateur limite d'opérateurs de rang fini. \\
+Un opérateur $T$ est dit de Fredholm s'il est inversible modulo les opérateurs compacts. Son noyau et son conoyau sont alors fini-dimentsionnels et on peut définir son indice :
+\[Ind\ T = \dim Ker T-\dim Ker T^*\] 
+Soit $M$ une variété différentielle, et $d$ la différentielle extérieure définie sur le complexe de De Rham des formes extérieures
+\[\begin{tikzcd}[ampersand replacement=\&,column sep = small]
+\Omega^0(M) \arrow{r}{d} \& \Omega^1(M) \arrow{r}{d} \& .. \arrow{r}{d} \& \Omega^n(M)  
+\end{tikzcd}\]
+\end{frame}
+
+\begin{frame}
+Une métrique riemannienne $g$ sur $M$ induit une mesure $\mu$ sur $M$ et un produit scalaire $(,)$ sur le cotangent $T^* M$ que l'on peut étendre aux formes :
+\[\langle \alpha,\beta\rangle = \int_M (\alpha(x),\beta(x))\mu(dx)\]
+On complète $\Omega^j_c(M)$par rapport à $\langle\rangle$ pour obtenir un complexe d'espaces de Hilbert $\Omega^*_{L^2}(M)$
+\[\begin{tikzcd}[ampersand replacement=\&,column sep = small]
+\Omega_{L^2}^0(M) \arrow{r}{d} \& \Omega_{L^2}^1(M) \arrow{r}{d} \& .. \arrow{r}{d} \& \Omega_{L^2}^n(M)  
+\end{tikzcd}\]
+C'est le complexe des formes de carré intégrable. L'opérateur $d$ est cette fois un \textbf{opérateur non borné}, soit $d^*$ son adjoint.
+\end{frame}
+
+\begin{frame}
+$D= d+d^*$ est ce que l'on appelle un opérateur de Dirac généralisé. \\
+C'est un opérateur non-borné auto-adjoint, on peut donc donner un sens à une expression $f(D)$ par calcul fonctionnel, pour toute $f$ borélienne bornée.\\
+\begin{thm}[Régularité elliptique]
+Si $\phi\in C_0(\R)$, alors $\phi(D)$ est un opérateur compact.
+\end{thm}
+
+Si $\chi : \R\rightarrow \R$ est continue, bornée et impaire telle que $\chi (t)\rightarrow_{+\infty} 1$, alors 
+\begin{itemize}
+\item[$\bullet$] $\chi(D)$ est un opérateur de Fredholm,
+\item[$\bullet$] $\chi_1(D)-\chi_2(D)$ est compact.
+\end{itemize}
+On peut donc calculer l'indice de $\chi(D)$ !
+\end{frame}
+
+\begin{frame}
+Il vaut $0$ ! \\
+$\chi(D)$ est autoadjoint... Mais on peut séparer les formes de degré pair et impair pour obtenir une graduation
+\[\Omega_{L^2}(M) = \Omega^{even}(M) \bigoplus \Omega^{odd}(M),\]
+et $D$ est un opérateur impair par rapport à cette décomposition :
+\[D= \begin{pmatrix}0 & D_-\\ D_+ & 0  \end{pmatrix}\]
+$\chi(D_+)$ est de Fredholm, et on définit
+\[Ind(D,\epsilon)=Ind\chi(D_+)\]
+Cet indice est non nul en général, et ne dépend pas de $\chi$.\\
+($\epsilon = \begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}$ est l'opérateur de graduation.)
+\end{frame}
+
+\begin{frame}
+Les théorèmes de l'indice donnent une formule pour l'indice d'un opérateur de Dirac généralisé en fonction de données topologiques.\\
+\textbf{Indice $=$ évaluation d'une classe caractéristique contre la classe fondamentale de la variété }
+\[Ind \ (D,\epsilon) = \langle \mathcal I _D , [M]\rangle\]
+\end{frame}
+
+\subsection{Exemples}
+\begin{frame}%[Gauss-Bonnet]
+On suppose que la dimension $n$ de $M$ est paire, et comme auparavant
+\[\Omega_{L^2}(M)=\Omega^{even}(M)\oplus \Omega^{odd}(M),\quad \epsilon = \begin{pmatrix}1 & 0\\ 0 & -1 \end{pmatrix}\]
+ \[D=d+d^*\]
+\begin{thm}[Gauss-Bonnet]
+\[Ind \ (D ,\epsilon) = \left\{\begin{array}{l} \chi(M)\quad \text{caractéristique d'Euler}\\ \frac{1}{(2\pi)^{n/2}}\int_M Pf(R)\end{array}\right.\]
+\end{thm}
+\end{frame}
+
+\begin{frame}
+L'opérateur de Hodge $\star : \Omega^{k}_{L^2}(M)\rightarrow \Omega_{L^2}^{n-k}(M)$ implémente une autre graduation, et 
+\[Ind \ (D,\star) =\left\{ \begin{array}{l}sg(M)  \quad \text{signature de la variété}\\ \langle \mathcal L_M, [M]\rangle \end{array}\right.\]
+\end{frame}
+
+\begin{frame}
+Si $M$ admet une structure Spin,
+\[\slashed D = \sum c(X_j) \nabla_{X_j}\]
+alors 
+\[Ind \ \slashed D= \langle \mathcal A,[M]\rangle\]
+\end{frame}
+
+\begin{frame}
+\textbf{BUT :} Etendre ces techniques au cas non-compact.\\
+
+\textbf{Problème :} $\phi(D)$ n'est plus un opérateur compact.\\
+
+\textbf{Piste :} Utiliser la preuve des théorèmes de l'indices utilisant le noyau de la chaleur.\\
+\end{frame}
+
+\begin{frame}
+\begin{prop}[Formule de Lin??]
+\[\slashed D^2 =\nabla \nabla^* +\frac{1}{4} Sc \]
+\end{prop}
+
+\[Ind \ \slashed D = Tr(\epsilon e^{-t\slashed D^2})\]
+Lorsque $t\rightarrow 0$, cette formule devient locale en $t$ et le terme dominant est l'inégrale sur $M$ d'une forme $\mathcal I(x)dx$ que l'on peut determiner explicitement, sa classe de cohomolgie donne $\mathcal I_D$.\\
+
+\textbf{Idée :} Le semi-groupe de la chaleur construit une homotopie entre l'invariant local $\mathcal I_D$ et l'invariant global $Ind \ \slashed D$.  
+\end{frame}
+
+\section{Géométrie asymptotique}
+\subsection{$C^*$-algèbres}
+
+\begin{frame}
+\begin{definition} Une $C^*$-algèbre est une sous-algèbre $A\subset \mathcal L(H)$
+ fermée pour la norme d'opérateur et stable par adjonction.
+\end{definition}
+\textbf{Exemples :} 
+\begin{itemize} 
+\item[$\bullet$]$C_0(X)$ pour un espace localement compact $X$.
+\item[$\bullet$] l'algèbre des opérateurs bornés $\mathcal L(H)$, des opérateurs compacts $\mathfrak K(H)$.
+\end{itemize}
+\end{frame}
+
+\end{document}
