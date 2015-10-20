@@ -1,8 +1,11 @@
-\beamer@endinputifotherversion {3.33pt}
+\beamer@endinputifotherversion {3.24pt}
 \select@language {french}
-\beamer@sectionintoc {1}{Th\IeC {\'e}or\IeC {\`e}mes de l'indice sur des vari\IeC {\'e}t\IeC {\'e}s compactes}{2}{0}{1}
-\beamer@subsectionintoc {1}{1}{Exemples}{7}{0}{1}
-\beamer@sectionintoc {2}{G\IeC {\'e}om\IeC {\'e}trie asymptotique}{12}{0}{2}
-\beamer@subsectionintoc {2}{1}{$C^*$-alg\IeC {\`e}bres}{12}{0}{2}
-\beamer@subsectionintoc {2}{2}{$K$-th\IeC {\'e}orie}{16}{0}{2}
-\beamer@subsectionintoc {2}{3}{Application d'assemblage}{19}{0}{2}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Conjecture de Novikov}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Th\IeC {\'e}or\IeC {\`e}mes de l'indice sur des vari\IeC {\'e}t\IeC {\'e}s compactes}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{Exemples}{9}{0}{1}
+\beamer@sectionintoc {2}{G\IeC {\'e}om\IeC {\'e}trie asymptotique}{14}{0}{2}
+\beamer@subsectionintoc {2}{1}{$C^*$-alg\IeC {\`e}bres}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{$K$-th\IeC {\'e}orie}{18}{0}{2}
+\beamer@subsectionintoc {2}{3}{Application d'assemblage}{21}{0}{2}
+\beamer@sectionintoc {3}{La conjecture de Novikov pour les groupes de dimension asymptotique fine}{25}{0}{3}
