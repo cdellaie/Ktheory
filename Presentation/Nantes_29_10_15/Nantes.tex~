@@ -29,7 +29,7 @@ $\mathcal L_M$ est un certain polynôme en les classes de Pontrjagin, et $[M]\in
 
 \begin{frame}
 \begin{conj}[Novikov]
-Les hautes sinatures sont des invariants d'homotopies, i.e. si $\phi : M\rightarrow N$ est une équivalence d'homotopie, la haute signature associée à $f$ et celle associée à $\phi\circ f$ sont égales.
+Les hautes signatures sont des invariants d'homotopies, i.e. si $\phi : M\rightarrow N$ est une équivalence d'homotopie, la haute signature associée à $f$ et celle associée à $\phi\circ f$ sont égales.
 \end{conj}
 \end{frame}
 
@@ -293,5 +293,6 @@ est un isomorphisme.
 
 \begin{frame}
 G. Yu a démontré la conjecture de Baum-Connes coarse pour les espaces de dimension asymptotique finie.
+\textbf{A FINIR}
 \end{frame}
 \end{document}
