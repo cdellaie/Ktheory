@@ -5,7 +5,7 @@
 
 \title{Propagation en K-théorie}
 \author{Clément Dell'Aiera}\institute{Université de Lorraine}
-
+\date{29 octobre 2015}
 \begin{document}
 
 \begin{frame}
@@ -21,7 +21,7 @@ La conjecture de Novikov est l'un des problèmes non résolus les plus important
 Soit $\Gamma$ un groupe discret, $B\Gamma$ son espace classifiant et $f: B\Gamma\rightarrow M$ une application continue à valeur dans une variété fermée orientée $M$. On rappelle que $B\Gamma$ est un espace topologique dont le groupe fondamental est $\Gamma$ et tous les autres groupes d'homotopies sont triviaux. \\
 \begin{definition}
 Pour une classe de cohomologie $x\in H^*(B\Gamma,\mathbb Q)$, on définit la haute signature associée à $x$ comme:
-\[\sigma_x = \langle \mathcal L_M \cup f^*(x), [M]\rangle\] 
+\[\sigma_x(M,f) = \langle \mathcal L_M \cup f^*(x), [M]\rangle\] 
 \end{definition}
 
 $\mathcal L_M$ est un certain polynôme en les classes de Pontrjagin, et $[M]\in H_*(M,\mathbb Q)$ la classe fondamentale de la variété.
@@ -29,7 +29,8 @@ $\mathcal L_M$ est un certain polynôme en les classes de Pontrjagin, et $[M]\in
 
 \begin{frame}
 \begin{conj}[Novikov]
-Les hautes signatures sont des invariants d'homotopies, i.e. si $\phi : M\rightarrow N$ est une équivalence d'homotopie, la haute signature associée à $f$ et celle associée à $\phi\circ f$ sont égales.
+Les hautes signatures sont des invariants d'homotopies, i.e. si $\phi : M\rightarrow N$ est une équivalence d'homotopie, la haute signature associée à $f$ et celle associée à $\phi\circ f$ sont égales :
+\[\sigma_x(M,f)=\sigma_x(N,\phi\circ f)\]
 \end{conj}
 \end{frame}
 
@@ -37,9 +38,10 @@ Les hautes signatures sont des invariants d'homotopies, i.e. si $\phi : M\righta
 
 \begin{frame}
 On rappelle qu'un opérateur compact est un opérateur limite d'opérateurs de rang fini. \\
-Un opérateur $T$ est dit de Fredholm s'il est inversible modulo les opérateurs compacts. Son noyau et son conoyau sont alors fini-dimentsionnels et on peut définir son indice :
+Un opérateur $T$ est dit de Fredholm s'il est inversible modulo les opérateurs compacts. Son noyau et son conoyau sont alors fini-dimensionnels et on peut définir son indice :
 \begin{definition}Soit $T$ un opérateur de Fredholm, son indice est
 \[Ind\ T = \dim Ker T-\dim Ker T^*\] 
+Il est invariant par perturbation compacte.
 \end{definition}
 Soit $M$ une variété différentielle, et $d$ la différentielle extérieure définie sur le complexe de De Rham des formes extérieures
 \[\begin{tikzcd}[ampersand replacement=\&,column sep = small]
@@ -103,15 +105,21 @@ $R$ est la courbure de la connexion de Levi-Civita, et $Pf$ est un polynôme app
 \end{frame}
 
 \begin{frame}
+\begin{thm}[Hirzebruch] Si $M$ est une variété orientée de dimension $4k$,
+\[sg(M)  = \langle \mathcal L_M, [M]\rangle\]
+
+\end{thm}
 L'opérateur de Hodge $\star : \Omega^{k}_{L^2}(M)\rightarrow \Omega_{L^2}^{n-k}(M)$ implémente une autre graduation, et 
-\[Ind \ (D,\star) =\left\{ \begin{array}{l}sg(M)  \quad \text{signature de la variété}\\ \langle \mathcal L_M, [M]\rangle \end{array}\right.\]
+\[Ind \ (D,\star) =sg(M)  \]
 \end{frame}
 
 \begin{frame}
 Si $M$ admet une structure Spin,
 \[\slashed D = \sum c(X_j) \nabla_{X_j}\]
 alors 
+\begin{thm}
 \[Ind \ \slashed D= \langle \mathcal A,[M]\rangle\]
+\end{thm}
 \end{frame}
 
 \begin{frame}
@@ -134,6 +142,73 @@ Lorsque $t\rightarrow 0$, cette formule devient locale en $t$ et le terme domina
 \end{frame}
 
 \section{Géométrie asymptotique}
+\subsection{Groupes et espaces métriques}
+
+\begin{frame}
+Soit $X$, $Y$ des espaces métriques.\\
+\begin{definition}
+\begin{itemize}
+\item $X$ est uniformément discret s'il existe $\delta>0$ tel que $d(x,y)\geq\delta$ pour tout $x,y\in X$. 
+\item $X$ est localement fini si $\# B(x,R)<\infty$ pour tout $x\in X,R>0$.
+\item $X$ est à géométrie bornée si, pour tout $R>0$, il existe $N>0$ tel que $\# B(x,R)\leq N$, pour tout $x\in X$.
+\end{itemize}
+\end{definition}
+\end{frame}
+ 
+\begin{frame}
+\begin{definition}
+
+Une application $f : X\rightarrow Y$ est un plongement quasi-isométrique s'il existe des constantes $L,C>0$ telles que 
+\[L^{-1} d_X(x,y)-C\leq d_Y(f(x),f(y))\leq L d_X(x,y)+C .\]
+Si de plus, $f(X)$ est un net dans $Y$, alors $f$ est une quasi-isométrie.
+\end{definition}
+\textbf{Exemple :}\\
+$\Z^n$ et $\R^n$
+
+\end{frame}
+
+\begin{frame}
+\begin{definition}
+L'application $f : X\rightarrow Y$ est un plongement coarse s'il existe $2$ fonctions croissantes $\rho_-,\rho_+ : \R_+\rightarrow \R_+$ telles que $\lim_{\infty} \rho_-=\infty$ et 
+\[\rho_-(d_X(x,y))\leq d_Y(f(x),f(y))\leq \rho_+(d_X(x,y))\]
+Si $f(X)$ est un net dans $Y$, on dit que $f$ est une équivalence coarse.
+\end{definition}
+\textbf{Remarques :}
+\begin{itemize}
+\item Une équivalence coarse entre $2$ espaces quasi-géodésiques est une quasi-isométrie.
+\item Une équivalence coarse entre $2$ groupes finiement engendrés est une quasi-isométrie.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Soit $\Gamma$ un groupe discret.\\
+\begin{definition}
+Une longueur sur un groupe $\Gamma$ est une fonction $l:\Gamma\rightarrow \R_+$ telle que 
+\begin{itemize}
+\item $l(g)=0 \Leftrightarrow g=e_\Gamma$, 
+\item $l(g)=l(g^{-1})$ et 
+\item $l(gh)\leq l(g)+l(h)$. 
+\end{itemize}
+La longueur est propre si $\{g : l(g)\leq R\}$ est fini. 
+\end{definition}
+\begin{itemize}
+\item[$\bullet$] Sur tout groupe dénombrable, il existe une longueur propre.
+\item[$\bullet$] Si $\Gamma$ est finiement engendré (f.g.) par un ensemble $S$ symmétrique, on peut prendre la longueur des mots
+\[l(g) = \min \{j \ |\ g=s_1 ...s_j \ , s_j\in S\}\] 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Si $\Gamma$ possède une longueur propre, on peut le munir d'une distance $\Gamma$-invariante 
+\[d(g,h)=l(g^{-1}h)\]
+On note $(|\Gamma|,d)$ l'espace métrique obtenu. A priori, cette definition dépend de $l$. En fait ce n'est pas le cas ! Deux telles métriques induisent deux espaces quasi-isométriques.
+\begin{thm}
+Soient $S$ et $S'$ des parties finies génératrices. Alors les espaces métriques associés $(\Gamma,d)$ et $(\Gamma,d')$ sont quasi-isométriques.
+\end{thm}
+
+On notera alors $|\Gamma|$ l'espace métrique obtenu à partir de n'importe quelle longueur propre invariante, dont la classe coarse ne dépend pas de la longueur choisie.
+\end{frame}
+
 \subsection{$C^*$-algèbres}
 
 \begin{frame}
@@ -182,7 +257,7 @@ Toutes les définitions que l'on donnera par la suite ne dépendent pas du $X$-m
 \item[$\bullet$] on note $C_R[X]:=\{T\in \mathcal L(H_X) : prop(T)\leq R, T \text{ loc. compact}\}$ et l'algèbre de Roe est  \[C^*X:=\overline{\cup_{R>0} C_R[X]}^{||.||_{op}}\]
 \end{itemize}
 \end{definition}
-Si $(M,g)$ est une variété reimannienne complète, et $D$ un opérateur de Dirac généralisé sur $M$, alors pour toute $\phi\in C_0(M)$,
+Si $(M,g)$ est une variété riemannienne complète, et $D$ un opérateur de Dirac généralisé sur $M$, alors pour toute $\phi\in C_0(M)$,
 \[\phi(D)\in C^*M.\]
 \end{frame}
 
@@ -267,15 +342,15 @@ et l'application d'assemblage correspond aux bords de cette suite.
 \end{frame}
 
 \begin{frame}
-\begin{conj}[Baum-Connes coarse] Soit $X$ un espace discret à géométrie bornée. Alors l'aplication d'assemblage 
+\begin{conj}[Baum-Connes coarse] Soit $X$ un espace discret à géométrie bornée. Alors l'application d'assemblage 
 \[A : K_*(X)\rightarrow K_*(C^*X)\]
 est un isomorphisme.
 \end{conj}
-\begin{thm}[Le principe de descente] Soit $\Gamma$ un groupe f.g. dont l'espace classifiant $B\Gamma$ est un CW-complexe fini. La conjecture de Baum Connes coarse pour $\Gamma$ implique alors la conjecture de Novikov pour $\Gamma$. 
+\begin{thm}[Le principe de descente] Soit $\Gamma$ un groupe f.g. dont l'espace classifiant $B\Gamma$ est un CW-complexe fini. La conjecture de Baum-Connes coarse pour $|\Gamma|$ implique alors la conjecture de Novikov pour $\Gamma$. 
 \end{thm}
 \end{frame}
 
-\section{La conjecture de Novikov pour les groupes de dimension asymptotique fine}
+\subsection{Dimension asymptotique finie}
 
 \begin{frame}
 \begin{definition}
@@ -288,11 +363,41 @@ est un isomorphisme.
 \end{itemize}
 \end{definition}
 \textbf{Remarque :} La dimension asymptotique est un analogue coarse de la dimension de recouvrement en topologie.\\
-\textbf{Exemples :} Le groupes hyperboliques au sens de Gromov
+
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item[$\bullet$] $asdim\ \Z^n=n$
+\item[$\bullet$] $asdim\ T \leq 1$. Le graphe de Cayley du groupe libre $\mathbb F_n$ est un arbre, et contient isométriquement $\Z$ donc $asdim\ \mathbb F_n= 1$ 
+\item[$\bullet$] Si $\Gamma$ est un groupe hyperbolique, $asdim \ \Gamma <\infty$
+\item[$\bullet$] $\Z^{(\infty)}=\bigoplus_{j\geq 1} \Z$ muni de la distance $d_{(\infty)}(x,y)=\sum_j j|x_j-y_j|$ est de dimension asymptotique infinie. 
+\item[$\bullet$] $\Z \wr \Z :=(\bigoplus\Z)\rtimes_\alpha \Z$ est finiement engendré, pourtant $asdim\ \Z\wr \Z =\infty$. ($\alpha$ est la translation)
+\end{itemize}
 \end{frame}
 
 \begin{frame}
 G. Yu a démontré la conjecture de Baum-Connes coarse pour les espaces de dimension asymptotique finie.
-\textbf{A FINIR}
+\begin{thm}[G. Yu '98]
+La conjecture de Baum-Connes coarse est vraie pour les espaces métriques à géométrie bornée de dimension asymptotique finie. 
+\end{thm}
+ Un résultat beaucoup plus fort :
+\begin{thm}[G. Yu '00]
+La conjecture de Baum-Connes coarse est vraie pour les espaces métriques à géométrie bornée asymptotiquement plongeable dans un espace de Hilbert. 
+\end{thm}
+\end{frame}
+
+\begin{frame}
+On connaît des contre-exemples : les \textbf{monstres de Gromov}, des groupes dont le graphe de Cayley contient quasi-isométriequement des expanseurs.\\
+Un mot sur les preuves.
+\begin{itemize}
+\item[$\bullet$]  $asdim\ X<\infty$ : preuve géométrique basée sur un argument de type Mayer-Vietoris coarse.
+\item[$\bullet$]  $X$ coarsely embeddable into $H$ : preuve faisant appel à de l'analyse en dimension infinie (construction d'un élément Dirac-Dual Dirac)
+\item[$\bullet$] contre-exemples : preuve probabiliste (modèle de groupe aléatoire).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Merci pour votre attention.
 \end{frame}
 \end{document}
