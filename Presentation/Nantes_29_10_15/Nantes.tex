@@ -4,12 +4,17 @@
 \usetheme{CambridgeUS}
 
 \title{Propagation en K-théorie}
-\author{Clément Dell'Aiera}\institute{Université de Lorraine}
+\author{Clément Dell'Aiera}
+\institute{IECL}
 \date{29 octobre 2015}
 \begin{document}
 
 \begin{frame}
 \titlepage
+\end{frame}
+
+\begin{frame}
+\tableofcontents
 \end{frame}
 
 \section{Introduction}
@@ -113,14 +118,14 @@ L'opérateur de Hodge $\star : \Omega^{k}_{L^2}(M)\rightarrow \Omega_{L^2}^{n-k}
 \[Ind \ (D,\star) =sg(M)  \]
 \end{frame}
 
-\begin{frame}
-Si $M$ admet une structure Spin,
-\[\slashed D = \sum c(X_j) \nabla_{X_j}\]
-alors 
-\begin{thm}
-\[Ind \ \slashed D= \langle \mathcal A,[M]\rangle\]
-\end{thm}
-\end{frame}
+%\begin{frame}
+%Si $M$ admet une structure Spin,
+%\[\slashed D = \sum c(X_j) \nabla_{X_j}\]
+%alors 
+%\begin{thm}
+%\[Ind \ \slashed D= \langle \mathcal A,[M]\rangle\]
+%\end{thm}
+%\end{frame}
 
 \begin{frame}
 \textbf{But :} Etendre ces techniques au cas non-compact.\\
@@ -142,6 +147,10 @@ Lorsque $t\rightarrow 0$, cette formule devient locale en $t$ et le terme domina
 \end{frame}
 
 \section{Géométrie asymptotique}
+\begin{frame}
+\tableofcontents[currentsection]
+\end{frame}
+
 \subsection{Groupes et espaces métriques}
 
 \begin{frame}
@@ -157,26 +166,28 @@ Soit $X$, $Y$ des espaces métriques.\\
  
 \begin{frame}
 \begin{definition}
-
-Une application $f : X\rightarrow Y$ est un plongement quasi-isométrique s'il existe des constantes $L,C>0$ telles que 
+\begin{itemize}
+\item Un sous-ensemble $C\subset X$ est un réseau s'il existe $\epsilon>0$ tel que $X\subset \cup_{x\in C} B(x,\epsilon)$ 
+\item Une application $f : X\rightarrow Y$ est un plongement quasi-isométrique s'il existe des constantes $L,C>0$ telles que 
 \[L^{-1} d_X(x,y)-C\leq d_Y(f(x),f(y))\leq L d_X(x,y)+C .\]
-Si de plus, $f(X)$ est un net dans $Y$, alors $f$ est une quasi-isométrie.
+\item Si de plus, $f(X)$ est un réseau dans $Y$, alors $f$ est une quasi-isométrie.
+\end{itemize}
 \end{definition}
 \textbf{Exemple :}\\
-$\Z^n$ et $\R^n$
-
+$\Z^n$ et $\R^n$ sont quasi-isométriques via la partie entière.
 \end{frame}
 
 \begin{frame}
 \begin{definition}
 L'application $f : X\rightarrow Y$ est un plongement coarse s'il existe $2$ fonctions croissantes $\rho_-,\rho_+ : \R_+\rightarrow \R_+$ telles que $\lim_{\infty} \rho_-=\infty$ et 
 \[\rho_-(d_X(x,y))\leq d_Y(f(x),f(y))\leq \rho_+(d_X(x,y))\]
-Si $f(X)$ est un net dans $Y$, on dit que $f$ est une équivalence coarse.
+Si $f(X)$ est un réseau dans $Y$, on dit que $f$ est une équivalence coarse.
 \end{definition}
 \textbf{Remarques :}
 \begin{itemize}
 \item Une équivalence coarse entre $2$ espaces quasi-géodésiques est une quasi-isométrie.
 \item Une équivalence coarse entre $2$ groupes finiement engendrés est une quasi-isométrie.
+\item Si $M$ est une variété compacte, alors son revêtement universel $\tilde M$ et son groupe fondamental $\pi_1(M)$ sont asymptotiquement équivalents. 
 \end{itemize}
 \end{frame}
 
@@ -209,7 +220,40 @@ Soient $S$ et $S'$ des parties finies génératrices. Alors les espaces métriqu
 On notera alors $|\Gamma|$ l'espace métrique obtenu à partir de n'importe quelle longueur propre invariante, dont la classe coarse ne dépend pas de la longueur choisie.
 \end{frame}
 
+\begin{frame}
+\begin{figure}[h]\centering
+\includegraphics[scale=0.35]{CayleyFree2.jpeg}
+\caption{Boules dans $Cay(\mathbb F_2)$}
+\label{fig:Cayley}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[h]\centering
+\includegraphics[scale=0.35]{CayleyFree3.jpeg}
+\caption{Boules dans $Cay(\mathbb F_2)$}
+\label{fig:Cayley}
+\end{figure}
+\end{frame}
+\begin{frame}
+\begin{figure}[h]\centering
+\includegraphics[scale=0.35]{CayleyFree4.jpeg}
+\caption{Boules dans $Cay(\mathbb F_2)$}
+\label{fig:Cayley}
+\end{figure}
+\end{frame}
+\begin{frame}
+\begin{figure}[h]\centering
+\includegraphics[scale=0.35]{CayleyFree5.jpeg}
+\caption{Boules dans $Cay(\mathbb F_2)$}
+\label{fig:Cayley}
+\end{figure}
+\end{frame}
+
 \subsection{$C^*$-algèbres}
+\begin{frame}
+\tableofcontents[currentsubsection]
+\end{frame}
 
 \begin{frame}
 \begin{definition} Une $C^*$-algèbre est une sous-algèbre $A\subset \mathcal L(H)$
@@ -221,7 +265,7 @@ On notera alors $|\Gamma|$ l'espace métrique obtenu à partir de n'importe quel
 \item[$\bullet$] l'algèbre des opérateurs bornés $\mathcal L(H)$, des opérateurs compacts $\mathfrak K(H)$.
 \end{itemize}
 
-\textbf{Remarque :} le théorème de Gelfand Naimark assure que toute $C^*$-algèbre commutative est isomorphe à une $C^*$-algèbre du type $C_0(X)$ : les $C^*$-algèbres doivent être pensée comme des espaces localment compacts "non-commutatifs".
+\textbf{Remarque :} le théorème de Gelfand Naimark assure que toute $C^*$-algèbre commutative est isomorphe à une $C^*$-algèbre du type $C_0(X)$ : les $C^*$-algèbres doivent être pensée comme des espaces localement compacts "non-commutatifs".
 \end{frame}
 
 \begin{frame}
@@ -263,7 +307,11 @@ Si $(M,g)$ est une variété riemannienne complète, et $D$ un opérateur de Dir
 
 \subsection{$K$-théorie}
 \begin{frame}
-On a un foncteur de cohomologie sur les $C^*$-algèbre : la $K$-théorie.
+\tableofcontents[currentsubsection]
+\end{frame}
+
+\begin{frame}
+On a un foncteur d'homologie sur les $C^*$-algèbres : la $K$-théorie.
 \begin{itemize}
 \item[$\bullet$] A une $C^*$-algèbre $A$ on associe une suite de groupes abéliens $K_n(A)$.
 \item[$\bullet$] Tout $*$-morphisme $\varphi : A\rightarrow B$ entre $2$ $C^*$-algèbres induit un homomorphisme 
@@ -303,6 +351,10 @@ Si $M$ est compacte, $C^*M = \mathfrak K(H)$ et $D^*X = \mathcal L(H)$. Alors on
 \end{frame}
 
 \subsection{Application d'assemblage}
+\begin{frame}
+\tableofcontents[currentsubsection]
+\end{frame}
+
 \begin{frame}
 \textbf{But :}donner une formule topologique pour $Ind\ D\in K_0(C^*X)$.\\
 
@@ -351,6 +403,9 @@ est un isomorphisme.
 \end{frame}
 
 \subsection{Dimension asymptotique finie}
+\begin{frame}
+\tableofcontents[currentsubsection]
+\end{frame}
 
 \begin{frame}
 \begin{definition}
@@ -388,7 +443,7 @@ La conjecture de Baum-Connes coarse est vraie pour les espaces métriques à gé
 \end{frame}
 
 \begin{frame}
-On connaît des contre-exemples : les \textbf{monstres de Gromov}, des groupes dont le graphe de Cayley contient quasi-isométriequement des expanseurs.\\
+On connaît des contre-exemples : les \textbf{monstres de Gromov}, des groupes dont le graphe de Cayley contient quasi-isométriquement des expanseurs.\\
 Un mot sur les preuves.
 \begin{itemize}
 \item[$\bullet$]  $asdim\ X<\infty$ : preuve géométrique basée sur un argument de type Mayer-Vietoris coarse.
