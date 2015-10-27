@@ -24,17 +24,17 @@
 %\include{Asdim}
 
 %\include{GDT}
-%\include{BaumConnes}
+\include{BaumConnes}
 %\include{rapport}
 %\include{QuantitativeAssemblyMapForGroupoids}
 %\include{Isom}
 
 \newpage
-\include{MayerVietoris}
+%\include{MayerVietoris}
 
 \bibliographystyle{plain}
 \bibliography{biblio} 
-\nocite{*}
+%\nocite{*}
 
 
 \end{document}
