@@ -1,0 +1,17 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Review of quantitative $K$-theory}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Roe algebras and filtration}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Definition of quantitative $K$-theory}{5}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Morita equivalence}{6}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Quantitative boundary maps}{6}{subsection.1.4}
+\contentsline {section}{\numberline {2}Quantitative statements}{8}{section.2}
+\contentsline {subsection}{\numberline {2.1}A reminder on groupoids action}{8}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}The Baum-Connes conjecture}{9}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Length, propagation and controlled six-terms exact sequence}{10}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}The Kasparov transform}{11}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Odd case}{11}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Even case}{15}{subsubsection.2.4.2}
+\contentsline {subsection}{\numberline {2.5}Quantitative assembly maps}{16}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Classifying space for proper actions}{17}{subsubsection.2.5.1}
+\contentsline {subsection}{\numberline {2.6}Quantitative statements}{19}{subsection.2.6}
+\contentsline {section}{\numberline {3}Decomposition complexity}{24}{section.3}

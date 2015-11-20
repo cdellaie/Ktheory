@@ -1,0 +1,119 @@
+\section{Review of quantitative $K$-theory}
+
+This section presents basic constructions of quantitative $K$-theory for operator algebras that we shall use. For more details, see the original article of H. Oyono-Oyono and G. Yu.\cite{OY2} We will refer either to quantitative or controlled $K$-theory for the same object, namely a family of abelian groups $\hat K(A)= (K^{\epsilon,R}(A))$ where $R>0, 0<\epsilon<\frac{1}{4}$, defined for a filtered $C^*$-algebra $A$. The motivating idea is to keep track of propagation of an operator while taking his (possibly higher) index. The main example is that of Roe algebras. \\
+
+\subsection{Roe algebras and filtration}
+
+Let $(X,d)$ be a discrete proper metric space, i.e. its closed ball are compact, that is uniformly bounded, so that for every $R>0$, there exists an integer $N\geq 0$ such that every ball of radius $R$ contains less than $N$ elements. A $X$-module is a hilbert space $H$ equiped with a $C^*$-morphism $\rho : C_0(X)\rightarrow \mathcal L(H)$. To lighten notations, we write $fx$ instead of $\rho(f)x$ if $f\in C_0(X)$ and $x\in X$. All these definitions can be found in \cite{RoeIndex}
+
+\begin{definition}
+Let $H$ be a $X$-module.
+\begin{itemize}
+\item[$\bullet$] An operator $T\in \mathcal L(H)$ is locally compact if for every $f\in C_0(X)$, $fT$ and $Tf$ are compact operators, where $f$ is understood as a multiplication operator.
+\item[$\bullet$] An operator $T\in \mathcal L(H)$ is of finite propagation bounded by $R>0$ if for every pair of functions $f,g\in C_0(X)$ such that $d(\text{supp }f , \text{supp }g)>R$, $fTg =0$.
+\item[$\bullet$] We denote by $C_R[X]$ the set of locally compact operators with finite propagation bounded by $R$. The Roe algebra of $X$ is $C^*(X)$, the closure of $\cup_{R>0} C_R[X]$ in the operator topology of $\mathcal L(H)$.\\
+\end{itemize}
+\end{definition} 
+ 
+A simple example is given by $l^2(X)\otimes H$ with $H$ a separable Hilbert space, in which case $C_R[X]$ is the algebra of operators $(T_{xy})_{x,y\in X}$ such that $T_{x,y}\in K(H)$ for every $x,y\in X$, and $T_{xy}=0$ as soon as $d(x,y)>R$.\\
+Remark : one coulde replace Hilbert spaces by Hilbert modules $E$ over a $C^*$-algebra $B$ in this definition, $\mathcal L(H)$ by adjoinable operators $\mathcal L_B(E)$ and $K(H)$ by compact operators $K_B(E)$, to obtain $C^*(X,B)$, the Roe algebra with coefficient in $B$. The Roe algebra $C^*(X,B)$ enjoys functorial properties in $B$.\\
+
+This example motivates the following definition.\\
+
+\begin{definition}
+A $C^*$-algebra $A$ is said to be filtered if there are closed $*$-stable linear subspaces $A_R$ for every $R>0$ such that
+\begin{itemize}
+\item[$\bullet$] $A_s \subset A_r$ when $s\leq r$,
+\item[$\bullet$] $\cup_{R>0} A_R$ is dense in $A$,
+\item[$\bullet$] $A_s . A_r \subset A_{s+r}$ for every $r,s \geq 0$,
+\item[$\bullet$] $\forall r>0, 1\in A_r$ when $A$ is unital.\\
+\end{itemize}
+
+A $C^*$-morphism between filtered $C^*$-algebras $\phi : A \rightarrow B$ is filtered if $\phi(A_R)\subset B_R$ for every $R>0$.
+\end{definition}
+
+If $A$ is a non-unital $C^*$-algebra, let $A^+$ be the unital $C^*$-algebra containing $A$ as a two-sided ideal, defined as :
+
+\[\begin{array}{c}A^+=\{(a,\lambda)\in A\times \C \} \\ (a,\lambda)(b,\mu)=(ab+\lambda b +\mu a,\lambda\mu) \\ (a,\lambda)^*=(a^*,\overline\lambda)\end{array}\]
+with the norm operator
+\[||(a,\lambda)||=\sup \{||ax+\lambda x|| : x\in A , ||x||=1\}.\]
+
+When $A$ is not unital and filtered by $(A_R)_{R>0}$, $A^+$ is filtered by $A_R^+= \{(x,\lambda) : x\in A_R,\lambda\in \C\}$.
+
+\subsection{Definition of quantitative $K$-theory} 
+
+Let $A$ be unital and filtered, and $\epsilon\in (0,\frac{1}{4}),R>0$.
+\begin{itemize}
+\item[$\bullet$] $p$ is a $\epsilon$-$R$-projection if $p\in A_R$ and $||p^2-p||<\epsilon$.
+\item[$\bullet$] $u$ is a $\epsilon$-$R$-unitary if $u\in A_R$ and $||u^*u-1||<\epsilon$ and $||uu^*-1||<\epsilon$.\\
+\end{itemize}
+
+A $\epsilon$-$R$-projection has its spectrum localized around $0$ and $1$, with a spectral gap in between, which allows to define a true projection $\kappa(p)$ by functional calculus.\\ 
+
+Let $P^{\epsilon, R}_n(A)$ be the set of $\epsilon$-$R$-projections and $U^{\epsilon,R}_n(A)$ the set of $\epsilon$-$R$-unitaries of $M_n(A)$. We can also define the inductive limits $P^{\epsilon, R}_\infty(A)=\varinjlim P^{\epsilon,R}_n(A)$ and $U^{\epsilon, R}_\infty(A)=\varinjlim U^{\epsilon,R}_n(A)$ under the inductive system of morphisms 
+\[p\mapsto \begin{pmatrix} p & 0 \\0 & 0\end{pmatrix}\text{ and }u\mapsto \begin{pmatrix} u & 0 \\0 & 1\end{pmatrix}.\]
+ The following defines equivalence relations on $P^{\epsilon,R}_\infty(A)\times \N$ and $U_\infty^{\epsilon,R}(A)$ :
+\begin{itemize}
+\item[$\bullet$] $(p,m)\sim (q,n)$ if there exists $h\in P^{\epsilon,R}_\infty(A[0,1])$ and $k>0$ such that $h(0)=\begin{pmatrix} p & 0 \\0 & I_{m+k}\end{pmatrix}$ and $h(0)=\begin{pmatrix} q & 0 \\0 & I_{n+k}\end{pmatrix}$.
+\item[$\bullet$] $u\sim v$ if there exists $h\in U^{3\epsilon,2R}_\infty(A[0,1])$ such that $h(0)=u$ and $h(1)=v$.
+\end{itemize}
+
+\begin{definition}
+Let $\epsilon\in (0,\frac{1}{4}),R>0$.\\
+\begin{itemize}
+\item[$\bullet$] $K_0^{\epsilon,R}(A)=P_\infty^{\epsilon,R}(A)\times\N / \sim$ if $A$ is unital, or $\{[p,n]\in P^{\epsilon,R}_\infty(A^+)\times\N\text{ such that tr}\rho_A(\kappa (p))=n\}$ if $A$ is not unital.
+\item[$\bullet$] $K_1^{\epsilon,R}(A)=U^{\epsilon,R}_\infty(A^+)/\sim$ where $A=A^+$ if $A$ is unital.
+\end{itemize}
+\end{definition}
+
+These are abelian groups (see \cite{OY2},\cite{OY3}) with laws described by $[p,m]_{\epsilon,R}+[q,n]_{\epsilon,R}=[diag(p,q),m+n]_{\epsilon,R}$ and $[u]_{\epsilon,R}+[v]_{\epsilon,R}=[diag(u,v)]_{\epsilon,R}$.
+\begin{definition}
+To be more flexible, we allow our morphisms between quantitative objets to increase propagation, but in a controlled way. That control is implemented by what Oyono-Oyono and Yu call a control pair.
+\begin{itemize}
+\item[$\bullet$] A control pair $(\alpha,h)$ is a positive number $\alpha>1$ and a map $h:(0,\frac{1}{4\alpha})\rightarrow \R_*^+$ such that $h\leq  F $ for $F$ a non-increasing function. We define a partial order on the control pair by $(\alpha,h)\leq (\beta,k)$ if $\alpha\leq \beta$ and $h\leq k$ on $(0,\frac{1}{4\beta})$.
+\item[$\bullet$] A quantitative object is a family of abelian groups $\hat H=(H^{\epsilon,R})_{\epsilon\in(0,\frac{1}{4}),R>0}$ and group morphisms $\phi_{\epsilon,R}^{\epsilon',R'}: G^{\epsilon,R}\rightarrow G^{\epsilon',R'}$ any time $R\leq R'$ and $\epsilon\leq \epsilon'$, such that $\phi_{\epsilon,R}^{\epsilon,R}=id_{H^{\epsilon,R}}$ and $\phi_{\epsilon_1,R_1}^{\epsilon_2,R_2}\circ \phi_{\epsilon_0,R_0}^{\epsilon_1,R_1}=\phi_{\epsilon,R}^{\epsilon_2,R_2}$.
+\item[$\bullet$] For a control pair $(\alpha,k)$ and two quantitative objects $H$ and $H'$, a $(\alpha,k)$-controlled (quantitative) morphism $F:H\rightarrow H'$ is a family of group morphisms
+\[F^{\epsilon,R}: H^{\epsilon,R}\rightarrow H'^{\alpha\epsilon,k_\epsilon R}\quad\forall \epsilon\in (0,\frac{1}{4\alpha}),R>0.\]
+\end{itemize}
+\end{definition}
+
+We have natural morphisms of abelian groups $\iota_{\epsilon,R}^{\epsilon',R'} : K_*^{\epsilon,R}(A)\rightarrow K^{\epsilon',R'}_*(A)$ if $\epsilon\leq\epsilon', R\leq R'$ and $\iota_{\epsilon,R} : K_*^{\epsilon,R}(A)\rightarrow K_*(A)$, and $\iota_{\epsilon',R'}\circ\iota_{\epsilon,R}^{\epsilon',R'}=\iota_{\epsilon,R}$ holds. This fact gives sense to saying that a controlled morphism induced a morphism in $K$-theory. 
+
+\begin{Expl}
+The basic example of quantitative object is of course quantitative $K$-theory.\\
+If $\phi : A \rightarrow B$ is a filtered $C^*$-morphism, it naturally induces a $(1,1)$-controlled morphism $\phi_* : \hat K(A)\rightarrow \hat K(B)$.\\
+Another (important) examples will be that of the controlled Morita equivalence and quantitative boundary maps. 
+\end{Expl}
+
+\subsection{Morita equivalence}
+
+As in classical $K$-theory, we have an isomorphism which we call the (controlled) Morita equivalence.
+\begin{prop}
+Let $A$ be a filtered $C^*$-algebra and $H$ a separable Hilbert space. We denote by $K_A$ the $C^*$-algebra of compact operators of the standard Hilbert module $H_A$, which is $C^*$-isomorphic to $A\otimes K(H)$. Let $e$ be any rank-one projection in $K(H)$. Then the $C^*$-morphism 
+\[\left\{\begin{array}{lll} A & \rightarrow & K_A \\ a &\mapsto & a\otimes e\end{array}\right.\]
+induces an $\Z_2$-graded isomorphism
+\[M_A^{\epsilon, R} : K^{\epsilon , R}(A)\rightarrow K^{\epsilon , R}(K_A)\]
+for every $R>0$ and $0< \epsilon <\frac{1}{4}$.
+\end{prop}
+
+\subsection{Quantitative boundary maps}
+
+Let $0\rightarrow J \rightarrow A\rightarrow A/J\rightarrow 0$ be an extension of $C^*$-algebras. We denote $\partial_{J,A}: K_*(A/J)\rightarrow K_{*+1}(J)$ the associated boundary map.
+
+\begin{prop}
+There exist a control pair $(\alpha_D,k_D)$ such that for any semi-split extension of filtered $C^*$-algebras $0\rightarrow J \rightarrow A\rightarrow A/J\rightarrow 0$, there exists a $(\alpha_D,k_D)$-controlled morphism of odd degree
+\[D_{J,A} : \hat K(A/J)\rightarrow \hat K(J)\quad \epsilon \in (1,\frac{1}{4\alpha_D}),R>0\]
+which induces $\partial_{J,A}$ in $K$-theory.
+\end{prop}
+
+We have to recall what we will refer as the remark $3.7$ of \cite{OY2}, a property of quantitative assembly maps that we shall intensively.\\
+Let $\phi: A \rightarrow B$ be a filtered morphism between two filtered $C^*$-algebras. We suppose we have extensions $0\rightarrow I \rightarrow A\rightarrow A/I\rightarrow 0$ and $0\rightarrow J \rightarrow B\rightarrow B/J\rightarrow 0$. If 
+\begin{itemize}
+\item[$\bullet$]$\phi(I)\subset J$
+\item[$\bullet$]$\phi$ intertwines two completely positive sections of the extensions : $\phi \circ s_A = s_B \circ \phi_{I}^J$, where $\phi_{I}^J$ is the induced map $A/I_rightarrow B/J$.
+\end{itemize} 
+then $D_{J,B}\circ (\phi_{I}^J)_*=\phi_*\circ D_{I,A}$.
+
+\textbf{METTRE LA RQ 3.7 de OY2 et celle $1.8$ sur le $\lambda$}
+
+
