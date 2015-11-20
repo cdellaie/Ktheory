@@ -459,9 +459,7 @@ KK^G(P_d,\tilde A) \arrow{r}{\mu_{G,\tilde A}^{d,\alpha\epsilon, h_\epsilon R}} 
                                                       \                          & K(\tilde A\rtimes G)
 \end{tikzcd}\]
 
-If $\mu_{G,\tilde A}$ in onto, there exists a $d>0$ and $z\in KK^G(P_d,\tilde A)$ such that $\mu_{G,\tilde A}(z)=\iota_{\alpha\epsilon,h_\epsilon R}(x)$. Denote the image of $z$ under the isomorphism $KK^G(P_d,\tilde A) \simeq \prod KK^G(P_d,A)$ by $(z_j)_j$. By naturality, $\mu_{G,\tilde A}^d(z_j)=0$ so that $\mu_{G,A}$ is not injective.\\
-
-If $\iota_{\alpha\epsilon,h_\epsilon R}(x)$ is in the range of $\mu_{G,\tilde A}$, there exists a $d>0$ and $z\in KK^G(P_d,\tilde A)$ such that $\mu_{G,\tilde A}(z)=\iota_{\alpha\epsilon,h_\epsilon R}(x)$. Denote the image of $z$ under the isomorphism $KK^G(P_d,\tilde A) \simeq \prod KK^G(P_d,A)$ by $(z_j)_j$. By naturality, $\mu_{G,\tilde A}^d(z_j)=0$ so that $\mu_{G,A}$ is not injective.
+If $\iota_{\alpha\epsilon,h_\epsilon R}(x)$ is in the range of $\mu_{G,\tilde A}$, there exists a $d>0$ and $z\in KK^G(P_d,\tilde A)$ such that $\mu_{G,\tilde A}(z)=\iota_{\alpha\epsilon,h_\epsilon R}(x)$. Denote the image of $z$ under the isomorphism $KK^G(P_d,\tilde A) \simeq \prod KK^G(P_d,A)$ by $(z_j)_j$. By naturality, $\mu_{G,\tilde A}^d(z_j)=\iota_{\alpha\epsilon,h_\epsilon R}^{\lambda\epsilon,R_j}(x_j)$ so that $\mu_{G,A}$ is not injective.
 
 \qed
 \end{dem}
