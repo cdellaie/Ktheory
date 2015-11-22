@@ -1,0 +1,65 @@
+\begin{thebibliography}{10}
+
+\bibitem{GTY}
+G.~Yu E.~Guentner, R.~Tessera.
+\newblock A notion of geometric complexity and its application to topological
+  rigidity.
+\newblock {\em Inventiones Mathematicae}, 189:315--357, 2012.
+
+\bibitem{LeGall}
+Pierre-Yves~Le Gall.
+\newblock Thesis.
+
+\bibitem{OY2}
+G.~Yu H.~Oyono-Oyono.
+\newblock On quantitative operator k-theory.
+\newblock {\em Annales de l'Institut Fourier}.
+
+\bibitem{OY3}
+G.~Yu H.~Oyono-Oyono.
+\newblock Persitance approximation property and controlled k-theory.
+
+\bibitem{LaffOY}
+Vincent Lafforgue.
+\newblock K-théorie bivariante pour les algèbres de banach, groupoïdes et
+  conjecture de baum-connes.
+\newblock {\em Journal de l'IMJ 6}, 2007.
+
+\bibitem{RoeIndex}
+John Roe.
+\newblock {\em Index theory, Coarse Geometry, and Topology of Manifolds}.
+\newblock Regional conference series in mathematics, ISSN 0160-7642, no. 90,
+  1996.
+
+\bibitem{SkTuYu}
+Tu~J.L. Yu~G. Skandalis, G.
+\newblock The coarse baum-connes conjecture and groupoids.
+\newblock {\em Topology}, 41(4):807--834, 2002.
+
+\bibitem{TuBC}
+Jean-Louis Tu.
+\newblock The baum-connes conjecture for groupoids.
+\newblock {\em $C^*$-algebras}, 18:227--242, 1999.
+
+\bibitem{TuBC2}
+Jean-Louis Tu.
+\newblock The coarse baum-connes conjecture and groupoids ii.
+\newblock {\em New York J. Math.}, 18:1--27, 2012.
+
+\bibitem{WeggeOlsen}
+N.E. Wegge-Olsen.
+\newblock {\em K-theory and $C^*$-algebras, a friendly approach}.
+\newblock Oxford University Press, 1993.
+
+\bibitem{Yu1}
+G.~Yu.
+\newblock The novikov conjecture for groups with finite asymptotic dimension.
+\newblock {\em Ann. of Math.}, 2(2):325--355, 1998.
+
+\bibitem{Yu2}
+G.~Yu.
+\newblock The coarse baum-connes conjecture for spaces which admit a uniform
+  embedding into hilbert space.
+\newblock {\em Invent. Math.}, 139(1):201--240, 2000.
+
+\end{thebibliography}

@@ -15,3 +15,4 @@
 \contentsline {subsubsection}{\numberline {2.5.1}Classifying space for proper actions}{17}{subsubsection.2.5.1}
 \contentsline {subsection}{\numberline {2.6}Quantitative statements}{19}{subsection.2.6}
 \contentsline {section}{\numberline {3}Decomposition complexity}{24}{section.3}
+\contentsline {subsection}{\numberline {3.1}Examples}{24}{subsection.3.1}
