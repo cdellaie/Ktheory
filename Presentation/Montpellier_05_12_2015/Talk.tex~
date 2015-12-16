@@ -1,0 +1,32 @@
+\section{Motivations}
+
+Soit $(X,d)$ un espace métrique discret à géométrie bornée. On se fixe $H$ l'espace de Hilbert séparable, et on définit pour tout $R>0$ le sous-espace des opérateur localement compacts de propagation finie (inférieure à $R$) comme :
+\[C_R[X]:=\{T\in \mathcal L(l^2(X)\otimes H) : T_{xy}\in \mathfrak K(H)\text{ et } T_{xy}= 0 \text{ dès que } d(x,y)>R\}.\] 
+
+L'algèbre de Roe de $X$ est $C^*X:=\overline{\cup_{R>0} C_R[X]}$. C'est une $C^*$-algèbre, et le but de cette section est d'essayer de savoir calculer sa $K$-théorie. Pour cela, une méthode est d'utiliser l'application d'assemblage de Baum-Connes coarse 
+\[A_X : K^{\text{coarse}}(X)\rightarrow K_*(C^*X),\]
+dont la conjecture de Baum-Connes coarse prévoit l'isomorphie. La $K$-homologie de $X$, i.e. le membre de gauche, est censé être plus calculable. Cette conjecture a été prouvée pour une large classe d'espaces métrique. Par exemple, ceux qui ont la propriété $A$ (G. Yu $'00'$), et donc ceux qui admettent un plongement grossier dans un espace de Hilbert.\\
+
+ Toutefois, en $'98$, G. Yu en a donné une preuve pour les espaces de dimension asymptotique finie, un cas moins général, mais dont la preuve est très différente. Elle utilise la structure supplémentaire dont est équipée l'algèbre de Roe, à savoir la filtration donnée par les sous-espaces $C_R[X]$. Cet exposé vise à expliquer comment cette structure peut être transportée vers d'autres cadres, et la preuve adaptée pour avoir un espoir de calculer la $K$-théorie d'autres $C^*$-algèbres qui ont aussi une filtration, en particulier les $C^*$-algèbres associées à des groupoïdes.
+
+\section{$K$-théorie quantitative}
+
+\begin{definition}
+Une $C^*$-algèbre $A$ est filtrée par $(A_R)_{R>0}$ si :
+\begin{itemize}
+\item[$\bullet$] $A_R$ est un sous espace vectoriel $*$-stable
+\item[$\bullet$] $A_R A_{R'}\subset A_{R+R'}$
+\item[$\bullet$] $A=\overline{\cup_{R>0} A_R}$
+\end{itemize}
+\end{definition}
+
+\begin{definition}
+$P_n^{\epsilon,R}(A)=\{p\in M_n(A_R) : ||p^2-p||<\epsilon \text{ et } p^*=p\}$
+$U_n^{\epsilon,R}(A)=\{u\in M_n(A_R) : ||u^*u-1|| \text{ et } ||uu^*-1||<\epsilon \text{ et } p^*=p\}$
+\end{definition}
+
+On pose des relations d'équivalence...
+
+\section{Groupoïdes}
+
+\section{Application d'assemblage quantitative}
