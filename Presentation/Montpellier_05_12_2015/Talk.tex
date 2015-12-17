@@ -1,11 +1,11 @@
 \section{Motivations}
 
-Soit $(X,d)$ un espace métrique discret à géométrie bornée. On se fixe $H$ l'espace de Hilbert séparable, et on définit pour tout $R>0$ le sous-espace des opérateur localement compacts de propagation finie (inférieure à $R$) comme :
+Soit $(X,d)$ un espace métrique discret à géométrie bornée. On se fixe $H$ l'espace de Hilbert séparable, et on définit pour tout $R>0$ le sous-espace des opérateurs localement compacts de propagation finie (inférieure à $R$) comme :
 \[C_R[X]:=\{T\in \mathcal L(l^2(X)\otimes H) : T_{xy}\in \mathfrak K(H)\text{ et } T_{xy}= 0 \text{ dès que } d(x,y)>R\}.\] 
 
-L'algèbre de Roe de $X$ est $C^*X:=\overline{\cup_{R>0} C_R[X]}$. C'est une $C^*$-algèbre, et le but de cette section est d'essayer de savoir calculer sa $K$-théorie. Pour cela, une méthode est d'utiliser l'application d'assemblage de Baum-Connes coarse 
+L'algèbre de Roe de $X$ est $C^*X:=\overline{\cup_{R>0} C_R[X]}$. C'est une $C^*$-algèbre, et le but de cette section est d'essayer de savoir comment calculer sa $K$-théorie. Pour cela, une méthode est d'utiliser l'application d'assemblage coarse 
 \[A_X : K^{\text{coarse}}(X)\rightarrow K_*(C^*X),\]
-dont la conjecture de Baum-Connes coarse prévoit l'isomorphie. La $K$-homologie de $X$, i.e. le membre de gauche, est censé être plus calculable. Cette conjecture a été prouvée pour une large classe d'espaces métrique. Par exemple, ceux qui ont la propriété $A$ (G. Yu $'00'$), et donc ceux qui admettent un plongement grossier dans un espace de Hilbert.\\
+dont la conjecture de Baum-Connes coarse prévoit l'isomorphie. La $K$-homologie de $X$, i.e. le membre de gauche, est censé être plus calculable. Cette conjecture a été prouvée pour une large classe d'espaces métriques. Par exemple, ceux qui ont la propriété $A$ (G. Yu $'00$), et donc ceux qui admettent un plongement grossier dans un espace de Hilbert.\\
 
  Toutefois, en $'98$, G. Yu en a donné une preuve pour les espaces de dimension asymptotique finie, un cas moins général, mais dont la preuve est très différente. Elle utilise la structure supplémentaire dont est équipée l'algèbre de Roe, à savoir la filtration donnée par les sous-espaces $C_R[X]$. Cet exposé vise à expliquer comment cette structure peut être transportée vers d'autres cadres, et la preuve adaptée pour avoir un espoir de calculer la $K$-théorie d'autres $C^*$-algèbres qui ont aussi une filtration, en particulier les $C^*$-algèbres associées à des groupoïdes.
 
@@ -22,13 +22,108 @@ Une $C^*$-algèbre $A$ est filtrée par $(A_R)_{R>0}$ si :
 
 \begin{definition}
 $P_n^{\epsilon,R}(A)=\{p\in M_n(A_R) : ||p^2-p||<\epsilon \text{ et } p^*=p\}$
-$U_n^{\epsilon,R}(A)=\{u\in M_n(A_R) : ||u^*u-1|| \text{ et } ||uu^*-1||<\epsilon \text{ et } p^*=p\}$
+$U_n^{\epsilon,R}(A)=\{u\in M_n(A_R) : ||u^*u-1|| \text{ et } ||uu^*-1||<\epsilon \}$
 \end{definition}
 
-On pose des relations d'équivalence...
+On pose des relations d'équivalence sur ces ensembles :
+\begin{itemize}
+\item[$\bullet$] $(p,l)\sim (q,l')$ s'il existe $N$ assez grand et $h\in P_N^{\epsilon,R}(A)$ tel que 
+\[h(0) = \begin{pmatrix}p & 0 \\ 0 & I_{l'+k}\end{pmatrix}\text{ et } h(1)=\begin{pmatrix}q & 0 \\ 0 & I_{l+k'}\end{pmatrix}\]
+\item[$\bullet$] $u\sim v $ s'il existe $N$ assez grand et $h\in U_N^{2\epsilon,3R}(A)$ tel que 
+\[h(0) = \begin{pmatrix}u & 0 \\ 0 & I_{N}\end{pmatrix}\text{ et } h(1)=\begin{pmatrix}q & 0 \\ 0 & I_{N}\end{pmatrix}\]
+\end{itemize} 
 
+Les groupes de $K$-théorie quantitative sont alors donnés par :
+\[K_0^{\epsilon,R}(A)= P_\infty^{\epsilon,R}(A)\times \N /\sim\text{ et } K_1^{\epsilon,R}(A)=U_\infty^{\epsilon,R}(A)/\sim.\]
+\textbf{Faits :} Ces sont bien des groupes abéliens pour les opérations usuelles en $K$-théorie, et l'on dispose de morphismes qui font commuter le diagramme
+\[\begin{tikzcd}
+K^{\epsilon,R}(A)\arrow{r}{\iota_{\epsilon,R}^{\epsilon',R'}}\arrow{rd}{\iota_{\epsilon,R}} & K^{\epsilon,R}(A) \arrow{d}{\iota_{\epsilon',R'}}\\
+\ & K(A)
+\end{tikzcd}\]
+dès que $\epsilon<\epsilon'$ et $R<R'$.
+Ils approximent les "vrais" groupes de $K$-théorie au sens où pour tout $\epsilon\in (0,\frac{1}{4})$, si $y\in K_*(A)$, alors il existe $R>0$ et $x\in K^{\epsilon, R}(A)$ tel que $\iota_{\epsilon,R}(x)=y$.
+
+  
 \section{Groupoïdes}
-Relation d'équivalence et algèbre AF\\
-Actions de groupes discrets par homéomorphismes
+
+La $K$-théorie quantitative a été définie par H. Oyono-Oyono et G. Yu, et utilisée afin de démontrer des résultats de permanence ou de trouver des critères d'obstruction pour les conjectures de Baum-Connes Coarse et de de Baum-Connes pour des groupes discrets, en s'inspirant des techniques de la preuve de G. Yu de Baum-Connes Coarse pour les espaces métriques ayant la propriété $A$. Cette partie vise à expliquer comment obtenir des résultats similaires dans le cadre des groupoïdes localement compacts étales.\\
+
+On rappelle qu'un groupoïde $G\rightrightarrows G^{(0)}$ est dit étale si l'application but $r$ est un homéomorphisme local. Cela assure que les fibres $G_x=s^{-1}(x)$ et $G^x=r^{-1}(x)$ sont discrètes, et donc que la mesure de comptage sur les fibres fournit un système de Haar $(\lambda^x)_{x\in G^{(0)}}$.\\
+
+Si $A$ est une $G$-algèbre, i.e. une $C^*$-algèbre munie d'une action $\alpha : G\rightarrow Aut(A)$ de $G$, on peut construire une algèbre $A\rtimes_{r}G$ appelée produit croisé.\\
+
+Pour cela, on observe l'algèbre $C_c(G,A)$ que l'on fait agir par convolution sur $l^2(G_x)$ :
+\[(f\ast \eta) (g)=\sum_{g=g_1 g_2} f(g_1)\alpha_{g_1}(\eta(g_2)),\forall f\in C_c(G,A),\eta\in l^2(G_x).\]
+Cela fournit une $*$-représentation 
+\[\lambda_x : C_c(G,A)\rightarrow  \mathcal L(l^2(G_x))\]
+pour chaque $x\in G^{(0)}$, et donc une norme $||f||_r=\sup_{x\in G^{(0)}} ||\lambda_x(f)||$. 
+\begin{definition}
+Le produit croisé réduit $A\rtimes_r G$ est définit comme la complétion $\overline{C_c(G,A)}^{||.||_r}$.
+\end{definition}
+
+Si l'on veut calculer la $K$-théorie de $A\rtimes_r G$ grâce à la $K$-théorie quantitative, il faut définir une filtration. Pour cela, nous imposerons à notre groupoïde $G$ d'avoir une base $G^{(0)}$ et d'être munie d'une longueur propre, c'est-à-dire d'une application propre $l:G\rightarrow [0,\infty)$ telle que $l(e_x)=0$ pour toute unité $x\in G^{(0)}$ et $l(gh)\leq l(g)+l(h)$.\\
+
+La filtration sur $A\rtimes_r G$ est définie comme :
+\[(A\rtimes_r G)_R = \{f\in C_c(G,A) : f(g)=0 \text{ si } l(g)\geq R\}.\]
+
+Voici quelques exemples.\\
+
+$\bullet$ Soit $\mathcal R$ une relation d'équivalence sur un ensemble fini $X$, que l'on voit naturellement comme un groupoïde via le produit $(x,y)(y,z)=(x,z)$. Alors 
+\[C_r^*\mathcal R= \C\rtimes_r \mathcal R \simeq \bigoplus_{j=1,k} \mathfrak M_{q_j}(\C),\] où $k$ est le nombre de classes d'équivalence de $\mathcal R$, et $q_j$ le cardinal de la classe $j$.\\
+Relation d'équivalence et algèbre AF ?\\
+
+$\bullet$ Soit $\Gamma$ un groupe finiement engendré qui agit par homéomorphismes sur une espace compact $X$. Le choix d'un système de générateurs $S$ de $\Gamma$ permet de définir une longueur sur $\Gamma$ : 
+\[l_\Gamma(g)=\inf\{k : g=s_1....s_k, s_j\in S\}\]
+et le groupoïde associé à l'action
+\[X\rtimes \Gamma = \{(x,g) : x\in X, g\in \Gamma\},\]
+ avec $s(x,g)=x$, $r(x,g)=gx$, $(gx,h)(x,g)=(x,hg)$, $e_x=(x,1_\Gamma)$, $(x,g)^{-1}=(gx,g^{-1})$, est localement compact de base $X$, étale munie de la longueur propre $l(x,g)=l_\Gamma(g)$. De plus $C^*_r (X\rtimes \Gamma)=C(X)\rtimes_r \Gamma$.\\
+
+$\bullet$ Si $(X,d)$ est un espace métrique à géométrie bornée, alors G. Skandalis, J-L. Tu et G. Yu ont défini un groupoïde coarse $G(X)$ associé à $X$. Il est étale de base le compactifié de Stone-Cech $\beta X$, et munie d'une longueur propre. De plus, l'algèbre de Roe s'exprime comme un produit croisé par $G(X)$ :
+\[C^*X\simeq l^{\infty}(\N,\mathfrak K)\rtimes_r G(X),\]
+ce qui implique l'équivalence de la conjecture de Baum-Connes coarse pour $X$, et celle de Baum-Connes pour $G(X)$ à coefficients dans $l^{\infty}(\N,\mathfrak K)$.
 
 \section{Application d'assemblage quantitative}
+
+L'application d'assemblage est définie pour tout groupoïde $G$ localment compact avec système de Haar, et toute $G$-algèbre $A$ :
+\[\mu_{G,A} : K^{top}_*(\mathcal EG,A)\rightarrow K_*(A\rtimes_r G).\]
+Le membre de droite est appelé groupe de $K$-homologie de l'espace classifiant des actions propres $\mathcal E G$. Kasparov en a donné une définition grâce à la $KK$-théorie dans le cas des groupes localement compacts, et cette définition reste vraie pour les groupoïdes en utilisant la $KK^G$-théorie développée par P-Y. Le Gall :
+\[K^{top}_*(\mathcal EG,A)=\varinjlim_{d} KK^G(P_d,A).\]
+
+L'application d'assemblage se factorise naturellement en une famille d'applications 
+\[\mu^d_{G,A} :KK_*^G(P_d,A) \rightarrow K_*(A\rtimes_r G)\]
+qui respectent les morphismes inductifs $q_d^{d'}:KK^G(P_d,A)\rightarrow KK^G(P_d',A)$, si $d'\geq d$, et telle que $\varinjlim \mu^d_{G,A}=\mu_{G,A}$.\\
+
+Si $G$ est étale munie d'une longueur propre, il est possible de construire une famille d'applications d'assemblage quantitatives
+\[\mu^{d,\epsilon,R}_{G,A} :KK_*^G(P_d,A) \rightarrow K^{\epsilon,R}_*(A\rtimes_r G)\]
+qui respecte les morphismes d'induction $\iota_{\epsilon,R}^{\epsilon',R'} :K^{\epsilon,R}(A\rtimes_r G)\rightarrow K^{\epsilon',R'}(A\rtimes_r G)$ et $q_d^{d'}:KK^G(P_d,A)\rightarrow KK^G(P_d',A)$, et telles que 
+$\iota_{\epsilon,R}\circ\mu^{d,\epsilon,R}_{G,A}=\mu^{d}_{G,A}  $.\\
+
+Le résultat principal concernant cette famille d'applications est le suivant. 
+
+\begin{thm}\ \\
+Soit $G$ un groupoïde localement compact à base compacte étale muni d'une longueur propre, et $A$ une $G$-algèbre. On note $\tilde A=l^\infty(\N,A\otimes \mathfrak K)$.\\
+$\bullet$ $\mu_{G,\tilde A}$ est injective ssi pour tout $\epsilon,R,d$, il existe $d'\geq d$ tels que $QI_{G,A}(\epsilon,R,d,d')$.\\
+$\bullet$ $\mu_{G,\tilde A}$ est surjective ssi pour tout $\epsilon,R,d$, il existe $R'\geq R$ tels que $QS_{G,A}(\epsilon,\beta\epsilon,R,R',d)$.
+\end{thm}
+
+Remarque : en passant de l'application classique à l'application quantitative, un changement de coefficients a lieu, on passe de $\tilde A$ à $A$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
