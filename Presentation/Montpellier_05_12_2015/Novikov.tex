@@ -1,0 +1,20 @@
+\section{Conjecture de Novikov}
+
+\subsection{Classes caractéristiques}
+\subsection{Hautes signatures}
+Soit $M$ un variété de dimension $n=4p$. L'application
+\[(\alpha,\beta)\mapsto \int \alpha\wedge \beta\]
+induit une appilcation bilinéaire alternée en cohomologie, appelée le cup produit
+\[\wedge : H^k(M)\otimes H^{k'}(M) \rightarrow H^{k+k'}(M).\]
+Par dualité de Poincaré, $H^n(M)\simeq H_0(M)=\Z$, et la restriction du cup-produit à $H^{2p}\otimes H^{2p}$ donne une forme quadratique non dégénérée à valeur dans $\Z$, dont on peut calculer la signature $(r,s)$. Il s'avère que la quantité $sg(M)=r-s$ est un invariant d'homotopie (comprendre que si $M\rightarrow N$ est une équivalence d'homotpie, alors $sg(M)=sg(N)$).  Pour prouver ce résultat, bien que ce ne soit pas ni la méthode la plus simple, ni la première preuve historique, on peut passer par les théorèmes de l'indice. Cette dernière méthode a l'avantage de pouvoir s'adapter à d'autres cadre, pour pouvoir montrer que des quantités un peu plus générale que la signature sont des invariants d'homotopie. \\
+
+Soit $\Gamma$ un groupe discret, et $B\Gamma$ son espace classifiant. Soit $M$ une variété compacte sans bord, et $f : B\Gamma \rightarrow M$ une application continue.
+\begin{definition}
+Pour une classe de cohomologie $x\in H^*(B\Gamma,\mathbb Q)$, on définit la haute signature associée à $x$ comme:
+\[sg_x(M,f) = \langle \mathcal L_M \cup f^*(x), [M]\rangle.\] 
+\end{definition}
+
+\begin{conj}[Novikov]
+Les hautes signatures sont des invariants d'homotopies, i.e. si $\phi : M\rightarrow N$ est une équivalence d'homotopie, la haute signature associée à $f$ et celle associée à $\phi\circ f$ sont égales :
+\[sg_x(M,f)=sg_x(N,\phi\circ f)\]
+\end{conj}
