@@ -4,10 +4,18 @@ Dans son livre, Structure des systèmes dynamiques, J-M. Souriau donne un cadre 
 
 Arrivé là, un expérimentateur doit pouvoir communiquer ses mesures à un second expérimentateur, et l'on doit donc se donner une règle qui permet de passer d'un référentiel à l'autre. Cela est fait grâce à l'action d'un groupe. Soit donc $G$ un groupe de Lie, qui agit sur $V$ de façon à préserver les feuilles, et qui induit donc une action par symplectomorphismes sur $U$.\\
 
-Sous certaines conditions (si $\mathfrak g=[\mathfrak g,\mathfrak g]$ ), on peut associer une application moment $\mu : U\rightarrow \mathfrak g^*$, où $\mathfrak g^*$ est le dual de l'algèbre de Lie de $G$, qui vérifie
+Sous certaines conditions (si $\mathfrak g=[\mathfrak g,\mathfrak g]$ i.e. $G$ est semi-simple), on peut associer une application moment $\mu : U\rightarrow \mathfrak g^*$, où $\mathfrak g^*$ est le dual de l'algèbre de Lie de $G$, qui vérifie
 \[\sigma(Z_U(x))=-d\langle \mu(x),Z\rangle\quad, \forall Z\in \mathfrak g.\]
 
-En mécanique classique, $V = \R\times \R^6$, et l'on passe d'un référentiel galiléen à un autre par transformations du groupe de Galilée, i.e. $G=\text{Gal}(3)$, remplacé par le groupe de Poincaré en relativité restreinte. Le défaut d'équivariance de l'application moment, i.e. 
+En mécanique classique, $V = \R\times \R^6$, et l'on passe d'un référentiel galiléen à un autre par transformations du groupe de Galilée, i.e. $G=\text{Gal}(3)$, remplacé par le groupe de Poincaré en relativité restreinte. Il existe des référentiels privilégiés appelés inertiels, et on passe de l'un à l'autre par des transformations du groupe de Galilée. La mécanique classique repose sur l'hypothèse suivante :\\
+
+\textbf{Principe de Galilée} La forme $\sigma$ est invariante sous l'action de $G=Gal(3)$.\\
+
+C'est finalement ce principe que Souriau propose de généraliser en déifnissant le cadre de la mécanique comme une action d'un groupe de Lie par symplectomorphisme. On peut alors définir un principe analogue en relativité restreinte en remplaçant $Gal(3)$ par $P(3,1)$. Le condition qui donne les équations du système est le principe de Maxwell.\\
+
+\textbf{Principe de Maxwell.} Pour un système isolé, la forme de Lagrange est fermé : $d\sigma  =0$.\\
+
+Le défaut d'équivariance de l'application moment, i.e. 
 \[\theta_x(a) = \underline{a}_{\mathfrak g^*} \mu(x)-\mu(\underline{a}_Ux)\quad ,\forall a\in G,x\in U \]
 définit un $\mathfrak g^*$-cocyle de $G$, dont on peut montrer que la classe de cohomologie ne dépend ni de $x$ (à vérifier) ni de $\mu$. Cette classe, notée $m\in H^*(G)$, exprime la masse du système dans le cadre galilén. Une résultat remarquable est que le groupe de Poincaré a une cohomologie triviale, ce qui donne une preuve mathématique simple qu'un système n'a pas de masse intrinsèque en relativité restreinte.\\
 
@@ -20,18 +28,26 @@ définit un $\mathfrak g^*$-cocyle de $G$, dont on peut montrer que la classe de
 \subsection{Un exemple}
 
 En mécanique classique, $V=\{y=(r,v,t)\in \R^N\times \R^N\times \R\}$ et \[\sigma(dy)(d'y)=\sum_j \langle m_jdv_j - F_jdt , d'r_j-v_j d't\rangle-\sum_j \langle m_j d'v_j -F_j d't, dr_j-v_j dt \rangle.\]
-L'idée est de remplacer le système $m\frac{\partial v}{\partial t} = F,\frac{\partial x}{\partial t} =v$ par $\sigma$, et de passer de l'espace de phase $R^N\times R^N$ par $V$. Ce faisant, le temps devient une variable comme les autres, ce qui permet de traiter le cadre de la relativité restreinte,où un changement de repère mélange coordonnées de temps et d'espace, avec le même formalisme que celui de Galilée.\\
+L'idée est de remplacer le système $m\frac{\partial v}{\partial t} = F,\frac{\partial x}{\partial t} =v$ par $\sigma$, et de passer de l'espace de phase $R^N\times R^N$ par $V$. Ce faisant, le temps devient une variable comme les autres, ce qui permet de traiter le cadre de la relativité restreinte, où un changement de repère mélange coordonnées de temps et d'espace, avec le même formalisme que celui de Galilée.\\
 
 Voici d'ailleurs
 \begin{itemize}
 \item[$\bullet$] le groupe de Galilée 
 \[Gal(3)=\left\{\begin{pmatrix} A & v & x \\ 0 & 1 & t \\ 0 & 0 & 1 \end{pmatrix}, A\in SO(3), v,x\in \R^3,t\in \R\right\}\]
 Si l'on passe $R$ à $R'$ par une telle transformation, l'origine de $R'$ est translatée de $x$ à vitesse $v$ par rapport à celle de $R$, et il faut appliquer $A$ au repère de $R$ pour obtenir celui de $R'$.
-\item[$\bullet$] Le groupe de Lorentz $O(3,1)$ est le groupe de $E_{3,1}$ qui préserve la forme de Minkowski $dt^2-dx^2$. Le groupe de Poincaré 
-\[P(3,1)=O(3,1)\rtimes E_{3,1} =\left\{\begin{pmatrix} A & v \\ 0 & 1 \end{pmatrix}, A\in O(3,1),v\in E_{3,1}\right\}\]
+\item[$\bullet$] Le groupe de Lorentz $O(3,1)$ est le groupe de $E_{3,1}$ qui préserve la forme de Minkowski $dt^2-dx^2$. Le groupe de Poincaré est donné par
+\[P(3,1)=O(3,1)\rtimes E_{3,1} =\left\{\begin{pmatrix} A & v \\ 0 & 1 \end{pmatrix}, A\in O(3,1),v\in E_{3,1}\right\}.\]
+On voit que le groupe de Galilée en est un sous-groupe, et que $P(3,1)$ permet lui de mélanger coordonnées spatiales et temporelles. \\
 \end{itemize}
 
-
+Soit $Z=\begin{pmatrix}
+j(\omega) & \beta & \gamma\\
+0 & 0 & \epsilon \\
+0&0 & 0  \end{pmatrix}\in \mathfrak{gal}(3)$ un déplacement infinitésimal du groupe de Galilée. Il induit sur $V$ le champ de vecteur suivant
+\[\underline Z_V(y) =\epsilon \frac{\partial}{\partial t} + (\omega \wedge r+\beta t +\gamma)\frac{\partial}{\partial r}+ 
+(\omega\wedge v+\beta)\frac{\partial}{\partial v}, \]
+et un simple calcul donne que $\mu(y)$ à quatre composantes : 
+\[(l,g,p,E)=\left(m r\wedge v ,r-vt,mv,\frac{1}{2}||v||^2\right).\]
 
 
 
