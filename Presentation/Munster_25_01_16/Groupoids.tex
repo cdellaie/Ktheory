@@ -1,0 +1,27 @@
+\section{Simple examples for Baum-Connes for groupoids}
+
+This is a question asked by Sayan Chakraborty : find a simple example of the Baum-Connes conjecture for groupoids.\\
+
+The simplest examples would be to take the groupoid associated to an action of a group on a topological space $\mathcal G = X\rtimes G$. The first thing we want to do is to describe the classifying space for proper actions.\\
+
+Suppose the groupoid étale equipped with a proper length. A simple model, from J-L. Tu \cite{TuBC2}, is given by the inductive limite of the spaces
+\[Z_d=\left\{\nu \in \mathcal M(\mathcal G), s.t. \exists x,\text{if } g\in \text{supp }\nu \text{ then } l(g)\leq d , g\in \mathcal G^x\right\}.\]
+
+Indeed, suppose $Y$ is a $\mathcal G$-proper cocompact space, then $Y\rtimes \mathcal G$ is a proper groupoid, so there exists a cutt-off function $c : Y\rightarrow [0,1]$ such that : 
+\[\sum_{g\in \mathcal G^{p(y)}} c(yg) = 1,\forall y \in Y.\]
+Now define \[y \mapsto \sum_{g\in \mathcal G^{p(y)}} c(yg)\delta_g\]
+which is a $\mathcal G$-equivariant continuous map. Moreover $Z_d$ is proper and cocompact, and there exists a $d$ s.t. the map takes its values in it.\\
+
+Now if $\mathcal G = X\rtimes G$, $Z_d \simeq X\times Z'_d$ where $Z_d= \left\{ \nu \in \mathcal M(G), s.t. \text{if } g\in \text{supp }\nu \text{ then } l(g)\leq d\right\}$, so that
+$KK^{\mathcal G}(\Delta,A)\simeq KK^G(\Delta', A)$, where $\Delta$ and $\Delta'$ are respectively the $0$-dimensional part of the equivariant complexes $Z_d$ and $Z'_d$. This is true because the action of $G$ on $Z'_d$ is proper and cocompact, see lemma $3.6$ of \cite{TuBC2}. Now a standard Mayer-Vietoris argument (theorem $3.8$ \cite{TuBC2}) concludes to show that 
+$K^{top}(\mathcal G,A)\simeq K^{top}(G,A)$.\\
+
+As $C^*_r \mathcal G = C_0(X)\rtimes_r G$, we see that the Baum-Connes assembly map for $\mathcal G$ with coefficients in $A$ is equivalent to 
+\[K_*^{top}(G,A)\rightarrow K_*((A\otimes C_0(X))\rtimes G).\]
+
+Now we can look for concrete examples.
+\subsection{Non commutative tori}
+\subsection{Principal bundle over $U(2)$}
+This is an example from Olivier Gabriel's talk in Montpellier. 
+
+\subsection{Foliations}
