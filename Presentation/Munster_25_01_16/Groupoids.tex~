@@ -2,7 +2,7 @@
 
 This is a question asked by Sayan Chakraborty : find a simple example of the Baum-Connes conjecture for groupoids.\\
 
-The simplest examples would be to take the groupoid associated to an action of a group on a topological space $\mathcal G = X\rtimes G$. The first thing we want to do is to describe the classifying space for proper actions.\\
+The simplest example would be to take the groupoid associated to an action of a group on a topological space $\mathcal G = X\rtimes G$. The first thing we want to do is to describe the classifying space for proper actions.\\
 
 Suppose the groupoid étale equipped with a proper length. A simple model, from J-L. Tu \cite{TuBC2}, is given by the inductive limite of the spaces
 \[Z_d=\left\{\nu \in \mathcal M(\mathcal G), s.t. \exists x,\text{if } g\in \text{supp }\nu \text{ then } l(g)\leq d , g\in \mathcal G^x\right\}.\]
@@ -21,5 +21,19 @@ As $C^*_r \mathcal G = C_0(X)\rtimes_r G$, we see that the Baum-Connes assembly 
 
 Now we can look for concrete examples.
 \subsection{Non commutative tori}
-\subsection{}
+\subsection{Principal bundle over $U(2)$}
+This is an example from Olivier Gabriel's talk in Montpellier. \\
+
+Take the principal bundle $U(2)\rightarrow U(2)/\mathbb T^2\simeq \mathbb S^2$. You can foliate the fibers by an irrational rotation $\theta$, so that you have an action of $\R$ on $C(U(2))$. Reducing to a complete transversal (take $SU(2)$ ), the algebra $C(U(2))\rtimes \R$ turns out to be Morita equivalent to $\underline A= C(SU(2))\rtimes \Z$ (a general result of foliation groupoids I think ). $\underline A$ can be reduced to $C(\overline D)\otimes A_\theta$ and to $Ind_{\mathbb T^2}^{U(2)}\ A_\theta$.\\
+
+Question : Compute the generators of the $K$-theory of $\underline A$.
+
 \subsection{Foliations}
+\subsection{An example from physics}
+In Alain Connes' book, we can read the following example.\\
+
+Take the $2$-torus $M=\mathbb T^2$. Its fundamental group $\Gamma=\Z^2$ acts on its universal cover $\tilde M=\R^2$ by isometries, and the electromagnetic field $A$ gives a two-form $w$ (its curvature) on $\tilde M$, so a $2$-cocycle on the fundamental groupoid of $\tilde M$ :
+\[w(\tilde x,\tilde y,\tilde z)=e^{2i\pi \int_{\Delta}\tilde w}\]
+where $\Delta$ a geodesic triangle between the $3$ points. It turns out that $H^2(\Z^2,\mathbb T^2)=\mathbb S^1$, so that $\tilde w$ determines a number $\theta\in [0,1)$, and the twisted reduced algebra of the fundamental groupoid w.r.t. $\tilde w$ is equal to $A_\theta=C(\mathbb T^2 )\rtimes_{r,\theta} \Z^2$. This situation generalizes to general manifold whose fundamental cover are equiped with a line bundle and a conection. We can then associate a $2$-cocycle on the fundamental groupoid of $\tilde M$ to the curvature of the line bundle. \\
+
+A question : Does the twisted crossed-product has applications to Yang-Mills theories ?
