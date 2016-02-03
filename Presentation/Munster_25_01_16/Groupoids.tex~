@@ -1,6 +1,6 @@
 \section{Simple examples for Baum-Connes for groupoids}
 
-This is a question asked by Sayan Chakraborty : find a simple example of the Baum-Connes conjecture for groupoids.\\
+This is a question asked by Sayan Chakraborty : find a simple example of the Baum-Connes conjecture for groupoids. We found that one should be able to do actual computations in $K$-theory, like determining generators of $K$-group of some known $C^*$-algebras, and to prove Baum-Connes by hand in some simple examples. The only one we managed to actually do by hand was Baum-Connes for $R^n$. (Do it !) \\
 
 The simplest example would be to take the groupoid associated to an action of a group on a topological space $\mathcal G = X\rtimes G$. The first thing we want to do is to describe the classifying space for proper actions.\\
 
@@ -21,6 +21,8 @@ As $C^*_r \mathcal G = C_0(X)\rtimes_r G$, we see that the Baum-Connes assembly 
 
 Now we can look for concrete examples.
 \subsection{Non commutative tori}
+
+Question : Compute the generators of non-commutative tori. (Sayan did it)
 \subsection{Principal bundle over $U(2)$}
 This is an example from Olivier Gabriel's talk in Montpellier. \\
 

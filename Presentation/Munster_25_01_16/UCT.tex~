@@ -1,0 +1,56 @@
+\section{Universal Coefficient Theorem}
+
+Here is a question from Guoliang Yu. \\
+
+Question : Does a finite nuclear dimensionality condition implies a universal coefficient theorem ?\\
+
+Here is the classical theorem :
+
+\begin{thm}[Universal Coefficient Theorem]
+Let $A$ and $B$ be two separable $C^*$-algebras. Then there is a short exact sequence
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & Ext_\Z^1(K_*(A),K_*(B)) \arrow{r} & KK_*(A,B)\arrow{r} & Hom(K_*(A),K_*(B)) \arrow{r} & 0 
+\end{tikzcd}\]
+which is natural in each variable and splits unnaturally.
+\end{thm}
+
+\begin{itemize}
+\item[$\bullet$] The first map ... ??
+\item[$\bullet$] The second map is given by the boundary element associated to any impair $K$-cycle. Namely, if $z\in KK^1(A,B)$, let $(H_B, \pi,T)$ be a $K$-cycle representing $z$, and $P$ the associated projector $P=\frac{1+T}{2}$. Define the pull-back
+\[E^{(\pi,T)}=\left\{ (a,P\pi(a)P+y) : a\in A, y \in \mathfrak{K}_B \right\}\]
+Then the boundary of the folowing extension
+\[\begin{tikzcd}[column sep = small] 0\arrow{r} & \mathfrak{K}_B \arrow{r}  & E^{(\pi,T)}\arrow{r} & A \arrow{r} & 0 \end{tikzcd}\]
+is given by $\begin{tikzcd}[column sep = small]\partial =-\otimes z : K_*(A)\arrow{r} & K_*(B)\end{tikzcd}$ which depends only on $z$. The map is just $z\mapsto \partial$\\
+\item[$\bullet$] If $\partial =0$, then the sequence associated to $z$ splits and we have exact sequences
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_*(B) \arrow{r} & K_*\left(E^{(\pi,T)}\right) \arrow{r} & K_*(A)\arrow{r} & 0
+\end{tikzcd}\]
+which gives an element of $Ext_\Z^1(K_*(A),K_*(B))$.
+\end{itemize}
+
+\subsection{Other questions}
+Now here are some problems that were not resolved during the lectures given by G. Yu during the week.\\
+
+The first is the classical lemma from Miscenko and Kasparov.
+
+\begin{prop}
+Let $G$ be a locally compact group that acts properly and isometrically on a simply connected non positively curved manifold $M$. Then
+\[\begin{tikzcd}K^{top}(G)\arrow{r}{\mu} & K(C_r^*G)\arrow{r}{\beta} & K(C_0(M)\rtimes_r G)\end{tikzcd}\]
+is an isomorphism. In particular, the Strong Novikov Conjecture holds for $G$.
+\end{prop}
+
+The original point being that G. Yu can prove this (how ?) without usig the heavy machinery of the Dirac Dual-Dirac method, nor anything related to $KK^G$-theory. The proof is just using cutting and pasting (according to Yu).\\
+
+The second is of the same type.
+
+\begin{prop}
+Let $G$ be a discrete group coarsely embeddable into a Hilbert space, then the Strong Novikov conjecture hold for $G$.                                       
+\end{prop}
+
+The usual proof was given by G. Yu himself, relying here again on a Dirac Dual-Dirac method, and a kind of controlled cutting and pasting. Here he presented the idea of the proof, the point not being clear for me was the path to show that 
+\[\begin{tikzcd}K(P_d(G_0))\sim \prod K(P_d(X_{2k}))\arrow{r}{\mu} & \prod K(C^*P_d(X_{2k}))\arrow{r}{\beta} & K\left(C^*(P_d(X_{2k}),C(\R^{m_k}))\right)\end{tikzcd}\]
+is an isomorphism.\\
+
+Here are some details : first decompose $G=G_0\cup G_1$ into two subspaces, which are not necesseraly subgroups, such that each is a $R$-disjoint union of bounded subsets (in fact finite since $G$ is of bounded geometry) :
+\[G_0=\cup X_{2k},\quad \text{and}\quad G_1=\cup X_{2k+1}.\]
+Now define $\prod^R C^*(P_d(X_{2k}) = \{(T_{2k})_k : T_{2k}\in C^*(P_d(X_{2k}), prop(T_{2k})\leq R\}$, so that $C^*(P_d(X_{2k}))\simeq F_{2k}\otimes \mathfrak K$, and each $X_{2k}$ corasely embedds into some $\R^{m_k}$. The isomorphism of $\beta\circ \mu$ implies the injectivity of $\mu$, and by cutting and pasting, $\mu$ can be shown to be injective for $G$ so that Novikov is satisfied.
