@@ -1,0 +1,17 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Probl\IeC {\`e}mes du d\IeC {\'e}but du XIX si\IeC {\`e}cle}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Point de Lemoine}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Quatre probl\IeC {\`e}mes}{5}{subsection.1.2}
+\contentsline {section}{\numberline {2}La synth\IeC {\`e}se Gauss-Laplace}{8}{section.2}
+\contentsline {subsection}{\numberline {2.1}D'une m\IeC {\'e}thode empirique}{8}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}M\IeC {\'e}thode des moindres carr\IeC {\'e}s}{8}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}D\IeC {\'e}termination de la loi des erreurs par Laplace}{9}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Theoria Motus Corporum Coelestium in Sectionibus Conicis Solum Ambientium, Gauss 1809}{11}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Vers le th\IeC {\'e}or\IeC {\`e}me de la limite centrale}{12}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Lecture comment\IeC {\'e}e de l'article de 1816}{13}{subsection.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Introduction}{14}{subsubsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.2}Estimation de $r$ et $h$ par la m\IeC {\'e}thode des probabilit\IeC {\'e}s inverses.}{14}{subsubsection.2.6.2}
+\contentsline {section}{\numberline {3}Controverse sur le paradigme gaussien}{15}{section.3}
+\contentsline {subsection}{\numberline {3.1}Le mod\IeC {\`e}le de Bachelier}{15}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Paul L\IeC {\'e}vy}{16}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Efficience des march\IeC {\'e}s}{20}{subsection.3.3}

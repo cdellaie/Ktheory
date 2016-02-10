@@ -1,0 +1,39 @@
+@article{Gauss1,
+    author  = "Gauss ",
+    title   = "Méthodes des moindres carrés, mémoires sur la combinaisons des observations",
+    year    = "1855",
+    journal = "Traduit en français et publiés par J. Bertrand",
+    volume  = "1",
+    number  = "",
+    pages   = ""
+}
+
+@article{Chabert,
+    author  = "Chabert ",
+    title   = "Gauss et la méthode des moindres carrés",
+    year    = "1989",
+    journal = "Revue d'histoire des Sciences",
+    volume  = "42",
+    number  = "1-2",
+    pages   = "5-26"
+}
+
+@article{Bretagnolle,
+    author  = "Jean Bretagnolle ",
+    title   = "Notes de lecture sur l'oeuvre de Paul Lévy",
+    year    = "1987",
+    journal = "Annales de l'IHP",
+    volume  = "23",
+    number  = "S2",
+    pages   = "239-243"
+}
+
+@article{Lévy,
+    author  = "Paul Lévy ",
+    title   = "Quelques aspects de la penséed'un mathématicien",
+    year    = "",
+    journal = "",
+    volume  = "",
+    number  = "",
+    pages   = ""
+}

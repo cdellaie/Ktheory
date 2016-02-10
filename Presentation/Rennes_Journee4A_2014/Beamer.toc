@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {english}
+\beamer@sectionintoc {1}{De la m\IeC {\'e}thode du milieu \IeC {\`a} la loi normale}{3}{0}{1}
+\beamer@sectionintoc {2}{Lois des erreurs et lois stables}{9}{0}{2}
