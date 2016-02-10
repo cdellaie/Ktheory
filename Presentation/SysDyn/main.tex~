@@ -3,7 +3,7 @@
 \input{macro}
 
 
-\title{$K$-théorie quantitative pour les groupoïdes}
+\title{Questions sur les systèmes dynamiques}
 
 \date{}
 \author{ Clément Dell'Aiera}
@@ -19,8 +19,8 @@
 
 \newpage
 \newpage
-\include{Talk}
-\include{Novikov}
+\include{Symplectic}
+
 
 \bibliographystyle{plain}
 \bibliography{biblio} 

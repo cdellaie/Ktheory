@@ -1,0 +1,113 @@
+\section{Exposé : Heisenberg selon Alain Connes}
+
+\subsection{Mécanique classique}
+
+\subsubsection{Mécanique Lagrangienne}
+
+Dans les des prochains paragraphes, nous allons présenter des formulations variationnelles de la mécanique. L'idée est de faire découler les équations du mouvement d'un système d'un principe variationnel. \\
+
+Plus précisément, on se donne 
+\begin{itemize}
+\item[$\bullet$] un espace des phases $\Omega=\R^{6N}$ dont les points représentent l'état du système,
+\item[$\bullet$] une fonction appelée Lagrangien $L : \Omega\times [T_1,T_2]\rightarrow \R$, qui définit une action pour toute courbe $\gamma :[0,1]\rightarrow \Omega$ dans un ensemble de courbes assez régulières $\mathcal C$ :
+\[S[\gamma]=\int_{T_1}^{T_2} L(\gamma(t),\dot{\gamma}(t),t) dt \]
+\end{itemize}
+
+Le principe de la moindre action s'énonce alors ainsi : $\gamma\in \mathcal C$ est un mouvement du système ssi il est un point extrémal de l'action. \\
+
+Pour trouver les trajectoires du système, il suffit donc de résoudre l'équation d'Euler-Lagrange
+\[\frac{\partial}{\partial t}\frac{\partial}{\partial \dot{x}^\mu}L=\frac{\partial}{\partial x^\mu}L.\]
+En mécanique classique, le Lagrangien est souvent donné par la différence $K-T$ entre l'énergie cinétique et potentielle.
+\subsubsection{Mécanique Hamiltonienne}
+Pour passer à la formulation Hamiltonnienne, on définit l'impulsion conjuguée à $x^\mu$ par 
+\[p_\mu = \frac{\partial L}{\partial \dot{x}^\mu}.\]
+
+Alors $\frac{d}{dt}L = \frac{\partial L}{\partial t}+\frac{\partial L}{\partial x^\mu} \dot x^\mu + \frac{\partial L}{\partial \dot x^\mu} \ddot{x}^\mu = \frac{\partial L}{\partial t}+\frac{d}{dt}\{p^\mu \dot{x}^\mu \}$.
+On définit l'Hamiltonien comme $H=p^\mu \dot x^\mu-L$, ce qui permet de réecrire l'équation précédente comme $-\dot H =\frac{\partial L}{\partial t}$.\\
+Les équations d'Euler Lagrange peuvent alors se réécrire sous les formes suivantes :
+\[\text{EL1 : }\dot p_\mu = \frac{\partial L}{\partial x^\mu} \quad\text{ et }\quad \text{EL2 : } -\dot H =\frac{\partial L}{\partial t}. \]
+Chacune exprime une propriété différente. \textbf{EL1} exprime la conservation d'une quantité ($\dot p$ est constante si le Lagrangien ne dépend pas de la position), et \textbf{EL2} donne les équations du mouvement.\\ 
+
+Par exemple, prenons le Lagrangien d'un oscillateur harmonique de masse $m$ et de pulsation $\omega$,  
+\[L=\frac{1}{2} m \dot x^2+m\omega^2x^2,\]
+alors \textbf{EL1} donne la consevation de l'énergie et  \textbf{EL2} donne l'équation du pendule $\ddot x + \omega x =0$.
+Faîtes le pour le Lagrangien d'un corps en chute libre dans un champ de pesanteur
+\[L = \frac{1}{2}m\dot x ^2 + mgx.\]
+
+Le formalisme Hamiltonien donne l'évolution d'une observable par $\dot f =\{H,f\}$.
+\subsubsection{Mécanique symplectique}
+
+Voir la section précédente. D'où viennent les expressions de l'énergie cinétique et potentielles ? Lien avec l'application moment ?
+
+\subsection{Mécanique quantique}
+\subsubsection{Historique}
+Peu avant $1900$, Lord Kelvin prononça un célèbre discours au cours duquel il affirma que la physique était essentiellement terminée. Seuls résistaient quelques petits problèmes :\\
+
+\begin{itemize}
+\item[$\bullet$] le problème du corps noir,
+\item[$\bullet$] l'incompatibilité des équations de Maxwell avec la relativité Galiléenne,
+\item[$\bullet$] le problème des raies spectrales.\\
+\end{itemize}
+
+Chacun de ses problèmes allait forcer les physiciens à revoir entièrement les théorie établies.\\
+
+Le problème du corps noir vise à comprendre les interactions entre lumière et matière. Par exemple, comment expliquer la lumière qu'émet un corps lorsqu'on le le chauffe ? Les physiciens expérimentaux avaient tabulé les valeurs à température fixée de l'intensité du rayonnement émis en fonction de la longueur d'onde, ce qui donnait ce genre de graphique :
+
+Les lois de Rayleigh-Jeans et Wien donnaient des formules pour approximer la fonction qui ne fonctionnaient qu'à haute ou basse longueur d'onde. C'est Planck qui donna une formule qui collait parfaitement aux données, et qui collait au deux précédentes en faisant les bonnes approximations. C'est toutefois la dérivation de la formule qui posé problème aux physiciens de l'époque (y compris à Planck, qui affirmait lui même n'y voir qu'un artifice mathématique).\\
+
+Pour voir que les équations de Maxwell ne respectent pas la relativité Galiléenne, il suffit de prendre 
+\[T=\begin{pmatrix}1 & 0 & 0& 0\\
+-v &1 & 0& 0\\
+0& 0& 1& 0\\
+0& 0& 0& 1\end{pmatrix}\in Gal,\]
+et de prendre $f=\tilde f\circ T$ différentiable deux fois, et de montrer que 
+\[\left(\Delta f -\frac{1}{c^2}\frac{\partial^2 f}{\partial t^2}\right)(t,x) =
+\left(\tilde\Delta \tilde f -\frac{1}{c^2}\frac{\partial^2 \tilde f}{(\partial \tilde t)^2}
++\frac{v^2}{c^2}\frac{\partial^2 \tilde f}{(\partial \tilde x^1)^2}+\frac{v}{c^2}\frac{\partial^2 \tilde f}{\partial \tilde t \partial \tilde x^1}\right)
+(\tilde t , \tilde x ).\]
+
+La spectroscopie permet d'analyser la composition des atomes des corps simples, par exemple. On peut par exemple envoyer de la lumière sur un tube transparent contenant du gaz hydrogène, puis diffracter la lumière grâce à un spectromètre, tel qu'un prisme, et obtenir les raies d'émission du corps en question.\\
+
+La loi de Rydberg ($1890$), généralisation de la loi de Balmer ($1885$), donne quelle sont les raies observées :
+\[\nu_{m,n}=cR(\frac{1}{m^2}-\frac{1}{n^2}).\]
+
+Le point important est que ces fréquences peuvent se composer selon la loi de Ritz-Rydberg
+\[\nu_{nm}=\nu_{nl}+\nu_{lm}.\]
+
+Le problème était que la théorie classique ne prévoyait pas cela, puisqu'elle prévoit que les fréquences observées forment un sous-groupe additif de $\R$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Heisenberg}
+
+\subsection{Introduction à la mécanique quantique}
