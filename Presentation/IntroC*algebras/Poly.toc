@@ -1,3 +1,0 @@
-\select@language {french}
-\contentsline {part}{I\hspace {1em}$C^*$-algebras and harmonic analysis}{5}{part.1}
-\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
