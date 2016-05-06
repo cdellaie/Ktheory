@@ -25,3 +25,63 @@ The Fourier transform $L^1(G)\rightarrow C_0(\hat G)$ extends to an $*$-isomorph
 \end{thm}
 
 In fact, this is just an instance of the Gelfand-Naimark theorem, as we shall see.
+
+\section{Compact groups}
+
+What if we drop the assumption of commutativity, but impose on $G$ to be compact ? Then Peter-Weyl theorem says that each representative of $\hat G$ is finite dimensional, and that $\hat G$ is at most countable. To see it, you have to know that every class of irreducible unitary representation appears in the left regular representation, which is separable. More precisely, 
+\[\lambda(g)\xi (s)= \xi(g^{-1} s)\ , \forall \xi\in L^2(G)\]
+defines the regular representation $\lambda : G\rightarrow U(L^2(G))$. Then, if $\{(\pi_j,H_j)\}_{j\in J}$ is a set of representatives of classes in $\hat G$, 
+\[\lambda \sim \bigoplus_j 1_{\text{dim }H_j} \otimes \pi_j.\]
+
+This amounts to say that  
+\[\left\{
+\begin{array}{rcl}
+C^*_rG & \rightarrow & \bigoplus \mathcal L(H_j)\\
+a & \mapsto & \oplus \pi_j(a)
+\end{array}
+\right.\]
+ is an isomorphism of $C^*$-algebras.\\
+
+Indeed, let $(\pi, H_\pi)$ be an irreducible unitary representation of $G$. For any two vectors $\xi, \eta\in H_\pi$, define the coefficient of the representation as 
+\[\pi_{\xi,\eta}(g)=\langle\pi(g)\xi,\eta\rangle.\]
+There exists a unique positive constant $d_\pi$ such that 
+\[\pi_{\xi,\eta}\ast \pi_{\xi',\eta'} = d_\pi^{-1}\langle \xi, \eta'\rangle\pi_{\xi',\eta}.\]
+Actually, this is alos true for any square-integrable representation of a semisimple Lie group $G$, up to taking $G$ unimodular, see the article of Valette, Projections in full $C^*$-algebras of semi-simple Lie groups. Here of course $d_\pi$ is the dimension $\text{dim}_\C H_\pi$ of $\pi$.\\
+ 
+Set $\xi \in H_\pi$ such that $||\xi||^2=1$, and
+\[p_\xi(g)=d_\pi^{-1}\pi_{\xi,\xi}(g),\]
+which is a projection of $C^*_rG$. For $v\in H_\pi$, set $\tilde v(g)=\langle \pi(g)\xi,v \rangle$. A simple computation shows that $\tilde v$ is in $p_\xi L^2(G)$, and 
+\[\left\{\begin{array}{rcl} H_\pi & \rightarrow & p_\xi L^2(G) \\ v & \mapsto & \tilde v\end{array}\right.\]
+is an isomorphism of Hermitian spaces such that $\lambda(g)\tilde v = \tilde{\pi(g)v}$. This, together with the equality $p_\xi \ast f \ast p_\xi = \langle\pi(f)\xi,\xi\rangle p_\xi$, concludes the proof.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
