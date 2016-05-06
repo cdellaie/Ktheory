@@ -1,0 +1,89 @@
+
+\documentclass[a4paper]{book}
+
+\input{macro}
+
+
+
+\title{Statistiques et Séries Chronologiques, Probabilités et processus aléatoires  \\ Université de Lorraine \\ ~ \\
+%\textbf{Régression Linéaire Multiple et Initiation aux tests statistiques}}
+\textbf{Enoncés des exercices de TP et TD}}
+
+%\title{TP Statistiques et Séries Chronologiques  \\ Université de Lorraine \\ ~ \\
+%\textbf{Partiel du $27$ mars $2015$}}
+
+\date{} %la date
+\author{ Clément Dell'Aiera }
+
+\begin{document}  
+
+\maketitle
+\tableofcontents
+
+\part{Statistiques et séries chronologiques}
+%régression
+\chapter{Régression linéaire}
+\input{Regression}
+\input{Exercices}
+
+%Tests
+\chapter{Tests statistiques}
+\input{Test}
+\input{ANOVA}
+
+%\section{Décryptage par analyse fréquentielle}
+
+%\begin{enumerate}
+%\item Créer une fonction qui, si l'on lui fournit un texte et une permutation des lettres de l'alphabet en entrée, retourne le texte crypté à l'aide de la permutation.
+%\item Créer une fonction qui effectue l'analyse fréquentielle d'un texte.
+%\item Arrivez-vous à décrypter le message suivant ? Mettre un message. 
+%\end{enumerate}{enumerate}
+
+\chapter{Partiel}
+\input{Init}
+%Projet
+\input{Voyageur}
+
+\part{Probabilités et processus aléatoires}
+
+\chapter{Estimation}
+\input{EMV}
+\input{FDR}
+\input{Partiel}
+\input{FDR}
+\input{ENSAE}
+
+\chapter{Tests}
+\input{Neyman}
+\input{Chi2}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
