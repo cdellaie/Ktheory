@@ -1,0 +1,44 @@
+\section{Preliminaries}
+
+\begin{definition}
+A $C^*$-algebra is a complex Banach algebra $A$ endowed with an involution $*$ such that $||a^*a||=||a||^2,\forall a\in A$.
+\end{definition}
+
+Basic examples are the complex valued continuous functions vanishing at infinity $C_0(X)$ on a locally compact space $X$, with the supremum norm $||.||_\infty$, the matrix algebras with the operator norm, and more generally the bounded operators $\mathcal L(H)$ on a Hibert space $H$ with the operator norm $||T||= \sup \{||Tx||_H : x\in H \text{ s.t. }||x||_H=1\}$, involution being the adjoint.\\
+
+The first important results about these are the two following classification theorems:
+\begin{itemize}
+\item[$\bullet$] \textbf{Finite dimensional $C^*$-algebras} every finite dimensional $C^*$-algebra $A$ is isomorphic to a direct sum of matrix algebras : there exist $N\in \N$ and integers $d_0,...,d_N$ such that \[A \simeq \bigoplus_{0\leq j \leq N} \mathfrak M_{d_j}(\C).\]
+\item[$\bullet$] \textbf{Gelfand-Naimark Theorem} Let $A$ be an abelian $C^*$-algebra and $\hat A$ the set of irreducible representations of $A$, with the Jacobson topology. As $A$ is commutative, $\hat A$ consists of characters or of prime ideals. Then the Gelfand transform
+\[\left\{\begin{array}{lll} A & \rightarrow & C_0(\hat A) \\ a & \mapsto & \hat a : \phi \mapsto \phi(a) \end{array}\right.\]
+is an $*$-isomorphism. So every abelian $C^*$-algebra can be thought as the algebra of functions on some space.
+\end{itemize}
+
+To state the next theorem, we are going to need the following definition.
+\begin{definition}
+A positive map between two $C^*$-algebras $A$ and $B$ is a linear map $\phi : A\rightarrow B$ which respects positivity, i.e. 
+\[\forall a\in A , \phi(a^*a)\geq 0.\]
+Moreover, the map $\phi$ is said to be completely positive if the induced map $\phi : \mathfrak M_n(A) \rightarrow \mathfrak M_n(B)$ is positive for all $n$.
+\end{definition}
+
+Going on with the analogy of $C^*$-algebras being functions on non-commutative spaces, we can think of positive maps as positive measures. Indeed, to a positive map $C_0(X)\rightarrow \C$, one can associate a regular measure $\mu$ such that $\phi(f)=\int_X fd\mu$.\\
+
+The crucial result is that from a completely positive map $\phi : A\rightarrow L_B(E) $ where $E$ is a $B$-Hilbert-module, one can construct a $B$-Hibert-module $E_\phi$ and a representation $ \pi : A\rightarrow \mathcal L_B(E_\phi)$ such that $\phi(a)=V\pi(a)V^*$ where $V\in \mathcal L_B(E_\phi,E)$ is an isometry. Here is the algorithm to do so.\\
+
+\begin{itemize}
+\item[$\bullet$] Set $H= A\otimes_\phi E$ with the $B$-valued sesquilinear form 
+\[\langle a\otimes \xi, b\otimes \eta \rangle = \langle \xi, \phi(a^*b)\eta\rangle_E\]
+and observe that $N=\{x\in H : \langle x,y\rangle =0\ \forall y\in H\}$ is a sub-$B$-module of $H$. Now complete $H/N$ w.r.t. the non degenerate form $\langle\rangle_\phi$ to have $E_\phi$.
+\item[$\bullet$] $\pi_\phi$ is the extension of the natural action of $A$ by multiplication on $H$.
+\item[$\bullet$] $V$ is defined as the extension of $a\otimes \xi \mapsto \phi(a)\xi$.\\
+\end{itemize} 
+
+A state of $A$ is a positive map $\nu : A\rightarrow \C$. The $GNS$ construction associated to a state is the latter applied to $\nu$. The foolowing theorem claims that every $C^*$-algebra can be faithfully realized as a closed sub-algebra of the bounded operators on a (not necessarly separable) Hibert space, using the $GNS$ construction.\\
+
+\begin{thm}[GNS representation]
+The following representation
+\[\bigoplus \pi_\nu : A\rightarrow \bigoplus \mathcal L(E_\nu),\]
+where the sum is taken over all states of $A$ (actually, pure states is sufficient), is faithful.
+\end{thm} 
+
+

@@ -1,0 +1,27 @@
+In this chapter, all groups $G$ will be locally compact groups, so it has a unique (up to normalization) left invariant measure, the Haar measure $\lambda_G$ . We will be interested to describe "the" dual of $G$, denoted $\hat G$, which is the set of equivalence classes of irreducible unitary representations of $G$, endowed with the Fell topology. Let us recall that a unitary representation $(\pi,H_\pi)$ of $G$ is a group homomorphism from $G$ to the unitary group of the Hilbert space $H_\pi$ that is strongly continuous, i.e. $g\mapsto \pi(g)\xi$ is continuous for every $\xi\in H_\pi$.
+ 
+\section{The Fourier transform}
+
+For $G$ abelian, $\hat G$ reduces to the set of characters of $G$, i.e. continous representations $G\mapsto \mathbb S^1$, and $\hat G$ is also a locally compact abelian group. For $f\in L^1(G)$, define its Fourier transform
+\[\hat f(\chi)=\int_{G} \overline{\chi(g)}f(g)d\lambda_G(g),\]
+which is in $C_0(\hat G)$ by the Riemann-Lebesgue theorem.\\
+
+When equiped with the convolution product, $L^1(G)$ is a Banach algebra, and the Fourier transform induces a morphism of Banach algebras :
+\[\left\{\begin{array}{rcl}
+L^1(G) & \rightarrow & C_0(\hat G) \\
+f & \mapsto & \hat f\end{array}\right.\]
+which is not isometric in general ($||\hat f||_\infty\leq ||f||_1$), which correspond to the fact that $L^1(G)$ is not a $C^*$-algebra in general. When $\hat f\in L^1(G)$, one has the inversion formula
+\[f(g)=\int_{\hat G} \chi(g) \hat f(\chi)d\lambda_{\hat G}(\chi)\]
+which shows that the Fourier transform is injective.\\
+
+Now for $f\in L^1(G)\cap L^2(G)$, one can show that $|| f ||_{L^2(G)}=|| \hat f ||_{L^2(\hat G)}$ which shows that the Fourier transform extends to an isometry $L^2(G)\rightarrow L^2(\hat G)$ by density of $L^1(G)\cap L^2(G)$ in $L^2(G)$. Furthermore, every integrable function $f\in L^1(G)$ acts as a bounded operator (by convolution) on $L^p(G)$ :
+\[||f \ast g||_p \leq ||f||_1 ||g||_p\ ,\forall g\in L^p(G).\]
+Define a new norm on $L^1(G)$ by the formula 
+\[ ||f||_r = \sup \{ ||f\ast \eta||_2 : \eta\in L^2(G) \text{ s.t. } ||\eta||_2=1\}.\]
+The $C^*$-algebra of $G$, denoted $C_r^*G$, is the completion of $L^1(G)$ for this norm. 
+
+\begin{thm}
+The Fourier transform $L^1(G)\rightarrow C_0(\hat G)$ extends to an $*$-isomorphism $C_r^*G\rightarrow C_0(\hat G)$.
+\end{thm}
+
+In fact, this is just an instance of the Gelfand-Naimark theorem, as we shall see.
