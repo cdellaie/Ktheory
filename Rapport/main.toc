@@ -16,3 +16,5 @@
 \contentsline {subsection}{\numberline {2.6}Quantitative statements}{19}{subsection.2.6}
 \contentsline {section}{\numberline {3}Decomposition complexity}{24}{section.3}
 \contentsline {subsection}{\numberline {3.1}Examples and applications}{24}{subsection.3.1}
+\contentsline {section}{\numberline {4} Mayer-Vietoris exact sequences and controlled cutting and pasting}{26}{section.4}
+\contentsline {subsection}{\numberline {4.1}Mayer-Vietoris sequence in $K$-homology}{26}{subsection.4.1}
