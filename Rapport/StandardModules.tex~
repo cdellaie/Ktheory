@@ -72,16 +72,27 @@ Let $X$ and $Y$ be two discrete metric spaces with bounded geometry, and $h : X\
 \[\text{supp }V \subset \{(x,y)\in X\times Y, d(h(x),y)<\epsilon\}.\]
 \end{lem}
 
-\textbf{Remark :} We can induce $V$ on the Roe algebras by $\forall T\in C^*(X,H_X), Ad_V(T) := V T V^* \in C^*(Y,H_Y)$, and the preceding lemma entails that \[(Ad_V)_* : K(C^*(X,H_X))\rightarrow K(C^*(Y,H_Y))\] only depends on the coarse class of $h$. We directly see that the $K$-theory of the Roe-algebras of $X$ do not depend on the standard modules if they are n.d.s. : one just need to take an isometry covering the identity.\\
+\textbf{Remark :} We can induce $V$ on the Roe algebras by $\forall T\in C^*(X,H_X), Ad_V(T) := V T V^* \in C^*(Y,H_Y)$, and the preceding lemma entails that \[(Ad_V)_* : K(C^*(X,H_X))\rightarrow K(C^*(Y,H_Y))\] only depends on the coarse class of $h$. We directly see that the $K$-theory of the Roe-algebras of $X$ do not depend on the standard modules if they are n.d.s. : one just need to take an isometry covering the identity. \\
+
+We can actually show that taking the Roe algebra is a functor. Choose, for any coarse space $X$ a n.d.s. $X$-module $H_X$, and consider the category $Coarse$ of coarse spaces with morphisms coarse maps, and the category $KK$ with objects $C^*$-algebras, and morphisms defined by $KK$-theory, $Hom_{KK}(A,B)=KK(A,B)$. Then $ X \mapsto C^*(X,H_X) $ and $\left(h:X \rightarrow Y\right) \mapsto (Ad_V)_*\in KK(C^*(X,H_X),C^*(Y,H_Y))$ defines a functor $Coarse \rightarrow KK$, which does not depend on the choices $X\mapsto H_X$ being made.\\
 
 We will focus ont the following result :
 
 \begin{thm}
-Let $X$ be a finite simplicial complex, and $B$ a $C^*$-algebra. There exists $\epsilon_0\in (0,\frac{1}{4})$ such that for all $\epsilon \in (0,\epsilon_0)$, there exists $R_\epsilon>0 $ s.t. 
-\[\forall R\in (0,R_\epsilon),\  Ind_{X,B}^{\epsilon, R} : KK(C(X),B)\rightarrow K(B\otimes \mathfrak K(H_X))\] 
+Let $X$ be a finite simplicial complex, and $B$ a $C^*$-algebra. There exists $\varepsilon_0\in (0,\frac{1}{4})$ such that for all $\varepsilon \in (0,\varepsilon_0)$, there exists $R_\varepsilon>0 $ s.t. 
+\[\forall R\in (0,R_\varepsilon),\  Ind_{X,B}^{\varepsilon, R} : KK(C(X),B)\rightarrow K(B\otimes \mathfrak K(H_X))\] 
 is an isomorphism.
 \end{thm}
 
+We wish to prove a similar result for "nice" groupoids. Let us recall the definition of $G$-simplicial complex from \ref{TuBC2}.
+
+\begin{definition}
+Let $G$ be a locally compact groupoid. A $G$-simplicial complex of dimension less than $n$ is a triple $(Z,\Delta, p)$ where
+\begin{itemize}
+\item[$\bullet$] $Z$ is a locally compact space of vertices and $p: Z \rightarrow G^{(0)}$ a locally injective map, which is an anchor map for an action of $G$, 
+\item[$\bullet$] $\Delta$ is a closed $G$-invariant subset of the probability measures $P(Z)$ on $Z$, equipped with the weak-$*$ topology, with the property that every element of $\Delta$ has a support contained in a fiber of $p$ and has at most $n+1$ elements. Such a support is call a simplex of $\Delta$. Moreover, if $\nu\in \Delta,\mu \in P(Z)$ and $supp(\mu)\subset supp(\nu)$ then $\mu\in \Delta$.
+\end{itemize}
+\end{definition}
 
 
 

@@ -16,7 +16,7 @@ Let $H$ be a $X$-module.
 \end{definition} 
  
 A simple example is given by $l^2(X)\otimes H$ with $H$ a separable Hilbert space, in which case $C_R[X]$ is the algebra of operators $(T_{xy})_{x,y\in X}$ such that $T_{x,y}\in K(H)$ for every $x,y\in X$, and $T_{xy}=0$ as soon as $d(x,y)>R$.\\
-Remark : one coulde replace Hilbert spaces by Hilbert modules $E$ over a $C^*$-algebra $B$ in this definition, $\mathcal L(H)$ by adjoinable operators $\mathcal L_B(E)$ and $K(H)$ by compact operators $K_B(E)$, to obtain $C^*(X,B)$, the Roe algebra with coefficients in $B$. The Roe algebra $C^*(X,B)$ enjoys functorial properties in $B$.\\
+Remark : one coulde replace Hilbert spaces by Hilbert modules $E$ over a $C^*$-algebra $B$ in this definition, $\mathcal L(H)$ by adjoinable operators $\mathcal L_B(E)$ and $K(H)$ by compact operators $K_B(E)$, to obtain $C^*(X,B)$, the Roe algebra with coefficient in $B$. The Roe algebra $C^*(X,B)$ enjoys functorial properties in $B$.\\
 
 This example motivates the following definition.\\
 

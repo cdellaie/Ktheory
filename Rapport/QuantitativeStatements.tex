@@ -14,7 +14,7 @@ The formula
 defines a $C(X)$-hermitian product on $C_c(\G,B)$, which we can complete to get the right-$B\rtimes \G$-Hilbert module $\mathcal E\rtimes \G$. So the functor $B\mapsto B\rtimes \G $ carries to $\mathcal E\mapsto \mathcal E\rtimes \G$. \\
 
 We will be mainly interested in the properties of the functor $B\mapsto B\rtimes \G$, and the majority of the constructions performed in this section are carriable with "good" crossed product functors. We will discuss the property needed for a crossed-product functor to be "good".\\  
-The first property is \textbf{semi-split--exactness}. We recall that an extension of $\G$-algebra \[\begin{tikzcd}[column sep = small]0\arrow{r} & J \arrow{r} & A\arrow{r}{p} & A/J \arrow{r} & 0\end{tikzcd}\] is said to be semi-split if there exists a completely positive map $s : A/J \rightarrow A$ such that $p\circ s = 1$. The functor $-\rtimes \G$ is said to be semi-split exact if for any such extension, \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\rtimes \G \arrow{r} & A\rtimes \G\arrow{r}{p_\G} & A/J\rtimes \G \arrow{r} & 0\end{tikzcd}\] is a semi-split extension of $C^*$-algebras.
+The first property is \textbf{semi-split--exactness}. We recall that an extension of $\G$-algebra \[\begin{tikzcd}[column sep = small]0\arrow{r} & J \arrow{r} & A\arrow{r}{p} & A/J \arrow{r} & 0\end{tikzcd}\] is said to be semi-split if there exists an equivariant completely positive map $s : A/J \rightarrow A$ such that $p\circ s = 1$. The functor $-\rtimes \G$ is said to be semi-split exact if for any such extension, \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\rtimes \G \arrow{r} & A\rtimes \G\arrow{r}{p_\G} & A/J\rtimes \G \arrow{r} & 0\end{tikzcd}\] is a semi-split extension of $C^*$-algebras.
 The second property implies the first. We say that $-\rtimes \G$ has the $CP$-property if it preserves completely positive maps, so that from any $\G$-completely positive map $\phi: A\rightarrow B$, we can induce a $CP$ map $\phi_\G: A\rtimes\G\rightarrow B\rtimes \G$. This assures that the action of $\G$ on any $\G$-module $\mathcal E$ descends to an isomorphism $K(\mathcal E)\rtimes \G \simeq K(\mathcal E\rtimes \G)$.
  \textbf{A FINIR, faire une preuve entre autre ...}
   
@@ -23,8 +23,8 @@ The more general setting of the Baum-Connes conjecture \cite{TuBC} is that of a 
 \[\mu_r : K^{top}_*(\G,B)\rightarrow K_*(B\rtimes_r \G).\]
 
 The left hand side $K^{top}_*(\G,B)$ is the $K$-homology of the classifying space $\mathcal E \G$ for proper actions of $\G$ with coefficients in $B$. We give a sketch of the construction when $\G$ is étale. Let $d\geq 0$ and $P_d(\G)$ be the Rips complex of $\G$, i.e. the space of probabilities supported on a fiber $\G^x$ for a $x\in \G^{(0)}$
-\[P_d(\G) = \{p\in \mathcal P(\G) : \exists x\in \G^{(0)}, r^*p=\delta_x, \text{supp }p \subset B(e_x,d)\}.\]
-Then $KK^\G( C_0(P_d(\G)),B)$ is defined to be the inductive limite of $KK^\G( C_0(X),B)$ for $X$ $\G$-proper $\G$-spaces (such that $X/G$ is compact). If $d\leq d'$, we have a morphism $KK^\G( C_0(P_d(\G)),B)\rightarrow KK^\G( C_0(P_{d'}(\G)),B)$ naturally induced by the inclusion $P_d(\G)\subset P_{d'}(\G)$, and the $K$-homology of $\G$ is defined as
+\[P_d(\G) = \{p\in \mathcal P(\G) : \exists x\in \G^{(0)}, r^*p=\delta_x, \text{supp }p \subset B(e_x,d)\},\]
+endowed with the weak-$*$ topology. Then $KK^\G( C_0(P_d(\G)),B)$ is defined to be the inductive limite of $KK^\G( C_0(X),B)$ for $X$ $\G$-proper cocompact $\G$-spaces. If $d\leq d'$, we have a morphism $KK^\G( C_0(P_d(\G)),B)\rightarrow KK^\G( C_0(P_{d'}(\G)),B)$ naturally induced by the inclusion $P_d(\G)\subset P_{d'}(\G)$, and the $K$-homology of $\G$ is defined as
 \[K^{top}_*(\G,B)=\lim_{d\rightarrow \infty} KK^\G( C_0(P_d(\G)),B).\]
 
 In his thesis \cite{LeGall}, P.-Y. Le Gall constructed the Kasparov transform for the action of a groupoid
@@ -92,7 +92,7 @@ which induces right multiplication by $j_\G(z)$ in $K$-theory.\\
 
 \subsubsection{Odd case}
 
-Let us first do the for work for $z\in KK_1^\G(A,B)$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_\G=P\otimes id_{B\rtimes \G}$. We define
+Let us first do the work for $z\in KK_1^\G(A,B)$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_\G=P\otimes id_{B\rtimes \G}$. We define
 \[E^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in A\rtimes \G, y\in K_{B\rtimes\G}\}\]
 a $C^*$-algebra which is filtered by
 \[E_R^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in (A\rtimes \G)_R, y\in K\otimes (B\rtimes\G)_R\}\]
@@ -137,7 +137,7 @@ such that
 \item[(iv)] For every $\G$-morphism $g : B_1\rightarrow B_2$,
 \[J_{red,\G}(g_*(z))= g_{\G,red,*}\circ J_{red,\G}(z)\] for all $z\in KK_1^G(A,B_1)$.
 \item[(v)] Let $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ be a semi-split equivariant extension of $\G$-algebras and $[\partial_J]\in KK_1^\G(A/J,J)$ be its boundary element. Then 
-\[J_\G([\partial_J])=D_{J\rtimes G,A\rtimes\G}.\] 
+\[J_\G([\partial_J])=D_{J\rtimes_r G,A\rtimes_r\G}.\] 
 \end{enumerate}
 \end{prop}
 
@@ -175,7 +175,7 @@ The map $(x,y)\mapsto (x, (g_G)_*(y))$ induces $\Psi :E^{(\pi,T)}\rightarrow  E^
 \[\Psi(x,P_G \pi_G(x) P_G +y)\mapsto (x,\tilde P_G \tilde\pi_G(x) \tilde P_G+(g_G)_*(y)).\]
 Indeed, the crossed-product functor commutes with pull-back by $\G$-morphisms, and $(g_G)*\circ\pi_G=(g_*\circ\pi)_G=\tilde \pi_G$ and $(g_G)_*(P_G) = g_*(P)_G=\tilde P_G$ so that 
 \[(g_G)_*(P_G \pi_G(x) P_G)=\tilde P_G \tilde\pi_G(x) \tilde P_G. \]
-Now, by the equivariant stabilisation lemma of Le Gall \cite{LeGall}, we know that the countably generated Hilbert module $\mathcal E_G$ sits as a complemented module of $H_{B_2\rtimes\G}$, and there exists a projection $p\in L(H_{B_2\rtimes\G})$ such that $pH_{B_2\rtimes\G}\simeq \mathcal E_\G$ and $pK_{B_2\rtimes\G}p\simeq K(\mathcal E_G)$. Let $\psi$ be the composition $K_{B_1\rtimes \G}\rightarrow_{(g_G)_*} K(\mathcal E_\G)\rightarrow K_{B_2\rtimes \G}$. In this particular case, we can give an explicit description of $\psi$. The map defined on basic tensor products $(x_j)_{j}\otimes b\mapsto (g(x_j)b)_j $ extends to an isometric embedding $\mathcal E_\G \rightarrow H_{B_2\rtimes \G}$, under which $ b\theta_{e_i,e_j}$ is mapped to $g(b)\theta_{u_i,u_j}$, where $\{e_j\}$ and $\{u_j\}$ are respectively the canonical orthogonal basis of $H_{B_1 \rtimes\G}$ and $H_{B_2 \rtimes\G}$. This gives a commutative diagram 
+Now, by the stabilisation lemma of Le Gall \cite{LeGall}, we know that the countably generated Hilbert module $\mathcal E_G$ sits as a complemented module of $H_{B_2\rtimes\G}$, and there exists a projection $p\in L(H_{B_2\rtimes\G})$ such that $pH_{B_2\rtimes\G}\simeq \mathcal E_\G$ and $pK_{B_2\rtimes\G}p\simeq K(\mathcal E_G)$. Let $\psi$ be the composition $K_{B_1\rtimes \G}\rightarrow_{(g_G)_*} K(\mathcal E_\G)\rightarrow K_{B_2\rtimes \G}$. In this particular case, we can give an explicit description of $\psi$. The map defined on basic tensor products $(x_j)_{j}\otimes b\mapsto (g(x_j)b)_j $ extends to an isometric embedding $\mathcal E_\G \rightarrow H_{B_2\rtimes \G}$, under which $ b\theta_{e_i,e_j}$ is mapped to $g(b)\theta_{u_i,u_j}$, where $\{e_j\}$ and $\{u_j\}$ are respectively the canonical orthogonal basis of $H_{B_1 \rtimes\G}$ and $H_{B_2 \rtimes\G}$. This gives a commutative diagram 
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & K_{B_1\rtimes \G}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& A\rtimes_r \G\arrow{r}\arrow{d}{=} & 0\\
 0\arrow{r} & K_{B_2\rtimes \G}\arrow{r} & E^{g_*(\pi,T)} \arrow{r}& A\rtimes \G\arrow{r} & 0
@@ -266,7 +266,7 @@ If $p\in P_d(\G)$ such that $r^*p = \delta_x$ for a certain $x\in \G^{(0)}$, we 
 If we set $\phi^2(p)=\lambda_{e_x}(p)\geq 0$, we have $\phi \in C_0(P_d(\G))$ and $(g.\phi^2)(p)=\lambda_g(p)$. Now define :
 \[\mathcal L_d = \sum_{g\in \G^x} \phi.(g.\phi)\in C(X,C_0(P_d(\G)))\subset C(\G,C_0(P_d(\G))) \]
 because $X$ is compact. \textbf{??}
-$\mathcal L_d$ is a projection of $C_0(P_d(\G))\rtimes_r \G$ without propagation, and defines a class $[\mathcal L_d]_{\epsilon,R}\in K_0^{\epsilon,R}(C_0(P_d(\G))\rtimes_r \G))$ for all $R>0,0<\epsilon<1/4$.\\
+$\mathcal L_d$ is a projection of $C_0(P_d(\G))\rtimes_r \G$ with finite propagation, and defines a class $[\mathcal L_d]_{\epsilon,R}\in K_0^{\epsilon,R}(C_0(P_d(\G))\rtimes_r \G))$ for all $R>0,0<\epsilon<1/4$.\\
 
 \begin{definition}
 Let $B$ be a $\G$-algebra, and $R>0,0<\epsilon<1/4,d>0$. The local quantitative assembly map for $\G$ is defined as the composition of $J_\G$ with the evaluation at $[\mathcal L_d]$ :
@@ -289,7 +289,7 @@ because $J_\G(z)$ induces the right multiplication by $j_\G(z)$ and also $\mu_\G
 
 \item[(3)] In \cite{OY3}, H. Oyono-Oyono and G. Yu defined a bunch of local quantitative coarse assembly maps for a metric space $X$. For the sake of simplicity, we take $X$ to be discrete and uniformly bounded. Let $\mathcal C$ be its coarse structure, that is the set of all its controlled subsets. Then, for any $C^*$-algebras $A$ and $B$ and a $K$-cycle $z\in KK(A,B)$, they construct a controlled morphism
 \[\sigma_X(z) : \hat K(C^*(X,A))\rightarrow \hat K(C^*(X,B)).\]
-There exists a projection $P_X$ without propagation, and the local quantitative assembly map is defined as 
+There exists a projection $P_X$ with finite propagation, and the local quantitative assembly map is defined as 
 \[A_{X,B}^{\epsilon,r,d}(z)=\sigma_X^{\epsilon,r}(z)([P_X]_{\epsilon,r})\] for $z\in KK(C_0(P_d(X)),B)$, where $P_d(X)$ is the classical Rips complex of $X$. This bunch of assembly maps induce the usual coarse assembly map of $X$ 
 \[A_{X,B} : KX_*(X,B)\rightarrow K_*(C^*(X,B)\]
 in $K$-theory. Now let $\G$ be the coarse groupoid of $X$. It is an étale groupoid with compact base space $\G^{(0)}=\beta X$, the Stone-Cech compactification of $X$ defined as

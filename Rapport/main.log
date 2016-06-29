@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  29 JUN 2016 11:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  29 JUN 2016 13:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,16 +950,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
 
 ]
-Overfull \hbox (6.12057pt too wide) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 Then $\OML/cmm/m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[
-]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 G\OT1/c
-mr/m/n/10 ))\OML/cmm/m/it/10 ; B\OT1/cmr/m/n/10 )$ is de-fi-ned to be the in-du
-c-tive li-mite of $\OML/cmm/m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]\O
-T1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; B\OT1/cmr/
-m/n/10 )$
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
@@ -1279,6 +1269,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
+
+Overfull \hbox (14.64584pt too wide) in paragraph at lines 77--78
+\OT1/cmr/m/n/10 Then $\OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 7! \OML/cmm/m/it/10 C
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; H[]\OT1/cmr/m/n/10 )$ and $[] \OMS/cmsy/
+m/n/10 7! \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Ad[]\OT1/cmr/m/n/10 )[] \OMS/cmsy/m
+/n/10 2 \OML/cmm/m/it/10 KK\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10
+ (\OML/cmm/m/it/10 X; H[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; C[]\OT1/cmr/m/n/10
+ (\OML/cmm/m/it/10 Y; H[]\OT1/cmr/m/n/10 ))$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
+LaTeX Warning: Reference `TuBC2' on page 28 undefined on input line 87.
+
 ) [28] (./main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
  [29
@@ -1291,13 +1299,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 33.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 33.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A5E389C62C4709F061476EB103EADC6A;1532.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 33.
  ) 
 Here is how much of TeX's memory you used:
- 17289 strings out of 494958
- 313300 string characters out of 6179263
- 384862 words of memory out of 5000000
- 20080 multiletter control sequences out of 15000+600000
+ 17291 strings out of 494958
+ 313320 string characters out of 6179263
+ 383862 words of memory out of 5000000
+ 20081 multiletter control sequences out of 15000+600000
  13804 words of font info for 54 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  58i,16n,75p,1366b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1320,10 +1332,10 @@ dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (29 pages, 350949 bytes).
+Output written on main.pdf (29 pages, 352772 bytes).
 PDF statistics:
- 433 PDF objects out of 1000 (max. 8388607)
- 378 compressed objects within 4 object streams
- 99 named destinations out of 1000 (max. 500000)
+ 434 PDF objects out of 1000 (max. 8388607)
+ 379 compressed objects within 4 object streams
+ 100 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
