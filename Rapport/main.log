@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  20 JUN 2016 19:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  29 JUN 2016 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1245,9 +1245,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-) [27] (./main.bbl)
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+
+ []
+
+
+Overfull \hbox (16.62883pt too wide) in paragraph at lines 60--61
+[][]\OT1/cmr/bx/n/10 D^^Sefinition 11. []\OT1/cmr/m/n/10 A $\OML/cmm/m/it/10 X$
+\OT1/cmr/m/n/10 -module is a Hil-bert space $\OML/cmm/m/it/10 H[]$ \OT1/cmr/m/n
+/10 equip-ped with a $\OMS/cmsy/m/n/10 ^^C$\OT1/cmr/m/n/10 -representation
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 64.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [27]
+Overfull \hbox (2.40877pt too wide) in paragraph at lines 75--75
+[]\OT1/cmr/bx/n/10 Remark : \OT1/cmr/m/n/10 We can in-duce $\OML/cmm/m/it/10 V$
+ \OT1/cmr/m/n/10 on the Roe al-ge-bras by $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 T
+ \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; H[
+]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; Ad[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T\OT
+1/cmr/m/n/10 ) :=
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+) [28] (./main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
- [28
+ [29
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
@@ -1256,15 +1290,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 33.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 33.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2D2AECBFDD5B04ED0644EFE4C46B29AE;1466.
+(rerunfilecheck)             Checksum: A5E389C62C4709F061476EB103EADC6A;1532.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 33.
  ) 
 Here is how much of TeX's memory you used:
- 17270 strings out of 494958
- 313000 string characters out of 6179263
- 383862 words of memory out of 5000000
- 20072 multiletter control sequences out of 15000+600000
- 13096 words of font info for 51 fonts, out of 8000000 for 9000
+ 17289 strings out of 494958
+ 313300 string characters out of 6179263
+ 384862 words of memory out of 5000000
+ 20080 multiletter control sequences out of 15000+600000
+ 13804 words of font info for 54 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  58i,16n,75p,1366b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
@@ -1282,13 +1316,14 @@ mr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (28 pages, 343821 bytes).
+dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (29 pages, 350949 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 363 compressed objects within 4 object streams
- 94 named destinations out of 1000 (max. 500000)
- 165 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 378 compressed objects within 4 object streams
+ 99 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
