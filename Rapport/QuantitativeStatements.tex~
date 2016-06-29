@@ -266,7 +266,7 @@ If $p\in P_d(\G)$ such that $r^*p = \delta_x$ for a certain $x\in \G^{(0)}$, we 
 If we set $\phi^2(p)=\lambda_{e_x}(p)\geq 0$, we have $\phi \in C_0(P_d(\G))$ and $(g.\phi^2)(p)=\lambda_g(p)$. Now define :
 \[\mathcal L_d = \sum_{g\in \G^x} \phi.(g.\phi)\in C(X,C_0(P_d(\G)))\subset C(\G,C_0(P_d(\G))) \]
 because $X$ is compact. \textbf{??}
-$\mathcal L_d$ is a projection of $C_0(P_d(\G))\rtimes_r \G$ without propagation, and defines a class $[\mathcal L_d]_{\epsilon,R}\in K_0^{\epsilon,R}(C_0(P_d(\G))\rtimes_r \G))$ for all $R>0,0<\epsilon<1/4$.\\
+$\mathcal L_d$ is a projection of $C_0(P_d(\G))\rtimes_r \G$ with finite propagation, and defines a class $[\mathcal L_d]_{\epsilon,R}\in K_0^{\epsilon,R}(C_0(P_d(\G))\rtimes_r \G))$ for all $R>0,0<\epsilon<1/4$.\\
 
 \begin{definition}
 Let $B$ be a $\G$-algebra, and $R>0,0<\epsilon<1/4,d>0$. The local quantitative assembly map for $\G$ is defined as the composition of $J_\G$ with the evaluation at $[\mathcal L_d]$ :
@@ -289,7 +289,7 @@ because $J_\G(z)$ induces the right multiplication by $j_\G(z)$ and also $\mu_\G
 
 \item[(3)] In \cite{OY3}, H. Oyono-Oyono and G. Yu defined a bunch of local quantitative coarse assembly maps for a metric space $X$. For the sake of simplicity, we take $X$ to be discrete and uniformly bounded. Let $\mathcal C$ be its coarse structure, that is the set of all its controlled subsets. Then, for any $C^*$-algebras $A$ and $B$ and a $K$-cycle $z\in KK(A,B)$, they construct a controlled morphism
 \[\sigma_X(z) : \hat K(C^*(X,A))\rightarrow \hat K(C^*(X,B)).\]
-There exists a projection $P_X$ without propagation, and the local quantitative assembly map is defined as 
+There exists a projection $P_X$ with finite propagation, and the local quantitative assembly map is defined as 
 \[A_{X,B}^{\epsilon,r,d}(z)=\sigma_X^{\epsilon,r}(z)([P_X]_{\epsilon,r})\] for $z\in KK(C_0(P_d(X)),B)$, where $P_d(X)$ is the classical Rips complex of $X$. This bunch of assembly maps induce the usual coarse assembly map of $X$ 
 \[A_{X,B} : KX_*(X,B)\rightarrow K_*(C^*(X,B)\]
 in $K$-theory. Now let $\G$ be the coarse groupoid of $X$. It is an étale groupoid with compact base space $\G^{(0)}=\beta X$, the Stone-Cech compactification of $X$ defined as
