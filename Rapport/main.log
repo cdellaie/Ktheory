@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  29 JUN 2016 15:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  30 JUN 2016 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1281,9 +1281,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
 LaTeX Warning: Reference `TuBC2' on page 28 undefined on input line 87.
 
-) [28] (./main.bbl)
+[28]) [29] (./main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
- [29
+ [30
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
@@ -1300,8 +1300,8 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 33.
  ) 
 Here is how much of TeX's memory you used:
- 17291 strings out of 494958
- 313320 string characters out of 6179263
+ 17294 strings out of 494958
+ 313345 string characters out of 6179263
  384862 words of memory out of 5000000
  20081 multiletter control sequences out of 15000+600000
  13804 words of font info for 54 fonts, out of 8000000 for 9000
@@ -1327,10 +1327,10 @@ t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (29 pages, 359859 bytes).
+Output written on main.pdf (30 pages, 361799 bytes).
 PDF statistics:
- 438 PDF objects out of 1000 (max. 8388607)
- 382 compressed objects within 4 object streams
- 100 named destinations out of 1000 (max. 500000)
+ 445 PDF objects out of 1000 (max. 8388607)
+ 388 compressed objects within 4 object streams
+ 103 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

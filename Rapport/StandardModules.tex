@@ -94,9 +94,23 @@ Let $G$ be a locally compact groupoid. A $G$-simplicial complex of dimension les
 \end{itemize}
 \end{definition}
 
+The first step is to defined what is a s.n.d. $G$-module.
 
+\begin{definition}
+A s.n.d. $G$-module is a triple $(E,\phi,V)$ where $E$ is a $C_0(G^{(0)})$-algebra, $\phi : C_0(G^{(0)})\rightarrow \mathcal L(E)$ is a $*$-representation and $V$ is an action of $G$ on $E$ such that
+\begin{itemize}
+\item[$\bullet$] $E$ decomposes as a external tensor product $E\simeq E^0\otimes E^1$ of $G$-modules such that there exists $\phi : C_0(G^{(0)})\rightarrow \mathcal L(E^{(0)})$ and $\phi= \phi_0\otimes id_{E_1}$
+\item[$\bullet$] No non-zero function of $C_0(G^{(0)})$ acts as a compact operator via $\phi_0$, and $\overline{\phi_0(C_0(G^{(0)}))E_0 }= E_0$
+\item[$\bullet$] For all compact subgroupoids $K$ of $G$, there exists an isomorphism of $K$-modules $\text{Res}_H^G E_1 \simeq L^2(K)\otimes H_K$ where $H_K$ is a separable Hilbert space.
+\end{itemize}
+\end{definition}
 
+Now we want to show the following :
 
+\begin{lem}
+Let $G$ be a locally compactly induced groupoid, and $E,E'$ any two s.n.d. $G$-modules, then for any compact subset $K$ of $G$, there exists an isometry $V\in \mathcal L(E,E')$ such that 
+\[supp\ V \subset (s\times r)(K). \]
+\end{lem}
 
 
 
