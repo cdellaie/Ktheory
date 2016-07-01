@@ -99,9 +99,9 @@ The first step is to defined what is a s.n.d. $G$-module.
 \begin{definition}
 A s.n.d. $G$-module is a triple $(E,\phi,V)$ where $E$ is a $C_0(G^{(0)})$-algebra, $\phi : C_0(G^{(0)})\rightarrow \mathcal L(E)$ is a $*$-representation and $V$ is an action of $G$ on $E$ such that
 \begin{itemize}
-\item[$\bullet$] $E$ decomposes as a external tensor product $E\simeq E^0\otimes E^1$ of $G$-modules such that there exists $\phi : C_0(G^{(0)})\rightarrow \mathcal L(E^{(0)})$ and $\phi= \phi_0\otimes id_{E_1}$
-\item[$\bullet$] No non-zero function of $C_0(G^{(0)})$ acts as a compact operator via $\phi_0$, and $\overline{\phi_0(C_0(G^{(0)}))E_0 }= E_0$
-\item[$\bullet$] For all compact subgroupoids $K$ of $G$, there exists an isomorphism of $K$-modules $\text{Res}_H^G E_1 \simeq L^2(K)\otimes H_K$ where $H_K$ is a separable Hilbert space.
+\item[$\bullet$] $E$ decomposes as a external tensor product $E\simeq E^{(0)}\otimes E^{(1)}$ of $G$-modules such that there exists $\phi : C_0(G^{(0)})\rightarrow \mathcal L(E^{(0)})$ and $\phi= \phi_0\otimes id_{E^{(1)}}$
+\item[$\bullet$] No non-zero function of $C_0(G^{(0)})$ acts as a compact operator via $\phi_0$, and $\overline{\phi_0(C_0(G^{(0)}))E^{(0)} }= E^{(0)}$
+\item[$\bullet$] For all compact subgroupoids $K$ of $G$, there exists an isomorphism of $K$-modules $\text{Res}_K^G E^{(1)} \simeq L^2(K)\otimes H_K$ where $H_K$ is a separable Hilbert space.
 \end{itemize}
 \end{definition}
 
@@ -112,8 +112,17 @@ Let $G$ be a locally compactly induced groupoid, and $E,E'$ any two s.n.d. $G$-m
 \[supp\ V \subset (s\times r)(K). \]
 \end{lem}
 
+\begin{dem}
+Let $E$ a n.d.s. $G$-module, and decompose the base space $G^{(0)}$ into $G$-invariant subset which are locally induced by compact subgroupoids of $G$ :
+\[G^{(0)} = \cup_{j=1}^J G\times_{K_j} U_j.\]
+By the third hypothesis of being s.n.d., there exist a Hilbert space $H_j$ and an isomorphism of Hilbert modules $F_j :\text{Res}_{K_j}^G E^{(1)} \rightarrow  L^2(K_j)\otimes H_j$, but the induction $\text{Ind}_{K_j}^G L^2(G/K_j)\otimes L^2(K_j)\otimes H_j$ is non canonically isomorphic to $L^2(G)\otimes H_j$, so that $E$ is isomorphic to $E^{(0)}\otimes L^2(G)\otimes H_j$.\\
+\qed
+\end{dem}
 
-
+\begin{cor}
+Let $G$ and $G'$ two locally compactly induced groupoids, $E,E'$ two s.n.d. modules over $G$ and $G'$ respectively and $(Z,p,p')$ a generalized morphism from $G$ to $G'$ which respects condition ??. For any compact subset $K$, there exists an isometry $V\in \mathcal L(E,E')$ such that
+\[supp\ V \subset (p\circ (p')^{-1}(s(K))\times r)(K). \]
+\end{cor}
 
 
 
