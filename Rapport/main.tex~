@@ -23,6 +23,7 @@
 \include{QKtheory}
 \include{QuantitativeStatements}
 \include{FDC}
+\include{StandardModules}
 
 \bibliographystyle{plain}
 \bibliography{biblio} 
