@@ -10,3 +10,113 @@ The aim of my subject is to study relationship between several worlds : coarse g
  \ & \textbf{C}^* \quad A \arrow{d} & \ \\
 \ & \textbf{KK} & \ \\
 \end{tikzcd}\] 
+
+\begin{definition}
+Let $G$ be a topological groupoid, and $\mathcal E$ a family of subsets of $G$. $\mathcal E$ is said to be a coarse structure on $G$ if 
+\begin{itemize}
+\item[$\bullet$] if $E$ and $F$ are in $\mathcal E$, then $EF\in \mathcal E$, and $E\cup F\in \mathcal E$, $E^{-1}\in \mathcal E$
+\item[$\bullet$] if $E\in \mathcal E$ and $F\subset E$, then $F\in \mathcal E$,
+\item[$\bullet$] any finite subset is in $\mathcal E$ (?) and if $G^{(0)}\in \mathcal E$, $\mathcal E$ is said to be unital.
+\end{itemize}
+\end{definition}
+
+\subsection{From coarse spaces to $C^*$-algebras}
+
+\begin{definition}
+A coarse space is a couple $(X,\mathcal E)$, where $X$ is a set and $\mathcal E$ a coarse structure on the pair groupoid $X\times X$. A coarse map is a map respecting the coarse structure i.e. $h : (X,\mathcal E)\rightarrow (Y,\mathcal F)$ such that $\forall F\in\mathcal F,(h\times h)^{-1}(F)\in \mathcal E$.
+\end{definition}
+
+A metric space $(X,d)$ naturally inherits a coarse structure from its bounded subsets :
+\[\mathcal E_X = \{E\subset X\times X : \sup_{E} d(x,y)<\infty\}.\]
+
+\begin{definition}
+Let $(X,\mathcal E)$ be a coarse space. A $X$-module is a pair $(H_X,\phi )$ where 
+\begin{itemize}
+\item[$\bullet$] $H_X$ is a Hilbert space, 
+\item[$\bullet$] $\phi : C_0(X)\rightarrow \mathcal L(H_X)$ is a $*$-homomorphism.
+\item[$\bullet$] The module is said to be non-degenerate if $\{\phi(f)\eta : f\in C_0(X),\eta\in H_X\}$ is dense in $H_X$, and standard if no non-zero function of $C_0X)$ acts as a compact operator of $H_X$.
+\end{itemize}
+\end{definition}
+
+\textbf{Examples} If $X$ is a discrete metric space with bounded geometry, $l^2(X)\otimes H$ with action by multiplication on the first factor defines a s.n.d. $X$-module.\\
+If $X$ is a compact metric space endowed with a measure $\mu$ without atoms, then $L^(X,\mu)$ is a s.n.d. $X$-module.\\
+
+\begin{definition}
+Let $T\in \mathcal L(H_X, H_Y)$ be an operator.
+\begin{itemize}
+\item[$\bullet$] $T$ is said to be locally compact if $\phi(g)T$ and $T\phi(f)$ are compact operators for all $f\in C_0(X),g\in C_0(Y)$.
+\item[$\bullet$] The support of $T$ is the complement of the set of points $(x,y)\in X\times X$ such that there exist $f_x,f_y\in C_0(X),C_0(Y)$ such that $f_x(x)\neq 0,f_{y}(y)\neq 0$ and $\phi(f_{y}) T \phi(f_x)=0$.
+\item[$\bullet$] The propagation of $T$ is the smallest $E\in \mathcal E$ such that supp $T \subset E$.\textbf{ADAPTER}
+\end{itemize}
+\end{definition}
+
+Let us define the Roe algebra of $X$ form a fixed s.n.d. $X$-module $H_X$. It will be shown that, up to unnatural isomorphism, it does not depend on the choice of the s.n.d. $X$-module.\\
+
+\begin{definition}
+For any $E\in \mathcal E$, define the subspace of locally compact operators with propagation $E$-controlled :
+\[C_E[X,H_X] = \{T\in\mathcal L(H_X) : T \text{ is locally compact and supp }T\subset E\}.\]
+The Roe algebra is the $C^*$-algebra 
+\[C^*(X,H_X) = \overline{\cup_{E\in\mathcal E} C_E[X,H_X]}\]
+the closure being taken with respect to the operator norm of $\mathcal L(H_X)$.
+\end{definition}
+
+\begin{prop}
+Let $(X,\mathcal E),(Y,\mathcal F)$ be two coarse spaces, $H_X,H_Y$ two s.n.d. modules over $X$ and $Y$ repsectively, and $h :X\rightarrow Y$ a coarse map. Then, for any $F\in \mathcal F$, there exists an isometry $V\in \mathcal L(H_X,H_Y)$ such that
+\[\text{supp }V \subset (h\times id_Y)^{-1}(E).\]
+\end{prop}
+
+\begin{dem}
+Extend the representation $\phi$ to $\tilde \phi : L^\infty (X)\rightarrow \mathcal L(H_X)$. \\
+
+Let $F\in \mathcal F$ and $\mathcal U$ be a Borel partition of $Y$ such that $\sqcup_{U\in \mathcal U} U\times U \subset F$ and every $U\in \mathcal U$ is of non-empty interior. If $\chi_A$ denotes the characteristic function of $A$, and because the modules are s.n.d., we can find an isometry \[V^{(U)} :\chi_{h^{-1}(U)}H_X \rightarrow \chi_U H_Y\] 
+and by standardness $H_X =\bigoplus \chi(h^{-1}(U)) H_X$ and $H_Y =\bigoplus \chi_U H_Y$, so $V = \oplus V^{(U)}$ fits. Indeed, 
+\[\text{supp }V\subset \sqcup h^{-1}(U)\times U \subset (h\times id_Y)^{-1}(F).\] 
+\qed
+\end{dem}
+
+Now, if $H_X$ and $H'_X$ are two s.n.d. $X$-modules, apply the preceding lemma to the identity map to have an isometry $V: H_X\rightarrow H'_X$ which is supported as close as you want of the diagonal. This induces $Ad_V : C^*(X,H_X)\rightarrow C^*(X,H'_X)$ by $Ad_V(T) = VTV^*$, and gives our isomorphism, which is canonical in $K$-theory. \\
+
+If we decide to fix a s.n.d. module for every coarse space, we can speak of "the" Roe algebra of $X$, and we saw that a coarse map between two coarse spaces $h : X\rightarrow Y$ induces a $*$-homomorphism $h_* : C^*(X,H_X)\rightarrow C^*(Y,H_Y)$. 
+
+\subsection{From groupoids to $C^*$-algebras}
+\subsection{From coarse spaces to groupoids}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

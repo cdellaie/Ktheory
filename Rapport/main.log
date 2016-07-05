@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  4 JUL 2016 19:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  5 JUL 2016 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -876,10 +876,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) [4
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 23.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 23.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 23.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
+
+ []
+
+[4
 
 
 ]
+Overfull \hbox (23.67897pt too wide) in paragraph at lines 49--50
+[]\OT1/cmr/m/n/10 The pro-pa-ga-tion of $\OML/cmm/m/it/10 T$ \OT1/cmr/m/n/10 is
+ the smal-lest $\OML/cmm/m/it/10 E \OMS/cmsy/m/n/10 2 E$ \OT1/cmr/m/n/10 such t
+hat supp $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 ^^Z \OML/cmm/m/it/10 E$\OT1/cmr/m
+/n/10 .\OT1/cmr/bx/n/10 ADAPTER 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 81.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 81.
+
+) [5] [6]
 \openout2 = `QKtheory.aux'.
 
  (./QKtheory.tex
@@ -916,7 +968,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[5
+[7
 
 
 ]
@@ -943,7 +995,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
-[6] [7]) [8]
+[8] [9]) [10]
 \openout2 = `QuantitativeStatements.aux'.
 
  (./QuantitativeStatements.tex
@@ -951,7 +1003,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
-[9
+[11
 
 
 ]
@@ -959,7 +1011,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[10]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
@@ -975,7 +1027,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--61
 
  []
 
-[11]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
@@ -995,19 +1047,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[12]
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 117--119
 
  []
 
 
-Overfull \hbox (1.51024pt too wide) in paragraph at lines 121--122
-[][]\OT1/cmr/bx/n/10 D^^Sefinition 5. []\OT1/cmr/m/n/10 The control-led Kas-pa-
-rov trans-form of an ele-ment $\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 2 \OML/cmm/m
-/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
+Overfull \hbox (7.26021pt too wide) in paragraph at lines 121--122
+[][]\OT1/cmr/bx/n/10 D^^Sefinition 10. []\OT1/cmr/m/n/10 The control-led Kas-pa
+-rov trans-form of an ele-ment $\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 2 \OML/cmm/
+m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
  []
 
-[13]
+[15]
 Overfull \hbox (14.45294pt too wide) in paragraph at lines 149--150
 []\OT1/cmr/m/n/10 If $\OML/cmm/m/it/10 z; z[]$ \OT1/cmr/m/n/10 are ele-ments of
  $\OML/cmm/m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
@@ -1025,7 +1077,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
-[14]
+[16]
 Overfull \hbox (22.48785pt too wide) in paragraph at lines 175--177
 \OT1/cmr/m/n/10 Indeed, the crossed-product func-tor com-mutes with pull-back b
 y $\OMS/cmsy/m/n/10 G$\OT1/cmr/m/n/10 -morphisms,
@@ -1036,12 +1088,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--190
 
  []
 
-[15]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
-[16]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
@@ -1051,12 +1103,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
-[17]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 267--270
 
  []
 
-[18] [19]
+[20] [21]
 Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
@@ -1076,7 +1128,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
-[20]
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
@@ -1126,7 +1178,7 @@ ML/cmm/m/it/10 ; [] '[]; [] F[]\OT1/cmr/m/n/10 )]$ as a prei-mage of $[][][(\OM
 S/cmsy/m/n/10 E[]\OML/cmm/m/it/10 ; '[]; F[]\OT1/cmr/m/n/10 )]$,
  []
 
-[21]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 399--402
 
  []
@@ -1136,7 +1188,7 @@ Overfull \hbox (309.84613pt too wide) detected at line 407
 []
  []
 
-[22]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
@@ -1156,7 +1208,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
-[23]
+[25]
 Overfull \hbox (13.52803pt too wide) in paragraph at lines 453--457
 \OT1/cmr/m/n/10 Assume the sta-te-ment does not holds : there exists $\OML/cmm/
 m/it/10 ^^O$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 R$ \OT1/cmr/m/n/10 such that
@@ -1164,7 +1216,7 @@ m/it/10 ^^O$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 R$ \OT1/cmr/m/n/10 such that
 mr/m/n/10 )$
  []
 
-) [24]
+) [26]
 \openout2 = `FDC.aux'.
 
  (./FDC.tex
@@ -1172,10 +1224,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-[25
+[27
 
 
-]) [26]
+]) [28]
 \openout2 = `StandardModules.aux'.
 
  (./StandardModules.tex
@@ -1222,7 +1274,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-[27
+[29
 
 
 ]
@@ -1247,7 +1299,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
 
 Overfull \hbox (16.62883pt too wide) in paragraph at lines 60--61
-[][]\OT1/cmr/bx/n/10 D^^Sefinition 11. []\OT1/cmr/m/n/10 A $\OML/cmm/m/it/10 X$
+[][]\OT1/cmr/bx/n/10 D^^Sefinition 16. []\OT1/cmr/m/n/10 A $\OML/cmm/m/it/10 X$
 \OT1/cmr/m/n/10 -module is a Hil-bert space $\OML/cmm/m/it/10 H[]$ \OT1/cmr/m/n
 /10 equip-ped with a $\OMS/cmsy/m/n/10 ^^C$\OT1/cmr/m/n/10 -representation
  []
@@ -1260,7 +1312,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 LaTeX Font Info:    Try loading font information for U+euf on input line 64.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [28]
+) [30]
 Overfull \hbox (2.40877pt too wide) in paragraph at lines 75--75
 []\OT1/cmr/bx/n/10 Remark : \OT1/cmr/m/n/10 We can in-duce $\OML/cmm/m/it/10 V$
  \OT1/cmr/m/n/10 on the Roe al-ge-bras by $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 T
@@ -1290,11 +1342,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
  []
 
 
-LaTeX Warning: Reference `TuBC2' on page 29 undefined on input line 87.
+LaTeX Warning: Reference `TuBC2' on page 31 undefined on input line 87.
 
-[29]) [30] (./main.bbl)
+[31]) [32] (./main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
- [31
+ [33
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
@@ -1304,7 +1356,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F59E18FF606C57A52B5F1ED1530E6F98;1580.
+(rerunfilecheck)             Checksum: DD74A40E380FD4D8D7EE2A802F02C7D4;1823.
 
 
 LaTeX Warning: There were undefined references.
@@ -1312,10 +1364,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 34.
  ) 
 Here is how much of TeX's memory you used:
- 17450 strings out of 494958
- 317030 string characters out of 6179263
- 387406 words of memory out of 5000000
- 20224 multiletter control sequences out of 15000+600000
+ 17465 strings out of 494958
+ 317211 string characters out of 6179263
+ 387413 words of memory out of 5000000
+ 20227 multiletter control sequences out of 15000+600000
  14423 words of font info for 56 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  58i,16n,75p,1366b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1333,16 +1385,17 @@ mr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (31 pages, 366248 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (33 pages, 382402 bytes).
 PDF statistics:
- 457 PDF objects out of 1000 (max. 8388607)
- 399 compressed objects within 4 object streams
- 107 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 495 PDF objects out of 1000 (max. 8388607)
+ 433 compressed objects within 5 object streams
+ 119 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
