@@ -189,7 +189,7 @@ month = "Summer"
 @book{RoeCoarse,
     title = "Lectures on Coarse Geometry",
     author = "John Roe",
-    publisher = "University Lectures Series, American Mathematical Society",
+    publisher = "University Lectures serie, American Mathematical Society",
     year = "2003",
     volume  = "31"
  }

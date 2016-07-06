@@ -79,11 +79,34 @@ Now, if $H_X$ and $H'_X$ are two s.n.d. $X$-modules, apply the preceding lemma t
 If we decide to fix a s.n.d. module for every coarse space, we can speak of "the" Roe algebra of $X$, and we saw that a coarse map between two coarse spaces $h : X\rightarrow Y$ induces a $*$-homomorphism $h_* : C^*(X,H_X)\rightarrow C^*(Y,H_Y)$. 
 
 \subsection{From groupoids to $C^*$-algebras}
+
 \subsection{From coarse spaces to groupoids}
 
+This section gives details on he construction of the coarse groupoid from \ref{SkTuYu}.\\
 
+Let $(X,\mathcal E)$ be a coarse space. The idea is to construct an étale groupoid $G(X)$ extending the pair groupoid $X\times X$. As a topological space, 
+\[G(X)= \cup_{E\in \mathcal E} \overline{E},\]
+the closure being taken in $\beta (X\times X)$, so that it is Hausdorff and locally compact. The base space is $G(X)^{(0)}=\beta X$. Now, the firt and second projections can be extended by universal property of the Stone-Cech compactification to give the source and the range map $s,r : G(X)\rightrightarrows \beta X$ respectively, as shown in this commutative diagramm :  
+\[\begin{tikzcd}
+X\times X \arrow{r}\arrow{d}{\iota_{X\times X}} &  X \arrow{r}{\iota_X} & \beta X \\
+\beta (X\times X) \arrow[dotted]{urr} & & \\ 
+\end{tikzcd}.\]
 
+The only non trivial part is to extend the multiplication of the pair groupoid. This is done by extending the inclusion $E \rightarrow X\times X$ to $\overline{E} \rightarrow \beta X\times \beta X$. The corollary 10.31 of \ref{RoeCoarse} assures that 
+\begin{lem}
+The map $r\times s : \overline E \rightarrow \beta X\times \beta X$ is a topological embedding.
+\end{lem}
+Using this lemma, we can embed $G(X)$ in $\beta X\times \beta X$ and use the pair multiplication in this groupoid, the point being that such a multiplication $G(X)\times_{s,r} G(X) \rightarrow G(X)$ is continuous and extend the pair multiplication of $X\times X$.\\
 
+The following proposition (Proposition $3.5$ from \ref{SkTuYu}) assures that $X\mapsto G(X)$ is a functor from uniformly locally finite coarse spaces to groupoids with generalized morphisms as arrows.\\
+
+\begin{prop}
+Let $(X,\mathcal E_X)$ and $(Y,\mathcal E_Y)$ be two coarse spaces with uniformly locally finite coarse structures, then a coarse map $h :X\rightarrow Y$ induces a generalized morphism from $G(X)$ to $G(Y)$ :
+\[\begin{tikzcd}
+G(X)\arrow[xshift=-0.7ex]{d}\arrow[xshift=0.7ex]{d} \ & \arrow{dl} Z \arrow{dr} & G(Y)\arrow[xshift=-0.7ex]{d}\arrow[xshift=0.7ex]{d} \\
+\beta X & &\beta Y \\
+\end{tikzcd}\] 
+\end{prop}
 
 
 
