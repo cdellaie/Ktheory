@@ -20,6 +20,36 @@ Let $G$ be a topological groupoid, and $\mathcal E$ a family of subsets of $G$. 
 \end{itemize}
 \end{definition}
 
+\subsection{From topological spaces to $C^*$-algebras}
+
+This first section recalls some easy facts, and is mainly directed at enlightening the parallel and the analogy of all the constructions that will be done in the following sections.\\
+
+\begin{definition}
+Let $Y$ be a set, and $\mathcal T$ a subset of $\mathcal P(Y)$. $\mathcal T$ is called a topology if 
+\begin{itemize}
+\item[$\bullet$] $\emptyset \in \mathcal T$,
+\item[$\bullet$] if $U\in\mathcal U$, then $U^c\in \mathcal U$,
+\item[$\bullet$] if $\mathcal U\subset\mathcal T$ , then $\cup_{U\in \mathcal U} U \in \mathcal U$.
+\end{itemize}
+Elements of $\mathcal U$ are called open sets, and if $x\in X$, we  say of any set containing both an open set and $x$ is a neighborhood of $x$.\\
+A topological space is said to be locally compact iff every point has a relatively compact neighborhood. \\
+A map between two topological spaces $h : (X,\mathcal T_X)\rightarrow (Y,\mathcal T_Y)$ is continuous if it respects the topology i.e. if $\forall V\in \mathcal T_Y, h^{-1}(V)\in \mathcal T_X$.\\
+\end{definition}
+
+The natural $C^*$-algebra associated to a locally compact space $Y$ is $C_0(Y)=\{ f :Y \rightarrow \C \text{ continuous s.t. }\lim_{\infty}f=0\}$, endowed with the supremom norm $||f||=\sup_{y\in Y} |f(y)|$.\\
+
+A continuous map $h : X\rightarrow Y $ induces a $*$-homomorphism $C_0(Y)\rightarrow C_0(X)$ iff $h$ is proper, that is the inverse image of any compact set is compact. A simple reformulation leads to the following.
+
+\begin{prop}
+If \textbf{Top} is the category of locally compact spaces with morphisms continuous proper maps, and $C^*$ is the category of $C^*$-algebras with morphisms $*$-homomorphisms, $Y\mapsto C_0(Y)$ is a contravariant functor from \textbf{Top} to $\textbf{C}^*$. 
+\end{prop}
+
+There is a notion of dimension in the \textbf{Top}, the covering dimension.
+
+\begin{definition}
+The covering dimension of $Y$ is less than $d$ if, for every covering $\mathcal V$ of $Y$, there exists a covering $\mathcal U$ that refines $\mathcal V$ and that decomposes into $d+1$ pieces $\mathcal U = \mathcal U_0 \sqcup ... \sqcup \mathcal U_d$ with the property that for $U,V\in \mathcal U^{(j)}$, then $U\cap V=\emptyset$.
+\end{definition}
+
 \subsection{From coarse spaces to $C^*$-algebras}
 
 \begin{definition}
@@ -80,6 +110,80 @@ If we decide to fix a s.n.d. module for every coarse space, we can speak of "the
 
 \subsection{From groupoids to $C^*$-algebras}
 
+We first precise what we consider as morphisms in the category of topological groupoids \textbf{Grpds}.\\
+
+\begin{definition}
+Let $G$ and $G'$ be two topological groupoids.\\ 
+A generalized morphism between from $G$ to $G'$ is a triple $(Z,p,p')$ where $Z$ is a locally compact space endowed with a right action of $G$ with respect to $p$ and a right action of $G'$ with respect to $p'$ such that :
+\begin{itemize}
+\item[$\bullet$] the two actions commute : $(g.z).g'=g.(zg'),\forall z\in Z,g\in G_{p(z)},g'\in G'^{p'(z)}$,
+\item[$\bullet$] the action of $G'$ is free and proper,
+\item[$\bullet$] $Z\times_{p',s} G'\rightarrow Z\times Z $ induces a homeomorphism $Z\rtimes G' \rightarrow Z\times_{G^{(0)}} Z$.\\
+\end{itemize}
+\end{definition}
+
+Let $G \rightrightarrows G^{(0)}$ be a locally compact groupoid, endowed with a Haar system $\lambda = (\lambda^x)_{x\in G^{(0)}}$.\\
+
+\begin{definition}
+Let $X$ be a locally compact $\sigma$-compact space.\\
+\begin{itemize}
+\item[$\bullet$] A $C_0(X)$-algebra is a pair $(A,\theta)$ where $A$ is a $C^*$-algebra and $\theta : C_0(X)\rightarrow Z(\mathcal M (A))$ is a $*$-homomorphism such that $\theta (C_0(X))A = A$.\\
+\item[$\bullet$] A $G$-algebra is a triple $(A,\theta,\alpha)$ where the two first elements form a $C_0(G^{(0)})$-algebra, and $\alpha : s^* A \rightarrow r^* A $ is an action of $G$, i.e. an isomorphism of $C_0(G)$-algebras such that $\alpha_g \circ \alpha_{g'} = \alpha_{gg'}$ whenever $(g,g')\in G^{(2)}$.\\ 
+\item[$\bullet$] if $(A,\alpha)$ is a $G$-algebra, a $G$-module $E$ is a pair $(E,V)$ where $E$ is a $A$-Hilbert-module and $V\in \mathcal L(s^*E,r^*E)$ is an unitary such that $V_g\circ V_{g'} = V_{gg'},\forall (g,g')\in G^{(2)}$.
+\end{itemize}
+\end{definition}
+
+An important example of $G$-module is $L^2(G,A)$. Define the $C_0(X,A)$-valued scalar product on $C_c(G,A)$
+\[ \langle \eta,\xi \rangle(x) = \int_{G^x} \eta(g)^* \xi(g) d\lambda^x(g).\]
+The $A$-Hilbert module $L^2(G,A)$ is the completion of $C_c(G,A)$ under this scalar-product, and the action of $G$ is defined by left-translation :
+\[\forall \xi\in L^2(G_{s(g)},A),(V_g \xi)(h) = \xi(g^{-1}h), \]
+which is an isomorphism $s^*L^2(G,A)\rightarrow r^*L^2(G,A)$.\\
+
+As in the group case, the data of a $G$-algebra $A$ allows one to construct the crossed-product $A\rtimes_r G$, which is a $C^*$-algebra. Just note that $C_c(G,A)$ is a $*$-algebra for the convolution product 
+\[\xi \ast \eta  (g)=\int_{G^{r(g)}} \xi(h)\alpha_{h}(\eta(h^{-1}g))\lambda^{r(g)}(h)\]
+and that it acts on $L^2(G,A)$ by the left-regular representation :
+\[\forall f\in C_c(G,A), \xi\in L^2(G,A),\lambda (f)\xi = f\ast \xi.\]
+This induces an operator norm, which is often called the reduced norm, on $C_c(G,A)$, $||f||_{r}:= ||\lambda(f)||_{\mathcal L(L^2(G,A))}$.
+\begin{definition}
+$A\rtimes_r G$ is defined as the $*$-completion of $C_c(G,A)$ for the reduced norm. \\
+When $A=\C$ is the $C^*$-algebra of complex numbers with the trivial action of $G$, the reduced cross-product is called the reduced $C^*$-algebra and is denoted by $C^*_r(G)$.\\
+\end{definition}
+
+The reduced cross-product is functorial in $A$ with respect to $*$-homomorphisms but does not respect equivariant exact sequences of $G$-algebras (unlike the maximal crossed-product, which does). Going to $KK$-theory, the reduced crossed-product is also functorial $KK^G\rightarrow KK$.\\
+
+\begin{prop}[LeGall \ref{LeGall}]
+There exists a homomorphism $j_G : KK^{G}(A,B)\rightarrow KK(A\rtimes_r G,B\rtimes_r G)$ which is natural with respect to the Kaparov product, i.e. $\forall x\in KK^G(A,B),\forall y\in KK^G(B,C)$, one has :
+\[j_G(x\otimes_B y ) = j_G(x)\otimes_{B\rtimes_r G} j_G(y).\]
+\end{prop}
+
+An important remark that we will use later is that $- \rtimes G$ preserves semi-split exact sequences. More precisely, let 
+$\begin{tikzcd}[column sep = small]
+0\arrow{r} &  A'\arrow{r} &  A \arrow{r} &  A'' \arrow{r} & 0
+\end{tikzcd}$
+be an equivariant exact sequence of $G$-algebras which has a completely positive $G$-equivariant section, then
+$\begin{tikzcd}[column sep = small]
+0\arrow{r} &  A'\rtimes_r G \arrow{r} &  A\rtimes_r G \arrow{r} &  A''\rtimes_r G \arrow{r} & 0
+\end{tikzcd}$ is an exact sequence of $C^*$-algebras.\\
+
+What about functoriality in the $G$-variable ? If we reduce our considerations to reduced $C^*$-algebras, the work of J-L. Tu \ref{TuNonHaus} allows to state the following results.\\
+
+\begin{definition}
+A generalised morphism $(Z,p,p')$ from $G$ to $G'$ is said to be proper if 
+\begin{itemize}
+\item[$\bullet$] it is locally proper : the action of $G$ is proper,
+\item[$\bullet$] for every compact subset $K\subset G'^{(0)}$, $p'^{-1}(K)$ is $G$-compact.
+\end{itemize}
+\end{definition}
+
+\begin{prop}[Tu, \ref{TuNonHaus}]
+Let $G$ and $G'$ be two locally compact groupoids with Haar systems, and $(Z,p,p')$ a generalized morphism from $G$ to $G'$. \\
+If $(Z,p,p')$ is locally proper, the one can construct a $C^*$-correspondence $(E,\pi)$ from $C_r^*(G_1)$ to $C^*_r(G_2)$. \\
+Moreover, if the generalized morphism is proper, $\pi : C^*_r(G')\rightarrow \mathcal L(E)$ maps to the compact operators, so that $(Z,p,p')$ defines an element of $KK(C_r^*(G'),C_r^*(G))$.\\
+These construction are functorial with respect to composition of generalized morphisms and $C^*$-correspondences.\\ 
+\end{prop}
+
+\textbf{Some remarks.} The result of J-L. Tu applies even if the groupoids are non-Hausdorff. If we actually consider a strict morphism $\phi: G_1 \rightarrow G_2$, the generalized morphism is proper iff $\phi$ restricted to $(G_1)^K_K$ is proper, for every compact subset $K\in G_1^{(0)}$.\\ 
+
 \subsection{From coarse spaces to groupoids}
 
 This section gives details on he construction of the coarse groupoid from \ref{SkTuYu}.\\
@@ -124,7 +228,7 @@ But $C_0(X)$ acts faithfully by multiplication on $C_0(X,\mathfrak K)$, hence on
 
 If $T\in C_E[X,H_X]$, define $f(g)=T_{s(g),r(g)}$ when $g\in X\times X$, and extend $f$ by continuity to get $f : \overline E \rightarrow D$, and $f(g)\in D_{s(g)}$.\\
 
-If $f:\overline E \rightarrow D$ is a continuous function such that $f(g)\in D_{s(g)}$, define $T\in C_E[X,H_X]$ by $T\xi = f\xi$. This defines a $*$-homomorphism $D\rtimes_r G \rightarrow C^*(X,H_X)$. The previous construction shows it is surjective. But the action of $D\rtimes_r G$ on $H_X$ being faithful, it is also injective, which concludes the proof.
+If $f:\overline E \rightarrow D$ is a continuous function such that $f(g)\in D_{s(g)}$, define $T\in C_E[X,H_X]$ by $T\xi = f\xi$. This defines a $*$-homomorphism $D\rtimes_r G \rightarrow C^*(X,H_X)$. The previous construction shows it is surjective. But the action of $D\rtimes_r G$ on $H_X$ being faithful, it is also injective, which concludes the proof.\\
 \end{proof}
 
 

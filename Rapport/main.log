@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  6 JUL 2016 17:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.3)  7 JUL 2016 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -889,7 +889,17 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 23.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--43
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
@@ -897,7 +907,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--43
 
 
 ]
-Overfull \hbox (23.67897pt too wide) in paragraph at lines 49--50
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 53.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 53.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 53.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--73
+
+ []
+
+
+Overfull \hbox (23.67897pt too wide) in paragraph at lines 79--80
 []\OT1/cmr/m/n/10 The pro-pa-ga-tion of $\OML/cmm/m/it/10 T$ \OT1/cmr/m/n/10 is
  the smal-lest $\OML/cmm/m/it/10 E \OMS/cmsy/m/n/10 2 E$ \OT1/cmr/m/n/10 such t
 hat supp $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 ^^Z \OML/cmm/m/it/10 E$\OT1/cmr/m
@@ -905,89 +933,39 @@ hat supp $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 ^^Z \OML/cmm/m/it/10 E$\OT1/cmr/m
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
-
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 81.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 81.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 81.
-
-
-LaTeX Warning: Reference `SkTuYu' on page 5 undefined on input line 85.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
 [5]
-
-LaTeX Warning: Reference `RoeCoarse' on page 6 undefined on input line 95.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
 
-LaTeX Warning: Reference `SkTuYu' on page 6 undefined on input line 101.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
 
-LaTeX Warning: Reference `SkTuYu' on page 6 undefined on input line 111.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 111.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 111.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 111.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
 [6]
-LaTeX Font Info:    Try loading font information for U+euf on input line 115.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 121--122
-
- []
-
-
-Overfull \hbox (14.82133pt too wide) in paragraph at lines 123--124
-\OML/cmm/m/it/10 L[]G; J\OT1/cmr/m/n/10 )$, which makes it a n.d.s. $\OML/cmm/m
-/it/10 X$\OT1/cmr/m/n/10 -module and in-duces a fai-th-ful map $\OML/cmm/m/it/1
-0 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; H[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10
- !
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
@@ -996,7 +974,131 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-) [7]
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+
+ []
+
+[7]
+
+LaTeX Warning: Reference `LeGall' on page 8 undefined on input line 154.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--167
+
+ []
+
+
+LaTeX Warning: Reference `TuNonHaus' on page 8 undefined on input line 168.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+
+ []
+
+
+LaTeX Warning: Reference `TuNonHaus' on page 8 undefined on input line 178.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--183
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
+
+ []
+
+
+LaTeX Warning: Reference `SkTuYu' on page 8 undefined on input line 189.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+
+ []
+
+[8]
+
+LaTeX Warning: Reference `RoeCoarse' on page 9 undefined on input line 199.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
+
+ []
+
+
+LaTeX Warning: Reference `SkTuYu' on page 9 undefined on input line 205.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
+
+ []
+
+
+LaTeX Warning: Reference `SkTuYu' on page 9 undefined on input line 215.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 219.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+
+ []
+
+
+Overfull \hbox (14.82133pt too wide) in paragraph at lines 227--228
+\OML/cmm/m/it/10 L[]G; J\OT1/cmr/m/n/10 )$, which makes it a n.d.s. $\OML/cmm/m
+/it/10 X$\OT1/cmr/m/n/10 -module and in-duces a fai-th-ful map $\OML/cmm/m/it/1
+0 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; H[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10
+ !
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
+) [10]
 \openout2 = `QKtheory.aux'.
 
  (./QKtheory.tex
@@ -1033,7 +1135,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[8
+[11
 
 
 ]
@@ -1060,7 +1162,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
-[9] [10]) [11]
+[12] [13]) [14]
 \openout2 = `QuantitativeStatements.aux'.
 
  (./QuantitativeStatements.tex
@@ -1068,7 +1170,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
-[12
+[15
 
 
 ]
@@ -1076,7 +1178,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[13]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
@@ -1092,7 +1194,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--61
 
  []
 
-[14]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
@@ -1112,19 +1214,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[15]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 117--119
 
  []
 
 
 Overfull \hbox (7.26021pt too wide) in paragraph at lines 121--122
-[][]\OT1/cmr/bx/n/10 D^^Sefinition 10. []\OT1/cmr/m/n/10 The control-led Kas-pa
+[][]\OT1/cmr/bx/n/10 D^^Sefinition 16. []\OT1/cmr/m/n/10 The control-led Kas-pa
 -rov trans-form of an ele-ment $\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 2 \OML/cmm/
 m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
  []
 
-[16]
+[19]
 Overfull \hbox (14.45294pt too wide) in paragraph at lines 149--150
 []\OT1/cmr/m/n/10 If $\OML/cmm/m/it/10 z; z[]$ \OT1/cmr/m/n/10 are ele-ments of
  $\OML/cmm/m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
@@ -1142,7 +1244,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
-[17]
+[20]
 Overfull \hbox (22.48785pt too wide) in paragraph at lines 175--177
 \OT1/cmr/m/n/10 Indeed, the crossed-product func-tor com-mutes with pull-back b
 y $\OMS/cmsy/m/n/10 G$\OT1/cmr/m/n/10 -morphisms,
@@ -1153,12 +1255,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--190
 
  []
 
-[18]
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
-[19]
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
@@ -1168,12 +1270,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
-[20]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 267--270
 
  []
 
-[21] [22]
+[24] [25]
 Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
@@ -1193,7 +1295,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
-[23]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
@@ -1243,7 +1345,7 @@ ML/cmm/m/it/10 ; [] '[]; [] F[]\OT1/cmr/m/n/10 )]$ as a prei-mage of $[][][(\OM
 S/cmsy/m/n/10 E[]\OML/cmm/m/it/10 ; '[]; F[]\OT1/cmr/m/n/10 )]$,
  []
 
-[24]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 399--402
 
  []
@@ -1253,7 +1355,7 @@ Overfull \hbox (309.84613pt too wide) detected at line 407
 []
  []
 
-[25]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
@@ -1273,7 +1375,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
-[26]
+[29]
 Overfull \hbox (13.52803pt too wide) in paragraph at lines 453--457
 \OT1/cmr/m/n/10 Assume the sta-te-ment does not holds : there exists $\OML/cmm/
 m/it/10 ^^O$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 R$ \OT1/cmr/m/n/10 such that
@@ -1281,7 +1383,7 @@ m/it/10 ^^O$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 R$ \OT1/cmr/m/n/10 such that
 mr/m/n/10 )$
  []
 
-) [27]
+) [30]
 \openout2 = `FDC.aux'.
 
  (./FDC.tex
@@ -1289,10 +1391,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-[28
+[31
 
 
-]) [29]
+]) [32]
 \openout2 = `StandardModules.aux'.
 
  (./StandardModules.tex
@@ -1339,7 +1441,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-[30
+[33
 
 
 ]
@@ -1364,7 +1466,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
 
 Overfull \hbox (16.62883pt too wide) in paragraph at lines 60--61
-[][]\OT1/cmr/bx/n/10 D^^Sefinition 16. []\OT1/cmr/m/n/10 A $\OML/cmm/m/it/10 X$
+[][]\OT1/cmr/bx/n/10 D^^Sefinition 22. []\OT1/cmr/m/n/10 A $\OML/cmm/m/it/10 X$
 \OT1/cmr/m/n/10 -module is a Hil-bert space $\OML/cmm/m/it/10 H[]$ \OT1/cmr/m/n
 /10 equip-ped with a $\OMS/cmsy/m/n/10 ^^C$\OT1/cmr/m/n/10 -representation
  []
@@ -1374,7 +1476,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-[31]
+[34]
 Overfull \hbox (2.40877pt too wide) in paragraph at lines 75--75
 []\OT1/cmr/bx/n/10 Remark : \OT1/cmr/m/n/10 We can in-duce $\OML/cmm/m/it/10 V$
  \OT1/cmr/m/n/10 on the Roe al-ge-bras by $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 T
@@ -1404,11 +1506,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
  []
 
 
-LaTeX Warning: Reference `TuBC2' on page 32 undefined on input line 87.
+LaTeX Warning: Reference `TuBC2' on page 35 undefined on input line 87.
 
-[32]) [33] (./main.bbl)
+[35]) [36] (./main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
- [34
+ [37
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
@@ -1418,7 +1520,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DD74A40E380FD4D8D7EE2A802F02C7D4;1823.
+(rerunfilecheck)             Checksum: C1EB48452409365F07CB2D6F7226ED73;1911.
 
 
 LaTeX Warning: There were undefined references.
@@ -1426,10 +1528,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 34.
  ) 
 Here is how much of TeX's memory you used:
- 17599 strings out of 494958
- 320447 string characters out of 6179263
- 389571 words of memory out of 5000000
- 20357 multiletter control sequences out of 15000+600000
+ 17707 strings out of 494958
+ 322982 string characters out of 6179263
+ 390314 words of memory out of 5000000
+ 20452 multiletter control sequences out of 15000+600000
  15367 words of font info for 60 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  58i,16n,75p,1366b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1454,10 +1556,10 @@ nts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts
 type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (34 pages, 389379 bytes).
+Output written on main.pdf (37 pages, 402001 bytes).
 PDF statistics:
- 503 PDF objects out of 1000 (max. 8388607)
- 440 compressed objects within 5 object streams
- 123 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 534 PDF objects out of 1000 (max. 8388607)
+ 468 compressed objects within 5 object streams
+ 136 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 

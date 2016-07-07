@@ -189,7 +189,7 @@ month = "Summer"
 @book{RoeCoarse,
     title = "Lectures on Coarse Geometry",
     author = "John Roe",
-    publisher = "University Lectures serie, American Mathematical Society",
+    publisher = "University Lectures Series, American Mathematical Society",
     year = "2003",
     volume  = "31"
  }
@@ -248,6 +248,15 @@ month = "Summer"
     volume  = "18",
     number  = "",
     pages   = "1-27"
+}
+
+@article{TuNonHaus,
+    author  = "Jean-Louis Tu",
+    title   = "Non-Hausdorff Groupoids, proper actions and $K$-theory",
+    year    = "",
+    journal = "",
+    volume  = "",
+    pages   = ""
 }
 
 @book{WeggeOlsen,
