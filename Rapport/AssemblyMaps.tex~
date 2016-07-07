@@ -1,0 +1,88 @@
+\section{Assembly Maps}
+
+In this section, all groupoids $G\rightrightarrows G^{(0)}$ are étale. 
+
+\subsection{Proper groupoids and proper actions}
+
+\begin{definition}
+A topological groupoid $G\rightrightarrows G^{(0)}$ is proper if the map $G\times_s G^{(0)}\rightarrow G^{(0)}\times G^{(0)}$ defined by $(g,z)\mapsto (z,gz)$ is a proper map.\\
+A $G$-space $Z$ is said to be proper if the crossed-product groupoid $Z\rtimes G$ is proper. If the space of orbits $Z/G$ is compact, $Z$ is called $G$-compact.\\
+\end{definition}
+
+\begin{definition}
+A $G$-space $\underline E G$ is called universal if, given any proper $G$-compact $G$-space $Z$, there exists a continuous $G$-equivariant map $Z\rightarrow \underline E G$.
+\end{definition}
+
+We now construct a model for universal spaces of $G$, based on J.-L.Tu's work \ref{TuBC2}. For any compact subset $K\subset G$, define $P_K(G)$ to be the space of probability measures $\nu $ with support contained in one and only one fiber $G^x$ for some $x\in G^{(0)}$, and such that if $g,g'\in \text{supp }(\nu)$, then $g'g^{-1}\in K$. We endow $P_K(G)$ with the weak-$*$ topology.\\
+
+The action of $G$ is defined by translation. The momentum map $P_K(G)\rightarrow G^{(0)}$ is just the map associating to $\nu$ the only $x$ such that $\text{supp }(\nu) \subset G^x$. As the fibers are discrete, any $\nu\in P_K(G)$ can be represented as as sum $\nu = \sum_{g\in G^x} \lambda_g(\nu)\delta_g$, where $\delta_g$ is the Dirac measure at $g\in G $. The continuous functions $\lambda_g$ are called coordinate functions and satisfy $\sum_{g\in G^x} \lambda_g(\nu) =1$ for every $x\in G^{(0)}$. The action of $G$ is given by $g\lambda_h = \lambda_{g^{-1}h}$.\\
+
+\begin{lem}[Tu,\ref{TuBC2}]
+The action of $G$ on $P_K(G)$ is proper and cocompact.
+\end{lem}  
+
+\begin{lem}[Tu,\ref{TuBC2}]
+Let $Z$ be a proper $G$-compact $G$-space. Then there exists a compact subset $K\subset G$ and a $G$-equivariant continuous map $Z\rightarrow P_K(G)$.
+\end{lem}  
+
+\subsection{Equivariant $K$-homology}
+
+We will use the equivariant $KK$-theory developped by Le Gall in his thesis \ref{LeGall}, which is an extension of the usual equivariant $KK$-theory of Kasparov. Recall that, if $A$ and $B$ are two $G$-algebras, elements of $KK^G(A,B)$ are homotopy classes of triple $(E,\pi,T)$ where :\\
+
+\begin{itemize}
+\item[$\bullet$] $E$ is a $G$-module,
+\item[$\bullet$] $\pi : A\rightarrow \mathcal L_B(E)$ is a $*$-homomorphism,
+\item[$\bullet$] $T\in \mathcal L_B(E)$ is an adjoinable operator such that the triple satisfies the condition of $K$-cycle : $\pi(a)(T^2-T),\pi(a)(T^*-T)[\pi(a),T]$, and $\pi(a)(T-g.T)$ are compact operators if $E$, for all $a\in A, g\in G$.\\
+\end{itemize}
+
+\begin{definition}
+Let $Y$ be a proper $G$-space and $B$ a $G$-algebra. Then the analytic $K$-homology of $Y$ with coefficients in $B$ is defined by 
+\[RK^G(Y,B) = \varinjlim_{Z\subset Y} KK^G(C_0(Z),B), \]
+the inductive limit being taken on proper $G$-compact $G$-subspaces $Z$ of $Y$.
+\end{definition}
+
+The previous lemmas assures that this inductive limit can be somehow restricted when it comes to the analytic $>K$-homology of any universal space $\underline E G$ :
+\[RK^G(\underline E G,B) = \varinjlim_{K\subset G \text{ compact }} KK^G(C_0(P_K(G)),B).\]
+
+
+\subsection{The assembly map}
+
+If $Z$ is a proper $G$-compact $G$-space, $Z\rtimes G$ is a proper groupoid by definition, hence there exists a cutoff function $c : Z\rightarrow [0,1]$ such that $\int_G^{p(z)} c(zg)d\lambda^x(g) = 1$. The function $g\mapsto c(r(g))^{\frac{1}{2}}c(s(g))^{\frac{1}{2}} $ defines a projection in $C_0(Z)\rtimes_r G$ which we denote by $\mathcal L_Z$. If $Z=P_K(G)$, then $\mathcal L_Z = \mathcal L_K$.
+
+\begin{definition}
+The assembly map for $G$ with coefficients in $B$ is defined as the inductive limit of the maps $\mu_{G,B}^{(Z)} : KK^G(C_0(Z),B)\rightarrow K(B\rtimes_r B)$ given by
+\[\mu_{G,B}^{(Z)} (z)=[\mathcal L_Z]\otimes_{C_0(Z)\rtimes G} j_G(z),\]
+that is $\mu_{G,B} = \varinjlim \mu_{G,B}^{(Z)}$ (one has to check that theses maps respects the inductive systems, which they do).
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

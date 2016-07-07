@@ -20,6 +20,8 @@
 \newpage
 \newpage
 \include{Intro}
+\include{StateOfTheArt}
+\include{Assemblymaps}
 \include{QKtheory}
 \include{QuantitativeStatements}
 \include{FDC}
