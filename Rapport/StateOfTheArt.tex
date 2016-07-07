@@ -108,7 +108,16 @@ Now, if $H_X$ and $H'_X$ are two s.n.d. $X$-modules, apply the preceding lemma t
 
 If we decide to fix a s.n.d. module for every coarse space, we can speak of "the" Roe algebra of $X$, and we saw that a coarse map between two coarse spaces $h : X\rightarrow Y$ induces a $*$-homomorphism $h_* : C^*(X,H_X)\rightarrow C^*(Y,H_Y)$. \\
 
-We will now define a dimension on coarse spaces, after an idea of Gromov.\\
+We will now define a dimension on coarse spaces, after an idea of Gromov \textbf{à vérifier}, and that was extensively used in coarse geometry.\\
+
+\begin{definition}
+A coarse space $(X,\mathcal E)$ is said to have asymptotic dimension less than $d$ if, for every $E\in \mathcal E$, there is a controlled set $F\in\mathcal F$ and a family $\mathcal U$ of susbsets such that 
+\begin{itemize}
+\item[$\bullet$] $\mathcal U$ covers $X$,
+\item[$\bullet$] every $U\in \mathcal U$ is $F$-controlled, i.e. $\sqcup_{U \in \mathcal U} U\times U \subset F$,
+\item[$\bullet$] we have a decomposition $\mathcal U = \mathcal U_0 \sqcup ... \sqcup \mathcal U_d$ such that every pair of subsets of a $\mathcal U^{(j)}$ are $E$-separated.
+\end{itemize}
+\end{definition}
 
 \subsection{From groupoids to $C^*$-algebras}
 
