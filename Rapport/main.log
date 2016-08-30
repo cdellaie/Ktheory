@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.23)  30 AUG 2016 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.23)  30 AUG 2016 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -749,19 +749,41 @@ Type  H <return>  for immediate help.
 l.38 \pgfkeys{/handlers/first char syntax=true}
                                                
 ? 
+)
+! I can't find file `tikzlibraryarrows.meta.code.tex'.
+<argument> ...nput tikzlibrary\pgf@temp .code.tex 
+                                                  \catcode `\@ =\csname tikz...
+l.18 \usetikzlibrary{matrix,quotes,arrows.meta}
+                                               
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `tikzlibraryarrows.meta.code.tex'.
+<argument> ...nput tikzlibrary\pgf@temp .code.tex 
+                                                  \catcode `\@ =\csname tikz...
+l.18 \usetikzlibrary{matrix,quotes,arrows.meta}
+                                               
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `tikzlibraryarrows.meta.code.tex'.
+<argument> ...nput tikzlibrary\pgf@temp .code.tex 
+                                                  \catcode `\@ =\csname tikz...
+l.18 \usetikzlibrary{matrix,quotes,arrows.meta}
+                                               
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
 ! Emergency stop.
- ...                                              
-                                                  
-l.38 \pgfkeys{/handlers/first char syntax=true}
+<argument> ...nput tikzlibrary\pgf@temp .code.tex 
+                                                  \catcode `\@ =\csname tikz...
+l.18 \usetikzlibrary{matrix,quotes,arrows.meta}
                                                
 End of file on the terminal!
 
  
 Here is how much of TeX's memory you used:
- 11371 strings out of 494883
- 204447 string characters out of 6178693
- 248543 words of memory out of 5000000
- 14464 multiletter control sequences out of 15000+600000
+ 11394 strings out of 494883
+ 204818 string characters out of 6178693
+ 250373 words of memory out of 5000000
+ 14487 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  58i,0n,57p,428b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
