@@ -1,49 +1,60 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
 A level-1 auxiliary file: Intro.aux
+A level-1 auxiliary file: StateOfTheArt.aux
+A level-1 auxiliary file: AssemblyMaps.aux
 A level-1 auxiliary file: QKtheory.aux
 A level-1 auxiliary file: QuantitativeStatements.aux
 A level-1 auxiliary file: FDC.aux
+A level-1 auxiliary file: StandardModules.aux
 The style file: plain.bst
 Database file #1: biblio.bib
-You're missing a field part---line 100 of file biblio.bib
- :     volume  = 
- :               ,
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 129 of file biblio.bib
- : 
- : month = "10"
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 139 of file biblio.bib
- : 
- : month = ""
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 149 of file biblio.bib
- : 
- : month = ""
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 159 of file biblio.bib
- : 
- : month = "Summer"
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Too many commas in name 1 of "Skandalis, G, Tu, J.L. , Yu, G." for entry SkTuYu
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Skandalis, G, Tu, J.L. , Yu, G." for entry SkTuYu
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Skandalis, G, Tu, J.L. , Yu, G." for entry SkTuYu
-while executing---line 1049 of file plain.bst
 Warning--empty journal in LeGall
 Warning--empty year in LeGall
 Warning--empty year in OY2
 Warning--empty journal in OY3
 Warning--empty year in OY3
-Too many commas in name 1 of "Skandalis, G, Tu, J.L. , Yu, G." for entry SkTuYu
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Skandalis, G, Tu, J.L. , Yu, G." for entry SkTuYu
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Skandalis, G, Tu, J.L. , Yu, G." for entry SkTuYu
-while executing---line 1090 of file plain.bst
-(There were 11 error messages)
+Warning--there's a number but no volume in LaffOY
+You've used 12 entries,
+            2118 wiz_defined-function locations,
+            578 strings with 5335 characters,
+and the built_in function-call counts, 3036 in all, are:
+= -- 291
+> -- 84
+< -- 0
++ -- 42
+- -- 24
+* -- 186
+:= -- 530
+add.period$ -- 34
+call.type$ -- 12
+change.case$ -- 46
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 131
+empty$ -- 279
+format.name$ -- 24
+if$ -- 627
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 14
+newline$ -- 61
+num.names$ -- 24
+pop$ -- 53
+preamble$ -- 1
+purify$ -- 36
+quote$ -- 0
+skip$ -- 76
+stack$ -- 0
+substring$ -- 204
+swap$ -- 10
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 44
+warning$ -- 6
+while$ -- 31
+width$ -- 14
+write$ -- 122
+(There were 6 warnings)
