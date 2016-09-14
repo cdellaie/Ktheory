@@ -44,6 +44,19 @@ the inductive limit being taken on proper $G$-compact $G$-subspaces $Z$ of $Y$.
 The previous lemmas assures that this inductive limit can be somehow restricted when it comes to the analytic $>K$-homology of any universal space $\underline E G$ :
 \[RK^G(\underline E G,B) = \varinjlim_{K\subset G \text{ compact }} KK^G(C_0(P_K(G)),B).\]
 
+\subsection{Descent functor}
+
+There exists a natural transformation $KK^G(A,B)\rightarrow KK(A\rtimes_r G, B\rtimes_r G)$ respecting the Kasparov product, which is called the descent functor. The same statement remains true for maximal crossed products. We recall its construction, which was first stated in \cite{LeGall}.\\
+ 
+Let $A$ and $B$ be two $G$-algebras and $(E,\pi,T)\in E^G(A,B)$ be a $K$-cycle. Define :
+\begin{itemize}
+\item[$\bullet$] $E_G$ to be the completion of $C_c(G,E)$ with respect to the norm $||f||= \sup_{x\in G^{(0)}} \sum_{G^x} |f(g)|^2$,
+\item[$\bullet$] $\pi_G$ to be the image of $\pi:A \rightarrow \mathcal L_B(E)$ under the reduced crossed-product functor,
+\item[$\bullet$] $T_G$ to be the image of $T\in\mathcal L(E)$ under the reduced crossed-product functor.
+\end{itemize}
+Then $(E_G,\pi_G,T_G)\in E(A\rtimes_r G,B\rtimes_r G)$ and the map $(E,\pi,T)\mapsto (E_G,\pi_G,T_G) $ induces a homorphism of abelian groups
+\[j_G : KK^G(A,B)\rightarrow KK(A\rtimes_r G,B\rtimes_r G)\]
+satisfying $j_G(z\otimes_D z')=j_G(z)\otimes_{D\rtimes_r G} j_G(z')$ for any $z\in KK^G(A,D), z'\in KK^G(D,B)$.\\ 
 
 \subsection{The assembly map}
 
@@ -75,7 +88,23 @@ Here is the status of the conjecture :
 \item[$\bullet$] V. Lafforgue showed the conjecture for every semi-simple Lie group, real or $p$-adic reductive, and discrete cocompact subgroup of real rank $1$ Lie groups or of $SL(3,k)$ for any local field $k$. 
 \end{itemize}
 
+\subsection{The Coarse Assembly map}
 
+The construction of the Coarse Assembly map is very similar to the Assembly map for groupoids, but relies on different functors.\\
+
+In \cite{SkTuYu} is defined the Roe algebra $C^*(X,B)$ of a discrete metric space with bounded geometry $X$ with coefficients in an arbitrary $C^*$-algebra $B$. For $R>0$, define $C_R[X,B]$ to be the involutive subspace of operators $T\in \mathcal L_B(l^2(X)\otimes H\otimes B)$ such that $T_{xy}\in \mathfrak K(H\otimes B)$ and $T_{xy}=0$ as soon as $d(x,y)>R$, and $\C[X,B]= \cup_{R>0} C_R[X,B]$. 
+
+\begin{definition}
+The Roe algebra $C^*(X,B)$ is defined as the Hibert $B$-module obtained after the completion of $\C[X,B]$ with respect to the operator norm in $\mathcal L_B(l^2(X)\otimes H\otimes B)$.
+\end{definition} 
+
+This construction is functorial : any $*$-homomorphism $\phi: A\rightarrow B$ gives rise to a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$. Moreover this functoriality extends to $KK$-theory : there exists a natural transformation 
+\[\sigma_X : KK(A,B)\rightarrow KK(C^*(X,A),C^*(X,B)\]
+which respects the Kasparov product, i.e. $\sigma(z\otimes_D z')=\sigma_X(z)\otimes_{C^*(X,D)} \sigma_X(z')\quad,\forall z\in KK(A,D),z'\in KK(D,B)$.\\
+
+Let $X$ be a coarse space. The coarse homology group of $X$ with coefficients in an arbitrary $C^*$-algebra $B$ is defined as follows.
+\[KX_*(X,B)=\varinjlim_{E\in \mathcal E_X} RK(P_E(X),B)\]
+where the limit is taken along the inductive system $\{P_E(X)\}$. 
 
 
 

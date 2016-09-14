@@ -11,21 +11,23 @@
 \BOOKMARK [1][-]{section.3}{Assembly Maps}{}% 11
 \BOOKMARK [2][-]{subsection.3.1}{Proper groupoids and proper actions}{section.3}% 12
 \BOOKMARK [2][-]{subsection.3.2}{Equivariant K-homology}{section.3}% 13
-\BOOKMARK [2][-]{subsection.3.3}{The assembly map}{section.3}% 14
-\BOOKMARK [2][-]{subsection.3.4}{The Baum-Connes conjecture}{section.3}% 15
-\BOOKMARK [1][-]{section.4}{Quantitative statements}{}% 16
-\BOOKMARK [2][-]{subsection.4.1}{A reminder on groupoids action}{section.4}% 17
-\BOOKMARK [2][-]{subsection.4.2}{The Baum-Connes conjecture}{section.4}% 18
-\BOOKMARK [2][-]{subsection.4.3}{Length, propagation and controlled six-terms exact sequence}{section.4}% 19
-\BOOKMARK [2][-]{subsection.4.4}{The Kasparov transform}{section.4}% 20
-\BOOKMARK [3][-]{subsubsection.4.4.1}{Odd case}{subsection.4.4}% 21
-\BOOKMARK [3][-]{subsubsection.4.4.2}{Even case}{subsection.4.4}% 22
-\BOOKMARK [2][-]{subsection.4.5}{Quantitative assembly maps}{section.4}% 23
-\BOOKMARK [3][-]{subsubsection.4.5.1}{Classifying space for proper actions}{subsection.4.5}% 24
-\BOOKMARK [2][-]{subsection.4.6}{Quantitative statements}{section.4}% 25
-\BOOKMARK [1][-]{section.5}{Decomposition complexity}{}% 26
-\BOOKMARK [2][-]{subsection.5.1}{Examples and applications}{section.5}% 27
-\BOOKMARK [1][-]{section.6}{ Mayer-Vietoris exact sequences and controlled cutting and pasting}{}% 28
-\BOOKMARK [2][-]{subsection.6.1}{Mayer-Vietoris sequence in K-homology}{section.6}% 29
-\BOOKMARK [2][-]{subsection.6.2}{Standard modules}{section.6}% 30
-\BOOKMARK [1][-]{section.7}{Nuclear dimension}{}% 31
+\BOOKMARK [2][-]{subsection.3.3}{Descent functor}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.4}{The assembly map}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.5}{The Baum-Connes conjecture}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.6}{The Coarse Assembly map}{section.3}% 17
+\BOOKMARK [1][-]{section.4}{Quantitative statements}{}% 18
+\BOOKMARK [2][-]{subsection.4.1}{A reminder on groupoids action}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.2}{The Baum-Connes conjecture}{section.4}% 20
+\BOOKMARK [2][-]{subsection.4.3}{Length, propagation and controlled six-terms exact sequence}{section.4}% 21
+\BOOKMARK [2][-]{subsection.4.4}{The Kasparov transform}{section.4}% 22
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Odd case}{subsection.4.4}% 23
+\BOOKMARK [3][-]{subsubsection.4.4.2}{Even case}{subsection.4.4}% 24
+\BOOKMARK [2][-]{subsection.4.5}{Quantitative assembly maps}{section.4}% 25
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Classifying space for proper actions}{subsection.4.5}% 26
+\BOOKMARK [2][-]{subsection.4.6}{Quantitative statements}{section.4}% 27
+\BOOKMARK [1][-]{section.5}{Decomposition complexity}{}% 28
+\BOOKMARK [2][-]{subsection.5.1}{Examples and applications}{section.5}% 29
+\BOOKMARK [1][-]{section.6}{ Mayer-Vietoris exact sequences and controlled cutting and pasting}{}% 30
+\BOOKMARK [2][-]{subsection.6.1}{Mayer-Vietoris sequence in K-homology}{section.6}% 31
+\BOOKMARK [2][-]{subsection.6.2}{Standard modules}{section.6}% 32
+\BOOKMARK [1][-]{section.7}{Nuclear dimension}{}% 33

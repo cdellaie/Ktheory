@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.5)  14 SEP 2016 12:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.5)  14 SEP 2016 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1344,22 +1344,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 58--60
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
 
-Overfull \hbox (0.13948pt too wide) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+
+Overfull \hbox (0.13948pt too wide) in paragraph at lines 87--88
 []\OT1/cmr/m/n/10 V. Laf-forgue pro-ved the conjec-ture with co-ef-fi-cients fo
 r hy-per-bo-lic groups. 
  []
 
-) [16]
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
+Overfull \hbox (18.95891pt too wide) in paragraph at lines 102--104
+\OT1/cmr/m/n/10 which res-pects the Kas-pa-rov pro-duct, i.e. $\OML/cmm/m/it/10
+ ^^[\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 
+[] \OML/cmm/m/it/10 z[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 ^^[[]\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 
+[] \OML/cmm/m/it/10 ^^[[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z[]\OT1/cmr/m/n/10 )
+ \OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 2
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
+
+ []
+
+[17]) [18]
 \openout2 = `QuantitativeStatements.aux'.
 
  (./QuantitativeStatements.tex
@@ -1367,7 +1397,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
-[17
+[19
 
 
 ]
@@ -1375,7 +1405,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[18]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
@@ -1396,7 +1426,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-[19]
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
@@ -1411,14 +1441,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[20]
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 117--119
 
  []
 
 
 Overfull \hbox (7.26021pt too wide) in paragraph at lines 121--122
-[][]\OT1/cmr/bx/n/10 D^^Sefinition 21. []\OT1/cmr/m/n/10 The control-led Kas-pa
+[][]\OT1/cmr/bx/n/10 D^^Sefinition 22. []\OT1/cmr/m/n/10 The control-led Kas-pa
 -rov trans-form of an ele-ment $\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 2 \OML/cmm/
 m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
  []
@@ -1431,7 +1461,7 @@ Overfull \hbox (14.45294pt too wide) in paragraph at lines 149--150
 m/it/10 H[]; ^^Y[]; T[]\OT1/cmr/m/n/10 )$,
  []
 
-[21]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
@@ -1447,12 +1477,12 @@ Overfull \hbox (22.48785pt too wide) in paragraph at lines 175--177
 y $\OMS/cmsy/m/n/10 G$\OT1/cmr/m/n/10 -morphisms,
  []
 
-[22]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 188--190
 
  []
 
-[23]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
@@ -1462,17 +1492,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
 
-[24]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
-[25]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 267--270
 
  []
 
-[26] [27]
+[28] [29]
 Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
@@ -1515,7 +1545,7 @@ r/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n
 /10 )\OML/cmm/m/it/10 ; A\OT1/cmr/m/n/10 )$
  []
 
-[28]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
@@ -1542,7 +1572,7 @@ ML/cmm/m/it/10 ; [] '[]; [] F[]\OT1/cmr/m/n/10 )]$ as a prei-mage of $[][][(\OM
 S/cmsy/m/n/10 E[]\OML/cmm/m/it/10 ; '[]; F[]\OT1/cmr/m/n/10 )]$,
  []
 
-[29]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 399--402
 
  []
@@ -1562,7 +1592,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
-[30]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 428--429
 
  []
@@ -1587,7 +1617,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
-[31]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 443--444
 
  []
@@ -1600,7 +1630,7 @@ m/it/10 ^^O$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 R$ \OT1/cmr/m/n/10 such that
 mr/m/n/10 )$
  []
 
-) [32]
+) [34]
 \openout2 = `FDC.aux'.
 
  (./FDC.tex
@@ -1608,10 +1638,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-[33
+[35
 
 
-]) [34]
+]) [36]
 \openout2 = `StandardModules.aux'.
 
  (./StandardModules.tex
@@ -1658,7 +1688,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-[35
+[37
 
 
 ]
@@ -1683,7 +1713,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
 
 Overfull \hbox (16.62883pt too wide) in paragraph at lines 60--61
-[][]\OT1/cmr/bx/n/10 D^^Sefinition 27. []\OT1/cmr/m/n/10 A $\OML/cmm/m/it/10 X$
+[][]\OT1/cmr/bx/n/10 D^^Sefinition 28. []\OT1/cmr/m/n/10 A $\OML/cmm/m/it/10 X$
 \OT1/cmr/m/n/10 -module is a Hil-bert space $\OML/cmm/m/it/10 H[]$ \OT1/cmr/m/n
 /10 equip-ped with a $\OMS/cmsy/m/n/10 ^^C$\OT1/cmr/m/n/10 -representation
  []
@@ -1693,7 +1723,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-[36]
+[38]
 Overfull \hbox (2.40877pt too wide) in paragraph at lines 75--75
 []\OT1/cmr/bx/n/10 Remark : \OT1/cmr/m/n/10 We can in-duce $\OML/cmm/m/it/10 V$
  \OT1/cmr/m/n/10 on the Roe al-ge-bras by $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 T
@@ -1722,7 +1752,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
-[37]) [38]
+[39]) [40]
 \openout2 = `NuclearDimAsdim.aux'.
 
  (./NuclearDimAsdim.tex
@@ -1745,16 +1775,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-[39
+[41
 
 
-]) [40] (./main.bbl
+]) [42] (./main.bbl
 Underfull \hbox (badness 1755) in paragraph at lines 31--37
 \OT1/cmr/m/n/10 oyono-oyono.  \OT1/cmr/m/it/10 Jour-nal of the Ins-ti-tute of M
 a-the-ma-tics of Jus-sieu\OT1/cmr/m/n/10 ,
  []
 
-) [41
+) [43
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
@@ -1765,14 +1795,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 37.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A427FEF7E4DC0F4D9C7DFC01E8E8EDA6;2312.
+(rerunfilecheck)             Checksum: FFCAC75696160ACA76C9C2D29D2868EE;2450.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
  ) 
 Here is how much of TeX's memory you used:
- 20249 strings out of 494924
- 392484 string characters out of 6179709
+ 20256 strings out of 494924
+ 392571 string characters out of 6179709
  447165 words of memory out of 5000000
- 22992 multiletter control sequences out of 15000+600000
+ 22994 multiletter control sequences out of 15000+600000
  15367 words of font info for 60 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  58i,16n,84p,1366b,1150s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1797,10 +1827,10 @@ nts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts
 type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (41 pages, 425874 bytes).
+Output written on main.pdf (43 pages, 430520 bytes).
 PDF statistics:
- 622 PDF objects out of 1000 (max. 8388607)
- 551 compressed objects within 6 object streams
- 164 named destinations out of 1000 (max. 500000)
- 261 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 645 PDF objects out of 1000 (max. 8388607)
+ 572 compressed objects within 6 object streams
+ 169 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
