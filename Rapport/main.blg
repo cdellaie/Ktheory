@@ -3,58 +3,57 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: Intro.aux
 A level-1 auxiliary file: StateOfTheArt.aux
-A level-1 auxiliary file: AssemblyMaps.aux
 A level-1 auxiliary file: QKtheory.aux
+A level-1 auxiliary file: AssemblyMaps.aux
 A level-1 auxiliary file: QuantitativeStatements.aux
 A level-1 auxiliary file: FDC.aux
 A level-1 auxiliary file: StandardModules.aux
+A level-1 auxiliary file: NuclearDimAsdim.aux
 The style file: plain.bst
-Database file #1: biblio.bib
-Warning--empty journal in LeGall
-Warning--empty year in LeGall
-Warning--empty year in OY2
+Database file #1: biblio2.bib
 Warning--empty journal in OY3
 Warning--empty year in OY3
-Warning--there's a number but no volume in LaffOY
-You've used 12 entries,
+Warning--empty school in LeGall
+Warning--empty journal in WeggeOlsen
+You've used 18 entries,
             2118 wiz_defined-function locations,
-            578 strings with 5335 characters,
-and the built_in function-call counts, 3036 in all, are:
-= -- 291
-> -- 84
-< -- 0
-+ -- 42
-- -- 24
-* -- 186
-:= -- 530
-add.period$ -- 34
-call.type$ -- 12
-change.case$ -- 46
+            635 strings with 6561 characters,
+and the built_in function-call counts, 5245 in all, are:
+= -- 537
+> -- 177
+< -- 3
++ -- 78
+- -- 54
+* -- 351
+:= -- 889
+add.period$ -- 54
+call.type$ -- 18
+change.case$ -- 78
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 131
-empty$ -- 279
-format.name$ -- 24
-if$ -- 627
+cite$ -- 22
+duplicate$ -- 208
+empty$ -- 441
+format.name$ -- 54
+if$ -- 1074
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 14
-newline$ -- 61
-num.names$ -- 24
-pop$ -- 53
+int.to.str$ -- 18
+missing$ -- 19
+newline$ -- 92
+num.names$ -- 36
+pop$ -- 74
 preamble$ -- 1
-purify$ -- 36
+purify$ -- 63
 quote$ -- 0
-skip$ -- 76
+skip$ -- 137
 stack$ -- 0
-substring$ -- 204
-swap$ -- 10
-text.length$ -- 0
+substring$ -- 391
+swap$ -- 27
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
-warning$ -- 6
-while$ -- 31
-width$ -- 14
-write$ -- 122
-(There were 6 warnings)
+type$ -- 68
+warning$ -- 4
+while$ -- 61
+width$ -- 20
+write$ -- 193
+(There were 4 warnings)

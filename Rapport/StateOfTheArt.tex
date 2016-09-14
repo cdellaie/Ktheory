@@ -162,7 +162,7 @@ When $A=\C$ is the $C^*$-algebra of complex numbers with the trivial action of $
 
 The reduced cross-product is functorial in $A$ with respect to $*$-homomorphisms but does not respect equivariant exact sequences of $G$-algebras (unlike the maximal crossed-product, which does). Going to $KK$-theory, the reduced crossed-product is also functorial $KK^G\rightarrow KK$.\\
 
-\begin{prop}[LeGall \ref{LeGall}]
+\begin{prop}[LeGall \cite{LeGall}]
 There exists a homomorphism $j_G : KK^{G}(A,B)\rightarrow KK(A\rtimes_r G,B\rtimes_r G)$ which is natural with respect to the Kaparov product, i.e. $\forall x\in KK^G(A,B),\forall y\in KK^G(B,C)$, one has :
 \[j_G(x\otimes_B y ) = j_G(x)\otimes_{B\rtimes_r G} j_G(y).\]
 \end{prop}
@@ -176,7 +176,7 @@ $\begin{tikzcd}[column sep = small]
 0\arrow{r} &  A'\rtimes_r G \arrow{r} &  A\rtimes_r G \arrow{r} &  A''\rtimes_r G \arrow{r} & 0
 \end{tikzcd}$ is an exact sequence of $C^*$-algebras.\\
 
-What about functoriality in the $G$-variable ? If we reduce our considerations to reduced $C^*$-algebras, the work of J-L. Tu \ref{TuNonHaus} allows to state the following results.\\
+What about functoriality in the $G$-variable ? If we reduce our considerations to reduced $C^*$-algebras, the work of J-L. Tu \cite{TuNonHaus} allows to state the following results.\\
 
 \begin{definition}
 A generalised morphism $(Z,p,p')$ from $G$ to $G'$ is said to be proper if 
@@ -186,7 +186,7 @@ A generalised morphism $(Z,p,p')$ from $G$ to $G'$ is said to be proper if
 \end{itemize}
 \end{definition}
 
-\begin{prop}[Tu, \ref{TuNonHaus}]
+\begin{prop}[Tu, \cite{TuNonHaus}]
 Let $G$ and $G'$ be two locally compact groupoids with Haar systems, and $(Z,p,p')$ a generalized morphism from $G$ to $G'$. \\
 If $(Z,p,p')$ is locally proper, the one can construct a $C^*$-correspondence $(E,\pi)$ from $C_r^*(G_1)$ to $C^*_r(G_2)$. \\
 Moreover, if the generalized morphism is proper, $\pi : C^*_r(G')\rightarrow \mathcal L(E)$ maps to the compact operators, so that $(Z,p,p')$ defines an element of $KK(C_r^*(G'),C_r^*(G))$.\\
@@ -197,7 +197,7 @@ These construction are functorial with respect to composition of generalized mor
 
 \subsection{From coarse spaces to groupoids}
 
-This section gives details on he construction of the coarse groupoid from \ref{SkTuYu}.\\
+This section gives details on he construction of the coarse groupoid from \cite{SkTuYu}.\\
 
 Let $(X,\mathcal E)$ be a coarse space. The idea is to construct an étale groupoid $G(X)$ extending the pair groupoid $X\times X$. As a topological space, 
 \[G(X)= \cup_{E\in \mathcal E} \overline{E},\]
@@ -207,13 +207,13 @@ X\times X \arrow{r}\arrow{d}{\iota_{X\times X}} &  X \arrow{r}{\iota_X} & \beta 
 \beta (X\times X) \arrow[dotted]{urr} & & \\ 
 \end{tikzcd}.\]
 
-The only non trivial part is to extend the multiplication of the pair groupoid. This is done by extending the inclusion $E \rightarrow X\times X$ to $\overline{E} \rightarrow \beta X\times \beta X$. The corollary 10.31 of \ref{RoeCoarse} assures that 
+The only non trivial part is to extend the multiplication of the pair groupoid. This is done by extending the inclusion $E \rightarrow X\times X$ to $\overline{E} \rightarrow \beta X\times \beta X$. The corollary 10.31 of \cite{RoeCoarse} assures that 
 \begin{lem}
 The map $r\times s : \overline E \rightarrow \beta X\times \beta X$ is a topological embedding.
 \end{lem}
 Using this lemma, we can embed $G(X)$ in $\beta X\times \beta X$ and use the pair multiplication in this groupoid, the point being that such a multiplication $G(X)\times_{s,r} G(X) \rightarrow G(X)$ is continuous and extend the pair multiplication of $X\times X$.\\
 
-The following proposition (Proposition $3.5$ from \ref{SkTuYu}) assures that $X\mapsto G(X)$ is a functor from uniformly locally finite coarse spaces to groupoids with generalized morphisms as arrows.\\
+The following proposition (Proposition $3.5$ from \cite{SkTuYu}) assures that $X\mapsto G(X)$ is a functor from uniformly locally finite coarse spaces to groupoids with generalized morphisms as arrows.\\
 
 \begin{prop}
 Let $(X,\mathcal E_X)$ and $(Y,\mathcal E_Y)$ be two coarse spaces with uniformly locally finite coarse structures, then a coarse map $h :X\rightarrow Y$ induces a generalized morphism from $G(X)$ to $G(Y)$ :
@@ -223,7 +223,7 @@ G(X)\arrow[xshift=-0.7ex]{d}\arrow[xshift=0.7ex]{d} \ & \arrow{dl} Z \arrow{dr} 
 \end{tikzcd}\] 
 \end{prop}
 
-We now state a result from \ref{SkTuYu} (lemma $4.4$), and give, for the reader's convenience, a more detailed proof than that of the paper.\\
+We now state a result from \cite{SkTuYu} (lemma $4.4$), and give, for the reader's convenience, a more detailed proof than that of the paper.\\
 
 \begin{prop}
 Let $(X,\mathcal E)$ be a uniformly locally finite coarse space, then we have an isomorphism of $C^*$-algebras
