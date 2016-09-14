@@ -99,16 +99,41 @@ The Roe algebra $C^*(X,B)$ is defined as the Hibert $B$-module obtained after th
 \end{definition} 
 
 This construction is functorial : any $*$-homomorphism $\phi: A\rightarrow B$ gives rise to a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$. Moreover this functoriality extends to $KK$-theory : there exists a natural transformation 
-\[\sigma_X : KK(A,B)\rightarrow KK(C^*(X,A),C^*(X,B)\]
+\[\sigma_X : KK(A,B)\rightarrow KK(C^*(X,A),C^*(X,B))\]
 which respects the Kasparov product, i.e. $\sigma(z\otimes_D z')=\sigma_X(z)\otimes_{C^*(X,D)} \sigma_X(z')\quad,\forall z\in KK(A,D),z'\in KK(D,B)$.\\
 
-Let $X$ be a coarse space. The coarse homology group of $X$ with coefficients in an arbitrary $C^*$-algebra $B$ is defined as follows.
+Let $X$ be a coarse space with bounded geometry. The Rips complex is the inductive system of finite dimensional simplicial complexes
+\[P_E(X)=\{\eta\in \text{Prob}(X)\text{ s.t. supp }\eta\subset E\}\quad,\forall E\in \mathcal E_X,\]
+endowed with the $*$-weak topology. It is an inductive system with respect to inclusion of entourages.\\
+ 
+The coarse homology group of $X$ with coefficients in an arbitrary $C^*$-algebra $B$ is defined as 
 \[KX_*(X,B)=\varinjlim_{E\in \mathcal E_X} RK(P_E(X),B)\]
-where the limit is taken along the inductive system $\{P_E(X)\}$. 
+where the limit is taken along the inductive system $\{P_E(X)\}_{E\in\mathcal E_X}$. \\
 
+Let $E\in \mathcal E_X$. Any simplex $\eta\in P_E(X)$ can be written as a finite sum $\eta=\sum_x \lambda_x(\eta)\delta_x$ by boundedness of the geometry. Here, $\delta_x$ is the Dirac measure at $x\in X$. The functions $\lambda_x :\eta\mapsto \lambda_x(\eta)$ are continuous and satifisfy $\sum\lambda_x(\eta) = 1,\forall\eta\in P_E(X)$, so that
+\[V_0\left\{\begin{array}{rcl} 
+ C_0(P_E(X)) & \rightarrow 	& l^2(X)\otimes C_0(P_E(X)) 		\\ 
+ f           & \mapsto 		& (\lambda_x^{\frac{1}{2}}f)_{x\in X} 
+\end{array}\right.\] 
+is an isometry of $C_0(P_E(X))$-modules, and $V_0V_0^*\otimes id_H$ defines a projection in $l^2(X)\otimes H\otimes C_0(P_E(X))$ with finite propagation, so class $[\mathcal L_E]\in K_0(C^*(X,C_0(P_E(X)))$.\\
 
+\begin{definition}
+The Coarse Assembly map $\mu:KX_*(X,B)\rightarrow K_*(C^*(X,B))$ for $X$ with coefficients in $B$ is defined as 
+\[\forall z\in RK(P_E(X), B), \mu_{X,B}(z)=[\mathcal L_E]\otimes_{C^*(X,C_0(P_E(X)))} \sigma_X(z).\]
+\end{definition}
 
+The Coarse Baum-Connes conjecture is the following claim.\\
 
+%\begin{conjecture}
+For any coarse space $X$ with bounded geometry, the Coarse Assembly map $\mu_{X,\C}$ is an isomorphism.\\
+%\end{conjecture}
+
+Here are some remarks about the status of the conjecture :
+\begin{itemize}
+\item[$\bullet$] the conjecture is known to hold for any coarse space that admits a coarse embedding into a  separable Hilbert space\cite{Yu2}.
+\item[$\bullet$] couterexamples have been constructed \cite{HigsonLaffSk},
+\item[$\bullet$] Let $\Gamma$ be a finitely generated group, and $|\Gamma|$ the coarse space associated to the word-length metric (any two left invariant metric on $\Gamma$ are coarsely equivalent). Then the Coarse Baum-Connes conjecture for $|\Gamma|$ implies the Novikov conjecture for higher signatures for $\Gamma$.
+\end{itemize}
 
 
 
