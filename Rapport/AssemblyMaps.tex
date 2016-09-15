@@ -72,11 +72,11 @@ Another definition : with $Ad$...
 
 \subsection{The Baum-Connes conjecture}
 
-%\begin{conjecture}
+\begin{conj}[Baum-Connes conjecture]
 Let $G$ be an étale groupoid, and $A$ a $G$-algebra.\\
 The Baum-Connes conjecture for $G$ with coefficients in $A$ is the following claim : $\mu_{G,A}$ is an isomorphism of abelian groups.\\
 The Baum-Connes conjecture with coefficients is : for all $G$-algebras $A$, $\mu_{G,A}$ is an isomorphism of abelian groups.
-%\end{conjecture}
+\end{conj}
 
 The conjecture was first stated in \cite{BaumConnes} and in \cite{BaumConnesHigson}. The statement is a descendent of the Connes-Kasparov conjecture, which is simply, when one knows the Baum-Connes conjecture, the latter for almost connected groups (i.e. locally compact groups $G$ such that $G/G_0$ is compact, where $G_0$ is the connected component of the identity).\\
 
@@ -85,8 +85,13 @@ Here is the status of the conjecture :
 \item[$\bullet$] The Connes-Kasparov conjecture was established by J. Chabert, S. Echterhoff and R. Nest, who proved that $\mu_{G}$ is an isomorphism for every secound countable almost connected group $G$, and every group of $k$-rational points of a linear algebraic group over a local field of characteristic $0$.\\
 \item[$\bullet$] N. Higson and G. Kasparov proved that the conjecture with coefficients holds for groups having Haagerup property. 
 \item[$\bullet$] V. Lafforgue proved the conjecture with coefficients for hyperbolic groups.
-\item[$\bullet$] V. Lafforgue showed the conjecture for every semi-simple Lie group, real or $p$-adic reductive, and discrete cocompact subgroup of real rank $1$ Lie groups or of $SL(3,k)$ for any local field $k$. 
+\item[$\bullet$] V. Lafforgue showed the conjecture for every semi-simple Lie group, real or $p$-adic reductive, and discrete cocompact subgroup of real rank $1$ Lie groups or of $SL(3,k)$ for any local field $k$. \\
 \end{itemize}
+
+For nice topological groupoids, the conjecture is known to be false in full generality \cite{HigsonLaffSk}, but the following result was shown by J-L. Tu in \cite{TuThese}
+\begin{thm}\label{Tu}
+Let $G$ be a locally compact $\sigma$-compact Hausdorff groupoid. Then if $G$ is a-T-menable, the Baum-Connes conjecture with coefficients holds for $G$.
+\end{thm}
 
 \subsection{The Coarse Assembly map}
 
@@ -124,9 +129,9 @@ The Coarse Assembly map $\mu:KX_*(X,B)\rightarrow K_*(C^*(X,B))$ for $X$ with co
 
 The Coarse Baum-Connes conjecture is the following claim.\\
 
-%\begin{conjecture}
+\begin{conj}[Coarse Baum-Connes conjecture]
 For any coarse space $X$ with bounded geometry, the Coarse Assembly map $\mu_{X,\C}$ is an isomorphism.\\
-%\end{conjecture}
+\end{conj}
 
 Here are some remarks about the status of the conjecture :
 \begin{itemize}
@@ -135,9 +140,32 @@ Here are some remarks about the status of the conjecture :
 \item[$\bullet$] Let $\Gamma$ be a finitely generated group, and $|\Gamma|$ the coarse space associated to the word-length metric (any two left invariant metric on $\Gamma$ are coarsely equivalent). Then the Coarse Baum-Connes conjecture for $|\Gamma|$ implies the Novikov conjecture for higher signatures for $\Gamma$.
 \end{itemize}
 
+Here is another description of the Coarse Assembly map which will be of some interest for us.\\
 
+Let $E\in \mathcal E_X$ be an entourage. Take a cycle $(H,\pi, T)\in E(C_0(P_E(X)), \C)$, and equip the finite dimensional simplicial complex $P_E(X)$ with a metric which restricts to the spherical metric on simplices, so that $H$ is a $P_E(X)$-module that we can suppose standard non-degenrate. Then 
+\[T'=\sum \lambda_x^{\frac{1}{2}} T \lambda_x^{\frac{1}{2}} \] 
+is a compact perturbation of $T$ in $\mathcal L(H)$ with bounded propagation, and is invertible modulo $C^*(P_E(X),H)$, so defines a class $[T']\in K_0(C^*(P_E(X),H))$. But $P_E(X)$ and $X$ are coarsely equivalent, the barycentric map $P_E(X)\rightarrow X$ is a coarse equivalence which is covered by $V_0$, so that 
+\[(Ad_{V_0})_* : K_*(C^*(P_E(X),H))\rightarrow K_*(C^*(X,l^2(X)\otimes H))\]
+is an isomorphism, which does only depend on the coarse class of the barycentric map.\\
 
+With that in mind, one can show that $\mu_{X}([H,\pi,T])=(Ad_{V_0})_*[T']$.\\
 
+The point of the article \cite{SkTuYu} is to show that the Coarse Assembly map is equivalent to the Assembly map for the coarse groupoid $G=G(X)$ with coefficients in the $G$-algebra $l^\infty=l^\infty(X,\mathfrak K)$. \\
+
+More precisely, $Z=P_{\overline E}(G)$ is a proper cocompact $G$-space with ismomorphic fibers $Z_x\simeq P_E(X)$, and $l^\infty_x \simeq \mathfrak K$, so that the inclusion of groupoid $\{x\}\hookrightarrow G $ induces a morphism $\iota_Z : RK^G(Z,l^\infty)\rightarrow KK(Z_x,\mathfrak K)$ which is actually an isomorphism. Recall that one can construct an $*$-isomorphism $\Psi_X: l^\infty \rtimes_r G\rightarrow C^*(X)$, and $\mu_X^{(Z_x)}\circ \iota_Z = (\Psi_X)_*\circ \mu_{G,l^\infty}^{(Z)}$ holds and respects inductive limits over $Z$ to give the following commutative diagram :
+\[\begin{tikzcd}
+K^{top}(\underline E G, l^\infty) \arrow{r}{\mu_{G,l^\infty}}\arrow{d}{\varinjlim \iota_Z} & K(l^\infty\rtimes_r G)\arrow{d}{(\Psi_X)_*} \\
+KX_*(X)\arrow{r}{\mu_X} & K_*(C^*(X))
+\end{tikzcd}\]  
+with vertical arrows being isomorphism.\\
+
+A key point is to use how analytical properties of $G$ translate coarse properties of $X$. In particular, 
+\begin{itemize}
+\item[$\bullet$] in \cite{SkTuYu} is proved that $X$ admits a coarse embedding into Hilbert space iff $G(X)$ is a-T-menable, 
+\item[$\bullet$] in \cite{SkTuYu} is proved that $X$ has property A iff $G(X)$ is amenable, 
+\item[$\bullet$] in \cite{FinnSellFibred}, M. Finn-Sell shows that if $X$ admits a coarse fibered embedding, then $G_\partial = G(X)_{|\partial \beta X}$ is a-T-menable. 
+\end{itemize}
+All of these results, combined with theorem \ref{Tu}, give examples of coarse spaces satisfying the Coarse Baum-Connes conjecture and the Boundary Coarse Baum-Connes conjecture.
 
 
 
