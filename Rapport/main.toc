@@ -1,34 +1,35 @@
 \select@language {french}
-\contentsline {section}{\numberline {1}Introduction}{4}{section.1}
-\contentsline {subsection}{\numberline {1.1}From topological spaces to $C^*$-algebras}{4}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}From coarse spaces to $C^*$-algebras}{5}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}From groupoids to $C^*$-algebras}{7}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}From coarse spaces to groupoids}{9}{subsection.1.4}
-\contentsline {section}{\numberline {2}Review of quantitative $K$-theory}{11}{section.2}
-\contentsline {subsection}{\numberline {2.1}Roe algebras and filtration}{11}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Definition of quantitative $K$-theory}{12}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Morita equivalence}{13}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Quantitative boundary maps}{13}{subsection.2.4}
-\contentsline {section}{\numberline {3}Assembly Maps}{15}{section.3}
-\contentsline {subsection}{\numberline {3.1}Proper groupoids and proper actions}{15}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Equivariant $K$-homology}{15}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Descent functor}{16}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}The assembly map}{16}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}The Baum-Connes conjecture}{17}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}The Coarse Assembly map}{17}{subsection.3.6}
-\contentsline {section}{\numberline {4}Quantitative statements}{20}{section.4}
-\contentsline {subsection}{\numberline {4.1}A reminder on groupoids action}{20}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}The Baum-Connes conjecture}{21}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Length, propagation and controlled six-terms exact sequence}{22}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}The Kasparov transform}{22}{subsection.4.4}
-\contentsline {subsubsection}{\numberline {4.4.1}Odd case}{23}{subsubsection.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.2}Even case}{26}{subsubsection.4.4.2}
-\contentsline {subsection}{\numberline {4.5}Quantitative assembly maps}{28}{subsection.4.5}
-\contentsline {subsubsection}{\numberline {4.5.1}Classifying space for proper actions}{28}{subsubsection.4.5.1}
-\contentsline {subsection}{\numberline {4.6}Quantitative statements}{31}{subsection.4.6}
-\contentsline {section}{\numberline {5}Decomposition complexity}{36}{section.5}
-\contentsline {subsection}{\numberline {5.1}Examples and applications}{36}{subsection.5.1}
-\contentsline {section}{\numberline {6} Mayer-Vietoris exact sequences and controlled cutting and pasting}{38}{section.6}
-\contentsline {subsection}{\numberline {6.1}Mayer-Vietoris sequence in $K$-homology}{38}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Standard modules}{39}{subsection.6.2}
-\contentsline {section}{\numberline {7}Nuclear dimension}{42}{section.7}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}From topological spaces to $C^*$-algebras}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}From coarse spaces to $C^*$-algebras}{4}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}From groupoids to $C^*$-algebras}{6}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}From coarse spaces to groupoids}{8}{subsection.1.4}
+\contentsline {section}{\numberline {2}Controlled $K$-theory}{10}{section.2}
+\contentsline {section}{\numberline {3}Assembly Maps}{11}{section.3}
+\contentsline {subsection}{\numberline {3.1}Proper groupoids and proper actions}{11}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Equivariant $K$-homology}{11}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Descent functor}{12}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}The assembly map}{12}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}The Baum-Connes conjecture}{13}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}The Coarse Assembly map}{13}{subsection.3.6}
+\contentsline {section}{\numberline {4}Review of quantitative $K$-theory}{17}{section.4}
+\contentsline {subsection}{\numberline {4.1}Roe algebras and filtration}{17}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Definition of quantitative $K$-theory}{18}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Morita equivalence}{19}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Quantitative boundary maps}{19}{subsection.4.4}
+\contentsline {section}{\numberline {5}Quantitative statements}{21}{section.5}
+\contentsline {subsection}{\numberline {5.1}A reminder on groupoids action}{21}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}The Baum-Connes conjecture}{22}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Length, propagation and controlled six-terms exact sequence}{23}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}The Kasparov transform}{23}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}Odd case}{24}{subsubsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.2}Even case}{27}{subsubsection.5.4.2}
+\contentsline {subsection}{\numberline {5.5}Quantitative assembly maps}{29}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.5.1}Classifying space for proper actions}{29}{subsubsection.5.5.1}
+\contentsline {subsection}{\numberline {5.6}Quantitative statements}{32}{subsection.5.6}
+\contentsline {section}{\numberline {6}Decomposition complexity}{37}{section.6}
+\contentsline {subsection}{\numberline {6.1}Examples and applications}{37}{subsection.6.1}
+\contentsline {section}{\numberline {7} Mayer-Vietoris exact sequences and controlled cutting and pasting}{39}{section.7}
+\contentsline {subsection}{\numberline {7.1}Mayer-Vietoris sequence in $K$-homology}{39}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Standard modules}{40}{subsection.7.2}
+\contentsline {section}{\numberline {8}Nuclear dimension}{43}{section.8}
