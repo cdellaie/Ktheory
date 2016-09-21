@@ -36,7 +36,7 @@ A topological space is said to be locally compact iff every point has a relative
 A map between two topological spaces $h : (X,\mathcal T_X)\rightarrow (Y,\mathcal T_Y)$ is continuous if it respects the topology i.e. if $\forall V\in \mathcal T_Y, h^{-1}(V)\in \mathcal T_X$.\\
 \end{definition}
 
-The natural $C^*$-algebra associated to a locally compact space $Y$ is $C_0(Y)=\{ f :Y \rightarrow \C \text{ continuous s.t. }\lim_{\infty}f=0\}$, endowed with the supremom norm $||f||=\sup_{y\in Y} |f(y)|$.\\
+The natural $C^*$-algebra associated to a locally compact space $Y$ is $C_0(Y)=\{ f :Y \rightarrow \C \text{ continuous s.t. }\lim_{\infty}f=0\}$, endowed with the supremum norm $||f||=\sup_{y\in Y} |f(y)|$.\\
 
 A continuous map $h : X\rightarrow Y $ induces a $*$-homomorphism $C_0(Y)\rightarrow C_0(X)$ iff $h$ is proper, that is the inverse image of any compact set is compact. A simple reformulation leads to the following.
 
@@ -131,7 +131,14 @@ A generalized morphism between from $G$ to $G'$ is a triple $(Z,p,p')$ where $Z$
 \item[$\bullet$] the action of $G'$ is free and proper,
 \item[$\bullet$] $Z\times_{p',s} G'\rightarrow Z\times Z $ induces a homeomorphism $Z\rtimes G' \rightarrow Z\times_{G^{(0)}} Z$.\\
 \end{itemize}
+If a generalized morphism is invertible, we will say that it is a Morita equivalence.
 \end{definition}
+
+\textbf{Examples :}
+\begin{itemize}
+\item[$\bullet$] If $\phi : G\rightarrow G'$ is a strict morphism of topological groupoids, i.e. a continuous map which is a natural transformation between the two groupoids seen as categories with inversible arrows, then $\phi$ naturally defines a generalized morphism. Set $Z = G^{(0)}\times G'$ with actions defined by $g(x,h)g' = (gx, \phi(g)hg')$.
+\item[$\bullet$] Let $G$ be a locally compact group. If $H$ is a subgroup of $G$, then $Z=G/H$ is a Morita equivalence between $H$ and $G/H\rtimes G$.\\
+\end{itemize}
 
 Let $G \rightrightarrows G^{(0)}$ be a locally compact groupoid, endowed with a Haar system $\lambda = (\lambda^x)_{x\in G^{(0)}}$.\\
 
