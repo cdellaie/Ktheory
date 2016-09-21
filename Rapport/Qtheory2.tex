@@ -50,5 +50,85 @@ The controlled $K$-theory of a filtered $C^*$-algebra $(A,\mathcal E)$ is the fa
 We defined canonical inclusion morphisms : if $\varepsilon, \varepsilon'\in (0,\frac{1}{4})$ and $E,E'\in\mathcal E$ such that $\varepsilon < \varepsilon'$ and $E \leq E'$, the natural inclusion $K_*^{\varepsilon,E}(A)\hookrightarrow K_*^{\varepsilon',E'}(A)$ is denoted by $\iota_{\varepsilon,E}^{\varepsilon',E'}$. Notive that $\iota_{\varepsilon',E'}^{\varepsilon'',E''}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon,E}^{\varepsilon'',E''}$ when this expression makes sense.\\
 
 One has also forgetful inclusions $\iota_{\varepsilon,E} : K_*^{\varepsilon,E}\rightarrow K_*(A)$, and 
-$\iota_{\varepsilon',E'}\circ\iota_{\varepsilon',E'}^{\varepsilon'',E''}=\iota_{\varepsilon, E}$ holds.\\
+$\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon, E}$ holds.\\
+
+\subsection{Quantitative objects}
+
+If $\mathcal E$ is a coarse structure, define $\mathcal{\tilde E} = (0,\frac{1}{4})\times \mathcal E$. It a POSET with respect to the partial order $(\varepsilon,E)<(\varepsilon', E')$ if $\varepsilon<\varepsilon'$ and $E<E'$ for $\varepsilon,\varepsilon'\in (0,\frac{1}{4}),E,E'\in\mathcal E$. A POSET can always be seen as a category with at most one arrow between objets. Let $Grab$ be the category of abelian groups with arrows the homomorphisms of groups.
+\begin{definition}
+Let $\mathcal E$ be a coarse structure. A quantitative object for $\mathcal E$ is a functor $\mathcal O :  \mathcal{\tilde E} \rightarrow Grab$.
+\end{definition}
+
+\begin{Expl}Our example will be controlled $K$-theory $(\varepsilon,E)\in\mathcal{\tilde E}\mapsto K^{\varepsilon,E}(A)$; $\tilde E <\tilde E'\mapsto \iota_{\tilde E}^{\tilde E'}$ for a filtered $C^*$-algebra $(A,\mathcal E)$.\end{Expl}
+
+\begin{rk}For any non-decreasing map $\rho : \mathcal{\tilde E}\rightarrow \mathcal{\tilde E}$ and any quantitative object $\mathcal O$, $\mathcal O\circ \rho $ is still a quantitative object. \end{rk}
+
+\begin{definition}Let $\mathcal E_1,\mathcal E_2$ be two coarse structures, $\mathcal O,\mathcal O'$ two quantitative objects for $\mathcal E_1$ and $\mathcal E_2$ respectively, and $\rho : \mathcal{\tilde E}_\rho\rightarrow \mathcal{\tilde E}_2$ a non-decreasing map with domain a subcategory $\mathcal{\tilde E}_\rho$ of $\mathcal{\tilde E}_1$. A $\rho$-controlled morphism is a natural transformation $\mathcal O_{|\mathcal{\tilde E}_\rho} \rightarrow \mathcal O'\circ \rho$.\end{definition}
+
+\begin{Expl}
+The following example is taken from \cite{OY2}. A control pair $(\alpha,h)$ is a positive real $\alpha>1$ and $h:(0,\frac{1}{4\alpha})\rightarrow [1,\infty)$ a function bounded above by a non-decreasing function. Define $\rho : (0,\frac{1}{4})\times\R_*^+\rightarrow \tilde{\R_*^+}$ as $\rho(\varepsilon, R)=(\alpha \epsilon,h_\varepsilon R)$, which defines a non-increasing function. Then a $(\alpha,h)$-control morphism in the sense of \cite{OY2} is a $\rho$-controlled morphism in the sense of the definition above. We will adopt the same langage and call $\rho$ the control pair of the controlled morphism.
+\end{Expl}
+
+\begin{rk}
+If $(A,\mathcal E)$ and $(B,\mathcal E')$ are filtered $C^*$-algebras, $\rho$ a control pair and $\hat F : \hat K(A)\rightarrow K(B)$ a $\rho$-controlled morphism. Then $\hat F$ defines uniquely a morphism $F : K(A)\rightarrow K(B)$ by $F=\iota_{\varepsilon, E}\circ F^{\varepsilon,E}$, which is well defined because of the compatibility conditions $\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon, E}$. 
+\end{rk}
+
+Let $\alpha,\beta,\gamma$ be control pairs such that $\alpha \text{ and }\beta\leq \gamma$. If $F$ is a $\alpha$-controlled morphism and $G$ a $\beta$-controlled morphism $\mathcal O\rightarrow \mathcal O'$, then we write $F\sim_\gamma G$ if, for all $\tilde E\in \mathcal{\tilde E}_\gamma$, the following diagram commutes :.\[\begin{tikzcd}
+\mathcal O_{\tilde E} \arrow{r}{F^{\tilde E}}\arrow{d}{G_{\tilde E}} & \mathcal O'_{\alpha(\tilde E)} \arrow{d}{\iota_{\alpha(\tilde E)}^{\gamma(\tilde E)}} \\
+\mathcal O'_{\beta(\tilde E)}\arrow{r}{\iota_{\beta(\tilde E)}^{\gamma(\tilde E)}} & \mathcal O'_{\gamma(\tilde E)}
+\end{tikzcd}.\]
+
+\begin{definition}Let $\gamma$ be a control pair, and $F: \mathcal O\rightarrow \mathcal O'$ a $\alpha$-controlled morphism such that $\alpha \leq \gamma$. We say that $F$ is $\gamma$-invertible if there exists a controlled morphism $G: \mathcal O'\rightarrow \mathcal O$ such that $G\circ F \sim_\gamma Id_{\mathcal O}$ and $F\circ G \sim_\gamma Id_{\mathcal O'}$. $G$ is called a $\gamma$-inverse for $F$. \end{definition}
+
+\begin{definition}
+Let, for $j\in\{00,01,10,11\}$, $\mathcal{E}_j$ be coarse structures, $\rho_{ij} :\mathcal{\tilde E}_{\rho_{ij}} \mathcal{\tilde E}_i\rightarrow \mathcal{\tilde E}_j$ control pairs, $\mathcal O_j$ quantitative object w.r.t. $\mathcal{\tilde E}_j$ and $\rho_{ij}$-controlled morphisms $F_{ij} : \mathcal O_i\rightarrow \mathcal O_j$. The following diagram
+\[\begin{tikzcd}
+\mathcal O_{00}\arrow{r}{F_{00}^{01}}\arrow{d}{F_{00}^{10}} & \mathcal O_{01}\arrow{d}{F_{10}^{11}} \\
+\mathcal O_{10}\arrow{r}{F_{10}^{11}} & \mathcal O_{11}\\	 
+\end{tikzcd}\]
+is said to be $\rho$-commutative if $F_{10}^{11}\circ F_{00}^{10} \sim_\rho F_{01}^{11}\circ F_{00}^{01}$.
+\end{definition}
+
+\subsection{Controlled exact sequences}
+
+\subsection{Examples}
+
+Let $G$ be an étale groupoid. Then the set of open relatively compact subsets of $G$ is a coarse structure. \\
+
+Let $\mathbb G$ be a (compact ?) quantum group (in the sense of ?). Then the set of finite dimensional representations of $\mathbb G$ is a coarse structure w.r.t. $\pi\circ \pi'=\pi\otimes \pi'$ as composition, and $\pi\leq\pi'$ if $\pi$ is equivalent to a subrepresentation of $\mathbb G$.\\
+
+Let $G$ be a locally compact group, and $S$ be the set of representations of $G$ of the form $\lambda\otimes\pi$ for $\pi$ a finte dimensional representation of $G$.   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
