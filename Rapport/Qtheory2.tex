@@ -91,6 +91,14 @@ is said to be $\rho$-commutative if $F_{10}^{11}\circ F_{00}^{10} \sim_\rho F_{0
 
 \subsection{Controlled exact sequences}
 
+\begin{definition}
+Let $\mathcal E,\mathcal E',\mathcal E''$ be coarse structures, and $ \mathcal O,\mathcal O',\mathcal O''$ quantitative objects over them respectively, $\rho : \mathcal E\rightarrow \mathcal E'$ and $\rho' : \mathcal E'\rightarrow \mathcal E''$ control pairs. If $F : \mathcal O\rightarrow \mathcal O'$ is a $\rho$-controlled morphism and $F : \mathcal O'\rightarrow \mathcal O''$ is a $\rho'$-controlled morphism, we say that the sequence 
+\[\begin{tikzcd}\mathcal O\arrow{r}{F} & \mathcal O'\arrow{r}{G} & \mathcal O''\end{tikzcd}\] 
+is $\lambda$-exact at $\mathcal O'$ if $G\circ F = 0$ and for every $\tilde{ E}\in \tilde{\mathcal E}$, if $x \in \mathcal O'_{\rho (\tilde{E})}$ satisfies $G_{\rho (\tilde E)}(x)=0$, then there exist $\tilde E'\in \mathcal E$ such that $\tilde E'\geq \tilde E$ and $y\in \mathcal O_{\tilde E'}$ such that $F_{\tilde E'}(y)=\iota_{\rho(\tilde E)}^{\rho(\tilde E')}(x) $.\\
+
+A sequence $\begin{tikzcd}[column sep = small]\mathcal O_0 \arrow{r} & O_1 \arrow{r}&... \arrow{r}& O_k\end{tikzcd}$ is $\lambda$-exact if it is $\lambda$-exact everywhere.
+\end{definition}
+
 \subsection{Examples}
 
 Let $G$ be an étale groupoid. Then the set of open relatively compact subsets of $G$ is a coarse structure. \\

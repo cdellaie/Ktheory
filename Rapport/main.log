@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.5)  22 SEP 2016 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.5)  22 SEP 2016 16:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -908,8 +908,12 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 20.
 \c@rk=\count143
 )
 (./main.aux (./StateOfTheArt.aux) (./Qtheory2.aux) (./AssemblyMaps.aux)
-(./Intro.aux) (./QKtheory.aux) (./QuantitativeStatements.aux) (./FDC.aux)
-(./StandardModules.aux) (./NuclearDimAsdim.aux))
+(./ControlledAM.aux) (./Intro.aux) (./QKtheory.aux)
+(./QuantitativeStatements.aux
+
+LaTeX Warning: Label `Kasparov1' multiply defined.
+
+) (./FDC.aux) (./StandardModules.aux) (./NuclearDimAsdim.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -994,11 +998,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc [2])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2]
+ [3]
 \openout2 = `StateOfTheArt.aux'.
 
  (./StateOfTheArt.tex
@@ -1038,7 +1042,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
-[3
+[4
 
 ]
 
@@ -1071,7 +1075,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-[4]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
@@ -1108,7 +1112,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-[5]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
@@ -1143,7 +1147,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
-[6]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 166--168
 
  []
@@ -1168,7 +1172,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--201
 
  []
 
-[7]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
@@ -1188,7 +1192,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
-[8]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
@@ -1224,7 +1228,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
-) [9]
+) [10]
 \openout2 = `Qtheory2.aux'.
 
  (./Qtheory2.tex
@@ -1271,7 +1275,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-[10
+[11
 
 
 ]
@@ -1289,17 +1293,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-) [12]
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+[13]) [14]
 \openout2 = `AssemblyMaps.aux'.
 
  (./AssemblyMaps.tex
@@ -1335,7 +1344,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
-[13
+[15
 
 
 ]
@@ -1348,7 +1357,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--60
 
  []
 
-[14]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
@@ -1374,7 +1383,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
 
-[15]
+[17]
 Overfull \hbox (18.95891pt too wide) in paragraph at lines 107--109
 \OT1/cmr/m/n/10 which res-pects the Kas-pa-rov pro-duct, i.e. $\OML/cmm/m/it/10
  ^^[\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 
@@ -1432,7 +1441,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
-[16]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 148--150
 
  []
@@ -1452,7 +1461,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--161
 
  []
 
-) [17]
+) [19]
+\openout2 = `ControlledAM.aux'.
+
+ (./ControlledAM.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
+
+ []
+
+[20
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
+
+ []
+
+
+Overfull \hbox (7.26021pt too wide) in paragraph at lines 48--49
+[][]\OT1/cmr/bx/n/10 Definition 27. []\OT1/cmr/m/n/10 The control-led Kas-pa-ro
+v trans-form of an ele-ment $\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 2 \OML/cmm/m/i
+t/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (14.45294pt too wide) in paragraph at lines 76--77
+[]\OT1/cmr/m/n/10 If $\OML/cmm/m/it/10 z; z[]$ \OT1/cmr/m/n/10 are ele-ments of
+ $\OML/cmm/m/it/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
+, re-pre-sen-ted by two $\OML/cmm/m/it/10 K$\OT1/cmr/m/n/10 -cycles $(\OML/cmm/
+m/it/10 H[]; ^^Y[]; T[]\OT1/cmr/m/n/10 )$,
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+
+Overfull \hbox (22.48785pt too wide) in paragraph at lines 102--104
+\OT1/cmr/m/n/10 Indeed, the crossed-product func-tor com-mutes with pull-back b
+y $\OMS/cmsy/m/n/10 G$\OT1/cmr/m/n/10 -morphisms,
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 115--117
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+
+ []
+
+) [25]
 \openout2 = `Intro.aux'.
 
  (./Intro.tex
@@ -1475,7 +1566,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-) [18
+) [26
 
 
 ]
@@ -1515,7 +1606,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[19
+[27
 
 
 ]
@@ -1542,7 +1633,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
-[20] [21]) [22]
+[28] [29]) [30]
 \openout2 = `QuantitativeStatements.aux'.
 
  (./QuantitativeStatements.tex
@@ -1550,7 +1641,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
-[23
+[31
 
 
 ]
@@ -1558,7 +1649,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[24]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
@@ -1579,7 +1670,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-[25]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
@@ -1594,14 +1685,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[26]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 117--119
 
  []
 
 
 Overfull \hbox (7.26021pt too wide) in paragraph at lines 121--122
-[][]\OT1/cmr/bx/n/10 Definition 30. []\OT1/cmr/m/n/10 The control-led Kas-pa-ro
+[][]\OT1/cmr/bx/n/10 Definition 32. []\OT1/cmr/m/n/10 The control-led Kas-pa-ro
 v trans-form of an ele-ment $\OML/cmm/m/it/10 z \OMS/cmsy/m/n/10 2 \OML/cmm/m/i
 t/10 KK[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B\OT1/cmr/m/n/10 )$
  []
@@ -1614,7 +1705,7 @@ Overfull \hbox (14.45294pt too wide) in paragraph at lines 149--150
 m/it/10 H[]; ^^Y[]; T[]\OT1/cmr/m/n/10 )$,
  []
 
-[27]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
@@ -1630,12 +1721,12 @@ Overfull \hbox (22.48785pt too wide) in paragraph at lines 175--177
 y $\OMS/cmsy/m/n/10 G$\OT1/cmr/m/n/10 -morphisms,
  []
 
-[28]
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 188--190
 
  []
 
-[29]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
@@ -1645,17 +1736,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
 
-[30]
+[38]
 Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
-[31]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 267--270
 
  []
 
-[32] [33]
+[40] [41]
 Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
@@ -1698,7 +1789,7 @@ r/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P[]\OT1/cmr/m/n
 /10 )\OML/cmm/m/it/10 ; A\OT1/cmr/m/n/10 )$
  []
 
-[34]
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
@@ -1725,7 +1816,7 @@ ML/cmm/m/it/10 ; [] '[]; [] F[]\OT1/cmr/m/n/10 )]$ as a prei-mage of $[][][(\OM
 S/cmsy/m/n/10 E[]\OML/cmm/m/it/10 ; '[]; F[]\OT1/cmr/m/n/10 )]$,
  []
 
-[35]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 399--402
 
  []
@@ -1745,7 +1836,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
-[36]
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 428--429
 
  []
@@ -1770,7 +1861,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
-[37]
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 443--444
 
  []
@@ -1783,7 +1874,7 @@ m/it/10 ^^O$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 R$ \OT1/cmr/m/n/10 such that
 mr/m/n/10 )$
  []
 
-) [38]
+) [46]
 \openout2 = `FDC.aux'.
 
  (./FDC.tex
@@ -1791,10 +1882,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-[39
+[47
 
 
-]) [40]
+]) [48]
 \openout2 = `StandardModules.aux'.
 
  (./StandardModules.tex
@@ -1841,7 +1932,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-[41
+[49
 
 
 ]
@@ -1866,7 +1957,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
 
 Overfull \hbox (16.62883pt too wide) in paragraph at lines 60--61
-[][]\OT1/cmr/bx/n/10 Definition 36. []\OT1/cmr/m/n/10 A $\OML/cmm/m/it/10 X$\OT
+[][]\OT1/cmr/bx/n/10 Definition 38. []\OT1/cmr/m/n/10 A $\OML/cmm/m/it/10 X$\OT
 1/cmr/m/n/10 -module is a Hil-bert space $\OML/cmm/m/it/10 H[]$ \OT1/cmr/m/n/10
  equip-ped with a $\OMS/cmsy/m/n/10 ^^C$\OT1/cmr/m/n/10 -representation
  []
@@ -1876,7 +1967,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-[42]
+[50]
 Overfull \hbox (2.40877pt too wide) in paragraph at lines 75--75
 []\OT1/cmr/bx/n/10 Remark : \OT1/cmr/m/n/10 We can in-duce $\OML/cmm/m/it/10 V$
  \OT1/cmr/m/n/10 on the Roe al-ge-bras by $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 T
@@ -1905,7 +1996,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
-[43]) [44]
+[51]) [52]
 \openout2 = `NuclearDimAsdim.aux'.
 
  (./NuclearDimAsdim.tex
@@ -1928,35 +2019,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-[45
+[53
 
 
-]) [46] (./main.bbl
+]) [54] (./main.bbl
 Underfull \hbox (badness 1755) in paragraph at lines 36--42
 \OT1/cmr/m/n/10 oyono-oyono.  \OT1/cmr/m/it/10 Jour-nal of the Ins-ti-tute of M
 a-the-ma-tics of Jus-sieu\OT1/cmr/m/n/10 ,
  []
 
-[47
+[55
 
-]) [48]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 42.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
+]) [56]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
  (./main.aux (./StateOfTheArt.aux) (./Qtheory2.aux)
-(./AssemblyMaps.aux) (./Intro.aux) (./QKtheory.aux)
+(./AssemblyMaps.aux) (./ControlledAM.aux) (./Intro.aux) (./QKtheory.aux)
 (./QuantitativeStatements.aux) (./FDC.aux) (./StandardModules.aux)
 (./NuclearDimAsdim.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A842624FA5E1D3C3361487BDAC178980;2798.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
+(rerunfilecheck)             Checksum: D4F8A8FE98C8181EC392EB561EBFB685;3241.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 44.
  ) 
 Here is how much of TeX's memory you used:
- 20424 strings out of 494924
- 396095 string characters out of 6179709
- 449959 words of memory out of 5000000
- 23129 multiletter control sequences out of 15000+600000
+ 21015 strings out of 494924
+ 410852 string characters out of 6179709
+ 460653 words of memory out of 5000000
+ 23692 multiletter control sequences out of 15000+600000
  15367 words of font info for 60 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  58i,19n,84p,1366b,1150s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1981,10 +2076,10 @@ nts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts
 type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (48 pages, 456745 bytes).
+Output written on main.pdf (56 pages, 487730 bytes).
 PDF statistics:
- 725 PDF objects out of 1000 (max. 8388607)
- 646 compressed objects within 7 object streams
- 195 named destinations out of 1000 (max. 500000)
- 317 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 812 PDF objects out of 1000 (max. 8388607)
+ 724 compressed objects within 8 object streams
+ 216 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

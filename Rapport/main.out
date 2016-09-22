@@ -15,24 +15,30 @@
 \BOOKMARK [2][-]{subsection.3.4}{The assembly map}{section.3}% 15
 \BOOKMARK [2][-]{subsection.3.5}{The Baum-Connes conjecture}{section.3}% 16
 \BOOKMARK [2][-]{subsection.3.6}{The Coarse Assembly map}{section.3}% 17
-\BOOKMARK [1][-]{section.4}{Review of quantitative K-theory}{}% 18
-\BOOKMARK [2][-]{subsection.4.1}{Roe algebras and filtration}{section.4}% 19
-\BOOKMARK [2][-]{subsection.4.2}{Definition of quantitative K-theory}{section.4}% 20
-\BOOKMARK [2][-]{subsection.4.3}{Morita equivalence}{section.4}% 21
-\BOOKMARK [2][-]{subsection.4.4}{Quantitative boundary maps}{section.4}% 22
-\BOOKMARK [1][-]{section.5}{Quantitative statements}{}% 23
-\BOOKMARK [2][-]{subsection.5.1}{A reminder on groupoids action}{section.5}% 24
-\BOOKMARK [2][-]{subsection.5.2}{The Baum-Connes conjecture}{section.5}% 25
-\BOOKMARK [2][-]{subsection.5.3}{Length, propagation and controlled six-terms exact sequence}{section.5}% 26
-\BOOKMARK [2][-]{subsection.5.4}{The Kasparov transform}{section.5}% 27
-\BOOKMARK [3][-]{subsubsection.5.4.1}{Odd case}{subsection.5.4}% 28
-\BOOKMARK [3][-]{subsubsection.5.4.2}{Even case}{subsection.5.4}% 29
-\BOOKMARK [2][-]{subsection.5.5}{Quantitative assembly maps}{section.5}% 30
-\BOOKMARK [3][-]{subsubsection.5.5.1}{Classifying space for proper actions}{subsection.5.5}% 31
-\BOOKMARK [2][-]{subsection.5.6}{Quantitative statements}{section.5}% 32
-\BOOKMARK [1][-]{section.6}{Decomposition complexity}{}% 33
-\BOOKMARK [2][-]{subsection.6.1}{Examples and applications}{section.6}% 34
-\BOOKMARK [1][-]{section.7}{ Mayer-Vietoris exact sequences and controlled cutting and pasting}{}% 35
-\BOOKMARK [2][-]{subsection.7.1}{Mayer-Vietoris sequence in K-homology}{section.7}% 36
-\BOOKMARK [2][-]{subsection.7.2}{Standard modules}{section.7}% 37
-\BOOKMARK [1][-]{section.8}{Nuclear dimension}{}% 38
+\BOOKMARK [1][-]{section.4}{Controlled assembly maps for coarse spaces}{}% 18
+\BOOKMARK [1][-]{section.5}{Controlled assembly maps for \351tale groupoids}{}% 19
+\BOOKMARK [2][-]{subsection.5.1}{Kasparov transform}{section.5}% 20
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Odd case}{subsection.5.1}% 21
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Even case}{subsection.5.1}% 22
+\BOOKMARK [2][-]{subsection.5.2}{Quantitative assembly maps}{section.5}% 23
+\BOOKMARK [1][-]{section.6}{Review of quantitative K-theory}{}% 24
+\BOOKMARK [2][-]{subsection.6.1}{Roe algebras and filtration}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.2}{Definition of quantitative K-theory}{section.6}% 26
+\BOOKMARK [2][-]{subsection.6.3}{Morita equivalence}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.4}{Quantitative boundary maps}{section.6}% 28
+\BOOKMARK [1][-]{section.7}{Quantitative statements}{}% 29
+\BOOKMARK [2][-]{subsection.7.1}{A reminder on groupoids action}{section.7}% 30
+\BOOKMARK [2][-]{subsection.7.2}{The Baum-Connes conjecture}{section.7}% 31
+\BOOKMARK [2][-]{subsection.7.3}{Length, propagation and controlled six-terms exact sequence}{section.7}% 32
+\BOOKMARK [2][-]{subsection.7.4}{The Kasparov transform}{section.7}% 33
+\BOOKMARK [3][-]{subsubsection.7.4.1}{Odd case}{subsection.7.4}% 34
+\BOOKMARK [3][-]{subsubsection.7.4.2}{Even case}{subsection.7.4}% 35
+\BOOKMARK [2][-]{subsection.7.5}{Quantitative assembly maps}{section.7}% 36
+\BOOKMARK [3][-]{subsubsection.7.5.1}{Classifying space for proper actions}{subsection.7.5}% 37
+\BOOKMARK [2][-]{subsection.7.6}{Quantitative statements}{section.7}% 38
+\BOOKMARK [1][-]{section.8}{Decomposition complexity}{}% 39
+\BOOKMARK [2][-]{subsection.8.1}{Examples and applications}{section.8}% 40
+\BOOKMARK [1][-]{section.9}{ Mayer-Vietoris exact sequences and controlled cutting and pasting}{}% 41
+\BOOKMARK [2][-]{subsection.9.1}{Mayer-Vietoris sequence in K-homology}{section.9}% 42
+\BOOKMARK [2][-]{subsection.9.2}{Standard modules}{section.9}% 43
+\BOOKMARK [1][-]{section.10}{Nuclear dimension}{}% 44
