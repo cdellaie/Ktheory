@@ -22,7 +22,7 @@ which induces right multiplication by $j_\G(z)$ in $K$-theory.\\
 Let us first do the work for $z\in KK_1^\G(A,B)$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_\G=P\otimes id_{B\rtimes \G}$. We define
 \[E^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in A\rtimes \G, y\in K_{B\rtimes\G}\}\]
 a $C^*$-algebra which is filtered by
-\[E_R^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in (A\rtimes \G)_R, y\in K\otimes (B\rtimes\G)_R\}\]
+\[E_U^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in (A\rtimes \G)_U, y\in K\otimes (B\rtimes\G)_U\}\]
 which gives us a filtered extension
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & K_{B\rtimes_r\G}\arrow{r} & E^{(\pi,T)} \arrow{r} & A\rtimes_r \G \arrow{r}& 0
@@ -172,14 +172,7 @@ J_\G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_\G(\alpha\otimes z)\circ
 because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The control on the propagation of the first line follows from remark $2.5$ of \cite{OY2} and point $(v)$, the other lines are equal by points $(iii)$ and $(iv)$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes, and $(\alpha_K,k_K)$ can be taken to be $(d \alpha_J^{2d},( k_J*k_J)^{*d})$.
 \qed
 \end{dem}
+
 \subsection{Quantitative assembly maps}
 
-Following the article of J.-L. Tu \cite{TuBC}, we recall that a locally compact, $\sigma$-compact and Hausdorff groupoid $G$, endowed with a Haar system $\lambda$, is said to be proper if there exists a cut-off function $c:G^{(0)}\rightarrow \R_+$ continuous such that 
-\begin{itemize}
-\item[$\bullet$] for all compact subset $K$ of $G^{(0)}$, $\text{supp }c\cap s(G^K)$ is compact,
-\item[$\bullet$] $\int_{G^x}c(s(g))d\lambda^x(g)=1,\forall x \in G^{(0)}$.
-\end{itemize}
-If moreover $G^{(0)}/G$ is also compact, reducing the first condition to "$\text{supp }c$ compact", then $g\mapsto \sqrt{c(r(g))c(s(g))}$ defines a projection in $C_c(G)$ for convolution, which gives an element $[\mathcal L_G] \in K_0(C^*G)$.\\
-
-Now when $X$ is a locally compact space which is $\G$-proper and $\G$-compact, the groupoid $X\rtimes\G$ is proper with a compact orbit base space ($X/\G$ is compact). We can then define $[\mathcal L_X]\in K_0(C_0(X)\rtimes_r \G)$ as the class of the projector for $G=X\rtimes\G$.
 

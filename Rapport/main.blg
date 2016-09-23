@@ -1,10 +1,12 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
-A level-1 auxiliary file: Intro.aux
 A level-1 auxiliary file: StateOfTheArt.aux
-A level-1 auxiliary file: QKtheory.aux
+A level-1 auxiliary file: Qtheory2.aux
 A level-1 auxiliary file: AssemblyMaps.aux
+A level-1 auxiliary file: ControlledAM.aux
+A level-1 auxiliary file: Intro.aux
+A level-1 auxiliary file: QKtheory.aux
 A level-1 auxiliary file: QuantitativeStatements.aux
 A level-1 auxiliary file: FDC.aux
 A level-1 auxiliary file: StandardModules.aux
@@ -17,7 +19,7 @@ Warning--empty school in LeGall
 Warning--empty journal in WeggeOlsen
 You've used 19 entries,
             2118 wiz_defined-function locations,
-            642 strings with 6734 characters,
+            644 strings with 6762 characters,
 and the built_in function-call counts, 5609 in all, are:
 = -- 574
 > -- 195
