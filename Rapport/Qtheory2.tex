@@ -17,6 +17,12 @@ A $C^*$-algebra $A$ is said to be filtered if there exists a coarse structure $\
 \end{itemize}
 \end{definition}
 
+If $(A,\mathcal E)$ and $(B,\mathcal E')$ are two filtered $C^*$-algebras, a filtered morphism $(\phi,\rho): (A,\mathcal E)\rightarrow (B,\mathcal E')$ is :
+\begin{itemize}
+\item[$\bullet$] a non-decreasing map $\rho : \mathcal E\rightarrow \mathcal E'$,
+\item[$\bullet$] a $*$-homomorphism $\phi: A\rightarrow B$ such that $\phi (A_E)\subset B_{\rho(E)}$ for all $E\in\mathcal E$.
+\end{itemize}
+
 \subsection{Almost unitaries and almost projections}
 
 \begin{definition}
@@ -67,7 +73,7 @@ $\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\var
 \subsection{Quantitative objects}
 In order to study functorial properties of controlled $K$-theory, we will adapt and study the notion of quantitative object defined in \cite{OY2}.\\
 
-If $\mathcal E$ is a coarse structure, define $\mathcal{\tilde E} = (0,\frac{1}{4})\times \mathcal E$. It a POSET with respect to the partial order $(\varepsilon,E)<(\varepsilon', E')$ if $\varepsilon<\varepsilon'$ and $E<E'$ for $\varepsilon,\varepsilon'\in (0,\frac{1}{4}),E,E'\in\mathcal E$. A POSET can always be seen as a category with at most one arrow between objets. Let $Grab$ be the category of abelian groups with arrows the homomorphisms of groups.
+If $\mathcal E$ is a coarse structure, define $\mathcal{\tilde E} = (0,\frac{1}{4})\times \mathcal E$. It a poset with respect to the partial order $(\varepsilon,E)<(\varepsilon', E')$ if $\varepsilon<\varepsilon'$ and $E<E'$ for $\varepsilon,\varepsilon'\in (0,\frac{1}{4}),E,E'\in\mathcal E$. A poset can always be seen as a category with at most one arrow between objets. Let $Grab$ be the category of abelian groups with arrows the homomorphisms of groups.
 \begin{definition}
 Let $\mathcal E$ be a coarse structure. A quantitative object for $\mathcal E$ is a functor $\mathcal O :  \mathcal{\tilde E} \rightarrow Grab$.
 \end{definition}
@@ -90,6 +96,11 @@ If $(A,\mathcal E)$ and $(B,\mathcal E')$ are filtered $C^*$-algebras, $\rho$ a 
 
 \begin{rk}\label{LinearCP}
 For étale groupoids, we won't need all control pairs as defined earlier, but something very similar to the coarse case. More precisely, a pair $(\alpha,k)$ where $\alpha\geq 1$ and $h : (0,\frac{1}{4\alpha})\rightarrow \N $ is a map bounded above by a non-decreasing map defines what we call a linear control pair by $\rho(\varepsilon,E)=(\alpha\varepsilon, h_\varepsilon . E$, where $n.E=E.E.\ ...\ .E$ $n$-times. We will use the notation $(\alpha,k)$ instead of $\rho$, in order make explicit the constant in computations. Note that linear control pairs are stable by composition. 
+\end{rk}
+
+\begin{rk}
+If $(\phi,\rho) : (A,\mathcal E)\rightarrow (B,\mathcal E')$ is a filtered morphism, it obviously induces a linear controlled morphism 
+\[\phi_* = \left(\phi_*^{\varepsilon,E} : K_*^{\varepsilon,E}(A)\rightarrow K_*^{\varepsilon,\rho(E)}(B) \right)_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}.\] 
 \end{rk}
 
 Let $\alpha,\beta,\gamma$ be control pairs such that $\alpha \text{ and }\beta\leq \gamma$. If $F$ is a $\alpha$-controlled morphism and $G$ a $\beta$-controlled morphism $\mathcal O\rightarrow \mathcal O'$, then we write $F\sim_\gamma G$ if, for all $\tilde E\in \mathcal{\tilde E}_\gamma$, the following diagram commutes :.\[\begin{tikzcd}
@@ -172,10 +183,42 @@ the following $6$-term exact sequence is $(\lambda,h)$-exact
 \end{tikzcd}.\]
 \end{thm}
 
+\subsection{Tensorisation in $KK$-theory}
 
+If $(B,\mathcal E)$ is a filtered $C^*$-algebra and $A$ any $C^*$-algebra, and if $A\otimes B$ is the spatial tensor product, then $(A\otimes B_E)_{E\in\mathcal E}$ defines a filtration of $A\otimes B$ over $\mathcal E$. If $\phi : A_1 \rightarrow A_2$ is a $*$-homomorphism, we use the notation $\phi_B$ for the induced $*$-homomorphism $A_1\otimes B\rightarrow A_2\otimes B$. \\
 
+In \cite{kasparovKKNovikov}, G. Kasparov defined a map
+\[\tau_B : KK(A_1,A_2)\rightarrow KK(A_1\otimes B, A_2\otimes B)\]
+for any $C^*$-algebras $A_1$ and $A_2$, which is compatible with the Kasparov product. Any $z\in KK(A_1,A_2)$ defines a morphism
+\[K(A_1\otimes B)\rightarrow K(A_2\otimes B)\]
+which is proved in \cite{OY2} to be induced from a controlled morphism. The following theorem is borrowed from \cite{OY2}.\\
 
+\begin{thm}
+Let $\mathcal E$ be a coarse strucure. There exists a linear control pair $(\alpha_\tau,k_\tau)$ such that, for any filtered $C^*$-algebra $(B,\mathcal E)$, any $C^*$-algebras $A_1$ and $A_2$ and any $K$-cycle $z\in KK(A_1,A_2)$, there exists a $(\alpha_\tau,k_\tau)$-controlled morphism $\hat \tau_B : \hat K(A_1\otimes B)\rightarrow \hat K(A_2\otimes B)$
+such that :
+\begin{itemize}
+\item[$\bullet$] $\hat \tau_B(z)$ induces right-multiplication by $\tau_B(z)$ in $K$-theory,
+\item[$\bullet$] for any $K$-cycles $z,z'\in KK(A_1,A_2)$, $\hat \tau_B(z+z')=\hat\tau_B(z)+\hat\tau_B(z')$,
+\item[$\bullet$] if $\phi : A_1\rightarrow A'_1$ is a $*$-homomorphism, then $\hat\tau_B(\phi^*(z)) =  \hat\tau_B(z)\circ (\phi_B)_*$ for any $z\in KK(A'_1,A_2)$,
+\item[$\bullet$] if $\phi : A_2'\rightarrow A_2$ is a $*$-homomorphism, then $\hat\tau_B(\phi_*(z)) = (\phi_B)_*\circ \hat\tau_B(z)$ for any $z\in KK(A_1,A'_2)$,
+\item[$\bullet$] $\hat \tau_B([Id_A])\sim_{(\alpha_\tau,k_\tau)} Id_{\hat K(A\otimes B)}$,
+\item[$\bullet$] for any $C^*$-algebra $D$, any $K$-cycle $z\in KK(A_1,A_2)$, $\hat\tau_B (\tau_D(z))= \hat\tau_{B\otimes D}(z)$.
+\item[$\bullet$] for any semi-split extension $\begin{tikzcd}[column sep = small] 0 \arrow{r}& J \arrow{r} & A \arrow{r} & A/J\arrow{r} & 0\end{tikzcd}$ with boundary element $[\partial_{J,A}]\in KK_1(A/J,J)$, $\hat\tau_B([\partial_{J,A}])=D_{J\otimes B,A\otimes B}$.
+\end{itemize}
+\end{thm}
 
+This controlled tensorisation map respects Kasparov product. See \cite{OY2}.
+
+\begin{thm}
+There exists a linear control pair $\lambda$ such that, for any separable $C^*$-algebras $A_1$ and $A_2$, any filtered $C^*$-algebra $(B,\mathcal E)$, the following holds : for any $z\in KK(A_1,A_2)$ and $z'\in KK(A_2,A_3)$,
+\[\hat\tau_B(z\otimes z')\sim_\lambda \hat\tau_B(z')\circ\hat\tau_B(z)\]
+\end{thm}
+
+At least, the controlled tensorisation map is natural with respect to morphism of filtered $C^*$-algebras. \cite{OY2}
+
+\begin{prop}
+Let $\mathcal E_1$ and $\mathcal E_2$ two coarse structures, $(B_1,\mathcal E_1)$ and $(B_2,\mathcal E_2)$ filtered $C^*$-algebras and $(\phi,\rho) :B_1\rightarrow B_2 $ a filtered morphism. Then $ (\phi_{A_2})_*\circ \hat \tau_{B_1}=\hat \tau_{B_2}(z)\circ(\phi_{A_1})_* $ for any $z\in KK(A_1,A_2)$.
+\end{prop}
 
 
 
