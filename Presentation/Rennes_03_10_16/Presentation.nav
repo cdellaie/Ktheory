@@ -52,11 +52,9 @@
 \headcommand {\beamer@framepages {20}{20}}
 \headcommand {\slideentry {4}{0}{4}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {4}{0}{5}{22/24}{}{0}}
-\headcommand {\beamer@framepages {22}{24}}
 \beamer@endinputifotherversion {3.36pt}
-\headcommand {\beamer@partpages {1}{24}}
-\headcommand {\beamer@subsectionpages {18}{24}}
-\headcommand {\beamer@sectionpages {18}{24}}
-\headcommand {\beamer@documentpages {24}}
-\headcommand {\def \inserttotalframenumber {22}}
+\headcommand {\beamer@partpages {1}{21}}
+\headcommand {\beamer@subsectionpages {18}{21}}
+\headcommand {\beamer@sectionpages {18}{21}}
+\headcommand {\beamer@documentpages {21}}
+\headcommand {\def \inserttotalframenumber {21}}
