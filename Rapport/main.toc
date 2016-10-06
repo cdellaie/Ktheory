@@ -27,24 +27,26 @@
 \contentsline {subsubsection}{\numberline {5.1.1}Odd case}{28}{subsubsection.5.1.1}
 \contentsline {subsubsection}{\numberline {5.1.2}Even case}{32}{subsubsection.5.1.2}
 \contentsline {subsection}{\numberline {5.2}Quantitative assembly maps}{33}{subsection.5.2}
-\contentsline {section}{\numberline {6}Review of quantitative $K$-theory}{35}{section.6}
-\contentsline {subsection}{\numberline {6.1}Roe algebras and filtration}{35}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Definition of quantitative $K$-theory}{36}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Morita equivalence}{37}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Quantitative boundary maps}{37}{subsection.6.4}
-\contentsline {section}{\numberline {7}Quantitative statements}{39}{section.7}
-\contentsline {subsection}{\numberline {7.1}A reminder on groupoids action}{39}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}The Baum-Connes conjecture}{40}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Length, propagation and controlled six-terms exact sequence}{41}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}The Kasparov transform}{41}{subsection.7.4}
-\contentsline {subsubsection}{\numberline {7.4.1}Odd case}{42}{subsubsection.7.4.1}
-\contentsline {subsubsection}{\numberline {7.4.2}Even case}{45}{subsubsection.7.4.2}
-\contentsline {subsection}{\numberline {7.5}Quantitative assembly maps}{47}{subsection.7.5}
-\contentsline {subsubsection}{\numberline {7.5.1}Classifying space for proper actions}{47}{subsubsection.7.5.1}
-\contentsline {subsection}{\numberline {7.6}Quantitative statements}{50}{subsection.7.6}
-\contentsline {section}{\numberline {8}Decomposition complexity}{55}{section.8}
-\contentsline {subsection}{\numberline {8.1}Examples and applications}{55}{subsection.8.1}
-\contentsline {section}{\numberline {9} Mayer-Vietoris exact sequences and controlled cutting and pasting}{57}{section.9}
-\contentsline {subsection}{\numberline {9.1}Mayer-Vietoris sequence in $K$-homology}{57}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Standard modules}{58}{subsection.9.2}
-\contentsline {section}{\numberline {10}Nuclear dimension}{61}{section.10}
+\contentsline {section}{\numberline {6}A quantitative K\IeC {\"u}nneth formula}{34}{section.6}
+\contentsline {subsection}{\numberline {6.1}Baum-Connes and the K\IeC {\"u}nneth formula}{34}{subsection.6.1}
+\contentsline {section}{\numberline {7}Review of quantitative $K$-theory}{37}{section.7}
+\contentsline {subsection}{\numberline {7.1}Roe algebras and filtration}{37}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Definition of quantitative $K$-theory}{38}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Morita equivalence}{39}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Quantitative boundary maps}{39}{subsection.7.4}
+\contentsline {section}{\numberline {8}Quantitative statements}{41}{section.8}
+\contentsline {subsection}{\numberline {8.1}A reminder on groupoids action}{41}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}The Baum-Connes conjecture}{42}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Length, propagation and controlled six-terms exact sequence}{43}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}The Kasparov transform}{43}{subsection.8.4}
+\contentsline {subsubsection}{\numberline {8.4.1}Odd case}{44}{subsubsection.8.4.1}
+\contentsline {subsubsection}{\numberline {8.4.2}Even case}{47}{subsubsection.8.4.2}
+\contentsline {subsection}{\numberline {8.5}Quantitative assembly maps}{49}{subsection.8.5}
+\contentsline {subsubsection}{\numberline {8.5.1}Classifying space for proper actions}{49}{subsubsection.8.5.1}
+\contentsline {subsection}{\numberline {8.6}Quantitative statements}{52}{subsection.8.6}
+\contentsline {section}{\numberline {9}Decomposition complexity}{57}{section.9}
+\contentsline {subsection}{\numberline {9.1}Examples and applications}{57}{subsection.9.1}
+\contentsline {section}{\numberline {10} Mayer-Vietoris exact sequences and controlled cutting and pasting}{59}{section.10}
+\contentsline {subsection}{\numberline {10.1}Mayer-Vietoris sequence in $K$-homology}{59}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Standard modules}{60}{subsection.10.2}
+\contentsline {section}{\numberline {11}Nuclear dimension}{63}{section.11}
