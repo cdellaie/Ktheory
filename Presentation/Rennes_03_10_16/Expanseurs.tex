@@ -59,7 +59,9 @@ et $\lambda_0=0$.
 Si $M\in\mathcal L(l^2(X))$ est l'opérateur de Markov associé à la marche aléatoire, 
 \[(Mf)(v)=\frac{1}{deg(v)}\sum_{w \in N_v} f(w) = \mathbb E[f(X_1)|X_0=v],\]
 alors : \[\Delta=Id-M\]
-Donc $0<\lambda_1$ contrôle la vitesse de convergence vers la distribution d'équilibre.
+Donc $0<\lambda_1$ contrôle la vitesse de convergence vers la distribution d'équilibre
+\[\nu(x)= \frac{deg(x)}{\sum_{v\in V} deg(v)},\]
+qui revient à tirer aléatoirement un somment avec une probabilité proportionelle à son nombre de voisin.
 \end{frame}
 
 \begin{frame}{Laplacien}
@@ -170,8 +172,9 @@ pour $x,y\in X$.
 
 \begin{frame}{Plongements uniformes} 
 \begin{itemize}
-\item[$\bullet$] Tout espace métrique se plonge isométriquement dans un esapce de Banach.
-\item[$\bullet$] Qu'en est-il des espaces de Hibert.
+\item[$\bullet$] Tout espace métrique se plonge isométriquement dans un espace de Banach.
+\[\left\{\begin{array}{rcl} (X,d) &\rightarrow  & (l^\infty(X),d_\infty) \\ x &\mapsto  & d(x,-)- d(x_0,-)\end{array}\right.\]
+\item[$\bullet$] Qu'en est-il des de plongement dans des espaces de Hibert ?
 \end{itemize}
 On se fixe $H$ un espace de Hilbert séparable.
 \end{frame}
