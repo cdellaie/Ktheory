@@ -1,0 +1,176 @@
+\section{Controlled assembly maps for étale groupoids}
+
+\subsection{Kasparov transform}
+
+Let $A$ and $B$ be two $\G$-$C^*$-algebras, and $H$ a separable Hilbert space, $l^2(\Z)$ for instance, and $H_\G= H\otimes L^2(\G,\lambda)$. The standard Hilbert module over $B$ is denoted by $H_B=H_\G\otimes B$, and $K_B$ is the algebra of compact operators for $H_B$, i.e. $K(H)\otimes L^2(\G,\lambda)\otimes B$. \\
+
+Every $K$-cycle $z\in KK^G(A,B)$ can be represented as a triplet $(H_B, \pi, T)$ where :
+\begin{itemize}
+\item[$\bullet$]$\pi : A\rightarrow \mathcal L_B(H_B)$ is a $*$-representation of $A$ on $H_B$.
+\item[$\bullet$]$T\in \mathcal L_B(H_B)$ is a self-adjoint operator.
+\item[$\bullet$] $T$ and $\pi$ satisfy the $K$-cycle condition, i.e. $[T,\pi(a)]$, $\pi(a)(T^2-id_{H_B})$ and $\pi(a)(g.T-T)$ are compact operators over $H_B$ for all $a\in A, g\in \G$.\\
+\end{itemize}
+
+Set $T_\G= T\otimes id_{B\rtimes \G}\in \mathcal L_{B\rtimes \G}(H_B\otimes (B\rtimes \G))\simeq \mathcal L_{B\rtimes \G}(H_{B\rtimes\G})$, and $\pi_G: A\rtimes \G v\rightarrow L_{B\rtimes \G}(H_{B\rtimes\G})$. Then, according to Le Gall \cite{LeGall}, $(H_{B\rtimes\G, \pi_\G, T_\G})$ represents the $K$-cycle $j_\G(z)\in KK(A\rtimes \G,B\rtimes \G)$. Let us construct a controlled morphism associated to $z$,
+\[J_\G(z) : \hat K(A\rtimes \G)\rightarrow \hat K(B\rtimes\G), \]
+which induces right multiplication by $j_\G(z)$ in $K$-theory.\\
+
+\subsubsection{Odd case}
+
+Let us first do the work for $z\in KK_1^\G(A,B)$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_\G=P\otimes id_{B\rtimes \G}$. We define
+\[E^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in A\rtimes \G, y\in K_{B\rtimes\G}\}\]
+a $C^*$-algebra which is filtered by
+\[E_U^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in (A\rtimes \G)_U, y\in K\otimes (B\rtimes\G)_U\}\]
+which gives us a filtered extension
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{B\rtimes_r\G}\arrow{r} & E^{(\pi,T)} \arrow{r} & A\rtimes_r \G \arrow{r}& 0
+\end{tikzcd}\]
+and semi split by  $s :\left\{\begin{array}{lll}A\rtimes_r \G & \rightarrow & E^{(\pi,T)} \\ x & \mapsto & (x, P_\G \pi_\G(x)P_\G)\end{array}\right.$.\\
+
+Let us show that the controlled boundary map of this extension does not depend on the representant chosen, but only on the class $z$.\\
+Let $(H_B, \pi_j,T_j), j=0,1$ two $K$-cycles which are homotopic via $(H_{B[0,1]},\pi,T)$. We denote $e_t$ the evaluation at $t\in[0,1]$ for an element of $B[0,1]$, and set $y_t=e_t(y)$ for such a $y$. The $*$-morphism
+\[\phi : \left\{\begin{array}{lll}E^{(\pi,T)} & \rightarrow & E^{(\pi_t,T_t)} \\ (x,y) & \mapsto & (x, y_t)\end{array}\right.\]
+satisfies $\phi(K_{B[0,1] \rtimes_r \G})\subset K_{B \rtimes_r \G}$ and makes the following diagram commute
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{B[0,1] \rtimes_r \G}\arrow{r}\arrow{d}{\phi_{|K_{B[0,1] \rtimes_r \G}}} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi} & A\rtimes_r \G \arrow{r}\arrow{d}{=}& 0 \\
+0\arrow{r} & K_{B \rtimes_r \G}\arrow{r} &  E^{(\pi_t,T_t)} \arrow{r} & A\rtimes_r \G \arrow{r} & 0
+\end{tikzcd}.\]
+
+According to \cite{OY2}, remark $3.7.$, the following holds
+\[D_{K_{B\rtimes_r\G,E^{(\pi_t,T_t)}}} = \phi_* \circ D_{K_{B[0,1]\rtimes_r\G},E^{(\pi,T)}}.\]
+As $id \otimes e_t$ gives a homotopy between $id\otimes e_0$ and $id\otimes e_1$, and as if two $*$-morphisms are homotopic, then they are equal in controlled $K$-theory, 
+\[D_{K_{B\rtimes_r \G}, E^{(\pi_0,T_0)}}=D_{K_{B\rtimes_r \G}, E^{(\pi_1,T_1)}}\]
+holds, and the boundary of the extension $E^{(\pi,T)}$ depends only on $z$.\\
+
+\begin{definition}
+The controlled Kasparov transform of an element $z\in KK_1^\G(A,B)$ is defined as the compostion
+\[J_{red,\G}(z)=\mathcal M_{B\rtimes_r \G}^{-1}\circ D_{K_{B\rtimes_r \G}, E^{(\pi,T)}}.\]
+\end{definition}
+
+As the boundary map is a $(\alpha_D,k_D)$-controlled morphism and the Morita equivalence preserves the filtration, $J_{red,\G(z)}$ is  $(\alpha_D,k_D)$-controlled. 
+
+\begin{prop}\label{Kasparov1}
+Let $A$ and $B$ two $\G$-$C^*$-algebras. There exists a control pair $(\alpha_J,k_J)$ such that for every $z\in KK^\G_1(A,B)$, there exists a $(\alpha_J,k_J)$-controlled morphism
+\[J_{red,\G}(z) : \hat K_*(A\rtimes_r \G)\rightarrow \hat K_{*+1}(B\rtimes_r \G)\]
+such that
+\begin{enumerate}
+\item[(i)] $J_{red,\G}(z)$ induces right multiplication by $j_{red,\G}(z)$ in $K$-theory ;
+\item[(ii)] $J_{red,\G}$ is additive, i.e.
+\[J_{red,\G}(z+z')=J_{red,\G}(z)+J_{red,\G}(z').\]
+\item[(iii)] For every $\G$-morphism $f : A_1\rightarrow A_2$,
+\[J_{red,\G}(f^*(z))=J_{red,\G}(z)\circ f_{\G,red,*}\] for all $z\in KK_1^G(A_2,B)$.
+\item[(iv)] For every $\G$-morphism $g : B_1\rightarrow B_2$,
+\[J_{red,\G}(g_*(z))= g_{\G,red,*}\circ J_{red,\G}(z)\] for all $z\in KK_1^G(A,B_1)$.
+\item[(v)] Let $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ be a semi-split equivariant extension of $\G$-algebras and $[\partial_J]\in KK_1^\G(A/J,J)$ be its boundary element. Then 
+\[J_\G([\partial_J])=D_{J\rtimes_r G,A\rtimes_r\G}.\] 
+\end{enumerate}
+\end{prop}
+
+\begin{dem}
+\begin{enumerate}
+
+\item[(i)]The $K$-cycle $[\partial_{K_{B\rtimes_r \G},E^{(\pi,T)}}]\in KK_1(A\rtimes_r \G, B\rtimes_r \G)$ implementing the boundary of the extension $E^{(\pi,T)}$ induces the map $j_{red,\G}$ by definition, and modulo Morita equivalence, which immediately gives the first point.
+
+\item[(ii)] If $z,z'$ are elements of $KK_1^G(A,B)$, represented by two $K$-cycles $(H_B,\pi_j,T_j)$, and if $(H_B,\pi,T)$ is a $K$-cycle representing the sum $z+z'$, then $E^{(\pi,T)}$ is naturally isomorphic to the extension sum of the $E_j:=E^{(\pi_j,T_j)}$, namely
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{B\rtimes_r \G} \arrow{r} & D \arrow{r} & A\rtimes_r \G \arrow{r} & 0
+\end{tikzcd}\]
+where 
+\[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K(E_j,E_i)\right\}.\]
+Naturality of the controlled boundary maps \cite{OY2} ensures that the boundary of the sum of two extensions is the sum of the boundary of each, thus the result.
+\item[(iii)] Let $z\in KK_1^\G(A_2,B)$, represented by a cycle $(H_B,\pi,T)$. Representing $f^*(z)$ is $(H_B,f^*\pi,T)$ with off course $f^*\pi=\pi \circ f$. The map 
+\[\phi : \left\{\begin{array}{lll} E^{f^*(\pi,T)} & \rightarrow & E^{(\pi,T)} \\
+( x, P_\G(f^*\pi)(x)P_\G+y) & \rightarrow & ( f_\G(x), P_\G(f^*\pi)(x)P_\G+y) \end{array}\right. \]
+satisfies
+\begin{enumerate}
+\item[$\bullet$] $\phi(K_{B\rtimes_r \G})\subset K_{B\rtimes_r \G}$, and makes the following diagram commute
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{B\rtimes_r \G}\arrow{r}\arrow{d}{=} & E^{f^*(\pi,T)} \arrow{r}\arrow{d}{\phi}& A_1\rtimes_r \G\arrow{r}\arrow{d}{f_\G} & 0\\
+0\arrow{r} & K_{B\rtimes_r \G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A_2\rtimes_r \G\arrow{r} & 0
+\end{tikzcd}.\]
+\item[$\bullet$] It intertwines the sections of the two extensions.
+\end{enumerate}
+Remark $3.7$ of \cite{OY2} assures that \[D_{K_{B\rtimes_r \G}, E^{f^*(\pi,T)} } =  D_{K_{B\rtimes_r \G}, E^{(\pi,T)} }\circ f_{\G,*}\], and the claim is clear from composition by $\mathcal M_{B\rtimes_r \G}^{-1}$.
+
+\item[(iv)] Let $\mathcal E = H_{B_1}\otimes_g B_2$, which is a countably generated Hilbert $B_2$-module. The homomorphism $g:B_1\rightarrow B_2$ gives rise to $g_* : \mathcal L_{B_1}(H_{B_1})\rightarrow \mathcal L_{B_2}(\mathcal E)$, which preserves compact operators : $g_*(K_{B_1})\subset K(\mathcal E)$. We have a similar statement for $g_G : B_1\rtimes\G\rightarrow B_2\rtimes\G$. We denote $\mathcal E_G$ the Hilbert $B_2\rtimes\G$-module $\mathcal E\rtimes\G\simeq H_{B_1\rtimes \G}\otimes_g (B_2\rtimes \G)$.\\
+
+Let $z\in KK^\G(A,B_1)$ be represented by the $K$-cycle $(H_{B_1},\pi,T)$. Then $(H_{B_1}\otimes_g B_2,g_*\circ\pi, g_*(T))=(\mathcal E, \tilde\pi,\tilde T)$ represents $g_*(z)$.\\
+
+The map $(x,y)\mapsto (x, (g_G)_*(y))$ induces $\Psi :E^{(\pi,T)}\rightarrow  E^{g_*(\pi,T)} $ such that
+\[\Psi(x,P_G \pi_G(x) P_G +y)\mapsto (x,\tilde P_G \tilde\pi_G(x) \tilde P_G+(g_G)_*(y)).\]
+Indeed, the crossed-product functor commutes with pull-back by $\G$-morphisms, and $(g_G)*\circ\pi_G=(g_*\circ\pi)_G=\tilde \pi_G$ and $(g_G)_*(P_G) = g_*(P)_G=\tilde P_G$ so that 
+\[(g_G)_*(P_G \pi_G(x) P_G)=\tilde P_G \tilde\pi_G(x) \tilde P_G. \]
+Now, by the stabilisation lemma of Le Gall \cite{LeGall}, we know that the countably generated Hilbert module $\mathcal E_G$ sits as a complemented module of $H_{B_2\rtimes\G}$, and there exists a projection $p\in L(H_{B_2\rtimes\G})$ such that $pH_{B_2\rtimes\G}\simeq \mathcal E_\G$ and $pK_{B_2\rtimes\G}p\simeq K(\mathcal E_G)$. Let $\psi$ be the composition $K_{B_1\rtimes \G}\rightarrow_{(g_G)_*} K(\mathcal E_\G)\rightarrow K_{B_2\rtimes \G}$. In this particular case, we can give an explicit description of $\psi$. The map defined on basic tensor products $(x_j)_{j}\otimes b\mapsto (g(x_j)b)_j $ extends to an isometric embedding $\mathcal E_\G \rightarrow H_{B_2\rtimes \G}$, under which $ b\theta_{e_i,e_j}$ is mapped to $g(b)\theta_{u_i,u_j}$, where $\{e_j\}$ and $\{u_j\}$ are respectively the canonical orthogonal basis of $H_{B_1 \rtimes\G}$ and $H_{B_2 \rtimes\G}$. This gives a commutative diagram 
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{B_1\rtimes \G}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& A\rtimes_r \G\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & K_{B_2\rtimes \G}\arrow{r} & E^{g_*(\pi,T)} \arrow{r}& A\rtimes \G\arrow{r} & 0
+\end{tikzcd}.\]
+and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi_{|K_{B_1\rtimes \G}}\subset K_{B_2\rtimes\G}$, so that we can again apply the remark $3.7$ of \cite{OY2} to state
+\[ D_{K_{B_2\rtimes \G},E^{g_*(\pi,T)}}=\psi_*\circ D_{K_{B_1\rtimes \G},E^{(\pi,T)}},\]
+which we compose by the Morita equivalence on the left $M_{B_2\rtimes\G}^{-1}$
+\[J_\G(g_*(z)) = M_{B_2\rtimes\G}^{-1}\circ g_{G,*}\circ D_{K_{B_1\rtimes \G},E^{(\pi,T)}}.\]
+The homomorphisms inducing the Morita equivalence make the following diagram commutes,
+\[\begin{tikzcd}B_1\rtimes\G\arrow{r}{g_\G}\arrow{d} & B_2\rtimes \G\arrow{d} \\ K_{B_1\rtimes\G } \arrow{r}{\psi}& K_{B_2\rtimes\G }\end{tikzcd},\]
+and $J_\G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes\G}^{-1}\circ D_{K_{B_1\rtimes \G},E^{(\pi,T)}}=g_{G,*}\circ J_\G(z)$.\\
+\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_J]$. Then we apply remark $3.7$ of \cite{OY2} to the commutative diagram
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & J\rtimes \G\arrow{r}\arrow{d} & A\rtimes \G \arrow{r}\arrow{d}{s\circ q_\G}& A/J\rtimes_r \G\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & K_{J\rtimes \G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A/J\rtimes \G\arrow{r} & 0
+\end{tikzcd},\]
+where the first vertical arrow is the canonical mapping that induces the Morita equivalence. \\
+\qed
+\end{enumerate}
+\end{dem}
+
+\subsubsection{Even case}
+
+We can now define $J_\G$ for even $K$-cycles. Let $A$ and $B$ be two $\G$-algebras. Let $[\partial_{SB}]\in KK_1(B,SB)$ be the $K$-cycle implementing the boundary of the extension $0\rightarrow SB\rightarrow CB\rightarrow B\rightarrow 0$, and $[\partial]\in KK_1(\C,S)$ be the Bott generator. As $z\otimes_B [\partial_{SB}]$ is an odd $K$-cycle, we can define
+\[J_\G(z):= \tau_{B\rtimes \G}([\partial]^{-1})\circ J_\G(z\otimes[\partial_{SB}]).\] 
+
+Here $\tau_D$ refers to the $(\alpha_\tau,k_\tau)$-controlled map $\hat K (A_1\otimes D )\rightarrow \hat K(A_2\otimes D)$, that H. Oyono-Oyono and G. Yu constructed in \cite{OY2} for any $C^*$-algebras $D,A_1,A_2$ and $z\in KK_*(A_1,A_2)$. It enjoys many natural properties, and induces right multiplication by $\tau_D(z)\in KK(A_1\otimes D,A_2\otimes D)$ in $K$-theory. We can see that, if we set $\alpha_J=\alpha_\tau \alpha_D$ and $k_J=k_\tau * k_D$, $J_\G(z)$ is $(\alpha_J,k_J)$-controlled.\\
+
+\begin{prop}
+Let $A$ and $B$ two $\G$-$C^*$-algebras. For every $z\in KK^\G_*(A,B)$, there exists a control pair $(\alpha_J,k_J)$ and a $(\alpha_J,k_J)$-controlled morphism
+\[J_{red,\G}(z) : \hat K(A\rtimes_r \G)\rightarrow \hat K(B\rtimes_r \G)\]
+of the same degree as $z$, such that
+\begin{enumerate}
+\item[(i)] $J_{red,\G}(z)$ induces right multiplication by $j_{red,\G}(z)$ in $K$-theory ;
+\item[(ii)] $J_{red,\G}$ is additive, i.e.
+\[J_{red,\G}(z+z')=J_{red,\G}(z)+J_{red,\G}(z').\]
+\item[(iii)] For every $\G$-morphism $f : A_1\rightarrow A_2$,
+\[J_{red,\G}(f^*(z))=J_{red,\G}(z)\circ f_{\G,red,*}\] for all $z\in KK_*^G(A_2,B)$.
+\item[(iv)] For every $\G$-morphism $g : B_1\rightarrow B_2$,
+\[J_{red,\G}(g_*(z))= g_{\G,red,*}\circ J_{red,\G}(z)\] for all $z\in KK_*^G(A,B_1)$.
+\item[(v)] $J_G([id_A]) \sim_{(\alpha_J,k_J)} id_{\hat K(A\rtimes \G)}$
+\end{enumerate}
+\end{prop}
+
+\begin{dem}
+The point $(iii)$ is a consequence of the previous proposition \ref{Kasparov1}, and of the equality $f^*(x)\otimes y = f^*(x\otimes y)$.\\
+\qed
+\end{dem}
+
+We now show that the controlled Kasparov transform respects in a quantitative way the Kasparov product.
+
+\begin{prop} There exists a control pair $(\alpha_K,k_K)$ such that for every $\G$-$C^*$-algebras $A$, $B$ and $C$, and every $z\in KK^\G(A,B),z'\in KK^\G(B,C)$, the controlled equality
+\[J_\G(z\otimes_B z') \sim_{\alpha_K,k_K} J_\G(z')\circ J_\G(z)\]
+holds.
+\end{prop}
+\begin{dem}
+We will use the following fact : there exists a positive integer $d$ such that every cycle $z\in KK^\G(A,B)$ has decomposition property $(d)$. For more details, we send to the appendice of the article of V. Lafforgue \cite{LaffOY} where H. Oyono-Oyono shows that claim. We just need to know that $z$ satisfies the decomposition property $(d)$ if there exist $d+1$ $\G$-$C^*$-algebras $A_j$  and $d$ cycles $\alpha_j\in KK^\G(A_{j-1},A_j), j=1,d$ such that $A_0=A$, $A_d=B$ and each $\alpha_j$ is either coming from a $*$-morphism $A_{j-1}\rightarrow A_j$, or there is a $*$-morphism $\theta_j: A_j\rightarrow A_{j-1}$ such that $\alpha_j \otimes_{A_j} [\theta_j]=1$ in $KK^G(A_{j-1},A_{j-1})$.\\
+
+This property reduces the proof to the special case of $\alpha$ being the inverse of a morphism in $KK^\G$-theory : $\alpha\otimes[\theta]=1$, then :
+\[\begin{array}{rcl}
+J_\G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_\G(\alpha\otimes z)\circ J_\G(\alpha\otimes [\theta]) \\
+			& \sim & J_\G(\alpha\otimes z)\circ J_\G(\theta_*(\alpha))\\
+			& \sim & J_\G(\alpha\otimes z)\circ \theta_{\G,*}\circ J_\G(\alpha)\\
+			& \sim & J_\G(\theta^*(\alpha\otimes z))\circ J_\G(\alpha)\\
+			& \sim & J_\G(z)\circ J_\G(\alpha) \\
+\end{array}\] 
+because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The control on the propagation of the first line follows from remark $2.5$ of \cite{OY2} and point $(v)$, the other lines are equal by points $(iii)$ and $(iv)$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes, and $(\alpha_K,k_K)$ can be taken to be $(d \alpha_J^{2d},( k_J*k_J)^{*d})$.
+\qed
+\end{dem}
+
+\subsection{Quantitative assembly maps}
+
+

@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {2.2}La suite exacte \IeC {\`a} six termes}{15}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Produits crois\IeC {\'e}s de $C^*$-alg\IeC {\`e}bres}{17}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Suite exacte de Pimsner-Voiculescu}{17}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Extension de Toeplitz}{21}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.2}Extension de Toeplitz}{20}{subsubsection.2.3.2}
 \contentsline {section}{\numberline {3}Suite exacte de Pimsner-Voiculescu}{24}{section.3}
 \contentsline {subsection}{\numberline {3.1}La preuve originale}{24}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Un exemple : le tore non-commutatif}{28}{subsection.3.2}

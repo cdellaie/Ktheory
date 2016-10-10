@@ -13,21 +13,21 @@ A $G$-space $Z$ is said to be proper if the crossed-product groupoid $Z\rtimes G
 A $G$-space $\underline E G$ is called universal if, given any proper $G$-compact $G$-space $Z$, there exists a continuous $G$-equivariant map $Z\rightarrow \underline E G$.
 \end{definition}
 
-We now construct a model for universal spaces of $G$, based on J.-L.Tu's work \ref{TuBC2}. For any compact subset $K\subset G$, define $P_K(G)$ to be the space of probability measures $\nu $ with support contained in one and only one fiber $G^x$ for some $x\in G^{(0)}$, and such that if $g,g'\in \text{supp }(\nu)$, then $g'g^{-1}\in K$. We endow $P_K(G)$ with the weak-$*$ topology.\\
+We now construct a model for universal spaces of $G$, based on J.-L.Tu's work \cite{TuBC2}. For any compact subset $K\subset G$, define $P_K(G)$ to be the space of probability measures $\nu $ with support contained in one and only one fiber $G^x$ for some $x\in G^{(0)}$, and such that if $g,g'\in \text{supp }(\nu)$, then $g'g^{-1}\in K$. We endow $P_K(G)$ with the weak-$*$ topology.\\
 
 The action of $G$ is defined by translation. The momentum map $P_K(G)\rightarrow G^{(0)}$ is just the map associating to $\nu$ the only $x$ such that $\text{supp }(\nu) \subset G^x$. As the fibers are discrete, any $\nu\in P_K(G)$ can be represented as as sum $\nu = \sum_{g\in G^x} \lambda_g(\nu)\delta_g$, where $\delta_g$ is the Dirac measure at $g\in G $. The continuous functions $\lambda_g$ are called coordinate functions and satisfy $\sum_{g\in G^x} \lambda_g(\nu) =1$ for every $x\in G^{(0)}$. The action of $G$ is given by $g\lambda_h = \lambda_{g^{-1}h}$.\\
 
-\begin{lem}[Tu,\ref{TuBC2}]
+\begin{lem}[Tu,\cite{TuBC2}]
 The action of $G$ on $P_K(G)$ is proper and cocompact.
 \end{lem}  
 
-\begin{lem}[Tu,\ref{TuBC2}]
+\begin{lem}[Tu,\cite{TuBC2}]
 Let $Z$ be a proper $G$-compact $G$-space. Then there exists a compact subset $K\subset G$ and a $G$-equivariant continuous map $Z\rightarrow P_K(G)$.
 \end{lem}  
 
 \subsection{Equivariant $K$-homology}
 
-We will use the equivariant $KK$-theory developped by Le Gall in his thesis \ref{LeGall}, which is an extension of the usual equivariant $KK$-theory of Kasparov. Recall that, if $A$ and $B$ are two $G$-algebras, elements of $KK^G(A,B)$ are homotopy classes of triple $(E,\pi,T)$ where :\\
+We will use the equivariant $KK$-theory developped by Le Gall in his thesis \cite{LeGall}, which is an extension of the usual equivariant $KK$-theory of Kasparov. Recall that, if $A$ and $B$ are two $G$-algebras, elements of $KK^G(A,B)$ are homotopy classes of triple $(E,\pi,T)$ where :\\
 
 \begin{itemize}
 \item[$\bullet$] $E$ is a $G$-module,
@@ -44,6 +44,19 @@ the inductive limit being taken on proper $G$-compact $G$-subspaces $Z$ of $Y$.
 The previous lemmas assures that this inductive limit can be somehow restricted when it comes to the analytic $>K$-homology of any universal space $\underline E G$ :
 \[RK^G(\underline E G,B) = \varinjlim_{K\subset G \text{ compact }} KK^G(C_0(P_K(G)),B).\]
 
+\subsection{Descent functor}
+
+There exists a natural transformation $KK^G(A,B)\rightarrow KK(A\rtimes_r G, B\rtimes_r G)$ respecting the Kasparov product, which is called the descent functor. The same statement remains true for maximal crossed products. We recall its construction, which was first stated in \cite{LeGall}.\\
+ 
+Let $A$ and $B$ be two $G$-algebras and $(E,\pi,T)\in E^G(A,B)$ be a $K$-cycle. Define :
+\begin{itemize}
+\item[$\bullet$] $E_G$ to be the completion of $C_c(G,E)$ with respect to the norm $||f||= \sup_{x\in G^{(0)}} \sum_{G^x} |f(g)|^2$,
+\item[$\bullet$] $\pi_G$ to be the image of $\pi:A \rightarrow \mathcal L_B(E)$ under the reduced crossed-product functor,
+\item[$\bullet$] $T_G$ to be the image of $T\in\mathcal L(E)$ under the reduced crossed-product functor.
+\end{itemize}
+Then $(E_G,\pi_G,T_G)\in E(A\rtimes_r G,B\rtimes_r G)$ and the map $(E,\pi,T)\mapsto (E_G,\pi_G,T_G) $ induces a homorphism of abelian groups
+\[j_G : KK^G(A,B)\rightarrow KK(A\rtimes_r G,B\rtimes_r G)\]
+satisfying $j_G(z\otimes_D z')=j_G(z)\otimes_{D\rtimes_r G} j_G(z')$ for any $z\in KK^G(A,D), z'\in KK^G(D,B)$.\\ 
 
 \subsection{The assembly map}
 
@@ -55,21 +68,104 @@ The assembly map for $G$ with coefficients in $B$ is defined as the inductive li
 that is $\mu_{G,B} = \varinjlim \mu_{G,B}^{(Z)}$ (one has to check that theses maps respects the inductive systems, which they do).
 \end{definition}
 
-Another definition :
+Another definition : with $Ad$...
 
+\subsection{The Baum-Connes conjecture}
 
+\begin{conj}[Baum-Connes conjecture]
+Let $G$ be an étale groupoid, and $A$ a $G$-algebra.\\
+The Baum-Connes conjecture for $G$ with coefficients in $A$ is the following claim : $\mu_{G,A}$ is an isomorphism of abelian groups.\\
+The Baum-Connes conjecture with coefficients is : for all $G$-algebras $A$, $\mu_{G,A}$ is an isomorphism of abelian groups.
+\end{conj}
 
+The conjecture was first stated in \cite{BaumConnes} and in \cite{BaumConnesHigson}. The statement is a descendent of the Connes-Kasparov conjecture, which is simply, when one knows the Baum-Connes conjecture, the latter for almost connected groups (i.e. locally compact groups $G$ such that $G/G_0$ is compact, where $G_0$ is the connected component of the identity).\\
 
+Here is the status of the conjecture :
+\begin{itemize}
+\item[$\bullet$] The Connes-Kasparov conjecture was established by J. Chabert, S. Echterhoff and R. Nest, who proved that $\mu_{G}$ is an isomorphism for every secound countable almost connected group $G$, and every group of $k$-rational points of a linear algebraic group over a local field of characteristic $0$.\\
+\item[$\bullet$] N. Higson and G. Kasparov proved that the conjecture with coefficients holds for groups having Haagerup property. 
+\item[$\bullet$] V. Lafforgue proved the conjecture with coefficients for hyperbolic groups.
+\item[$\bullet$] V. Lafforgue showed the conjecture for every semi-simple Lie group, real or $p$-adic reductive, and discrete cocompact subgroup of real rank $1$ Lie groups or of $SL(3,k)$ for any local field $k$. \\
+\end{itemize}
 
+For nice topological groupoids, the conjecture is known to be false in full generality \cite{HigsonLaffSk}, but the following result was shown by J-L. Tu in \cite{TuThese}
+\begin{thm}\label{Tu}
+Let $G$ be a locally compact $\sigma$-compact Hausdorff groupoid. Then if $G$ is a-T-menable, the Baum-Connes conjecture with coefficients holds for $G$.
+\end{thm}
 
+\subsection{The Coarse Assembly map}
 
+The construction of the Coarse Assembly map is very similar to the Assembly map for groupoids, but relies on different functors.\\
 
+In \cite{SkTuYu} is defined the Roe algebra $C^*(X,B)$ of a discrete metric space with bounded geometry $X$ with coefficients in an arbitrary $C^*$-algebra $B$. For $R>0$, define $C_R[X,B]$ to be the involutive subspace of operators $T\in \mathcal L_B(l^2(X)\otimes H\otimes B)$ such that $T_{xy}\in \mathfrak K(H\otimes B)$ and $T_{xy}=0$ as soon as $d(x,y)>R$, and $\C[X,B]= \cup_{R>0} C_R[X,B]$. 
 
+\begin{definition}
+The Roe algebra $C^*(X,B)$ is defined as the Hibert $B$-module obtained after the completion of $\C[X,B]$ with respect to the operator norm in $\mathcal L_B(l^2(X)\otimes H\otimes B)$.
+\end{definition} 
 
+This construction is functorial : any $*$-homomorphism $\phi: A\rightarrow B$ gives rise to a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$. Moreover this functoriality extends to $KK$-theory : there exists a natural transformation 
+\[\sigma_X : KK(A,B)\rightarrow KK(C^*(X,A),C^*(X,B))\]
+which respects the Kasparov product, i.e. $\sigma(z\otimes_D z')=\sigma_X(z)\otimes_{C^*(X,D)} \sigma_X(z')\quad,\forall z\in KK(A,D),z'\in KK(D,B)$.\\
 
+Let $X$ be a coarse space with bounded geometry. The Rips complex is the inductive system of finite dimensional simplicial complexes
+\[P_E(X)=\{\eta\in \text{Prob}(X)\text{ s.t. supp }\eta\subset E\}\quad,\forall E\in \mathcal E_X,\]
+endowed with the $*$-weak topology. It is an inductive system with respect to inclusion of entourages.\\
+ 
+The coarse homology group of $X$ with coefficients in an arbitrary $C^*$-algebra $B$ is defined as 
+\[KX_*(X,B)=\varinjlim_{E\in \mathcal E_X} RK(P_E(X),B)\]
+where the limit is taken along the inductive system $\{P_E(X)\}_{E\in\mathcal E_X}$. \\
 
+Let $E\in \mathcal E_X$. Any simplex $\eta\in P_E(X)$ can be written as a finite sum $\eta=\sum_x \lambda_x(\eta)\delta_x$ by boundedness of the geometry. Here, $\delta_x$ is the Dirac measure at $x\in X$. The functions $\lambda_x :\eta\mapsto \lambda_x(\eta)$ are continuous and satifisfy $\sum\lambda_x(\eta) = 1,\forall\eta\in P_E(X)$, so that
+\[V_0\left\{\begin{array}{rcl} 
+ C_0(P_E(X)) & \rightarrow 	& l^2(X)\otimes C_0(P_E(X)) 		\\ 
+ f           & \mapsto 		& (\lambda_x^{\frac{1}{2}}f)_{x\in X} 
+\end{array}\right.\] 
+is an isometry of $C_0(P_E(X))$-modules, and $V_0V_0^*\otimes id_H$ defines a projection in $l^2(X)\otimes H\otimes C_0(P_E(X))$ with finite propagation, so class $[\mathcal L_E]\in K_0(C^*(X,C_0(P_E(X)))$.\\
 
+\begin{definition}
+The Coarse Assembly map $\mu:KX_*(X,B)\rightarrow K_*(C^*(X,B))$ for $X$ with coefficients in $B$ is defined as 
+\[\forall z\in RK(P_E(X), B), \mu_{X,B}(z)=[\mathcal L_E]\otimes_{C^*(X,C_0(P_E(X)))} \sigma_X(z).\]
+\end{definition}
 
+The Coarse Baum-Connes conjecture is the following claim.\\
+
+\begin{conj}[Coarse Baum-Connes conjecture]
+For any coarse space $X$ with bounded geometry, the Coarse Assembly map $\mu_{X,\C}$ is an isomorphism.\\
+\end{conj}
+
+Here are some remarks about the status of the conjecture :
+\begin{itemize}
+\item[$\bullet$] the conjecture is known to hold for any coarse space that admits a coarse embedding into a  separable Hilbert space\cite{Yu2}.
+\item[$\bullet$] couterexamples have been constructed \cite{HigsonLaffSk},
+\item[$\bullet$] Let $\Gamma$ be a finitely generated group, and $|\Gamma|$ the coarse space associated to the word-length metric (any two left invariant metric on $\Gamma$ are coarsely equivalent). Then the Coarse Baum-Connes conjecture for $|\Gamma|$ implies the Novikov conjecture for higher signatures for $\Gamma$.
+\end{itemize}
+
+Here is another description of the Coarse Assembly map which will be of some interest for us.\\
+
+Let $E\in \mathcal E_X$ be an entourage. Take a cycle $(H,\pi, T)\in E(C_0(P_E(X)), \C)$, and equip the finite dimensional simplicial complex $P_E(X)$ with a metric which restricts to the spherical metric on simplices, so that $H$ is a $P_E(X)$-module that we can suppose standard non-degenrate. Then 
+\[T'=\sum \lambda_x^{\frac{1}{2}} T \lambda_x^{\frac{1}{2}} \] 
+is a compact perturbation of $T$ in $\mathcal L(H)$ with bounded propagation, and is invertible modulo $C^*(P_E(X),H)$, so defines a class $[T']\in K_0(C^*(P_E(X),H))$. But $P_E(X)$ and $X$ are coarsely equivalent, the barycentric map $P_E(X)\rightarrow X$ is a coarse equivalence which is covered by $V_0$, so that 
+\[(Ad_{V_0})_* : K_*(C^*(P_E(X),H))\rightarrow K_*(C^*(X,l^2(X)\otimes H))\]
+is an isomorphism, which does only depend on the coarse class of the barycentric map.\\
+
+With that in mind, one can show that $\mu_{X}([H,\pi,T])=(Ad_{V_0})_*[T']$.\\
+
+The point of the article \cite{SkTuYu} is to show that the Coarse Assembly map is equivalent to the Assembly map for the coarse groupoid $G=G(X)$ with coefficients in the $G$-algebra $l^\infty=l^\infty(X,\mathfrak K)$. \\
+
+More precisely, $Z=P_{\overline E}(G)$ is a proper cocompact $G$-space with ismomorphic fibers $Z_x\simeq P_E(X)$, and $l^\infty_x \simeq \mathfrak K$, so that the inclusion of groupoid $\{x\}\hookrightarrow G $ induces a morphism $\iota_Z : RK^G(Z,l^\infty)\rightarrow KK(Z_x,\mathfrak K)$ which is actually an isomorphism. Recall that one can construct an $*$-isomorphism $\Psi_X: l^\infty \rtimes_r G\rightarrow C^*(X)$, and $\mu_X^{(Z_x)}\circ \iota_Z = (\Psi_X)_*\circ \mu_{G,l^\infty}^{(Z)}$ holds and respects inductive limits over $Z$ to give the following commutative diagram :
+\[\begin{tikzcd}
+K_*^{top}(\underline E G, l^\infty) \arrow{r}{\mu_{G,l^\infty}}\arrow{d}{\varinjlim \iota_Z} & K_*(l^\infty\rtimes_r G)\arrow{d}{(\Psi_X)_*} \\
+KX_*(X)\arrow{r}{\mu_X} & K_*(C^*(X))
+\end{tikzcd}\]  
+with vertical arrows being isomorphism.\\
+
+A key point is to use how analytical properties of $G$ translate coarse properties of $X$. In particular, 
+\begin{itemize}
+\item[$\bullet$] in \cite{SkTuYu} is proved that $X$ admits a coarse embedding into Hilbert space iff $G(X)$ is a-T-menable, 
+\item[$\bullet$] in \cite{SkTuYu} is proved that $X$ has property A iff $G(X)$ is amenable, 
+\item[$\bullet$] in \cite{FinnSellFibred}, M. Finn-Sell shows that if $X$ admits a coarse fibered embedding, then $G_\partial = G(X)_{|\partial \beta X}$ is a-T-menable. 
+\end{itemize}
+All of these results, combined with theorem \ref{Tu}, give examples of coarse spaces satisfying the Coarse Baum-Connes conjecture and the Boundary Coarse Baum-Connes conjecture.
 
 
 

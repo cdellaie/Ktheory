@@ -1,0 +1,101 @@
+\section{A quantitative Künneth formula}
+
+In this section, we present an application of the previous results to a Künneth formula for crossed products by an étale groupoid.\\ 
+
+Recall that for $A$ and $B$ two $C^*$-algebras, one can define a homomorphism
+\[\alpha_{A,B} : K_*(A)\otimes K_*(B)\rightarrow K_*(A\otimes B) \quad ; \quad (x,y)\mapsto x\otimes   \tau_A(y),\]
+where $\tau_A$ is the external Kapsarov product.
+
+\begin{definition}
+A $C^*$-algebra $A$ is said to satisfy the Künneth formula if, for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group, $\alpha_{A,B}$ is an isomorphism.
+\end{definition}
+
+If $A$ satifies the Künneth formula, then, for any $C^*$-algebra $B$, one has the following exact sequence
+\[\begin{tikzcd}[column sep = small] 0 \arrow{r} & K_*(A)\otimes K_*(B)\arrow{r} & K_*(A\otimes B) \arrow{r} & Tor(K_*(A),K_*(B))\arrow{r} & 0 \end{tikzcd}\]
+
+If $(A,\mathcal E)$ is now filtered, $(A\otimes B,\mathcal E)$ is also filtered, and one can define a controlled morphism
+\[\hat\alpha_{A,B} : \hat K_*(A)\otimes K_*(B)\rightarrow \hat K_*(A\otimes B) \quad ; \quad (x,y)\mapsto \hat\tau_A(y)(x),\]
+which induces $\alpha_{A,B}$ in $K$-theory. \\
+
+\begin{definition}
+A filtered $C^*$-algebra $(A,\mathcal E)$ is said to satisfy the quantitative Künneth formula if, for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group, $\hat\alpha_{A,B}$ is a controlled isomorphism.
+\end{definition}
+
+The remainder of the section is devoted to prove the following theorem.
+
+\begin{thm}\label{Kunneth}
+Let $G$ be an $\sigma$-compact étale groupoid and $A$ a $G$-algebra. Suppose that 
+\begin{itemize}
+\item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients,
+\item[$\bullet$] for every compact subgroupoids $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula.
+\end{itemize} 
+Then $A\rtimes_r G$ satisfies the quantitative Künneth formula.
+\end{thm}
+
+The following corollary is obvious from the theorem.\cite{FinnSellFibred}
+
+\begin{cor}
+Let $X$ be a proper discrete metric space with bounded geometry which admits a fibered coarse embedding into a Hilbert space and $A$ a $C^*$-algebra. If $A$ satisfies the Künneth formula, then $A\otimes K(l^2(X))$ satifies the quantitative Künneth formula.
+\end{cor}
+
+\subsection{Induction and Restriction functors}
+
+We recall the following construction from \cite{LeGall}. Let $G$ and $G'$ two étale groupoids, and $\phi=(Z,p,p')$ a generalized morphism from $G$ to $G'$. \\
+
+For any $G'$-equivariant $B$-Hilbert module $E$, define $\phi^*E=l^2_Z\otimes_{C(G')} E$ where $l^2_Z $ is the completion of the space of sections $C_c(Z,B)$ such that $f(z)\in B_{p'(z)}$. Then $\phi^*E$ is a $G$-equivariant $\phi^*B$-Hilbert module. \\
+
+If $\pi : A\rightarrow \mathcal L_B(E)$ and every $F\in\mathcal L_B(E)$, define $\pi' = \pi\otimes_{C(G')} id_{C_0(G^{(0)})}$, and $F'=F\otimes id_{C_0(G^{(0)})}= $. If $(E,\pi,F)\in E^{G'}(A,B)$, we use the notation $\phi^* (E,\pi,F)=(\phi^*E,\pi',F')$.\\
+
+Le Gall proves \cite{LeGall} that $(E,\pi,F)\mapsto \phi^*(E,\pi,F)$ descends to a homomorphism of abelian groups $KK^{G'}(A,B)\rightarrow KK^{G}(\phi^*A,\phi^*B)$ which respects Kasparov products, i.e. $\phi^*(x\otimes_D y)= \phi^*(x)\otimes_{\phi^*D}\phi^*(y)$ holds for all $x,y\in KK^{G'}(A,B)$.\\
+
+Moreover, the association $(E,\pi)\mapsto (\phi^*E, \pi')$ is functorial at the level of $C^*$-correspondences.
+
+\begin{definition}
+$G$ and $G'$ are said to be Morita equivalent when there are two generalized morphisms $Z : G\rightarrow G'$ and $Z' : G'\rightarrow G$ such that their compositions are cohomologous to identities.  
+\end{definition}
+
+If $H$ is a subgroupoid of $G$, $G$ naturally carries left and right actions of $G/H\rtimes G$ and $H$, giving rise to two generalized morphisms $\phi : G/H\rtimes G\rightarrow H$ and $\psi : H \rightarrow G/H\rtimes G$, which are inverse of each others ($\phi \psi$ and $\psi\phi$ are cohomologous to the identity). In one sentence, $G/H\rtimes G$ and $H$ are Morita equivalent.\\
+
+If $H$ is compact, one can also see $G$ as a $H$ space, and consider the generalized inclusion  
+\[\iota : 
+\begin{tikzcd}[column sep = small] 
+H \arrow{d} \arrow{d} & \arrow{dl} G \arrow{dr} & G\arrow{d} \arrow{d} \\
+ H^{(0)} & & G^{(0)}
+\end{tikzcd}\]
+and $\eta$ the opposite of $\iota$.  
+\begin{definition}
+The restriction and induction functors are defined by
+\[ \text{Res}_H^G = \iota^*;\quad \text{Ind}_H^G = \eta^*.\]
+These are functorial w.r.t. $C^*$-correspondences, and also w.r.t. $KK$-theory.
+\end{definition}
+
+The Morita equivalence $G/H\rtimes H \sim H$ allows us to give a very concrete definition of these functors, and actually help to prove that, when $H$ is a compact subgroupoid of $G$, $\text{Res}_{H}^G : KK^G(A,B)\rightarrow KK^H( \text{Res}_{H}^G A , \text{Res}_{H}^G B)$ is an isomorphism of abelian groups for any $G$-algebras $A$ and $B$. 
+
+\subsection{Baum-Connes and the Künneth formula}
+
+If $A$ is a $G$-algebra, and $B$ a $C^*$-algebra, $A\otimes B$ naturally inherits a $G$-algebra structure with trivial action of $G$ on the $B$ factor.\\
+
+Let $Z$ be a $G$-proper space. Define the homomorphism :
+\[\alpha_{A,B}^{G,Z} : RK^G_*(Z,A)\otimes K_*(B)\rightarrow RK_*^G(Z,A\otimes B) \quad ; \quad (x,y)\mapsto x\otimes_{}   \tau_A(y),\]
+which respects inductive limits w.r.t. inclusions of $G$-proper spaces, so that it induces
+\[\alpha_{A,B}^G : K_*^{top}(G,A)\otimes K_*(B)\rightarrow K_*^{top}(G,A\otimes B ).\]
+
+To prove theorem \ref{Kunneth}, we will need the following result.
+
+\begin{thm}
+Let $E$ be an open relatively compact subset of $G$ and $P_E$. If for all compact subgroupoids $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula, then $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism for all $C^*$-algebras $B$ such that $K_*(B)$ is a free abelian group.
+\end{thm}
+
+\begin{proof}
+Let $Z_0\subset Z_1\subset ... \subset Z_n $ be the skeleton decomposition of $P_E(G)$.\\
+
+Let us prove by induction that $\alpha_j=\alpha^{G,Z_j}_{A,B}$ is an isomorphism. By a standard argument similar to the proof of theorem \ref{prod}, it is sufficient to prove the statement for $j=0$.\\
+
+Let $U\subset Z_0$ be a $G$-compact $G$-proper space. There exists a compact subgroupoid $H$ of $G$ and a proper $H$-space such that $U = \text{Ind}_H^G V$. The following diagram is commutative :
+\[\begin{tikzcd}[column sep = small] RK_*^G(U,A)\otimes K_*(B) \arrow{r}{\alpha_{A,B}^{G,U}} \arrow{d}{\text{Res}_H^G} & RK^G(U, A\otimes B) \arrow{d}{\text{Res}_H^G}\\
+RK_*^H(V, \text{Res}_H^GA)\otimes K_*(B) \arrow{r}{\alpha_{\text{Res}_H^G A,B}^{H,V}} \arrow{d}{\mu_{H,\text{Res}_H^G A \otimes id}} & 
+	RK_*^H(V, \text{Res}_H^G A\otimes B)\arrow{d}{\mu_{H,\text{Res}_H^G A }} \\
+K_*(\text{Res}_H^G A\rtimes_r H)\otimes K_*(B)\arrow{r}{\alpha_{\text{Res}_H^G A,B}} & K_*\left((\text{Res}_H^G A\otimes B)\rtimes_r H\right) 
+\end{tikzcd}\]
+The first vertical arrows are isomorphisms by property of the restriction functor, the last horizontal one and the last vertical ones are by hypothesis, so that $\alpha_{A,B}^{G,U}$ is an isomorphism. By taking the inductive limit on $G$-proper $G$-compact spaces $U\subset Z_0$, we get that $\alpha_{A,B}^{G,Z_0}$ is an isomorphism.
+\end{proof}
