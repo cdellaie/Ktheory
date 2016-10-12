@@ -27,7 +27,7 @@ The remainder of the section is devoted to prove the following theorem.
 Let $G$ be an $\sigma$-compact étale groupoid and $A$ a $G$-algebra. Suppose that 
 \begin{itemize}
 \item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients,
-\item[$\bullet$] for every compact subgroupoids $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula.
+\item[$\bullet$] for every compact subgroupoid $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula.
 \end{itemize} 
 Then $A\rtimes_r G$ satisfies the quantitative Künneth formula.
 \end{thm}
@@ -73,6 +73,8 @@ The Morita equivalence $G/H\rtimes H \sim H$ allows us to give a very concrete d
 
 \subsection{Baum-Connes and the Künneth formula}
 
+The first step in proving theorem \ref{Kunneth} is to define a analytical version of $\alpha_{A,B}$ when an étale groupoid $G$ is given. More precisely, we first construct a homomorphism $\alpha_{A,B}^G : K_*^{top}(G,A)\otimes K_*(B)\rightarrow K_*^{top}(G,A\otimes B )$, inductive limit of $\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K_*(B)\rightarrow RK^G(Z,A\otimes B )$ where $Z$ runs through $G$-proper $G$-compact spaces. Then we show that the controlled assembly map intertwines $\alpha^{G,P_d(G)}_{A,B}$ and $\alpha_{A\rtimes_r G,B}$ uniformly.\\
+
 If $A$ is a $G$-algebra, and $B$ a $C^*$-algebra, $A\otimes B$ naturally inherits a $G$-algebra structure with trivial action of $G$ on the $B$ factor.\\
 
 Let $Z$ be a $G$-proper space. Define the homomorphism :
@@ -99,3 +101,47 @@ K_*(\text{Res}_H^G A\rtimes_r H)\otimes K_*(B)\arrow{r}{\alpha_{\text{Res}_H^G A
 \end{tikzcd}\]
 The first vertical arrows are isomorphisms by property of the restriction functor, the last horizontal one and the last vertical ones are by hypothesis, so that $\alpha_{A,B}^{G,U}$ is an isomorphism. By taking the inductive limit on $G$-proper $G$-compact spaces $U\subset Z_0$, we get that $\alpha_{A,B}^{G,Z_0}$ is an isomorphism.
 \end{proof}
+
+\begin{lem}
+There exists a positive number $\lambda$ and a function $c : (0,\frac{1}{\lambda})\times\mathcal E\rightarrow \mathcal E$, decreasing in $E$ and non increasing in $\varepsilon$ such that, for any étale groupoid $G$, any filtered $G$-algebra $(A,\mathcal E)$, and any $C^*$-algebra $B$, the following diagram commutes :
+\[\begin{tikzcd}
+RK_*^G(P_E(G),A)\otimes K_*(B) \arrow{r}{\alpha^{G,P_E(G)}_{A,B}}\arrow{d}{\mu_{G,A}^{\varepsilon,F}\otimes \text{id}_{K_*(B)}} & 
+RK_*^G(P_E(G),A\otimes B) \arrow{d}{\mu_{G,A}^{\alpha_ \tau\varepsilon,h_\varepsilon F}} \\
+K_*^{\varepsilon,F}(A\rtimes_r G)\otimes K_*(B) \arrow{r}{\alpha_{A\rtimes_r,B}^{\varepsilon,F}} & 
+K_*^{\alpha_\tau\varepsilon,h_{\varepsilon}F}(A\rtimes_r G)\\
+\end{tikzcd}\] 
+for all $\varepsilon\in(0,\frac{1}{\lambda})$ and $E,F\in\mathcal E$ such that $F\geq c(\varepsilon,E)$. 
+\end{lem}
+
+\begin{dem}
+
+\end{dem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

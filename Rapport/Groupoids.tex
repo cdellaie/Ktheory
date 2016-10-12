@@ -1,0 +1,11 @@
+\section{Preliminaries on topological groupoids}
+
+\begin{definition}
+A groupoid is the data of 
+\begin{itemize}
+\item[$\bullet$] two topological spaces $G$ and $G^{(0)}$, called respectively the space of arrows, and the unit space,
+\item[$\bullet$] source and range maps $r,s : G\rightarrow G^{(0)}$ which are continuous and surjective,
+\item[$\bullet$] a continuous multiplication map $m : G^{(2)}=G\times_{s,r}G\rightarrow G; (g,g')\mapsto gg'$ such that $(gg')g''=g(g'g'')$ for all triple $g,g',g''$ that are composable,
+\item[$\bullet$] unit and inverse map $e : G^{(0)}\rightarrow G; x\mapsto e_x$ and $\text{inv} : G\rightarrow G: g\mapsto g^{-1}$ which are continous and such that $\forall g\in G, gg^{-1}=e_{s(g)} \text{ and }g^{-1}g=e_{r(g)}$.
+\end{itemize} 
+\end{definition}
