@@ -9,3 +9,28 @@ A groupoid is the data of
 \item[$\bullet$] unit and inverse map $e : G^{(0)}\rightarrow G; x\mapsto e_x$ and $\text{inv} : G\rightarrow G: g\mapsto g^{-1}$ which are continous and such that $\forall g\in G, gg^{-1}=e_{s(g)} \text{ and }g^{-1}g=e_{r(g)}$.
 \end{itemize} 
 \end{definition}
+
+\begin{definition}
+Let $G$ be a locally compact groupoid.\\
+$G$ is said to be étale if the range map $r:G\rightarrow G^{(0)}$ is a local homeomorphism.\\
+$G$ is said to be principal if $r\times s : G\rightarrow G^{(0)}\times G^{(0)}$ is injective, transitive if $r\times s $ is surjective, and proper if $r\times s $ is a proper map. 
+\end{definition}
+
+If $G$ is étale, then any $g\in G$ has an open neighborhood $U$ such that $r$ and $s$ are injective on $U$. The element $g$ defines in this way a partial homeomorphism $\alpha_U = r\circ (s_{|U})^{-1} : s(U)\rightarrow r(U)$. Such open sets $U$ where $r$ and $s$ are injective are called bisections. The set of bisections is naturally a invers semi-group.\\
+
+For $U,V\subset G^{(0)}$, we will us the notations $G_U=s^{-1}(U)$, $G^V=r^{-1}(V)$ and $G_U^V=s^{-1}(U)\cap r^{-1}(V)$. If one of the subsets is reduced to a single point, we will use $G_x=G_{\{x\}}$, etc.
+
+\subsection{Equivariant $KK$-theory}
+
+In \cite{LeGall}, Le Gall defined, for any locally compact groupoid $G$, and $G$-algebras $A$ and $B$, $\Z_2$-graded abelian groups $KK^G(A,B)$ generalizing Kasparov's equivariant $KK$-theory for a locally compact group. Elements of $KK^G(A,B)$ are defined as equivalence classes of triples $(E,\pi,T)$ that we will call $K$-cycles, where :
+\begin{itemize}
+\item[$\bullet$] $E$ is a right $\Z_2$-graded $B$-Hilbert module, equipped with a unitary action of $G$, i.e. an even unitary $V\in\mathcal L_B(s^*E,r^*E)$ such that $V_g V_{g'} = V_{gg'}$ for all $(g,g')\in G^{(2)}$,
+\item[$\bullet$] $\pi : A\rightarrow \mathcal L_B(E)$ is a $*$-homomorphism with image containe in even operators, and we will often write $a$ instead of $\pi(a)$,
+\item[$\bullet$] $T\in\mathcal L_B(E)$ is an odd bounded $B$-linear operator satifying the $K$-cycle relations i.e. $[a, T]$, $a(T-T^*)$, $a(T^2-1)$, $a(T_{r(g)}-V_gT_{s(g)}V_g^*)$ are compact operators in $\mathfrak K_B(E)$.
+\end{itemize} 
+
+The set of such $K$-cycles is denoted by $\mathbb E^G(A,B)$.
+
+\begin{definition}
+Two $K$-cycles $(E,\pi,T)$ and $ (E',\pi',T')$ in $\mathbb E^G(A,B)$ are homotopic if there exists $ (\tilde E,\tilde \pi,\tilde T) \in\mathbb E^G(A,B[0,1])$ such that $(\tilde E_0,\tilde \pi_0,\tilde T_0)\simeq (E,\pi,T)$ and $(\tilde E_1,\tilde \pi_1,\tilde T_1)\simeq (E',\pi',T')$.
+\end{definition}
