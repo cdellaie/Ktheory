@@ -8,7 +8,16 @@ For any positive number $R>0$, define the family of linear subspaces
 \[C_R[X,B]=\{T\in \mathcal L(l^2(X)\otimes H_B) \text{ s.t. } T_{xy}\in \mathfrak K(H_B) \text{ and }T_{xy}=0 \text{ for }(x,y)\not\in \Delta_R  \}\]
 and $C^*(X,B)$ is the completion of $\cup_{R>0} C_R[X,B]$ for the operator norm in $\mathcal L(l^2(X)\otimes H_B) $. Remark that the $C^*$-algebra $C^*(X,B)$ is filtered by $\mathcal E$, and also by $\R_+^*$, seen as a coarse structure.\\
 
-For $\phi : A\rightarrow B$, we use the notation $\phi_X $ for the induced $*$-homomorphism $C^*(X,A)\rightarrow C^*(X,B)$.
+For $\phi : A\rightarrow B$, we use the notation $\phi_X $ for the induced $*$-homomorphism $C^*(X,A)\rightarrow C^*(X,B)$. We give details for its construction, which is a standard fact in Coarse Geometry, but the author could not find a written proof.
+
+\begin{thm}
+Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarrow B$ a $*$-morphism. Then there exists a $*$-morphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ extending $\phi$. Moreover, $\phi\mapsto \phi_X$ respects composition of $*$-morphisms.
+\end{thm}
+
+\begin{proof}
+Recall that any $*$-morphism $\phi : A\rightarrow B$ induces, for any $A$-Hilbert module $E$, a $*$-morphism $\phi_* : \mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_A B)$. Now take $E$ to be $l^2(X)\otimes A$. Then $\eta\otimes a\otimes b\mapsto \eta \otimes\phi(a) b $ extends to an isometry $V\in \mathcal L_B(E\otimes_A B,l^2(X)\otimes B)$.\\
+The linear map $T \mapsto V\phi_*(T)V^*$ maps $C_R[X,A]$ into $C_R[X,B]$, and so extends to a $*$-morphism $C^*(X,A)\rightarrow C^*(X,B)$. The compostion property is clear from the construction.
+\end{proof}
 
 \subsection{Controlled descent functor}
 
