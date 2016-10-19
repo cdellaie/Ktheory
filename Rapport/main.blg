@@ -1,13 +1,14 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
+A level-1 auxiliary file: Notations.aux
+A level-1 auxiliary file: Groupoids.aux
 A level-1 auxiliary file: StateOfTheArt.aux
 A level-1 auxiliary file: Qtheory2.aux
 A level-1 auxiliary file: AssemblyMaps.aux
+A level-1 auxiliary file: CoarseAM.aux
 A level-1 auxiliary file: ControlledAM.aux
-A level-1 auxiliary file: Intro.aux
-A level-1 auxiliary file: QKtheory.aux
-A level-1 auxiliary file: QuantitativeStatements.aux
+A level-1 auxiliary file: Kunneth.aux
 A level-1 auxiliary file: FDC.aux
 A level-1 auxiliary file: StandardModules.aux
 A level-1 auxiliary file: NuclearDimAsdim.aux
@@ -17,45 +18,45 @@ Warning--empty journal in OY3
 Warning--empty year in OY3
 Warning--empty school in LeGall
 Warning--empty journal in WeggeOlsen
-You've used 20 entries,
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            651 strings with 6876 characters,
-and the built_in function-call counts, 5906 in all, are:
-= -- 606
-> -- 202
-< -- 3
-+ -- 88
-- -- 62
-* -- 404
-:= -- 999
-add.period$ -- 60
-call.type$ -- 20
-change.case$ -- 88
+            634 strings with 6602 characters,
+and the built_in function-call counts, 4935 in all, are:
+= -- 505
+> -- 175
+< -- 2
++ -- 74
+- -- 54
+* -- 340
+:= -- 847
+add.period$ -- 50
+call.type$ -- 17
+change.case$ -- 76
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 230
-empty$ -- 495
-format.name$ -- 62
-if$ -- 1208
+cite$ -- 21
+duplicate$ -- 188
+empty$ -- 405
+format.name$ -- 54
+if$ -- 999
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 21
-newline$ -- 102
-num.names$ -- 40
-pop$ -- 80
+int.to.str$ -- 17
+missing$ -- 17
+newline$ -- 87
+num.names$ -- 34
+pop$ -- 65
 preamble$ -- 1
-purify$ -- 71
+purify$ -- 61
 quote$ -- 0
-skip$ -- 151
+skip$ -- 124
 stack$ -- 0
-substring$ -- 451
-swap$ -- 29
-text.length$ -- 3
+substring$ -- 370
+swap$ -- 21
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
+type$ -- 66
 warning$ -- 4
-while$ -- 69
-width$ -- 22
-write$ -- 215
+while$ -- 59
+width$ -- 19
+write$ -- 181
 (There were 4 warnings)

@@ -17,11 +17,11 @@ Martin Finn-Sell.
   the novikov conjecture.
 \newblock {\em Journal of Functional Analysis}, 267(10):3758--3782, 2014.
 
-\bibitem{GTY}
-Erik Guentner, Romain Tessera, and Guoliang Yu.
-\newblock A notion of geometric complexity and its application to topological
-  rigidity.
-\newblock {\em Inventiones mathematicae}, 189(2):315--357, 2012.
+\bibitem{GWY}
+Erik Guentner, Rufus Willett, and Guoliang Yu.
+\newblock Dynamic asymptotic dimension: relation to dynamics, topology, coarse
+  geometry, and c\^{}*-algebras.
+\newblock {\em Mathematische Annalen}, pages 1--45, 2015.
 
 \bibitem{OY3}
 G.~Yu H.~Oyono-Oyono.
@@ -61,12 +61,6 @@ John Roe.
 \newblock {\em Lectures on coarse geometry}, volume~31.
 \newblock American Mathematical Soc., 2003.
 
-\bibitem{RoeIndex}
-John Roe and Conference~Board of~the Mathematical~Sciences.
-\newblock {\em Index theory, coarse geometry, and topology of manifolds},
-  volume~90.
-\newblock American Mathematical Soc., 1996.
-
 \bibitem{SkTuYu}
 Georges Skandalis, Jean-Louis Tu, and Guoliang Yu.
 \newblock The coarse baum--connes conjecture and groupoids.
@@ -76,11 +70,6 @@ Georges Skandalis, Jean-Louis Tu, and Guoliang Yu.
 Jean-Louis Tu.
 \newblock La conjecture de baum--connes pour les feuilletages moyennables.
 \newblock {\em K-theory}, 17(3):215--264, 1999.
-
-\bibitem{TuBC}
-Jean-Louis Tu.
-\newblock The baum-connes conjecture for groupoids.
-\newblock In {\em C*-algebras}, pages 227--242. Springer, 2000.
 
 \bibitem{TuNonHaus}
 Jean-Louis Tu.
@@ -96,11 +85,6 @@ Jean-Louis Tu.
 NE~Wegge-Olsen.
 \newblock K-theory and c-star-algebras: A friendly approach.
 \newblock 1993.
-
-\bibitem{Yu1}
-Guoliang Yu.
-\newblock The novikov conjecture for groups with finite asymptotic dimension.
-\newblock {\em Annals of Mathematics}, 147(2):325--355, 1998.
 
 \bibitem{Yu2}
 Guoliang Yu.
