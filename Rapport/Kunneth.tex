@@ -84,7 +84,7 @@ which respects inductive limits w.r.t. inclusions of $G$-proper spaces, so that 
 
 To prove theorem \ref{Kunneth}, we will need the following result.
 
-\begin{thm}
+\begin{thm}\label{TopologicalKunneth}
 Let $E$ be an open relatively compact subset of $G$ and $P_E$. If for all compact subgroupoids $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula, then $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism for all $C^*$-algebras $B$ such that $K_*(B)$ is a free abelian group.
 \end{thm}
 
@@ -102,15 +102,15 @@ K_*(\text{Res}_H^G A\rtimes_r H)\otimes K_*(B)\arrow{r}{\alpha_{\text{Res}_H^G A
 The first vertical arrows are isomorphisms by property of the restriction functor, the last horizontal one and the last vertical ones are by hypothesis, so that $\alpha_{A,B}^{G,U}$ is an isomorphism. By taking the inductive limit on $G$-proper $G$-compact spaces $U\subset Z_0$, we get that $\alpha_{A,B}^{G,Z_0}$ is an isomorphism.
 \end{proof}
 
-\begin{lem}
-There exists a positive number $\lambda$ and a function $c : (0,\frac{1}{\lambda})\times\mathcal E\rightarrow \mathcal E$, decreasing in $E$ and non increasing in $\varepsilon$ such that, for any étale groupoid $G$, any filtered $G$-algebra $(A,\mathcal E)$, and any $C^*$-algebra $B$, the following diagram commutes :
+\begin{lem}\label{KunnethLemma}
+There exists a positive number $\kappa$ and a function $c : (0,\frac{1}{4\kappa})\times\mathcal E\rightarrow \mathcal E$, decreasing in $E$ and non increasing in $\varepsilon$ such that, for any étale groupoid $G$, any filtered $G$-algebra $(A,\mathcal E)$, and any $C^*$-algebra $B$, the following diagram commutes :
 \[\begin{tikzcd}
 RK_*^G(P_E(G),A)\otimes K_*(B) \arrow{r}{\alpha^{G,P_E(G)}_{A,B}}\arrow{d}{\mu_{G,A}^{\varepsilon,F}\otimes \text{id}_{K_*(B)}} & 
 RK_*^G(P_E(G),A\otimes B) \arrow{d}{\mu_{G,A}^{\alpha_ \tau\varepsilon,h_\varepsilon F}} \\
-K_*^{\varepsilon,F}(A\rtimes_r G)\otimes K_*(B) \arrow{r}{\alpha_{A\rtimes_r,B}^{\varepsilon,F}} & 
-K_*^{\alpha_\tau\varepsilon,h_{\varepsilon}F}(A\rtimes_r G)\\
+K_*^{\varepsilon,F}(A\rtimes_r G)\otimes K_*(B) \arrow{r}{\alpha_{A\rtimes_r G,B}^{\varepsilon,F}} & 
+K_*^{\alpha_\tau\varepsilon,h_{\varepsilon}F}((A\otimes B)\rtimes_r G)\\
 \end{tikzcd}\] 
-for all $\varepsilon\in(0,\frac{1}{\lambda})$ and $E,F\in\mathcal E$ such that $F\geq c(\varepsilon,E)$. 
+for all $\varepsilon\in(0,\frac{1}{4\kappa})$ and $E,F\in\mathcal E$ such that $F\geq c(\varepsilon,E)$. 
 \end{lem}
 
 \begin{dem}
@@ -124,6 +124,13 @@ which is just the statement of the lemma.\\
 %\textbf{SHOW THAT $\hat J_G(z)\circ \hat\tau(y)=$}
 
 \begin{dem} \textit{of theorem \ref{Kunneth}}\\
+Let $\kappa>0$ and $c : (0,\frac{1}{\kappa})\times\mathcal E\rightarrow \mathcal E$ as in lemma \ref{KunnethLemma}.
+
+Fix two $G$-algebras $A$ and a $C^*$-algebra $B$, seen as a $G$-algebra with trivial action. As $(A\otimes B)\rtimes_r G \simeq (A\rtimes_r G)\otimes B$, we will make the slight abuse of coufounding them. Let us prove that $\hat \alpha_{A\rtimes_r G,B}$ is a controlled isomorphism.\\
+
+Let $F\in\mathcal E$ and $\varepsilon\in (0,\frac{1}{4})$. By controlled surjectivity, there exists $F'\in \mathcal E$ such that $QS_{G,A\otimes B}(\varepsilon,\lambda\varepsilon, F,F',E)$ holds.\\
+
+Let $y\in K^{\varepsilon,F}_*((A\otimes B)\rtimes_r G)$. By controlled surjectivity of $\hat\mu_{G,A\otimes B}$, there exist $F'\in\mathcal E$ and $z\in RK_*^G(P_E(G), A\otimes B) $ such that $\mu_{G,A\otimes B}^{\kappa\varepsilon,F'}(z)=\iota_{\varepsilon,F}^{\kappa\varepsilon,F'}(y)$. Theorem \ref{TopologicalKunneth} entails that there exists $z_1 \in RK_*^G(P_E(G),A)\otimes K_*(B) $ such that $\alpha_{A,B}^{G,P_E(G)}(z_1)=z$, and lemma \ref{KunnethLemma} shows that, if $z_2=(\mu_{G,A}^{\varepsilon,E,F} \otimes id_{\hat K_*(B)})(z_1)$, then $\alpha_{A\rtimes_r G,B}(z_2)=\iota_{}^{}(y)$.
 
 \end{dem}
 
