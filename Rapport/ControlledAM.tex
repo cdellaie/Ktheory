@@ -11,29 +11,29 @@ Every $K$-cycle $z\in KK^G(A,B)$ can be represented as a triplet $(H_B, \pi, T)$
 \item[$\bullet$] $T$ and $\pi$ satisfy the $K$-cycle condition, i.e. $[T,\pi(a)]$, $\pi(a)(T^2-id_{H_B})$ and $\pi(a)(g.T-T)$ are compact operators over $H_B$ for all $a\in A, g\in \G$.\\
 \end{itemize}
 
-Set $T_\G= T\otimes id_{B\rtimes \G}\in \mathcal L_{B\rtimes \G}(H_B\otimes (B\rtimes \G))\simeq \mathcal L_{B\rtimes \G}(H_{B\rtimes\G})$, and $\pi_G: A\rtimes \G v\rightarrow L_{B\rtimes \G}(H_{B\rtimes\G})$. Then, according to Le Gall \cite{LeGall}, $(H_{B\rtimes\G, \pi_\G, T_\G})$ represents the $K$-cycle $j_\G(z)\in KK(A\rtimes \G,B\rtimes \G)$. Let us construct a controlled morphism associated to $z$,
-\[J_\G(z) : \hat K(A\rtimes \G)\rightarrow \hat K(B\rtimes\G), \]
-which induces right multiplication by $j_\G(z)$ in $K$-theory.\\
+Set $T_\G= T\otimes id_{B\rtimes_r \G}\in \mathcal L_{B\rtimes_r G}(H_B\otimes (B\rtimes_r G))\simeq \mathcal L_{B\rtimes_r G}(H_{B\rtimes_r G})$, and $\pi_G: A\rtimes_r G v\rightarrow L_{B\rtimes_r G}(H_{B\rtimes_r G})$. Then, according to Le Gall \cite{LeGall}, $(H_{B\rtimes_r G, \pi_G, T_G})$ represents the $K$-cycle $j_G(z)\in KK(A\rtimes_r G,B\rtimes_r G)$. Let us construct a controlled morphism associated to $z$,
+\[J_G(z) : \hat K(A\rtimes_r G)\rightarrow \hat K(B\rtimes_r G), \]
+which induces right multiplication by $j_G(z)$ in $K$-theory.\\
 
 \subsubsection{Odd case}
 
-Let us first do the work for $z\in KK_1^\G(A,B)$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_\G=P\otimes id_{B\rtimes \G}$. We define
-\[E^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in A\rtimes \G, y\in K_{B\rtimes\G}\}\]
+Let us first do the work for $z\in KK_1^\G(A,B)$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_G=P\otimes id_{B\rtimes_r G}$. We define
+\[E^{(\pi,T)}=\{(x,P_G\pi_G(x)P_G + y) : x\in A\rtimes_r G, y\in K_{B\rtimes_r G}\}\]
 a $C^*$-algebra which is filtered by
-\[E_U^{(\pi,T)}=\{(x,P_G\pi_G(x)P_\G + y) : x\in (A\rtimes \G)_U, y\in K\otimes (B\rtimes\G)_U\}\]
+\[E_U^{(\pi,T)}=\{(x,P_G\pi_G(x)P_G + y) : x\in (A\rtimes \G)_U, y\in K\otimes (B\rtimes\G)_U\}\]
 which gives us a filtered extension
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & K_{B\rtimes_r\G}\arrow{r} & E^{(\pi,T)} \arrow{r} & A\rtimes_r \G \arrow{r}& 0
+0\arrow{r} & K_{B\rtimes_r\G}\arrow{r} & E^{(\pi,T)} \arrow{r} & A\rtimes_r G \arrow{r}& 0
 \end{tikzcd}\]
-and semi split by  $s :\left\{\begin{array}{lll}A\rtimes_r \G & \rightarrow & E^{(\pi,T)} \\ x & \mapsto & (x, P_\G \pi_\G(x)P_\G)\end{array}\right.$.\\
+and semi split by  $s :\left\{\begin{array}{lll}A\rtimes_r G & \rightarrow & E^{(\pi,T)} \\ x & \mapsto & (x, P_G \pi_G(x)P_G)\end{array}\right.$.\\
 
 Let us show that the controlled boundary map of this extension does not depend on the representant chosen, but only on the class $z$.\\
 Let $(H_B, \pi_j,T_j), j=0,1$ two $K$-cycles which are homotopic via $(H_{B[0,1]},\pi,T)$. We denote $e_t$ the evaluation at $t\in[0,1]$ for an element of $B[0,1]$, and set $y_t=e_t(y)$ for such a $y$. The $*$-morphism
 \[\phi : \left\{\begin{array}{lll}E^{(\pi,T)} & \rightarrow & E^{(\pi_t,T_t)} \\ (x,y) & \mapsto & (x, y_t)\end{array}\right.\]
 satisfies $\phi(K_{B[0,1] \rtimes_r \G})\subset K_{B \rtimes_r \G}$ and makes the following diagram commute
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & K_{B[0,1] \rtimes_r \G}\arrow{r}\arrow{d}{\phi_{|K_{B[0,1] \rtimes_r \G}}} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi} & A\rtimes_r \G \arrow{r}\arrow{d}{=}& 0 \\
-0\arrow{r} & K_{B \rtimes_r \G}\arrow{r} &  E^{(\pi_t,T_t)} \arrow{r} & A\rtimes_r \G \arrow{r} & 0
+0\arrow{r} & K_{B[0,1] \rtimes_r G}\arrow{r}\arrow{d}{\phi_{|K_{B[0,1] \rtimes_r G}}} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi} & A\rtimes_r \G \arrow{r}\arrow{d}{=}& 0 \\
+0\arrow{r} & K_{B \rtimes_r G}\arrow{r} &  E^{(\pi_t,T_t)} \arrow{r} & A\rtimes_r G \arrow{r} & 0
 \end{tikzcd}.\]
 
 According to \cite{OY2}, remark $3.7.$, the following holds
@@ -161,7 +161,7 @@ We will use the following fact : there exists a positive integer $d$ such that e
 
 This property reduces the proof to the special case of $\alpha$ being the inverse of a morphism in $KK^\G$-theory : $\alpha\otimes[\theta]=1$, then :
 \[\begin{array}{rcl}
-J_\G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_\G(\alpha\otimes z)\circ J_\G(\alpha\otimes [\theta]) \\
+J_G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_\G(\alpha\otimes z)\circ J_\G(\alpha\otimes [\theta]) \\
 			& \sim & J_\G(\alpha\otimes z)\circ J_\G(\theta_*(\alpha))\\
 			& \sim & J_\G(\alpha\otimes z)\circ \theta_{\G,*}\circ J_\G(\alpha)\\
 			& \sim & J_\G(\theta^*(\alpha\otimes z))\circ J_\G(\alpha)\\
@@ -253,13 +253,13 @@ This, passing to $K$-theory, implies the result of \cite{SkTuYu}.\\
 Let A be a $\G$-algebra.\\
 If the following statement is true :\\
 
-$\bullet$(Quantitative Injectivity) $\forall d\geq 0$, there exists $\epsilon\in (0,\frac{1}{4})$ such that, for all $r\geq r_{d,\epsilon}$, there exists $d'\geq d$ such that if $x\in KK_*^\G(C_0(P_d(\G)),A)$ satisfies $\mu_\G^{\epsilon,R,d}(x)=0\in K^{\epsilon,R}$, then $x=0$ in $KK^\G(C_0(P_{d'}(\G)),A)$;\\
+$\bullet$(Quantitative Injectivity) $\forall d\geq 0$, there exists $\epsilon\in (0,\frac{1}{4})$ such that, for all $r\geq r_{d,\epsilon}$, there exists $d'\geq d$ such that if $x\in RK_*^G(P_d(G),A)$ satisfies $\mu_{G,A}^{\epsilon,R,d}(x)=0\in K^{\epsilon,R}(A\rtimes_r G)$, then $x=0$ in $RK^G(P_{d'}(G),A)$;\\
 
-then $\mu_{\G,A}$ is injective.\\
+then $\mu_{G,A}$ is injective.\\
 
 On the other hand, if this statement is true : \\
 
-$\bullet$(Quantitative Surjectivity) there exists $\epsilon'\in (0,\frac{1}{4})$ such that $\forall r'\geq r_{d,\epsilon},\exists \epsilon,r$ such that $\epsilon'\leq \epsilon<\frac{1}{4}$ and $r_{d,\epsilon}\leq r\leq r'$, such that for all $y\in K_*^{\epsilon',r'}(A\rtimes\G),\exists x \in KK_*^\G(C_0(P_d(\G)),A)$ such that $\mu_{\G,A}^{\epsilon',r',d}=\iota_{\epsilon,r}^{\epsilon',r'}(y)$;\\
+$\bullet$(Quantitative Surjectivity) there exists $\epsilon'\in (0,\frac{1}{4})$ such that $\forall r'\geq r_{d,\epsilon},\exists \epsilon,r$ such that $\epsilon'\leq \epsilon<\frac{1}{4}$ and $r_{d,\epsilon}\leq r\leq r'$, such that for all $y\in K_*^{\epsilon',r'}(A\rtimes_r G),\exists x \in RK_*^\G(P_d(G),A)$ such that $\mu_{G,A}^{\epsilon',r',d}(x)=\iota_{\epsilon,r}^{\epsilon',r'}(y)$;\\
 
 then $\mu_{\G,A}$ is surjective.
 \end{prop}
