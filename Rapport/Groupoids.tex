@@ -44,6 +44,18 @@ Let $z\in KK^G_1(A,B)$. The induced homomorphism $-\otimes_A z : K_*(A)\rightarr
 where $E^{\pi,T}=\{(a,P\pi(a)P +y) : a\in A , y\in \mathfrak K \otimes B\}$, the arrows are the obvious inclusion and projection, and the completely positive section is $a\mapsto (a, P \pi(a) P)$. Here, we implicitely choose a $K$-cycle $(H_B,\pi,T)$ representing $z$, and $P=\frac{1+T}{2}$. The fact that this choice does not affect the boundary will be proven in the upcoming sections. 
 \end{prop}
 
+The following result will be constantly used in the upcoming sections. In short, it explains how to construct the boundary map associated to any extension $0\rightarrow J\rightarrow A \rightarrow A/J \rightarrow 0$ as the Kasparov product of an element $[\partial_{J,A}]\in KK^G_1(A/J,J)$. For references, see \cite{blackadar}.\\
+
+Recall that, for any $G$-equivariant $*$-homomorphism $\phi : A \rightarrow B$, we can define its cone denoted $C_\phi$ by 
+\[C_\phi = \{(a,f)\in A\times CB \text{ s.t. } \phi(a)=f(0)\}.\]
+If any $G$-algebra $A$ is given, $0\rightarrow SA\rightarrow CA\rightarrow A \rightarrow 0$ is a $G$-equivariant semi-split extension, and defines an element $[\partial_A]=\tau_A([\partial_\C])\in KK^G_1(A,SA)$ which is invertible. Now, give yourself a semi-split extension 
+\[\begin{tikzcd}[column sep = small]0 \arrow{r} & J \arrow{r}{\iota} & A \arrow{r}{q} & A/J \arrow{r}& 0 \end{tikzcd}\] 
+and define $\alpha : J\rightarrow C_q ; x\mapsto (x,0)$ and the canonical inclusion $\beta : S (A/J)\hookrightarrow C_q$. It turns out that $[\alpha]\in KK_0^G(J,C_q)$ is invertible.
+
+\begin{prop}
+The boundary map $\partial_{J,A} : K_*(A/J)\rightarrow K_{*+1}(J)$ is given by the Kasparov product by an element $[\partial_{J,A}]\in KK^G_1(J,A/J)$ which satisfies 
+\[[\partial_{J,A}] = [\partial_{A/J}]\otimes_{} \beta^*([\alpha]^{-1}).\]
+\end{prop}
 
 
 
