@@ -4,14 +4,47 @@
 
 We first recall how to construct a Mayer-Vietoris element out of any pull back diagram of $C^*$-algebras.\\
 
-Let us decompose $X$ into two open sets $U_0$ and $U_1$ and consider the $C^*$-algebras $A=C_0(X)$, $A_j=C_0(U_j)$ where $U_{01}=U_0\cap U_1$, and $C$ of $C A_0\oplus_{A_{01}} C A_1$, with the canonical morphisms $\alpha :C \rightarrow A$ and $\beta : C \rightarrow SA_{01}$. The first is an homotopy equivalence, and the Mayer-Vietoris boundary is defined as the dotted arrow in the following commutative diagram
+Let us decompose $X$ into two open sets $U_0$ and $U_1$ and consider the $C^*$-algebras $A=C_0(X)$, $A_j=C_0(U_j)$ where $U_{01}=U_0\cap U_1$, and $C$ the pull-back $\{(f_0,f_1) \in CA_0\oplus CA_1 \text{ s.t. } f_0(0)=0,f_1(1)=0,\text{ and } f_0(\frac{1}{2})=f_1(\frac{1}{2})\in A_{01}\}$, with the canonical morphisms $\alpha :C \rightarrow A$ and $\beta : C \rightarrow SA_{01}$. The latter is an homotopy equivalence, and the Mayer-Vietoris boundary is defined as the dotted arrow in the following commutative diagram
 \[\begin{tikzcd}
 KK^G_*(C,B) \arrow{r}{\beta^*}\arrow{d}{ \alpha^*}& KK^G_*(SA_{01},B)\arrow{d}{[\partial_{A_{01}}]\otimes -}\\
-KK^G_*(A,B) \arrow[dotted]{r}& KK^G_{*+1}(A_{01},B)\\
+KK^G_*(A,B) \arrow[dotted]{r}{\otimes}& KK^G_{*+1}(A_{01},B)\\
 \end{tikzcd}\]
+where $[\partial_{MV}]=[\partial_{A_{01}}]\otimes_{SA_{01}} [\beta]^{-1}\otimes_C [\alpha] = [\partial_{A_{01}}]\otimes_{SA_{01}} \alpha^*([\beta]^{-1}])\in KK^G_1(A_{01},A)$ and where the right vertical arrow is the Bott element $[\partial_{A_{01}}]\in KK_1^G(A_{01},SA_{01})$.\\
 
-where the right vertical arrow is the Bott element $[\partial_{A_{01}}]\in KK_1^G(A_{01},SA_{01})$.\\
+In proving the compatibility of the controlled assembly map with the Mayer-Vietoris sequence, the following lemma shows how to compute the image of 
+the boundary of a $K$-cycle in term of its image.\\
 
+Let $f : X\rightarrow [0,1]$ be a function which is identically equal to $0$ on $X\backslash U_1 $ and identically equal to $1$ on $X\backslash U_1$. For any $p\in P^{\varepsilon,E}(A\rtimes_r G) $, define 
+\begin{itemize}
+\item[$\bullet$] $U_{f,p}(x) = e^{2i\pi f(x)}p(x) +1_n -p(x)$ if $x\in U_0\cap U_1$
+\item[$\bullet$] $U_{f,p}(x) = 1_n$ elsewhere.
+\end{itemize}
+so that $U_{f,p}\in U^{\varepsilon,E}_n(A\rtimes_r G)$.\\
+
+\begin{lem}
+Let $p\in P_n^{\varepsilon,E}(A\rtimes_r G)$ and $U_{f,p}\in U_n^{\varepsilon,E}(A_{01}\rtimes_r G)$ as above. Then
+\[J^{\varepsilon, E}_G([\partial_{MV}]\otimes z ) [p,0]_{\varepsilon, E} = J^{\varepsilon, E}_G(z)[U_{f,p}]_{\varepsilon, E}\]
+for any $G$-algebras $B$ and $B'$ and all $z\in KK^G(B,B')$.
+\end{lem}
+
+\begin{dem}
+From $f$, define the following function $F$ on $U_0\times[0,\frac{1}{2}]\cup U_1\times [\frac{1}{2},1]\subset X\times[0,1]$: 
+\begin{itemize}
+\item[$\bullet$] $F(x,t)= 2t f(x)$ if $t\in [0,\frac{1}{2}]$,
+\item[$\bullet$] $F(x,t)= 2t (f(x)+t-tf(x))-1$ if $t\in [\frac{1}{2},1]$.
+\end{itemize} 
+This allows to define $W_{f,p}(x,t)=e^{2i\pi F(x,t)}p(x)+1-p(x)$ which is a lift of $U_{f,p}$ in $U^{\varepsilon,E}( C \rtimes_r G)$ via $\alpha$.
+But $s\in [0,1]\mapsto e^{2i\pi (sF(x,t)+(1-s)t)}p(x)+1-p(x)$ yields a homotopy of almost unitaries between $W_{f,p}$ and $e^{2i\pi t}p + 1-p$, so that $(\beta_G)_*[W_{f,p}]_{\varepsilon,E}=D_{A_{01}\rtimes_r G}^{SA_{01}\rtimes_r G} [p,0]_{\varepsilon,E}$.\\
+
+Applying proposition \ref{Kasparov} gives : 
+\[J_G([\partial_{MV}]\otimes z])[p,0]_{\varepsilon,E} \sim J_G(z)\circ J_G([\alpha])\circ J_G([\beta]^{-1}) \circ D_{A_{01}\rtimes_r G}^{SA_{01}\rtimes_r G} [p,0]  \]
+and the previous line of thought entails that the right member is equal to $J_G(z)\circ J_G([\alpha]) \circ [W_{f,p}]_{\varepsilon,E} = J_G(z)[U_{f,p}]_{\varepsilon,E} $ because $(\alpha_G)_* [W_{f,p}]_{\varepsilon,E}=[U_{f,p}]_{\varepsilon,E} $.\\
+\qed
+\end{dem}
+
+%%%%%%
+%%%%%%
+%%%%%%
 At the level of controlled $K$-theory, Oyono-Oyono and Yu introduced a notion of Mayer-Vietoris pair in a filtered $C^*$-algebra $A$ weaker than that of a pull-back diagram. Recall that a $R$-controlled weak Mayer-Vietoris pair for $A$ is a quadruple $(\Delta_0,\Delta_1,A_0,A_1)$ such that for some constant $c$:\\
 
 \begin{itemize}
