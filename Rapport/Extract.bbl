@@ -1,0 +1,84 @@
+\begin{thebibliography}{10}
+
+\bibitem{BaumConnes}
+Paul Baum and Alain Connes.
+\newblock Geometric k-theory for lie groups and foliations.
+\newblock {\em ENSEIGNEMENT MATHEMATIQUE}, 46(1/2):3--42, 2000.
+
+\bibitem{BaumConnesHigson}
+Paul Baum, Alain Connes, and Nigel Higson.
+\newblock Classifying space for proper actions and k-theory of group
+  c\^{}*-algebras.
+\newblock {\em Contemporary Mathematics}, 167:241--291, 1994.
+
+\bibitem{blackadar}
+Bruce Blackadar.
+\newblock {\em K-theory for operator algebras}, volume~5.
+\newblock Cambridge University Press, 1998.
+
+\bibitem{FinnSellFibred}
+Martin Finn-Sell.
+\newblock Fibred coarse embeddings, at-menability and the coarse analogue of
+  the novikov conjecture.
+\newblock {\em Journal of Functional Analysis}, 267(10):3758--3782, 2014.
+
+\bibitem{OY3}
+G.~Yu H.~Oyono-Oyono.
+\newblock Persitance approximation property and controlled k-theory.
+
+\bibitem{HigsonLaffSk}
+Nigel Higson, Vincent Lafforgue, and Georges Skandalis.
+\newblock Counterexamples to the baum—connes conjecture.
+\newblock {\em Geometric and Functional Analysis}, 12(2):330--354, 2002.
+
+\bibitem{kasparovKKNovikov}
+Gennadi~G Kasparov.
+\newblock Equivariantkk-theory and the novikov conjecture.
+\newblock {\em Inventiones mathematicae}, 91(1):147--201, 1988.
+
+\bibitem{LaffOY}
+Vincent Lafforgue.
+\newblock K-th{\'e}orie bivariante pour les alg{\`e}bres de banach,
+  groupo{\"\i}des et conjecture de baum--connes. avec un appendice
+  d’herv{\'e} oyono-oyono.
+\newblock {\em Journal of the Institute of Mathematics of Jussieu},
+  6(03):415--451, 2007.
+
+\bibitem{LeGall}
+Pierre-Yves Le~Gall.
+\newblock {\em Th{\'e}orie de Kasparov {\'e}quivariante et groupo{\"\i}des}.
+\newblock PhD thesis, 1994.
+
+\bibitem{OY2}
+Herv{\'e} Oyono-Oyono and Guoliang Yu.
+\newblock On quantitative operator k--theory.
+\newblock {\em Ann. Inst. Fourier (Grenoble). Available at www. math.
+  univ-metz. fr/\~{} oyono/pub. html}, 2011.
+
+\bibitem{SkTuYu}
+Georges Skandalis, Jean-Louis Tu, and Guoliang Yu.
+\newblock The coarse baum--connes conjecture and groupoids.
+\newblock {\em Topology}, 41(4):807--834, 2002.
+
+\bibitem{TuThese}
+Jean-Louis Tu.
+\newblock La conjecture de baum--connes pour les feuilletages moyennables.
+\newblock {\em K-theory}, 17(3):215--264, 1999.
+
+\bibitem{TuBC2}
+Jean-Louis Tu.
+\newblock The coarse baum--connes conjecture and groupoids. ii.
+\newblock {\em New York J. Math}, 18:1--27, 2012.
+
+\bibitem{WeggeOlsen}
+NE~Wegge-Olsen.
+\newblock K-theory and c-star-algebras: A friendly approach.
+\newblock 1993.
+
+\bibitem{Yu2}
+Guoliang Yu.
+\newblock The coarse baum--connes conjecture for spaces which admit a uniform
+  embedding into hilbert space.
+\newblock {\em Inventiones Mathematicae}, 139(1):201--240, 2000.
+
+\end{thebibliography}
