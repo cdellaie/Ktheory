@@ -167,3 +167,57 @@ We now show that the Roe transform respects in a quantitative way the Kasparov p
 \[\hat\sigma_X(z\otimes_B z') \sim_{\alpha_R,k_R} \hat\sigma_X(z')\circ \hat\sigma_X(z)\]
 holds.
 \end{prop}
+
+\subsection{Controlled coarse assembly maps}
+
+If $(X,\mathcal E_X)$ is a coarse space, and $E\in\mathcal E_X$ a controlled subset, any simplex $\eta$ of the Rips complex $P_E(X) = \{m \in Prob(X)\text{ s.t. supp }m \subset E\}$ can be written as $\eta = \sum_{x\in X} \lambda_x(\eta) \delta_x$, where $\delta_x$ si the Dirac probability at $x$, and $\lambda_x : P_E(X)\rightarrow [0,1]$ is a continuous function. Set :
+\[ P_E : \left\{\begin{array}{rcl} X \times X & \rightarrow & C_0(P_E(X))\\  (x,y) & \mapsto & \lambda_x^{\frac{1}{2}}\lambda_y^{\frac{1}{2}}\end{array}\right. \]  
+As $\sum \lambda_x =1$, $P_E$ is a projection of $\mathfrak K(l^2(X)) \otimes C_0(P_E(X))$ of controlled support in $E$, which gives you class in $[P_E,0]_{\varepsilon, E'}\in K_0^{\varepsilon, E'} (C^*(X,C_0(P_E(X)))$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $E'$ containing $E$.\\
+
+\begin{definition}
+Let $B$ a $C^*$-algebra, $\varepsilon\in (0,\frac{1}{4})$ and $E\in\mathcal E_X$ a controlled subset. The controlled coarse assembly map $\hat\mu_{X,B}=(\mu_{X,B}^{\varepsilon,E,F})$ is defined as the family of maps
+\[\hat\mu_{X,B}^{\varepsilon, E,F} :\left\{\begin{array}{rcl} RK(P_F(X),B) & \rightarrow & K^{\varepsilon, E}(C^*(X,B)) \\
+					z & \mapsto & \hat\sigma_X(z)[P_{E'},0]_{\varepsilon', E'}\end{array}\right.\]
+where $\varepsilon'$ and $E'$ are chosen not to exceed $\varepsilon$ and $E$ when composed with the propagation of the controlled morphisms. 
+\end{definition}
+
+\textit{Remarks :}
+\begin{enumerate}
+\item This assembly map is defined for the usual Roe algebra of $X$, but could be defined for any "nice" completion of the algebraic Roe algebra $\cup_{E\in \mathcal E_X} C_E[X]$
+\item The controlled coarse assembly map $\hat \mu_{X,B}$ induces the coarse assembly map $\mu_{X,B}$ in $K$-theory.
+\end{enumerate}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

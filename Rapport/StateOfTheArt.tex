@@ -1,6 +1,6 @@
 \section{Introduction}
 
-This section is devoted to summarize the extent my work at the end of the second year of my PhD.\\
+%This section is devoted to summarize the extent my work at the end of the second year of my PhD.\\
 
 The aim of this dissertation is to study relationship between several worlds : coarse geometry, groupoids and $C^*$-algebras. The idea is to transfer ideas that were very profitable to coarse geometry into groupoids, and to try and exploit them to compute $K$-theory groups of certain groupoids. In this particular section, we will consider several functors between categories which were defined in the litterature, and will recall their construction.\\
 
@@ -125,19 +125,19 @@ We first precise what we consider as morphisms in the category of topological gr
 
 \begin{definition}
 Let $G$ and $G'$ be two topological groupoids.\\ 
-A generalized morphism between from $G$ to $G'$ is a triple $(Z,p,p')$ where $Z$ is a locally compact space endowed with a right action of $G$ with respect to $p$ and a right action of $G'$ with respect to $p'$ such that :
+A generalized morphism between from $G$ to $G'$ is a triple $(Z,p,p')$ where $Z$ is a locally compact space endowed with a left action of $G$ with respect to $p$ and a right action of $G'$ with respect to $p'$ such that :
 \begin{itemize}
 \item[$\bullet$] the two actions commute : $(g.z).g'=g.(zg'),\forall z\in Z,g\in G_{p(z)},g'\in G'^{p'(z)}$,
 \item[$\bullet$] the action of $G'$ is free and proper,
-\item[$\bullet$] $Z\times_{p',s} G'\rightarrow Z\times Z $ induces a homeomorphism $Z\rtimes G' \rightarrow Z\times_{G^{(0)}} Z$.\\
+\item[$\bullet$] $Z\times_{p',s} G'\rightarrow Z\times Z ; (z,g')\mapsto (z,zg')$ induces a homeomorphism $Z\rtimes G' \rightarrow Z\times_{G^{(0)}} Z$.\\
 \end{itemize}
 If a generalized morphism is invertible, we will say that it is a Morita equivalence.
 \end{definition}
 
 \textbf{Examples :}
 \begin{itemize}
-\item[$\bullet$] If $\phi : G\rightarrow G'$ is a strict morphism of topological groupoids, i.e. a continuous map which is a natural transformation between the two groupoids seen as categories with inversible arrows, then $\phi$ naturally defines a generalized morphism. Set $Z = G^{(0)}\times G'$ with actions defined by $g(x,h)g' = (gx, \phi(g)hg')$.
-\item[$\bullet$] Let $G$ be a locally compact group. If $H$ is a subgroup of $G$, then $Z=G/H$ is a Morita equivalence between $H$ and $G/H\rtimes G$.\\
+\item[$\bullet$] If $\phi : G\rightarrow G'$ is a strict morphism of topological groupoids, i.e. a continuous map which is a natural transformation between the two groupoids seen as categories with inversible arrows, then $\phi$ naturally defines a generalized morphism. Indeed, set $Z = G^{(0)}\times G'$ with actions defined by $g(x,h)g' = (gx, \phi(g)hg')$.
+\item[$\bullet$] Let $G$ be a locally compact group. If $H$ is a subgroup of $G$, then $Z=G/H$ is a Morita equivalence between $H$ and $G/H\rtimes G$. This actually remains true for locally compact groupoids.\\
 \end{itemize}
 
 Let $G \rightrightarrows G^{(0)}$ be a locally compact groupoid, endowed with a Haar system $\lambda = (\lambda^x)_{x\in G^{(0)}}$.\\

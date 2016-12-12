@@ -370,13 +370,31 @@ Now choose $j$ such that $d_j\geq s$ and $R_j>R'$, and compose the previous equa
 \qed
 \end{dem}
 
-In particular, if the groupoid $G$ satisfies the Baum-Connes conjecture with coefficients, it satisfies the quantitative Baum-Connes conjecture. Interesting examples follow from the result of J-L. Tu \cite{TuThese} that a-$T$-menable groupoids satisfy the Baum-Connes conjecture with coefficients. In particular, \\
+Recall that if the groupoid $G$ satisfies the Baum-Connes conjecture with coefficients, it satisfies the quantitative Baum-Connes conjecture. Interesting examples follow from the result of J-L. Tu \cite{TuThese} that a-$T$-menable groupoids satisfy the Baum-Connes conjecture with coefficients. In particular, \\
 
 \begin{itemize}
 \item[$\bullet$] amenable groupoids are a-$T$-menable.\\
 \item[$\bullet$] Let $X$ be a uniformly discrete metric space with bounded geometry. Then, if $X$ is coarsely embeddable into a separable Hilbert space, $G(X)$ is a-$T$-menable.\cite{SkTuYu} \\
 \item[$\bullet$] If $X$ admits a fibred coarse embedding into Hilbert space, then $G(X)_{|\partial \beta X}$ is a-$t$-menable.\cite{FinnSellFibred} For interesting examples of this type, recall the definition of a box space. Let $\Gamma$ be a finitely generated group, and $\mathcal N$ a family of nested normal subgroups with trivial intersection, which have finite index in $\Gamma$. Take the coarse union of the quotients to construct a coarse space $X_{\mathcal N}(\Gamma)= \cup_{H\in \mathcal N } \Gamma/ H$. Then, $X_{\mathcal N}(\Gamma)$ admits a fibred coarse embedding if and only if $\Gamma$ is a-$T$-menable. But if $X_{\mathcal N}$ is an expander, it cannot be coarsely embedded into a Hilbert space, so just take an a-$T$-menable group which has a box space $X$ which is an expander to get a coarse space that is not coarsely embeddable into Hilbert space ($SL(2,\Z)$ works), but admits a fibred coarse embedding.\\
 \end{itemize}
+
+The last example gives easily the following corollary.
+
+\begin{cor}
+Let $X$ be a coarse space that admits a fibred coarse embedding into Hilbert space. Then $\hat \mu_{X}^{max}$ is a controlled isomorphism, i.e. $X$ satisfies the controlled Coarse Baum-Connes conjecture.
+\end{cor}
+
+\begin{dem}
+Just use that the maximal crossed product turns restriction of a groupoid to invariant open subsets into exact sequences of $C^*$-algebras, with $F=\partial\beta X$ and $U= F^c$, hence the following diagramm commutes
+\[\begin{tikzcd}
+RK^{G_{|U}}(P_F(G_{|U}),l^\infty)\arrow{r}\arrow{d}{\mu_{G_{|U}}^{\varepsilon,E,F}} & RK^G(P_F(G),l^\infty)\arrow{r}\arrow{d}{\mu_{G}^{\varepsilon,E,F}}  & RK^{G_{|F}}(P_F(G_{|F}),l^\infty)\arrow{d}{\mu_{G_{|F}}^{\varepsilon,E,F}}  \\
+K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G_{|U}) \arrow{r} & K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G) \arrow{r} & K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G_{|F}) \\
+\end{tikzcd}.\]
+Now, $G_{|F}$ being a-T-menable and $G_{|U}$ being proper, the two exterior vertical maps are isomorphisms, and the five lemma concludes the proof.\\
+\qed
+\end{dem}
+
+\subsection{Persistence approximation property}
 
 We recall the following definition from \cite{OY3}.
 
@@ -395,7 +413,7 @@ Up to some hypothesis, if $\mu_{G,l^\infty(\N, K_A)}$ is onto and $\mu_{G,A}$ is
 \begin{dem}
 We denote $l^\infty(\N,K_A)$ by $\tilde A$.\\
 Assume the statement does not holds : there exists $\epsilon$ and $R$ such that $PA(\epsilon,\epsilon',R,R')$ is not true for every $R'\geq R$. Then we can extract a increasing unbounded sequence of positive numbers $R_j$ and elements $x_j\in K_*^{\epsilon,R}(A\rtimes G)$ such that $\iota_{\epsilon,R}(x_j)=0$ and $\iota_{\epsilon,R}^{\lambda_{PA},R_j}(x)\neq 0$. \\
-According to the LEMMA, there exists $x\in K_*^{\alpha\epsilon,h_\epsilon R}(\tilde A\rtimes G)$ such that $p_j(x)=x_j$ where $p_j$ is the composition of the projection on the $j^{th}$ factor $\tilde A \rtimes G \rightarrow K_A \rtimes G$ and the Morita equivalence in K-theory.
+According to the lemma \ref{LocalInjectivity}, there exists $x\in K_*^{\alpha\epsilon,h_\epsilon R}(\tilde A\rtimes G)$ such that $p_j(x)=x_j$ where $p_j$ is the composition of the projection on the $j^{th}$ factor $\tilde A \rtimes G \rightarrow K_A \rtimes G$ and the Morita equivalence in K-theory.
 By naturality of the quantitative assembly maps, the following diagram commutes
 \[\begin{tikzcd}
 KK^G(P_d,\tilde A) \arrow{r}{\mu_{G,\tilde A}^{d,\alpha\epsilon, h_\epsilon R}} \arrow{rd}{\mu_{G,\tilde A}^d} & K^{\alpha\epsilon,h_\epsilon R}(\tilde A\rtimes G) \arrow{d}{\iota_{\alpha\epsilon, h_\epsilon R}}\\

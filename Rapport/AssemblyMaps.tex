@@ -88,6 +88,22 @@ Here is the status of the conjecture :
 \item[$\bullet$] V. Lafforgue showed the conjecture for every semi-simple Lie group, real or $p$-adic reductive, and discrete cocompact subgroup of real rank $1$ Lie groups or of $SL(3,k)$ for any local field $k$. \\
 \end{itemize}
 
+Recall that a function $h : G\rightarrow \R$ is said to be of negative type if :
+\begin{itemize}
+\item[$\bullet$] $h_{|G^{(0)}}=0$,
+\item[$\bullet$] $h(g)=h(g^{-1})$ for all $g\in G$,
+\item[$\bullet$] for all $t_i\geq 0, i=1,..,n$ such that $\sum t_i=0$ and all $g_1,...,g_n\in G$ having the same range, $\sum_i t_i t_j h(g_i^{-1} g_j )\leq 0$.
+\end{itemize}
+The function $h$ is said to be locally proper if, for every compact $K \subset G^{(0)}$, $h_{|G_K^K}$ is proper.\\
+
+\begin{definition}
+A topological groupoid $G$ is said to be a-T-menable if it satisfies one of the following equivalent property :
+\begin{itemize}
+\item[$\bullet$] there exists a continuous field of Hilbert spaces over $G^{(0)}$ with a proper affine action of $G$,
+\item[$\bullet$] there exists a locally proper negative type function on $G$.
+\end{itemize} 
+\end{definition}
+
 For nice topological groupoids, the conjecture is known to be false in full generality \cite{HigsonLaffSk}, but the following result was shown by J-L. Tu in \cite{TuThese}
 \begin{thm}\label{Tu}
 Let $G$ be a locally compact $\sigma$-compact Hausdorff groupoid. Then if $G$ is a-T-menable, the Baum-Connes conjecture with coefficients holds for $G$.

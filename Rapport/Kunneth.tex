@@ -71,6 +71,17 @@ These are functorial w.r.t. $C^*$-correspondences, and also w.r.t. $KK$-theory.
 
 The Morita equivalence $G/H\rtimes H \sim H$ allows us to give a very concrete definition of these functors, and actually help to prove that, when $H$ is a compact subgroupoid of $G$ and the action of $G$ is induced by $H$ , $\text{Res}_{H}^G : KK^G(A,B)\rightarrow KK^H( \text{Res}_{H}^G A , \text{Res}_{H}^G B)$ is an isomorphism of abelian groups for any $G$-algebras $A$ and $B$. This is locally satisfied for example when $G$ is ample, i.e. étale with totally disconnected base space.
 
+\begin{definition}
+The groupoid $G$ is said to be locally induced if there exists an open cover $\mathcal U$ of $G^{(0)}$ such that for all $U\in\mathcal U$, there exists a compact groupoid $H_U$ acting on $G_{|U}$ and an ismomorphism of groupoids $G_{|U }\simeq G_{|U}/ H_U \rtimes H_U$.  
+\end{definition}
+
+Since $G_{|U}/ H_U \rtimes H_U$ is Morita equivalent to $H_U$ and $G$ is Morita equivalent to the pull-back $G[\mathcal U]$, we have an isomorphism 
+\[KK^G(A,B) \simeq \prod_{U\in\mathcal U} KK^{H_U}(\phi^* A,\phi^* B).\]
+
+Ample groupoids are example of locally induced groupoid. Recall that an étale groupoid is ample iff the open compact bisections form  a basis of the groupoid. Now take $U$ an open compact bisection, and set $H_U = \{ g\in G\text{ s.t. } gU\cap U \neq \emptyset \}$, which is a compact subgroupoid of $G$ that fulfills the condition.\\
+
+The author presently doesn't kow of any other examples of locally induced groupoids which are not ample. Maybe looking into groupoids with finite asymptotic dimension. 
+
 \subsection{Baum-Connes and the Künneth formula}
 
 The first step in proving theorem \ref{Kunneth} is to define a analytical version of $\alpha_{A,B}$ when an étale groupoid $G$ is given. More precisely, we first construct a homomorphism $\alpha_{A,B}^G : K_*^{top}(G,A)\otimes K_*(B)\rightarrow K_*^{top}(G,A\otimes B )$, inductive limit of $\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K_*(B)\rightarrow RK^G(Z,A\otimes B )$ where $Z$ runs through $G$-proper $G$-compact spaces. Then we show that the controlled assembly map intertwines $\alpha^{G,P_d(G)}_{A,B}$ and $\alpha_{A\rtimes_r G,B}$ uniformly.\\
