@@ -8,3 +8,8 @@
 \contentsline {subsection}{\numberline {2.1}In $SL(2,\mathbb R)$}{5}{subsection.2.1}
 \contentsline {section}{\numberline {3}Universal Coefficient Theorem}{7}{section.3}
 \contentsline {subsection}{\numberline {3.1}Other questions}{7}{subsection.3.1}
+\contentsline {section}{\numberline {4}Funky questions, ideas of talks}{9}{section.4}
+\contentsline {subsection}{\numberline {4.1}Expanders}{9}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Plan of the talk}{9}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Questions}{9}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Ideas of funky talks}{9}{subsection.4.2}
