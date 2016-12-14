@@ -137,7 +137,7 @@ If a generalized morphism is invertible, we will say that it is a Morita equival
 \textbf{Examples :}
 \begin{itemize}
 \item[$\bullet$] If $\phi : G\rightarrow G'$ is a strict morphism of topological groupoids, i.e. a continuous map which is a natural transformation between the two groupoids seen as categories with inversible arrows, then $\phi$ naturally defines a generalized morphism. Indeed, set $Z = G^{(0)}\times G'$ with actions defined by $g(x,h)g' = (gx, \phi(g)hg')$.
-\item[$\bullet$] Let $G$ be a locally compact group. If $H$ is a subgroup of $G$, then $Z=G/H$ is a Morita equivalence between $H$ and $G/H\rtimes G$. This actually remains true for locally compact groupoids.\\
+\item[$\bullet$] Let $G$ be a locally compact group. If $H$ is a subgroup of $G$, then $Z=G/H$, equipped with actions by right and left translations, is a Morita equivalence between $H$ and $G/H\rtimes G$. This actually remains true for locally compact groupoids.\\
 \end{itemize}
 
 Let $G \rightrightarrows G^{(0)}$ be a locally compact groupoid, endowed with a Haar system $\lambda = (\lambda^x)_{x\in G^{(0)}}$.\\
@@ -152,7 +152,7 @@ Let $X$ be a locally compact $\sigma$-compact space.\\
 \end{definition}
 
 An important example of $G$-module is $L^2(G,A)$. Define the $C_0(X,A)$-valued scalar product on $C_c(G,A)$
-\[ \langle \eta,\xi \rangle(x) = \int_{G^x} \eta(g)^* \xi(g) d\lambda^x(g).\]
+\[ \langle \eta,\xi \rangle(x) = \int_{G^x} \eta(g^{-1})^* \xi(g^{-1}) d\lambda^x(g).\]
 The $A$-Hilbert module $L^2(G,A)$ is the completion of $C_c(G,A)$ under this scalar-product, and the action of $G$ is defined by left-translation :
 \[\forall \xi\in L^2(G_{s(g)},A),(V_g \xi)(h) = \xi(g^{-1}h), \]
 which is an isomorphism $s^*L^2(G,A)\rightarrow r^*L^2(G,A)$.\\

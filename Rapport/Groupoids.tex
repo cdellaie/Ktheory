@@ -6,7 +6,7 @@ A groupoid is the data of
 \item[$\bullet$] two topological spaces $G$ and $G^{(0)}$, called respectively the space of arrows, and the unit space,
 \item[$\bullet$] source and range maps $r,s : G\rightarrow G^{(0)}$ which are continuous and surjective,
 \item[$\bullet$] a continuous multiplication map $m : G^{(2)}=G\times_{s,r}G\rightarrow G; (g,g')\mapsto gg'$ such that $(gg')g''=g(g'g'')$ for all triple $g,g',g''$ that are composable,
-\item[$\bullet$] unit and inverse map $e : G^{(0)}\rightarrow G; x\mapsto e_x$ and $\text{inv} : G\rightarrow G: g\mapsto g^{-1}$ which are continous and such that $\forall g\in G, gg^{-1}=e_{s(g)} \text{ and }g^{-1}g=e_{r(g)}$.
+\item[$\bullet$] unit and inverse map $e : G^{(0)}\rightarrow G; x\mapsto e_x$ and $\text{inv} : G\rightarrow G: g\mapsto g^{-1}$ which are continous and such that $\forall g\in G, gg^{-1}=e_{s(g)} \text{ and }g^{-1}g=e_{r(g)}$, and $g e_{s(g)} = e_{r(g)} g =g$.
 \end{itemize} 
 \end{definition}
 
@@ -18,7 +18,38 @@ $G$ is said to be principal if $r\times s : G\rightarrow G^{(0)}\times G^{(0)}$ 
 
 If $G$ is étale, then any $g\in G$ has an open neighborhood $U$ such that $r$ and $s$ are injective on $U$. The element $g$ defines in this way a partial homeomorphism $\alpha_U = r\circ (s_{|U})^{-1} : s(U)\rightarrow r(U)$. Such open sets $U$ where $r$ and $s$ are injective are called bisections. The set of bisections is naturally a invers semi-group.\\
 
-For $U,V\subset G^{(0)}$, we will us the notations $G_U=s^{-1}(U)$, $G^V=r^{-1}(V)$ and $G_U^V=s^{-1}(U)\cap r^{-1}(V)$. If one of the subsets is reduced to a single point, we will use $G_x=G_{\{x\}}$, etc.
+For $U,V\subset G^{(0)}$, we will us the notations $G_U=s^{-1}(U)$, $G^V=r^{-1}(V)$ and $G_U^V=s^{-1}(U)\cap r^{-1}(V)$. If one of the subsets is reduced to a single point, we will use $G_x=G_{\{x\}}$, etc. \\
+
+A Haar system on $G$ is a family of borelian measures $(\lambda^x)_{x\in G^{(0)}}$ such that 
+\begin{itemize}
+\item[$\bullet$] the support of $\lambda^x$ is $G^x$, 
+\item[$\bullet$] the map $G^{(0)} \rightarrow \C; x\mapsto \int_{G^x} f d\lambda^x$ is continuous for all $f\in C_c(G)$,
+\item[$\bullet$] for all $f\in C_c(G)$ and $g\in G$, $\int_{G^{r(g)}} f(h) d\lambda^{r(g)}(dh) \int_{G^{s(g)}} f(gh) \lambda^{s(g)}(dh)$ holds.
+\end{itemize}
+
+\subsection{Actions of groupoids}
+
+\begin{definition}
+An left action of $G$ on a topological space $Z$ is given by a continuous map $p : Z \rightarrow G^{(0)}$, called the anchor map, and a map $\alpha : G\times_{s,p} Z \rightarrow Z $ such that $\alpha(g',\alpha(g,z)) = \alpha(g'g,z)$ whenever $(g,g')\in G^{(2)}$ and $p(z)=s(g)$. We will use the notation $\alpha(g,z) = g.z$ when the action is clear from the context.\\
+
+An right action of $G$ on a topological space $Z$ is given by a continuous map $p : Z \rightarrow G^{(0)}$, again called the anchor map, and a map $\alpha : Z\times_{p,r} G \rightarrow Z $ such that $\alpha(\alpha(z,g),g') = \alpha(z, gg')$ whenever $(g,g')\in G^{(2)}$ and $p(z)=r(g)$. We will use the notation $\alpha(g,z) = z.g$ when the action is clear from the context.\\ 
+\end{definition}
+
+An action $(Z,p,\alpha)$ is said to be proper if $\alpha\times id_Z : $ is proper as a continous map.\\
+
+\subsection{$G$-algebras}
+
+\begin{definition}
+Let $X$ be a topological space. A $X$-algebra is a $C^*$-algebra together with a $*$-homomorphism $\theta : C_0(X)\rightarrow \mathcal M(Z(A))$ such that $\theta (C_0(X)) A = A$. The couple $(A,\theta)$ is then called a $X$-structure.
+\end{definition} 
+
+If $f : X\rightarrow Y$ is a continuous map, and $A$ a $Y$-algebra, then $f$ induces a $X$ structure on $A$, and we define $f^* A = A \otimes_f C_0(X)$ the resulting $X$-algebra. For details on tensor products of $X$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $X$-algebra : for $x\in X$, $A_x = ev_x^* A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$.\\
+
+A $*$-homomorphism between two $X$-algebras $\alpha : A\rightarrow A'$ is a $*$-homomorphism which commutes with the action of $C_0(X)$, i.e. $\alpha(\theta(f)a)=\theta'(f)\alpha(a)$ for all $a\in A,f\in C_0(X)$. Its fibers are defined unambiguously by $\alpha_x = id_\C \otimes_{ev_x} \alpha$.\\ 
+
+\begin{definition}
+An action of a groupoid $G$ on a $C^*$-algebra $A$ is a triple $(A,\theta,\alpha)$ where $(A,\theta)$ is a $G^{(0)}$-structure and $\alpha : s^* A \rightarrow r^* A$ is a morphism of $G^{(0)}$-algebras such that $\alpha_{gg'}= \alpha_g\circ \alpha_{g'}$.
+\end{definition} 
 
 \subsection{Equivariant $KK$-theory}
 
