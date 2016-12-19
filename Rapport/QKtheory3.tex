@@ -1,4 +1,188 @@
 \section{Controlled $K$-theory for étale groupoids}
 
-Let $G$ be an étale groupoid. We denote $\mathcal E_G$ the set of compact subsets of $G$. Notice that if $E,E'\in \mathcal E_G$, then $E \circ E'\in\mathcal E_G$. 
+Let $G$ be an étale groupoid and let $\mathcal E$ be the set of its compact subsets. In this section, we define controlled $K$-theory groups for $G$. By analogy with the terminology used in Coarse Geometry, we will call $E\in \mathcal{E}$ a controlled subset. Notice that if $E,E'\in \mathcal E$, then $E E'\in\mathcal E$.\\
 
+\begin{definition}
+A $C^*$-algebra $A$ is said to be filtered if, for every $E\in \mathcal E$, there exists a linear subspace $A_E$ of $A$ such that :\\
+\begin{itemize}
+\item[$\bullet$] if $E \subset E'$, then $A_E\subset A_{E'}$, and the family of inclusions $\phi_E^{E'}: A_E\hookrightarrow A_{E'}$ induces an inductive system of linear spaces,
+\item[$\bullet$] $A_E$ is stable by involution,
+\item[$\bullet$] for all $E,E'\in\mathcal E$, $A_E.A_{E'}\subset A_{EE'}$,
+\item[$\bullet$] the union of subspaces is dense in $A$, i.e. $\overline{\cup_{E\in\mathcal E}A_E} = \varinjlim A_E = A$.
+\item[$\bullet$] if $A$ is unital, we impose that $1\in A_E,\forall E\in\mathcal E$.\\
+\end{itemize}
+\end{definition}
+
+\subsection{Almost unitaries and almost projections}
+
+\begin{definition}
+Let $A$ be a unital filtered $C^*$-algebra. Let $\varepsilon\in(0,\frac{1}{4})$ and $E\in \mathcal E$ a controlled subset. The set of $\varepsilon$-$E$-unitaries is the set 
+\[U^{\varepsilon, E}(A)= \{u\in A_E \text{ s.t. } ||u^*u-1||<\varepsilon\text{ and }||uu^*-1||<\varepsilon \}\]
+and the set $\varepsilon$-$E$-projections is the set 
+\[P^{\varepsilon, E}(A)= \{p\in A_E \text{ s.t. } p=p^*\text{ and }||p^2-p||<\varepsilon \}.\]
+We will use the notation $P_n^{\varepsilon, E}(A)$ for $P^{\varepsilon, E}(M_n(A))$, and $U_n^{\varepsilon, E}(A)$ for $U^{\varepsilon, E}(M_n(A))$. Also, $P_\infty^{\varepsilon, E}(A)$ is the algebraic inductive limit of the $P_n^{\varepsilon, E}(A)$ under the natural inclusions
+\[\left\{\begin{array}{rcl}
+	P^{\varepsilon,E}_n(A) 		& \rightarrow	& P^{\varepsilon,E}_{n+1}(A)\\ 
+	p 		& \mapsto 	& \begin{pmatrix}p& 0 \\ 0&0 \end{pmatrix}
+\end{array}\right.\]
+and $U_\infty^{\varepsilon, E}(A)$ is the algebraic inductive limit of the $U_n^{\varepsilon, E}(A)$ under the natural inclusions
+\[\left\{\begin{array}{rcl}
+	U^{\varepsilon,E}_n(A) 		& \rightarrow	& U^{\varepsilon,E}_{n+1}(A)\\ 
+	u 		& \mapsto 	& \begin{pmatrix}u & 0 \\ 0& 1 \end{pmatrix}
+\end{array}\right. .\]
+\end{definition}
+
+In order to define controlled $K$-groups, define the following equivalence relations on $P^{\varepsilon, E}_\infty(A)\times \N$ and $U^{\varepsilon,E}_n(A)$.
+\begin{itemize}
+
+\item[$\bullet$] $(p,l) \sim (q,l')$ if there exists a homotopy of almost projections $h\in P^{\varepsilon, E}_\infty(A[0,1])$ and an integer $k$ such that 
+\[h(0)=\begin{pmatrix} p & 0 \\ 0 & 1_{k+l'} \end{pmatrix} \text{ and }
+h(1)=\begin{pmatrix} q & 0 \\ 0 & 1_{k+l} \end{pmatrix}\]
+\item[$\bullet$] $u \sim v$ if there exists a homotopy of almost unitaries $h\in U^{3\varepsilon, E\circ E}_\infty(A[0,1])$ and an integer $k$ such that $h(0)= u \text{ and }h(1)=v$.\\
+\end{itemize}
+
+Denote $[(p,l)]_{\varepsilon,E}$ and $[u]_{\varepsilon,E}$ for the equivalence classes of almost-projections and almost-unitaries. Then, the same proof as \cite{OY2} shows that $[p,l]_{\varepsilon,E}+[q,l']_{\varepsilon,E}=[diag(p,q),l+l']_{\varepsilon,E}$ and $[u]_{\varepsilon,E}+[v]_{\varepsilon,E}=[diag(u,v)]_{\varepsilon,E}$ induces a group law on the equivalence classes, that we denote $K_0^{\varepsilon,E}(A) = P^{\varepsilon, E}_\infty(A)\times \N / \sim$ and $K_1^{\varepsilon,E}(A) = U^{\varepsilon, E}_\infty(A) / \sim$.\\
+
+\begin{definition}
+The controlled $K$-theory of a filtered $C^*$-algebra $A$ is the family of abelian groups $\hat K_0(A) = (K_0^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ and $\hat K_1(A) = (K_1^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ defined above.\\
+\end{definition}
+
+We define canonical inclusion morphisms : if $\varepsilon, \varepsilon'\in (0,\frac{1}{4})$ and $E,E'\in\mathcal E$ such that $\varepsilon < \varepsilon'$ and $E \subset E'$, the natural inclusion $K_*^{\varepsilon,E}(A)\hookrightarrow K_*^{\varepsilon',E'}(A)$ is denoted by $\iota_{\varepsilon,E}^{\varepsilon',E'}$. Notice that $\iota_{\varepsilon',E'}^{\varepsilon'',E''}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon,E}^{\varepsilon'',E''}$ when this expression makes sense.\\
+
+One has also forgetful inclusions $\iota_{\varepsilon,E} : K_*^{\varepsilon,E}\rightarrow K_*(A)$, and 
+$\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon, E}$ holds. The controlled $K$-theory groups approximate the usual $K$-groups in the sense that $\varinjlim_{E} K_*^{\varepsilon,E}(A) = K_*(A)$ for any $\varepsilon\in (0,\frac{1}{4})$.\\
+
+Here is the main example under study : if $A$ is a $G$-algebra, then $A \rtimes_r G$ is naturally filtered. Indeed, for $E\in \mathcal{E}$, denote by $C_E(A,G)$ the linear subspace $\{ f \in C_c(G,A) \text{ s.t. supp }f\subset E\cup E^{-1} \}$. Then $C_E(G,A)$ obviously defines a filtration on $A\rtimes_r G$. A last remark is in order : this remains true for any $C^*$-algebraic completion of $\cup_{E\in\mathcal{E}} C_E(G,A) = C_c(G,A)$, so for maximal or exotic crossed products also. If one allows himself to use controlled $K$-theory for filtered Banach algebras, one can also adapt this definition for Banach completion of $C_c(G,A)$.
+
+\subsection{Quantitative objects}
+In order to study functorial properties of controlled $K$-theory, we will adapt and study the notion of quantitative object defined in \cite{OY2}.\\
+
+\begin{definition}
+A quantitative object is a family of abelian groups $\hat{\mathcal{O}}=\{\mathcal{O}_{\varepsilon, E}\}_{\varepsilon\in (0,\frac{1}{4}, E\in\mathcal{E}}$ endowed with a family of group homorphisms $\phi_{\varepsilon, E}^{\varepsilon', E'} : \mathcal{O}_E\rightarrow \mathcal{O}_{E'}$ for any $E,E'\in\mathcal E$ and $0<\varepsilon\leq \varepsilon'<\frac{1}{4}$ such that $E\subset E'$, satisfying $\phi_{\varepsilon, E}^{\varepsilon, E}= id_{\mathcal{O}_E}$ and $\phi_{\varepsilon', E'}^{\varepsilon'', E''}\circ \phi_{\varepsilon, E}^{\varepsilon', E'} =\phi_{\varepsilon'', E''}^{\varepsilon, E}$ whenever $E\subset E' \subset E''$ and $\varepsilon<\varepsilon'<\varepsilon''$.
+\end{definition}
+
+We need to define controlled morphisms between quantitative objects. We first define control pairs, which are essentially what ensures that the controlled morphisms do not distort too much the propagation.\\
+
+\begin{definition}
+A control pair is a couple $(\alpha,h)$ where $\alpha\in (0,\frac{1}{4})$ and $h : (0,\frac{1}{4\alpha})\rightarrow \N$ is a non-decreasing function. 
+\end{definition}
+
+Control pairs can be naturally composed, and if $(\alpha,h)$ and $(\beta,k)$ are two control pairs, then their composition, denoted by $(\beta,k)\ast(\alpha,h)$, is defined by $(\alpha \beta,k\ast h)$, where $k\ast h : (0,\frac{1}{4\alpha\beta})\rightarrow \N ; \varepsilon \mapsto k_{\alpha \varepsilon}h_\varepsilon$. \\
+
+Control pairs naturally act on the index subset of the controlled $K$-groups. Indeed, if $\varepsilon\in (0,\frac{1}{4\alpha})$ and $E\in\mathcal E$, $(\alpha,h).(\varepsilon,E)= (\alpha\varepsilon,E^{h_\varepsilon})$ is in $(0,\frac{1}{4})\times\mathcal E$. This allows to define controlled morphims.
+
+\begin{definition}
+Let $\hat{\mathcal O}$ and $\hat{\mathcal O'}$ be two quantitative objects and $\rho=(\alpha,h)$ a control pair. A $\rho$-controlled morphism is a family of groups homomorphims $F_{\varepsilon, E} : \mathcal O_{\varepsilon, E} \rightarrow \mathcal{ O'}_{\alpha\varepsilon, E^{h_\varepsilon}}$ for any $\varepsilon\in(0,\frac{1}{4})$ and $E\in\mathcal E$, such that
+\[\phi^{\alpha\varepsilon',E'^{h_\varepsilon'}}_{\alpha\varepsilon,E^{h_\varepsilon}} \circ F_{\varepsilon, E} =F_{\varepsilon',E'} \circ \phi_{\varepsilon,E}^{\varepsilon',E'}\] for any $0<\varepsilon<\varepsilon'<\frac{1}{4\alpha}$ and $E\subset E'$.
+\end{definition}
+
+If we don't specify any control pair, it is implicit and evident from the context. For a controlled morphism $\hat F : \hat K(A)\rightarrow \hat K(B)$, we will denote $F:K(A)\rightarrow K(B)$ the unique homomorphism it induces in $K$-theory.\\
+
+\subsection{Controlled exact sequences}
+
+\begin{definition}
+Let $\mathcal E,\mathcal E',\mathcal E''$ be coarse structures, and $ \mathcal O,\mathcal O',\mathcal O''$ quantitative objects over them respectively, $\rho : \mathcal E\rightarrow \mathcal E'$ and $\rho' : \mathcal E'\rightarrow \mathcal E''$ control pairs. If $F : \mathcal O\rightarrow \mathcal O'$ is a $\rho$-controlled morphism and $F : \mathcal O'\rightarrow \mathcal O''$ is a $\rho'$-controlled morphism, we say that the sequence 
+\[\begin{tikzcd}\mathcal O\arrow{r}{F} & \mathcal O'\arrow{r}{G} & \mathcal O''\end{tikzcd}\] 
+is $\lambda$-exact at $\mathcal O'$ if $G\circ F = 0$ and for every $\tilde{ E}\in \tilde{\mathcal E}$, if $x \in \mathcal O'_{\rho (\tilde{E})}$ satisfies $G_{\rho (\tilde E)}(x)=0$, then there exist $\tilde E'\in \mathcal E$ such that $\tilde E'\geq \tilde E$ and $y\in \mathcal O_{\tilde E'}$ such that $F_{\tilde E'}(y)=\iota_{\rho(\tilde E)}^{\rho(\tilde E')}(x) $.\\
+
+A sequence $\begin{tikzcd}[column sep = small]\mathcal O_0 \arrow{r} & O_1 \arrow{r}&... \arrow{r}& O_k\end{tikzcd}$ is $\lambda$-exact if it is $\lambda$-exact everywhere.
+\end{definition}
+
+\subsection{Morita equivalence}
+
+\begin{prop}
+Let $(A,\mathcal E)$ be a filtered $C^*$-algebra and $H$ a separable Hilbert space. Then the $*$-morphism
+\[A\rightarrow A\otimes \mathfrak K(H) ; \quad a\mapsto 
+\begin{pmatrix}a & & \\  & 0 & \\ & & ... \end{pmatrix}\]
+induces a group isomorphism 
+\[\mathcal M_A^{\varepsilon,E} : K^{\varepsilon,E}(A)\rightarrow K^{\varepsilon,E}(A\otimes \mathfrak K(H)) \]
+for every $\varepsilon\in(0,\frac{1}{4})$ and $E\in\mathcal E$. The family $\mathcal M_A = (\mathcal M_A^{\varepsilon,E} )_{\varepsilon\in(0,\frac{1}{4}),E\in\mathcal E}$ is called the controlled Morita equivalence and is a controlled morphism, and it induces the usual Morita equivalence $M_A: K(A)\rightarrow K^(A\otimes \mathfrak K(H))$ in $K$-theory. 
+\end{prop}
+
+\subsection{Controlled exact sequences}
+We will describe the $6$-term controlled exact sequence associated to a completely filtered extension of $C^*$-algebras. For any extension of $C^*$-algebras 
+\[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0 \end{tikzcd},\]
+we denote $\partial_{J,A}$ the boundary map $K_*(A/J)\rightarrow K_{*+1}(J)$. We are bargaining material from \cite{OY2}, where all these properties are defined and proved.\\
+
+\begin{definition}
+Let $(A,\mathcal E)$ a filtered $C^*$-algebra and $J\subset A$ an ideal. If $J_E = A_E\cap J$, the extension
+\[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0 \end{tikzcd}\]
+is said to be completely filtered if the continuous linear bijection $A_E/J_E \hookrightarrow (A_E+J)/J$ induced by the inclusion $A_E\hookrightarrow A$ is a complete isometry, i.e.
+\[ \inf_{y\in M_n(J_E)} ||x+y|| = \inf_{y\in M_n(J)} ||x+y||\quad,\forall n\in \N,x\in M_n(A_E),E\in \mathcal E.\]
+\end{definition}
+
+\begin{prop}
+There exists a linear control pair $(\alpha_D,k_D)$ such that for any completely fltered extension of $C^*$-algebras
+\[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0 \end{tikzcd}\]
+there exists a $(\alpha_D,k_D)$-controlled morphism 
+\[D_{J,A} : \hat K(A/J)\rightarrow \hat K(J)\]
+which induces $\partial_{J,A}$ in $K$-theory.
+\end{prop}
+
+\begin{thm}
+There exists a linear control pair $(\lambda,h)$ such that for any completely filtered extension of $C^*$-algebras 
+\[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r}{\iota} & A\arrow{r}{q} & A/J\arrow{r} & 0 \end{tikzcd}\]
+the following $6$-term exact sequence is $(\lambda,h)$-exact
+\[\begin{tikzcd}[column sep = small]
+ \hat K(J) \arrow{r}{\iota_*} & \hat K(A) \arrow{r}{q_*} & \hat K(A/J)\arrow{d}{D_{J,A}} \\
+ \hat K(A/J) \arrow{u}{D_{J,A}} & \hat K(A) \arrow{l}{q_*} & \hat K(J)\arrow{l}{\iota_*}
+\end{tikzcd}.\]
+\end{thm}
+
+\subsection{Tensorisation in $KK$-theory}
+
+If $(B,\mathcal E)$ is a filtered $C^*$-algebra and $A$ any $C^*$-algebra, and if $A\otimes B$ is the spatial tensor product, then $(A\otimes B_E)_{E\in\mathcal E}$ defines a filtration of $A\otimes B$ over $\mathcal E$. If $\phi : A_1 \rightarrow A_2$ is a $*$-homomorphism, we use the notation $\phi_B$ for the induced $*$-homomorphism $A_1\otimes B\rightarrow A_2\otimes B$. \\
+
+In \cite{kasparovKKNovikov}, G. Kasparov defined a map
+\[\tau_B : KK(A_1,A_2)\rightarrow KK(A_1\otimes B, A_2\otimes B)\]
+for any $C^*$-algebras $A_1$ and $A_2$, which is compatible with the Kasparov product. Any $z\in KK(A_1,A_2)$ defines a morphism
+\[K(A_1\otimes B)\rightarrow K(A_2\otimes B)\]
+which is proved in \cite{OY2} to be induced from a controlled morphism. The following theorem is borrowed from \cite{OY2}.\\
+
+\begin{thm}
+Let $\mathcal E$ be a coarse strucure. There exists a linear control pair $(\alpha_\tau,k_\tau)$ such that, for any filtered $C^*$-algebra $(B,\mathcal E)$, any $C^*$-algebras $A_1$ and $A_2$ and any $K$-cycle $z\in KK(A_1,A_2)$, there exists a $(\alpha_\tau,k_\tau)$-controlled morphism $\hat \tau_B : \hat K(A_1\otimes B)\rightarrow \hat K(A_2\otimes B)$
+such that :
+\begin{itemize}
+\item[$\bullet$] $\hat \tau_B(z)$ induces right-multiplication by $\tau_B(z)$ in $K$-theory,
+\item[$\bullet$] for any $K$-cycles $z,z'\in KK(A_1,A_2)$, $\hat \tau_B(z+z')=\hat\tau_B(z)+\hat\tau_B(z')$,
+\item[$\bullet$] if $\phi : A_1\rightarrow A'_1$ is a $*$-homomorphism, then $\hat\tau_B(\phi^*(z)) =  \hat\tau_B(z)\circ (\phi_B)_*$ for any $z\in KK(A'_1,A_2)$,
+\item[$\bullet$] if $\phi : A_2'\rightarrow A_2$ is a $*$-homomorphism, then $\hat\tau_B(\phi_*(z)) = (\phi_B)_*\circ \hat\tau_B(z)$ for any $z\in KK(A_1,A'_2)$,
+\item[$\bullet$] $\hat \tau_B([Id_A])\sim_{(\alpha_\tau,k_\tau)} Id_{\hat K(A\otimes B)}$,
+\item[$\bullet$] for any $C^*$-algebra $D$, any $K$-cycle $z\in KK(A_1,A_2)$, $\hat\tau_B (\tau_D(z))= \hat\tau_{B\otimes D}(z)$.
+\item[$\bullet$] for any semi-split extension $\begin{tikzcd}[column sep = small] 0 \arrow{r}& J \arrow{r} & A \arrow{r} & A/J\arrow{r} & 0\end{tikzcd}$ with boundary element $[\partial_{J,A}]\in KK_1(A/J,J)$, $\hat\tau_B([\partial_{J,A}])=D_{J\otimes B,A\otimes B}$.
+\end{itemize}
+\end{thm}
+
+This controlled tensorisation map respects Kasparov product. See \cite{OY2}.
+
+\begin{thm}
+There exists a linear control pair $\lambda$ such that, for any separable $C^*$-algebras $A_1$ and $A_2$, any filtered $C^*$-algebra $(B,\mathcal E)$, the following holds : for any $z\in KK(A_1,A_2)$ and $z'\in KK(A_2,A_3)$,
+\[\hat\tau_B(z\otimes z')\sim_\lambda \hat\tau_B(z')\circ\hat\tau_B(z)\]
+\end{thm}
+
+At least, the controlled tensorisation map is natural with respect to morphism of filtered $C^*$-algebras. \cite{OY2}
+
+\begin{prop}
+Let $\mathcal E_1$ and $\mathcal E_2$ two coarse structures, $(B_1,\mathcal E_1)$ and $(B_2,\mathcal E_2)$ filtered $C^*$-algebras and $(\phi,\rho) :B_1\rightarrow B_2 $ a filtered morphism. Then $ (\phi_{A_2})_*\circ \hat \tau_{B_1}=\hat \tau_{B_2}(z)\circ(\phi_{A_1})_* $ for any $z\in KK(A_1,A_2)$.
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
