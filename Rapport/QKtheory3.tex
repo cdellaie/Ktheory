@@ -78,6 +78,21 @@ Let $\hat{\mathcal O}$ and $\hat{\mathcal O'}$ be two quantitative objects and $
 
 If we don't specify any control pair, it is implicit and evident from the context. For a controlled morphism $\hat F : \hat K(A)\rightarrow \hat K(B)$, we will denote $F:K(A)\rightarrow K(B)$ the unique homomorphism it induces in $K$-theory.\\
 
+Let $\rho=(\lambda,h),\alpha,\beta$ be control pairs, and $F :  \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ and $G : \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ be $\alpha$- and $\beta$-controlled morphisms respectively. We write $F\sim_\rho G$ if :
+\begin{itemize}%{$bullets$}
+\item[$\bullet$] $\alpha \leq \rho$ and $\beta \leq \rho$,
+\item[$\bullet$] for any $\varepsilon\in (0,\frac{1}{4\lambda})$ and $E\in \mathcal E$, the following diagram commutes : 
+\[\begin{tikzcd}
+ \mathcal O_{\varepsilon,E} \arrow{r}{F_{\varepsilon,E}} \arrow{d}{G_{\varepsilon,E}} & \mathcal O'_{\alpha (\varepsilon,E) } 
+\arrow{d}{\iota_{\beta(\varepsilon,E)}^{\rho(\varepsilon,E)}} \\
+ \mathcal O'_{\beta (\varepsilon,E) } \arrow{r}{\iota_{\alpha(\varepsilon,E)}^{\rho(\varepsilon,E)}} & \mathcal O'_{\rho(\varepsilon,E)}\\
+\end{tikzcd}.\]
+\end{itemize}
+
+\begin{definition}
+Let $\alpha$ and $\rho$ be control pairs satisfying $\alpha \leq \rho$ and $F \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ a $\alpha$-controlled morphism. We say that $F$ is $\rho$-invertible if there exist a controlled morphism $ G : \hat{\mathcal O'} \rightarrow \hat{\mathcal O}$ such that $G \circ F \sim_\rho Id_{\hat{\mathcal O}}$ and $F\circ G \sim_\rho Id_{\hat{\mathcal O'}}$. $G$ is said to be a $\rho$-inverse for $F$.
+\end{definition}
+
 \subsection{Controlled exact sequences}
 
 \begin{definition}
