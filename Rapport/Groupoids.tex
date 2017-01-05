@@ -4,9 +4,10 @@
 A groupoid is the data of 
 \begin{itemize}
 \item[$\bullet$] two topological spaces $G$ and $G^{(0)}$, called respectively the space of arrows, and the unit space,
-\item[$\bullet$] source and range maps $r,s : G\rightarrow G^{(0)}$ which are continuous and surjective,
+\item[$\bullet$] a topological embedding $e: G^{(0)}\rightarrow G; x\mapsto e_x$ called the unit map,
+\item[$\bullet$] source and range maps $r,s : G\rightarrow G^{(0)}$ which are continuous, surjective, and satisfy $r\circ e = s\circ e = Id_{G^{(0)}}$,
 \item[$\bullet$] a continuous multiplication map $m : G^{(2)}=G\times_{s,r}G\rightarrow G; (g,g')\mapsto gg'$ such that $(gg')g''=g(g'g'')$ for all triple $g,g',g''$ that are composable,
-\item[$\bullet$] unit and inverse map $e : G^{(0)}\rightarrow G; x\mapsto e_x$ and $\text{inv} : G\rightarrow G: g\mapsto g^{-1}$ which are continous and such that $\forall g\in G, gg^{-1}=e_{s(g)} \text{ and }g^{-1}g=e_{r(g)}$, and $g e_{s(g)} = e_{r(g)} g =g$.
+\item[$\bullet$] an inverse map $\text{inv} : G\rightarrow G: g\mapsto g^{-1}$ which is continous and such that $\forall g\in G, gg^{-1}=e_{s(g)} \text{ and }g^{-1}g=e_{r(g)}$, and $g e_{s(g)} = e_{r(g)} g =g$.
 \end{itemize} 
 \end{definition}
 
@@ -50,6 +51,22 @@ A $*$-homomorphism between two $X$-algebras $\alpha : A\rightarrow A'$ is a $*$-
 \begin{definition}
 An action of a groupoid $G$ on a $C^*$-algebra $A$ is a triple $(A,\theta,\alpha)$ where $(A,\theta)$ is a $G^{(0)}$-structure and $\alpha : s^* A \rightarrow r^* A$ is a morphism of $G^{(0)}$-algebras such that $\alpha_{gg'}= \alpha_g\circ \alpha_{g'}$.
 \end{definition} 
+
+\subsection{Crossed products}
+
+If $A$ is a $G$-algebra, and $U \subset G^{(0)}$ is an open subset, recall \cite{LeGall} that the restriction $A_U$ is defined as $\eta^* A = C_0(U) \otimes_\eta A$ where $\eta : C(U) \hookrightarrow C_0(G^{(0)})$ is the canonical inclusion. Let $F= G^{(0)}\backslash U$. As $A_U$ is naturally embedded into $A$, define $A_F$ to be the complementary of $A_U$. \\
+
+Let $E$ be a compact subset of $G$. The space of continuous sections with support in $E$ is defined as $A_E$. Then 
+\[C_c(G,A) = \cup_{E\in \mathcal E} A_E\]
+is called the space of continuous sections with compact support. It is naturally a $*$-algebra with the convolution product
+\[\phi\ast \psi (g) = \int_{G^{r(g)}} \phi(h)\psi(h^{-1}g)\lambda^{r(g)}(h).\] 
+
+If $f\in C_c(G,A)$, define $\lambda(f)\in \mathcal L(L^2(G,A))$ as the convolution operator 
+\[\lambda(f)\eta = f\ast \eta\]
+and the reduced norm as $||f||_r= ||\lambda(f)||_{\mathcal L(L^2(G,A))}$.
+\begin{definition}
+The reduced crosssed product $A\rtimes_r G$ is defined as the completion of $C_c(G,A)$ under the reduced norm.
+\end{definition}
 
 \subsection{Equivariant $KK$-theory}
 
