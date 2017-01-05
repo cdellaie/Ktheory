@@ -1,6 +1,6 @@
 \section{Controlled $K$-theory for étale groupoids}
 
-Let $G$ be an étale groupoid and let $\mathcal E$ be the set of its compact subsets. In this section, we define controlled $K$-theory groups for $G$. By analogy with the terminology used in Coarse Geometry, we will call $E\in \mathcal{E}$ a controlled subset. Notice that if $E,E'\in \mathcal E$, then $E E'\in\mathcal E$.\\
+Let $G$ be an étale groupoid and let $\mathcal E$ be the set of its compact subsets. In this section, we define controlled $K$-theory groups for $G$. By analogy with the terminology used in Coarse Geometry, we will call $E\in \mathcal{E}$ a controlled subset. Notice that if $E,E'\in \mathcal E$, then $E E'\in\mathcal E$, where $EE' := \{ gg' , g\in E,g'\in E'\}$.\\
 
 \begin{definition}
 A $C^*$-algebra $A$ is said to be filtered if, for every $E\in \mathcal E$, there exists a linear subspace $A_E$ of $A$ such that :\\
@@ -69,14 +69,18 @@ A control pair is a couple $(\alpha,h)$ where $\alpha\in (0,\frac{1}{4})$ and $h
 
 Control pairs can be naturally composed, and if $(\alpha,h)$ and $(\beta,k)$ are two control pairs, then their composition, denoted by $(\beta,k)\ast(\alpha,h)$, is defined by $(\alpha \beta,k\ast h)$, where $k\ast h : (0,\frac{1}{4\alpha\beta})\rightarrow \N ; \varepsilon \mapsto k_{\alpha \varepsilon}h_\varepsilon$. \\
 
-Control pairs naturally act on the index subset of the controlled $K$-groups. Indeed, if $\varepsilon\in (0,\frac{1}{4\alpha})$ and $E\in\mathcal E$, $(\alpha,h).(\varepsilon,E)= (\alpha\varepsilon,E^{h_\varepsilon})$ is in $(0,\frac{1}{4})\times\mathcal E$. This allows to define controlled morphims.
+Control pairs naturally act on the index subset of the controlled $K$-groups. Indeed, if $\varepsilon\in (0,\frac{1}{4\alpha})$ and $E\in\mathcal E$, $(\alpha,h).(\varepsilon,E)= (\alpha\varepsilon,E^{h_\varepsilon})$ is in $(0,\frac{1}{4})\times\mathcal E$. This allows to define controlled morphims.\\
+
+We can also compare control pairs. Indeed, define the following partial order : $(\alpha,h) \leq (\beta,k)$ if $\alpha \leq \beta$ and $h_\varepsilon\leq k_\varepsilon$ for all $\varepsilon\in (0,\frac{1}{4\alpha})$.\\ 
 
 \begin{definition}
 Let $\hat{\mathcal O}$ and $\hat{\mathcal O'}$ be two quantitative objects and $\rho=(\alpha,h)$ a control pair. A $\rho$-controlled morphism is a family of groups homomorphims $F_{\varepsilon, E} : \mathcal O_{\varepsilon, E} \rightarrow \mathcal{ O'}_{\alpha\varepsilon, E^{h_\varepsilon}}$ for any $\varepsilon\in(0,\frac{1}{4})$ and $E\in\mathcal E$, such that
 \[\phi^{\alpha\varepsilon',E'^{h_\varepsilon'}}_{\alpha\varepsilon,E^{h_\varepsilon}} \circ F_{\varepsilon, E} =F_{\varepsilon',E'} \circ \phi_{\varepsilon,E}^{\varepsilon',E'}\] for any $0<\varepsilon<\varepsilon'<\frac{1}{4\alpha}$ and $E\subset E'$.
 \end{definition}
 
-If we don't specify any control pair, it is implicit and evident from the context. For a controlled morphism $\hat F : \hat K(A)\rightarrow \hat K(B)$, we will denote $F:K(A)\rightarrow K(B)$ the unique homomorphism it induces in $K$-theory.\\
+\begin{rk}
+If we don't specify any control pair, it is implicit and evident from the context, or it is not crucial to specify it. For example, we will often refer to a controlled morphism, meaning a $\alpha$-controlled morphism for some control pair $\alpha$. For a controlled morphism $\hat F : \hat K(A)\rightarrow \hat K(B)$, we will denote $F:K(A)\rightarrow K(B)$ the unique homomorphism it induces in $K$-theory. We will always try to indicate an analogy with the classical case (as opposed to the controlled or quantitative case) by puttig a hat on top of controlled objects that are hopefully inducing a well known object. For example, controlled $K$-theory is $\hat K$, but the controlled assembly map will be denoted $\hat \mu_{G,A}$, etc.\\
+\end{rk}
 
 Let $\rho=(\lambda,h),\alpha,\beta$ be control pairs, and $F :  \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ and $G : \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ be $\alpha$- and $\beta$-controlled morphisms respectively. We write $F\sim_\rho G$ if :
 \begin{itemize}%{$bullets$}
@@ -90,28 +94,42 @@ Let $\rho=(\lambda,h),\alpha,\beta$ be control pairs, and $F :  \hat{\mathcal O}
 \end{itemize}
 
 \begin{definition}
-Let $\alpha$ and $\rho$ be control pairs satisfying $\alpha \leq \rho$ and $F \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ a $\alpha$-controlled morphism. We say that $F$ is $\rho$-invertible if there exist a controlled morphism $ G : \hat{\mathcal O'} \rightarrow \hat{\mathcal O}$ such that $G \circ F \sim_\rho Id_{\hat{\mathcal O}}$ and $F\circ G \sim_\rho Id_{\hat{\mathcal O'}}$. $G$ is said to be a $\rho$-inverse for $F$.
+Let $\alpha$ and $\rho$ be control pairs satisfying $\alpha \leq \rho$ and $F : \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ a $\alpha$-controlled morphism. We say that $F$ is $\rho$-invertible if there exist a controlled morphism $ G : \hat{\mathcal O'} \rightarrow \hat{\mathcal O}$ such that $G \circ F \sim_\rho Id_{\hat{\mathcal O}}$ and $F\circ G \sim_\rho Id_{\hat{\mathcal O'}}$. $G$ is said to be a $\rho$-inverse for $F$.
+\end{definition}
+
+As we will see for controlled assembly maps, the correct notions of injectivity and surjectivity for controlled morphisms need to be adpated in the following way.\\
+
+\begin{definition}
+Let $\rho=(\lambda,h)$ and $\alpha$ be controlled pairs, and $F : \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ a $\alpha$-controlled morphism. 
+\begin{itemize}
+\item[$\bullet$] $F$ is $\rho$-injective if, given any $\varepsilon \in (0,\frac{1}{4\lambda})$ and $E\in \mathcal E$, $\alpha\leq \rho$ and, for all $x\in \mathcal O_{\varepsilon, E}$ such that $F_{\varepsilon, E}(x)=0$, then $\iota_{\varepsilon, E}^{\lambda\varepsilon, h_\varepsilon E}(x)=0$,
+\item[$\bullet$] $F$ is $\rho$-surjective if, given any $\varepsilon \in (0,\frac{1}{4\lambda})$ and $E\in \mathcal E$, for any $y\in \mathcal O' _{\varepsilon, E}$, there exists $x\in \mathcal O_{\rho(\varepsilon,E)}$ such that $F_{\rho(\varepsilon,E)}(x)= \iota_{\varepsilon,E}^{\rho(\varepsilon,E)}$,
+\item[$\bullet$] $F$ is a $\rho$-isomorphism if $F$ is both $\rho$-injective and $\rho$-surjective.
+\end{itemize}
 \end{definition}
 
 \subsection{Controlled exact sequences}
 
 \begin{definition}
-Let $\mathcal E,\mathcal E',\mathcal E''$ be coarse structures, and $ \mathcal O,\mathcal O',\mathcal O''$ quantitative objects over them respectively, $\rho : \mathcal E\rightarrow \mathcal E'$ and $\rho' : \mathcal E'\rightarrow \mathcal E''$ control pairs. If $F : \mathcal O\rightarrow \mathcal O'$ is a $\rho$-controlled morphism and $F : \mathcal O'\rightarrow \mathcal O''$ is a $\rho'$-controlled morphism, we say that the sequence 
-\[\begin{tikzcd}\mathcal O\arrow{r}{F} & \mathcal O'\arrow{r}{G} & \mathcal O''\end{tikzcd}\] 
-is $\lambda$-exact at $\mathcal O'$ if $G\circ F = 0$ and for every $\tilde{ E}\in \tilde{\mathcal E}$, if $x \in \mathcal O'_{\rho (\tilde{E})}$ satisfies $G_{\rho (\tilde E)}(x)=0$, then there exist $\tilde E'\in \mathcal E$ such that $\tilde E'\geq \tilde E$ and $y\in \mathcal O_{\tilde E'}$ such that $F_{\tilde E'}(y)=\iota_{\rho(\tilde E)}^{\rho(\tilde E')}(x) $.\\
-
-A sequence $\begin{tikzcd}[column sep = small]\mathcal O_0 \arrow{r} & O_1 \arrow{r}&... \arrow{r}& O_k\end{tikzcd}$ is $\lambda$-exact if it is $\lambda$-exact everywhere.
+Let $F : \hat{\mathcal O}\rightarrow \hat{\mathcal O'}$ and $G : \hat{\mathcal O'}\rightarrow \hat{\mathcal O''}$ be $(\alpha,h)$-controlled and a $(\beta,k)$-controlled morphisms respectively. The sequence
+\[\begin{tikzcd}[column sep = small] \hat{\mathcal O} \arrow{r}{F} & \hat{\mathcal O'} \arrow{r}{G} & \hat{\mathcal O''} \end{tikzcd}\]
+is called $\rho$-exact at $\hat{\mathcal O'}$ if $G\circ F=0$ and if for all $\varepsilon\in (0,\frac{1}{4 \max (\lambda \alpha,\beta)})$, $E\in\mathcal E$ and any $y\in \mathcal O'_{\varepsilon,E}$ such that $G_{\varepsilon,E}(y) = 0$, then there exists $x\in \mathcal O_{\rho(\varepsilon,E)}$ such that $F_{\rho(\varepsilon,E)}(x)=\iota_{\varepsilon,E}^{\rho(\varepsilon,E)} (y)$.\\
+A sequence of controlled morphisms 
+\[\begin{tikzcd}[column sep = small] ... \arrow{r}{F_{k-2}} & \hat{\mathcal O_{k-2}} \arrow{r}{F_{k-1}} & \hat{\mathcal O_{k-1}} \arrow{r}{F_k} & \hat{\mathcal O_k} \arrow{r}{F_{k+1}} & ... \end{tikzcd}\] 
+is said to be $\rho$-exact if the sequence
+\[\begin{tikzcd}[column sep = small] \hat{\mathcal O_{j-1}} \arrow{r}{F_{j}} & \hat{\mathcal O_{j}} \arrow{r}{F_{j+1}} & \hat{\mathcal O_{j+1}} \end{tikzcd}\]
+is $\rho$-exact at $\hat{\mathcal O_j}$ for all $j$.
 \end{definition}
 
 \subsection{Morita equivalence}
 
 \begin{prop}
-Let $(A,\mathcal E)$ be a filtered $C^*$-algebra and $H$ a separable Hilbert space. Then the $*$-morphism
+Let $A$ be a filtered $C^*$-algebra and $H$ a separable Hilbert space. Then the $*$-morphism
 \[A\rightarrow A\otimes \mathfrak K(H) ; \quad a\mapsto 
 \begin{pmatrix}a & & \\  & 0 & \\ & & ... \end{pmatrix}\]
 induces a group isomorphism 
 \[\mathcal M_A^{\varepsilon,E} : K^{\varepsilon,E}(A)\rightarrow K^{\varepsilon,E}(A\otimes \mathfrak K(H)) \]
-for every $\varepsilon\in(0,\frac{1}{4})$ and $E\in\mathcal E$. The family $\mathcal M_A = (\mathcal M_A^{\varepsilon,E} )_{\varepsilon\in(0,\frac{1}{4}),E\in\mathcal E}$ is called the controlled Morita equivalence and is a controlled morphism, and it induces the usual Morita equivalence $M_A: K(A)\rightarrow K^(A\otimes \mathfrak K(H))$ in $K$-theory. 
+for every $\varepsilon\in(0,\frac{1}{4})$ and $E\in\mathcal E$. The family $\mathcal M_A = (\mathcal M_A^{\varepsilon,E} )_{\varepsilon\in(0,\frac{1}{4}),E\in\mathcal E}$ is called the controlled Morita equivalence and is a controlled morphism. It induces the usual Morita equivalence $M_A: K(A)\rightarrow K^(A\otimes \mathfrak K(H))$ in $K$-theory. 
 \end{prop}
 
 \subsection{Controlled exact sequences}
@@ -120,14 +138,14 @@ We will describe the $6$-term controlled exact sequence associated to a complete
 we denote $\partial_{J,A}$ the boundary map $K_*(A/J)\rightarrow K_{*+1}(J)$. We are bargaining material from \cite{OY2}, where all these properties are defined and proved.\\
 
 \begin{definition}
-Let $(A,\mathcal E)$ a filtered $C^*$-algebra and $J\subset A$ an ideal. If $J_E = A_E\cap J$, the extension
+Let $A$ a filtered $C^*$-algebra and $J\subset A$ an ideal. If $J_E = A_E\cap J$, the extension
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0 \end{tikzcd}\]
 is said to be completely filtered if the continuous linear bijection $A_E/J_E \hookrightarrow (A_E+J)/J$ induced by the inclusion $A_E\hookrightarrow A$ is a complete isometry, i.e.
 \[ \inf_{y\in M_n(J_E)} ||x+y|| = \inf_{y\in M_n(J)} ||x+y||\quad,\forall n\in \N,x\in M_n(A_E),E\in \mathcal E.\]
 \end{definition}
 
 \begin{prop}
-There exists a linear control pair $(\alpha_D,k_D)$ such that for any completely fltered extension of $C^*$-algebras
+There exists a control pair $(\alpha_D,k_D)$ such that for any completely filtered extension of $C^*$-algebras
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0 \end{tikzcd}\]
 there exists a $(\alpha_D,k_D)$-controlled morphism 
 \[D_{J,A} : \hat K(A/J)\rightarrow \hat K(J)\]
@@ -135,7 +153,7 @@ which induces $\partial_{J,A}$ in $K$-theory.
 \end{prop}
 
 \begin{thm}
-There exists a linear control pair $(\lambda,h)$ such that for any completely filtered extension of $C^*$-algebras 
+There exists a control pair $(\lambda,h)$ such that for any completely filtered extension of $C^*$-algebras 
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r}{\iota} & A\arrow{r}{q} & A/J\arrow{r} & 0 \end{tikzcd}\]
 the following $6$-term exact sequence is $(\lambda,h)$-exact
 \[\begin{tikzcd}[column sep = small]
@@ -146,7 +164,7 @@ the following $6$-term exact sequence is $(\lambda,h)$-exact
 
 \subsection{Tensorisation in $KK$-theory}
 
-If $(B,\mathcal E)$ is a filtered $C^*$-algebra and $A$ any $C^*$-algebra, and if $A\otimes B$ is the spatial tensor product, then $(A\otimes B_E)_{E\in\mathcal E}$ defines a filtration of $A\otimes B$ over $\mathcal E$. If $\phi : A_1 \rightarrow A_2$ is a $*$-homomorphism, we use the notation $\phi_B$ for the induced $*$-homomorphism $A_1\otimes B\rightarrow A_2\otimes B$. \\
+If $B$ is a filtered $C^*$-algebra and $A$ any $C^*$-algebra, and if $A\otimes B$ is the spatial tensor product, then $(A\otimes B_E)_{E\in\mathcal E}$ defines a filtration of $A\otimes B$. If $\phi : A_1 \rightarrow A_2$ is a $*$-homomorphism, we use the notation $\phi_B$ for the induced $*$-homomorphism $A_1\otimes B\rightarrow A_2\otimes B$. \\
 
 In \cite{kasparovKKNovikov}, G. Kasparov defined a map
 \[\tau_B : KK(A_1,A_2)\rightarrow KK(A_1\otimes B, A_2\otimes B)\]
@@ -155,7 +173,7 @@ for any $C^*$-algebras $A_1$ and $A_2$, which is compatible with the Kasparov pr
 which is proved in \cite{OY2} to be induced from a controlled morphism. The following theorem is borrowed from \cite{OY2}.\\
 
 \begin{thm}
-Let $\mathcal E$ be a coarse strucure. There exists a linear control pair $(\alpha_\tau,k_\tau)$ such that, for any filtered $C^*$-algebra $(B,\mathcal E)$, any $C^*$-algebras $A_1$ and $A_2$ and any $K$-cycle $z\in KK(A_1,A_2)$, there exists a $(\alpha_\tau,k_\tau)$-controlled morphism $\hat \tau_B : \hat K(A_1\otimes B)\rightarrow \hat K(A_2\otimes B)$
+There exists a control pair $(\alpha_\tau,k_\tau)$ such that, for any filtered $C^*$-algebra $B$, any $C^*$-algebras $A_1$ and $A_2$ and any $K$-cycle $z\in KK(A_1,A_2)$, there exists a $(\alpha_\tau,k_\tau)$-controlled morphism $\hat \tau_B : \hat K(A_1\otimes B)\rightarrow \hat K(A_2\otimes B)$
 such that :
 \begin{itemize}
 \item[$\bullet$] $\hat \tau_B(z)$ induces right-multiplication by $\tau_B(z)$ in $K$-theory,
@@ -168,17 +186,17 @@ such that :
 \end{itemize}
 \end{thm}
 
-This controlled tensorisation map respects Kasparov product. See \cite{OY2}.
+This controlled tensorisation map respects Kasparov product. See \cite{OY2} for a proof.
 
 \begin{thm}
-There exists a linear control pair $\lambda$ such that, for any separable $C^*$-algebras $A_1$ and $A_2$, any filtered $C^*$-algebra $(B,\mathcal E)$, the following holds : for any $z\in KK(A_1,A_2)$ and $z'\in KK(A_2,A_3)$,
+There exists a linear control pair $\lambda$ such that, for any separable $C^*$-algebras $A_1$ and $A_2$, any filtered $C^*$-algebra $B$, the following holds : for any $z\in KK(A_1,A_2)$ and $z'\in KK(A_2,A_3)$,
 \[\hat\tau_B(z\otimes z')\sim_\lambda \hat\tau_B(z')\circ\hat\tau_B(z)\]
 \end{thm}
 
 At least, the controlled tensorisation map is natural with respect to morphism of filtered $C^*$-algebras. \cite{OY2}
 
 \begin{prop}
-Let $\mathcal E_1$ and $\mathcal E_2$ two coarse structures, $(B_1,\mathcal E_1)$ and $(B_2,\mathcal E_2)$ filtered $C^*$-algebras and $(\phi,\rho) :B_1\rightarrow B_2 $ a filtered morphism. Then $ (\phi_{A_2})_*\circ \hat \tau_{B_1}=\hat \tau_{B_2}(z)\circ(\phi_{A_1})_* $ for any $z\in KK(A_1,A_2)$.
+Let $B_1$ and $B_2$ be filtered $C^*$-algebras and $(\phi,\rho) :B_1\rightarrow B_2 $ a filtered morphism. Then $ (\phi_{A_2})_*\circ \hat \tau_{B_1}=\hat \tau_{B_2}(z)\circ(\phi_{A_1})_* $ for any $z\in KK(A_1,A_2)$.
 \end{prop}
 
 
