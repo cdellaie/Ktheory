@@ -13,6 +13,10 @@ A $C^*$-algebra $A$ is said to be filtered if, for every $E\in \mathcal E$, ther
 \end{itemize}
 \end{definition}
 
+If $A$ is a non-unital filtered $C^*$-algebra, we will by default endowed its unitalization $\tilde A$ with the filtration $\tilde A_E = A_E + \C$.\\
+
+The crucial example for us will be crossed products of $G$-algebras by $G$, but this definition generalizes that of \cite{OY2}. Indeed, as will be recalled later, the Roe algebras can be expressed as a crossed product by a so-called coarse groupoid, which is étale \cite{SkTuYu}, and the definition given here, applied to this groupoid, gives back the filtration in the sense of \cite{OY2}.
+
 \subsection{Almost unitaries and almost projections}
 
 \begin{definition}
@@ -32,7 +36,15 @@ and $U_\infty^{\varepsilon, E}(A)$ is the algebraic inductive limit of the $U_n^
 \end{array}\right. .\]
 \end{definition}
 
-In order to define controlled $K$-groups, define the following equivalence relations on $P^{\varepsilon, E}_\infty(A)\times \N$ and $U^{\varepsilon,E}_n(A)$.
+\begin{rk}Let $\varepsilon\in (0,\frac{1}{4})$ and $E\in\mathcal E$.\\
+\begin{itemize}
+\item[$\bullet$] If $p\in P^{\varepsilon,E}(A)$, then $p$ has a spectral gap around $\frac{1}{2}$, and functional calculus allows to define a true projection $\kappa_0(p)$, as in \cite{OY2}, by taking $\kappa_0$ to be a continuous function that vanishes inside the spectral gap and that is respectively $0$ and $1$ on the left and right part of the spectrum of $p$. As this projection does not depend on $\kappa_0$, we will always denote it the same, even if the function depends on $p$.\\
+\item[$\bullet$] If $u\in U^{\varepsilon,E}(A)$, then $u^* u$ is invertible, and $u(u^* u)^{-1}$ defines a unitary, that we will denote $\kappa_1(u)$.
+\end{itemize}
+\end{rk}
+
+In order to define controlled $K$-groups, define the following equivalence relations on $P^{\varepsilon, E}_\infty(A)\times \N$ and $U^{\varepsilon,E}_n(A)$.\\
+
 \begin{itemize}
 
 \item[$\bullet$] $(p,l) \sim (q,l')$ if there exists a homotopy of almost projections $h\in P^{\varepsilon, E}_\infty(A[0,1])$ and an integer $k$ such that 
@@ -43,14 +55,20 @@ h(1)=\begin{pmatrix} q & 0 \\ 0 & 1_{k+l} \end{pmatrix}\]
 
 Denote $[(p,l)]_{\varepsilon,E}$ and $[u]_{\varepsilon,E}$ for the equivalence classes of almost-projections and almost-unitaries. Then, the same proof as \cite{OY2} shows that $[p,l]_{\varepsilon,E}+[q,l']_{\varepsilon,E}=[diag(p,q),l+l']_{\varepsilon,E}$ and $[u]_{\varepsilon,E}+[v]_{\varepsilon,E}=[diag(u,v)]_{\varepsilon,E}$ induces a group law on the equivalence classes, that we denote $K_0^{\varepsilon,E}(A) = P^{\varepsilon, E}_\infty(A)\times \N / \sim$ and $K_1^{\varepsilon,E}(A) = U^{\varepsilon, E}_\infty(A) / \sim$.\\
 
+If $A$ is not unital, $K_0^{\varepsilon,E}(A)$ is defined as
+\[\{[p,l]_{\varepsilon,E} : p\in P^{\varepsilon,E}_\infty (\tilde A), l\in \N \text{ s.t. rank}(\kappa_0(\rho_A(p)))=l \}\]
+and $K_1^{\varepsilon,E}(A)$ is defined as $U_\infty^{\varepsilon,E}(\tilde A)/ \sim_{\varepsilon,E}$.\\
+
 \begin{definition}
 The controlled $K$-theory of a filtered $C^*$-algebra $A$ is the family of abelian groups $\hat K_0(A) = (K_0^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ and $\hat K_1(A) = (K_1^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ defined above.\\
 \end{definition}
 
 We define canonical inclusion morphisms : if $\varepsilon, \varepsilon'\in (0,\frac{1}{4})$ and $E,E'\in\mathcal E$ such that $\varepsilon < \varepsilon'$ and $E \subset E'$, the natural inclusion $K_*^{\varepsilon,E}(A)\hookrightarrow K_*^{\varepsilon',E'}(A)$ is denoted by $\iota_{\varepsilon,E}^{\varepsilon',E'}$. Notice that $\iota_{\varepsilon',E'}^{\varepsilon'',E''}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon,E}^{\varepsilon'',E''}$ when this expression makes sense.\\
 
-One has also forgetful inclusions $\iota_{\varepsilon,E} : K_*^{\varepsilon,E}\rightarrow K_*(A)$, and 
+One has also forgetful inclusions $\iota_{\varepsilon,E} : K_*^{\varepsilon,E}\rightarrow K_*(A)$ given by $[p,l]_{\varepsilon,E} \mapsto [\kappa_0(p)]-[1_l]$ and $[u]_{\varepsilon,E} \mapsto [\kappa_0(u)] $, and 
 $\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon, E}$ holds. The controlled $K$-theory groups approximate the usual $K$-groups in the sense that $\varinjlim_{E} K_*^{\varepsilon,E}(A) = K_*(A)$ for any $\varepsilon\in (0,\frac{1}{4})$.\\
+
+If $\phi : A\rightarrow B$ is a filtered morphism, then it preserves almost-projections and almost unitaries, and it induces a morphism of abelian groups $\phi_*^{\varepsilon,E} : K_*^{\varepsilon,E}(A) \rightarrow K_*^{\varepsilon,E}(B)$, such that $\phi_*^{\varepsilon,E} \circ \psi_*^{\varepsilon,E} = (\phi\circ\psi)_*^{\varepsilon,E}$.\\
 
 Here is the main example under study : if $A$ is a $G$-algebra, then $A \rtimes_r G$ is naturally filtered. Indeed, for $E\in \mathcal{E}$, denote by $C_E(A,G)$ the linear subspace $\{ f \in C_c(G,A) \text{ s.t. supp }f\subset E\cup E^{-1} \}$. Then $C_E(G,A)$ obviously defines a filtration on $A\rtimes_r G$. A last remark is in order : this remains true for any $C^*$-algebraic completion of $\cup_{E\in\mathcal{E}} C_E(G,A) = C_c(G,A)$, so for maximal or exotic crossed products also. If one allows himself to use controlled $K$-theory for filtered Banach algebras, one can also adapt this definition for Banach completion of $C_c(G,A)$.
 

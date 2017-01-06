@@ -1,7 +1,8 @@
 \documentclass[a4paper]{article}
 
 \input{macro}
-
+\usepackage{geometry}
+\geometry{hmargin=2.5cm,vmargin=1.5cm}
 
 \title{Controlled $K$-theory for étale groupoids and applications }
 
@@ -12,24 +13,25 @@
 %\usepackage{fullpage}
 
 \begin{document}
-\maketitle
 
-\newpage
+\maketitle
+This document includes extracts of my preprint, which should be published within several weeks.
 \tableofcontents
 
 \newpage
-\newpage
 
 %New Version
-This document includes extracts of my preprint, which should be published within several weeks.
+
 %\include{Notations}
 %\include{Groupoids}
 %\include{StateOfTheArt}
-\include{Qtheory2}
-\include{AssemblyMaps}
-\include{CoarseAM}
-\include{ControlledAM}
-\include{Kunneth}
+
+\input{Notations}
+\input{QKtheory3}
+\input{AssemblyMaps}
+\input{CoarseAM}
+\input{ControlledAM}
+\input{Kunneth}
 
 %Old Version
 \newpage
