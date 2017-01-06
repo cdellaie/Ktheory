@@ -1,58 +1,51 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Extract.aux
-A level-1 auxiliary file: Notations.aux
-A level-1 auxiliary file: Groupoids.aux
-A level-1 auxiliary file: Qtheory2.aux
-A level-1 auxiliary file: AssemblyMaps.aux
-A level-1 auxiliary file: CoarseAM.aux
-A level-1 auxiliary file: ControlledAM.aux
-A level-1 auxiliary file: Kunneth.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
 Warning--empty journal in OY3
 Warning--empty year in OY3
 Warning--empty school in LeGall
 Warning--empty journal in WeggeOlsen
-You've used 15 entries,
+You've used 14 entries,
             2118 wiz_defined-function locations,
-            615 strings with 6270 characters,
-and the built_in function-call counts, 4255 in all, are:
-= -- 433
-> -- 150
-< -- 1
-+ -- 64
-- -- 46
-* -- 296
-:= -- 736
-add.period$ -- 44
-call.type$ -- 15
-change.case$ -- 66
+            602 strings with 6091 characters,
+and the built_in function-call counts, 4029 in all, are:
+= -- 413
+> -- 143
+< -- 0
++ -- 61
+- -- 44
+* -- 285
+:= -- 697
+add.period$ -- 41
+call.type$ -- 14
+change.case$ -- 63
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 161
-empty$ -- 352
-format.name$ -- 46
-if$ -- 855
+cite$ -- 18
+duplicate$ -- 149
+empty$ -- 330
+format.name$ -- 44
+if$ -- 807
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 15
-newline$ -- 77
-num.names$ -- 30
-pop$ -- 57
+int.to.str$ -- 14
+missing$ -- 13
+newline$ -- 72
+num.names$ -- 28
+pop$ -- 50
 preamble$ -- 1
-purify$ -- 53
+purify$ -- 50
 quote$ -- 0
-skip$ -- 104
+skip$ -- 97
 stack$ -- 0
-substring$ -- 316
-swap$ -- 14
-text.length$ -- 1
+substring$ -- 311
+swap$ -- 12
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 58
+type$ -- 56
 warning$ -- 4
-while$ -- 50
-width$ -- 17
-write$ -- 159
+while$ -- 48
+width$ -- 16
+write$ -- 148
 (There were 4 warnings)
