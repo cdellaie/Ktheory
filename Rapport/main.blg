@@ -15,49 +15,50 @@ A level-1 auxiliary file: StandardModules.aux
 A level-1 auxiliary file: NuclearDimAsdim.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
+Warning--can't use both volume and number fields in connesfoliations
 Warning--empty journal in OY3
 Warning--empty year in OY3
 Warning--empty school in LeGall
 Warning--empty journal in WeggeOlsen
-You've used 19 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            649 strings with 6824 characters,
-and the built_in function-call counts, 5494 in all, are:
-= -- 560
-> -- 195
-< -- 3
-+ -- 82
-- -- 60
-* -- 377
-:= -- 941
-add.period$ -- 56
-call.type$ -- 19
-change.case$ -- 84
+            666 strings with 7108 characters,
+and the built_in function-call counts, 6368 in all, are:
+= -- 644
+> -- 216
+< -- 6
++ -- 92
+- -- 66
+* -- 422
+:= -- 1074
+add.period$ -- 65
+call.type$ -- 22
+change.case$ -- 94
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 211
-empty$ -- 454
-format.name$ -- 60
-if$ -- 1115
+cite$ -- 27
+duplicate$ -- 258
+empty$ -- 539
+format.name$ -- 66
+if$ -- 1310
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 20
-newline$ -- 97
-num.names$ -- 38
-pop$ -- 75
+int.to.str$ -- 22
+missing$ -- 25
+newline$ -- 112
+num.names$ -- 44
+pop$ -- 95
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 77
 quote$ -- 0
-skip$ -- 139
+skip$ -- 173
 stack$ -- 0
-substring$ -- 405
-swap$ -- 24
-text.length$ -- 3
+substring$ -- 453
+swap$ -- 40
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
-warning$ -- 4
-while$ -- 65
-width$ -- 21
-write$ -- 203
-(There were 4 warnings)
+type$ -- 80
+warning$ -- 5
+while$ -- 74
+width$ -- 24
+write$ -- 236
+(There were 5 warnings)

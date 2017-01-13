@@ -28,6 +28,18 @@ A Haar system on $G$ is a family of borelian measures $(\lambda^x)_{x\in G^{(0)}
 \item[$\bullet$] for all $f\in C_c(G)$ and $g\in G$, $\int_{G^{r(g)}} f(h) d\lambda^{r(g)}(dh) \int_{G^{s(g)}} f(gh) \lambda^{s(g)}(dh)$ holds.
 \end{itemize}
 
+\begin{Expl} Here are classical examples.
+\begin{enumerate} 
+\item \textbf{Pair groupoid.} Let $X$ be a set, and consider $G=X\times X$ with base space $G^{(0)}=X$ and projection maps as traget and source $s=pr_1, r=pr_2$. Composition is given by $(x,y)(y,z)= (x,z)$, and one can easily check that $e_x=(x,x)$ and $(x,y)^{-1} = (y,x)$. $X\times X$ is étale if $X$ is discrete.
+\item \textbf{Groups} Any group $G$ is a groupoid over a point $G^{(0)}=*$. $G$ is étale as a groupoid if it is a discrete group.
+\item \textbf{Principal groupoid of a group action. } Let $G$ be a group acting on a topological space $X$ by homeomorphisms. Define the groupoid $X\rtimes G$ as the topological space $X\times G$ over the base space $X$, endowed with the maps $s(x,g)=x$ and $r(x,g)=g.x$. The unit map will be given by $x\mapsto (x,e_G)$ and $(x,g)^{-1} = (g.x , g^{-1})$. This groupoid is called the principal action groupoid. It is étale when $G$ is a discrete group.  
+\end{enumerate}
+\end{Expl}
+
+These examples show how the notion of topological groupoid interpolates between a group and a space. However, other examples of interesting groupoids abound in analysis and geometry. For example, we will define later a so called Coarse Groupoid associated to any Coarse Space, after \cite{SkTuYu}, whose importance cannot be stressed enough to our approach to the Coarse Baum-Connes conjecture.\\
+
+Other examples includes the holonomy groupoid of a foliation \cite{connesfoliations}, Lie groupoids \cite{paterson}, etc. One of the reasons groupoids are such famous objects in noncommutative geometry is that we can still do analysis on it. According to the general philosophy of Connes \cite{Connes94}, groupoids encode geometric situations and remain available to analysis, even when the situation is so pathological that classical tools become trivial. For example, when confronted to a group action, considering the convolution algebra of the principal action groupoid can be a substitute to the studying the quotient space. It turns out that, when the action is free and proper, the envelopping $C^*$-algebra is Morita equivalent to $C_0(X/G)$, which represent the quotient space by Gelfand duality. However, when the quotient is badly behaved, the envelopping $C^*$-algebra still carries usefull information, even if the quotient  is such that $C_0(X/G) = \C$.
+
 \subsection{Actions of groupoids}
 
 \begin{definition}

@@ -16,6 +16,16 @@ Bruce Blackadar.
 \newblock {\em K-theory for operator algebras}, volume~5.
 \newblock Cambridge University Press, 1998.
 
+\bibitem{connesfoliations}
+Alain Connes.
+\newblock A survey of foliations and operator algebras.
+\newblock In {\em Proc. Symp. Pure Math}, volume~38, pages 521--628, 1982.
+
+\bibitem{Connes94}
+Alain Connes.
+\newblock {\em Noncommutative geometry}.
+\newblock Academic Press, 1994.
+
 \bibitem{CuSk}
 Joachim Cuntz and Georges Skandalis.
 \newblock Mapping cones and exact sequences in kk-theory.
@@ -65,6 +75,12 @@ Herv{\'e} Oyono-Oyono and Guoliang Yu.
 \newblock On quantitative operator k--theory.
 \newblock {\em Ann. Inst. Fourier (Grenoble). Available at www. math.
   univ-metz. fr/\~{} oyono/pub. html}, 2011.
+
+\bibitem{paterson}
+Alan Paterson.
+\newblock {\em Groupoids, inverse semigroups, and their operator algebras},
+  volume 170.
+\newblock Springer Science \& Business Media, 2012.
 
 \bibitem{RoeCoarse}
 John Roe.
