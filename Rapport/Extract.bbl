@@ -11,6 +11,12 @@ Paul Baum, Alain Connes, and Nigel Higson.
   c\^{}*-algebras.
 \newblock {\em Contemporary Mathematics}, 167:241--291, 1994.
 
+\bibitem{ChabertEOY}
+J{\'e}r{\^o}me Chabert, Siegfried Echterhoff, and Herv{\'e} Oyono-Oyono.
+\newblock Going-down functors, the k{\"u}nneth formula, and the baum-connes
+  conjecture.
+\newblock {\em Geometric \& Functional Analysis GAFA}, 14(3):491--528, 2004.
+
 \bibitem{FinnSellFibred}
 Martin Finn-Sell.
 \newblock Fibred coarse embeddings, at-menability and the coarse analogue of
@@ -20,6 +26,12 @@ Martin Finn-Sell.
 \bibitem{OY3}
 G.~Yu H.~Oyono-Oyono.
 \newblock Persitance approximation property and controlled k-theory.
+
+\bibitem{HigsonKasparov}
+Nigel Higson and Gennadi Kasparov.
+\newblock E-theory and kk-theory for groups which act properly and
+  isometrically on hilbert space.
+\newblock {\em Inventiones mathematicae}, 144(1):23--74, 2001.
 
 \bibitem{HigsonLaffSk}
 Nigel Higson, Vincent Lafforgue, and Georges Skandalis.
@@ -69,6 +81,11 @@ Jean-Louis Tu.
 NE~Wegge-Olsen.
 \newblock K-theory and c-star-algebras: A friendly approach.
 \newblock 1993.
+
+\bibitem{Yu1}
+Guoliang Yu.
+\newblock The novikov conjecture for groups with finite asymptotic dimension.
+\newblock {\em Annals of Mathematics}, 147(2):325--355, 1998.
 
 \bibitem{Yu2}
 Guoliang Yu.
