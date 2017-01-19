@@ -60,7 +60,7 @@ satisfying $j_G(z\otimes_D z')=j_G(z)\otimes_{D\rtimes_r G} j_G(z')$ for any $z\
 
 \subsection{The assembly map}
 
-If $Z$ is a proper $G$-compact $G$-space, $Z\rtimes G$ is a proper groupoid by definition, hence there exists a cutoff function $c : Z\rightarrow [0,1]$ such that $\int_G^{p(z)} c(zg)d\lambda^x(g) = 1$. The function $g\mapsto c(r(g))^{\frac{1}{2}}c(s(g))^{\frac{1}{2}} $ defines a projection in $C_0(Z)\rtimes_r G$ which we denote by $\mathcal L_Z$. If $Z=P_K(G)$, then $\mathcal L_Z = \mathcal L_K$.
+If $Z$ is a proper $G$-compact $G$-space, $Z\rtimes G$ is a proper groupoid by definition, hence there exists a cutoff function $c : Z\rightarrow [0,1]$ such that $\int_{G^{p(z)}} c(zg)d\lambda^x(g) = 1$. The function $g\mapsto c(r(g))^{\frac{1}{2}}c(s(g))^{\frac{1}{2}} $ defines a projection in $C_0(Z)\rtimes_r G$ which we denote by $\mathcal L_Z$. If $Z=P_K(G)$, then $\mathcal L_Z = \mathcal L_K$.
 
 \begin{definition}
 The assembly map for $G$ with coefficients in $B$ is defined as the inductive limit of the maps $\mu_{G,B}^{(Z)} : KK^G(C_0(Z),B)\rightarrow K(B\rtimes_r B)$ given by
@@ -68,21 +68,22 @@ The assembly map for $G$ with coefficients in $B$ is defined as the inductive li
 that is $\mu_{G,B} = \varinjlim \mu_{G,B}^{(Z)}$ (one has to check that theses maps respects the inductive systems, which they do).
 \end{definition}
 
-Another definition : with $Ad$...
+%Another definition : with $Ad$...
 
 \subsection{The Baum-Connes conjecture}
 
 \begin{conj}[Baum-Connes conjecture]
 Let $G$ be an étale groupoid, and $A$ a $G$-algebra.\\
-The Baum-Connes conjecture for $G$ with coefficients in $A$ is the following claim : $\mu_{G,A}$ is an isomorphism of abelian groups.\\
+The Baum-Connes conjecture for $G$ with coefficients in $A$ is the following claim : \\
+\center{$\textbf{BC}_{G,A}$ : $\mu_{G,A}$ is an isomorphism of abelian groups.}\\
 The Baum-Connes conjecture with coefficients is : for all $G$-algebras $A$, $\mu_{G,A}$ is an isomorphism of abelian groups.
 \end{conj}
 
-The conjecture was first stated in \cite{BaumConnes} and in \cite{BaumConnesHigson}. The statement is a descendent of the Connes-Kasparov conjecture, which is simply, when one knows the Baum-Connes conjecture, the latter for almost connected groups (i.e. locally compact groups $G$ such that $G/G_0$ is compact, where $G_0$ is the connected component of the identity).\\
+The conjecture was first stated in \cite{BaumConnes} and in \cite{BaumConnesHigson}. The statement is a generalization of the Connes-Kasparov conjecture, which is simply, when one knows the Baum-Connes conjecture, the latter for almost connected groups (i.e. locally compact groups $G$ such that $G/G_0$ is compact, where $G_0$ is the connected component of the identity).\\
 
 Here is the status of the conjecture :
 \begin{itemize}
-\item[$\bullet$] The Connes-Kasparov conjecture was established by J. Chabert, S. Echterhoff and R. Nest, who proved that $\mu_{G}$ is an isomorphism for every secound countable almost connected group $G$, and every group of $k$-rational points of a linear algebraic group over a local field of characteristic $0$.\\
+\item[$\bullet$] The Connes-Kasparov conjecture was established by J. Chabert, S. Echterhoff and R. Nest, who proved that $\mu_{G}$ is an isomorphism for every secound countable almost connected group $G$, and every group of $k$-rational points of a linear algebraic group over a local field of characteristic $0$.
 \item[$\bullet$] N. Higson and G. Kasparov proved that the conjecture with coefficients holds for groups having Haagerup property. 
 \item[$\bullet$] V. Lafforgue proved the conjecture with coefficients for hyperbolic groups.
 \item[$\bullet$] V. Lafforgue showed the conjecture for every semi-simple Lie group, real or $p$-adic reductive, and discrete cocompact subgroup of real rank $1$ Lie groups or of $SL(3,k)$ for any local field $k$. \\
@@ -153,7 +154,7 @@ Here are some remarks about the status of the conjecture :
 \begin{itemize}
 \item[$\bullet$] the conjecture is known to hold for any coarse space that admits a coarse embedding into a  separable Hilbert space\cite{Yu2}.
 \item[$\bullet$] couterexamples have been constructed \cite{HigsonLaffSk},
-\item[$\bullet$] Let $\Gamma$ be a finitely generated group, and $|\Gamma|$ the coarse space associated to the word-length metric (any two left invariant metric on $\Gamma$ are coarsely equivalent). Then the Coarse Baum-Connes conjecture for $|\Gamma|$ implies the Novikov conjecture for higher signatures for $\Gamma$.
+\item[$\bullet$] Let $\Gamma$ be a finitely generated group, and $|\Gamma|$ the coarse space associated to the word-length metric (any two left invariant metric on $\Gamma$ are coarsely equivalent). Then the Coarse Baum-Connes conjecture for $|\Gamma|$ implies the Novikov conjecture for higher signatures for $\Gamma$.\\
 \end{itemize}
 
 Here is another description of the Coarse Assembly map which will be of some interest for us.\\
