@@ -17,7 +17,7 @@ $G$ is said to be étale if the range map $r:G\rightarrow G^{(0)}$ is a local ho
 $G$ is said to be principal if $r\times s : G\rightarrow G^{(0)}\times G^{(0)}$ is injective, transitive if $r\times s $ is surjective, and proper if $r\times s $ is a proper map. 
 \end{definition}
 
-If $G$ is étale, then any $g\in G$ has an open neighborhood $U$ such that $r$ and $s$ are injective on $U$. The element $g$ defines in this way a partial homeomorphism $\alpha_U = r\circ (s_{|U})^{-1} : s(U)\rightarrow r(U)$. Such open sets $U$ where $r$ and $s$ are injective are called bisections. The set of bisections is naturally an inverse semi-group.\\
+If $G$ is étale, then any $g\in G$ has an open neighborhood $U$ such that $r$ and $s$ are injective on $U$. The element $g$ defines in this way a partial homeomorphism $\alpha_U = r\circ (s_{|U})^{-1} : s(U)\rightarrow r(U)$. Such open sets $U$ where $r$ and $s$ are injective are called bisections. The set of bisections is naturally an inverse semi-group. \cite{paterson}\\
 
 For $U,V\subset G^{(0)}$, we will us the notations $G_U=s^{-1}(U)$, $G^V=r^{-1}(V)$ and $G_U^V=s^{-1}(U)\cap r^{-1}(V)$. If one of the subsets is reduced to a single point, we will use $G_x=G_{\{x\}}$, etc. \\
 
@@ -25,7 +25,7 @@ A Haar system on $G$ is a family of borelian measures $(\lambda^x)_{x\in G^{(0)}
 \begin{itemize}
 \item[$\bullet$] the support of $\lambda^x$ is $G^x$, 
 \item[$\bullet$] the map $G^{(0)} \rightarrow \C; x\mapsto \int_{G^x} f d\lambda^x$ is continuous for all $f\in C_c(G)$,
-\item[$\bullet$] for all $f\in C_c(G)$ and $g\in G$, $\int_{G^{r(g)}} f(h) d\lambda^{r(g)}(dh) \int_{G^{s(g)}} f(gh) \lambda^{s(g)}(dh)$ holds.
+\item[$\bullet$] for all $f\in C_c(G)$ and $g\in G$, $\int_{G^{r(g)}} f(h) d\lambda^{r(g)}(dh)= \int_{G^{s(g)}} f(gh) \lambda^{s(g)}(dh)$ holds.
 \end{itemize}
 
 \begin{Expl} Here are classical examples.
@@ -43,17 +43,28 @@ Other examples includes the holonomy groupoid of a foliation \cite{connesfoliati
 \subsection{Actions of groupoids}
 
 \begin{definition}
-An left action of $G$ on a topological space $Z$ is given by a continuous map $p : Z \rightarrow G^{(0)}$, called the anchor map, and a map $\alpha : G\times_{s,p} Z \rightarrow Z $ such that $\alpha(g',\alpha(g,z)) = \alpha(g'g,z)$ whenever $(g,g')\in G^{(2)}$ and $p(z)=s(g)$. We will use the notation $\alpha(g,z) = g.z$ when the action is clear from the context.\\
+A left action of $G$ on a topological space $Z$ is given by a continuous map $p : Z \rightarrow G^{(0)}$, called the anchor map, and a map $\alpha : G\times_{s,p} Z \rightarrow Z $ such that :
+\begin{itemize}
+\item[$\bullet$] $\alpha(g',\alpha(g,z)) = \alpha(g'g,z)$ whenever $(g,g')\in G^{(2)}$ and $p(z)=s(g)$,
+\item[$\bullet$] $p(\alpha(g,z))= r(g)$
+\item[$\bullet$] $\alpha(e_{p(z)},z)=z$
+\end{itemize} 
+We will use the notation $\alpha(g,z) = g.z$ when the action is clear from the context.\\
 
-An right action of $G$ on a topological space $Z$ is given by a continuous map $p : Z \rightarrow G^{(0)}$, again called the anchor map, and a map $\alpha : Z\times_{p,r} G \rightarrow Z $ such that $\alpha(\alpha(z,g),g') = \alpha(z, gg')$ whenever $(g,g')\in G^{(2)}$ and $p(z)=r(g)$. We will use the notation $\alpha(g,z) = z.g$ when the action is clear from the context.\\ 
+An right action of $G$ on a topological space $Z$ is given by a continuous map $p : Z \rightarrow G^{(0)}$, again called the anchor map, and a map $\alpha : Z\times_{p,r} G \rightarrow Z $ such that :
+\begin{itemize}
+\item[$\bullet$] $\alpha(\alpha(z,g),g') = \alpha(z, gg')$ whenever $(g,g')\in G^{(2)}$ and $p(z)=r(g)$,
+\item[$\bullet$] $p(\alpha(z,g))= s(g)$
+\item[$\bullet$] $\alpha(z,e_{p(z)})=z$
+\end{itemize} We will use the notation $\alpha(g,z) = z.g$ when the action is clear from the context.\\ 
 \end{definition}
 
-An action $(Z,p,\alpha)$ is said to be proper if $\alpha\times id_Z : $ is proper as a continous map.\\
+A left action $(Z,p,\alpha)$ is said to be proper if $id_Z \times \alpha : (g,z) \mapsto (z,g.z) $ is proper as a continous map.\\
 
 \subsection{$G$-algebras}
 
 \begin{definition}
-Let $X$ be a topological space. A $X$-algebra is a $C^*$-algebra together with a $*$-homomorphism $\theta : C_0(X)\rightarrow \mathcal M(Z(A))$ such that $\theta (C_0(X)) A = A$. The couple $(A,\theta)$ is then called a $X$-structure.
+Let $X$ be a topological space. A $C(X)$-algebra is a $C^*$-algebra together with a $*$-homomorphism $\theta : C_0(X)\rightarrow \mathcal M(Z(A))$ such that $\theta (C_0(X)) A = A$. The couple $(A,\theta)$ is then called a $C(X)$-structure.
 \end{definition} 
 
 If $f : X\rightarrow Y$ is a continuous map, and $A$ a $Y$-algebra, then $f$ induces a $X$ structure on $A$, and we define $f^* A = A \otimes_f C_0(X)$ the resulting $X$-algebra. For details on tensor products of $X$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $X$-algebra : for $x\in X$, $A_x = ev_x^* A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$.\\
@@ -86,7 +97,7 @@ In \cite{LeGall}, Le Gall defined, for any locally compact groupoid $G$, and $G$
 \begin{itemize}
 \item[$\bullet$] $E$ is a right $\Z_2$-graded $B$-Hilbert module, equipped with a unitary action of $G$, i.e. an even unitary $V\in\mathcal L_B(s^*E,r^*E)$ such that $V_g V_{g'} = V_{gg'}$ for all $(g,g')\in G^{(2)}$,
 \item[$\bullet$] $\pi : A\rightarrow \mathcal L_B(E)$ is a $*$-homomorphism with image containe in even operators, and we will often write $a$ instead of $\pi(a)$,
-\item[$\bullet$] $T\in\mathcal L_B(E)$ is an odd bounded $B$-linear operator satifying the $K$-cycle relations i.e. $[a, T]$, $a(T-T^*)$, $a(T^2-1)$, $a(T_{r(g)}-V_gT_{s(g)}V_g^*)$ are compact operators in $\mathfrak K_B(E)$.
+\item[$\bullet$] $T\in\mathcal L_B(E)$ is an odd bounded $B$-linear operator satifying the $K$-cycle relations i.e. $[a, T]$, $a(T-T^*)$, $a(T^2-1)$ are compact operators in $\mathfrak K_B(E)$ and $a(r^* T -V s^*T V^*)$ is a compact operator in $\mathfrak K_{r^* B}(r^* E)$ for all $a\in A$.
 \end{itemize} 
 
 The set of such $K$-cycles is denoted by $\mathbb E^G(A,B)$.
@@ -102,6 +113,15 @@ Let $z\in KK^G_1(A,B)$. The induced homomorphism $-\otimes_A z : K_*(A)\rightarr
 \[\begin{tikzcd}[column sep = small] 
 0 \arrow{r}& \mathfrak K \otimes B \arrow{r} & E^{\pi,T} \arrow{r} & A \arrow{r} & 0\end{tikzcd}\]
 where $E^{\pi,T}=\{(a,P\pi(a)P +y) : a\in A , y\in \mathfrak K \otimes B\}$, the arrows are the obvious inclusion and projection, and the completely positive section is $a\mapsto (a, P \pi(a) P)$. Here, we implicitely choose a $K$-cycle $(H_B,\pi,T)$ representing $z$, and $P=\frac{1+T}{2}$. The fact that this choice does not affect the boundary will be proven in the upcoming sections. 
+\end{prop}
+
+\begin{prop}
+Let $z\in KK^G_1(A,B)$ and choose any $K$-cycle $(H_B,\pi,T)$ representing $z$. Let $P=\frac{1+T}{2}$. The induced homomorphism 
+\[-\otimes_A z : K_*(A)\rightarrow K_*(B)\]
+can be realized, up to Morita equivalence, as the boundary of the following semi-split $G$-equivariant extension of $G$-algebras
+\[\begin{tikzcd}[column sep = small] 
+0 \arrow{r}& \mathfrak K \otimes B \arrow{r} & E^{\pi,T} \arrow{r} & A \arrow{r} & 0\end{tikzcd}\]
+where $E^{\pi,T}=\{(a,P\pi(a)P +y) : a\in A , y\in \mathfrak K \otimes B\}$, the arrows are the obvious inclusion and projection, and the completely positive section is $a\mapsto (a, P \pi(a) P)$. The fact that the choice of the representent does not affect the boundary will be proven in the upcoming sections. 
 \end{prop}
 
 The following result will be constantly used in the upcoming sections. In short, it explains how to construct the boundary map associated to any extension $0\rightarrow J\rightarrow A \rightarrow A/J \rightarrow 0$ as the Kasparov product of an element $[\partial_{J,A}]\in KK^G_1(A/J,J)$. For references, see \cite{blackadar}.\\

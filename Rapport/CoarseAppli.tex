@@ -1,0 +1,66 @@
+\section{Applications to Coarse Geometry}
+
+\subsection{Equivalence between the controlled coarse assembly map for $X$ and the controlled assembly map for $G$ with coefficients in $l^\infty(X,\mathfrak K)$}
+
+In \cite{OY3}, H. Oyono-Oyono and G. Yu defined a bunch of local quantitative coarse assembly maps for a metric space $X$. For the sake of simplicity, we take $X$ to be discrete and uniformly bounded. Let $\mathcal C$ be its coarse structure, that is the set of all its controlled subsets. Then, for any $C^*$-algebras $A$ and $B$ and a $K$-cycle $z\in KK(A,B)$, they construct a controlled morphism
+\[\sigma_X(z) : \hat K(C^*(X,A))\rightarrow \hat K(C^*(X,B)).\]
+There exists a projection $P_X$ with finite propagation, and the local quantitative assembly map is defined as 
+\[A_{X,B}^{\epsilon,r,d}(z)=\sigma_X^{\epsilon,r}(z)([P_X]_{\epsilon,r})\] for $z\in KK(C_0(P_d(X)),B)$, where $P_d(X)$ is the classical Rips complex of $X$. This bunch of assembly maps induce the usual coarse assembly map of $X$ 
+\[A_{X,B} : KX_*(X,B)\rightarrow K_*(C^*(X,B)\]
+in $K$-theory. Now let $\G$ be the coarse groupoid of $X$. It is an étale groupoid with compact base space $\G^{(0)}=\beta X$, the Stone-Cech compactification of $X$ defined as
+\[\G := \cup_{E \in \mathcal C} \overline E,\] 
+where $\overline E$ is the closure of $E$ in $\beta (X \times X)$. 
+A classical result of G. Skandalis, J.-L. Tu and G. Yu \cite{SkTuYu} claims that the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ is equivalent to the Baum-Connes conjecture for the groupoid $G$ with coefficient in $l^\infty(X,K_B)$. More precisely, there is an isomorphism of $C^*$-algebras $\Psi_B : l^\infty(X,K_B)\rtimes_r \G \simeq C^*(X,B)$ and the following diagram commutes :
+\[\begin{tikzcd}
+KK_*^\G(C_0(P_d(\G),l^\infty(X,K_B)) \arrow{r}{\mu_{\G,l^\infty(X,K_B)}^d}\arrow{d}{\iota^*}& K_*(l^\infty(X, K_B)\rtimes_r G)\arrow{d}{(\Psi_B)_*}\\
+KK_*(C_0(P_d(X),B) \arrow{r}{A_{X,B}^d}& K_*(C^*(X,B))
+\end{tikzcd}\]
+where the left vertical arrow comes from the inclusion of groupoid $\iota :\{x\}\rightarrow \G$ for any $x\in X$. We claim that we can prove a controlled analogue of this result which induces it in $K$-theory.
+
+To prove this, we shall describe $\Psi$ more precisely. For any $C^*$-algebra $B$, let $\tilde B = l^\infty (X,K_B)$. It is naturaly a $\G$-algebra, and the fiber over any $x\in\beta X$ is easily seen to be $\tilde B_x = B$. Now, if $f\in C_c(\G, \tilde B)$, as $\overline E$ are the compact-open of $\G$, $f$ is continuous over a $\overline E$, so it is just a bounded function over $E$.\\
+Define for $g=(x,y)\in X\times X\subset \G$,
+$\Psi_B(f)_{xy}=f(g)(x)\in \tilde B$,
+so that $\Psi_B(f)=(\Psi_B(f)_{xy})_{x,y\in X}$ is a locally compact operator of finite propagation (its support is in $E$). This is a $*$-morphism which extends to the annouced isomorphism. Moreover, $\tilde B$ is naturally a $C^*$-subalgebra of both $\tilde B\rtimes_r \G$ and $C^*(X,B)$, and the two inclusion commute modulo $\Psi_B$. We have a commutative diagram :
+\[\begin{tikzcd} 
+  \  & B \arrow[bend left]{rdd}{\iota_3^B}& \\
+  \ &\tilde B \arrow{u}{ev_x}\arrow[hookrightarrow]{ld}{\iota_1^B}\arrow[hookrightarrow]{rd}{\iota_2^B} &  \\ 
+\tilde B\rtimes_r\G \arrow{rr}{\Psi_B} &  &  C^*(X,B) 
+\end{tikzcd}\] 
+Off course, $\Psi_B$ induces $\Psi_{B*} : \mathcal L_{\tilde B\rtimes_r \G}(H_{B\rtimes_r \G})\rightarrow \mathcal L_{C^*(X,B)}(\mathcal E)$ where $\mathcal E = H_{B\rtimes_r \G}\otimes_{\Psi_B} C^*(X,B)$. \\
+Let $A$ and $B$ be two $C^*$-algebra and $z\in KK_1^\G(\tilde A,\tilde B)$, represented by $(H_{\tilde B}, \psi, T)$. As $T_\G = (\iota_1)_*(T)$, we have $(\Psi_B)_*(T_\G)=(\iota_2)_*(T)=(T_x)_X$. Also, the relations $(\iota_1^A)_*\circ\psi = \psi_\G\circ \iota_1^A$ and $(\iota_2^A)_*\circ\psi_x = (\psi_x)_X\circ \iota_2^A$ are easy to derive, which lead to $(\Psi_B)_*\circ \psi_G \circ \iota_1^A= (\iota_2^B)_*\circ \psi_x = (\psi_x)_X\circ \Psi_A\circ \iota_1^A$. By extending $\G$-equivariantly to $\tilde A  \rtimes_r G$, we have $(\Psi_B)_*(\psi_\G(a))=(\psi_x)_X(\Psi_A(a))$. The map $(x,y)\mapsto (\Psi_A(x), (\Psi_B)_*(y))$ induces a morphism $\Psi_E : E^{(\psi,T)}  \rightarrow  E^{((\psi_x,T_x))}$ which sends 
+$(x,P_\G \psi_\G(x)P_\G + y)$ to $(\Psi_A(x), (P_x)_X(\psi_x)_X(\Psi_A(x))(P_x)_X+(\Psi_B)_*(y))$ by the previous computations. This map makes the following diagram commute
+\[
+\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{\tilde B\rtimes \G}\arrow{r}\arrow{d}{(\Psi_B)_*} & E^{(\psi,T)} \arrow{r}\arrow{d}{\Psi_E}& \tilde A\rtimes_r \G\arrow{r}\arrow{d}{\Psi_A} & 0\\
+0\arrow{r} & K_{C^*(X,B)}\arrow{r} & E^{(\psi_x,T_x)} \arrow{r}& C^*(X,A)\arrow{r} & 0
+\end{tikzcd}.
+\]
+Now the remark $3.7$ of \cite{OY2} gives $((\Psi_B)_*)_*\circ D_{\tilde A\rtimes_r\G}^{K_{\tilde B\rtimes_\G}} = D_{C^*(X,A)}^{K_{C^*(X,B)}}\circ (\Psi_A)_*$, and if we compose by the Morita equivalence, we get 
+\[\sigma(\iota^*(z)) \circ (\Psi_A)_* = (\Psi_B)_*\circ J_\G(z),\]
+where $\iota^*(z)$ is indeed the class of $(H_B, \psi_x,T_x)$.\\
+
+As $C_0(P_d(\G))$ is a $\G$-algebra whose fiber over any $w\in\beta X$ is isomorphic to $C_0(P_d(X))$, if $A=C_0(P_d(\G))$, then $(\Psi_A)_*[\mathcal L_d]\in K^{\epsilon , R}_0(C^*(X,C_0(P_d(X)))$ which is equal to $[P_X]$, and gives the result.
+\[(\Psi_B)_*\circ\mu^{\epsilon,R}_\G (z) = A^{\epsilon,R}(\iota^*(z)).\]
+This, passing to $K$-theory, implies the result of \cite{SkTuYu}.\\
+
+\subsection{Fibred coarse embedding}
+
+ If $X$ admits a fibred coarse embedding into Hilbert space, then $G(X)_{|\partial \beta X}$ is a-$t$-menable.\cite{FinnSellFibred} For interesting examples of this type, recall the definition of a box space. Let $\Gamma$ be a finitely generated group, and $\mathcal N$ a family of nested normal subgroups with trivial intersection, which have finite index in $\Gamma$. Take the coarse union of the quotients to construct a coarse space $X_{\mathcal N}(\Gamma)= \cup_{H\in \mathcal N } \Gamma/ H$. Then, $X_{\mathcal N}(\Gamma)$ admits a fibred coarse embedding if and only if $\Gamma$ is a-$T$-menable. But if $X_{\mathcal N}$ is an expander, it cannot be coarsely embedded into a Hilbert space, so just take an a-$T$-menable group which has a box space $X$ which is an expander to get a coarse space that is not coarsely embeddable into Hilbert space ($SL(2,\Z)$ works), but admits a fibred coarse embedding.\\
+
+\begin{cor}
+Let $X$ be a coarse space that admits a fibred coarse embedding into Hilbert space. Then $\hat \mu_{X}^{max}$ is a controlled isomorphism, i.e. $X$ satisfies the controlled Coarse Baum-Connes conjecture.
+\end{cor}
+
+\begin{dem}
+Just use that the maximal crossed product turns restriction of a groupoid to invariant open subsets into exact sequences of $C^*$-algebras, with $F=\partial\beta X$ and $U= F^c$, hence the following diagramm commutes
+\[\begin{tikzcd}
+RK^{G_{|U}}(P_F(G_{|U}),l^\infty)\arrow{r}\arrow{d}{\mu_{G_{|U}}^{\varepsilon,E,F}} & RK^G(P_F(G),l^\infty)\arrow{r}\arrow{d}{\mu_{G}^{\varepsilon,E,F}}  & RK^{G_{|F}}(P_F(G_{|F}),l^\infty)\arrow{d}{\mu_{G_{|F}}^{\varepsilon,E,F}}  \\
+K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G_{|U}) \arrow{r} & K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G) \arrow{r} & K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G_{|F}) \\
+\end{tikzcd}.\]
+Now, $G_{|F}$ being a-T-menable and $G_{|U}$ being proper, the two exterior vertical maps are isomorphisms, and the five lemma concludes the proof.\\
+\qed
+\end{dem}
+
+\subsection{Equivariant Novikov conjecture}
+
+

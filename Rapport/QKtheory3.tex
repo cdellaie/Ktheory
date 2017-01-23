@@ -1,6 +1,14 @@
 \section{Controlled $K$-theory for étale groupoids}
 
-Let $G$ be an étale groupoid and let $\mathcal E$ be the set of its compact subsets. In this section, we define controlled $K$-theory groups for $G$. By analogy with the terminology used in Coarse Geometry, we will call $E\in \mathcal{E}$ a controlled subset. Notice that if $E,E'\in \mathcal E$, then $E E'\in\mathcal E$, where $EE' := \{ gg' , g\in E,g'\in E'\}$.\\
+Let $G$ be an étale groupoid and let $\mathcal E$ be  subset of the set of its compact subsets such that :
+\begin{itemize}
+\item[$\bullet$] if $E\in \mathcal E$, then $E^{-1}\in\mathcal E$,
+\item[$\bullet$] if $E\in \mathcal E$ and $E'\in \mathcal E$, then $E\circ E'\in\mathcal E$.
+\end{itemize}
+
+For simplicity, we will take $\mathcal E = {E\subset G \text{compact s.t.} E=E^{-1}}$.\\
+
+In this section, we define controlled $K$-theory groups for $G$. By analogy with the terminology used in Coarse Geometry, we will call $E\in \mathcal{E}$ a controlled subset. Notice that if $E,E'\in \mathcal E$, then $E E'\in\mathcal E$, where $EE' := \{ gg' , g\in E,g'\in E'\}$.\\
 
 \begin{definition}
 A $C^*$-algebra $A$ is said to be filtered if, for every $E\in \mathcal E$, there exists a linear subspace $A_E$ of $A$ such that :\\

@@ -1,7 +1,8 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{report}
 
 \input{macro}
-
+\usepackage{geometry}
+\geometry{hmargin=2.5cm,vmargin=1.5cm}
 
 \title{Controlled $K$-theory for groupoids and applications}
 
@@ -21,13 +22,20 @@
 \newpage
 
 %New Version
+
+\part{Introduction}
 \include{Notations}
 \include{Groupoids}
 \include{StateOfTheArt}
+
+\part{Controlled $K$-theory and assembly maps}
 \include{QKtheory3}
 \include{AssemblyMaps}
 \include{CoarseAM}
 \include{ControlledAM}
+
+\part{Applications}
+\include{CoarseAppli}
 \include{Kunneth}
 \include{Qtheory2}
 
@@ -38,8 +46,10 @@
 %\include{QuantitativeStatements}
 
 %Unfinished ideas
+\part{Appendix}
 \include{FDC}
 \include{StandardModules}
+\include{StronglyProper}
 \include{NuclearDimAsdim}
 
 \bibliographystyle{plain}
