@@ -1,7 +1,7 @@
 \section{Preliminaries on topological groupoids}
 
 \begin{definition}
-A groupoid is the data of 
+A topological groupoid is the data of 
 \begin{itemize}
 \item[$\bullet$] two topological spaces $G$ and $G^{(0)}$, called respectively the space of arrows, and the unit space,
 \item[$\bullet$] a topological embedding $e: G^{(0)}\rightarrow G; x\mapsto e_x$ called the unit map,
@@ -12,14 +12,14 @@ A groupoid is the data of
 \end{definition}
 
 \begin{definition}
-Let $G$ be a locally compact groupoid.\\
+Let $G$ be a locally compact groupoid, i.e. a topological groupoid locally compact as a topological space.\\
 $G$ is said to be étale if the range map $r:G\rightarrow G^{(0)}$ is a local homeomorphism.\\
 $G$ is said to be principal if $r\times s : G\rightarrow G^{(0)}\times G^{(0)}$ is injective, transitive if $r\times s $ is surjective, and proper if $r\times s $ is a proper map. 
 \end{definition}
 
 If $G$ is étale, then any $g\in G$ has an open neighborhood $U$ such that $r$ and $s$ are injective on $U$. The element $g$ defines in this way a partial homeomorphism $\alpha_U = r\circ (s_{|U})^{-1} : s(U)\rightarrow r(U)$. Such open sets $U$ where $r$ and $s$ are injective are called bisections. The set of bisections is naturally an inverse semi-group. \cite{paterson}\\
 
-For $U,V\subset G^{(0)}$, we will us the notations $G_U=s^{-1}(U)$, $G^V=r^{-1}(V)$ and $G_U^V=s^{-1}(U)\cap r^{-1}(V)$. If one of the subsets is reduced to a single point, we will use $G_x=G_{\{x\}}$, etc. \\
+For $U,V\subset G^{(0)}$, we will us the notations $G_U=s^{-1}(U)$, $G^V=r^{-1}(V)$ and $G_U^V=s^{-1}(U)\cap r^{-1}(V)$. If one of the subsets is reduced to a single point, we will use $G_x=G_{\{x\}}$, etc. We will write $G_{|U}$ for $G_U^U$. It is a subgroupoid of $G$.\\
 
 A Haar system on $G$ is a family of borelian measures $(\lambda^x)_{x\in G^{(0)}}$ such that 
 \begin{itemize}
@@ -28,12 +28,18 @@ A Haar system on $G$ is a family of borelian measures $(\lambda^x)_{x\in G^{(0)}
 \item[$\bullet$] for all $f\in C_c(G)$ and $g\in G$, $\int_{G^{r(g)}} f(h) d\lambda^{r(g)}(dh)= \int_{G^{s(g)}} f(gh) \lambda^{s(g)}(dh)$ holds.
 \end{itemize}
 
-\begin{Expl} Here are classical examples.
-\begin{enumerate} 
-\item \textbf{Pair groupoid.} Let $X$ be a set, and consider $G=X\times X$ with base space $G^{(0)}=X$ and projection maps as traget and source $s=pr_1, r=pr_2$. Composition is given by $(x,y)(y,z)= (x,z)$, and one can easily check that $e_x=(x,x)$ and $(x,y)^{-1} = (y,x)$. $X\times X$ is étale if $X$ is discrete.
-\item \textbf{Groups} Any group $G$ is a groupoid over a point $G^{(0)}=*$. $G$ is étale as a groupoid if it is a discrete group.
-\item \textbf{Principal groupoid of a group action. } Let $G$ be a group acting on a topological space $X$ by homeomorphisms. Define the groupoid $X\rtimes G$ as the topological space $X\times G$ over the base space $X$, endowed with the maps $s(x,g)=x$ and $r(x,g)=g.x$. The unit map will be given by $x\mapsto (x,e_G)$ and $(x,g)^{-1} = (g.x , g^{-1})$. This groupoid is called the principal action groupoid. It is étale when $G$ is a discrete group.  
-\end{enumerate}
+Here are classical examples of groupoids.\\
+
+\begin{Expl}[Groups and spaces] Any group $G$ is a groupoid over a point $G^{(0)}=*$. $G$ is étale as a groupoid if it is a discrete group. A topological space is also a groupoid over itself, the only arrows being the units over the points : $G^{(0)} = X = G$, $s=r=id_X$, it is always étale.
+\end{Expl}
+
+\begin{Expl}[Pair groupoid] Let $X$ be a set, and consider $G=X\times X$ with base space $G^{(0)}=X$ and projection maps as traget and source $s=pr_1, r=pr_2$. Composition is given by $(x,y)(y,z)= (x,z)$, and one can easily check that $e_x=(x,x)$ and $(x,y)^{-1} = (y,x)$. $X\times X$ is étale if $X$ is discrete.
+\end{Expl}
+
+\begin{Expl}[Equivalence relations and pull-back] More generally, consider an equivalence relation $R \subset X\times X$ on a topological space $X$. It naturally has a structure of topological groupoid, as a subgroupoid of $X\times X$. Consider a cover $\mathcal U$ of $G^{(0)}$ by open subsets, and let $p : \sqcup G_{|U} \rightarrow G$ be the natural projection. We define $G[\mathcal U]$ the topological groupoid obtained as the groupoid of the equivalence relation defined by $g\sim g'$ if and only if $p(g)=p(g')$. It is convient to represent this groupoid as the set of triples $(U,g,V)$ such that $s(g)\in U$ and $r(g)\in V$
+\end{Expl}
+
+\begin{Expl}[Principal groupoid of a group action] Let $G$ be a group acting on a topological space $X$ by homeomorphisms. Define the groupoid $X\rtimes G$ as the topological space $X\times G$ over the base space $X$, endowed with the maps $s(x,g)=x$ and $r(x,g)=g.x$. The unit map will be given by $x\mapsto (x,e_G)$ and $(x,g)^{-1} = (g.x , g^{-1})$. This groupoid is called the principal action groupoid. It is étale when $G$ is a discrete group.  
 \end{Expl}
 
 These examples show how the notion of topological groupoid interpolates between a group and a space. However, other examples of interesting groupoids abound in analysis and geometry. For example, we will define later a so called Coarse Groupoid associated to any Coarse Space, after \cite{SkTuYu}, whose importance cannot be stressed enough to our approach to the Coarse Baum-Connes conjecture.\\
@@ -49,7 +55,7 @@ A left action of $G$ on a topological space $Z$ is given by a continuous map $p 
 \item[$\bullet$] $p(\alpha(g,z))= r(g)$
 \item[$\bullet$] $\alpha(e_{p(z)},z)=z$
 \end{itemize} 
-We will use the notation $\alpha(g,z) = g.z$ when the action is clear from the context.\\
+We will use the notation $\alpha(g,z) = g.z$ when the action is clear from the context, and $Z$ will then be referred as a (left) $G$-space.\\
 
 An right action of $G$ on a topological space $Z$ is given by a continuous map $p : Z \rightarrow G^{(0)}$, again called the anchor map, and a map $\alpha : Z\times_{p,r} G \rightarrow Z $ such that :
 \begin{itemize}
@@ -59,20 +65,34 @@ An right action of $G$ on a topological space $Z$ is given by a continuous map $
 \end{itemize} We will use the notation $\alpha(g,z) = z.g$ when the action is clear from the context.\\ 
 \end{definition}
 
-A left action $(Z,p,\alpha)$ is said to be proper if $id_Z \times \alpha : (g,z) \mapsto (z,g.z) $ is proper as a continous map.\\
+A left action $(Z,p,\alpha)$ is said to be 
+\begin{itemize}
+\item[$\bullet$] proper if $id_Z \times \alpha : (g,z) \mapsto (z,g.z) $ is proper as a continous map,
+\item[$\bullet$] free if $\alpha(g,z)=z \Rightarrow g=e_{p(z)} $.
+\end{itemize}
+Similarly, we define these notions for right actions.\\
+
+Let $Z$ be a right $G$-space. Define :
+\begin{itemize}
+\item[$\bullet$] $(Z\rtimes G)^{(0)} = Z$, $Z\rtimes G = Z\times_{r,p} G$ as a topological space,
+\item[$\bullet$] $u_{z}= (z,e_{p(z)})$, $ s(z,g) = z$ and $r(z,g)=z.g$, 
+\item[$\bullet$] if $y = x.g$, $(x,g)(y,g')= (x,gg') $ and $(x,g)^{-1} = (x.g,g^{-1})$.
+\end{itemize}
+
+These maps define a structure of toplogical groupoid on $Z\rtimes G$. It is called the crossed product groupoid of $Z$ by $G$. It is étale if $G$ is.\\
 
 \subsection{$G$-algebras}
 
 \begin{definition}
-Let $X$ be a topological space. A $C(X)$-algebra is a $C^*$-algebra together with a $*$-homomorphism $\theta : C_0(X)\rightarrow \mathcal M(Z(A))$ such that $\theta (C_0(X)) A = A$. The couple $(A,\theta)$ is then called a $C(X)$-structure.
+Let $X$ be a topological space. A $C(X)$-algebra is a $C^*$-algebra together with a $*$-homomorphism $\theta : C_0(X)\rightarrow Z(\mathcal M(A))$ such that $\overline{\theta (C_0(X)) A} = A$. The couple $(A,\theta)$ is then called a $C(X)$-structure.
 \end{definition} 
 
-If $f : X\rightarrow Y$ is a continuous map, and $A$ a $Y$-algebra, then $f$ induces a $X$ structure on $A$, and we define $f^* A = A \otimes_f C_0(X)$ the resulting $X$-algebra. For details on tensor products of $X$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $X$-algebra : for $x\in X$, $A_x = ev_x^* A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$.\\
+If $f : X\rightarrow Y$ is a continuous map between locally compact spaces, and $A$ a $Y$-algebra, then $f$ induces a $C(X)$-structure on $A$ by $f^* : C(Y) \rightarrow C_b(X); g\mapsto g\circ f$. Define $f^* A = A \otimes_{f^*} C_0(X)$ the resulting $C(X)$-algebra. For details on tensor products of $C(X)$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $C(X)$-algebra : for $x\in X$, $A_x = ev_x^* \ A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$. It is convenient to see $A_x$ as $A/ (I_x .A)$ where $I_x$ is the ideal ker $(ev_x : C_0(X) \rightarrow \C)$.\\
 
-A $*$-homomorphism between two $X$-algebras $\alpha : A\rightarrow A'$ is a $*$-homomorphism which commutes with the action of $C_0(X)$, i.e. $\alpha(\theta(f)a)=\theta'(f)\alpha(a)$ for all $a\in A,f\in C_0(X)$. Its fibers are defined unambiguously by $\alpha_x = id_\C \otimes_{ev_x} \alpha$.\\ 
+A $*$-homomorphism between two $C(X)$-algebras $\alpha : A\rightarrow A'$ is a $*$-homomorphism which commutes with the action of $C_0(X)$, i.e. $\alpha(\theta(f)a)=\theta'(f)\alpha(a)$ for all $a\in A,f\in C_0(X)$. Its fibers are defined unambiguously by $\alpha_x = id_\C \otimes_{ev_x} \alpha$.\\ 
 
 \begin{definition}
-An action of a groupoid $G$ on a $C^*$-algebra $A$ is a triple $(A,\theta,\alpha)$ where $(A,\theta)$ is a $G^{(0)}$-structure and $\alpha : s^* A \rightarrow r^* A$ is a morphism of $G^{(0)}$-algebras such that $\alpha_{gg'}= \alpha_g\circ \alpha_{g'}$.
+An action of a groupoid $G$ on a $C^*$-algebra $A$ is a triple $(A,\theta,\alpha)$ where $(A,\theta)$ is a $C(G^{(0)})$-structure and $\alpha : s^* A \rightarrow r^* A$ is an isomorphism of $C(G^{(0)})$-algebras such that $\alpha_{gg'}= \alpha_g\circ \alpha_{g'}$ for all $(g,g')\in G^{(2)}$.
 \end{definition} 
 
 \subsection{Crossed products}
