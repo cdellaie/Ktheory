@@ -19,6 +19,8 @@
     citecolor= cyan               % couleur des liens vers les references bibliographiques
     }
 
+%Commandes
+
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
 \newtheorem{thm}{Theorem}
@@ -43,4 +45,46 @@
 \newcommand{\Cat}{\mathbb B / \mathbb K}
 \newcommand{\G}{\mathcal G }
 
+% Style
+% Package Fancyhdr, documentation at
+% http://www.xm1math.net/doculatex/entetepied.html
+
 \setlength\parindent{0pt}
+
+\usepackage{geometry}
+\geometry{hmargin=2.5cm,vmargin=2.5cm}
+
+%\pagestyle{headings}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[L]{Chapter \thechapter}
+\fancyhead[R]{}
+%\fancyhead[R]{\thepage}
+%\fancyhead[C]{\leftmark}
+
+\renewcommand{\footrulewidth}{0pt}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

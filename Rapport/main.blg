@@ -1,17 +1,10 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
-A level-1 auxiliary file: Notations.aux
-A level-1 auxiliary file: Groupoids.aux
-A level-1 auxiliary file: StateOfTheArt.aux
-A level-1 auxiliary file: QKtheory3.aux
-A level-1 auxiliary file: AssemblyMaps.aux
-A level-1 auxiliary file: CoarseAM.aux
-A level-1 auxiliary file: ControlledAM.aux
-A level-1 auxiliary file: Kunneth.aux
 A level-1 auxiliary file: Qtheory2.aux
 A level-1 auxiliary file: FDC.aux
 A level-1 auxiliary file: StandardModules.aux
+A level-1 auxiliary file: StronglyProper.aux
 A level-1 auxiliary file: NuclearDimAsdim.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
@@ -22,43 +15,43 @@ Warning--empty school in LeGall
 Warning--empty journal in WeggeOlsen
 You've used 22 entries,
             2118 wiz_defined-function locations,
-            666 strings with 7108 characters,
-and the built_in function-call counts, 6368 in all, are:
-= -- 644
+            658 strings with 7008 characters,
+and the built_in function-call counts, 6291 in all, are:
+= -- 631
 > -- 216
 < -- 6
 + -- 92
 - -- 66
-* -- 422
-:= -- 1074
+* -- 411
+:= -- 1063
 add.period$ -- 65
 call.type$ -- 22
-change.case$ -- 94
+change.case$ -- 93
 chr.to.int$ -- 0
 cite$ -- 27
-duplicate$ -- 258
-empty$ -- 539
+duplicate$ -- 259
+empty$ -- 535
 format.name$ -- 66
-if$ -- 1310
+if$ -- 1296
 int.to.chr$ -- 0
 int.to.str$ -- 22
-missing$ -- 25
+missing$ -- 26
 newline$ -- 112
 num.names$ -- 44
-pop$ -- 95
+pop$ -- 101
 preamble$ -- 1
 purify$ -- 77
 quote$ -- 0
-skip$ -- 173
+skip$ -- 172
 stack$ -- 0
-substring$ -- 453
+substring$ -- 428
 swap$ -- 40
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 80
+type$ -- 78
 warning$ -- 5
-while$ -- 74
+while$ -- 72
 width$ -- 24
-write$ -- 236
+write$ -- 235
 (There were 5 warnings)

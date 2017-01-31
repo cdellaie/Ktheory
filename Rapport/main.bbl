@@ -70,6 +70,11 @@ Pierre-Yves Le~Gall.
 \newblock {\em Th{\'e}orie de Kasparov {\'e}quivariante et groupo{\"\i}des}.
 \newblock PhD thesis, 1994.
 
+\bibitem{Murphy}
+Gerard~J. Murphy.
+\newblock {\em $C^*$-algebras and operator theory}.
+\newblock Academic Press Inc., 1990.
+
 \bibitem{OY2}
 Herv{\'e} Oyono-Oyono and Guoliang Yu.
 \newblock On quantitative operator k--theory.
@@ -96,11 +101,6 @@ Georges Skandalis, Jean-Louis Tu, and Guoliang Yu.
 Jean-Louis Tu.
 \newblock La conjecture de baum--connes pour les feuilletages moyennables.
 \newblock {\em K-theory}, 17(3):215--264, 1999.
-
-\bibitem{TuNonHaus}
-Jean-Louis Tu.
-\newblock Non-hausdorff groupoids, proper actions and k-theory.
-\newblock {\em Doc. Math}, 9:565--597, 2004.
 
 \bibitem{TuBC2}
 Jean-Louis Tu.
