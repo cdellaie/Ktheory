@@ -46,7 +46,7 @@ and $U_\infty^{\varepsilon, E}(A)$ is the algebraic inductive limit of the $U_n^
 
 \begin{rk}Let $\varepsilon\in (0,\frac{1}{4})$ and $E\in\mathcal E$.\\
 \begin{itemize}
-\item[$\bullet$] If $p\in P^{\varepsilon,E}(A)$, then $p$ has a spectral gap around $\frac{1}{2}$, and functional calculus allows to define a true projection $\kappa_0(p)$, as in \cite{OY2}, by taking $\kappa_0$ to be a continuous function that vanishes inside the spectral gap and that is respectively $0$ and $1$ on the left and right part of the spectrum of $p$. As this projection does not depend on $\kappa_0$, we will always denote it the same, even if the function depends on $p$.\\
+\item[$\bullet$] If $p\in P^{\varepsilon,E}(A)$, then $p$ has a spectral gap around $\frac{1}{2}$, and functional calculus allows to define a genuine projection $\kappa_0(p)$, as in \cite{OY2}, by taking $\kappa_0$ to be a continuous function that vanishes inside the spectral gap and that is respectively $0$ and $1$ on the left and right part of the spectrum of $p$. As this projection does not depend on $\kappa_0$, we will always denote it the same, even if the function depends on $p$.\\
 \item[$\bullet$] If $u\in U^{\varepsilon,E}(A)$, then $u^* u$ is invertible, and $u(u^* u)^{-1}$ defines a unitary, that we will denote $\kappa_1(u)$.
 \end{itemize}
 \end{rk}
@@ -58,10 +58,10 @@ In order to define controlled $K$-groups, define the following equivalence relat
 \item[$\bullet$] $(p,l) \sim (q,l')$ if there exists a homotopy of almost projections $h\in P^{\varepsilon, E}_\infty(A[0,1])$ and an integer $k$ such that 
 \[h(0)=\begin{pmatrix} p & 0 \\ 0 & 1_{k+l'} \end{pmatrix} \text{ and }
 h(1)=\begin{pmatrix} q & 0 \\ 0 & 1_{k+l} \end{pmatrix}\]
-\item[$\bullet$] $u \sim v$ if there exists a homotopy of almost unitaries $h\in U^{3\varepsilon, E\circ E}_\infty(A[0,1])$ and an integer $k$ such that $h(0)= u \text{ and }h(1)=v$.\\
+\item[$\bullet$] $u \sim v$ if there exists a homotopy of almost unitaries $h\in U^{3\varepsilon, E\circ E}_\infty(A[0,1])$ such that $h(0)= u \text{ and }h(1)=v$.\\
 \end{itemize}
 
-Denote $[(p,l)]_{\varepsilon,E}$ and $[u]_{\varepsilon,E}$ for the equivalence classes of almost-projections and almost-unitaries. Then, the same proof as \cite{OY2} shows that $[p,l]_{\varepsilon,E}+[q,l']_{\varepsilon,E}=[diag(p,q),l+l']_{\varepsilon,E}$ and $[u]_{\varepsilon,E}+[v]_{\varepsilon,E}=[diag(u,v)]_{\varepsilon,E}$ induces a group law on the equivalence classes, that we denote $K_0^{\varepsilon,E}(A) = P^{\varepsilon, E}_\infty(A)\times \N / \sim$ and $K_1^{\varepsilon,E}(A) = U^{\varepsilon, E}_\infty(A) / \sim$.\\
+Denote $[(p,l)]_{\varepsilon,E}$ and $[u]_{\varepsilon,E}$ for the equivalence classes of almost-projections and almost-unitaries. Then, the same proof as \cite{OY2} shows that $[p,l]_{\varepsilon,E}+[q,l']_{\varepsilon,E}=[diag(p,q),l+l']_{\varepsilon,E}$ and $[u]_{\varepsilon,E}+[v]_{\varepsilon,E}=[diag(u,v)]_{\varepsilon,E}$ induces a group structure on the equivalence classes, that we denote $K_0^{\varepsilon,E}(A) = P^{\varepsilon, E}_\infty(A)\times \N / \sim$ and $K_1^{\varepsilon,E}(A) = U^{\varepsilon, E}_\infty(A) / \sim$.\\
 
 If $A$ is not unital, $K_0^{\varepsilon,E}(A)$ is defined as
 \[\{[p,l]_{\varepsilon,E} : p\in P^{\varepsilon,E}_\infty (\tilde A), l\in \N \text{ s.t. rank}(\kappa_0(\rho_A(p)))=l \}\]
@@ -71,7 +71,7 @@ and $K_1^{\varepsilon,E}(A)$ is defined as $U_\infty^{\varepsilon,E}(\tilde A)/ 
 The controlled $K$-theory of a filtered $C^*$-algebra $A$ is the family of abelian groups $\hat K_0(A) = (K_0^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ and $\hat K_1(A) = (K_1^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ defined above.\\
 \end{definition}
 
-We define canonical inclusion morphisms : if $\varepsilon, \varepsilon'\in (0,\frac{1}{4})$ and $E,E'\in\mathcal E$ such that $\varepsilon < \varepsilon'$ and $E \subset E'$, the natural inclusion $K_*^{\varepsilon,E}(A)\hookrightarrow K_*^{\varepsilon',E'}(A)$ is denoted by $\iota_{\varepsilon,E}^{\varepsilon',E'}$. Notice that $\iota_{\varepsilon',E'}^{\varepsilon'',E''}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon,E}^{\varepsilon'',E''}$ when this expression makes sense.\\
+We define canonical morphisms : if $\varepsilon, \varepsilon'\in (0,\frac{1}{4})$ and $E,E'\in\mathcal E$ such that $\varepsilon \leq \varepsilon'$ and $E \subset E'$, the natural homomorphism $K_*^{\varepsilon,E}(A)\hookrightarrow K_*^{\varepsilon',E'}(A)$ is denoted by $\iota_{\varepsilon,E}^{\varepsilon',E'}$. Notice that $\iota_{\varepsilon',E'}^{\varepsilon'',E''}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon,E}^{\varepsilon'',E''}$ when this expression makes sense.\\
 
 One has also forgetful inclusions $\iota_{\varepsilon,E} : K_*^{\varepsilon,E}\rightarrow K_*(A)$ given by $[p,l]_{\varepsilon,E} \mapsto [\kappa_0(p)]-[1_l]$ and $[u]_{\varepsilon,E} \mapsto [\kappa_0(u)] $, and 
 $\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon, E}$ holds. The controlled $K$-theory groups approximate the usual $K$-groups in the sense that $\varinjlim_{E} K_*^{\varepsilon,E}(A) = K_*(A)$ for any $\varepsilon\in (0,\frac{1}{4})$.\\
@@ -90,22 +90,23 @@ A quantitative object is a family of abelian groups $\hat{\mathcal{O}}=\{\mathca
 We need to define controlled morphisms between quantitative objects. We first define control pairs, which are essentially what ensures that the controlled morphisms do not distort too much the propagation.\\
 
 \begin{definition}
-A control pair is a couple $(\alpha,h)$ where $\alpha\in (0,\frac{1}{4})$ and $h : (0,\frac{1}{4\alpha})\rightarrow \N$ is a non-decreasing function. 
+A control pair is a couple $\rho=(a,h)$ where $a\in (0,\frac{1}{4})$ and $h : (0,\frac{1}{4a})\rightarrow \N^*$ is a non-decreasing function. 
 \end{definition}
 
-Control pairs can be naturally composed, and if $(\alpha,h)$ and $(\beta,k)$ are two control pairs, then their composition, denoted by $(\beta,k)\ast(\alpha,h)$, is defined by $(\alpha \beta,k\ast h)$, where $k\ast h : (0,\frac{1}{4\alpha\beta})\rightarrow \N ; \varepsilon \mapsto k_{\alpha \varepsilon}h_\varepsilon$. \\
+Control pairs can be naturally composed, and if $(a,h)$ and $(b,k)$ are two control pairs, then their composition, denoted by $(b,k)\ast(a,h)$, is defined by $(ab,k\ast h)$, where $k\ast h : (0,\frac{1}{4ab})\rightarrow \N^* ; \varepsilon \mapsto k_{a \varepsilon}h_\varepsilon$. \\
 
-Control pairs naturally act on the index subset of the controlled $K$-groups. Indeed, if $\varepsilon\in (0,\frac{1}{4\alpha})$ and $E\in\mathcal E$, $(\alpha,h).(\varepsilon,E)= (\alpha\varepsilon,E^{h_\varepsilon})$ is in $(0,\frac{1}{4})\times\mathcal E$. This allows to define controlled morphims.\\
+Control pairs naturally act on the index subset of the controlled $K$-groups. Indeed, if $\varepsilon\in (0,\frac{1}{4a})$ and $E\in\mathcal E$, $(a,h).(\varepsilon,E)= (a\varepsilon,E^{h_\varepsilon})$ is in $(0,\frac{1}{4})\times\mathcal E$. This allows to define controlled morphims.\\
 
-We can also compare control pairs. Indeed, define the following partial order : $(\alpha,h) \leq (\beta,k)$ if $\alpha \leq \beta$ and $h_\varepsilon\leq k_\varepsilon$ for all $\varepsilon\in (0,\frac{1}{4\alpha})$.\\ 
+We can also compare control pairs. Indeed, define the following partial order : $(a,h) \leq (b,k)$ if $a \leq b$ and $h_\varepsilon\leq k_\varepsilon$ for all $\varepsilon\in (0,\frac{1}{4a})$.\\ 
 
 \begin{definition}
-Let $\hat{\mathcal O}$ and $\hat{\mathcal O'}$ be two quantitative objects and $\rho=(\alpha,h)$ a control pair. A $\rho$-controlled morphism is a family of groups homomorphims $F_{\varepsilon, E} : \mathcal O_{\varepsilon, E} \rightarrow \mathcal{ O'}_{\alpha\varepsilon, E^{h_\varepsilon}}$ for any $\varepsilon\in(0,\frac{1}{4})$ and $E\in\mathcal E$, such that
-\[\phi^{\alpha\varepsilon',E'^{h_\varepsilon'}}_{\alpha\varepsilon,E^{h_\varepsilon}} \circ F_{\varepsilon, E} =F_{\varepsilon',E'} \circ \phi_{\varepsilon,E}^{\varepsilon',E'}\] for any $0<\varepsilon<\varepsilon'<\frac{1}{4\alpha}$ and $E\subset E'$.
+Let $\hat{\mathcal O}$ and $\hat{\mathcal O'}$ be two quantitative objects and $\rho=(a,h)$ a control pair. A $\rho$-controlled morphism is a family of groups homomorphims $F_{\varepsilon, E} : \mathcal O_{\varepsilon, E} \rightarrow \mathcal{ O'}_{a\varepsilon, E^{h_\varepsilon}}$ for any $\varepsilon\in(0,\frac{1}{4a})$ and $E\in\mathcal E$, such that
+\[\phi^{a\varepsilon',E'^{h_\varepsilon'}}_{a\varepsilon,E^{h_\varepsilon}} \circ F_{\varepsilon, E} =F_{\varepsilon',E'} \circ \phi_{\varepsilon,E}^{\varepsilon',E'}\] for any $0<\varepsilon<\varepsilon'<\frac{1}{4a}$ and $E\subset E'$.
 \end{definition}
 
 \begin{rk}
-If we don't specify any control pair, it is implicit and evident from the context, or it is not crucial to specify it. For example, we will often refer to a controlled morphism, meaning a $\alpha$-controlled morphism for some control pair $\alpha$. For a controlled morphism $\hat F : \hat K(A)\rightarrow \hat K(B)$, we will denote $F:K(A)\rightarrow K(B)$ the unique homomorphism it induces in $K$-theory. We will always try to indicate an analogy with the classical case (as opposed to the controlled or quantitative case) by puttig a hat on top of controlled objects that are hopefully inducing a well known object. For example, controlled $K$-theory is $\hat K$, but the controlled assembly map will be denoted $\hat \mu_{G,A}$, etc.\\
+%If we don't specify any control pair, it is implicit and evident from the context, or it is not crucial to specify it. 
+When not specified, the control pair is evident from the context. For example, we will often refer to a controlled morphism, meaning a $\alpha$-controlled morphism for some control pair $\alpha$. For a controlled morphism $\hat F : \hat K(A)\rightarrow \hat K(B)$, we will denote $F:K(A)\rightarrow K(B)$ the unique homomorphism it induces in $K$-theory. We will always try to indicate an analogy with the classical case (as opposed to the controlled or quantitative case) by puttig a hat on top of controlled objects that are hopefully inducing a well known object. For example, controlled $K$-theory is $\hat K$, but the controlled assembly map will be denoted $\hat \mu_{G,A}$, etc.\\
 \end{rk}
 
 Let $\rho=(\lambda,h),\alpha,\beta$ be control pairs, and $F :  \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ and $G : \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ be $\alpha$- and $\beta$-controlled morphisms respectively. We write $F\sim_\rho G$ if :
@@ -148,6 +149,7 @@ is $\rho$-exact at $\hat{\mathcal O_j}$ for all $j$.
 \end{definition}
 
 \subsection{Morita equivalence}
+A controlled version of the Morita equivalence exists. Indeed, the classical Morita equivalence states that, if $e$ is a rank $1$ projection in $\mathcal L (H)$, the map $A\rightarrow A\otimes \mathfrak K(H) ; a\mapsto a\otimes e$ induces an isomorphism in $K$-theory. But this map preserves propagation, hence the same proof as in \cite{OY2} gives the following proposition.
 
 \begin{prop}
 Let $A$ be a filtered $C^*$-algebra and $H$ a separable Hilbert space. Then the $*$-morphism
@@ -155,13 +157,13 @@ Let $A$ be a filtered $C^*$-algebra and $H$ a separable Hilbert space. Then the 
 \begin{pmatrix}a & & \\  & 0 & \\ & & ... \end{pmatrix}\]
 induces a group isomorphism 
 \[\mathcal M_A^{\varepsilon,E} : K^{\varepsilon,E}(A)\rightarrow K^{\varepsilon,E}(A\otimes \mathfrak K(H)) \]
-for every $\varepsilon\in(0,\frac{1}{4})$ and $E\in\mathcal E$. The family $\mathcal M_A = (\mathcal M_A^{\varepsilon,E} )_{\varepsilon\in(0,\frac{1}{4}),E\in\mathcal E}$ is called the controlled Morita equivalence and is a controlled morphism. It induces the usual Morita equivalence $M_A: K(A)\rightarrow K^(A\otimes \mathfrak K(H))$ in $K$-theory. 
+for every $\varepsilon\in(0,\frac{1}{4})$ and $E\in\mathcal E$. The family $\mathcal M_A = (\mathcal M_A^{\varepsilon,E} )_{\varepsilon\in(0,\frac{1}{4}),E\in\mathcal E}$ is called the controlled Morita equivalence and is a controlled morphism. It induces the usual Morita equivalence $M_A: K(A)\rightarrow K(A\otimes \mathfrak K(H))$ in $K$-theory. 
 \end{prop}
 
 \subsection{Controlled exact sequences}
 We will describe the $6$-term controlled exact sequence associated to a completely filtered extension of $C^*$-algebras. For any extension of $C^*$-algebras 
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0 \end{tikzcd},\]
-we denote $\partial_{J,A}$ the boundary map $K_*(A/J)\rightarrow K_{*+1}(J)$. We are bargaining material from \cite{OY2}, where all these properties are defined and proved.\\
+we denote $\partial_{J,A}$ the boundary map $K_*(A/J)\rightarrow K_{*+1}(J)$. The reader can find all the proofs and properties of the following results in \cite{OY2}.
 
 \begin{definition}
 Let $A$ a filtered $C^*$-algebra and $J\subset A$ an ideal. If $J_E = A_E\cap J$, the extension
@@ -179,7 +181,7 @@ which induces $\partial_{J,A}$ in $K$-theory.
 \end{prop}
 
 \begin{thm}
-There exists a control pair $(\lambda,h)$ such that for any completely filtered extension of $C^*$-algebras 
+There exists a universal control pair $(\lambda,h)$, which does not depend on $\mathcal E$, such that for any completely filtered extension of $C^*$-algebras 
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r}{\iota} & A\arrow{r}{q} & A/J\arrow{r} & 0 \end{tikzcd}\]
 the following $6$-term exact sequence is $(\lambda,h)$-exact
 \[\begin{tikzcd}[column sep = small]
@@ -219,7 +221,7 @@ There exists a linear control pair $\lambda$ such that, for any separable $C^*$-
 \[\hat\tau_B(z\otimes z')\sim_\lambda \hat\tau_B(z')\circ\hat\tau_B(z)\]
 \end{thm}
 
-At least, the controlled tensorisation map is natural with respect to morphism of filtered $C^*$-algebras. \cite{OY2}
+This last proposition asserts that the controlled tensorisation map is natural with respect to morphism of filtered $C^*$-algebras. \cite{OY2}
 
 \begin{prop}
 Let $B_1$ and $B_2$ be filtered $C^*$-algebras and $(\phi,\rho) :B_1\rightarrow B_2 $ a filtered morphism. Then $ (\phi_{A_2})_*\circ \hat \tau_{B_1}=\hat \tau_{B_2}(z)\circ(\phi_{A_1})_* $ for any $z\in KK(A_1,A_2)$.

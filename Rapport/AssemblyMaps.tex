@@ -30,9 +30,9 @@ Let $Z$ be a proper $G$-compact $G$-space. Then there exists a compact subset $K
 We will use the equivariant $KK$-theory developped by Le Gall in his thesis \cite{LeGall}, which is an extension of the usual equivariant $KK$-theory of Kasparov. Recall that, if $A$ and $B$ are two $G$-algebras, elements of $KK^G(A,B)$ are homotopy classes of triple $(E,\pi,T)$ where :\\
 
 \begin{itemize}
-\item[$\bullet$] $E$ is a $G$-module,
-\item[$\bullet$] $\pi : A\rightarrow \mathcal L_B(E)$ is a $*$-homomorphism,
-\item[$\bullet$] $T\in \mathcal L_B(E)$ is an adjoinable operator such that the triple satisfies the condition of $K$-cycle : $\pi(a)(T^2-T),\pi(a)(T^*-T)[\pi(a),T]$, and $\pi(a)(T-g.T)$ are compact operators if $E$, for all $a\in A, g\in G$.\\
+\item[$\bullet$] $E$ is a $G$-module, the action of $G$ being implemented by a unitary $V\in\mathcal L_{s^* B}(s^* E, r^* E)$,
+\item[$\bullet$] $\pi : A\rightarrow \mathcal L_B(E)$ is a $G$-equivariant $*$-homomorphism,
+\item[$\bullet$] $T\in \mathcal L_B(E)$ is an adjoinable operator such that the triple satisfies the $K$-cycle conditions : $\pi(a)(T^2-T),\pi(a)(T^*-T),[\pi(a),T]$ are compact operators in $\mathfrak K(E)$, and $\pi(a)(r^*T-V s^*T V^*)$ are compact operators in $\mathfrak K_{r^* B}(r^* E)$ if $E$, for all $a\in A, g\in G$.\\
 \end{itemize}
 
 \begin{definition}
@@ -41,7 +41,8 @@ Let $Y$ be a proper $G$-space and $B$ a $G$-algebra. Then the analytic $K$-homol
 the inductive limit being taken on proper $G$-compact $G$-subspaces $Z$ of $Y$.
 \end{definition}
 
-The previous lemmas assures that this inductive limit can be somehow restricted when it comes to the analytic $>K$-homology of any universal space $\underline E G$ :
+The previous lemmas assures that the analytic $K$-homology can be computed as an inducitve limit of the $K$-homology of the spaces $P_K(G)$ :
+%somehow restricted when it comes to the analytic $K$-homology of any universal space $\underline E G$ :
 \[RK^G(\underline E G,B) = \varinjlim_{K\subset G \text{ compact }} KK^G(C_0(P_K(G)),B).\]
 
 \subsection{Descent functor}
@@ -79,14 +80,14 @@ The Baum-Connes conjecture for $G$ with coefficients in $A$ is the following cla
 The Baum-Connes conjecture with coefficients is : for all $G$-algebras $A$, $\mu_{G,A}$ is an isomorphism of abelian groups.
 \end{conj}
 
-The conjecture was first stated in \cite{BaumConnes} and in \cite{BaumConnesHigson}. The statement is a generalization of the Connes-Kasparov conjecture, which is simply, when one knows the Baum-Connes conjecture, the latter for almost connected groups (i.e. locally compact groups $G$ such that $G/G_0$ is compact, where $G_0$ is the connected component of the identity).\\
+The conjecture was first stated for groups in \cite{BaumConnes} and in \cite{BaumConnesHigson}. The statement is a generalization of the Connes-Kasparov conjecture, which is simply, when one knows the Baum-Connes conjecture, the latter for almost connected groups (i.e. locally compact groups $G$ such that $G/G_0$ is compact, where $G_0$ is the connected component of the identity). J.-L. Tu stated the conjecture for general locally compact, $\sigma$-compact, Hausdorff groupoids with Haar systems.\cite{TuBC} \\
 
 Here is the status of the conjecture :
 \begin{itemize}
-\item[$\bullet$] The Connes-Kasparov conjecture was established by J. Chabert, S. Echterhoff and R. Nest, who proved that $\mu_{G}$ is an isomorphism for every secound countable almost connected group $G$, and every group of $k$-rational points of a linear algebraic group over a local field of characteristic $0$.
 \item[$\bullet$] N. Higson and G. Kasparov proved that the conjecture with coefficients holds for groups having Haagerup property. 
 \item[$\bullet$] V. Lafforgue proved the conjecture with coefficients for hyperbolic groups.
-\item[$\bullet$] V. Lafforgue showed the conjecture for every semi-simple Lie group, real or $p$-adic reductive, and discrete cocompact subgroup of real rank $1$ Lie groups or of $SL(3,k)$ for any local field $k$. \\
+\item[$\bullet$] V. Lafforgue showed the conjecture for every semi-simple Lie group, real or $p$-adic reductive, and discrete cocompact subgroup of real rank $1$ Lie groups or of $SL(3,k)$ for any local field $k$. 
+\item[$\bullet$] The Connes-Kasparov conjecture was established by J. Chabert, S. Echterhoff and R. Nest, who proved that $\mu_{G}$ is an isomorphism for every secound countable almost connected group $G$, and every group of $k$-rational points of a linear algebraic group over a local field of characteristic $0$.\\
 \end{itemize}
 
 Recall that a function $h : G\rightarrow \R$ is said to be of negative type if :
