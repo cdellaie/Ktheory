@@ -1,34 +1,37 @@
-\section{Controlled $K$-theory for étale groupoids}
+\section{$K$-theory controlled by a coarse structure}
 
-Let $G$ be an étale groupoid and let $\mathcal E$ be  subset of the set of its compact subsets such that :
-\begin{itemize}
-\item[$\bullet$] if $E\in \mathcal E$, then $E^{-1}\in\mathcal E$,
-\item[$\bullet$] if $E\in \mathcal E$ and $E'\in \mathcal E$, then $E\circ E'\in\mathcal E$.
-\end{itemize}
-
-For simplicity, we will take $\mathcal E = {E\subset G \text{compact s.t.} E=E^{-1}}$.\\
-
-In this section, we define controlled $K$-theory groups for $G$. By analogy with the terminology used in Coarse Geometry, we will call $E\in \mathcal{E}$ a controlled subset. Notice that if $E,E'\in \mathcal E$, then $E E'\in\mathcal E$, where $EE' := \{ gg' , g\in E,g'\in E'\}$.\\
+In this section, we define controlled $K$-theory in more generality than the functor defined in \cite{OY2} and in the previous section. The goal is to develop controlled $K$-theory to a broader setting that what is used until now. Notably, we give a definition that allows to state that the controlled $K$-theory is a true functor between well chosen categories. The price to pay is a little more generality, and functorial definitions, but the reward is a larger range of applications of the theory. We will show how it is possible to apply controlled-lingo to compact quantum groups in the sense of Woronowicz, foliations groupoids and twisted representations of locally compact groups.\\
 
 \begin{definition}
-A $C^*$-algebra $A$ is said to be filtered if, for every $E\in \mathcal E$, there exists a linear subspace $A_E$ of $A$ such that :\\
+A coarse structure $\mathcal E$ is a lattice which is a semi-group. %such that $\forall E,E'\in \mathcal E$, $E\leq E'E$. 
+Recall that a lattice is a poset for which every pair $(E,E')$ admits a supremum $E\vee E'$ and an infimum $E\wedge E'$.
+\end{definition}
+
+\begin{definition}
+A $C^*$-algebra $A$ is said to be $\mathcal E$-filtered if there exists a coarse structure $\mathcal E$ and, for every $E\in \mathcal E$, linear subspaces $A_E$ of $A$ such that :\\
 \begin{itemize}
-\item[$\bullet$] if $E \subset E'$, then $A_E\subset A_{E'}$, and the family of inclusions $\phi_E^{E'}: A_E\hookrightarrow A_{E'}$ induces an inductive system of linear spaces,
+\item[$\bullet$] if $E \leq E'$, then $A_E\subset A_{E'}$, and the inclusion $\phi_E^{E'}: A_E\hookrightarrow A_{E'}$ induces an inductive system of linear spaces,
 \item[$\bullet$] $A_E$ is stable by involution,
 \item[$\bullet$] for all $E,E'\in\mathcal E$, $A_E.A_{E'}\subset A_{EE'}$,
 \item[$\bullet$] the union of subspaces is dense in $A$, i.e. $\overline{\cup_{E\in\mathcal E}A_E} = \varinjlim A_E = A$.
-\item[$\bullet$] if $A$ is unital, we impose that $1\in A_E,\forall E\in\mathcal E$.\\
+\item[$\bullet$] if $A$ is unital, we impose that $1\in A_E,\forall E\in\mathcal E$.
 \end{itemize}
 \end{definition}
 
 If $A$ is a non-unital filtered $C^*$-algebra, we will by default endowed its unitalization $\tilde A$ with the filtration $\tilde A_E = A_E + \C$. A $*$-homomorphism $\phi : A \rightarrow B$ is said to be filtered if $\phi(A_E)\subset B_E$ for all $E\in\mathcal E$.\\
 
-The crucial example for us will be crossed products of $G$-algebras by $G$, but this definition generalizes that of \cite{OY2}. Indeed, as will be recalled later, the Roe algebras can be expressed as a crossed product by a so-called coarse groupoid, which is étale \cite{SkTuYu}, and the definition given here, applied to this groupoid, gives back the filtration in the sense of \cite{OY2}.
+If $(A,\mathcal E)$ and $(B,\mathcal E')$ are two filtered $C^*$-algebras, a filtered morphism $(\phi,\rho): (A,\mathcal E)\rightarrow (B,\mathcal E')$ is :
+\begin{itemize}
+\item[$\bullet$] a non-decreasing map $\rho : \mathcal E\rightarrow \mathcal E'$,
+\item[$\bullet$] a $*$-homomorphism $\phi: A\rightarrow B$ such that $\phi (A_E)\subset B_{\rho(E)}$ for all $E\in\mathcal E$.
+\end{itemize}
+
+The crucial example for us will be crossed products of $G$-algebras by an étale groupoid $G$. Note that this definition generalizes that of \cite{OY2}. Indeed, as will be recalled later, the Roe algebras can be expressed as a crossed product by a so-called coarse groupoid, which is étale \cite{SkTuYu}, and the definition given here, applied to this groupoid, gives back the filtration in the sense of \cite{OY2}. The second example will be that of crossed products by compact quantum groups of Woronowicz.\cite{Wo}
 
 \subsection{Almost unitaries and almost projections}
 
 \begin{definition}
-Let $A$ be a unital filtered $C^*$-algebra. Let $\varepsilon\in(0,\frac{1}{4})$ and $E\in \mathcal E$ a controlled subset. The set of $\varepsilon$-$E$-unitaries is the set 
+Let $(A,\mathcal E)$ be a unital filtered $C^*$-algebra. Let $\varepsilon\in(0,\frac{1}{4})$ and $E\in \mathcal E$ a controlled subset. The set of $\varepsilon$-$E$-unitaries is the set 
 \[U^{\varepsilon, E}(A)= \{u\in A_E \text{ s.t. } ||u^*u-1||<\varepsilon\text{ and }||uu^*-1||<\varepsilon \}\]
 and the set $\varepsilon$-$E$-projections is the set 
 \[P^{\varepsilon, E}(A)= \{p\in A_E \text{ s.t. } p=p^*\text{ and }||p^2-p||<\varepsilon \}.\]
@@ -58,17 +61,17 @@ In order to define controlled $K$-groups, define the following equivalence relat
 \item[$\bullet$] $(p,l) \sim (q,l')$ if there exists a homotopy of almost projections $h\in P^{\varepsilon, E}_\infty(A[0,1])$ and an integer $k$ such that 
 \[h(0)=\begin{pmatrix} p & 0 \\ 0 & 1_{k+l'} \end{pmatrix} \text{ and }
 h(1)=\begin{pmatrix} q & 0 \\ 0 & 1_{k+l} \end{pmatrix}\]
-\item[$\bullet$] $u \sim v$ if there exists a homotopy of almost unitaries $h\in U^{3\varepsilon, E\circ E}_\infty(A[0,1])$ such that $h(0)= u \text{ and }h(1)=v$.\\
+\item[$\bullet$] $u \sim v$ if there exists a homotopy of almost unitaries $h\in U^{3\varepsilon, E\circ E}_\infty(A[0,1])$ and an integer $k$ such that $h(0)= u \text{ and }h(1)=v$.\\
 \end{itemize}
 
-Denote $[(p,l)]_{\varepsilon,E}$ and $[u]_{\varepsilon,E}$ for the equivalence classes of almost-projections and almost-unitaries. Then, the same proof as \cite{OY2} shows that $[p,l]_{\varepsilon,E}+[q,l']_{\varepsilon,E}=[diag(p,q),l+l']_{\varepsilon,E}$ and $[u]_{\varepsilon,E}+[v]_{\varepsilon,E}=[diag(u,v)]_{\varepsilon,E}$ induces a group structure on the equivalence classes, that we denote $K_0^{\varepsilon,E}(A) = P^{\varepsilon, E}_\infty(A)\times \N / \sim$ and $K_1^{\varepsilon,E}(A) = U^{\varepsilon, E}_\infty(A) / \sim$.\\
+Denote $[(p,l)]_{\varepsilon,E}$ and $[u]_{\varepsilon,E}$ for the equivalence classes of almost-projections and almost-unitaries. Then, the same proof as \cite{OY2} shows that $[p,l]_{\varepsilon,E}+[q,l']_{\varepsilon,E}=[diag(p,q),l+l']_{\varepsilon,E}$ and $[u]_{\varepsilon,E}+[v]_{\varepsilon,E}=[diag(u,v)]_{\varepsilon,E}$ induces a group law on the equivalence classes, that we denote $K_0^{\varepsilon,E}(A) = P^{\varepsilon, E}_\infty(A)\times \N / \sim$ and $K_1^{\varepsilon,E}(A) = U^{\varepsilon, E}_\infty(A) / \sim$.\\
 
 If $A$ is not unital, $K_0^{\varepsilon,E}(A)$ is defined as
 \[\{[p,l]_{\varepsilon,E} : p\in P^{\varepsilon,E}_\infty (\tilde A), l\in \N \text{ s.t. rank}(\kappa_0(\rho_A(p)))=l \}\]
 and $K_1^{\varepsilon,E}(A)$ is defined as $U_\infty^{\varepsilon,E}(\tilde A)/ \sim_{\varepsilon,E}$.\\
 
 \begin{definition}
-The controlled $K$-theory of a filtered $C^*$-algebra $A$ is the family of abelian groups $\hat K_0(A) = (K_0^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ and $\hat K_1(A) = (K_1^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ defined above.\\
+The controlled $K$-theory of a filtered $C^*$-algebra $(A,\mathcal E)$ is the family of abelian groups $\hat K_0(A) = (K_0^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ and $\hat K_1(A) = (K_1^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ defined above.\\
 \end{definition}
 
 We define canonical morphisms : if $\varepsilon, \varepsilon'\in (0,\frac{1}{4})$ and $E,E'\in\mathcal E$ such that $\varepsilon \leq \varepsilon'$ and $E \subset E'$, the natural homomorphism $K_*^{\varepsilon,E}(A)\hookrightarrow K_*^{\varepsilon',E'}(A)$ is denoted by $\iota_{\varepsilon,E}^{\varepsilon',E'}$. Notice that $\iota_{\varepsilon',E'}^{\varepsilon'',E''}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon,E}^{\varepsilon'',E''}$ when this expression makes sense.\\
@@ -76,9 +79,13 @@ We define canonical morphisms : if $\varepsilon, \varepsilon'\in (0,\frac{1}{4})
 One has also forgetful morphisms $\iota_{\varepsilon,E} : K_*^{\varepsilon,E}\rightarrow K_*(A)$ given by $[p,l]_{\varepsilon,E} \mapsto [\kappa_0(p)]-[1_l]$ and $[u]_{\varepsilon,E} \mapsto [\kappa_0(u)] $, and 
 $\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon, E}$ holds. The controlled $K$-theory groups approximate the usual $K$-groups in the sense that $\varinjlim_{E} K_*^{\varepsilon,E}(A) = K_*(A)$ for any $\varepsilon\in (0,\frac{1}{4})$.\\
 
-If $\phi : A\rightarrow B$ is a filtered morphism, then it preserves almost-projections and almost unitaries, and it induces a morphism of abelian groups $\phi_*^{\varepsilon,E} : K_*^{\varepsilon,E}(A) \rightarrow K_*^{\varepsilon,E}(B)$, such that $\phi_*^{\varepsilon,E} \circ \psi_*^{\varepsilon,E} = (\phi\circ\psi)_*^{\varepsilon,E}$.\\
-
-Here is the main example under study : if $A$ is a $G$-algebra, then $A \rtimes_r G$ is naturally filtered. Indeed, for $E\in \mathcal{E}$, denote by $C_E(A,G)$ the linear subspace $\{ f \in C_c(G,A) \text{ s.t. supp }f\subset E\cup E^{-1} \}$. Then $C_E(G,A)$ obviously defines a filtration on $A\rtimes_r G$. A last remark is in order : this remains true for any $C^*$-algebraic completion of $\cup_{E\in\mathcal{E}} C_E(G,A) = C_c(G,A)$, so for maximal or exotic crossed products also. If one allows himself to use controlled $K$-theory for filtered Banach algebras, one can also adapt this definition for Banach completion of $C_c(G,A)$.
+\begin{Expl} Some examples that we will use :\\
+\begin{itemize}
+\item[$\bullet$] Let $(X,\mathcal E)$ be a coarse space. The set of controlled subsets $\mathcal E$ is our proeminent example.
+\item[$\bullet$] Let $G$ be an étale groupoid. Then the set of open relatively compact subsets $\mathcal E$ of $G$ is a coarse structure. If $G$ is $\sigma$-compact, and $A$ is a $G$-algebra, $A\rtimes_r G$ is naturally filtered by $\mathcal E$ : if $E\subset G$ is open relatively compact, define $(A\rtimes_r G)_E = \{f\in C_c(G,A) : \text{ supp}(f)\subset E\cup E^{-1}\}$.
+\item[$\bullet$] Let $\mathbb G$ be a compact quantum group in the sense of Woronowicz. Then the set of finite dimensional representations of $\mathbb G$ is a coarse structure w.r.t. $\pi\circ \pi'=\pi\otimes \pi'$ as composition, and $\pi\leq\pi'$ if $\pi$ is equivalent to a subrepresentation of $\mathbb G$.
+\item[$\bullet$] Gomez-Aparicio : Let $G$ be a locally compact group, and $S$ be the set of representations of $G$ of the form $\lambda\otimes\pi$ for $\pi$ a finite dimensional representation of $G$.\end{itemize}   
+\end{Expl}
 
 \subsection{Quantitative objects}
 In order to study functorial properties of controlled $K$-theory, we will adapt and study the notion of quantitative object defined in \cite{OY2}.\\
@@ -246,4 +253,3 @@ Let $B_1$ and $B_2$ be filtered $C^*$-algebras and $(\phi,\rho) :B_1\rightarrow 
 
 
 
- 
