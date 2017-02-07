@@ -9,7 +9,7 @@ Let $A$ be a $C^*$-algebra. A pre-Hilbert $A$-module is a right $A$-module $E$ e
 \item[$\bullet$] $\langle x,y\rangle^* = \langle y,x\rangle$ for all $x,y\in E$,
 \item[$\bullet$] $\langle x ,x\rangle \geq 0 $ and if $\langle x,x\rangle = 0$, then $x=0$, for all $x\in E$.
 \end{itemize}
-For $x\in E$, we define $||x|| = ||\langle x,x\rangle ||^{\frac{1}{2}}$. It is a norm on $E$.\\
+For $x\in E$, we define $||x|| = ||\langle x,x\rangle ||^{\frac{1}{2}}$. It is a norm on $E$.\cite{Lance}\\
 
 A $A$-Hilbert module $(E,\langle \cdot,\cdot \rangle)$ is a pre-Hilbert module which is complete for the norm $||\cdot ||$ defined above. $E$ is called a full Hilbert module if the linear span of $\{ <x,y> : x,y\in E\}$ is dense in $A$.
 \end{definition}
@@ -21,17 +21,29 @@ The same definition exists for left-Hilbert modules. Usually, we will omit to pr
 
 \begin{Expl}
 If $\{E_j\}_{j\in J}$ is a finite of countable family of $A$-Hilbert module, define the direct sum as
-\[\bigoplus_{j\in J} E_j = \{(x_j) : x_j\in E_j \text{ s.t. } \sum_j ||x_j||_{E_j} \text{ converges in } A\}\]
+\[\bigoplus_{j\in J} E_j = \{(x_j) : x_j\in E_j \text{ s.t. } \sum_j \langle x_j,x_j\rangle_{E_j} \text{ converges in } A\}\]
 with the inner product $\langle x,y \rangle = \sum_{j\in J} \langle x_j, y_j\rangle_{E_j} $. It is a $A$-Hilbert module. As a particular case, we get a central example $H_A$ called the \textbf{standard $A$-Hilbert module}. It is obtained as the direct sum of the family $\{A\}_{j\in \N}$ where each $A$ is seen as a $A$-Hilbert module.
 \end{Expl}
 
+Let $E$ be a pre-Hilbert $A$-module. If the sesquilinear function $\langle \cdot ,\cdot \rangle$ has isotropy, i.e. there exists a non-zero $x\in E$ such that $\langle x,y\rangle =0$, we can divide out the null vector. Indeed, $N= \{x\in E : \langle x,x\rangle = 0\}$ is a sub-$A$-module of $A$, and $\langle x+ N,y+N\rangle := \langle x,y\rangle $ defines an inner product on $E/N$. The separation-completion of $E$ will refer to the Hilbert $A$-module obtained as the closure of $E/N$ with respect to this inner product. 
+
 \begin{definition}
 Let $E$ and $F$ be two $A$-Hilbert modules. The set of adjoinable operators $\mathcal L_A(E,F)$ is defined as the set of maps $T : E\rightarrow F $ such that there exists a map $T^* : F\rightarrow E$ satisfying 
-\[\langle Tx, y \rangle = \langle x ,T^* y\rangle\quad \forall x\in E,y\in F.\]
+\[\langle Tx, y \rangle = \langle x ,T^* y\rangle\quad \forall x\in E,\forall y\in F.\]
 The operator $T^*$ is called the adjoint of $T$.
 \end{definition}
 
 \begin{rk}
-Notice that any adjoinable operator is automatically a module map, and a linear map. Indeed, $\langle T(xa),y\rangle = \langle xa,T^* y \rangle = a^* \langle x, T^* y\rangle =a^*\langle Tx,  y\rangle =  \langle a(Tx),y \rangle$.
+Notice that any adjoinable operator is automatically a module map, and a linear map. Indeed, $\langle T(xa),y\rangle = \langle xa,T^* y \rangle = a^* \langle x, T^* y\rangle =a^*\langle Tx,  y\rangle =  \langle a(Tx),y \rangle$. It is also automatically bounded
 \end{rk}
 
+It turns out that $\mathcal L_A(E,F)$ with the operator norm is a $C^*$-algebra.\cite{Lance} For $x\in E,y\in F$, define $\theta{x,y}\in\mathcal L_A,(F,E)$ as $\theta_{x,y}(z) = x\langle y,z\rangle$. It is indeed adjoinable as $\theta_{x,y}^*=\theta_{y,x}$.
+
+\begin{definition}
+Let $E$ and $F$ be two $A$-Hilbert modules. The set of compact operators $\mathfrak K_A(F,E)$ is defined as the closure for the operator norm of the linear span of $\{\theta_{x,y} : x\in E,y\in F\}$. It is a closed ideal in $\mathcal L_A(F,E)$.\cite{Lance}
+\end{definition}
+
+\begin{Expl}
+(a) If $E=A$, $\mathcal L_A(A) \simeq \mathcal M (A)$ and $\mathfrak K_A(A) \simeq A$.\\
+(b) If $E=H_A$, $\mathfrak K_A(H_A) \simeq A\otimes \mathfrak K$.\\
+\end{Expl}
