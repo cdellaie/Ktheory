@@ -1,5 +1,7 @@
 \section{Hilbert modules}
 
+\subsection{Definitions}
+
 The $KK$-theory of Kasparov can be defined using the theory of Hilbert module. We present in this section the basic facts about Hilbert modules that we will need.
 
 \begin{definition}
@@ -37,13 +39,42 @@ The operator $T^*$ is called the adjoint of $T$.
 Notice that any adjoinable operator is automatically a module map, and a linear map. Indeed, $\langle T(xa),y\rangle = \langle xa,T^* y \rangle = a^* \langle x, T^* y\rangle =a^*\langle Tx,  y\rangle =  \langle a(Tx),y \rangle$. It is also automatically bounded
 \end{rk}
 
-It turns out that $\mathcal L_A(E,F)$ with the operator norm is a $C^*$-algebra.\cite{Lance} For $x\in E,y\in F$, define $\theta{x,y}\in\mathcal L_A,(F,E)$ as $\theta_{x,y}(z) = x\langle y,z\rangle$. It is indeed adjoinable as $\theta_{x,y}^*=\theta_{y,x}$.
+It turns out that $\mathcal L_A(E,F)$ with the operator norm is a $C^*$-algebra.\cite{Lance} For $x\in E,y\in F$, define $\theta_{x,y}\in\mathcal L_A,(F,E)$ as $\theta_{x,y}(z) = x\langle y,z\rangle$. It is indeed adjoinable as $\theta_{x,y}^*=\theta_{y,x}$.
 
 \begin{definition}
 Let $E$ and $F$ be two $A$-Hilbert modules. The set of compact operators $\mathfrak K_A(F,E)$ is defined as the closure for the operator norm of the linear span of $\{\theta_{x,y} : x\in E,y\in F\}$. It is a closed ideal in $\mathcal L_A(F,E)$.\cite{Lance}
 \end{definition}
 
 \begin{Expl}
-(a) If $E=A$, $\mathcal L_A(A) \simeq \mathcal M (A)$ and $\mathfrak K_A(A) \simeq A$.\\
-(b) If $E=H_A$, $\mathfrak K_A(H_A) \simeq A\otimes \mathfrak K$.\\
+(a) If $E=A$, $\mathcal L_A(A) \cong \mathcal M (A)$ and $\mathfrak K_A(A) \cong A$.\\
+(b) If $E=H_A$, $\mathfrak K_A(H_A) \cong A\otimes \mathfrak K$.\\
+(c) For any Hilbert $A$-module, $\mathcal L_A(E) \cong \mathcal M(\mathfrak K_A(E))$.
 \end{Expl}
+
+% Stabilization lemma !
+
+\subsection{Tensor product of Hilbert modules}
+
+Let $E$ a Hilbert $A$-module, $F$ a Hilbert $B$-module and $\phi : A \rightarrow \mathcal L_B(F)$ a $*$-homomorphism. The following section recalls the construction of the tensor product of $E$ and $F$ over $\phi$, denoted $E\otimes_\phi F$.\\
+
+We can give $F$ the structure of a left $A$-module via $\phi$ : $a\cdot \eta := \phi(a)\eta$ for $a\in A,\eta\in F$. Consider the algebraic tensor product of $A$-module $E\odot F$, with the structure of right $B$ module given by $x\otimes y \cdot b = x\otimes (yb)$. Define on $E\odot F$ the following sesquilinear function : $\langle x \otimes y , x'\otimes y'\rangle := \langle y, \phi(x^* x')y'\rangle_F $. It satisfies the condition for $(E\odot F,\langle \cdot , \cdot \rangle )$ to be a pre-Hilbert $B$-module.
+
+\begin{definition}
+The Hilbert $B$-module $E\otimes_\phi F$ is defined as the competion-separation of the pre-Hilbert $B$-module $E\odot F$ with respect to $\langle \cdot , \cdot \rangle$. It is called the interior tensor product of $E$ and $F$. When $F=B$, it can be called the push forward of $E$ along $\phi$.
+\end{definition} 
+
+\begin{Expl}
+The standard Hilbert $A$-module satisfies $H_A \cong H\otimes A$, which can be used to prove that $\mathfrak K_A(H_A) \cong A\otimes \mathfrak K$.
+\end{Expl}
+
+This tensor product operation enjoys functorial properties that will be useful for us. 
+
+\begin{prop}\cite{Lance}
+Let $T\in\mathcal L_A(E)$. The map $x\otimes y \mapsto (Tx)\otimes y$ extends to a adjoinable operator $\phi_*(T)\in\mathcal L_B(E\otimes_\phi F)$, and this defines a unital $*$-homomorphism 
+\[\phi_*\left\{\begin{array}{rcl} \mathcal L_A(E) & \rightarrow & \mathcal L_B(E\otimes_\phi F) \\ T & \mapsto & \phi_*(T)\end{array}\right.\]
+which is injective is $\phi$ is.
+\end{prop} 
+
+\begin{rk}
+The condition $\phi_*(\mathfrak K_A(E))\subset \mathfrak K_B(E\otimes_\phi F)$ holds when $\phi(A)\subset \mathfrak K_B(F)$ \cite{Lance}, and this condition will be satisfied when we will consider push-forward with respect to $\phi : A\rightarrow B$ as $\mathfrak K_B(B) \cong B$. 
+\end{rk}
