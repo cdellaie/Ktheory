@@ -128,12 +128,12 @@ Two $K$-cycles $(E,\pi,T)$ and $ (E',\pi',T')$ in $\mathbb E^G(A,B)$ are homotop
 
 We will use the following result.\cite{blackadar}\cite{CuSk}
 
-\begin{prop}
-Let $z\in KK^G_1(A,B)$. The induced homomorphism $-\otimes_A z : K_*(A)\rightarrow K_*(B)$ can be realized, up to Morita equivalence, as the boundary of the following semi-split $G$-equivariant extension of $G$-algebras
-\[\begin{tikzcd}[column sep = small] 
-0 \arrow{r}& \mathfrak K \otimes B \arrow{r} & E^{\pi,T} \arrow{r} & A \arrow{r} & 0\end{tikzcd}\]
-where $E^{\pi,T}=\{(a,P\pi(a)P +y) : a\in A , y\in \mathfrak K \otimes B\}$, the arrows are the obvious inclusion and projection, and the completely positive section is $a\mapsto (a, P \pi(a) P)$. Here, we implicitely choose a $K$-cycle $(H_B,\pi,T)$ representing $z$, and $P=\frac{1+T}{2}$. The fact that this choice does not affect the boundary will be proven in the upcoming sections. 
-\end{prop}
+%\begin{prop}
+%Let $z\in KK^G_1(A,B)$. The induced homomorphism $-\otimes_A z : K_*(A)\rightarrow K_*(B)$ can be realized, up to Morita equivalence, as the boundary of the following semi-split $G$-equivariant extension of $G$-algebras
+%\[\begin{tikzcd}[column sep = small] 
+%0 \arrow{r}& \mathfrak K \otimes B \arrow{r} & E^{\pi,T} \arrow{r} & A \arrow{r} & 0\end{tikzcd}\]
+%where $E^{\pi,T}=\{(a,P\pi(a)P +y) : a\in A , y\in \mathfrak K \otimes B\}$, the arrows are the obvious inclusion and projection, and the completely positive section is $a\mapsto (a, P \pi(a) P)$. Here, we implicitely choose a $K$-cycle $(H_B,\pi,T)$ representing $z$, and $P=\frac{1+T}{2}$. The fact that this choice does not affect the boundary will be proven in the upcoming sections. 
+%\end{prop}
 
 \begin{prop}
 Let $z\in KK^G_1(A,B)$ and choose any $K$-cycle $(H_B,\pi,T)$ representing $z$. Let $P=\frac{1+T}{2}$. The induced homomorphism 
@@ -157,7 +157,27 @@ The boundary map $\partial_{J,A} : K_*(A/J)\rightarrow K_{*+1}(J)$ is given by t
 \[[\partial_{J,A}] = [\partial_{A/J}]\otimes_{} \beta^*([\alpha]^{-1}).\]
 \end{prop}
 
+The next lemma will be used during the proof of the functorial properties of the controlled Roe and Kasparov tranformations that will be defined later. These transformations are defined on $K$-cycle which are put in standard form, i.e. $[H_B,\pi,T]$, but changing the coefficients leads to $K$-cycles which are not of this form, hence the lemma. It states that we can always describe explicitely the standard form of a $K$-cycle pushed forward.
 
+\begin{lem}
+Let $\phi : B\rightarrow B'$ be a $G$-equivariant homomorphism, and $z=[H_B,\pi, T]\in KK^G(A,B)$. Let $V\in\mathcal L_{B'}(H_B\otimes B', H_B')$ be the isometry of the remark \ref{isometry} and $p = VV^*\in\mathcal L_{B'}(H_{B'})$. Define $\pi' : A\rightarrow \mathcal L_{B'}(H_{B'})$ as $\pi'(a) = V\pi(a)V^*$ and $T'= V(T\otimes_\phi 1)V^* + 1-p \in \mathcal L_{B'}(H_B')$. Then $(H_{B'},\pi',T')$ is a $K$-cycle and 
+\[g^*(z) = [H_B\otimes B',\pi\otimes_\phi 1,\phi_*(T)]=[H_B', \pi', T']\text{ in } KK^G(A,B').\]
+\end{lem} 
+
+\begin{dem}
+As a simple computation shows : 
+\[\begin{array}{ll} [\pi'(a),T'] = V[\pi(a),T]V^*, &  T'^*-T' = V(T^*\otimes_\phi 1-T\otimes_\phi 1)V^* \\
+ T'^2-T' = V(T^2\otimes_\phi 1-T\otimes_\phi 1)V^* & \text{and } r^* T' - U s^*T' U^* = V((r^*(T) - U s^*(T) U^*)\otimes_\phi 1 ) V^*
+\end{array} \]
+(where $U$ is the action of $G$ on $E$). Hence $[H_{B'},\pi',T']$ satisfies the relations of $K$-cycle.\\
+
+Remark \ref{isometry} shows that $ (H_B\otimes_\phi B' )\oplus (1-p) H_{B'} \cong H_{B'}$ and under this identification, the maps 
+\[\begin{array}{c} 
+T_t =t\begin{pmatrix} T\otimes_\phi 1 & 0 \\ 0 & 0 \end{pmatrix} + (1-t)T' \in \mathcal L_{B'}(H_{B'}) \\
+\pi_t(a) = t\begin{pmatrix} \pi(a)\otimes_\phi 1 & 0 \\ 0 & 0 \end{pmatrix}+(1-t)\pi'(a) \in \mathcal L_{B'}(H_{B'}), t\in [0,1],
+\end{array}\] 
+give a homotopy between $[H_B\otimes B',\pi\otimes_\phi 1,\phi_*(T)]$ and $[H_{B'},\pi',T']$.\\
+\qed\end{dem}
 
 
 

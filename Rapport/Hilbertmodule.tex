@@ -53,6 +53,14 @@ Let $E$ and $F$ be two $A$-Hilbert modules. The set of compact operators $\mathf
 
 % Stabilization lemma !
 
+The following result states that any countably generated Hilbert module can be embedded into the standard Hilbert module.
+
+\begin{thm}[Stabilization]
+Let $E$ be a countably generated Hilbert $A$-module, then there is an isomorphism of Hilbert $A$-module $E\oplus H_A \cong H_A$.
+\end{thm}
+
+As a corollary, we get that for any countably generated Hilbert $A$ module, there exists a projection $p\in \mathcal L_A(H_A)$ such that $E\cong p H_A$.
+
 \subsection{Tensor product of Hilbert modules}
 
 Let $E$ a Hilbert $A$-module, $F$ a Hilbert $B$-module and $\phi : A \rightarrow \mathcal L_B(F)$ a $*$-homomorphism. The following section recalls the construction of the tensor product of $E$ and $F$ over $\phi$, denoted $E\otimes_\phi F$.\\
@@ -64,7 +72,7 @@ The Hilbert $B$-module $E\otimes_\phi F$ is defined as the competion-separation 
 \end{definition} 
 
 \begin{Expl}
-The standard Hilbert $A$-module satisfies $H_A \cong H\otimes A$, which can be used to prove that $\mathfrak K_A(H_A) \cong A\otimes \mathfrak K$.
+The standard Hilbert $A$-module satisfies $H_A \cong H\otimes_\phi A$, which can be used to prove that $\mathfrak K_A(H_A) \cong A\otimes \mathfrak K$. Here $\phi : \C\rightarrow \mathcal M(A)$ maps $z\in \C$ to $z1_{\mathcal M(A)}$.
 \end{Expl}
 
 This tensor product operation enjoys functorial properties that will be useful for us. 
@@ -72,9 +80,42 @@ This tensor product operation enjoys functorial properties that will be useful f
 \begin{prop}\cite{Lance}
 Let $T\in\mathcal L_A(E)$. The map $x\otimes y \mapsto (Tx)\otimes y$ extends to a adjoinable operator $\phi_*(T)\in\mathcal L_B(E\otimes_\phi F)$, and this defines a unital $*$-homomorphism 
 \[\phi_*\left\{\begin{array}{rcl} \mathcal L_A(E) & \rightarrow & \mathcal L_B(E\otimes_\phi F) \\ T & \mapsto & \phi_*(T)\end{array}\right.\]
-which is injective is $\phi$ is.
+which is injective is $\phi$ is. We will write $\phi_*(T) := T\otimes_\phi 1$ or even $T\otimes 1$. 
 \end{prop} 
 
 \begin{rk}
 The condition $\phi_*(\mathfrak K_A(E))\subset \mathfrak K_B(E\otimes_\phi F)$ holds when $\phi(A)\subset \mathfrak K_B(F)$ \cite{Lance}, and this condition will be satisfied when we will consider push-forward with respect to $\phi : A\rightarrow B$ as $\mathfrak K_B(B) \cong B$. 
 \end{rk}
+
+\begin{rk}\label{isometry}
+When we look at a $*$-homomorphism $\phi : A\rightarrow B$, we always have an isometry $V\in \mathcal L_B ( H_A\otimes_\phi B , H_B)$ defined on simple tensors as $(x_j)_j\otimes b \mapsto (\phi(x_j)b)_j$. Indeed, this map extends linearly to $H_A \odot B$, and if $x = (x_j)$ and $x'=(x'_j)$ are in $H_A$ : 
+\[\langle V (x\otimes b) , V(x'\otimes b')\rangle = b^* \sum_j \phi(x_j)^* \phi(x'_j) \  b' = b^*\phi(\langle x, x' \rangle)b' = \langle x\otimes b , x'\otimes b' \rangle . \] % Determiner V^* 
+This isometry can be used to explicitely describe the projection and the isomorphism appearing in the stabilization theorem in this particular example. Indeed $p = VV^*\in\mathcal L_B(H_A\otimes_\phi B)$ is a projection such that $p H_A \cong H_A\otimes_\phi B $.  
+\end{rk}
+
+%\section{KK-theory}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
