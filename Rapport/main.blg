@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 A level-1 auxiliary file: QKtheory2.aux
 A level-1 auxiliary file: QKtheorySemigroup.aux
 A level-1 auxiliary file: FDC.aux
@@ -16,45 +14,4 @@ Warning--empty year in OY3
 Warning--empty school in LeGall
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 24 entries,
-            2118 wiz_defined-function locations,
-            672 strings with 7192 characters,
-and the built_in function-call counts, 6906 in all, are:
-= -- 694
-> -- 230
-< -- 8
-+ -- 99
-- -- 70
-* -- 441
-:= -- 1156
-add.period$ -- 71
-call.type$ -- 24
-change.case$ -- 100
-chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 291
-empty$ -- 589
-format.name$ -- 70
-if$ -- 1433
-int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 29
-newline$ -- 122
-num.names$ -- 48
-pop$ -- 114
-preamble$ -- 1
-purify$ -- 83
-quote$ -- 0
-skip$ -- 198
-stack$ -- 0
-substring$ -- 471
-swap$ -- 51
-text.length$ -- 8
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 84
-warning$ -- 6
-while$ -- 79
-width$ -- 26
-write$ -- 256
 (There were 7 warnings)

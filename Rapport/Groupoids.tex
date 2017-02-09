@@ -160,7 +160,7 @@ The boundary map $\partial_{J,A} : K_*(A/J)\rightarrow K_{*+1}(J)$ is given by t
 The next lemma will be used during the proof of the functorial properties of the controlled Roe and Kasparov tranformations that will be defined later. These transformations are defined on $K$-cycle which are put in standard form, i.e. $[H_B,\pi,T]$, but changing the coefficients leads to $K$-cycles which are not of this form, hence the lemma. It states that we can always describe explicitely the standard form of a $K$-cycle pushed forward.
 
 \begin{lem}
-Let $\phi : B\rightarrow B'$ be a $G$-equivariant homomorphism, and $z=[H_B,\pi, T]\in KK^G(A,B)$. Let $V\in\mathcal L_{B'}(H_B\otimes B', H_B')$ be the isometry of the remark \ref{isometry} and $p = VV^*\in\mathcal L_{B'}(H_{B'})$. Define $\pi' : A\rightarrow \mathcal L_{B'}(H_{B'})$ as $\pi'(a) = V\pi(a)V^*$ and $T'= V(T\otimes_\phi 1)V^* + 1-p \in \mathcal L_{B'}(H_B')$. Then $(H_{B'},\pi',T')$ is a $K$-cycle and 
+Let $\phi : B\rightarrow B'$ be a $G$-equivariant homomorphism, and $z=[H_B,\pi, T]\in KK^G(A,B)$. Let $V\in\mathcal L_{B'}(H_B\otimes B', H_{B'})$ be the isometry of the remark \ref{isometry} and $p = VV^*\in\mathcal L_{B'}(H_{B'})$. Define $\pi' : A\rightarrow \mathcal L_{B'}(H_{B'})$ as $\pi'(a) = V\pi(a)V^*$ and $T'= V(T\otimes_\phi 1)V^* + 1-p \in \mathcal L_{B'}(H_B')$. Then $(H_{B'},\pi',T')$ is a $K$-cycle and 
 \[g^*(z) = [H_B\otimes B',\pi\otimes_\phi 1,\phi_*(T)]=[H_B', \pi', T']\text{ in } KK^G(A,B').\]
 \end{lem} 
 
@@ -171,12 +171,16 @@ As a simple computation shows :
 \end{array} \]
 (where $U$ is the action of $G$ on $E$). Hence $[H_{B'},\pi',T']$ satisfies the relations of $K$-cycle.\\
 
-Remark \ref{isometry} shows that $ (H_B\otimes_\phi B' )\oplus (1-p) H_{B'} \cong H_{B'}$ and under this identification, the maps 
+Remark \ref{isometry} shows that $ (H_B\otimes_\phi B' )\oplus (1-p) H_{B'} \cong H_{B'}$.\\
+
+Put $E= H_{B'} \oplus (H_B\otimes_\phi B')$ and $R_s =\begin{pmatrix} \cos (s) id_{H_{B'}} & -\sin (s) V \\  \sin (s)V^* & \cos (s) V^*V \end{pmatrix}$ , and define
 \[\begin{array}{c} 
-T_t =t\begin{pmatrix} T\otimes_\phi 1 & 0 \\ 0 & 0 \end{pmatrix} + (1-t)T' \in \mathcal L_{B'}(H_{B'}) \\
-\pi_t(a) = t\begin{pmatrix} \pi(a)\otimes_\phi 1 & 0 \\ 0 & 0 \end{pmatrix}+(1-t)\pi'(a) \in \mathcal L_{B'}(H_{B'}), t\in [0,1],
-\end{array}\] 
-give a homotopy between $[H_B\otimes B',\pi\otimes_\phi 1,\phi_*(T)]$ and $[H_{B'},\pi',T']$.\\
+T_s = R_s\begin{pmatrix} V(T\otimes_\phi 1)V^* +1-VV^* & 0 \\ 0 & -T\otimes_\phi 1 \end{pmatrix}R_s^*,\\
+\pi_s(a)= \begin{pmatrix} V(\pi(a)\otimes_\phi 1) V^* & 0 \\ 0 & \pi(a)\otimes_\phi 1\end{pmatrix}
+\end{array}.\]
+Then $ s\mapsto [E, \pi_s,T_s ] $ is an homotopy from $[H_{B'}, \pi', T']-[H_B\otimes B',\pi\otimes_\phi 1,\phi_*(T)]$ to the cycle given by 
+\[\begin{pmatrix} V(T\otimes_\phi 1)V^*  & 0 \\ 0 & -T\otimes_\phi 1 \end{pmatrix}\]
+which is $0\in KK^G(A,B)$. \\
 \qed\end{dem}
 
 
