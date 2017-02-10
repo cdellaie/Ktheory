@@ -2,7 +2,7 @@
 
 \subsection{Definitions}
 
-The $KK$-theory of Kasparov can be defined using the theory of Hilbert module. We present in this section the basic facts about Hilbert modules that we will need.
+The $KK$-theory of Kasparov can be defined using the theory of Hilbert modules. We present in this section the basic facts about Hilbert modules that we will need.
 
 \begin{definition}
 Let $A$ be a $C^*$-algebra. A pre-Hilbert $A$-module is a right $A$-module $E$ endowed with a sesquilinear function $\langle\cdot, \cdot \rangle : E\times E \rightarrow A$ satisfying :
@@ -22,12 +22,12 @@ The same definition exists for left-Hilbert modules. Usually, we will omit to pr
 \end{Expl}
 
 \begin{Expl}
-If $\{E_j\}_{j\in J}$ is a finite of countable family of $A$-Hilbert module, define the direct sum as
+If $\{E_j\}_{j\in J}$ is a finite of countable family of $A$-Hilbert modules, define the direct sum as
 \[\bigoplus_{j\in J} E_j = \{(x_j) : x_j\in E_j \text{ s.t. } \sum_j \langle x_j,x_j\rangle_{E_j} \text{ converges in } A\}\]
 with the inner product $\langle x,y \rangle = \sum_{j\in J} \langle x_j, y_j\rangle_{E_j} $. It is a $A$-Hilbert module. As a particular case, we get a central example $H_A$ called the \textbf{standard $A$-Hilbert module}. It is obtained as the direct sum of the family $\{A\}_{j\in \N}$ where each $A$ is seen as a $A$-Hilbert module.
 \end{Expl}
 
-Let $E$ be a pre-Hilbert $A$-module. If the sesquilinear function $\langle \cdot ,\cdot \rangle$ has isotropy, i.e. there exists a non-zero $x\in E$ such that $\langle x,y\rangle =0$, we can divide out the null vector. Indeed, $N= \{x\in E : \langle x,x\rangle = 0\}$ is a sub-$A$-module of $A$, and $\langle x+ N,y+N\rangle := \langle x,y\rangle $ defines an inner product on $E/N$. The separation-completion of $E$ will refer to the Hilbert $A$-module obtained as the closure of $E/N$ with respect to this inner product. 
+Let $E$ be a pre-Hilbert $A$-module. If the sesquilinear function $\langle \cdot ,\cdot \rangle$ has isotropy, i.e. there exists a non-zero $x\in E$ such that $\langle x,x\rangle =0$, we can divide out the null vector. Indeed, $N= \{x\in E : \langle x,x\rangle = 0\}$ is a sub-$A$-module of $A$, and $\langle x+ N,y+N\rangle := \langle x,y\rangle $ defines an inner product on $E/N$. The separation-completion of $E$ will refer to the Hilbert $A$-module obtained as the closure of $E/N$ with respect to this inner product. 
 
 \begin{definition}
 Let $E$ and $F$ be two $A$-Hilbert modules. The set of adjoinable operators $\mathcal L_A(E,F)$ is defined as the set of maps $T : E\rightarrow F $ such that there exists a map $T^* : F\rightarrow E$ satisfying 
