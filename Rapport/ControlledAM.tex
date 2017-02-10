@@ -4,120 +4,146 @@ In this section, we will always use the coarse structure $\mathcal E$ of a local
 
 \subsection{Kasparov transform}
 
-Let $A$ and $B$ be two $\G$-$C^*$-algebras, and $H$ a separable Hilbert space, $l^2(\Z)$ for instance, and $H_\G= H\otimes L^2(\G,\lambda)$. The standard Hilbert module over $B$ is denoted by $H_B=H_\G\otimes B$, and $K_B$ is the algebra of compact operators for $H_B$, i.e. $K(H)\otimes L^2(\G,\lambda)\otimes B$. \\
+Let $A$ and $B$ be two $G$-$C^*$-algebras, and $H$ a separable Hilbert space, $l^2(\Z)$ for instance, and $H_G= H\otimes L^2(G,\lambda)$. The standard Hilbert module over $B$ is denoted by $H_B=H_G\otimes B$, and $K_B$ is the algebra of compact operators for $H_B$, i.e. $K(H)\otimes L^2(G,\lambda)\otimes B$. \\
 
 Every $K$-cycle $z\in KK^G(A,B)$ can be represented as a triplet $(H_B, \pi, T)$ where :
 \begin{itemize}
 \item[$\bullet$]$\pi : A\rightarrow \mathcal L_B(H_B)$ is a $*$-representation of $A$ on $H_B$.
 \item[$\bullet$]$T\in \mathcal L_B(H_B)$ is a self-adjoint operator.
-\item[$\bullet$] $T$ and $\pi$ satisfy the $K$-cycle condition, i.e. $[T,\pi(a)]$, $\pi(a)(T^2-id_{H_B})$ and $\pi(a)(g.T-T)$ are compact operators over $H_B$ for all $a\in A, g\in \G$.\\
+\item[$\bullet$] $T$ and $\pi$ satisfy the $K$-cycle condition, i.e. $[T,\pi(a)]$, $\pi(a)(T^2-id_{H_B})$ and $\pi(a)(g.T-T)$ are compact operators over $H_B$ for all $a\in A, g\in G$.\\
 \end{itemize}
 
-Set $T_\G= T\otimes id_{B\rtimes_r \G}\in \mathcal L_{B\rtimes_r G}(H_B\otimes (B\rtimes_r G))\simeq \mathcal L_{B\rtimes_r G}(H_{B\rtimes_r G})$, and $\pi_G: A\rtimes_r G v\rightarrow L_{B\rtimes_r G}(H_{B\rtimes_r G})$. Then, according to Le Gall \cite{LeGall}, $(H_{B\rtimes_r G, \pi_G, T_G})$ represents the $K$-cycle $j_G(z)\in KK(A\rtimes_r G,B\rtimes_r G)$. Let us construct a controlled morphism associated to $z$,
+Set $T_G= T\otimes id_{B\rtimes_r G}\in \mathcal L_{B\rtimes_r G}(H_B\otimes (B\rtimes_r G))\simeq \mathcal L_{B\rtimes_r G}(H_{B\rtimes_r G})$, and $\pi_G: A\rtimes_r G v\rightarrow L_{B\rtimes_r G}(H_{B\rtimes_r G})$. Then, according to Le Gall \cite{LeGall}, $(H_{B\rtimes_r G, \pi_G, T_G})$ represents the $K$-cycle $j_G(z)\in KK(A\rtimes_r G,B\rtimes_r G)$. Let us construct a controlled morphism associated to $z$,
 \[J_G(z) : \hat K(A\rtimes_r G)\rightarrow \hat K(B\rtimes_r G), \]
 which induces right multiplication by $j_G(z)$ in $K$-theory.\\
 
 \subsubsection{Odd case}
 
-Let us first do the work for $z\in KK_1^\G(A,B)$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_G=P\otimes id_{B\rtimes_r G}$. We define
+Let us first do the work for $z\in KK_1^G(A,B)$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_G=P\otimes id_{B\rtimes_r G}$. We define
 \[E^{(\pi,T)}=\{(x,P_G\pi_G(x)P_G + y) : x\in A\rtimes_r G, y\in K_{B\rtimes_r G}\}\]
 a $C^*$-algebra which is filtered by
-\[E_U^{(\pi,T)}=\{(x,P_G\pi_G(x)P_G + y) : x\in (A\rtimes \G)_U, y\in K\otimes (B\rtimes\G)_U\}\]
+\[E_U^{(\pi,T)}=\{(x,P_G\pi_G(x)P_G + y) : x\in (A\rtimes G)_U, y\in K\otimes (B\rtimes G)_U\}\]
 which gives us a filtered extension
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & K_{B\rtimes_r\G}\arrow{r} & E^{(\pi,T)} \arrow{r} & A\rtimes_r G \arrow{r}& 0
+0\arrow{r} & K_{B\rtimes_rG}\arrow{r} & E^{(\pi,T)} \arrow{r} & A\rtimes_r G \arrow{r}& 0
 \end{tikzcd}\]
 and semi split by  $s :\left\{\begin{array}{lll}A\rtimes_r G & \rightarrow & E^{(\pi,T)} \\ x & \mapsto & (x, P_G \pi_G(x)P_G)\end{array}\right.$.\\
 
 Let us show that the controlled boundary map of this extension does not depend on the representant chosen, but only on the class $z$.\\
 Let $(H_B, \pi_j,T_j), j=0,1$ two $K$-cycles which are homotopic via $(H_{B[0,1]},\pi,T)$. We denote $e_t$ the evaluation at $t\in[0,1]$ for an element of $B[0,1]$, and set $y_t=e_t(y)$ for such a $y$. The $*$-morphism
 \[\phi : \left\{\begin{array}{lll}E^{(\pi,T)} & \rightarrow & E^{(\pi_t,T_t)} \\ (x,y) & \mapsto & (x, y_t)\end{array}\right.\]
-satisfies $\phi(K_{B[0,1] \rtimes_r \G})\subset K_{B \rtimes_r \G}$ and makes the following diagram commute
+satisfies $\phi(K_{B[0,1] \rtimes_r G})\subset K_{B \rtimes_r G}$ and makes the following diagram commute
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & K_{B[0,1] \rtimes_r G}\arrow{r}\arrow{d}{\phi_{|K_{B[0,1] \rtimes_r G}}} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi} & A\rtimes_r \G \arrow{r}\arrow{d}{=}& 0 \\
+0\arrow{r} & K_{B[0,1] \rtimes_r G}\arrow{r}\arrow{d}{\phi_{|K_{B[0,1] \rtimes_r G}}} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi} & A\rtimes_r G \arrow{r}\arrow{d}{=}& 0 \\
 0\arrow{r} & K_{B \rtimes_r G}\arrow{r} &  E^{(\pi_t,T_t)} \arrow{r} & A\rtimes_r G \arrow{r} & 0
 \end{tikzcd}.\]
 
 According to \cite{OY2}, remark $3.7.$, the following holds
-\[D_{K_{B\rtimes_r\G,E^{(\pi_t,T_t)}}} = \phi_* \circ D_{K_{B[0,1]\rtimes_r\G},E^{(\pi,T)}}.\]
+\[D_{K_{B\rtimes_rG,E^{(\pi_t,T_t)}}} = \phi_* \circ D_{K_{B[0,1]\rtimes_rG},E^{(\pi,T)}}.\]
 As $id \otimes e_t$ gives a homotopy between $id\otimes e_0$ and $id\otimes e_1$, and as if two $*$-morphisms are homotopic, then they are equal in controlled $K$-theory, 
-\[D_{K_{B\rtimes_r \G}, E^{(\pi_0,T_0)}}=D_{K_{B\rtimes_r \G}, E^{(\pi_1,T_1)}}\]
+\[D_{K_{B\rtimes_r G}, E^{(\pi_0,T_0)}}=D_{K_{B\rtimes_r G}, E^{(\pi_1,T_1)}}\]
 holds, and the boundary of the extension $E^{(\pi,T)}$ depends only on $z$.\\
 
 \begin{definition}
-The controlled Kasparov transform of an element $z\in KK_1^\G(A,B)$ is defined as the compostion
-\[J_{red,\G}(z)=\mathcal M_{B\rtimes_r \G}^{-1}\circ D_{K_{B\rtimes_r \G}, E^{(\pi,T)}}.\]
+The controlled Kasparov transform of an element $z\in KK_1^G(A,B)$ is defined as the composition
+\[J_{red,G}(z)=\mathcal M_{B\rtimes_r G}^{-1}\circ D_{K_{B\rtimes_r G}, E^{(\pi,T)}}.\]
 \end{definition}
 
-As the boundary map is a $(\alpha_D,k_D)$-controlled morphism and the Morita equivalence preserves the filtration, $J_{red,\G(z)}$ is  $(\alpha_D,k_D)$-controlled. 
+As the boundary map is a $(\alpha_D,k_D)$-controlled morphism and the Morita equivalence preserves the filtration, $J_{red,G(z)}$ is  $(\alpha_D,k_D)$-controlled. 
 
 \begin{prop}\label{Kasparov1}
-Let $A$ and $B$ two $\G$-$C^*$-algebras. There exists a control pair $(\alpha_J,k_J)$ such that for every $z\in KK^\G_1(A,B)$, there exists a $(\alpha_J,k_J)$-controlled morphism
-\[J_{red,\G}(z) : \hat K_*(A\rtimes_r \G)\rightarrow \hat K_{*+1}(B\rtimes_r \G)\]
+Let $A$ and $B$ two $G$-$C^*$-algebras. There exists a control pair $(\alpha_J,k_J)$ such that for every $z\in KK^G_1(A,B)$, there exists a $(\alpha_J,k_J)$-controlled morphism
+\[J_{red,G}(z) : \hat K_*(A\rtimes_r G)\rightarrow \hat K_{*+1}(B\rtimes_r G)\]
 such that
 \begin{enumerate}
-\item[(i)] $J_{red,\G}(z)$ induces right multiplication by $j_{red,\G}(z)$ in $K$-theory ;
-\item[(ii)] $J_{red,\G}$ is additive, i.e.
-\[J_{red,\G}(z+z')=J_{red,\G}(z)+J_{red,\G}(z').\]
-\item[(iii)] For every $\G$-morphism $f : A_1\rightarrow A_2$,
-\[J_{red,\G}(f^*(z))=J_{red,\G}(z)\circ f_{\G,red,*}\] for all $z\in KK_1^G(A_2,B)$.
-\item[(iv)] For every $\G$-morphism $g : B_1\rightarrow B_2$,
-\[J_{red,\G}(g_*(z))= g_{\G,red,*}\circ J_{red,\G}(z)\] for all $z\in KK_1^G(A,B_1)$.
-\item[(v)] Let $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ be a semi-split equivariant extension of $\G$-algebras and $[\partial_J]\in KK_1^\G(A/J,J)$ be its boundary element. Then 
-\[J_\G([\partial_J])=D_{J\rtimes_r G,A\rtimes_r\G}.\] 
+\item[(i)] $J_{red,G}(z)$ induces right multiplication by $j_{red,G}(z)$ in $K$-theory ;
+\item[(ii)] $J_{red,G}$ is additive, i.e.
+\[J_{red,G}(z+z')=J_{red,G}(z)+J_{red,G}(z').\]
+\item[(iii)] For every $G$-morphism $f : A_1\rightarrow A_2$,
+\[J_{red,G}(f^*(z))=J_{red,G}(z)\circ f_{G,red,*}\] for all $z\in KK_1^G(A_2,B)$.
+\item[(iv)] For every $G$-morphism $g : B_1\rightarrow B_2$,
+\[J_{red,G}(g_*(z))= g_{G,red,*}\circ J_{red,G}(z)\] for all $z\in KK_1^G(A,B_1)$.
+\item[(v)] Let $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ be a semi-split equivariant extension of $G$-algebras and $[\partial_J]\in KK_1^G(A/J,J)$ be its boundary element. Then 
+\[J_G([\partial_J])=D_{J\rtimes_r G,A\rtimes_rG}.\] 
 \end{enumerate}
 \end{prop}
 
 \begin{dem}
 \begin{enumerate}
 
-\item[(i)]The $K$-cycle $[\partial_{K_{B\rtimes_r \G},E^{(\pi,T)}}]\in KK_1(A\rtimes_r \G, B\rtimes_r \G)$ implementing the boundary of the extension $E^{(\pi,T)}$ induces the map $j_{red,\G}$ by definition, and modulo Morita equivalence, which immediately gives the first point.
+\item[(i)]The $K$-cycle $[\partial_{K_{B\rtimes_r G},E^{(\pi,T)}}]\in KK_1(A\rtimes_r G, B\rtimes_r G)$ implementing the boundary of the extension $E^{(\pi,T)}$ induces the map $j_{red,G}$ by definition, and modulo Morita equivalence, which immediately gives the first point.
 
 \item[(ii)] If $z,z'$ are elements of $KK_1^G(A,B)$, represented by two $K$-cycles $(H_B,\pi_j,T_j)$, and if $(H_B,\pi,T)$ is a $K$-cycle representing the sum $z+z'$, then $E^{(\pi,T)}$ is naturally isomorphic to the extension sum of the $E_j:=E^{(\pi_j,T_j)}$, namely
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & K_{B\rtimes_r \G} \arrow{r} & D \arrow{r} & A\rtimes_r \G \arrow{r} & 0
+0\arrow{r} & K_{B\rtimes_r G} \arrow{r} & D \arrow{r} & A\rtimes_r G \arrow{r} & 0
 \end{tikzcd}\]
 where 
 \[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K(E_j,E_i)\right\}.\]
 Naturality of the controlled boundary maps \cite{OY2} ensures that the boundary of the sum of two extensions is the sum of the boundary of each, thus the result.
-\item[(iii)] Let $z\in KK_1^\G(A_2,B)$, represented by a cycle $(H_B,\pi,T)$. Representing $f^*(z)$ is $(H_B,f^*\pi,T)$ with off course $f^*\pi=\pi \circ f$. The map 
+\item[(iii)] Let $z\in KK_1^G(A_2,B)$, represented by a cycle $(H_B,\pi,T)$. Representing $f^*(z)$ is $(H_B,f^*\pi,T)$ with off course $f^*\pi=\pi \circ f$. The map 
 \[\phi : \left\{\begin{array}{lll} E^{f^*(\pi,T)} & \rightarrow & E^{(\pi,T)} \\
-( x, P_\G(f^*\pi)(x)P_\G+y) & \rightarrow & ( f_\G(x), P_\G(f^*\pi)(x)P_\G+y) \end{array}\right. \]
+( x, P_G(f^*\pi)(x)P_G+y) & \rightarrow & ( f_G(x), P_G(f^*\pi)(x)P_G+y) \end{array}\right. \]
 satisfies
 \begin{enumerate}
-\item[$\bullet$] $\phi(K_{B\rtimes_r \G})\subset K_{B\rtimes_r \G}$, and makes the following diagram commute
+\item[$\bullet$] $\phi(K_{B\rtimes_r G})\subset K_{B\rtimes_r G}$, and makes the following diagram commute
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & K_{B\rtimes_r \G}\arrow{r}\arrow{d}{=} & E^{f^*(\pi,T)} \arrow{r}\arrow{d}{\phi}& A_1\rtimes_r \G\arrow{r}\arrow{d}{f_\G} & 0\\
-0\arrow{r} & K_{B\rtimes_r \G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A_2\rtimes_r \G\arrow{r} & 0
+0\arrow{r} & K_{B\rtimes_r G}\arrow{r}\arrow{d}{=} & E^{f^*(\pi,T)} \arrow{r}\arrow{d}{\phi}& A_1\rtimes_r G\arrow{r}\arrow{d}{f_G} & 0\\
+0\arrow{r} & K_{B\rtimes_r G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A_2\rtimes_r G\arrow{r} & 0
 \end{tikzcd}.\]
 \item[$\bullet$] It intertwines the sections of the two extensions.
 \end{enumerate}
-Remark $3.7$ of \cite{OY2} assures that \[D_{K_{B\rtimes_r \G}, E^{f^*(\pi,T)} } =  D_{K_{B\rtimes_r \G}, E^{(\pi,T)} }\circ f_{\G,*}\], and the claim is clear from composition by $\mathcal M_{B\rtimes_r \G}^{-1}$.
+Remark $3.7$ of \cite{OY2} assures that \[D_{K_{B\rtimes_r G}, E^{f^*(\pi,T)} } =  D_{K_{B\rtimes_r G}, E^{(\pi,T)} }\circ f_{G,*}\], and the claim is clear from composition by $\mathcal M_{B\rtimes_r G}^{-1}$.
 
-\item[(iv)] Let $\mathcal E = H_{B_1}\otimes_g B_2$, which is a countably generated Hilbert $B_2$-module. The homomorphism $g:B_1\rightarrow B_2$ gives rise to $g_* : \mathcal L_{B_1}(H_{B_1})\rightarrow \mathcal L_{B_2}(\mathcal E)$, which preserves compact operators : $g_*(K_{B_1})\subset K(\mathcal E)$. We have a similar statement for $g_G : B_1\rtimes\G\rightarrow B_2\rtimes\G$. We denote $\mathcal E_G$ the Hilbert $B_2\rtimes\G$-module $\mathcal E\rtimes\G\simeq H_{B_1\rtimes \G}\otimes_g (B_2\rtimes \G)$.\\
+\item[(iv)] Let $\mathcal E = H_{B_1}\otimes_g B_2$, which is a countably generated Hilbert $B_2$-module. The homomorphism $g:B_1\rightarrow B_2$ gives rise to $g_* : \mathcal L_{B_1}(H_{B_1})\rightarrow \mathcal L_{B_2}(\mathcal E)$, which preserves compact operators : $g_*(K_{B_1})\subset K(\mathcal E)$. We have a similar statement for $g_G : B_1\rtimes G\rightarrow B_2\rtimes G$. We denote $\mathcal E_G$ the Hilbert $B_2\rtimes G$-module $\mathcal E\rtimes G\simeq H_{B_1\rtimes G}\otimes_g (B_2\rtimes G)$.\\
 
-Let $z\in KK^\G(A,B_1)$ be represented by the $K$-cycle $(H_{B_1},\pi,T)$. Then $(H_{B_1}\otimes_g B_2,g_*\circ\pi, g_*(T))=(\mathcal E, \tilde\pi,\tilde T)$ represents $g_*(z)$.\\
+Let $z\in KK^G(A,B_1)$ be represented by the $K$-cycle $(H_{B_1},\pi,T)$. Then $(H_{B_1}\otimes_g B_2,g_*\circ\pi, g_*(T))=(\mathcal E, \tilde\pi,\tilde T)$ represents $g_*(z)$.\\
 
 The map $(x,y)\mapsto (x, (g_G)_*(y))$ induces $\Psi :E^{(\pi,T)}\rightarrow  E^{g_*(\pi,T)} $ such that
 \[\Psi(x,P_G \pi_G(x) P_G +y)\mapsto (x,\tilde P_G \tilde\pi_G(x) \tilde P_G+(g_G)_*(y)).\]
-Indeed, the crossed-product functor commutes with pull-back by $\G$-morphisms, and $(g_G)*\circ\pi_G=(g_*\circ\pi)_G=\tilde \pi_G$ and $(g_G)_*(P_G) = g_*(P)_G=\tilde P_G$ so that 
+Indeed, the crossed-product functor commutes with pull-back by $G$-morphisms, and $(g_G)_*\circ\pi_G=(g_*\circ\pi)_G=\tilde \pi_G$ and $(g_G)_*(P_G) = g_*(P)_G=\tilde P_G$ so that 
 \[(g_G)_*(P_G \pi_G(x) P_G)=\tilde P_G \tilde\pi_G(x) \tilde P_G. \]
-Now, by the stabilisation lemma of Le Gall \cite{LeGall}, we know that the countably generated Hilbert module $\mathcal E_G$ sits as a complemented module of $H_{B_2\rtimes\G}$, and there exists a projection $p\in L(H_{B_2\rtimes\G})$ such that $pH_{B_2\rtimes\G}\simeq \mathcal E_\G$ and $pK_{B_2\rtimes\G}p\simeq K(\mathcal E_G)$. Let $\psi$ be the composition $K_{B_1\rtimes \G}\rightarrow_{(g_G)_*} K(\mathcal E_\G)\rightarrow K_{B_2\rtimes \G}$. In this particular case, we can give an explicit description of $\psi$. The map defined on basic tensor products $(x_j)_{j}\otimes b\mapsto (g(x_j)b)_j $ extends to an isometric embedding $\mathcal E_\G \rightarrow H_{B_2\rtimes \G}$, under which $ b\theta_{e_i,e_j}$ is mapped to $g(b)\theta_{u_i,u_j}$, where $\{e_j\}$ and $\{u_j\}$ are respectively the canonical orthogonal basis of $H_{B_1 \rtimes\G}$ and $H_{B_2 \rtimes\G}$. This gives a commutative diagram 
+Now, by the stabilisation lemma of Le Gall \cite{LeGall}, we know that the countably generated Hilbert module $\mathcal E_G$ sits as a complemented module of $H_{B_2\rtimes G}$, and there exists a projection $p\in L(H_{B_2\rtimes G})$ such that $pH_{B_2\rtimes G}\simeq \mathcal E_G$ and $pK_{B_2\rtimes G}p\simeq K(\mathcal E_G)$. Let $\psi$ be the composition $K_{B_1\rtimes G}\rightarrow_{(g_G)_*} K(\mathcal E_G)\rightarrow K_{B_2\rtimes G}$. In this particular case, we can give an explicit description of $\psi$. The map defined on basic tensor products $(x_j)_{j}\otimes b\mapsto (g(x_j)b)_j $ extends to an isometric embedding $\mathcal E_G \rightarrow H_{B_2\rtimes G}$, under which $ b\theta_{e_i,e_j}$ is mapped to $g(b)\theta_{u_i,u_j}$, where $\{e_j\}$ and $\{u_j\}$ are respectively the canonical orthogonal basis of $H_{B_1 \rtimes G}$ and $H_{B_2 \rtimes G}$. This gives a commutative diagram 
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & K_{B_1\rtimes \G}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& A\rtimes_r \G\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} & K_{B_2\rtimes \G}\arrow{r} & E^{g_*(\pi,T)} \arrow{r}& A\rtimes \G\arrow{r} & 0
+0\arrow{r} & K_{B_1\rtimes G}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& A\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & K_{B_2\rtimes G}\arrow{r} & E^{g_*(\pi,T)} \arrow{r}& A\rtimes G\arrow{r} & 0
 \end{tikzcd}.\]
-and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi_{|K_{B_1\rtimes \G}}\subset K_{B_2\rtimes\G}$, so that we can again apply the remark $3.7$ of \cite{OY2} to state
-\[ D_{K_{B_2\rtimes \G},E^{g_*(\pi,T)}}=\psi_*\circ D_{K_{B_1\rtimes \G},E^{(\pi,T)}},\]
-which we compose by the Morita equivalence on the left $M_{B_2\rtimes\G}^{-1}$
-\[J_\G(g_*(z)) = M_{B_2\rtimes\G}^{-1}\circ g_{G,*}\circ D_{K_{B_1\rtimes \G},E^{(\pi,T)}}.\]
+and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi_{|K_{B_1\rtimes G}}\subset K_{B_2\rtimes G}$, so that we can again apply the remark $3.7$ of \cite{OY2} to state
+\[ D_{K_{B_2\rtimes G},E^{g_*(\pi,T)}}=\psi_*\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}},\]
+which we compose by the Morita equivalence on the left $M_{B_2\rtimes G}^{-1}$
+\[J_G(g_*(z)) = M_{B_2\rtimes G}^{-1}\circ g_{G,*}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}.\]
 The homomorphisms inducing the Morita equivalence make the following diagram commutes,
-\[\begin{tikzcd}B_1\rtimes\G\arrow{r}{g_\G}\arrow{d} & B_2\rtimes \G\arrow{d} \\ K_{B_1\rtimes\G } \arrow{r}{\psi}& K_{B_2\rtimes\G }\end{tikzcd},\]
-and $J_\G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes\G}^{-1}\circ D_{K_{B_1\rtimes \G},E^{(\pi,T)}}=g_{G,*}\circ J_\G(z)$.\\
+\[\begin{tikzcd}B_1\rtimes G\arrow{r}{g_G}\arrow{d} & B_2\rtimes G\arrow{d} \\ K_{B_1\rtimes G } \arrow{r}{\psi}& K_{B_2\rtimes G }\end{tikzcd},\]
+and $J_G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes G}^{-1}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}=g_{G,*}\circ J_G(z)$.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% NOUVELLE PREUVE %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item[(iv)] New proof.\\
+Let $z \in KK^G(A,B_1)$ be represented by the $K$-cycle $(H_{B_1},\pi,T)$. Let $V\in \mathcal L_{B_2}(H_{B_1}\otimes_g B_2)$ be the isometry of remark \ref{isometry}. According to Lemma \ref{isometryKK}, 
+\[g_*(z)=[H_{B_1}\otimes_g B_2, \pi\otimes_g 1, T\otimes_g 1]\in KK^G(A,B_2)\] 
+is also represented by $[H_{B_2}, \pi',T' ]$ where $\pi' = Ad_{V}\circ (\pi\otimes_g 1)$ and $T' = V(T\otimes_g 1)V^* +1-VV^*$. Let $\psi$ be given by the composition $Ad_{V_G}\circ (g_G)_*$.\\
+The map $\Psi :(x,y)\mapsto (x, \psi(y))$ defines a $*$-homomorphism $E^{(\pi,T)} \rightarrow E^{(\pi',T')}$ such that 
+\[\Psi(x,P_G\pi_G(x)P_G +y)= (x, P'_G  \pi_G'(a)P'_G + \psi(y)) ).\] 
+Indeed, the crossed-product functor commutes with pull-back by $G$-morphisms, and $Ad_{V_G}\circ(g_G)_*\circ\pi_G= (Ad_V\circ g_* \circ \pi)_G = \pi'_G$ and $\psi(P_G)= V_G (P_G\otimes_{g_G} 1)V^*_G = (V(P\otimes_g 1 ) V^*)_G = (P')_G$ so that 
+\[\psi(P_G \pi_G(x) P_G)=P'_G \pi'_G(x) P'_G. \]
+This gives a commutative diagram 
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{B_1\rtimes G}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& A\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & K_{B_2\rtimes G}\arrow{r} & E^{(\pi',T')} \arrow{r}& A\rtimes G\arrow{r} & 0
+\end{tikzcd}.\]
+and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi_{|K_{B_1\rtimes G}}\subset K_{B_2\rtimes G}$, so that we can again apply the remark $3.8$ of \cite{OY2} to state
+\[ D_{K_{B_2\rtimes G},E^{(\pi',T')}}=\psi_*\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}},\]
+which we compose by the Morita equivalence on the left $M_{B_2\rtimes G}^{-1}$
+\[J_G(g_*(z)) = M_{B_2\rtimes G}^{-1}\circ g_{G,*}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}.\]
+The homomorphisms inducing the Morita equivalence make the following diagram commutes,
+\[\begin{tikzcd}B_1\rtimes G\arrow{r}{g_G}\arrow{d} & B_2\rtimes G\arrow{d} \\ K_{B_1\rtimes G } \arrow{r}{\psi}& K_{B_2\rtimes G }\end{tikzcd},\]
+and $J_G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes G}^{-1}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}=g_{G,*}\circ J_G(z)$.\\
+
 \item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_J]$. Then we apply remark $3.7$ of \cite{OY2} to the commutative diagram
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & J\rtimes \G\arrow{r}\arrow{d} & A\rtimes \G \arrow{r}\arrow{d}{s\circ q_\G}& A/J\rtimes_r \G\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} & K_{J\rtimes \G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A/J\rtimes \G\arrow{r} & 0
+0\arrow{r} & J\rtimes G\arrow{r}\arrow{d} & A\rtimes G \arrow{r}\arrow{d}{s\circ q_G}& A/J\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & K_{J\rtimes G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A/J\rtimes G\arrow{r} & 0
 \end{tikzcd},\]
 where the first vertical arrow is the canonical mapping that induces the Morita equivalence. \\
 \qed
@@ -126,24 +152,24 @@ where the first vertical arrow is the canonical mapping that induces the Morita 
 
 \subsubsection{Even case}
 
-We can now define $J_\G$ for even $K$-cycles. Let $A$ and $B$ be two $\G$-algebras. Let $[\partial_{SB}]\in KK_1(B,SB)$ be the $K$-cycle implementing the boundary of the extension $0\rightarrow SB\rightarrow CB\rightarrow B\rightarrow 0$, and $[\partial]\in KK_1(\C,S)$ be the Bott generator. As $z\otimes_B [\partial_{SB}]$ is an odd $K$-cycle, we can define
-\[J_\G(z):= \tau_{B\rtimes \G}([\partial]^{-1})\circ J_\G(z\otimes[\partial_{SB}]).\] 
+We can now define $J_G$ for even $K$-cycles. Let $A$ and $B$ be two $G$-algebras. Let $[\partial_{SB}]\in KK_1(B,SB)$ be the $K$-cycle implementing the boundary of the extension $0\rightarrow SB\rightarrow CB\rightarrow B\rightarrow 0$, and $[\partial]\in KK_1(\C,S)$ be the Bott generator. As $z\otimes_B [\partial_{SB}]$ is an odd $K$-cycle, we can define
+\[J_G(z):= \tau_{B\rtimes G}([\partial]^{-1})\circ J_G(z\otimes[\partial_{SB}]).\] 
 
-Here $\tau_D$ refers to the $(\alpha_\tau,k_\tau)$-controlled map $\hat K (A_1\otimes D )\rightarrow \hat K(A_2\otimes D)$, that H. Oyono-Oyono and G. Yu constructed in \cite{OY2} for any $C^*$-algebras $D,A_1,A_2$ and $z\in KK_*(A_1,A_2)$. It enjoys many natural properties, and induces right multiplication by $\tau_D(z)\in KK(A_1\otimes D,A_2\otimes D)$ in $K$-theory. We can see that, if we set $\alpha_J=\alpha_\tau \alpha_D$ and $k_J=k_\tau * k_D$, $J_\G(z)$ is $(\alpha_J,k_J)$-controlled.\\
+Here $\tau_D$ refers to the $(\alpha_\tau,k_\tau)$-controlled map $\hat K (A_1\otimes D )\rightarrow \hat K(A_2\otimes D)$, that H. Oyono-Oyono and G. Yu constructed in \cite{OY2} for any $C^*$-algebras $D,A_1,A_2$ and $z\in KK_*(A_1,A_2)$. It enjoys many natural properties, and induces right multiplication by $\tau_D(z)\in KK(A_1\otimes D,A_2\otimes D)$ in $K$-theory. We can see that, if we set $\alpha_J=\alpha_\tau \alpha_D$ and $k_J=k_\tau * k_D$, $J_G(z)$ is $(\alpha_J,k_J)$-controlled.\\
 
 \begin{prop}\label{Kasparov}
-Let $A$ and $B$ two $\G$-$C^*$-algebras. For every $z\in KK^\G_*(A,B)$, there exists a control pair $(\alpha_J,k_J)$ and a $(\alpha_J,k_J)$-controlled morphism
-\[J_{red,\G}(z) : \hat K(A\rtimes_r \G)\rightarrow \hat K(B\rtimes_r \G)\]
+Let $A$ and $B$ two $G$-$C^*$-algebras. For every $z\in KK^G_*(A,B)$, there exists a control pair $(\alpha_J,k_J)$ and a $(\alpha_J,k_J)$-controlled morphism
+\[J_{red,G}(z) : \hat K(A\rtimes_r G)\rightarrow \hat K(B\rtimes_r G)\]
 of the same degree as $z$, such that
 \begin{enumerate}
-\item[(i)] $J_{red,\G}(z)$ induces right multiplication by $j_{red,\G}(z)$ in $K$-theory ;
-\item[(ii)] $J_{red,\G}$ is additive, i.e.
-\[J_{red,\G}(z+z')=J_{red,\G}(z)+J_{red,\G}(z').\]
-\item[(iii)] For every $\G$-morphism $f : A_1\rightarrow A_2$,
-\[J_{red,\G}(f^*(z))=J_{red,\G}(z)\circ f_{\G,red,*}\] for all $z\in KK_*^G(A_2,B)$.
-\item[(iv)] For every $\G$-morphism $g : B_1\rightarrow B_2$,
-\[J_{red,\G}(g_*(z))= g_{\G,red,*}\circ J_{red,\G}(z)\] for all $z\in KK_*^G(A,B_1)$.
-\item[(v)] $J_G([id_A]) \sim_{(\alpha_J,k_J)} id_{\hat K(A\rtimes \G)}$
+\item[(i)] $J_{red,G}(z)$ induces right multiplication by $j_{red,G}(z)$ in $K$-theory ;
+\item[(ii)] $J_{red,G}$ is additive, i.e.
+\[J_{red,G}(z+z')=J_{red,G}(z)+J_{red,G}(z').\]
+\item[(iii)] For every $G$-morphism $f : A_1\rightarrow A_2$,
+\[J_{red,G}(f^*(z))=J_{red,G}(z)\circ f_{G,red,*}\] for all $z\in KK_*^G(A_2,B)$.
+\item[(iv)] For every $G$-morphism $g : B_1\rightarrow B_2$,
+\[J_{red,G}(g_*(z))= g_{G,red,*}\circ J_{red,G}(z)\] for all $z\in KK_*^G(A,B_1)$.
+\item[(v)] $J_G([id_A]) \sim_{(\alpha_J,k_J)} id_{\hat K(A\rtimes G)}$
 \end{enumerate}
 \end{prop}
 
@@ -154,20 +180,20 @@ The point $(iii)$ is a consequence of the previous proposition \ref{Kasparov1}, 
 
 We now show that the controlled Kasparov transform respects in a quantitative way the Kasparov product.
 
-\begin{prop} There exists a control pair $(\alpha_K,k_K)$ such that for every $\G$-$C^*$-algebras $A$, $B$ and $C$, and every $z\in KK^\G(A,B),z'\in KK^\G(B,C)$, the controlled equality
-\[J_\G(z\otimes_B z') \sim_{\alpha_K,k_K} J_\G(z')\circ J_\G(z)\]
+\begin{prop} There exists a control pair $(\alpha_K,k_K)$ such that for every $G$-$C^*$-algebras $A$, $B$ and $C$, and every $z\in KK^G(A,B),z'\in KK^G(B,C)$, the controlled equality
+\[J_G(z\otimes_B z') \sim_{\alpha_K,k_K} J_G(z')\circ J_G(z)\]
 holds.
 \end{prop}
 \begin{dem}
-We will use the following fact : there exists a positive integer $d$ such that every cycle $z\in KK^\G(A,B)$ has decomposition property $(d)$. For more details, we send to the appendice of the article of V. Lafforgue \cite{LaffOY} where H. Oyono-Oyono shows that claim. We just need to know that $z$ satisfies the decomposition property $(d)$ if there exist $d+1$ $\G$-$C^*$-algebras $A_j$  and $d$ cycles $\alpha_j\in KK^\G(A_{j-1},A_j), j=1,d$ such that $A_0=A$, $A_d=B$ and each $\alpha_j$ is either coming from a $*$-morphism $A_{j-1}\rightarrow A_j$, or there is a $*$-morphism $\theta_j: A_j\rightarrow A_{j-1}$ such that $\alpha_j \otimes_{A_j} [\theta_j]=1$ in $KK^G(A_{j-1},A_{j-1})$.\\
+We will use the following fact : there exists a positive integer $d$ such that every cycle $z\in KK^G(A,B)$ has decomposition property $(d)$. For more details, we send to the appendice of the article of V. Lafforgue \cite{LaffOY} where H. Oyono-Oyono shows that claim. We just need to know that $z$ satisfies the decomposition property $(d)$ if there exist $d+1$ $G$-$C^*$-algebras $A_j$  and $d$ cycles $\alpha_j\in KK^G(A_{j-1},A_j), j=1,d$ such that $A_0=A$, $A_d=B$ and each $\alpha_j$ is either coming from a $*$-morphism $A_{j-1}\rightarrow A_j$, or there is a $*$-morphism $\theta_j: A_j\rightarrow A_{j-1}$ such that $\alpha_j \otimes_{A_j} [\theta_j]=1$ in $KK^G(A_{j-1},A_{j-1})$.\\
 
-This property reduces the proof to the special case of $\alpha$ being the inverse of a morphism in $KK^\G$-theory : $\alpha\otimes[\theta]=1$, then :
+This property reduces the proof to the special case of $\alpha$ being the inverse of a morphism in $KK^G$-theory : $\alpha\otimes[\theta]=1$, then :
 \[\begin{array}{rcl}
-J_G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_\G(\alpha\otimes z)\circ J_\G(\alpha\otimes [\theta]) \\
-			& \sim & J_\G(\alpha\otimes z)\circ J_\G(\theta_*(\alpha))\\
-			& \sim & J_\G(\alpha\otimes z)\circ \theta_{\G,*}\circ J_\G(\alpha)\\
-			& \sim & J_\G(\theta^*(\alpha\otimes z))\circ J_\G(\alpha)\\
-			& \sim & J_\G(z)\circ J_\G(\alpha) \\
+J_G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_G(\alpha\otimes z)\circ J_G(\alpha\otimes [\theta]) \\
+			& \sim & J_G(\alpha\otimes z)\circ J_G(\theta_*(\alpha))\\
+			& \sim & J_G(\alpha\otimes z)\circ \theta_{G,*}\circ J_G(\alpha)\\
+			& \sim & J_G(\theta^*(\alpha\otimes z))\circ J_G(\alpha)\\
+			& \sim & J_G(z)\circ J_G(\alpha) \\
 \end{array}\] 
 because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The control on the propagation of the first line follows from remark $2.5$ of \cite{OY2} and point $(v)$, the other lines are equal by points $(iii)$ and $(iv)$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes, and $(\alpha_K,k_K)$ can be taken to be $(d \alpha_J^{2d},( k_J*k_J)^{*d})$.
 \qed
@@ -181,14 +207,14 @@ because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The
 
 Let $E\in\mathcal E$. There exists continuous functions $\lambda_g : P_E(G)\rightarrow [0,1]$ such that $\eta = \sum_{g\in G^x}\lambda_g(\eta) \delta_g$ for any $\eta\in P_E(G)$. Define $h(x)=\lambda_{e_x}$ and $\phi = \sqrt\eta$. Notice that $g.h = \lambda_g$ for all $g\in G$, and as $\sum_{g\in G^x}\lambda_g = 1 ,\forall x\in G^{(0)}$, 
 \[\mathcal L_E =\sum_{g\in G^x} \phi(g.\phi)\]
-defines a projection of $C_0(P_E(G))\rtimes_r G$ with bounded propagation, and defines a $K$-theory class $[\mathcal L_E]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\geq E$.\\
+defines a projection of $C_0(P_E(G))\rtimes_r G$ with bounded propagation, and defines a $K$-theory class $[\mathcal L_E]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $FGeq E$.\\
 
 \begin{definition}
-Let $B$ be a $\G$-algebra, and $\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E$. The controlled assembly map for $\G$ is defined as the composition of $J_\G$ with the evaluation at $[\mathcal L_E]$ :
+Let $B$ be a $G$-algebra, and $\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E$. The controlled assembly map for $G$ is defined as the composition of $J_G$ with the evaluation at $[\mathcal L_E]$ :
 \[\mu_B^{\varepsilon,F,E}\left\{
 \begin{array}{rcl}
-RK^\G(P_E(\G), B) & \rightarrow & K_*^{\epsilon, F}(B\rtimes_r \G)\\
-z & \mapsto & J_\G^{\varepsilon, F}(z)([\mathcal L_E]_{\varepsilon , R})
+RK^G(P_E(G), B) & \rightarrow & K_*^{\epsilon, F}(B\rtimes_r G)\\
+z & \mapsto & J_G^{\varepsilon, F}(z)([\mathcal L_E]_{\varepsilon , R})
 \end{array}\right.\]
 \end{definition}
 
@@ -199,13 +225,13 @@ z & \mapsto & J_\G^{\varepsilon, F}(z)([\mathcal L_E]_{\varepsilon , R})
 
 \textit{Remarks}
 \begin{itemize}
-\item[(1)] The assembly map is defined for all reasonnable crossed-products by $\G$. In particular for the reduced one and the maximal one, so that we have two different assembly, which we would distinguish writing $J_{\G,r}$ and $J_{\G,max}$ if necessary.
-\item[(2)] The bunch of assembly maps $\mu_B^{\varepsilon,F,E}$ induces the Baum-Connes assembly map for $\G$ in $K$-theory : the following diagram commutes
+\item[(1)] The assembly map is defined for all reasonnable crossed-products by $G$. In particular for the reduced one and the maximal one, so that we have two different assembly, which we would distinguish writing $J_{G,r}$ and $J_{G,max}$ if necessary.
+\item[(2)] The bunch of assembly maps $\mu_B^{\varepsilon,F,E}$ induces the Baum-Connes assembly map for $G$ in $K$-theory : the following diagram commutes
 \[\begin{tikzcd}
-RK^G(C_0(P_E(\G)),B) \arrow{r}{\mu_B^{\varepsilon,F,E}}\arrow{dr}{\mu_\G^F} & K_*^{\varepsilon, F}(B\rtimes_r \G)\arrow{d}{\iota_{\varepsilon,F}}\\ 
-		&  K_*(B\rtimes_r \G)
+RK^G(C_0(P_E(G)),B) \arrow{r}{\mu_B^{\varepsilon,F,E}}\arrow{dr}{\mu_G^F} & K_*^{\varepsilon, F}(B\rtimes_r G)\arrow{d}{\iota_{\varepsilon,F}}\\ 
+		&  K_*(B\rtimes_r G)
 \end{tikzcd}\]
-because $J_\G(z)$ induces the right multiplication by $j_\G(z)$ and also $\mu_\G^d(z)=[\mathcal L_E]\otimes j_\G(z)$. But, as ${{\mathcal L}_{d'}}_{|P_d(\G)}=\mathcal L_d$ as soon as $d\leq d'$, this diagram commutes with inductive limit over $d$.\\
+because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^d(z)=[\mathcal L_E]\otimes j_G(z)$. But, as ${{\mathcal L}_{d'}}_{|P_d(G)}=\mathcal L_d$ as soon as $d\leq d'$, this diagram commutes with inductive limit over $d$.\\
 \end{itemize}
 
 %In \cite{OY3}, H. Oyono-Oyono and G. Yu defined a bunch of local quantitative coarse assembly maps for a metric space $X$. For the sake of simplicity, we take $X$ to be discrete and uniformly bounded. Let $\mathcal C$ be its coarse structure, that is the set of all its controlled subsets. Then, for any $C^*$-algebras $A$ and $B$ and a $K$-cycle $z\in KK(A,B)$, they construct a controlled morphism
@@ -213,43 +239,43 @@ because $J_\G(z)$ induces the right multiplication by $j_\G(z)$ and also $\mu_\G
 %There exists a projection $P_X$ with finite propagation, and the local quantitative assembly map is defined as 
 %\[A_{X,B}^{\epsilon,r,d}(z)=\sigma_X^{\epsilon,r}(z)([P_X]_{\epsilon,r})\] for $z\in KK(C_0(P_d(X)),B)$, where $P_d(X)$ is the classical Rips complex of $X$. This bunch of assembly maps induce the usual coarse assembly map of $X$ 
 %\[A_{X,B} : KX_*(X,B)\rightarrow K_*(C^*(X,B)\]
-%in $K$-theory. Now let $\G$ be the coarse groupoid of $X$. It is an étale groupoid with compact base space $\G^{(0)}=\beta X$, the Stone-Cech compactification of $X$ defined as
-%\[\G := \cup_{E \in \mathcal C} \overline E,\] 
+%in $K$-theory. Now let $G$ be the coarse groupoid of $X$. It is an étale groupoid with compact base space $G^{(0)}=\beta X$, the Stone-Cech compactification of $X$ defined as
+%\[G := \cup_{E \in \mathcal C} \overline E,\] 
 %where $\overline E$ is the closure of $E$ in $\beta (X \times X)$. 
 
-Recall that $X$ is a discrete metric space with bounded geometry, and $G=G(X)$ is its coarse groupoid. A classical result of G. Skandalis, J.-L. Tu and G. Yu \cite{SkTuYu} claims that the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ is equivalent to the Baum-Connes conjecture for the groupoid $G$ with coefficient in $l^\infty(X,K_B)$. More precisely, there is an isomorphism of $C^*$-algebras $\Psi_B : l^\infty(X,K_B)\rtimes_r \G \simeq C^*(X,B)$ and the following diagram commutes :
+Recall that $X$ is a discrete metric space with bounded geometry, and $G=G(X)$ is its coarse groupoid. A classical result of G. Skandalis, J.-L. Tu and G. Yu \cite{SkTuYu} claims that the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ is equivalent to the Baum-Connes conjecture for the groupoid $G$ with coefficient in $l^\infty(X,K_B)$. More precisely, there is an isomorphism of $C^*$-algebras $\Psi_B : l^\infty(X,K_B)\rtimes_r G \simeq C^*(X,B)$ and the following diagram commutes :
 \[\begin{tikzcd}
-\mu_{\G,l^\infty(X,K_B)}^d : KK_*^\G(C_0(P_d(\G),l^\infty(X,K_B)) \arrow{r}\arrow{d}{\iota^*}& K_*(l^\infty(X, K_B)\rtimes_r G)\arrow{d}{(\Psi_B)_*}\\
+\mu_{G,l^\infty(X,K_B)}^d : KK_*^G(C_0(P_d(G),l^\infty(X,K_B)) \arrow{r}\arrow{d}{\iota^*}& K_*(l^\infty(X, K_B)\rtimes_r G)\arrow{d}{(\Psi_B)_*}\\
 A_{X,B}^d : KK_*(C_0(P_d(X),B) \arrow{r} & K_*(C^*(X,B))
 \end{tikzcd}\]
-where the left vertical arrow comes from the inclusion of groupoid $\iota :\{x\}\rightarrow \G$ for any $x\in X$. We claim that we can prove a controlled analogue of this result which induces it in $K$-theory.
+where the left vertical arrow comes from the inclusion of groupoid $\iota :\{x\}\rightarrow G$ for any $x\in X$. We claim that we can prove a controlled analogue of this result which induces it in $K$-theory.
 
-To prove this, we shall describe $\Psi$ more precisely. For any $C^*$-algebra $B$, let $\tilde B = l^\infty (X,K_B)$. It is naturaly a $\G$-algebra, and the fiber over any $x\in\beta X$ is easily seen to be $\tilde B_x = B$. Now, if $f\in C_c(\G, \tilde B)$, as $\overline E$ are the compact-open of $\G$, $f$ is continuous over a $\overline E$, so it is just a bounded function over $E$.\\
-Define for $g=(x,y)\in X\times X\subset \G$,
+To prove this, we shall describe $\Psi$ more precisely. For any $C^*$-algebra $B$, let $\tilde B = l^\infty (X,K_B)$. It is naturaly a $G$-algebra, and the fiber over any $x\in\beta X$ is easily seen to be $\tilde B_x = B$. Now, if $f\in C_c(G, \tilde B)$, as $\overline E$ are the compact-open of $G$, $f$ is continuous over a $\overline E$, so it is just a bounded function over $E$.\\
+Define for $g=(x,y)\in X\times X\subset G$,
 $\Psi_B(f)_{xy}=f(g)(x)\in \tilde B$,
-so that $\Psi_B(f)=(\Psi_B(f)_{xy})_{x,y\in X}$ is a locally compact operator of finite propagation (its support is in $E$). This is a $*$-morphism which extends to the annouced isomorphism. Moreover, $\tilde B$ is naturally a $C^*$-subalgebra of both $\tilde B\rtimes_r \G$ and $C^*(X,B)$, and the two inclusion commute modulo $\Psi_B$. We have a diagram :
+so that $\Psi_B(f)=(\Psi_B(f)_{xy})_{x,y\in X}$ is a locally compact operator of finite propagation (its support is in $E$). This is a $*$-morphism which extends to the annouced isomorphism. Moreover, $\tilde B$ is naturally a $C^*$-subalgebra of both $\tilde B\rtimes_r G$ and $C^*(X,B)$, and the two inclusion commute modulo $\Psi_B$. We have a diagram :
 \[\begin{tikzcd} 
   \  & B \arrow[bend left]{rdd}{\iota_3^B}& \\
   \ &\tilde B \arrow{u}{ev_x}\arrow[hookrightarrow]{ld}{\iota_1^B}\arrow[hookrightarrow]{rd}{\iota_2^B} &  \\ 
-\tilde B\rtimes_r\G \arrow{rr}{\Psi_B} &  &  C^*(X,B) 
+\tilde B\rtimes_rG \arrow{rr}{\Psi_B} &  &  C^*(X,B) 
 \end{tikzcd}\] 
 where the lower triangle is commutative.\\
 
-Off course, $\Psi_B$ induces $\Psi_{B*} : \mathcal L_{\tilde B\rtimes_r \G}(H_{B\rtimes_r \G})\rightarrow \mathcal L_{C^*(X,B)}(\mathcal E)$ where $\mathcal E = H_{B\rtimes_r \G}\otimes_{\Psi_B} C^*(X,B)$. \\
-Let $A$ and $B$ be two $C^*$-algebra and $z\in KK_1^\G(\tilde A,\tilde B)$, represented by $(H_{\tilde B}, \psi, T)$. As $T_\G = (\iota_1)_*(T)$, we have $(\Psi_B)_*(T_\G)=(\iota_2)_*(T)=(T_x)_X$. Also, the relations $(\iota_1^A)_*\circ\psi = \psi_\G\circ \iota_1^A$ and $(\iota_2^A)_*\circ\psi_x = (\psi_x)_X\circ \iota_2^A$ are easy to derive, which lead to $(\Psi_B)_*\circ \psi_G \circ \iota_1^A= (\iota_2^B)_*\circ \psi_x = (\psi_x)_X\circ \Psi_A\circ \iota_1^A$. By extending $\G$-equivariantly to $\tilde A  \rtimes_r G$, we have $(\Psi_B)_*(\psi_\G(a))=(\psi_x)_X(\Psi_A(a))$. The map $(x,y)\mapsto (\Psi_A(x), (\Psi_B)_*(y))$ induces a morphism $\Psi_E : E^{(\psi,T)}  \rightarrow  E^{((\psi_x,T_x))}$ which sends 
-$(x,P_\G \psi_\G(x)P_\G + y)$ to $(\Psi_A(x), (P_x)_X(\psi_x)_X(\Psi_A(x))(P_x)_X+(\Psi_B)_*(y))$ by the previous computations. This map makes the following diagram commute
+Off course, $\Psi_B$ induces $\Psi_{B*} : \mathcal L_{\tilde B\rtimes_r G}(H_{B\rtimes_r G})\rightarrow \mathcal L_{C^*(X,B)}(\mathcal E)$ where $\mathcal E = H_{B\rtimes_r G}\otimes_{\Psi_B} C^*(X,B)$. \\
+Let $A$ and $B$ be two $C^*$-algebra and $z\in KK_1^G(\tilde A,\tilde B)$, represented by $(H_{\tilde B}, \psi, T)$. As $T_G = (\iota_1)_*(T)$, we have $(\Psi_B)_*(T_G)=(\iota_2)_*(T)=(T_x)_X$. Also, the relations $(\iota_1^A)_*\circ\psi = \psi_G\circ \iota_1^A$ and $(\iota_2^A)_*\circ\psi_x = (\psi_x)_X\circ \iota_2^A$ are easy to derive, which lead to $(\Psi_B)_*\circ \psi_G \circ \iota_1^A= (\iota_2^B)_*\circ \psi_x = (\psi_x)_X\circ \Psi_A\circ \iota_1^A$. By extending $G$-equivariantly to $\tilde A  \rtimes_r G$, we have $(\Psi_B)_*(\psi_G(a))=(\psi_x)_X(\Psi_A(a))$. The map $(x,y)\mapsto (\Psi_A(x), (\Psi_B)_*(y))$ induces a morphism $\Psi_E : E^{(\psi,T)}  \rightarrow  E^{((\psi_x,T_x))}$ which sends 
+$(x,P_G \psi_G(x)P_G + y)$ to $(\Psi_A(x), (P_x)_X(\psi_x)_X(\Psi_A(x))(P_x)_X+(\Psi_B)_*(y))$ by the previous computations. This map makes the following diagram commute
 \[
 \begin{tikzcd}[column sep = small]
-0\arrow{r} & K_{\tilde B\rtimes \G}\arrow{r}\arrow{d}{(\Psi_B)_*} & E^{(\psi,T)} \arrow{r}\arrow{d}{\Psi_E}& \tilde A\rtimes_r \G\arrow{r}\arrow{d}{\Psi_A} & 0\\
+0\arrow{r} & K_{\tilde B\rtimes G}\arrow{r}\arrow{d}{(\Psi_B)_*} & E^{(\psi,T)} \arrow{r}\arrow{d}{\Psi_E}& \tilde A\rtimes_r G\arrow{r}\arrow{d}{\Psi_A} & 0\\
 0\arrow{r} & K_{C^*(X,B)}\arrow{r} & E^{(\psi_x,T_x)} \arrow{r}& C^*(X,A)\arrow{r} & 0
 \end{tikzcd}.
 \]
-Now the remark $3.7$ of \cite{OY2} gives $((\Psi_B)_*)_*\circ D_{\tilde A\rtimes_r\G}^{K_{\tilde B\rtimes_\G}} = D_{C^*(X,A)}^{K_{C^*(X,B)}}\circ (\Psi_A)_*$, and if we compose by the Morita equivalence, we get 
-\[\sigma(\iota^*(z)) \circ (\Psi_A)_* = (\Psi_B)_*\circ J_\G(z),\]
+Now the remark $3.7$ of \cite{OY2} gives $((\Psi_B)_*)_*\circ D_{\tilde A\rtimes_rG}^{K_{\tilde B\rtimes_G}} = D_{C^*(X,A)}^{K_{C^*(X,B)}}\circ (\Psi_A)_*$, and if we compose by the Morita equivalence, we get 
+\[\sigma(\iota^*(z)) \circ (\Psi_A)_* = (\Psi_B)_*\circ J_G(z),\]
 where $\iota^*(z)$ is indeed the class of $(H_B, \psi_x,T_x)$.\\
 
-As $C_0(P_d(\G))$ is a $\G$-algebra whose fiber over any $w\in\beta X$ is isomorphic to $C_0(P_d(X))$, if $A=C_0(P_d(\G))$, then $(\Psi_A)_*[\mathcal L_d]\in K^{\epsilon , R}_0(C^*(X,C_0(P_d(X)))$ which is equal to $[P_X]$, and gives the result.
-\[(\Psi_B)_*\circ\mu^{\epsilon,R}_\G (z) = A^{\epsilon,R}(\iota^*(z)).\]
+As $C_0(P_d(G))$ is a $G$-algebra whose fiber over any $w\in\beta X$ is isomorphic to $C_0(P_d(X))$, if $A=C_0(P_d(G))$, then $(\Psi_A)_*[\mathcal L_d]\in K^{\epsilon , R}_0(C^*(X,C_0(P_d(X)))$ which is equal to $[P_X]$, and gives the result.
+\[(\Psi_B)_*\circ\mu^{\epsilon,R}_G (z) = A^{\epsilon,R}(\iota^*(z)).\]
 This, passing to $K$-theory, implies the result of \cite{SkTuYu}.\\
 
 
@@ -258,75 +284,75 @@ This, passing to $K$-theory, implies the result of \cite{SkTuYu}.\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{prop} 
-Let A be a $\G$-algebra.\\
+Let A be a $G$-algebra.\\
 If the following statement is true :\\
 
-$\bullet$(Quantitative Injectivity) $\forall d\geq 0$, there exists $\epsilon\in (0,\frac{1}{4})$ such that, for all $r\geq r_{d,\epsilon}$, there exists $d'\geq d$ such that if $x\in RK_*^G(P_d(G),A)$ satisfies $\mu_{G,A}^{\epsilon,R,d}(x)=0\in K^{\epsilon,R}(A\rtimes_r G)$, then $x=0$ in $RK^G(P_{d'}(G),A)$;\\
+$\bullet$(Quantitative Injectivity) $\forall dGeq 0$, there exists $\epsilon\in (0,\frac{1}{4})$ such that, for all $rGeq r_{d,\epsilon}$, there exists $d'Geq d$ such that if $x\in RK_*^G(P_d(G),A)$ satisfies $\mu_{G,A}^{\epsilon,R,d}(x)=0\in K^{\epsilon,R}(A\rtimes_r G)$, then $x=0$ in $RK^G(P_{d'}(G),A)$;\\
 
 then $\mu_{G,A}$ is injective.\\
 
 On the other hand, if this statement is true : \\
 
-$\bullet$(Quantitative Surjectivity) there exists $\epsilon'\in (0,\frac{1}{4})$ such that $\forall r'\geq r_{d,\epsilon},\exists \epsilon,r$ such that $\epsilon'\leq \epsilon<\frac{1}{4}$ and $r_{d,\epsilon}\leq r\leq r'$, such that for all $y\in K_*^{\epsilon',r'}(A\rtimes_r G),\exists x \in RK_*^\G(P_d(G),A)$ such that $\mu_{G,A}^{\epsilon',r',d}(x)=\iota_{\epsilon,r}^{\epsilon',r'}(y)$;\\
+$\bullet$(Quantitative Surjectivity) there exists $\epsilon'\in (0,\frac{1}{4})$ such that $\forall r'Geq r_{d,\epsilon},\exists \epsilon,r$ such that $\epsilon'\leq \epsilon<\frac{1}{4}$ and $r_{d,\epsilon}\leq r\leq r'$, such that for all $y\in K_*^{\epsilon',r'}(A\rtimes_r G),\exists x \in RK_*^G(P_d(G),A)$ such that $\mu_{G,A}^{\epsilon',r',d}(x)=\iota_{\epsilon,r}^{\epsilon',r'}(y)$;\\
 
-then $\mu_{\G,A}$ is surjective.
+then $\mu_{G,A}$ is surjective.
 \end{prop}
 
 \begin{dem}
-Let $x\in KK(C_0(P_d(\G)),A)$ which satisfies $\mu_{\G,A}(x)=0$, then $\iota_{\epsilon,r}\circ\mu_{\G,A}^{\epsilon,r,d}(x)=0$. By remark $1.18$ of \cite{OY2}, there exists a universal $\lambda>0$ and a certain $r'>0$ such that
-\[\begin{array}{lll}0 &  =  & \iota_{\epsilon,r}^{\lambda\epsilon,r'}\circ \mu_{\G,A}^{\epsilon,r,d}(x) \\
-			& = & \iota_{\epsilon,r}^{\lambda\epsilon,r'} (J_{\G}^{\epsilon,r}(x)([\mathcal L_d]_{\epsilon,r})) \\
-			& = & J_{\G}^{\lambda\epsilon,r'}(x)([\mathcal L_d]_{\lambda\epsilon,r'}) \\
-			& = & \mu_{\G,A}^{\lambda\epsilon,r',d}(x).
+Let $x\in KK(C_0(P_d(G)),A)$ which satisfies $\mu_{G,A}(x)=0$, then $\iota_{\epsilon,r}\circ\mu_{G,A}^{\epsilon,r,d}(x)=0$. By remark $1.18$ of \cite{OY2}, there exists a universal $\lambda>0$ and a certain $r'>0$ such that
+\[\begin{array}{lll}0 &  =  & \iota_{\epsilon,r}^{\lambda\epsilon,r'}\circ \mu_{G,A}^{\epsilon,r,d}(x) \\
+			& = & \iota_{\epsilon,r}^{\lambda\epsilon,r'} (J_{G}^{\epsilon,r}(x)([\mathcal L_d]_{\epsilon,r})) \\
+			& = & J_{G}^{\lambda\epsilon,r'}(x)([\mathcal L_d]_{\lambda\epsilon,r'}) \\
+			& = & \mu_{G,A}^{\lambda\epsilon,r',d}(x).
 \end{array}\]
-But then the quantitative injectivity condition assures that $x=0$ in $KK^\G(C_0(P_{d'}),A)$ and $x=0$ in the inductive limite over $d$ $K^{top}(G,A)$.\\
+But then the quantitative injectivity condition assures that $x=0$ in $KK^G(C_0(P_{d'}),A)$ and $x=0$ in the inductive limite over $d$ $K^{top}(G,A)$.\\
 The second point is immediate. \\
 \qed
 \end{dem}
 
 This kind of statement leads us to define the following proprieties, following \cite{OY3}.\\
 \begin{itemize}
-\item[$\bullet$] $QI_{\G,B}(d,d',R,\epsilon)$ : for any $x\in KK^\G(C_0(P_d(\G)), B )$, $\mu^{\epsilon,R}_\G(x) = 0$ implies $\iota_d^{d'}(x)=0$ in $KK^\G(P_{d'}(\G),B)$.
-\item[$\bullet$] $QS_{\G,B}(d,R,R',\epsilon,\epsilon')$ : for any $y\in K^{\epsilon,R}(B\rtimes \G)$, there exists $x\in KK^\G(P_d(\G),B)$ such that $\mu^{\epsilon',R'}_\G(x)=\iota_{\epsilon,R}^{\epsilon',R'}(y)$.
+\item[$\bullet$] $QI_{G,B}(d,d',R,\epsilon)$ : for any $x\in KK^G(C_0(P_d(G)), B )$, $\mu^{\epsilon,R}_G(x) = 0$ implies $\iota_d^{d'}(x)=0$ in $KK^G(P_{d'}(G),B)$.
+\item[$\bullet$] $QS_{G,B}(d,R,R',\epsilon,\epsilon')$ : for any $y\in K^{\epsilon,R}(B\rtimes G)$, there exists $x\in KK^G(P_d(G),B)$ such that $\mu^{\epsilon',R'}_G(x)=\iota_{\epsilon,R}^{\epsilon',R'}(y)$.
 \end{itemize} 
 
 \begin{thm}\label{Quant1}
-Let $B$ a $\G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then $\mu_{\G,\tilde B}$ is injective if and only if for all $d,\epsilon,r\geq r_{\G,d,\epsilon}$, there exists $d'\geq d$ such that $QI_{\G,B}(d,d',\epsilon,R)$. 
+Let $B$ a $G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then $\mu_{G,\tilde B}$ is injective if and only if for all $d,\epsilon,rGeq r_{G,d,\epsilon}$, there exists $d'Geq d$ such that $QI_{G,B}(d,d',\epsilon,R)$. 
 \end{thm}
 
 To prove the theorem, we will need a serie of lemmas.\\
 
 \begin{lem}
-Let $Z$ be a $\G$-compact proper $\G$-space such that the anchor map $p:Z\rightarrow \G^{(0)}$ is locally injective, and let $(B_j)$ be a countable family of $\G$-algebras. Then the projection $\prod_j B_j \otimes K \rightarrow B_j\otimes K$ induces an isomorphism
-\[KK^\G(C_0(Z),\prod_j B_j\otimes K)\rightarrow\prod_j KK^\G(C_0(Z),B_j\otimes K).\]
+Let $Z$ be a $G$-compact proper $G$-space such that the anchor map $p:Z\rightarrow G^{(0)}$ is locally injective, and let $(B_j)$ be a countable family of $G$-algebras. Then the projection $\prod_j B_j \otimes K \rightarrow B_j\otimes K$ induces an isomorphism
+\[KK^G(C_0(Z),\prod_j B_j\otimes K)\rightarrow\prod_j KK^G(C_0(Z),B_j\otimes K).\]
 \label{LocalInjectivity}
 \end{lem}
 
 \begin{dem}
 Let $B_\infty = \prod B_j\otimes K$ and $p_k : B\infty \rightarrow B_k$ the projection.\\
-Let $(\mathcal E ,\varphi,F)\in E^\G(C_0(Z), B_\infty)$ be a cycle such that every 
+Let $(\mathcal E ,\varphi,F)\in E^G(C_0(Z), B_\infty)$ be a cycle such that every 
 \[(\mathcal E_k , \varphi_k,F_k)=(p_k)_*(\mathcal E ,\varphi,F)\] 
 is homotopic to $0$. 
 %Up to replace $F_k$ with $\frac{F_k+F_k^*}{2}$, we can suppose that $F_k$ is self adjoint.
 According to \cite{OY3}, we can choose a homotopy which is $C$-Lipschitz on the Calkin algebra for a universal constant $C>0$, hence (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a family of compact operators $T_{s,t}\in K(\mathcal E)$ such that $||F_s-F_t+T_{s,t}||\leq C|s-t|$. But $t\mapsto F'_t= F_{t}+T_{0,t}$ is a compact perturbation of $s\mapsto F_s$ in $\mathcal L(\mathcal E)$ which is $C$-Lipschitzian. Up to replace $(F_s)_s$ with $(F'_t)$, we can suppose the homotopies are uniformly Lipschitzian, and $\tilde F=\prod F_j$ defines a bounded operator.\\
-We now use an idea of \cite{TuBC2}, lemma $3.6$. Namely, using the local injectivity of $p$, we show that $F$ can be supposed to commute with $\varphi$ and $\G$. For the sake of completness, we recall the proof. First, choose a finite open cover $(U_j)_j$ of a compact fundamental domain $K$ for the action of $\G$ such that $p_{|U_j}$ is injective, and take compactly supported continuous functions $\phi_j : Z\rightarrow \R_+$ such that $\text{supp }\phi_j \subset U_j$ and $K\subset \cup \phi_j^{-1}(0,+\infty)$. We can suppose $\sum_{j,g\in \G^{p(z)}} \phi_j (zg) = 1,\forall z\in Z$. Now define $F'_x = \sum_{j, g\in \G^x} \alpha_g (\phi^{\frac{1}{2}} F_{s(g)}\phi^{\frac{1}{2}})$. It is an $\G$-invariant operator which commutes with the action of $C_0(Z)$.\\
+We now use an idea of \cite{TuBC2}, lemma $3.6$. Namely, using the local injectivity of $p$, we show that $F$ can be supposed to commute with $\varphi$ and $G$. For the sake of completness, we recall the proof. First, choose a finite open cover $(U_j)_j$ of a compact fundamental domain $K$ for the action of $G$ such that $p_{|U_j}$ is injective, and take compactly supported continuous functions $\phi_j : Z\rightarrow \R_+$ such that $\text{supp }\phi_j \subset U_j$ and $K\subset \cup \phi_j^{-1}(0,+\infty)$. We can suppose $\sum_{j,g\in G^{p(z)}} \phi_j (zg) = 1,\forall z\in Z$. Now define $F'_x = \sum_{j, g\in G^x} \alpha_g (\phi^{\frac{1}{2}} F_{s(g)}\phi^{\frac{1}{2}})$. It is an $G$-invariant operator which commutes with the action of $C_0(Z)$.\\
 Now we can see that $(\prod_j \mathcal E , \prod \varphi_j , \prod_j F_j)$ defines a cycle as $[\varphi(a),\tilde F]=0$ and $\varphi(a)(\alpha_g(F_{s(g)}-\tilde F_{r(g)})=0$. Moreover it is unitarly equivalent to $(\mathcal E,\varphi, \tilde F )$, and homotopic to $0$.\\
 For the surjectivity, just take $[(\prod \mathcal E_j,\prod \varphi_j,\prod F_j)]$ as a preimage of $\prod_j [(\mathcal E_j, \varphi_j,F_j)]$, using the previous construction.\\
 \qed  
 \end{dem}
 
 \begin{lem}\label{prod}
-Let $\G$ be a locally compact, $\sigma$-compact étale groupoid, $\{B_j\}_{j\geq 0}$ a family of $\G$-algebras and $K$ the algebra of compact operators over a separable Hilbert space. Set $\Delta=P_d(\G)$, then we have an $\Z_2$-graded ismorphism 
-\[KK^\G(C_0(\Delta),\prod_j B_j\otimes K)\simeq \prod_j KK^\G(C_0(\Delta),B_j)\]
+Let $G$ be a locally compact, $\sigma$-compact étale groupoid, $\{B_j\}_{jGeq 0}$ a family of $G$-algebras and $K$ the algebra of compact operators over a separable Hilbert space. Set $\Delta=P_d(G)$, then we have an $\Z_2$-graded ismorphism 
+\[KK^G(C_0(\Delta),\prod_j B_j\otimes K)\simeq \prod_j KK^G(C_0(\Delta),B_j)\]
 \end{lem}
 
 \begin{dem}
-For all $j$ and any locally compact $\G$-space $X$, the projection $\prod_j B_j\otimes K\rightarrow B_j \otimes K$ induces a morphism
+For all $j$ and any locally compact $G$-space $X$, the projection $\prod_j B_j\otimes K\rightarrow B_j \otimes K$ induces a morphism
 \[\Theta^X : KK^G(C_0(X),\prod_j B_j\otimes K )\rightarrow \prod_j  KK^G(C_0(X),B_j\otimes K ).\]
 Let $X_0\subset X_1 \subset ...\subset X_n$ be the $n$-skeleton decomposition associated to the simplicial structure of the Rips complex $\Delta$ and let $Z_j = C_0(X_j)$, $Z^j_{j-1} = C_0(X_j-X_{j-1})$ and $\Theta_j = \Theta^{X_j}$.
 We will show the claim by induction on the dimension of $\Delta$.\\
 
-The extension of $\G$-algebras $0\rightarrow Z^j_{j-1} \rightarrow Z_j \rightarrow Z_{j-1}\rightarrow 0$ gives a commutative diagram with exact rows :
+The extension of $G$-algebras $0\rightarrow Z^j_{j-1} \rightarrow Z_j \rightarrow Z_{j-1}\rightarrow 0$ gives a commutative diagram with exact rows :
 %lines :
 %\[\begin{tikzcd}
 %KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta}\arrow{d}{\Theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\Theta_{j-1}} & KK_*(Z_j,\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\Theta_j} & KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta} \arrow{d}{\Theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}{\Theta_{j-1}}\\
@@ -340,33 +366,33 @@ KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\delta} \arrow{r}{\Theta^j_{j-1}} 
 KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}{\Theta_{j-1}} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)
 \end{tikzcd}\]
 
-The five lemma assures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, because $\Delta$ is a typed simplicial simplex (see \cite{TuBC2}), $X_j-X_{j-1}$ is equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicty assures then that, if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta^j_{j-1}$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $\G$-compact proper $\G$-space, and its anchor map is just the target map $r:\G\rightarrow \G^{(0)}$, which is supposed to be étale, so locally injective.\\
+The five lemma assures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, because $\Delta$ is a typed simplicial simplex (see \cite{TuBC2}), $X_j-X_{j-1}$ is equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicty assures then that, if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta^j_{j-1}$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $G$-compact proper $G$-space, and its anchor map is just the target map $r:G\rightarrow G^{(0)}$, which is supposed to be étale, so locally injective.\\
 \qed
 \end{dem}
 
 We can now prove the theorem \ref{Quant1}.\\
 
 \begin{dem}
-Let $x\in KK^\G(P_d(\G),\tilde B)$ such that $\mu_{G,\tilde B}(x)=0$. Then, as the quantitative assembly maps factorize $\mu_{G,\tilde B}$, there exist $\epsilon>0$ and $R\geq r_{\G,\tilde B,d}$, such that $\mu_{\G,\tilde B}^{\epsilon,R}(x)=0$. Using the isomorphism of lemma \ref{prod} and the Morita equivalence, we can identify $x$ with $(x_j)_j$ under $KK^\G(P_d(\G),\tilde A)\simeq\prod_j KK^\G(P_d(\G),A)$. Now let $d'\geq d$ such that $QI_{A}(d,d',\epsilon,R)$ holds. That assures that $x_j=0$ in $KK^\G(P_{d'}(\G),B)$, and $x=0$.\\
+Let $x\in KK^G(P_d(G),\tilde B)$ such that $\mu_{G,\tilde B}(x)=0$. Then, as the quantitative assembly maps factorize $\mu_{G,\tilde B}$, there exist $\epsilon>0$ and $RGeq r_{G,\tilde B,d}$, such that $\mu_{G,\tilde B}^{\epsilon,R}(x)=0$. Using the isomorphism of lemma \ref{prod} and the Morita equivalence, we can identify $x$ with $(x_j)_j$ under $KK^G(P_d(G),\tilde A)\simeq\prod_j KK^G(P_d(G),A)$. Now let $d'Geq d$ such that $QI_{A}(d,d',\epsilon,R)$ holds. That assures that $x_j=0$ in $KK^G(P_{d'}(G),B)$, and $x=0$.\\
 
-For the converse, suppose one can find $d,\epsilon,R$ such that $QI_{\G,A}(d,d',\epsilon,R)$ is NOT true for all $d'\geq d$. Then one can extract a increasing sequence $d_j$ diverging to $+\infty$ and $x_j\in KK^\G(P_d(\G),A)$ such that $\mu_{\G,\tilde B}^{\epsilon,R}(x_j)=0$ and $x_j\neq 0$ in $KK^\G(P_{d_j},A)$. Let $x\in KK^\G(P_d,\tilde A)$ be the image of $(x_j)\in \prod KK^\G(P_d,A)$. We have $\mu_{\G,\tilde A}(x)=0$, and $x\neq 0$ in $KK^\G(P_{d'}(\G),\tilde A)$ for all $d'\geq d$, so $\mu_{\G,\tilde A}$ is not injective. \\
+For the converse, suppose one can find $d,\epsilon,R$ such that $QI_{G,A}(d,d',\epsilon,R)$ is NOT true for all $d'Geq d$. Then one can extract a increasing sequence $d_j$ diverging to $+\infty$ and $x_j\in KK^G(P_d(G),A)$ such that $\mu_{G,\tilde B}^{\epsilon,R}(x_j)=0$ and $x_j\neq 0$ in $KK^G(P_{d_j},A)$. Let $x\in KK^G(P_d,\tilde A)$ be the image of $(x_j)\in \prod KK^G(P_d,A)$. We have $\mu_{G,\tilde A}(x)=0$, and $x\neq 0$ in $KK^G(P_{d'}(G),\tilde A)$ for all $d'Geq d$, so $\mu_{G,\tilde A}$ is not injective. \\
 \qed   
 \end{dem}
 
-We also have a theorem relating quantitative surjectivity for $\mu_{\G,B}$ and surjectivity of $\mu_{\G,\tilde B}$.
+We also have a theorem relating quantitative surjectivity for $\mu_{G,B}$ and surjectivity of $\mu_{G,\tilde B}$.
 
 \begin{thm}
-Let $B$ a $\G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then there exists $\lambda>1$ such that $\mu_{\G,\tilde B}$ is onto if and only if for any $0<\epsilon<\frac{1}{4\lambda}$ and $R>0$, there exist $R'\geq \max(R,r_{\G,d,\epsilon})$ and $d>0$ such that $QS_{B,\G}(d,R,R',\epsilon,\lambda\epsilon)$ holds.
+Let $B$ a $G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then there exists $\lambda>1$ such that $\mu_{G,\tilde B}$ is onto if and only if for any $0<\epsilon<\frac{1}{4\lambda}$ and $R>0$, there exist $R'Geq \max(R,r_{G,d,\epsilon})$ and $d>0$ such that $QS_{B,G}(d,R,R',\epsilon,\lambda\epsilon)$ holds.
 \end{thm}
 
 \begin{dem}
-Let $\lambda>0$ the universal constant of remark $1.18$ of \cite{OY2} : for any $C^*$-algebra and $x,y\in K^{\epsilon, R}(A)$ such that $\iota_{\epsilon,R} x =\iota_{\epsilon,R}y$, there exists $R'\geq R$ such that $\iota_{\epsilon,R}^{\lambda\epsilon,R'} x =\iota_{\epsilon,R}^{\lambda\epsilon,R'}y$.\\
+Let $\lambda>0$ the universal constant of remark $1.18$ of \cite{OY2} : for any $C^*$-algebra and $x,y\in K^{\epsilon, R}(A)$ such that $\iota_{\epsilon,R} x =\iota_{\epsilon,R}y$, there exists $R'Geq R$ such that $\iota_{\epsilon,R}^{\lambda\epsilon,R'} x =\iota_{\epsilon,R}^{\lambda\epsilon,R'}y$.\\
 
-Let $y\in K_*(\tilde B\rtimes \G)$, and take $z\in K^{\epsilon,R}$, where $R>0,\epsilon<\frac{1}{4\lambda}$, such that $\iota_{\epsilon,R}z = y$. The projection on the $j^{th}$ component $\tilde B \rightarrow K_B $ used in $K$-theory then composed with Morita equivalence gives a map $K^{\epsilon,R}(\tilde B\rtimes \G)\rightarrow K^{\epsilon ,R}(B\rtimes \G)$, and $z_j$ denotes the image of $z$ under this map. We can pick $d$ and $R'\geq\max (r_{\G,d,\epsilon})$ such that $QS(d,R,R',\epsilon,\lambda\epsilon)$ : for every $j$, there exists $x_j\in KK^\G(P_d,B) $ such that $\mu_{\G,B}^{d,\lambda\epsilon,R'}(x_j)=\iota_{\epsilon,R}^{\lambda\epsilon,R'}z_j$. As $KK^\G(P_d,\tilde B)\simeq \prod_j KK^\G(P_d,B)$, $(x_j)$ can be taken as an element $x$ of $KK^\G(P_d,\tilde B)$. Naturality of the assembly maps, and compatibility of quantitative assembly maps with the usual one assures that $\mu_{\G,\tilde B}(x)=z$, whereby $\mu_{\G,\tilde B}$ is onto.\\
+Let $y\in K_*(\tilde B\rtimes G)$, and take $z\in K^{\epsilon,R}$, where $R>0,\epsilon<\frac{1}{4\lambda}$, such that $\iota_{\epsilon,R}z = y$. The projection on the $j^{th}$ component $\tilde B \rightarrow K_B $ used in $K$-theory then composed with Morita equivalence gives a map $K^{\epsilon,R}(\tilde B\rtimes G)\rightarrow K^{\epsilon ,R}(B\rtimes G)$, and $z_j$ denotes the image of $z$ under this map. We can pick $d$ and $R'Geq\max (r_{G,d,\epsilon})$ such that $QS(d,R,R',\epsilon,\lambda\epsilon)$ : for every $j$, there exists $x_j\in KK^G(P_d,B) $ such that $\mu_{G,B}^{d,\lambda\epsilon,R'}(x_j)=\iota_{\epsilon,R}^{\lambda\epsilon,R'}z_j$. As $KK^G(P_d,\tilde B)\simeq \prod_j KK^G(P_d,B)$, $(x_j)$ can be taken as an element $x$ of $KK^G(P_d,\tilde B)$. Naturality of the assembly maps, and compatibility of quantitative assembly maps with the usual one assures that $\mu_{G,\tilde B}(x)=z$, whereby $\mu_{G,\tilde B}$ is onto.\\
 
-Suppose that there exist $0<\epsilon<\frac{1}{4\lambda}$ and $R>0$ such that for every positive numbers $d>0$ and $R'\geq\max (r_{\G,B},R)$, $QS(d,R,R',\epsilon,\lambda\epsilon)$ does not hold. Let $(d_j)$ and $(R_j)$ be unbounded increasing sequences of positive numbers and $y_j\in K^{\epsilon,R}(B\rtimes \G)$ such that $\iota_{\epsilon,R}^{\lambda\epsilon,R_j}(y_j)$ is not in the range of $\mu_{\G,B}^{d_j,\lambda\epsilon,R_j}$. Let $y\in K^{\epsilon,R}(\tilde B\rtimes \G)$ be an element such that its image with the previous map coincides with $y_j$. If there exists $x\in KK^\G(P_{s},\tilde B)$ for a $s\geq d$ such that $\iota_{\epsilon,R}( y) =\mu_{\G,\tilde B}^s(x)$ then there would exists a $R'\geq R$ such that
-\[\iota_{\epsilon,R}^{\lambda\epsilon, R'}( y) =\mu_{\G,\tilde B}^{s,\lambda\epsilon,R'}(x) = \iota_{\epsilon,R}^{\lambda\epsilon, R'}\circ\mu_{\G,\tilde B}^{s,\epsilon,R}(x).\]
-Now choose $j$ such that $d_j\geq s$ and $R_j>R'$, and compose the previous equality with $\iota_{\lambda\epsilon,R'}^{\lambda\epsilon,R_j}$ and $q_s^{d_j}$ to obtain $\iota_{\epsilon,R}^{\lambda\epsilon,R_j}(y_j)=\mu_{\G,B}^{d_j,\lambda\epsilon,R_j}$ which contradicts our assumption.\\
+Suppose that there exist $0<\epsilon<\frac{1}{4\lambda}$ and $R>0$ such that for every positive numbers $d>0$ and $R'Geq\max (r_{G,B},R)$, $QS(d,R,R',\epsilon,\lambda\epsilon)$ does not hold. Let $(d_j)$ and $(R_j)$ be unbounded increasing sequences of positive numbers and $y_j\in K^{\epsilon,R}(B\rtimes G)$ such that $\iota_{\epsilon,R}^{\lambda\epsilon,R_j}(y_j)$ is not in the range of $\mu_{G,B}^{d_j,\lambda\epsilon,R_j}$. Let $y\in K^{\epsilon,R}(\tilde B\rtimes G)$ be an element such that its image with the previous map coincides with $y_j$. If there exists $x\in KK^G(P_{s},\tilde B)$ for a $sGeq d$ such that $\iota_{\epsilon,R}( y) =\mu_{G,\tilde B}^s(x)$ then there would exists a $R'Geq R$ such that
+\[\iota_{\epsilon,R}^{\lambda\epsilon, R'}( y) =\mu_{G,\tilde B}^{s,\lambda\epsilon,R'}(x) = \iota_{\epsilon,R}^{\lambda\epsilon, R'}\circ\mu_{G,\tilde B}^{s,\epsilon,R}(x).\]
+Now choose $j$ such that $d_jGeq s$ and $R_j>R'$, and compose the previous equality with $\iota_{\lambda\epsilon,R'}^{\lambda\epsilon,R_j}$ and $q_s^{d_j}$ to obtain $\iota_{\epsilon,R}^{\lambda\epsilon,R_j}(y_j)=\mu_{G,B}^{d_j,\lambda\epsilon,R_j}$ which contradicts our assumption.\\
 \qed
 \end{dem}
 
@@ -375,7 +401,7 @@ Recall that if the groupoid $G$ satisfies the Baum-Connes conjecture with coeffi
 \begin{itemize}
 \item[$\bullet$] amenable groupoids are a-$T$-menable.\\
 \item[$\bullet$] Let $X$ be a uniformly discrete metric space with bounded geometry. Then, if $X$ is coarsely embeddable into a separable Hilbert space, $G(X)$ is a-$T$-menable.\cite{SkTuYu} \\
-\item[$\bullet$] If $X$ admits a fibred coarse embedding into Hilbert space, then $G(X)_{|\partial \beta X}$ is a-$t$-menable.\cite{FinnSellFibred} For interesting examples of this type, recall the definition of a box space. Let $\Gamma$ be a finitely generated group, and $\mathcal N$ a family of nested normal subgroups with trivial intersection, which have finite index in $\Gamma$. Take the coarse union of the quotients to construct a coarse space $X_{\mathcal N}(\Gamma)= \cup_{H\in \mathcal N } \Gamma/ H$. Then, $X_{\mathcal N}(\Gamma)$ admits a fibred coarse embedding if and only if $\Gamma$ is a-$T$-menable. But if $X_{\mathcal N}$ is an expander, it cannot be coarsely embedded into a Hilbert space, so just take an a-$T$-menable group which has a box space $X$ which is an expander to get a coarse space that is not coarsely embeddable into Hilbert space ($SL(2,\Z)$ works), but admits a fibred coarse embedding.\\
+\item[$\bullet$] If $X$ admits a fibred coarse embedding into Hilbert space, then $G(X)_{|\partial \beta X}$ is a-$t$-menable.\cite{FinnSellFibred} For interesting examples of this type, recall the definition of a box space. Let $Gamma$ be a finitely generated group, and $\mathcal N$ a family of nested normal subgroups with trivial intersection, which have finite index in $Gamma$. Take the coarse union of the quotients to construct a coarse space $X_{\mathcal N}(Gamma)= \cup_{H\in \mathcal N } Gamma/ H$. Then, $X_{\mathcal N}(Gamma)$ admits a fibred coarse embedding if and only if $Gamma$ is a-$T$-menable. But if $X_{\mathcal N}$ is an expander, it cannot be coarsely embedded into a Hilbert space, so just take an a-$T$-menable group which has a box space $X$ which is an expander to get a coarse space that is not coarsely embeddable into Hilbert space ($SL(2,\Z)$ works), but admits a fibred coarse embedding.\\
 \end{itemize}
 
 The last example gives easily the following corollary.
@@ -402,17 +428,17 @@ We recall the following definition from \cite{OY3}.
 Let $B$ be a filtered $C^*$-algebra. 
 \begin{itemize}
 \item[$\bullet$] $PA_B(\epsilon,\epsilon',R,R')$ : for every $x\in K_*^{\epsilon,R}(B)$ such that $\iota_{\epsilon,R}(x)=0$ in $K_*(B)$, then $\iota_{\epsilon,R}^{\epsilon',R'}(x)=0$ in $K_*^{\epsilon',R'}(B)$.
-\item[$\bullet$] $B$ is said to satisfy the Persistance Approximation Property (PAP) if for every $R>0$ and $\epsilon\in (0,\frac{1}{4})$, there exists $R'\geq 0 $ and $\epsilon'\in [\epsilon,\frac{1}{4})$ such that $PA(\epsilon,\epsilon',R,R')$ holds.
+\item[$\bullet$] $B$ is said to satisfy the Persistance Approximation Property (PAP) if for every $R>0$ and $\epsilon\in (0,\frac{1}{4})$, there exists $R'Geq 0 $ and $\epsilon'\in [\epsilon,\frac{1}{4})$ such that $PA(\epsilon,\epsilon',R,R')$ holds.
 \end{itemize}
 \end{definition}
 
 \begin{thm} 
-Up to some hypothesis, if $\mu_{G,l^\infty(\N, K_A)}$ is onto and $\mu_{G,A}$ is one-to-one, then, for a universal constant $\lambda_{PA}$, for all $\epsilon \in(0,\frac{1}{4\lambda_{PA}})$ and $R>0$, there exists $R'\geq R$ such that $PA_{A\rtimes G}(\epsilon,\lambda_{PA}\epsilon,R,R')$ holds.
+Up to some hypothesis, if $\mu_{G,l^\infty(\N, K_A)}$ is onto and $\mu_{G,A}$ is one-to-one, then, for a universal constant $\lambda_{PA}$, for all $\epsilon \in(0,\frac{1}{4\lambda_{PA}})$ and $R>0$, there exists $R'Geq R$ such that $PA_{A\rtimes G}(\epsilon,\lambda_{PA}\epsilon,R,R')$ holds.
 \end{thm}
 
 \begin{dem}
 We denote $l^\infty(\N,K_A)$ by $\tilde A$.\\
-Assume the statement does not holds : there exists $\epsilon$ and $R$ such that $PA(\epsilon,\epsilon',R,R')$ is not true for every $R'\geq R$. Then we can extract a increasing unbounded sequence of positive numbers $R_j$ and elements $x_j\in K_*^{\epsilon,R}(A\rtimes G)$ such that $\iota_{\epsilon,R}(x_j)=0$ and $\iota_{\epsilon,R}^{\lambda_{PA},R_j}(x)\neq 0$. \\
+Assume the statement does not holds : there exists $\epsilon$ and $R$ such that $PA(\epsilon,\epsilon',R,R')$ is not true for every $R'Geq R$. Then we can extract a increasing unbounded sequence of positive numbers $R_j$ and elements $x_j\in K_*^{\epsilon,R}(A\rtimes G)$ such that $\iota_{\epsilon,R}(x_j)=0$ and $\iota_{\epsilon,R}^{\lambda_{PA},R_j}(x)\neq 0$. \\
 According to the lemma \ref{LocalInjectivity}, there exists $x\in K_*^{\alpha\epsilon,h_\epsilon R}(\tilde A\rtimes G)$ such that $p_j(x)=x_j$ where $p_j$ is the composition of the projection on the $j^{th}$ factor $\tilde A \rtimes G \rightarrow K_A \rtimes G$ and the Morita equivalence in K-theory.
 By naturality of the quantitative assembly maps, the following diagram commutes
 \[\begin{tikzcd}

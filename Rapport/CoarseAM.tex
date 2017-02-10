@@ -123,6 +123,32 @@ which we compose by the Morita equivalence on the left $M_{C^*(X,B_2)}^{-1}$
 The homomorphisms inducing the Morita equivalence make the following diagram commutes,
 \[\begin{tikzcd}C^*(X,B_1)\arrow{r}{g_X}\arrow{d} & C^*(X,B_2)\arrow{d} \\ K_{C^*(X,B_1)} \arrow{r}{\psi}& K_{C^*(X,B_2)}\end{tikzcd},\]
 and $\hat\sigma_X(g_*(z))= g_{X,*}\circ M_{C^*(X,B_1)}^{-1}\circ D_{K_{C^*(X,B_1)},E^{(\pi,T)}}=g_{X,*}\circ \hat\sigma(z)$.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  NOUVELLE PREUVE  %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item[(iv)] New proof.\\
+Let $z \in KK(A,B_1)$ be represented by the $K$-cycle $(H_{B_1},\pi,T)$. Let $V\in \mathcal L_{B_2}(H_{B_1}\otimes_g B_2)$ be the isometry of remark \ref{isometry}. According to Lemma \ref{isometryKK}, 
+\[g_*(z)=[H_{B_1}\otimes_g B_2, \pi\otimes_g 1, T\otimes_g 1]\in KK^G(A,B_2)\] 
+is also represented by $[H_{B_2}, \pi',T' ]$ where $\pi' = Ad_{V}\circ (\pi\otimes_g 1)$ and $T' = V(T\otimes_g 1)V^* +1-VV^*$. Let $\psi$ be given by the composition $Ad_{V_X}\circ (g_X)_*$.\\
+The map $\Psi :(x,y)\mapsto (x, \psi(y))$ defines a $*$-homomorphism $E^{(\pi,T)} \rightarrow E^{(\pi',T')}$ such that 
+\[\Psi(x,P_X\pi_G(x)P_X +y)= (x, P'_X  \pi_X'(a)P'_X + \psi(y)) ).\] 
+Indeed, the crossed-product functor commutes with pull-back by $*$-homomorphisms, and $Ad_{V_X}\circ(g_X)_*\circ\pi_X= (Ad_V\circ g_* \circ \pi)_X = \pi'_X$ and $\psi(P_X)= V_X (P_X\otimes_{g_X} 1)V^*_X = (V(P\otimes_g 1 ) V^*)_X = (P')_X$ so that 
+\[\psi(P_X \pi_X(x) P_X)=P'_X \pi'_X(x) P'_X. \]
+This gives a commutative diagram 
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & K_{C^*(X,B_1)}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& C^*(X,A)\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & K_{C^*(X,B_2)}\arrow{r} & E^{(\pi',T')} \arrow{r}& C^*(X,A)\arrow{r} & 0
+\end{tikzcd}.\]
+and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi_{|K_{C^*(X,B_1)}}\subset K_{C^*(X,B_2)}$, so that we can again apply the remark $3.8$ of \cite{OY2} to state
+\[ D_{K_{C^*(X,B_2)},E^{(\pi',T')}}=\psi_*\circ D_{K_{C^*(X,B_1)},E^{(\pi,T)}},\]
+which we compose by the Morita equivalence on the left $M_{C^*(X,B_2)}^{-1}$
+\[\sigma_X(g_*(z)) = M_{C^*(X,B_2)}^{-1}\circ g_{X,*}\circ D_{K_{C^*(X,B_1)},E^{(\pi,T)}}.\]
+The homomorphisms inducing the Morita equivalence make the following diagram commutes,
+\[\begin{tikzcd}C^*(X,B_1)\arrow{r}{g_X}\arrow{d} & C^*(X,B_2)\arrow{d} \\ K_{C^*(X,B_1) } \arrow{r}{\psi}& K_{C^*(X,B_2)}\end{tikzcd},\]
+and $\sigma_X(g_*(z))= g_{X,*}\circ M_{C^*(X,B_1)}^{-1}\circ D_{K_{C^*(X,B_1)},E^{(\pi,T)}}=g_{X,*}\circ \sigma_X(z)$.\\
+
 \item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_J]$. Then we apply remark $3.7$ of \cite{OY2} to the commutative diagram
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & C^*(X,J)\arrow{r}\arrow{d} & C^*(X,A) \arrow{r}\arrow{d}{s\circ q_X}& C^*(X,A/J)\arrow{r}\arrow{d}{=} & 0\\
