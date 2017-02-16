@@ -167,7 +167,7 @@ induces a group isomorphism
 for every $\varepsilon\in(0,\frac{1}{4})$ and $E\in\mathcal E$. The family $\mathcal M_A = (\mathcal M_A^{\varepsilon,E} )_{\varepsilon\in(0,\frac{1}{4}),E\in\mathcal E}$ is called the controlled Morita equivalence and is a controlled morphism. It induces the usual Morita equivalence $M_A: K(A)\rightarrow K(A\otimes \mathfrak K(H))$ in $K$-theory. 
 \end{prop}
 
-\subsection{Controlled exact sequences}
+\subsection{Controlled $6$-term exact sequences}
 We will describe the $6$-term controlled exact sequence associated to a completely filtered extension of $C^*$-algebras. For any extension of $C^*$-algebras 
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0 \end{tikzcd},\]
 we denote $\partial_{J,A}$ the boundary map $K_*(A/J)\rightarrow K_{*+1}(J)$. The reader can find all the proofs and properties of the following results in \cite{OY2}.
@@ -182,18 +182,24 @@ is said to be completely filtered if the continuous linear bijection $A_E/J_E \h
 \begin{prop}
 There exists a control pair $(\alpha_D,k_D)$ such that for any completely filtered extension of $C^*$-algebras
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0 \end{tikzcd}\]
-there exists a $(\alpha_D,k_D)$-controlled morphism 
+there exists a $(\alpha_D,k_D)$-controlled morphism of odd degree
 \[D_{J,A} : \hat K(A/J)\rightarrow \hat K(J)\]
 which induces $\partial_{J,A}$ in $K$-theory.
 \end{prop}
+
+We will denote 
+\begin{itemize}
+\item[$\bullet$] $D_A$ the controlled boundary map associated to the completely filtered extension of $C^*$-algebras $0 \rightarrow SA \rightarrow CA \rightarrow A \rightarrow 0 $,
+\item[$\bullet$] $D^j_{J,A}$ the restriction of $D_{J,A}$ to $\hat K_j(A/J)\rightarrow \hat K_{j+1}(J)$.
+\end{itemize} 
 
 \begin{thm}
 There exists a universal control pair $(\lambda,h)$, which does not depend on $\mathcal E$, such that for any completely filtered extension of $C^*$-algebras 
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r}{\iota} & A\arrow{r}{q} & A/J\arrow{r} & 0 \end{tikzcd}\]
 the following $6$-term exact sequence is $(\lambda,h)$-exact
 \[\begin{tikzcd}[column sep = small]
- \hat K(J) \arrow{r}{\iota_*} & \hat K(A) \arrow{r}{q_*} & \hat K(A/J)\arrow{d}{D_{J,A}} \\
- \hat K(A/J) \arrow{u}{D_{J,A}} & \hat K(A) \arrow{l}{q_*} & \hat K(J)\arrow{l}{\iota_*}
+ \hat K_1(J) \arrow{r}{\iota_*} & \hat K_1(A) \arrow{r}{q_*} & \hat K_1(A/J)\arrow{d}{D^1_{J,A}} \\
+ \hat K_0(A/J) \arrow{u}{D^0_{J,A}} & \hat K_0(A) \arrow{l}{q_*} & \hat K_0(J)\arrow{l}{\iota_*}
 \end{tikzcd}.\]
 \end{thm}
 
@@ -253,13 +259,13 @@ Recall the definition of the Toeplitz extension. Let $S\in \mathcal L(l^2(\N))$ 
 \[0\rightarrow \mathfrak K(l^2(\N)) \rightarrow \mathcal T \rightarrow C(\mathbb S) \rightarrow 0 \]
 is exact. Set $\mathcal T_0$ the preimage of $C_0(0,1)$ under the last arrow, so that the sequence of $C^*$-algebras
 \[0\rightarrow \mathfrak K(l^2(\N)) \rightarrow \mathcal T_0 \rightarrow C_0(0,1) \rightarrow 0 \]
-is exact. This last sequence is called the Topelitz extension and $T\in KK_1(S, \mathfrak K(l^2(\N)) )$ denotes its boundary.\\
+is exact. This last sequence is called the Toeplitz extension, let $T\in KK_1(S, \mathfrak K(l^2(\N)) )$ denotes its boundary.\\
 
-Let us put $S = C_0(0,1)$ and $C= C_0(0,1]$ , so that the following sequence of $C^*$-algebras $0\rightarrow S \rightarrow C \rightarrow \C \rightarrow  0 $ is exact. Let us denote by $[\partial]\in KK_1(\C,S)$ the homotopy class of this extension. It is called the Bott element, and is invertible in $KK_1(\C,S)$, its inverse being the boundary of the Toeplitz extension.\cite{OY2} Recall that the boundary of this extension is given by right Kasparov product by $[\partial]$.\\ 
+Let us put $S = C_0(0,1)$ and $C= C_0(0,1]$ , so that evaluation at $1$ induces the following exact sequence of $C^*$-algebras $0\rightarrow S \rightarrow C \rightarrow \C \rightarrow  0 $. Let us denote by $[\partial]\in KK_1(\C,S)$ the homotopy class of this extension. It is called the Bott element, and is invertible in $KK_1(\C,S)$, its inverse being the boundary of the Toeplitz extension (see \cite{OY2}). Recall that the boundary of this extension is given by right Kasparov product by $[\partial]$.\\ 
 
-For any $C^*$-algebra $A$, we can tensorize the previous extension by $A$ to have an exact sequence $0\rightarrow SA \rightarrow CA \rightarrow A \rightarrow  0 $. Its homotopy class, denoted $[\partial_{SA}]\in KK_1(A,SA)$, actually satisfies $\tau_A([\partial ]) =[\partial_{SA}]$. It is also invertible, as we can tensorize the Toeplitz extension to get the following exact sequence of $C^*$-algebras
+For any $C^*$-algebra $A$, we can tensorize the previous extension by $A$ to have an exact sequence $0\rightarrow SA \rightarrow CA \rightarrow A \rightarrow  0 $. Its homotopy class, denoted $[\partial_{A}]\in KK_1(A,SA)$, actually satisfies $\tau_A([\partial ]) =[\partial_{A}]$. Let us denote $\partial_A : K_*(A)\rightarrow K_*(SA)$ the odd degree boundary homomorphism of the extension, it is induced by right multiplication by $[\partial_A]$. It is also invertible, as we can tensorize the Toeplitz extension to get the following exact sequence of $C^*$-algebras
 \[0\rightarrow \mathfrak K(l^2(\N))\otimes A \rightarrow \mathcal T_0 \otimes A \rightarrow SA \rightarrow 0 \]
-whose boundary element $T_A =[\partial_{\mathcal T_0 \otimes A }]\in KK_1(SA,\mathfrak K(l^2(\N))\otimes A)$ satisfies $\tau_A(T)= T_A$. \\
+whose boundary element $T_A =[\partial_{\mathcal T_0 \otimes A }]\in KK_1(SA,\mathfrak K(l^2(\N))\otimes A)$ satisfies $\tau_A(T)= T_A$. As $\tau_A$ respects Kapsarov product, one can see that $[\partial_A]$ and $T_A$ are mutual inverse.\\
 
 Tensorization by $S$ and $C$ is functorial with respect to $*$-homomorphisms, and if $g : A\rightarrow B$ is a $*$-homomorphism, we denote $Sg : SA\rightarrow SB$ and $Cg : CA\rightarrow CB$ the induced $*$-homomorphisms. By naturality of the Kasparov product, we get the following relation :
 \[(Sg)_*[\partial_{SA}] = [\partial_{SA}]\otimes_{SA} [Sg] = [g]\otimes_{B} [\partial_{SB}] = g^*[\partial_{SB}] .\]
@@ -267,10 +273,23 @@ Tensorization by $S$ and $C$ is functorial with respect to $*$-homomorphisms, an
 We can actually construct controlled morphisms $D_{A} :\hat K_0(A)\rightarrow \hat K_{1}(SA)$ and $Z_A :\hat K_1(SA)\rightarrow \hat K_{0}(A\otimes \mathfrak K)$ that induce right-multiplication by $[\partial_A]$ and $T_A$ respectively, i.e.
 \[\iota_{\varepsilon,E}\circ D_A(x) = \kappa_0(x) \otimes [\partial_A]\quad \iota_{\varepsilon,E}\circ Z_A(y) = \kappa_1(y) \otimes T_A \quad \forall x\in K_0^{\varepsilon, E}(A),y\in K_1^{\varepsilon, E}(SA). \]
 
+Recall that, if $p$ is a projection in $A$, $\partial_A [p]$ is given by the homotopy class of the path of unitaries 
+\[\left\{\begin{array}{rcl} [0,1] & \rightarrow & U(\tilde{SA}) \\ t & \mapsto & e^{2i\pi t}p + 1-p\end{array}\right.\]
+One can manage a similar construction in term of almsot-projections. Let $q\in P_n^{\varepsilon,E}(A)$ and $l$ an integer, define 
+\[V_{q,l}(t) = \text{diag }(e^{-2i\pi l t}, 1, 1,...,1) \ (e^{2i\pi t}q +1-q)\in U^{5\varepsilon,E}_n(\tilde{SA}),\]
+then 
+\[\left\{\begin{array}{rcl} 
+K_0^{\varepsilon,E}(A) & \rightarrow & K_1^{\varepsilon,E}(SA) \\ 
+\ [q,l]_{\varepsilon,E} & \mapsto & [V_{q,l}]_{5\varepsilon,E}
+\end{array}\right.\]
+defines a $(5,\textbf{1})$-controlled morphism $Z_A : \hat K_0(A)\rightarrow \hat K_1(SA)$, where $\textbf{1}$ is the constant function $\textbf{1}_\varepsilon(E) = 1$, $\forall E\in\mathcal E$.
 
-
-
-
+\begin{prop}[\cite{OY2} Prop. $3.9$ and $3.10$]
+There exist universal control pairs $(\lambda,h)$ and $(\lambda',h')$ such that 
+\[\begin{array}{c} D^0_A \sim_{(\lambda,h)} Z_A \\
+D^1_{\mathcal T_0\otimes A}\circ Z_A\sim_{(\lambda',h')} \mathcal M_A \end{array}\]
+where $\mathcal M_A$ is the controlled Morita equivalence.
+\end{prop}
 
 
 
