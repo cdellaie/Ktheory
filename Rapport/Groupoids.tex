@@ -111,21 +111,67 @@ and the reduced norm as $||f||_r= ||\lambda(f)||_{\mathcal L(L^2(G,A))}$.
 The reduced crosssed product $A\rtimes_r G$ is defined as the completion of $C_c(G,A)$ under the reduced norm.
 \end{definition}
 
+\subsection{Equivariant Hilbert modules}
+ % A FINIR
+\begin{lem}[Equivariant stabilization lemma \cite{LeGall}] \label{GStabilization} Let $E$ be a countably generated $G$-equivariant $B$-Hilbert module, then there exists an $G$-equivariant isomorphism of Hilbert module $E \oplus H_B \cong H_B$.
+\end{lem}
+
 \subsection{Equivariant $KK$-theory}
 
-In \cite{LeGall}, Le Gall defined, for any locally compact groupoid $G$, and $G$-algebras $A$ and $B$, $\Z_2$-graded abelian groups $KK^G(A,B)$ generalizing Kasparov's equivariant $KK$-theory for a locally compact group. Elements of $KK^G(A,B)$ are defined as equivalence classes of triples $(E,\pi,T)$ that we will call $K$-cycles, where :
+In \cite{LeGall}, Le Gall defined, for any locally compact groupoid $G$, and $G$-algebras $A$ and $B$, $\Z_2$-graded abelian groups $KK^G(A,B)$ generalizing Kasparov's equivariant $KK$-theory for a locally compact group. Elements of $KK^G(A,B)$ are defined as equivalence classes of triples $(E,\pi,T)$ that we will call $K$-cycles.
+
+\begin{definition} A $K$-cycle is a triple $(E,\pi,T)$ where :
 \begin{itemize}
 \item[$\bullet$] $E$ is a right $\Z_2$-graded $B$-Hilbert module, equipped with a unitary action of $G$, i.e. an even unitary $V\in\mathcal L_B(s^*E,r^*E)$ such that $V_g V_{g'} = V_{gg'}$ for all $(g,g')\in G^{(2)}$,
-\item[$\bullet$] $\pi : A\rightarrow \mathcal L_B(E)$ is a $*$-homomorphism with image containe in even operators, and we will often write $a$ instead of $\pi(a)$,
+\item[$\bullet$] $\pi : A\rightarrow \mathcal L_B(E)$ is a $*$-homomorphism whose image is contained in even operators, and we will often write $a$ instead of $\pi(a)$,
 \item[$\bullet$] $T\in\mathcal L_B(E)$ is an odd bounded $B$-linear operator satifying the $K$-cycle relations i.e. $[a, T]$, $a(T-T^*)$, $a(T^2-1)$ are compact operators in $\mathfrak K_B(E)$ and $a(r^* T -V s^*T V^*)$ is a compact operator in $\mathfrak K_{r^* B}(r^* E)$ for all $a\in A$.
 \end{itemize} 
-
 The set of such $K$-cycles is denoted by $\mathbb E^G(A,B)$.
+\end{definition}
 
 \begin{definition}
 Two $K$-cycles $(E,\pi,T)$ and $ (E',\pi',T')$ in $\mathbb E^G(A,B)$ are homotopic if there exists $ (\tilde E,\tilde \pi,\tilde T) \in\mathbb E^G(A,B[0,1])$ such that $(\tilde E_0,\tilde \pi_0,\tilde T_0)\simeq (E,\pi,T)$ and $(\tilde E_1,\tilde \pi_1,\tilde T_1)\simeq (E',\pi',T')$.
 \end{definition}
 
+\begin{definition} $KK_0^G(A,B)$ is defined as the quotient of $\mathbb E^G(A,B)$ by the equivalence relation given by homotopy. Let $\C_1$ denotes the trivial $G$-Hilbert module $\C^2$ with the standard grading given by $\begin{pmatrix}0 & 1 \\ 1 & 0 \end{pmatrix}$. $KK_1^G(A,B)$ is defined as $KK_0^G(A,B \otimes \C_1)$.
+\end{definition}
+
+\begin{rk}
+By the equivariant stabilization lemma \ref{GStabilization}, any $B$-Hilbert module $E$ sits as a complemented $G$-submodule of the standard module $H_B$, and as $[E,\pi,T] = [E \oplus H_B,\pi\oplus 0,T\oplus 0]$, we can suppose $E = H_B$.
+\end{rk}
+% KASPAROV PRODUCT
+
+Here are some examples of $K$-cycles. For detailed proofs of the various constructions, we send the reader to \cite{blackadar}.
+
+\begin{Expl}
+If $\phi : A\rightarrow B$ is a $G$-equivariant $*$-homomorphism, it induces a $K$-cycle $(B,\phi,0)\in \mathbb E^G(A,B)$ whose class is denoted by $[\phi]\in KK_0^G(A,B)$. This induces a covariant functor $\phi_* = - \otimes_A [\phi] : KK^G(D,A)\rightarrow KK^G(D,B)$ and a contravariant functor $\phi^*=  [\phi] \otimes_B - : KK^G(B,D)\rightarrow KK^G(A,D)$ for any $G$-algebra $D$. Moreover, if $\phi' : B\rightarrow C$, the following relation holds 
+\[ [\phi'\circ \phi] = [\phi]\otimes_B [\phi'].\]
+\end{Expl}
+
+\begin{Expl} Let $0 \rightarrow B\otimes \mathfrak K \rightarrow_\iota E \rightarrow_p A \rightarrow 0 $ be a $G$-equivariant split exact sequence of $G$-algebras. Denote by $s : A \rightarrow E$ the cross section of $p$ and by $\sigma $ the compostion $s\circ p$. Then 
+\[(H_B \oplus H_B^{op},\omega \oplus (\omega \circ \sigma ), \begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix} )\] 
+defines a $K$-cycle, hence an element of $KK_0^G(A,B)$ called the splitting morphism of the extension. % Definir w et op
+\end{Expl}
+
+The first example allows one to think of $KK(A,B)$ as generalized morphisms between $A$ and $B$ : every $*$-homomorphism induces a $K$-cycle such that composition is preserved. Actually, it turns out that generalized morphisms are not so far from coming from genuine $*$-homomorphisms. Indeed, H. Oyono-Oyono has shown in the appendice of \cite{LaffOY} that every element of $KK^G(A,B)$ can be written as the Kasparov product of at most $d$ elements, each one coming either from a $*$-homormorphism or from a $KK$-inverse of a $*$-homomorphism.\\
+
+More precisely, let us define decomposition property $(d)$.
+
+\begin{definition}
+Let $d$ be a positive integer. An element $z\in KK^G(A,B)$ is said to satisfy decomposition property $(d)$ if
+\begin{itemize}
+\item[$\bullet$] there exist $G$-algebras $A_0$, $A_1$, ..., $A_d$ such that $A_0=A$ and $A_d=B$, 
+\item[$\bullet$] there exist elements $z_j \in KK^G(A_{j},A_{j+1})$ for $j\in\{0,..,d-1\}$ such that, either $z_j$ is induced by a $G$-morphism $A_j \rightarrow A_{j+1}$, either there exists a $G$-morphism $\phi_j : A_{j+1}\rightarrow A_j$ such that $z_j \otimes_{A_{j+1}} [\phi_j] = 1_{A_j}$ and $ [\phi_j] \otimes_{A_{j}} z_j  = 1_{A_{j+1}}$,
+\end{itemize}
+such that $z = z_1 \otimes_{A_1}  ... \otimes_{A_{d-1}} z_{d-1} $ holds.
+\end{definition}
+
+Then, the following theorem is true for a universal constant $d$, which does not depend on the groupoid. It will be crucial to prove that the controlled Kasparov and Roe transforms, applications to be defined later, respect the Kasparov product. 
+
+\begin{thm}[\cite{LaffOY}]\label{propertyD}
+Let $G$ be a locally compact groupoid with Haar system. Then every element $z\in KK^G(A,B)$ has decomposition property $(d)$.
+\end{thm}
+ 
 We will use the following result.\cite{blackadar}\cite{CuSk}
 
 %\begin{prop}
@@ -140,7 +186,7 @@ Let $z\in KK^G_1(A,B)$ and choose any $K$-cycle $(H_B,\pi,T)$ representing $z$. 
 \[-\otimes_A z : K_*(A)\rightarrow K_*(B)\]
 can be realized, up to Morita equivalence, as the boundary of the following semi-split $G$-equivariant extension of $G$-algebras
 \[\begin{tikzcd}[column sep = small] 
-0 \arrow{r}& \mathfrak K \otimes B \arrow{r} & E^{\pi,T} \arrow{r} & A \arrow{r} & 0\end{tikzcd}\]
+0 \arrow{r}& \mathfrak K \otimes B \arrow{r} & E^{(\pi,T)} \arrow{r} & A \arrow{r} & 0\end{tikzcd}\]
 where $E^{\pi,T}=\{(a,P\pi(a)P +y) : a\in A , y\in \mathfrak K \otimes B\}$, the arrows are the obvious inclusion and projection, and the completely positive section is $a\mapsto (a, P \pi(a) P)$. The fact that the choice of the representent does not affect the boundary will be proven in the upcoming sections. 
 \end{prop}
 
