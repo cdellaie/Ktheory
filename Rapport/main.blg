@@ -1,12 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
-A level-1 auxiliary file: QKtheory2.aux
-A level-1 auxiliary file: QKtheorySemigroup.aux
 A level-1 auxiliary file: FDC.aux
 A level-1 auxiliary file: StandardModules.aux
 A level-1 auxiliary file: StronglyProper.aux
 A level-1 auxiliary file: NuclearDimAsdim.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
+Warning--I didn't find a database entry for "Roe"
 Warning--I didn't find a database entry for "Wo"
 Warning--can't use both volume and number fields in connesfoliations
 Warning--empty journal in OY3
@@ -14,4 +13,4 @@ Warning--empty year in OY3
 Warning--empty school in LeGall
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-(There were 7 warnings)
+(There were 8 warnings)
