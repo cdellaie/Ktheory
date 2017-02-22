@@ -81,38 +81,74 @@ Let $Z$ be a right $G$-space. Define :
 
 These maps define a structure of toplogical groupoid on $Z\rtimes G$. It is called the crossed product groupoid of $Z$ by $G$. It is étale if $G$ is.\\
 
-\subsection{$G$-algebras}
+\subsection{$G$-algebras and crossed products}
 
 \begin{definition}
 Let $X$ be a topological space. A $C(X)$-algebra is a $C^*$-algebra together with a $*$-homomorphism $\theta : C_0(X)\rightarrow Z(\mathcal M(A))$ such that $\overline{\theta (C_0(X)) A} = A$. The couple $(A,\theta)$ is then called a $C(X)$-structure.
 \end{definition} 
 
-If $f : X\rightarrow Y$ is a continuous map between locally compact spaces, and $A$ a $Y$-algebra, then $f$ induces a $C(X)$-structure on $A$ by $f^* : C(Y) \rightarrow C_b(X); g\mapsto g\circ f$. Define $f^* A = A \otimes_{f^*} C_0(X)$ the resulting $C(X)$-algebra. For details on tensor products of $C(X)$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $C(X)$-algebra : for $x\in X$, $A_x = ev_x^* \ A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$. It is convenient to see $A_x$ as $A/ (I_x .A)$ where $I_x$ is the ideal ker $(ev_x : C_0(X) \rightarrow \C)$.\\
+If $f : X\rightarrow Y$ is a continuous map between locally compact spaces, and $A$ a $C(Y)$-algebra, then $f$ induces a $C(X)$-structure on $A$ by $f^* : C(Y) \rightarrow C_b(X); g\mapsto g\circ f$. Define $f^* A = A \otimes_{f^*} C_0(X)$ the resulting $C(X)$-algebra. For details on tensor products of $C(X)$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $C(X)$-algebra : for $x\in X$, $A_x = ev_x^* \ A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$. It is convenient to see $A_x$ as $A/ (I_x .A)$ where $I_x$ is the ideal ker $(ev_x : C_0(X) \rightarrow \C)$.\\
 
-A $*$-homomorphism between two $C(X)$-algebras $\alpha : A\rightarrow A'$ is a $*$-homomorphism which commutes with the action of $C_0(X)$, i.e. $\alpha(\theta(f)a)=\theta'(f)\alpha(a)$ for all $a\in A,f\in C_0(X)$. Its fibers are defined unambiguously by $\alpha_x = id_\C \otimes_{ev_x} \alpha$.\\ 
+A homomorphism between two $C(X)$-algebras $\alpha : A\rightarrow A'$ is a $*$-homomorphism which commutes with the action of $C_0(X)$, i.e. $\alpha(\theta(f)a)=\theta'(f)\alpha(a)$ for all $a\in A,f\in C_0(X)$. Its fibers are defined unambiguously by $\alpha_x = id_\C \otimes_{ev_x} \alpha$.\\
+
+Notice that, if $A$ is a $C(G^{(0)})$-algebra, then $s^* A = A \otimes_s C_0(G)$ and $r^* A = A \otimes_r C_0(G)$ are $C(G)$-algebra with fibers $(s^*A)_g \cong A_{s(g)}$ and $(r^*A)_g \cong A_{r(g)}$ respectively, for all $g\in G$.
 
 \begin{definition}
-An action of a groupoid $G$ on a $C^*$-algebra $A$ is a triple $(A,\theta,\alpha)$ where $(A,\theta)$ is a $C(G^{(0)})$-structure and $\alpha : s^* A \rightarrow r^* A$ is an isomorphism of $C(G^{(0)})$-algebras such that $\alpha_{gg'}= \alpha_g\circ \alpha_{g'}$ for all $(g,g')\in G^{(2)}$.
+An action of a groupoid $G$ on a $C^*$-algebra $A$ is a triple $(A,\theta,\alpha)$ where $(A,\theta)$ is a $C(G^{(0)})$-structure and $\alpha : s^* A \rightarrow r^* A$ is an isomorphism of $C(G)$-algebras such that $\alpha_{gg'}= \alpha_g\circ \alpha_{g'}$ for all $(g,g')\in G^{(2)}$.
 \end{definition} 
 
-\subsection{Crossed products}
+If $A$ is a $G$-algebra, and $U \subset G^{(0)}$ is an open subset, recall \cite{LeGall} that the restriction $A_U$ is defined as $\eta^* A = C_0(U) \otimes_\eta A$ where $\eta : C(U) \hookrightarrow C_0(G^{(0)})$ is the canonical inclusion. 
+%Let $F= G^{(0)}\backslash U$. As $A_U$ is naturally embedded into $A$, define $A_F$ to be the complementary of $A_U$. \\
 
-If $A$ is a $G$-algebra, and $U \subset G^{(0)}$ is an open subset, recall \cite{LeGall} that the restriction $A_U$ is defined as $\eta^* A = C_0(U) \otimes_\eta A$ where $\eta : C(U) \hookrightarrow C_0(G^{(0)})$ is the canonical inclusion. Let $F= G^{(0)}\backslash U$. As $A_U$ is naturally embedded into $A$, define $A_F$ to be the complementary of $A_U$. \\
-
-Let $E$ be a compact subset of $G$. The space of continuous sections with support in $E$ is defined as $A_E$. Then 
+The space of continuous sections with compact support is defined as :
 \[C_c(G,A) = \cup_{E\in \mathcal E} A_E\]
-is called the space of continuous sections with compact support. It is naturally a $*$-algebra with the convolution product
+It is naturally an involutive algebra with the convolution product
 \[\phi\ast \psi (g) = \int_{G^{r(g)}} \phi(h)\psi(h^{-1}g)\lambda^{r(g)}(h).\] 
 
-If $f\in C_c(G,A)$, define $\lambda(f)\in \mathcal L(L^2(G,A))$ as the convolution operator 
-\[\lambda(f)\eta = f\ast \eta\]
-and the reduced norm as $||f||_r= ||\lambda(f)||_{\mathcal L(L^2(G,A))}$.
+\begin{rk}
+Another possible definition of $C_c(A,G)$ would be to take a tensor product of Fréchet algebras $C_c(G)\otimes A$, which gives a Fréchet algebra. Even if this definition seems more elegant, this would require more definitions on Fréchet $G$-algebras, which we do not want to dive into.  
+\end{rk}
+
+%Let $E$ be a compact subset of $G$. The space of continuous sections with support in $E$ is defined as $A_E$. Then 
+%\[C_c(G,A) = \cup_{E\in \mathcal E} A_E\]
+%is called the space of continuous sections with compact support. It is naturally a $*$-algebra with the convolution product
+%\[\phi\ast \psi (g) = \int_{G^{r(g)}} \phi(h)\psi(h^{-1}g)\lambda^{r(g)}(h).\] 
+
+%If $f\in C_c(G,A)$, define $\lambda(f)\in \mathcal L(L^2(G,A))$ as the convolution operator 
+%\[\lambda(f)\eta = f\ast \eta\]
+%and the reduced norm as $||f||_r= ||\lambda(f)||_{\mathcal L(L^2(G,A))}$.
+
+Let $g\in G$ and $f\in C_c(G,A)$. Choose an open relatively compact subset $U\subseteq G$ which contains supp $f$. We can define $f(g)$ as $1\otimes_{ev_g} f \in \C \otimes_{ev_g} C_0(U)\otimes_\eta A\cong A_{s(g)}$. This jusitifies the name "continuous sections" for $C_c(G,A)$. \\
+
+Let $A$ be a $G$-algebra and $x\in G^{(0)}$. As the groupoid $G$ is étale, $G_x$ is discrete and $l^2(G_x)$ is a separable Hibert space with dimension the cardinality of $G_x$. Define $l^2(G_x,A)$ as the $A_x$-Hilbert module $l^2(G_x)\otimes A_x$. We denote by $||\cdot||_2$ the norm induced by the inner product on $l^2(G_x,A)$ i.e. 
+\[ \begin{array}{c}
+\langle \xi,\eta\rangle_{A_x}= \sum_{g\in G_x} \xi(g)^* \eta(g),\\
+||\xi||_2= ||\langle \xi,\xi \rangle||^\frac{1}{2} 
+\end{array}\] 
+for all $\xi,\eta\in l^2(G_x,A)$.\\
+
+Define, for $f\in C_c(G,A)$, the reduced norm as 
+\[||f||_r= \sup_{x\in G^{(0)}}\{ ||f\ast \xi||_2 : \xi\in l^2(G_x,A) \text{ s.t. } ||\xi||_2\leq 1\}.\]
+
+
 \begin{definition}
 The reduced crosssed product $A\rtimes_r G$ is defined as the completion of $C_c(G,A)$ under the reduced norm.
 \end{definition}
 
 \subsection{Equivariant Hilbert modules}
+% A FINIR
+
+Let $B$ be a $G$-algebra, with action $\beta$, and $E$ a $B$-Hilbert module. As earlier, we can define the fiber $E_x$ of $E$ over $x\in G^{(0)}$. Define $s^* E = E \otimes_s C_0(G)$ and $r^* E = E \otimes_r C_0(G)$ which are $s^*B$ and $r^*B$-Hilbert modules respectively, with fibers $(s^* E)_g \cong E_{s(g)}$ and $(r^* E)_g \cong E_{r(g)}$ for all $g\in G$. We can endow $r^*E$ with a structure of $s^* B$-Hilbert module with the help of the isomorphism $\beta^{-1} : r^* B\rightarrow s^* B$.
+
+\begin{definition}
+An equivariant Hilbert $B$-module is a Hilbert $B$-module $E$ together with an unitary $V\in\mathcal L_{s^* B}(s^*E ,r^* E)$ such that $V_gV_{g'} = V_{gg'}$ for all $(g,g')\in G^{(2)}$.
+\end{definition}
  % A FINIR
+\begin{Expl} If $B$ is a $G$-algebra, define $l^2(G,B)$ as the completion of $C_c(G,B)$ with respect to the $B$-valued inner product : 
+\[\langle \xi ,\eta\rangle (x) = \sum_{g\in G_x} \xi(g)^*\eta(g) \in B_x.\]
+We made the following confusion : $\langle \xi ,\eta\rangle : x\mapsto \langle \xi ,\eta\rangle (x)$ defines an element of $C($ .
+\end{Expl}
+
 \begin{lem}[Equivariant stabilization lemma \cite{LeGall}] \label{GStabilization} Let $E$ be a countably generated $G$-equivariant $B$-Hilbert module, then there exists an $G$-equivariant isomorphism of Hilbert module $E \oplus H_B \cong H_B$.
 \end{lem}
 
