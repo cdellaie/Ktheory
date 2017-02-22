@@ -101,8 +101,8 @@ If $A$ is a $G$-algebra, and $U \subset G^{(0)}$ is an open subset, recall \cite
 %Let $F= G^{(0)}\backslash U$. As $A_U$ is naturally embedded into $A$, define $A_F$ to be the complementary of $A_U$. \\
 
 The space of continuous sections with compact support is defined as :
-\[C_c(G,A) = \cup_{E\in \mathcal E} A_E\]
-It is naturally an involutive algebra with the convolution product
+\[C_c(G,A) = \cup_{U\in \mathcal E} A_U,\]
+where $U$ runs through the open relatively compact subsets of $G$. It is naturally an involutive algebra with the convolution product
 \[\phi\ast \psi (g) = \int_{G^{r(g)}} \phi(h)\psi(h^{-1}g)\lambda^{r(g)}(h).\] 
 
 \begin{rk}
@@ -132,22 +132,36 @@ Define, for $f\in C_c(G,A)$, the reduced norm as
 
 
 \begin{definition}
-The reduced crosssed product $A\rtimes_r G$ is defined as the completion of $C_c(G,A)$ under the reduced norm.
+The reduced crossed product $A\rtimes_r G$ is defined as the completion of $C_c(G,A)$ under the reduced norm.
 \end{definition}
+
+% Propriete, fonctorialite etc....
 
 \subsection{Equivariant Hilbert modules}
 % A FINIR
-
 Let $B$ be a $G$-algebra, with action $\beta$, and $E$ a $B$-Hilbert module. As earlier, we can define the fiber $E_x$ of $E$ over $x\in G^{(0)}$. Define $s^* E = E \otimes_s C_0(G)$ and $r^* E = E \otimes_r C_0(G)$ which are $s^*B$ and $r^*B$-Hilbert modules respectively, with fibers $(s^* E)_g \cong E_{s(g)}$ and $(r^* E)_g \cong E_{r(g)}$ for all $g\in G$. We can endow $r^*E$ with a structure of $s^* B$-Hilbert module with the help of the isomorphism $\beta^{-1} : r^* B\rightarrow s^* B$.
 
 \begin{definition}
 An equivariant Hilbert $B$-module is a Hilbert $B$-module $E$ together with an unitary $V\in\mathcal L_{s^* B}(s^*E ,r^* E)$ such that $V_gV_{g'} = V_{gg'}$ for all $(g,g')\in G^{(2)}$.
 \end{definition}
- % A FINIR
-\begin{Expl} If $B$ is a $G$-algebra, define $l^2(G,B)$ as the completion of $C_c(G,B)$ with respect to the $B$-valued inner product : 
-\[\langle \xi ,\eta\rangle (x) = \sum_{g\in G_x} \xi(g)^*\eta(g) \in B_x.\]
-We made the following confusion : $\langle \xi ,\eta\rangle : x\mapsto \langle \xi ,\eta\rangle (x)$ defines an element of $C($ .
+
+\begin{Expl} Define $L^2(G)$ as the completion of $C_c(G)$ seen as a pre-Hilbert $C_0(G^{(0)})$-module with the $C_0(G^{(0)})$-valued inner product 
+\[\langle \xi ,\eta\rangle (x) = \sum_{g\in G_x} \xi(g)^*\eta(g) \quad \forall \xi,\eta\in C_c(G).\]
+Its fibers are isomorphic to $l^2(G_x)$, and the action $\lambda : s^*L^2(G) \rightarrow r^* L^2(G)$ is given by left translation, i.e. if $\xi\in l^2(G_x)$, then
+\[(\lambda_g\xi)(h) = \xi(g^{-1}h)\quad \forall g,h\in G_x.\]
 \end{Expl}
+
+\begin{Expl} Let $B$ be a $G$-algebra, the $C(G^{(0)})$-structure being given by $\theta : C_0(G^{(0)})\rightarrow Z(\mathcal M(B))\subseteq \mathcal L_B(B)$. The $G$-module $L^2(G,B)$ is defined as the tensor product $ L^2(G)\otimes_\theta B$. Its fibers are $l^2(G,B)$ and the actionis given by $\lambda\otimes id_{B}$.
+\end{Expl}
+
+\begin{Expl} More generally, let $B$ be a $G$-algebra and $E$ be a $B$-module, with $C(G^{(0)})$-structure given by $\theta : C_0(G^{(0)})\rightarrow Z(\mathcal M(B))\subseteq \mathcal L_B(B)$. The $G$-equivariant $B$-Hilbert module $L^2(G,E)$ is defined as the tensor product $ L^2(G)\otimes_\theta E$.
+\end{Expl}
+
+\begin{rk}
+We could alternatively have defined, for $A$ a $G$-algebra, $A\rtimes_r G$ as a subalgebra of $\mathcal L_A(L^2(G,A))$. Indeed, any $f\in C_c(G,A)$ acts as a convolution operator on $L^2(G,A)$ :
+\[(\lambda(f)\xi)(h) = \sum_{g\in G_x} f(g)\alpha_g(\xi(g^{-1} h))\quad \forall \xi\in L^2(G,A),g,h\in G_x,\]
+and $||f||_{r} = ||\lambda(f)||_{\mathcal L_A (L^2(G,A))}$.
+\end{rk}
 
 \begin{lem}[Equivariant stabilization lemma \cite{LeGall}] \label{GStabilization} Let $E$ be a countably generated $G$-equivariant $B$-Hilbert module, then there exists an $G$-equivariant isomorphism of Hilbert module $E \oplus H_B \cong H_B$.
 \end{lem}
