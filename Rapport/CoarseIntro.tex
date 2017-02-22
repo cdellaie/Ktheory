@@ -6,21 +6,26 @@ Some notations are in order. Let $X$ be a set. For any subsets $A$ and $B$ of $X
 \item[$\bullet$] and $A^{-1} = \{(x,y)\in X\times X \text{ s.t. } (y,x)\in A\}$.\\
 \end{itemize}
 
-Let $(X,d)$ be a proper discrete metric space with bounded geometry. In this section, we define the Roe algebras of $X$.\\
+Let $(X,d)$ be a proper discrete metric space with bounded geometry. In this section, we define the Roe algebras of $X$.
 
 \begin{definition}\cite{RoeCoarse}
 A coarse structure on a set $X$ is a subset $\mathcal E$ of $\mathcal P(X\times X)$ such that :
 \begin{itemize}
 \item[$\bullet$] if $A$ and $B$ are in $\mathcal E$, so are $A^{-1}$, $A\cup B$ and $A\circ B$,
 \item[$\bullet$] every finite subset of $X\times X$ is in $\mathcal E$,
-\item[$\bullet$] if $A\in\mathcal E$ and $B\subset A$, then $B\in \mathcal E$.
+\item[$\bullet$] if $A\in\mathcal E$ and $B\subseteq A$, then $B\in \mathcal E$.
 \end{itemize}
 \end{definition} 
 
 \begin{Expl}
 When $X$ is a discrete proper metric space, we define, for all positive number $R>0$, the $R$-diagonal as 
 \[\Delta_R= \{(x,y)\in X\times X \text{ s.t. } d(x,y)\leq R\}.\]
-A set $E\subset X\times X$ is called an entourage if there exists $R>0$ such that $E\subset \Delta_R$. The set of entourage $\mathcal E_X$ is a coarse structure on $X$.
+A set $E\subseteq X\times X$ is called an entourage if there exists $R>0$ such that $E\subseteq \Delta_R$. The set of entourages $\mathcal E_X$ is a coarse structure on $X$.
+\end{Expl}
+
+\begin{Expl} Let $\Gamma$ be a finitely generated group, and $S$ be a symmetric (i.e. $S=S^{-1}$) generating subset. Define the word length associated to $S$ as 
+\[l(g) = \inf\{ k\in \N : \exists s_1,\cdots,s_k\in S \text{ s.t. } g= s_1 \cdots s_k\}.\]
+This defines a proper length on $\Gamma$ which does depend on $S$, but the coarse structure associated to the left invariant metric $d(\gamma_1,\gamma_2)= l(\gamma_1^{-1}\gamma_2)$ does not. It is common in the litterature to denote $|\Gamma|$ the  associated coarse space.
 \end{Expl}
 
 For now on, $X$ will be a discrete proper metric space with bounded geometry, i.e. such that, for all $R>0$, $\sup_{x\in X} |B(x,R)|$ is finite. 
@@ -36,38 +41,95 @@ The module is said to be non-degenerate if the closure of the subspace generated
 We will sometime allow ourself a slight abuse of notation by writing $f\xi$ for $\phi(f)\xi$ when $f\in C_0(X)$ and $\xi \in H_X$.
 
 \begin{Expl}
-Let $H$ denotes the separable Hilbert space. Continuous functions $C_0(X)$ act on $H_X =l^2(X)\otimes H$ as bounded operators, which gives $H_X$ the structure of a $X$-module, called the standard $X$-module. It is standard non-degenerate ( s.n.d. for short).  
+Let $H$ denotes the separable Hilbert space. Continuous functions $C_0(X)$ act on $H_X =l^2(X)\otimes H$ as bounded operators, which gives $H_X$ the structure of a $X$-module, called the standard $X$-module. It is standard non-degenerate (s.n.d. for short).  
 \end{Expl}
-
-The following proposition says that there is actually one s.n.d. $X$-module, up to isomorphism.
-
-\begin{prop}
-Let $H_X$ and $H'_X$ two s.n.d. $X$-module. Then, for any $\varepsilon>0$, there exists an isometry $V\in\mathcal L(H_X,H'_X)$ such that $\text{supp }V \subset \Delta_\varepsilon$. 
-\end{prop}
-
-\begin{dem}
-% A FAIRE 
-\qed
-\end{dem}
 
 \begin{definition}
 Let $X$ and $Y$ be two discrete proper metric spaces with bounded geometry, $H_X$ and $H_Y$ $X$ and $Y$-modules respectively, and $T\in \mathcal L(H_X, H_Y)$ be a bounded operator.
 \begin{itemize}
 \item[$\bullet$] $T$ is said to be locally compact if $\phi(g)T$ and $T\phi(f)$ are compact operators for all $f\in C_0(X),g\in C_0(Y)$.
 \item[$\bullet$] The support of $T$ is the complement of the set of points $(x,y)\in X\times X$ such that there exist $f_x,f_y\in C_0(X),C_0(Y)$ such that $f_x(x)\neq 0,f_{y}(y)\neq 0$ and $\phi(f_{y}) T \phi(f_x)=0$.
-\item[$\bullet$] When $X=Y$, the propagation of $T$ is the smallest $R>0$ such that supp $T \subset \Delta_R$.
+\item[$\bullet$] When $X=Y$, the propagation of $T$, denoted prop$(T)$, is the smallest $R>0$ such that supp $T \subseteq \Delta_R$.
 \end{itemize}
 \end{definition}
+
+The following proposition says that there is actually one s.n.d. $X$-module, up to isomorphism. For $V\in\mathcal L(E,E')$, we denote $Ad_V : \mathcal L(E) \rightarrow \mathcal L(E') ; T\mapsto VTV^*$.
+
+\begin{prop}\label{SND}
+Let $H_X$ and $H'_X$ two s.n.d. $X$-module. Then, for any $\varepsilon>0$, there exists an isometry $V\in\mathcal L(H_X,H'_X)$ such that $\text{supp }V \subseteq \Delta_\varepsilon$.
+\end{prop}
+
+\begin{dem}
+By bounded functional calculus, extend the representations $\phi : C_0(X)\rightarrow \mathcal L(H_X)$ and $\phi' : C_0(X)\rightarrow \mathcal L(H'_X)$ to $\tilde \phi : l^\infty(X)\rightarrow \mathcal L(H_X) $ and $\tilde \phi' : l^\infty(X)\rightarrow \mathcal L(H'_X) $. Choose a Borel partition $\mathcal U$ of $X$ such that each borel subset $U\in\mathcal U$ satifies diam$(U)\leq \varepsilon $ and has non-empty interior. If $\chi_U$ denotes the characteristic function of $U$, $p_U = \tilde\phi(\chi_U)$ and $p'_{U}=\tilde\phi'(\chi_U)$ define projections in $H_X$ and $H'_X$ respectively. Hence, if $H_U = p_U H_X$ and $H'_U= p'_U H'_X$, we have an orthogonal decomposition 
+\[H_X = \bigoplus_{U_in\mathcal U} H_U \quad  \text{ and } \quad H'_X = \bigoplus_{U_in\mathcal U} H'_U.\]
+But, the representations being standard, $H_U$ and $H'_U$ are separable infinite dimensional Hilbert spaces, hence there exists an isometry $V_U : H_U\rightarrow H'_U$. Define 
+\[V = \bigoplus_{U\in\mathcal U} V_U : H_X = \bigoplus_{U_in\mathcal U} H_U \rightarrow  \bigoplus_{U_in\mathcal U} H'_U = H'_X.  \]
+$V$ is an isometry, and supp$(V)\subseteq \coprod U\times U \subseteq \Delta_\varepsilon$.\\
+\qed
+\end{dem}
 
 We now define the Roe algebra $C^*(X, H_X)$ of $X$ when we have fixed a standard non-degenerate $X$-module $H_X$. We will prove that it is unique up to unnatural isomorphism, and that this $*$-isomorphism induces a natural isomorphism in $K$-theory.\\
 
 Define $C_R[X,H_X]$ as the following subspace of $\mathcal L(H_X)$ :
-\[C_R[X,H_X] = \{T\in \mathcal L(H_X) \text{ locally compact  s.t. supp }T\subset \Delta_R \}.\]
+\[C_R[X,H_X] = \{T\in \mathcal L(H_X) \text{ locally compact  s.t. supp }T\subseteq \Delta_R \},\]
+namely, $C_R[X,H_X]$ consists in locally compact operators with propagation less than $R$. It is a closed self-adjoint subspace of $\mathcal L(H_X)$ which satisfies $C_R[X,H_X].C_S[X,H_X]\subseteq C_{R+S}[X,H_X]$ for any positive numbers $R>0,S>0$.\\
 
-Define $C_R[X,B]$ as the following subspace of $\mathcal L_B(H\otimes l^2(X)\otimes B)$ :
-\[C_R[X,B] = \{T\in \mathcal L_B(H\otimes l^2(X)\otimes B) \text{ locally compact  s.t. supp }T\subset \Delta_R \}.\]
+Let $C[X,H_X]$ be the subspace 
+\[\bigcup_{R>0} C_R[X,H_X]\subseteq \mathcal L(H_X).\] 
+It is actually an involutive algebra naturally represented in a Hilbert space. Completion with respect to operator norm will naturally give $C^*$-algebras, which are called Roe algebras of $X$. They are the object of the following definition, but we need first to define another norm in order to define the maximal Roe algebra of $X$.\\
 
-% A FINIR
+\begin{lem}
+Let $(\pi, E_\pi)$ be a $*$-representation $\pi : C[X,H_X]\rightarrow \mathcal L(E_\pi)$ where $E_\pi$ is a Hilbert space. Let $T\in C_R[H_X]$, and define $N_R =\sup_{x\in X} |B(x,R)|<\infty$ and $T_{xy} = \chi_y T \chi_x$. Then $M=\sup_{x,y\in X} |T_{xy}|$ is finite and the following inequality holds :
+\[||\pi(T)||\leq N_R M.\] 
+\end{lem}
+\begin{dem}
+$X$ being discrete, $T=\sum_{x,y\in X} T_{xy}$, and 
+\[||\pi(T)||\leq \sup_{x\in X} ||\sum_{y\in X} T_{xy}||\leq M \sup_{x\in X} |B(x,R)|.\]
+\qed
+\end{dem}
+
+The maximal norm is defined, for any $T\in C[X,H_X]$, as 
+\[||T||_{max} = \sup_{\pi\in\mathcal F} ||\pi(T)||\]
+where $\pi$ runs in the family $\mathcal F$ of $*$-representations $\pi : C[X,H_X]\rightarrow \mathcal L(E_\pi)$. By the previous lemma, it is finite. 
+
+\begin{definition}
+Let $X$ be a discrete metric space with bounded geometry and fix a s.n.d. $X$-module. Let $C[X,H_X] $ be the subspace 
+\[\bigcup_{R>0} C_R[X,H_X]\subseteq \mathcal L(H_X).\] 
+\begin{itemize}
+\item[$\bullet$] The Roe algebra of $X$, denoted $C^*(X)$, is defined as the closure of $C[X,H_X]$ under the operator norm.
+\item[$\bullet$] The uniform Roe algebra of $X$, denoted $C_u^*(X)$, is defined as the closure of $C[X,l^2(X)]$ in the operator norm.
+\item[$\bullet$] The maximal Roe algebra of $X$, denoted $C_{max}^*(X)$, is defined as the closure of $C[X,H_X]$ under the maximal norm. 
+\end{itemize}
+\end{definition}
+
+Let us show that the definition of $C^*(X)$ does not depent on the choice of the s.n.d. $X$-module. Before doing so, we denote $C^*(X,H_X)$ the completion of $C[X,H_X]$ in order to keep track of the s.n.d. $X$-module.
+
+\begin{prop}
+Let $H_X$ and $H'_X$ be two s.n.d. $X$-modules. Then there exists an unnatural $*$-isomorphism $C^*(X,H_X)\cong C^*(X,H'_X)$ which is natural in $K$-theory.
+\end{prop}
+\begin{dem}
+Let $H_X$ and $H'_X$ be two s.n.d. $X$-modules and $\varepsilon>0$. By proposition \ref{SND}, there exists an isometry $V\in\mathcal L(H_X,H'_X)$ with propagation less than $\varepsilon$. Hence $Ad_V(T) = V T V^*$ defines a bounded linear map $C_R[X,H_X]\rightarrow C_{R+2\varepsilon}[X,H_X']$ which extends to an $*$-isomorphism $Ad_V : C^*(X,H_X)\rightarrow C^*(X,H'_X)$.\\
+
+Let $V_1$ and $V_2$ two isometries in $\mathcal L(H_X,H'_X)$ with propagation less than $\varepsilon$. Define $P : H_X\rightarrow H_X\oplus H'_X ; \xi \mapsto \xi \oplus 0$ and , for $t\in [0,\frac{\pi}{2}]$, $W_t : H_X \rightarrow H_X\oplus H'_X$ by 
+\[W_t = 
+\begin{pmatrix} \cos(t) & \sin (t)\\ -\sin (t) & \cos (t)\end{pmatrix}
+\begin{pmatrix} V_1 & 0 \\ 0 & V_2 \end{pmatrix}
+\begin{pmatrix} \cos(t) & \sin (t)\\ -\sin (t) & \cos (t)\end{pmatrix}^* P.\] 
+Then $Ad_{W_t}$ is an homotpoy between $Ad_{V_1}$ and $Ad_{V_2}$, so that $(Ad_{V_1})_* = (Ad_{V_2})_* : K_*(C^*(X,H'_X))\rightarrow K_*(C^*(X,H'_X))$.\\
+\qed
+\end{dem}
+
+Let us define the Roe algebra of $X$ with coefficients in a $C^*$-algebra $B$. Define $C_R[X,B]$ as the following subspace of $\mathcal L_B(H\otimes l^2(X)\otimes B)$ :
+\[C_R[X,B] = \{T\in \mathcal L_B(H\otimes l^2(X)\otimes B) \text{ locally compact  s.t. supp }T\subseteq \Delta_R \}.\]
+It is a subspace of $\mathcal L_B(H\otimes l^2(X)\otimes B)$ which satisfies $C_R[X,B].C_S[X,B]\subseteq C_{R+S}[X,B]$. It is easy to see that 
+\[C[X,B] = \bigcup_{R>0} C_R[X,B]\] 
+is an involutive sub-algebra of $\mathcal L_B(H\otimes l^2(X)\otimes B)$.
+
+\begin{definition}
+Let $B$ be a $C^*$-algebra. The Roe algebra of $X$ with coefficients in $B$ is the completion of $C[X,B]$ under the operator norm of $\mathcal L_B(H\otimes l^2(X)\otimes B)$. 
+\end{definition} 
+
+In the next section, we will define the coarse groupoid $G(X)$, which is an étale groupoid, and express $C^*(X,B)$ as the reduced crossed-product of a well chosen $G(X)$-algebra.
 
 \subsection{Coarse groupoid}
 
@@ -103,7 +165,7 @@ $V$ defines an action of $G$ on $\tilde B$.
 
 \begin{thm}
 Let $X$ be a discrete metric space with bounded geometry, and $B$ a $C^*$-algebra. There exists a natural isomorphism 
-\[\Psi_B : l^\infty(X,B\otimes\mathfrak K)\rtimes_r G(X) \rightarrow C^*(X,B).\] 
+\[\begin{tikzcd}\Psi_B :  \ l^\infty(X,B\otimes\mathfrak K)\rtimes_r G(X) \arrow{r}{\cong} &   C^*(X,B)\end{tikzcd}.\] 
 \end{thm}
 
 \begin{dem}
