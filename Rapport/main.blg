@@ -12,47 +12,48 @@ Warning--can't use both volume and number fields in connesfoliations
 Warning--empty journal in OY3
 Warning--empty year in OY3
 Warning--empty school in LeGall
+Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 25 entries,
+You've used 26 entries,
             2118 wiz_defined-function locations,
-            676 strings with 7265 characters,
-and the built_in function-call counts, 7297 in all, are:
-= -- 738
-> -- 237
+            680 strings with 7330 characters,
+and the built_in function-call counts, 7549 in all, are:
+= -- 759
+> -- 250
 < -- 9
-+ -- 102
-- -- 72
-* -- 460
-:= -- 1211
-add.period$ -- 75
-call.type$ -- 25
-change.case$ -- 104
++ -- 107
+- -- 76
+* -- 474
+:= -- 1254
+add.period$ -- 78
+call.type$ -- 26
+change.case$ -- 108
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 312
-empty$ -- 627
-format.name$ -- 72
-if$ -- 1527
+cite$ -- 33
+duplicate$ -- 324
+empty$ -- 649
+format.name$ -- 76
+if$ -- 1579
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 30
-newline$ -- 127
-num.names$ -- 50
-pop$ -- 121
+int.to.str$ -- 26
+missing$ -- 32
+newline$ -- 132
+num.names$ -- 52
+pop$ -- 131
 preamble$ -- 1
-purify$ -- 86
+purify$ -- 90
 quote$ -- 0
-skip$ -- 213
+skip$ -- 220
 stack$ -- 0
-substring$ -- 500
-swap$ -- 60
+substring$ -- 505
+swap$ -- 61
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
-warning$ -- 6
-while$ -- 84
-width$ -- 27
-write$ -- 268
-(There were 7 warnings)
+type$ -- 90
+warning$ -- 7
+while$ -- 86
+width$ -- 28
+write$ -- 277
+(There were 8 warnings)

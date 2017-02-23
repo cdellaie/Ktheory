@@ -1,12 +1,12 @@
-\subsection{Coarse Geometry}
+\section{Coarse Geometry}
 
 Some notations are in order. Let $X$ be a set. For any subsets $A$ and $B$ of $X\times X$, 
 \begin{itemize}
 \item[$\bullet$] let $A\circ B = \{(x,z)\in X\times X \text{ s.t. } \exists y\in X\text{ s.t. } (x,y)\in A, (y,z)\in B\}$,
-\item[$\bullet$] and $A^{-1} = \{(x,y)\in X\times X \text{ s.t. } (y,x)\in A\}$.\\
+\item[$\bullet$] and $A^{-1} = \{(x,y)\in X\times X \text{ s.t. } (y,x)\in A\}$.
 \end{itemize}
 
-Let $(X,d)$ be a proper discrete metric space with bounded geometry. In this section, we define the Roe algebras of $X$.
+\subsection{Definitions and examples}
 
 \begin{definition}\cite{RoeCoarse}
 A coarse structure on a set $X$ is a subset $\mathcal E$ of $\mathcal P(X\times X)$ such that :
@@ -28,7 +28,65 @@ A set $E\subseteq X\times X$ is called an entourage if there exists $R>0$ such t
 This defines a proper length on $\Gamma$ which does depend on $S$, but the coarse structure associated to the left invariant metric $d(\gamma_1,\gamma_2)= l(\gamma_1^{-1}\gamma_2)$ does not. It is common in the litterature to denote $|\Gamma|$ the  associated coarse space.
 \end{Expl}
 
-For now on, $X$ will be a discrete proper metric space with bounded geometry, i.e. such that, for all $R>0$, $\sup_{x\in X} |B(x,R)|$ is finite. 
+%--------------
+% Expanders
+%--------------
+
+In order to give another example, we recall the definition of the coarse disjoint union.
+
+\begin{definition}
+Let $(X_j,d_j)$ be a countable family of metric spaces. The coarse disjoint union $\coprod X_j$ is the coarse space obtained as the usual disjoint union with a metric $d$ such that 
+\begin{itemize}
+\item[$\bullet$] the restriction of $d$ to any $X_j$ coincides with $d_j$, 
+\item[$\bullet$] $\lim d(X_i,X_j)= + \infty$ when $|i+j|$ goes to $+\infty$.
+\end{itemize}
+Any such metric defines the same coarse structure on, so that the coarse equivalence class of $\coprod X_j$ is well defined. 
+\end{definition}
+
+\begin{Expl}
+Let $\Gamma$ be a finitely generated group which is residually finite w.r.t. $\mathcal N=\{\Gamma_j\}$, a nested family of normal subgroups $\Gamma_0 > \Gamma_1>...$ with trivial intersection. Notice that the image of $S$ in the group $\Gamma / \Gamma_j$ is a generating subset. The box space of $\Gamma$ w.r.t. $\mathcal N$ is the coarse disjoint union of the metric spaces $\Gamma/\Gamma_j$,
+\[X_{\mathcal N}(\Gamma)=\coprod_j |\Gamma/\Gamma_j|.\]
+\end{Expl}
+
+This last example gives, under suitable conditions, an example of coarse space which is not coarsely embeddable into Hilbert space.
+
+\begin{definition}
+A metric space $(X,d_X)$ coarsely embeds into Hilbert space if there exists two increasing functions $\rho_{+/-}: \mathbb R_+\rightarrow \mathbb R_+$ and a map $\phi : X\rightarrow H$ such that :
+\[\rho_-(d_X(x,y))\leq ||\phi(x)-\phi(y)||_H \leq \rho_+(d_X(x,y))\quad,\forall x,y\in X,\]
+where $H$ is the separable Hilbert space.\\
+\end{definition}
+
+Recall that a graph is a a couple $(V,E)$, $V$ being the set of vertices, and $E\subset V\times V$. Define, for $v\in V$, the set of neighbours of $v$ as $N_v=\{w\in V / (v,w)\in E\}$ and the degree of $x$ as $deg(x)=|N_x|$. The length of a path in a graph is defined as the number of edges it contains. A graph is naturally a metric space with the path distance. The Laplacian of the graph is the operator $\Delta \in\mathcal L(l^2(V))$ defined by :
+\[(\Delta f) (x) = f(x) - \frac{1}{deg(x)}\sum_{y\in N_x} f(y) .\] 
+Let $X_j = (V_j,E_j)$ be a countable family of finite graphs. The Laplacian of the coarse disjoint union $X=\coprod X_j$ is defined as $\Delta_X = \bigoplus \Delta_j \in \mathcal L(l^2(X))$.
+ 
+\begin{definition}
+An expander is a family $X=(X_j)_j$ of finite graphs $(X_j,E_j)$ such that 
+\begin{itemize}
+\item[$\bullet$] $\lim_{j}|X_j|=\infty$
+\item[$\bullet$] the degree of the graphs is constant : $\exists k, deg(X_j)=k,\forall j$,
+\item[$\bullet$] the second eigenvalue of the Laplacian is bounded above : $sp(\Delta_j)\subset \{0\}\cup [\epsilon,1]$.
+\end{itemize}
+\end{definition}
+When speaking of expanders, we often confuse them with the metric space consisting of the coarse disjoint union of all the graphs, which is just a metric space with the distance induced by the length on the graph when restricted to one of the graph, and such that $\lim_{j+k\rightarrow \infty}d(X_j,X_k)$.
+
+\begin{prop}\cite{NowakYu}
+Let $(X_j)$ be a countable family of metric spaces such that $\coprod X_j$ is an expander. Then $\coprod X_j$ does not coarsely embeds into Hilbert space.
+\end{prop}
+
+\begin{thm}\cite{NowakYu}
+If $\Gamma$ has property $\tau$ w.r.t. $\mathcal N$, i.e. if the trivial representation is isolated in the topological space of representation factorizing through $\Gamma/\Gamma_j$, then $X_{\mathcal N}(\Gamma)$ is an expander. In particular, Kazdhan's property (T) implies proerty $\tau$, so that property (T) groups satisfy this obstruction. For example, you can take $SL(n,\mathbb Z)$ for $n\geq 3$. 
+\end{thm} 
+%%%%
+%%%%
+
+%----------
+% X module
+%----------
+
+\subsection{Geometric modules and Roe algebras}
+
+For now on, $(X,d)$ will be a discrete metric space with bounded geometry, i.e. such that, for all $R>0$, $\sup_{x\in X} |B(x,R)|$ is finite. In this section, we define the Roe algebras of $X$. 
 
 \begin{definition} A $X$-module is a pair $(H_X,\phi)$ where :
 \begin{itemize}
@@ -67,6 +125,10 @@ But, the representations being standard, $H_U$ and $H'_U$ are separable infinite
 $V$ is an isometry, and supp$(V)\subseteq \coprod U\times U \subseteq \Delta_\varepsilon$.\\
 \qed
 \end{dem}
+
+%--------------
+% Roe algebras
+%--------------
 
 We now define the Roe algebra $C^*(X, H_X)$ of $X$ when we have fixed a standard non-degenerate $X$-module $H_X$. We will prove that it is unique up to unnatural isomorphism, and that this $*$-isomorphism induces a natural isomorphism in $K$-theory.\\
 
@@ -131,11 +193,22 @@ Let $B$ be a $C^*$-algebra. The Roe algebra of $X$ with coefficients in $B$ is t
 
 In the next section, we will define the coarse groupoid $G(X)$, which is an étale groupoid, and express $C^*(X,B)$ as the reduced crossed-product of a well chosen $G(X)$-algebra.
 
-\subsection{Coarse groupoid}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coarse Groupoid}  %%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Recall that $\beta X$ denotes the Stone-Cech compactification of $X$. Let us first define the coarse groupoid of $X$. It is defined as the smallest topological groupoid $G(X)$ with unit space $\beta X$ extending the pair groupoid $X\times X$ over $X$.\\
 
-For any entourage $E$, let $\overline E$ denotes the closure of $E$ in $\beta (X\times X)$. Define $G(X) = \cup_{E\in\mathcal E_X} \overline E$. By universal property of the Stone-Cech compactification, the first and second projections $X\times X\rightarrow X$ extend to continuous maps $G(X)\rightarrow \beta X$ denoted $s$ and $r$ respectively. The same remains true for the inverse map $(x,y)\mapsto (y,x)$ and the unit map $x\mapsto (x,x)$.The following lemma defines the groupoid structure on $G(X)$. The reader can check \cite{RoeCoarse} for a proof.
+For any entourage $E$, let $\overline E$ denotes the closure of $E$ in $\beta (X\times X)$. Define $G(X) = \cup_{E\in\mathcal E_X} \overline E$. By universal property of the Stone-Cech compactification, the first and second projections $X\times X\rightarrow X$ extend to continuous maps $G(X)\rightarrow \beta X$ denoted $s$ and $r$ respectively, as shown in this commutative diagramm :  
+\[\begin{tikzcd}
+X\times X \arrow{r}\arrow{d}{\iota_{X\times X}} &  X \arrow{r}{\iota_X} & \beta X \\
+\beta (X\times X) \arrow[dotted]{urr} & & \\ 
+\end{tikzcd}.\]
+The same remains true for the inverse map $(x,y)\mapsto (y,x)$ and the unit map $x\mapsto (x,x)$.The following lemma defines the groupoid structure on $G(X)$. The reader can check \cite{RoeCoarse} for a proof.
 
 \begin{lem}\cite{RoeCoarse}
 For any entourage, the map $(s,r) : E\rightarrow X\times X$ extends to a topological embedding $\overline E \hookrightarrow \beta X\times \beta X$.
@@ -143,15 +216,18 @@ For any entourage, the map $(s,r) : E\rightarrow X\times X$ extends to a topolog
 
 Using the lemma, we get a topological embedding $G(X)\hookrightarrow \beta X\times \beta X$, and the multiplication map is defined as conjugation by this topological embedding of the multiplication map on the pair groupoid $\beta X\times \beta X$.\\
 
+If $E$ is an entourage, $E$ is contained in a finite union of entourage $E_1\cup \cdots \cup E_n$ such that $s: X\times X \rightarrow X$ and $r: X\times X \rightarrow X$ are injective when restricted to each $E_k$ \cite{RoeCoarse}. We call such entourages \textbf{partial translations}. Every partial translation $E$ acts as a partial bijection $s(E)\rightarrow r(E)$ on $X$ in the following way : $E.x = r\circ (s_{|E})^{-1}(x)$ if $x\in s(E)$. The composition of two partial translations remains a partial translation, and if $E$ and $E'$ are partial translations, then $E'.(E.x) = (E'\circ E).x$ for all $x\in s(E)$. In other words, partial translations of $X$ are a semigroup which acts on $X$.
+
+\begin{prop}\cite{SkTuYu} $G(X)\rightrightarrows \beta X$ is an étale groupoid such that $G(X)_{|X}$ is the pair groupoid $X\times X\rightrightarrows X$.  
+\end{prop}
+
 The remaining of the section is devoted to prove that the Roe algebra of $X$ is isomorphic to a reduced cross-product of a well chosen $C^*$-algebra by $G(X)$. For the reader's convenience, we will abreviate $G(X)$ as $G$.\\
 
-For any $C^*$-algebra $B$, let $\tilde B$ denotes the $C^*$-algebra $l^\infty(X,B\otimes\mathfrak K)$. Multiplication by $l^\infty(X)\cong C(\beta X)$ provides a $C(\beta X)$-structure on $\tilde B$. Recall that $s^* \tilde B = C_0(G)\otimes_s \tilde B$ and $r^* \tilde B = C_0(G)\otimes_r \tilde B$. Let us first define the action of $G$ on $\tilde B$, which is an isomorphism of $C(\beta X)$-algebras $V :s^* \tilde B\rightarrow r^* \tilde B$.\\
-
-If $E$ is an entourage, $E$ is contained in a finite union of entourage $E_1\cup \cdots E_n$ such that $s: X\times X \rightarrow X$ and $r: X\times X \rightarrow X$ are injective when restricted to each $E_k$ \cite{RoeCoarse}. We call such entourages \textbf{partial translations}. Every partial translation $E$ acts as a partial bijection on $X$ in the following way : $E.x = r\circ (s_{|E})^{-1}(x)$ if $x\in s(E)$. The composition of two partial translation remains a partial translation, and if $E$ and $E'$ are partial translations, then $E'.(E.x) = (E'\circ E).x$ for all $x\in s(E)$.\\
+For any $C^*$-algebra $B$, let $\tilde B$ denotes the $C^*$-algebra $l^\infty(X,B\otimes\mathfrak K)$. Multiplication by $l^\infty(X)\cong C(\beta X)$ provides a $C(\beta X)$-structure on $\tilde B$. Recall that $s^* \tilde B = C_0(G)\otimes_s \tilde B$ and $r^* \tilde B = C_0(G)\otimes_r \tilde B$. As $C_0(G)\subseteq C(\beta(X\times X))\cong l^\infty(X\times X)$, these algebras are generated by elementary tensors $\chi_E\otimes_s f$ and $\chi_E\otimes_r f$ where $f\in\tilde B$ and $E$ is a partial translation. Let us first define the action of $G$ on $\tilde B$, which is an isomorphism of $C(\beta X)$-algebras $V :s^* \tilde B\rightarrow r^* \tilde B$.\\
 
 Suppose $E$ is a partial translation and $f\in\tilde B$. Define 
-\[E.f(x) = \left\{\begin{array}{ll} f(E.x) & \text{ if }x\in s(E)\\ 0 & \text{otherwise.}\end{array}\right.\]
-Both $s^* \tilde B$ and $r^* \tilde B$ are generated by elementary tensors of the form $\chi_E \otimes_s f$ and $\chi_E \otimes_r f$. Define the action on elementary tensors as follows :
+\[E.f(x) = \left\{\begin{array}{ll} f(E^{-1}.x) & \text{ if }x\in r(E)\\ 0 & \text{otherwise.}\end{array}\right.\]
+Off course $E(E'f)=(E\circ E')f$. Define the action on elementary tensors as follows :
 \[V(\chi_E \otimes_s f) = \chi_E \otimes_r (E.f).\]
 
 \begin{lem}
