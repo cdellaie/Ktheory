@@ -28,7 +28,9 @@ A Haar system on $G$ is a family of borelian measures $(\lambda^x)_{x\in G^{(0)}
 \item[$\bullet$] for all $f\in C_c(G)$ and $g\in G$, $\int_{G^{r(g)}} f(h) d\lambda^{r(g)}(dh)= \int_{G^{s(g)}} f(gh) \lambda^{s(g)}(dh)$ holds.
 \end{itemize}
 
-Here are classical examples of groupoids.\\
+If the groupoid is étale, a natural Haar system is the counting measure on the discrete fibers, i.e. $\lambda^x(A) = |A\cap G^x|$ for all $A\subseteq G$.\\
+
+Here are classical examples of groupoids.
 
 \begin{Expl}[Groups and spaces] Any group $G$ is a groupoid over a point $G^{(0)}=*$. $G$ is étale as a groupoid if it is a discrete group. A topological space is also a groupoid over itself, the only arrows being the units over the points : $G^{(0)} = X = G$, $s=r=id_X$, it is always étale.
 \end{Expl}
@@ -82,6 +84,8 @@ Let $Z$ be a right $G$-space. Define :
 These maps define a structure of toplogical groupoid on $Z\rtimes G$. It is called the crossed product groupoid of $Z$ by $G$. It is étale if $G$ is.\\
 
 \subsection{$G$-algebras and crossed products}
+
+This paragraph describes what is an action of a topological groupoid on a $C^*$-algebra, and how to construct the reduced crossed-product out of the action.
 
 \begin{definition}
 Let $X$ be a topological space. A $C(X)$-algebra is a $C^*$-algebra together with a $*$-homomorphism $\theta : C_0(X)\rightarrow Z(\mathcal M(A))$ such that $\overline{\theta (C_0(X)) A} = A$. The couple $(A,\theta)$ is then called a $C(X)$-structure.
@@ -142,7 +146,7 @@ The reduced crossed product $A\rtimes_r G$ is defined as the completion of $C_c(
 Let $B$ be a $G$-algebra, with action $\beta$, and $E$ a $B$-Hilbert module. As earlier, we can define the fiber $E_x$ of $E$ over $x\in G^{(0)}$. Define $s^* E = E \otimes_s C_0(G)$ and $r^* E = E \otimes_r C_0(G)$ which are $s^*B$ and $r^*B$-Hilbert modules respectively, with fibers $(s^* E)_g \cong E_{s(g)}$ and $(r^* E)_g \cong E_{r(g)}$ for all $g\in G$. We can endow $r^*E$ with a structure of $s^* B$-Hilbert module with the help of the isomorphism $\beta^{-1} : r^* B\rightarrow s^* B$.
 
 \begin{definition}
-An equivariant Hilbert $B$-module is a Hilbert $B$-module $E$ together with an unitary $V\in\mathcal L_{s^* B}(s^*E ,r^* E)$ such that $V_gV_{g'} = V_{gg'}$ for all $(g,g')\in G^{(2)}$.
+An equivariant Hilbert $B$-module is a Hilbert $B$-module $E$ together with an unitary $V\in\mathcal L_{s^* B}(s^*E ,r^* E)$ such that $V_gV_{g'} = V_{gg'}$ for all $(g,g')\in G^{(2)}$. If the underlying $G$-algebra is clear, we will often abbreviate $G$-equivariant Hilbert $B$-module by $G$-module.
 \end{definition}
 
 \begin{Expl} Define $L^2(G)$ as the completion of $C_c(G)$ seen as a pre-Hilbert $C_0(G^{(0)})$-module with the $C_0(G^{(0)})$-valued inner product 
@@ -151,7 +155,7 @@ Its fibers are isomorphic to $l^2(G_x)$, and the action $\lambda : s^*L^2(G) \ri
 \[(\lambda_g\xi)(h) = \xi(g^{-1}h)\quad \forall g,h\in G_x.\]
 \end{Expl}
 
-\begin{Expl} Let $B$ be a $G$-algebra, the $C(G^{(0)})$-structure being given by $\theta : C_0(G^{(0)})\rightarrow Z(\mathcal M(B))\subseteq \mathcal L_B(B)$. The $G$-module $L^2(G,B)$ is defined as the tensor product $ L^2(G)\otimes_\theta B$. Its fibers are $l^2(G,B)$ and the actionis given by $\lambda\otimes id_{B}$.
+\begin{Expl} Let $B$ be a $G$-algebra, the $C(G^{(0)})$-structure being given by $\theta : C_0(G^{(0)})\rightarrow Z(\mathcal M(B))\subseteq \mathcal L_B(B)$. The $G$-module $L^2(G,B)$ is defined as the tensor product $ L^2(G)\otimes_\theta B$. Its fibers are $l^2(G,B)$ and the action is given by $\lambda\otimes id_{B}$.
 \end{Expl}
 
 \begin{Expl} More generally, let $B$ be a $G$-algebra and $E$ be a $B$-module, with $C(G^{(0)})$-structure given by $\theta : C_0(G^{(0)})\rightarrow Z(\mathcal M(B))\subseteq \mathcal L_B(B)$. The $G$-equivariant $B$-Hilbert module $L^2(G,E)$ is defined as the tensor product $ L^2(G)\otimes_\theta E$.
@@ -186,12 +190,19 @@ Two $K$-cycles $(E,\pi,T)$ and $ (E',\pi',T')$ in $\mathbb E^G(A,B)$ are homotop
 \begin{definition} $KK_0^G(A,B)$ is defined as the quotient of $\mathbb E^G(A,B)$ by the equivalence relation given by homotopy. Let $\C_1$ denotes the trivial $G$-Hilbert module $\C^2$ with the standard grading given by $\begin{pmatrix}0 & 1 \\ 1 & 0 \end{pmatrix}$. $KK_1^G(A,B)$ is defined as $KK_0^G(A,B \otimes \C_1)$.
 \end{definition}
 
+One of the properties that makes equivariant $KK$-theory so powerful is the existence of a product, called the Kasparov product. Its existence is highly non trivial, and it fails to exists in the non-separable case or the $KK$-theory for Banach algebras developed by V. Lafforgue \cite{Lafforgue} for example.
+
+\begin{prop}\cite{LeGall} Let $A$, $B$ and $C$ be $G$-algebras such that $A$ is separable. There exists an associative map 
+\[\otimes_B :\left\{\begin{array}{ccc} KK^G(A,B)\times KK^G(B,C) & \rightarrow & KK^G(A,C) \\ (z,z') & \mapsto & z\otimes_B z' \end{array}\right. \]
+which is distributive w.r.t. the addition of $K$-cycles. The Kasparov product is covariant w.r.t. $C$ and contravariant w.r.t. $A$.
+\end{prop}
+
 \begin{rk}
 By the equivariant stabilization lemma \ref{GStabilization}, any $B$-Hilbert module $E$ sits as a complemented $G$-submodule of the standard module $H_B$, and as $[E,\pi,T] = [E \oplus H_B,\pi\oplus 0,T\oplus 0]$, we can suppose $E = H_B$.
 \end{rk}
 % KASPAROV PRODUCT
 
-Here are some examples of $K$-cycles. For detailed proofs of the various constructions, we send the reader to \cite{blackadar}.
+Here are some examples of $K$-cycles. For detailed proofs of the various constructions, we send the reader to \cite{blackadar} and \cite{LeGall}.
 
 \begin{Expl}
 If $\phi : A\rightarrow B$ is a $G$-equivariant $*$-homomorphism, it induces a $K$-cycle $(B,\phi,0)\in \mathbb E^G(A,B)$ whose class is denoted by $[\phi]\in KK_0^G(A,B)$. This induces a covariant functor $\phi_* = - \otimes_A [\phi] : KK^G(D,A)\rightarrow KK^G(D,B)$ and a contravariant functor $\phi^*=  [\phi] \otimes_B - : KK^G(B,D)\rightarrow KK^G(A,D)$ for any $G$-algebra $D$. Moreover, if $\phi' : B\rightarrow C$, the following relation holds 
@@ -222,6 +233,33 @@ Then, the following theorem is true for a universal constant $d$, which does not
 Let $G$ be a locally compact groupoid with Haar system. Then every element $z\in KK^G(A,B)$ has decomposition property $(d)$.
 \end{thm}
  
+The next two propositions reminds the reader about crucial natural morphisms built by P.Y. Le Gall in his thesis that we will need later on. We only state results and remind the reader about the constructions, withut proofs. The reader can consult \cite{LeGall} for details.
+
+\begin{prop}\cite{LeGall} Let $A$, $B$, and $C$ be $G$-algebras. Then 
+\[\tau_D : 
+\left\{\begin{array}{rcl} 
+KK^G(A,B) & \rightarrow & KK^G(A\otimes D,B\otimes D) \\ 
+\ [E,\pi,T] & \mapsto     & [E\otimes_{C_0(G^{(0)})} D,\pi\otimes_{C_0(G^{(0)})} id_D,T\otimes_{C_0(G^{(0)})} id_D]
+\end{array}\right. \] 
+defines a homomorphism of $\Z_2$-graded abelian groups which respects the Kasparov product, i.e. 
+\[\tau_D(x\otimes_B y) = \tau_D(x)\otimes_{B\otimes D} \tau_D(y)\quad \forall x\in KK^G(A,B),y\in KK^G(B,C).\]
+\end{prop}
+
+The next transformation is called the descent functor, or the Kasparov transform.
+
+\begin{prop}\cite{LeGall} Let $A$, $B$, $C$ and $D$ be $G$-algebras. Then 
+\[j_G : 
+\left\{\begin{array}{rcl} 
+KK^G(A,B) & \rightarrow & KK^G(A\rtimes_r G,B\rtimes_r G) \\ 
+\ [E,\pi,T] & \mapsto     & [E_G,\pi_G,T_G]
+\end{array}\right. \] 
+defines a homomorphism of $\Z_2$-graded abelian groups which respects the Kasparov product, i.e. 
+\[j_G(x\otimes_B y) = j_G(x)\otimes_{B\rtimes_r G} j_G(y)\quad \forall x\in KK^G(A,B),y\in KK^G(B,C).\]
+\end{prop}
+
+
+The remainder of the section is devoted to compile some useful facts that we will use.\\
+
 We will use the following result.\cite{blackadar}\cite{CuSk}
 
 %\begin{prop}
