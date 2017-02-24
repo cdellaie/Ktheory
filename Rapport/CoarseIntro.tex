@@ -201,12 +201,12 @@ In the next section, we will define the coarse groupoid $G(X)$, which is an éta
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Recall that $\beta X$ denotes the Stone-Cech compactification of $X$. Let us first define the coarse groupoid of $X$. It is defined as the smallest topological groupoid $G(X)$ with unit space $\beta X$ extending the pair groupoid $X\times X$ over $X$.\\
+Recall that $\beta X$ denotes the Stone-Cech compactification of $X$. Let us first define the coarse groupoid of $X$. It is defined as the smallest topological groupoid $G(X)$ with unit space $\beta X$ extending the pair groupoid $X\times X$ over $X$. It was defined by G. Skandalis, J.L. Tu and G. Yu in \cite{SkTuYU}. It allows to translate coarse properties of $X$ into topological or dynamical properties of $G(X)$. Moreover, it turns out that Roe algebras with coefficients of $X$ can be expressed as crossed products of $G(X)$, and, as we will see in another chapter, that the coarse Baum-Connes conjecture for $X$ coincides with the Baum-Connes conjecture for this crossed-product.  \\
 
 For any entourage $E$, let $\overline E$ denotes the closure of $E$ in $\beta (X\times X)$. Define $G(X) = \cup_{E\in\mathcal E_X} \overline E$. By universal property of the Stone-Cech compactification, the first and second projections $X\times X\rightarrow X$ extend to continuous maps $G(X)\rightarrow \beta X$ denoted $s$ and $r$ respectively, as shown in this commutative diagramm :  
 \[\begin{tikzcd}
 X\times X \arrow{r}\arrow{d}{\iota_{X\times X}} &  X \arrow{r}{\iota_X} & \beta X \\
-\beta (X\times X) \arrow[dotted]{urr} & & \\ 
+\beta (X\times X) \arrow[dotted]{urr} & & 
 \end{tikzcd}.\]
 The same remains true for the inverse map $(x,y)\mapsto (y,x)$ and the unit map $x\mapsto (x,x)$.The following lemma defines the groupoid structure on $G(X)$. The reader can check \cite{RoeCoarse} for a proof.
 
@@ -220,6 +220,9 @@ If $E$ is an entourage, $E$ is contained in a finite union of entourage $E_1\cup
 
 \begin{prop}\cite{SkTuYu} $G(X)\rightrightarrows \beta X$ is an étale groupoid such that $G(X)_{|X}$ is the pair groupoid $X\times X\rightrightarrows X$.  
 \end{prop}
+
+\begin{Expl} If $\Gamma$ is a finitely generated group, then the action of $\Gamma$ on $|\Gamma|$ extend to $\beta | \Gamma |$. In \cite{SkTuYu}, the reader can find a proof that $G( | \Gamma | )\cong \beta | \Gamma | \rtimes \Gamma $.
+\end{Expl}
 
 The remaining of the section is devoted to prove that the Roe algebra of $X$ is isomorphic to a reduced cross-product of a well chosen $C^*$-algebra by $G(X)$. For the reader's convenience, we will abreviate $G(X)$ as $G$.\\
 
@@ -236,6 +239,15 @@ $V$ defines an action of $G$ on $\tilde B$.
 
 \begin{dem}
 % A FINIR
+Let $(g,g')\in G^{(2)}$, and choose partial translations $E, E'\subseteq X\times X$ such that $g\in \overline E$ and $g'\in \overline{E'}$. Then $g'\circ g\in \overline{E'\circ E}$.\\
+
+If $r(\overline E)\neq s(\overline {E'})$, we can take $U=r(\overline E)\cap s(\overline {E'})$ to get partial translations $F = (r_{|E})^{-1}(U)$ and $F' = (s_{|E'})^{-1}(U)$ which satisfy the same hypothesis. Let us assume then that $r(\overline E) = s(\overline {E'})$, hence $\chi_E\otimes_r f = \chi_E'\otimes_s f = $ and $\chi_E'\otimes_r f = \chi_{E'\circ E} \otimes_r f = $ for any $f\in \tilde B$. Then, if $f\in \tilde B$ :
+\[\begin{array}{rl} V_{g'}(V_g(f_{s(g))})) =  & V_{g'}\left( \varinjlim_{F : g\in \overline F} \chi_E \otimes_r E.f\right) \\
+				=&  \varinjlim_{F' : g'\in \overline{F'}\subseteq \overline{E'}}\varinjlim_{F : g\in \overline F\subseteq \overline E} \chi_{E'} \otimes_r (E'\circ E).f \\
+				=& \varinjlim_{F' : g'\in \overline{F'}\subseteq \overline{E'}}\varinjlim_{F : g\in \overline F\subseteq \overline E} \chi_{E'\circ E} \otimes_r (E'\circ E).f \\
+				=& \varinjlim_{F : g'g\in \overline{F}\subseteq \overline{E'\circ E}} \chi_{E'\circ E} \otimes_r (E'\circ E).f \\
+				=& V_{g'g}(f_{s(g)})\\ 
+\end{array} \] 
 \qed
 \end{dem}
 
@@ -246,22 +258,19 @@ Let $X$ be a discrete metric space with bounded geometry, and $B$ a $C^*$-algebr
 
 \begin{dem}
 %A FAIRE
+The proof is a detailed version of the proof of \cite{SkTuYu}. The idea is to represent faithfully the two $C^*$-algebras on the same Hilbert module, and to show that they are equal in this representation.\\
+
+By definition, $\tilde B\rtimes_r G$ is faithfully represented on $L^2(G,\tilde B)$. Consider the $G$-invariant ideal $J= C_0(X,B\otimes\mathfrak K)$ and the Hilbert $\tilde B$-module $L^2(G,J) = L^2(G,\tilde B)\otimes J$. The $*$-homomorphism $\mathcal L_{\tilde B}(L^2(G,\tilde B) \rightarrow \mathcal L_{\tilde B}(L^2(G,J))$ ; $T\mapsto 1\otimes T $ is isometric, so we obtain a faithful representation $\tilde B\rtimes_r G \rightarrow \mathcal L_{\tilde B}(L^2(G,J))$.\\
+
+But $L^2(G,J)  \cong C_0(X) \otimes L^2(G)\otimes B\otimes \mathfrak K$, hence $C_0(X)\otimes l^2(X) \otimes B \otimes \mathfrak K$ is a submodule of $L^2(G,J)$. Notice that, as a Hilbert space, $\mathfrak K \cong H$, hence $C^*(X,B)$ is faithfully represented on $L^2(G,J)$, acting trivially on the $C_0(X)$ factor. \\
+
+Recall that $\tilde B\rtimes_r G$ is generated by elementary tensors $\chi_E\otimes f$, where $E$ is a partial translation and $f\in\tilde B$. To such a $\chi_E\otimes f$, associate the following operator $T$ on $l^2(X)\otimes H\otimes B$ : 
+\[T_{xy} =\left\{\begin{array}{ll} f(x) & \text{ if }(x,y)\in E\\ 0 & \text{otherwise.}\end{array}\right. \]
+Then, if $R=\sup_E d$, $T\in C_R[X,B]$, and the images of $\chi_E\otimes f$ and $T$ coincide under the faitfull representations described above, so that $\chi_E\otimes f\rightarrow T$ extends to an isomorphism $\Psi_B$.\\
+
+If $\phi : A\rightarrow B$ is a $*$-homomorphism, it induces $\tilde \phi : \tilde A\rightarrow \tilde B$ and $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$. Naturality of $\Psi$ follows then from functoriality of the Hilbert module tensor product and functoriality of $l^\infty(X, - \otimes \mathfrak K)$ and $C^*(X, - )$.\\   
 \qed
 \end{dem}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+\begin{rk} A minor modification of this proof yields that $C_r^*(G(X))\cong C^*_u(X)$. Let $\Gamma$ be a finitely generated group. Then $C^*(| \Gamma |)\cong l^\infty( \Gamma)\rtimes_r \Gamma  $.
+\end{rk}

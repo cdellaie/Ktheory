@@ -1,6 +1,9 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+Case mismatch error between cite keys SkTuYU and SkTuYu
+---line 83 of file main.aux
+ : \citation{SkTuYU
+ :                 }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: FDC.aux
 A level-1 auxiliary file: StandardModules.aux
 A level-1 auxiliary file: StronglyProper.aux
@@ -15,45 +18,4 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 26 entries,
-            2118 wiz_defined-function locations,
-            680 strings with 7330 characters,
-and the built_in function-call counts, 7549 in all, are:
-= -- 759
-> -- 250
-< -- 9
-+ -- 107
-- -- 76
-* -- 474
-:= -- 1254
-add.period$ -- 78
-call.type$ -- 26
-change.case$ -- 108
-chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 324
-empty$ -- 649
-format.name$ -- 76
-if$ -- 1579
-int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 32
-newline$ -- 132
-num.names$ -- 52
-pop$ -- 131
-preamble$ -- 1
-purify$ -- 90
-quote$ -- 0
-skip$ -- 220
-stack$ -- 0
-substring$ -- 505
-swap$ -- 61
-text.length$ -- 9
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 90
-warning$ -- 7
-while$ -- 86
-width$ -- 28
-write$ -- 277
-(There were 8 warnings)
+(There was 1 error message)
