@@ -223,16 +223,17 @@ z & \mapsto & J_G^{\varepsilon, F}(z)([\mathcal L_E]_{\varepsilon , R})
 %%%%%%%%%%%%
 %%%%%%%%%%%%
 
-\textit{Remarks}
-\begin{itemize}
-\item[(1)] The assembly map is defined for all reasonnable crossed-products by $G$. In particular for the reduced one and the maximal one, so that we have two different assembly, which we would distinguish writing $J_{G,r}$ and $J_{G,max}$ if necessary.
-\item[(2)] The bunch of assembly maps $\mu_B^{\varepsilon,F,E}$ induces the Baum-Connes assembly map for $G$ in $K$-theory : the following diagram commutes
+\begin{rk}
+The assembly map is defined for all reasonnable crossed-products by $G$. In particular for the reduced one and the maximal one, so that we have two different assembly, which we would distinguish writing $J_{G,r}$ and $J_{G,max}$ if necessary.
+\end{rk} 
+
+\begin{rk}The bunch of assembly maps $\mu_B^{\varepsilon,F,E}$ induces the Baum-Connes assembly map for $G$ in $K$-theory : the following diagram commutes
 \[\begin{tikzcd}
 RK^G(C_0(P_E(G)),B) \arrow{r}{\mu_B^{\varepsilon,F,E}}\arrow{dr}{\mu_G^F} & K_*^{\varepsilon, F}(B\rtimes_r G)\arrow{d}{\iota_{\varepsilon,F}}\\ 
 		&  K_*(B\rtimes_r G)
 \end{tikzcd}\]
 because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^d(z)=[\mathcal L_E]\otimes j_G(z)$. But, as ${{\mathcal L}_{d'}}_{|P_d(G)}=\mathcal L_d$ as soon as $d\leq d'$, this diagram commutes with inductive limit over $d$.\\
-\end{itemize}
+\end{rk}
 
 %In \cite{OY3}, H. Oyono-Oyono and G. Yu defined a bunch of local quantitative coarse assembly maps for a metric space $X$. For the sake of simplicity, we take $X$ to be discrete and uniformly bounded. Let $\mathcal C$ be its coarse structure, that is the set of all its controlled subsets. Then, for any $C^*$-algebras $A$ and $B$ and a $K$-cycle $z\in KK(A,B)$, they construct a controlled morphism
 %\[\sigma_X(z) : \hat K(C^*(X,A))\rightarrow \hat K(C^*(X,B)).\]
@@ -242,42 +243,6 @@ because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^d(
 %in $K$-theory. Now let $G$ be the coarse groupoid of $X$. It is an étale groupoid with compact base space $G^{(0)}=\beta X$, the Stone-Cech compactification of $X$ defined as
 %\[G := \cup_{E \in \mathcal C} \overline E,\] 
 %where $\overline E$ is the closure of $E$ in $\beta (X \times X)$. 
-
-Recall that $X$ is a discrete metric space with bounded geometry, and $G=G(X)$ is its coarse groupoid. A classical result of G. Skandalis, J.-L. Tu and G. Yu \cite{SkTuYu} claims that the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ is equivalent to the Baum-Connes conjecture for the groupoid $G$ with coefficient in $l^\infty(X,K_B)$. More precisely, there is an isomorphism of $C^*$-algebras $\Psi_B : l^\infty(X,K_B)\rtimes_r G \cong C^*(X,B)$ and the following diagram commutes :
-\[\begin{tikzcd}
-\mu_{G,l^\infty(X,K_B)}^d : KK_*^G(C_0(P_d(G),l^\infty(X,K_B)) \arrow{r}\arrow{d}{\iota^*}& K_*(l^\infty(X, K_B)\rtimes_r G)\arrow{d}{(\Psi_B)_*}\\
-A_{X,B}^d : KK_*(C_0(P_d(X),B) \arrow{r} & K_*(C^*(X,B))
-\end{tikzcd}\]
-where the left vertical arrow comes from the inclusion of groupoid $\iota :\{x\}\rightarrow G$ for any $x\in X$. We claim that we can prove a controlled analogue of this result which induces it in $K$-theory.
-
-To prove this, we shall describe $\Psi$ more precisely. For any $C^*$-algebra $B$, let $\tilde B = l^\infty (X,K_B)$. It is naturaly a $G$-algebra, and the fiber over any $x\in\beta X$ is easily seen to be $\tilde B_x = B$. Now, if $f\in C_c(G, \tilde B)$, as $\overline E$ are the compact-open of $G$, $f$ is continuous over a $\overline E$, so it is just a bounded function over $E$.\\
-Define for $g=(x,y)\in X\times X\subset G$,
-$\Psi_B(f)_{xy}=f(g)(x)\in \tilde B$,
-so that $\Psi_B(f)=(\Psi_B(f)_{xy})_{x,y\in X}$ is a locally compact operator of finite propagation (its support is in $E$). This is a $*$-morphism which extends to the annouced isomorphism. Moreover, $\tilde B$ is naturally a $C^*$-subalgebra of both $\tilde B\rtimes_r G$ and $C^*(X,B)$, and the two inclusion commute modulo $\Psi_B$. We have a diagram :
-\[\begin{tikzcd} 
-  \  & B \arrow[bend left]{rdd}{\iota_3^B}& \\
-  \ &\tilde B \arrow{u}{ev_x}\arrow[hookrightarrow]{ld}{\iota_1^B}\arrow[hookrightarrow]{rd}{\iota_2^B} &  \\ 
-\tilde B\rtimes_rG \arrow{rr}{\Psi_B} &  &  C^*(X,B) 
-\end{tikzcd}\] 
-where the lower triangle is commutative.\\
-
-Off course, $\Psi_B$ induces $\Psi_{B*} : \mathcal L_{\tilde B\rtimes_r G}(H_{B\rtimes_r G})\rightarrow \mathcal L_{C^*(X,B)}(\mathcal E)$ where $\mathcal E = H_{B\rtimes_r G}\otimes_{\Psi_B} C^*(X,B)$. \\
-Let $A$ and $B$ be two $C^*$-algebra and $z\in KK_1^G(\tilde A,\tilde B)$, represented by $(H_{\tilde B}, \psi, T)$. As $T_G = (\iota_1)_*(T)$, we have $(\Psi_B)_*(T_G)=(\iota_2)_*(T)=(T_x)_X$. Also, the relations $(\iota_1^A)_*\circ\psi = \psi_G\circ \iota_1^A$ and $(\iota_2^A)_*\circ\psi_x = (\psi_x)_X\circ \iota_2^A$ are easy to derive, which lead to $(\Psi_B)_*\circ \psi_G \circ \iota_1^A= (\iota_2^B)_*\circ \psi_x = (\psi_x)_X\circ \Psi_A\circ \iota_1^A$. By extending $G$-equivariantly to $\tilde A  \rtimes_r G$, we have $(\Psi_B)_*(\psi_G(a))=(\psi_x)_X(\Psi_A(a))$. The map $(x,y)\mapsto (\Psi_A(x), (\Psi_B)_*(y))$ induces a morphism $\Psi_E : E^{(\psi,T)}  \rightarrow  E^{((\psi_x,T_x))}$ which sends 
-$(x,P_G \psi_G(x)P_G + y)$ to $(\Psi_A(x), (P_x)_X(\psi_x)_X(\Psi_A(x))(P_x)_X+(\Psi_B)_*(y))$ by the previous computations. This map makes the following diagram commute
-\[
-\begin{tikzcd}[column sep = small]
-0\arrow{r} & K_{\tilde B\rtimes G}\arrow{r}\arrow{d}{(\Psi_B)_*} & E^{(\psi,T)} \arrow{r}\arrow{d}{\Psi_E}& \tilde A\rtimes_r G\arrow{r}\arrow{d}{\Psi_A} & 0\\
-0\arrow{r} & K_{C^*(X,B)}\arrow{r} & E^{(\psi_x,T_x)} \arrow{r}& C^*(X,A)\arrow{r} & 0
-\end{tikzcd}.
-\]
-Now the remark $3.7$ of \cite{OY2} gives $((\Psi_B)_*)_*\circ D_{\tilde A\rtimes_rG}^{K_{\tilde B\rtimes_G}} = D_{C^*(X,A)}^{K_{C^*(X,B)}}\circ (\Psi_A)_*$, and if we compose by the Morita equivalence, we get 
-\[\sigma(\iota^*(z)) \circ (\Psi_A)_* = (\Psi_B)_*\circ J_G(z),\]
-where $\iota^*(z)$ is indeed the class of $(H_B, \psi_x,T_x)$.\\
-
-As $C_0(P_d(G))$ is a $G$-algebra whose fiber over any $w\in\beta X$ is isomorphic to $C_0(P_d(X))$, if $A=C_0(P_d(G))$, then $(\Psi_A)_*[\mathcal L_d]\in K^{\epsilon , R}_0(C^*(X,C_0(P_d(X)))$ which is equal to $[P_X]$, and gives the result.
-\[(\Psi_B)_*\circ\mu^{\epsilon,R}_G (z) = A^{\epsilon,R}(\iota^*(z)).\]
-This, passing to $K$-theory, implies the result of \cite{SkTuYu}.\\
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Quantitative statements}

@@ -51,7 +51,7 @@ Let $\Gamma$ be a finitely generated group which is residually finite w.r.t. $\m
 This last example gives, under suitable conditions, an example of coarse space which is not coarsely embeddable into Hilbert space.
 
 \begin{definition}
-A metric space $(X,d_X)$ coarsely embeds into Hilbert space if there exists two increasing functions $\rho_{+/-}: \mathbb R_+\rightarrow \mathbb R_+$ and a map $\phi : X\rightarrow H$ such that :
+A metric space $(X,d_X)$ coarsely embeds into Hilbert space if there exists two increasing functions $\rho_{+/-}: \mathbb R_+\rightarrow \mathbb R_+$ such that $\lim_{\infty} \rho(R) = +\infty$, and a map $\phi : X\rightarrow H$ such that :
 \[\rho_-(d_X(x,y))\leq ||\phi(x)-\phi(y)||_H \leq \rho_+(d_X(x,y))\quad,\forall x,y\in X,\]
 where $H$ is the separable Hilbert space.\\
 \end{definition}
@@ -77,6 +77,22 @@ Let $(X_j)$ be a countable family of metric spaces such that $\coprod X_j$ is an
 \begin{thm}\cite{NowakYu}
 If $\Gamma$ has property $\tau$ w.r.t. $\mathcal N$, i.e. if the trivial representation is isolated in the topological space of representation factorizing through $\Gamma/\Gamma_j$, then $X_{\mathcal N}(\Gamma)$ is an expander. In particular, Kazdhan's property (T) implies proerty $\tau$, so that property (T) groups satisfy this obstruction. For example, you can take $SL(n,\mathbb Z)$ for $n\geq 3$. 
 \end{thm} 
+
+\begin{definition} A discrete metric space $X$ is said to admit a fibred coarse embedding into Hilbert space if there exist
+\begin{itemize}
+\item[$\bullet$] a field of Hilbert spaces $\{H_x\}_{x\in X}$ over $X$,
+\item[$\bullet$] a section $s : X\rightarrow \coprod H_x$, i.e. $s(x)\in H_x$,
+\item[$\bullet$] two non-decreasing functions $\rho_{+/-}: \mathbb R_+\rightarrow \mathbb R_+$ such that $\lim_{\infty} \rho(R) = +\infty$,
+\item[$\bullet$] a reference Hilbert space $H$
+\end{itemize}
+such that, for any $R>0$, there exists a bounded subset $E_R\subseteq X$ and a trivialization 
+\[t_C : \coprod_{x\in C} H_x \rightarrow C\times H\]
+for all $C\in X - E_R$ of diameter less than $R$. Moreover, for all $x\in X$, the map $t_C(x)$ is an affine isometry satisfying 
+\begin{itemize}
+\item[$\bullet$] for all $x,y\in C$, $\rho_1(d(x,y))\leq ||t_C(x)(s(x))-t_c(y)(s(y))|| \leq \rho_2(d(x,y))$
+\item[$\bullet$] for all $C_1,C_2$ in $X - E_R$ of diameter less than $R$ with nonempty intersection $C_1\cap C_2$, there exists an affine isometry $t_{C_1,C_2} : H\rightarrow H $ such that $t_{C_1}(x)t_{C_2}(x)^{-1} = t_{C_1,C_2}(x)$ for all $x\in C_1\cap C_2$.
+\end{itemize}
+\end{definition}
 %%%%
 %%%%
 
@@ -251,7 +267,7 @@ If $r(\overline E)\neq s(\overline {E'})$, we can take $U=r(\overline E)\cap s(\
 \qed
 \end{dem}
 
-\begin{thm}
+\begin{thm}\label{IsomCoarseGroupoid}
 Let $X$ be a discrete metric space with bounded geometry, and $B$ a $C^*$-algebra. There exists a natural isomorphism 
 \[\begin{tikzcd}\Psi_B :  \ l^\infty(X,B\otimes\mathfrak K)\rtimes_r G(X) \arrow{r}{\cong} &   C^*(X,B)\end{tikzcd}.\] 
 \end{thm}
