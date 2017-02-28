@@ -19,14 +19,26 @@ RK_*(P_d(X),B) \arrow{r}{\mu_{X,B}^d}& K_*(C^*(X,B))
 where $\iota^*$ is the natural transformation induced by $\iota$ and $d= \sup_E d$.
 \end{thm}
 
-We claim that we can prove a controlled analogue of this result which induces it in $K$-theory. We need the following lemma.
+We claim that we can prove a controlled analogue of this result which induces it in $K$-theory. We need the following lemmas.
+
+\begin{lem}
+Let $G$ be an étale groupoid,$x\in G$, $Z$ a proper $G$-space and $B$ a $C^*$-algebra. Denote by $\tilde A$ the $G$-algebra $C_0(Z)$ and $\iota : \{x\} \rightarrow G$ the natural inclusion of groupoids. Then :
+\[\iota^* : RK^G(Z,l^\infty_B)\rightarrow KK(A_x,B)\]
+is an isomorphism of $\Z_2$-graded abelian groups. 
+\end{lem}
+
+\begin{dem}
+We define an inverse for $\iota^*$ : for $z=[H_{B_x},\pi,T]\in KK(A_x,B_x)$, define $\eta(z)= [H_B,\tilde\pi,\tilde T]$ where 
+\[(\tilde\pi) = \pi \otimes id\]
+\qed
+\end{dem}
 
 \begin{lem} Let $A$ and $B$ be $C^*$-algebras, and $\tilde A = l^\infty(X,A\otimes \mathfrak K)$ and $\tilde B = l^\infty(X,B\otimes \mathfrak K)$. Then, for every $z\in KK^G(\tilde A,\tilde B)$, the following equality of controlled morphisms holds :
 \[\hat\sigma_X(\iota^*(z))\circ (\Psi_A)_* = (\Psi_B)_*\circ \hat J_G(z).\]  
 \end{lem}
 
 \begin{dem}
-Let $z\in KK^G(\tilde A,\tilde B)$ be represented by the $K$-cycle $[H_{\tilde B},\pi,T]$ and let $P=\frac{1+T}{2}$. Recall that $E^{(\pi,T)} = \{(x,P_G\pi_G(x)P_G+y : x\in \tilde A\rtimes_r G,y\in (\tilde B\rtimes_r G)\otimes\mathfrak K\}$.\\
+Let $z\in KK^G(\tilde A,\tilde B)$ be represented by the $K$-cycle $[H_{\tilde B},\pi,T]$ and let $P=\frac{1+T}{2}$. We can suppose that $T$ is $G$-equivariant and $\pi = \pi\otimes id$. Recall that $E^{(\pi,T)} = \{(x,P_G\pi_G(x)P_G+y : x\in \tilde A\rtimes_r G,y\in (\tilde B\rtimes_r G)\otimes\mathfrak K\}$.\\
 
 Let us show how to extend $\Psi$ to $E^{(\pi,T)}$. For any $C^*$-algebra $B$, $\tilde B$ is naturally a $C^*$-subalgebra of both $\tilde B\rtimes_r G$ and $C^*(X,B)$, and the two inclusions commute modulo $\Psi_B$. We have a diagram :
 \[\begin{tikzcd} 
@@ -35,8 +47,8 @@ Let us show how to extend $\Psi$ to $E^{(\pi,T)}$. For any $C^*$-algebra $B$, $\
 \tilde B\rtimes_rG \arrow{rr}{\Psi_B} &  &  C^*(X,B) 
 \end{tikzcd}\] 
 where the lower triangle is commutative. The map $(x,y)\mapsto (\Psi_A(x), (\Psi_B)_*(y))$ induces a morphism 
-\[\Psi_E : E^{(\psi,T)}  \rightarrow  E^{((\psi_x,T_x))} \] 
-which sends $(x,P_G \psi_G(x)P_G + y)$ to $(\Psi_A(x), (P_x)_X(\psi_x)_X(\Psi_A(x))(P_x)_X+(\Psi_B)_*(y))$. Indeed, as $T_G = (\iota_1)_*(T)$, we have $(\Psi_B)_*(T_G)=(\iota_2)_*(T)=(T_x)_X$. Also, the relations $(\iota_1^A)_*\circ\psi = \psi_G\circ \iota_1^A$ and $(\iota_2^A)_*\circ\psi_x = (\psi_x)_X\circ \iota_2^A$ are easy to derive, which lead to $(\Psi_B)_*\circ \psi_G \circ \iota_1^A= (\iota_2^B)_*\circ \psi_x = (\psi_x)_X\circ \Psi_A\circ \iota_1^A$. By extending $G$-equivariantly to $\tilde A  \rtimes_r G$, we have $(\Psi_B)_*(\psi_G(a))=(\psi_x)_X(\Psi_A(a))$.\\
+\[\Psi_E : E^{(\psi,T)}  \rightarrow  E^{(\psi_x,T_x)} \] 
+which sends $(x,P_G \psi_G(x)P_G + y)$ to $(\Psi_A(x), (P_x)_X(\psi_x)_X(\Psi_A(x))(P_x)_X+(\Psi_B)_*(y))$. Indeed, as $T_G = (\iota_1)_*(T)$, we have $(\Psi_B)_*(T_G)=(\iota_2)_*(T)=(T_x)_X$. Also, the relations $(\iota_1^A)_*\circ\pi = \pi_G\circ \iota_1^A$ and $(\iota_2^A)_*\circ\pi_x = (\pi_x)_X\circ \iota_2^A$ are easy to derive, which lead to $(\Psi_B)_*\circ \pi_G \circ \iota_1^A= (\iota_2^B)_*\circ \pi_x = (\pi_x)_X\circ \Psi_A\circ \iota_1^A$. By extending $G$-equivariantly to $\tilde A  \rtimes_r G$, we have $(\Psi_B)_*(\pi_G(a))=(\pi_x)_X(\Psi_A(a))$.\\
 
 This map makes the following diagram commute
 \[
