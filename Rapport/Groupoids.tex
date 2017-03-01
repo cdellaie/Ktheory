@@ -236,7 +236,14 @@ Then, the following theorem is true for a universal constant $d$, which does not
 \begin{thm}[\cite{LaffOY}]\label{propertyD}
 Let $G$ be a locally compact groupoid with Haar system. Then every element $z\in KK^G(A,B)$ has decomposition property $(d)$.
 \end{thm}
- 
+
+We saw that $KK^G(A,B)$ is a bifunctor w.r.t. $*$-homomorphisms, contravariant in the $A$ variable and covariant in the $B$ variable. Let us describe how $KK^G$ transforms under morphisms of groupoids. See $\cite{LeGall}$ for a proof.
+
+\begin{prop} Let $G$ and $G'$ be étale groupoids and $\phi :G\rightarrow G'$ a strict morphism of topological groupoids, i.e. $\phi$ is continuous such that $\phi(e_x)=e_{\phi^{(0)}(x)}$ and $\phi(g)\phi(g') = \phi(gg')$ for all $(g,g')\in G^{(2)}$. Let $A$ and $B$ be $G'$-algebras, and $\phi^* A = A\otimes_\phi C_0(G)$ and $\phi^* B = B\otimes_\phi C_0(G)$ the pull back $G$-algebras. Then $\phi$ induces a homomorphism of $\Z_2$-graded abelian groups
+\[\phi^* : KK^{G'}(A,B)\rightarrow KK^G(\phi^* A,\phi^* B),\]
+such that, if $\phi' : G'\rightarrow G''$ is another strict morphism, then $(\phi'\circ\phi)^* =\phi^*\circ(\phi')^*$. In other words, $KK^G$ is contravariant in the $G$ variable.
+\end{prop}
+
 The next two propositions reminds the reader about crucial natural morphisms built by P.Y. Le Gall in his thesis that we will need later on. We only state results and remind the reader about the constructions, withut proofs. The reader can consult \cite{LeGall} for details.
 
 \begin{prop}\cite{LeGall} Let $A$, $B$, and $C$ be $G$-algebras. Then 
