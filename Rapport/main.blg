@@ -1,6 +1,8 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
 Case mismatch error between cite keys SkTuYU and SkTuYu
----line 83 of file main.aux
+---line 85 of file main.aux
  : \citation{SkTuYU
  :                 }
 I'm skipping whatever remains of this command
@@ -18,4 +20,45 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
+You've used 28 entries,
+            2118 wiz_defined-function locations,
+            695 strings with 7691 characters,
+and the built_in function-call counts, 8231 in all, are:
+= -- 830
+> -- 281
+< -- 9
++ -- 121
+- -- 86
+* -- 524
+:= -- 1369
+add.period$ -- 84
+call.type$ -- 28
+change.case$ -- 119
+chr.to.int$ -- 0
+cite$ -- 35
+duplicate$ -- 346
+empty$ -- 700
+format.name$ -- 86
+if$ -- 1716
+int.to.chr$ -- 0
+int.to.str$ -- 28
+missing$ -- 34
+newline$ -- 142
+num.names$ -- 56
+pop$ -- 138
+preamble$ -- 1
+purify$ -- 99
+quote$ -- 0
+skip$ -- 235
+stack$ -- 0
+substring$ -- 564
+swap$ -- 63
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 98
+warning$ -- 7
+while$ -- 94
+width$ -- 30
+write$ -- 299
 (There was 1 error message)
