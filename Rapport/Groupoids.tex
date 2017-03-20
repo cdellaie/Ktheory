@@ -48,7 +48,9 @@ These examples show how the notion of topological groupoid interpolates between 
 
 Other examples includes the holonomy groupoid of a foliation \cite{connesfoliations}, Lie groupoids \cite{paterson}, etc. One of the reasons groupoids are such famous objects in noncommutative geometry is that we can still do analysis on it. According to the general philosophy of Connes \cite{Connes94}, groupoids encode geometric situations and remain available to analysis, even when the situation is so pathological that classical tools become trivial. For example, when confronted to a group action, considering the convolution algebra of the principal action groupoid can be a substitute to the studying the quotient space. It turns out that, when the action is free and proper, the envelopping $C^*$-algebra is Morita equivalent to $C_0(X/G)$, which represent the quotient space by Gelfand duality. However, when the quotient is badly behaved, the envelopping $C^*$-algebra still carries usefull information, even if the quotient  is such that $C_0(X/G) = \C$.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Actions of groupoids}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{definition}
 A left action of $G$ on a topological space $Z$ is given by a continuous map $p : Z \rightarrow G^{(0)}$, called the anchor map, and a map $\alpha : G\times_{s,p} Z \rightarrow Z $ such that :
@@ -83,7 +85,24 @@ Let $Z$ be a right $G$-space. Define :
 
 These maps define a structure of toplogical groupoid on $Z\rtimes G$. It is called the crossed product groupoid of $Z$ by $G$. It is étale if $G$ is.\\
 
+Following \cite{TuBC2}, we present now an important class of $G$-spaces called $G$-simplicial complexes.
+
+\begin{definition} \label{Gcomplex}
+Let $n\in\N$. A $G$-simplicial complex of dimension $\leq n$ is a pair $(X,\Delta)$ where :
+\begin{itemize}
+\item[$\bullet$] $X$ is a locally compact $G$-space, called the space of vertices, such that the anchor map $p : X\rightarrow G^{(0)}$ is locally injective;
+\item[$\bullet$] $\Delta$ is a closed $G$-invariant subset of the space of measures on $X$, denoted $M_X$, endowed with the weak $*$-topology. Moreover, $\Delta$ contains only probability measures and satisfies :
+\begin{itemize}
+\item[$\bullet$] for all $\eta\in\Delta$, there exists $x\in G^ {(0)}$ such that $\text{supp }\eta \subseteq p^{-1}(x)$ and $|\text{supp }\eta|\leq n+1$,
+\item[$\bullet$] if $\eta' \in \Delta$ and $\eta\in M_X$ such that $\text{supp }\eta \subseteq \text{supp }\eta'$, then $\eta\in \Delta$.
+\end{itemize}
+For $\eta\in \Delta$, $\text{supp }\eta$ is called a simplex.
+\end{itemize}
+\end{definition}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{$G$-algebras and crossed products}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 This paragraph describes what is an action of a topological groupoid on a $C^*$-algebra, and how to construct the reduced crossed-product out of the action.
 
