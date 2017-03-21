@@ -341,26 +341,66 @@ This kind of statement leads us to define the following proprieties, following \
 Let $B$ a $G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then $\mu_{G,\tilde B}$ is injective if and only if for all $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ and $F$ such that $k_J.E\subset F$, there exists $E' \in\mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(E,E',\varepsilon,F)$. 
 \end{thm}
 
-To prove the theorem, we will need a serie of lemmas.\\
+To prove the theorem, we will need a serie of lemmas. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}. \\
+
+\begin{definition}
+A map between two topological spaces $f : X\rightarrow Y$ is said to be locally injective if there exists an open cover $\mathcal U$ of $X$ such that, for all $U\in \mathcal U$, $f_{|U}$ is injective.
+\end{definition}
+
+\begin{lem}[lemma $3.6$,\cite{TuBC2}]\label{JLTform}
+Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarrow G^{(0)}$ is locally injective, and let $B$ be a $G$-algebra. Then for every $z\in RK^G(X,B)$ there exists a $G$-proper $G$-compact space $Z$ and a $K$-cycle $(H_B, \pi, T)\in \mathbb E^G(C_0(Z),B)$ representing $z$ such that :
+\begin{itemize}
+\item[$\bullet$] $-1 \leq T\leq 1$,
+\item[$\bullet$] $T$ is $G$-equivariant, i.e. $r^* T = V s^*T V^*$ ,
+\item[$\bullet$] $T$ commutes with the action of $X$, i.e. $[\pi(a),T]= 0$ for all $a\in C_0(Z)$.
+\end{itemize}
+\end{lem}
+
+\begin{dem}
+Let $K$ be a compact fundamental domain for the action of $G$ on $Z$. By local injectivity of $p$, let $\mathcal U$ be a finite open cover of $K$ such that $p_{|U}$ is injective for all $U\in \mathcal U$. There exists compactly supported continuous functions $\phi_U : Z\rightarrow \R_+$ such that  \[\text{supp }\phi_U \subseteq U \quad\text{ and }\quad K\subseteq \cup_{U\in\mathcal U} \phi_U^{-1}(0,+\infty).\]
+Up to replacing $\phi_U$ by $\phi_U(z) / \sum_{V,g} \phi_V(z.g)$, we can suppose $\sum_{U\in\mathcal U,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. Define 
+\[F'_x = \sum_{U\in\mathcal U, g\in G^x} V_g\pi(\phi_U^{\frac{1}{2}}) F_{s(g)}\pi(\phi_U^{\frac{1}{2}}))V_g^*.\] 
+The operator $F'$ is  $G$-invariant and commutes with the action of $C_0(Z)$. Indeed, by local injectivity, for all $g\in G$, there exists $z_g\in Z$ such that $Z_{s(g)}\cap U = \{z_g\}$, and for all $f\in C_0(Z_{s(g)})$, $[ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f ] = [ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f(z_g) \chi_{z_g} ]=0 $.\\
+
+Moreover, $F'$ is a compact perturbation of $F$ as the following computation shows.\\
+\[\begin{array}{rl}
+F_x -F'_x 	& = (\sum_{g\in G^x,U\in\mathcal U} V_g \phi_U V_g^*)F_x -F'_x \\
+		& = \sum_{g,U} V_g\phi_U^{\frac{1}{2}} \ (\phi_U^\frac{1}{2} V_g^* F_x V_g- F_{s(g)}\phi_U^\frac{1}{2}) \ V_g^*\\
+		& = \sum_{g,U} V_g\phi_U^{\frac{1}{2}} \ 
+			\left(\phi_U^\frac{1}{2} (V_g^* F_x V_g- F_{s(g)}) + [F_{s(g)},\phi_U^\frac{1}{2}]\right) \ 
+				V_g^*	  	
+\end{array}\]
+For every $x$, the sum is finite, and each of the summand is compact, hence $[H_B, \pi,T]=[H_B,\pi,T']$.\\ 
+\qed
+\end{dem}
 
 \begin{lem}
-Let $Z$ be a $G$-compact proper $G$-space such that the anchor map $p:Z\rightarrow G^{(0)}$ is locally injective, and let $(B_j)$ be a countable family of $G$-algebras. Then the projection $\prod_j B_j \otimes K \rightarrow B_j\otimes K$ induces an isomorphism
-\[KK^G(C_0(Z),\prod_j B_j\otimes K)\rightarrow\prod_j KK^G(C_0(Z),B_j\otimes K).\]
+Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarrow G^{(0)}$ is locally injective, and let $(B_j)$ be a countable family of $G$-algebras. Then the projection $\prod_j B_j \otimes K \rightarrow B_j\otimes K$ induces an isomorphism
+\[\Theta : RK^G(X,\prod_j B_j\otimes K)\rightarrow \prod_j RK^G(X,B_j\otimes K)\cong \prod_j RK^G(X,B_j).\]
 \label{LocalInjectivity}
 \end{lem}
 
 \begin{dem}
-Let $B_\infty = \prod B_j\otimes K$ and $p_k : B\infty \rightarrow B_k$ the projection.\\
+Let $B_\infty = \prod B_j\otimes K$ and $p_k : B_\infty \rightarrow B_k$ the projection.\\
 Let $(\mathcal E ,\varphi,F)\in E^G(C_0(Z), B_\infty)$ be a cycle such that every 
 \[(\mathcal E_k , \varphi_k,F_k)=(p_k)_*(\mathcal E ,\varphi,F)\] 
 is homotopic to $0$. 
 %Up to replace $F_k$ with $\frac{F_k+F_k^*}{2}$, we can suppose that $F_k$ is self adjoint.
 According to \cite{OY3}, we can choose a homotopy which is $C$-Lipschitz on the Calkin algebra for a universal constant $C>0$, hence (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a family of compact operators $T_{s,t}\in K(\mathcal E)$ such that $||F_s-F_t+T_{s,t}||\leq C|s-t|$. But $t\mapsto F'_t= F_{t}+T_{0,t}$ is a compact perturbation of $s\mapsto F_s$ in $\mathcal L(\mathcal E)$ which is $C$-Lipschitzian. Up to replace $(F_s)_s$ with $(F'_t)$, we can suppose the homotopies are uniformly Lipschitzian, and $\tilde F=\prod F_j$ defines a bounded operator.\\
-We now use an idea of \cite{TuBC2}, lemma $3.6$. Namely, using the local injectivity of $p$, we show that $F$ can be supposed to commute with $\varphi$ and $G$. For the sake of completness, we recall the proof. First, choose a finite open cover $(U_j)_j$ of a compact fundamental domain $K$ for the action of $G$ such that $p_{|U_j}$ is injective, and take compactly supported continuous functions $\phi_j : Z\rightarrow \R_+$ such that $\text{supp }\phi_j \subset U_j$ and $K\subset \cup \phi_j^{-1}(0,+\infty)$. We can suppose $\sum_{j,g\in G^{p(z)}} \phi_j (zg) = 1,\forall z\in Z$. Now define $F'_x = \sum_{j, g\in G^x} \alpha_g (\phi^{\frac{1}{2}} F_{s(g)}\phi^{\frac{1}{2}})$. It is an $G$-invariant operator which commutes with the action of $C_0(Z)$.\\
+%We now use an idea of \cite{TuBC2}, lemma $3.6$. Namely, using the local injectivity of $p$, we show that $F$ can be supposed to commute with $\varphi$ and $G$. For the sake of completness, we recall the proof. First, choose a finite open cover $(U_j)_j$ of a compact fundamental domain $K$ for the action of $G$ such that $p_{|U_j}$ is injective, and take compactly supported continuous functions $\phi_j : Z\rightarrow \R_+$ such that $\text{supp }\phi_j \subset U_j$ and $K\subset \cup \phi_j^{-1}(0,+\infty)$. We can suppose $\sum_{j,g\in G^{p(z)}} \phi_j (zg) = 1,\forall z\in Z$. Now define $F'_x = \sum_{j, g\in G^x} \alpha_g (\phi^{\frac{1}{2}} F_{s(g)}\phi^{\frac{1}{2}})$. It is an $G$-invariant operator which commutes with the action of $C_0(Z)$.\\
 Now we can see that $(\prod_j \mathcal E , \prod \varphi_j , \prod_j F_j)$ defines a cycle as $[\varphi(a),\tilde F]=0$ and $\varphi(a)(\alpha_g(F_{s(g)}-\tilde F_{r(g)})=0$. Moreover it is unitarly equivalent to $(\mathcal E,\varphi, \tilde F )$, and homotopic to $0$.\\
 For the surjectivity, just take $[(\prod \mathcal E_j,\prod \varphi_j,\prod F_j)]$ as a preimage of $\prod_j [(\mathcal E_j, \varphi_j,F_j)]$, using the previous construction.\\
 \qed  
 \end{dem}
+
+% NEW PROOF
+\begin{dem}
+Let us define a $Z_2$-graded homomorphism $\eta :  \prod_j RK^G(X,B_j\otimes K) \rightarrow RK^G(X,\prod_j B_j\otimes K)$. Let $Z\subseteq X$ be a $G$-proper $G$-compact subspace, and, for all $j$, let $z_j\in KK^G(C_0(Z),B_j)$ be represented by a standard $K$-cycle $(H_{B_j},\pi_j ,T_j)$. By lemma \ref{JLTform}, we can suppose that $T_j$ is $G$-equivariant, commutes with the action of $C_0(Z)$ and $-1\leq T_j \leq 1$. These conditions ensures that $T = (T_j)$ defines an operator in $\prod \mathcal L_{B_j\otimes \mathfrak K}(H_{B_j\otimes \mathfrak K})\subseteq \mathcal L_{\prod_j B_j\otimes \mathfrak K}(H_{\prod_j B_j\otimes \mathfrak K})$.\\
+
+Define $\pi(a) = (\pi_j(a))\in  \mathcal L_{\prod_j B_j\otimes \mathfrak K}(H_{\prod_j B_j\otimes \mathfrak K})$, as $\sup ||\pi_j(a)||\leq ||a||$. Then, $[\pi(a),T]=0$ and $r^*T = Vs^*T V^*$. Moreover, $0\leq T_j^2-1\leq 1$ and $-2\leq T_j^*-T_j\leq 2$, hence $T^2-1$ and $T^*-T$ are in $\prod \mathfrak K_{\B_j\otimes\mathfrak K}\subseteq \mathfrak K_{\prod_j B_j\otimes\mathfrak K}(H_{\prod_j B_j\otimes \mathfrak K})$. This ensures that $[H_{\prod_j B_j\otimes \mathfrak K},\pi,T]\in KK^G(C_0(Z),\prod_j B_j\otimes \mathfrak K)$. Let $\eta((z_j)_j) = [H_{\prod_j B_j\otimes \mathfrak K},\pi,T] $. It is clear that $\Theta\circ \eta = id_{\prod_j RK^G(X,B_j\otimes K) }$, and $\Theta $ is onto.\\
+\qed
+\end{dem}
+%END NEW PROOF
 
 \begin{lem}\label{prod}
 Let $G$ be a locally compact, $\sigma$-compact étale groupoid, $\{B_j\}_{j\geq  0}$ a family of $G$-algebras and $\mathfrak K$ the algebra of compact operators over a separable Hilbert space. For $E\in\mathcal E$, set $\Delta=P_E(G)$. Then, we have an $\Z_2$-graded ismorphism of abelian groups
