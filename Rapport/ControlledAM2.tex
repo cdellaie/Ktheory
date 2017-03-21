@@ -244,7 +244,7 @@ z & \mapsto & \iota_{k_j.E}^{F} \circ J_G^{\varepsilon, E}(z)([\mathcal L_E,0]_{
 %%%%%%%%%%%%
 
 \begin{rk}
-The assembly map is defined for all reasonnable crossed-products by $G$. In particular for the reduced one and the maximal one, so that we have two different assembly, which we would distinguish writing $J_{G,r}$ and $J_{G,max}$ if necessary.
+The assembly map is defined for all reasonnable crossed-products by $G$. In particular for the reduced one and the maximal one, so that we have two different assembly, which we shall distinguish writing $J_{G,r}$ and $J_{G,max}$ if necessary.
 \end{rk}
 
 \begin{rk} 
@@ -354,7 +354,7 @@ Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarr
 
 \begin{dem}
 Let $K$ be a compact fundamental domain for the action of $G$ on $Z$. By local injectivity of $p$, let $\mathcal U$ be a finite open cover of $K$ such that $p_{|U}$ is injective for all $U\in \mathcal U$. There exists compactly supported continuous functions $\phi_U : Z\rightarrow \R_+$ such that  \[\text{supp }\phi_U \subseteq U \quad\text{ and }\quad K\subseteq \cup_{U\in\mathcal U} \phi_U^{-1}(0,+\infty).\]
-Up to replacing $\phi_U$ by $\phi_U(z) / \sum_{V,g} \phi_V(z.g)$, we can suppose $\sum_{U\in\mathcal U,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. Define 
+Up to replacing $\phi_U$ by $\phi_U(z) / \sum_{V,g} \phi_V(z.g)$, we can suppose $\sum_{U\in\mathcal U,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. For $x\in G^{(0)}$, define 
 \[F'_x = \sum_{U\in\mathcal U, g\in G^x} V_g\pi(\phi_U^{\frac{1}{2}}) F_{s(g)}\pi(\phi_U^{\frac{1}{2}})V_g^*.\] 
 The operator $F'$ is  $G$-invariant and commutes with the action of $C_0(Z)$. Indeed, by local injectivity, for all $g\in G$, there exists $z_g\in Z$ such that $Z_{s(g)}\cap U = \{z_g\}$, and for all $f\in C_0(Z_{s(g)})$, $[ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f ] = [ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f(z_g) \chi_{z_g} ]=0 $.\\
 
@@ -417,18 +417,18 @@ For all $j$ and any locally compact $G$-space $X$, the projection $\prod_j B_j\o
 Let $X_0\subset X_1 \subset ...\subset X_n$ be the $n$-skeleton decomposition associated to the simplicial structure of the Rips complex $\Delta$ and let $Z_j = C_0(X_j)$, $Z^j_{j-1} = C_0(X_j \setminus X_{j-1})$ and $\Theta_j = \Theta^{X_j}$.
 We will show the claim by induction on the dimension of $\Delta$.\\
 
-The extension of $G$-algebras $0\rightarrow Z^j_{j-1} \rightarrow Z_j \rightarrow Z_{j-1}\rightarrow 0$ gives a commutative diagram with exact rows :
+By naturality of the boundary element, the extension of $G$-algebras $0\rightarrow Z^j_{j-1} \rightarrow Z_j \rightarrow Z_{j-1}\rightarrow 0$ gives a commutative diagram with exact rows :
 %lines :
 %\[\begin{tikzcd}
 %KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta}\arrow{d}{\Theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\Theta_{j-1}} & KK_*(Z_j,\prod_j B_j\otimes K)\arrow{r}\arrow{d}{\Theta_j} & KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{r}{\delta} \arrow{d}{\Theta^j_{j-1}} & KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}{\Theta_{j-1}}\\
 %\prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z_j,B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\\
 %\end{tikzcd}\]
 \[\begin{tikzcd}
-KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\delta}\arrow{r}{\Theta^j_{j-1}} & \prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{d}{\delta} \\
-KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_{j-1}}  &  \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\arrow{d} \\
-KK_*(Z_j,\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_j} & \prod_j KK_*(\tilde Z_j,B_j \otimes K)\arrow{d} \\
-KK_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\delta} \arrow{r}{\Theta^j_{j-1}} & \prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{d}{\delta}\\
-KK_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}{\Theta_{j-1}} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)
+RK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\delta}\arrow{r}{\Theta^j_{j-1}} & \prod_j RK^G_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{d}{\delta}  \\
+RK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_{j-1}}  & \prod_j RK^G_*(\tilde Z_{j-1},B_j \otimes K)\arrow{d} \\
+RK^G_*(Z_j,\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_j} & \prod_j RK^G_*(\tilde Z_j,B_j \otimes K)\arrow{d} \\
+RK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\delta}\arrow{r}{\Theta^j_{j-1}} & \prod_j RK^G_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{d}{\delta}\\
+RK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}{\Theta_{j-1}} & \prod_j RK^G_*(\tilde Z_{j-1},B_j \otimes K)
 \end{tikzcd}\]
 
 The five lemma ensures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, because $\Delta$ is a typed $G$-simplicial complex (see \cite{TuBC2}), $X_j\setminus X_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicty ensures then that, if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta^j_{j-1}$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $G$-compact proper $G$-space, and its anchor map is just the target map $r:G\rightarrow G^{(0)}$, which is supposed to be étale, so locally injective.\\
