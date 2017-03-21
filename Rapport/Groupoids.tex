@@ -87,6 +87,10 @@ These maps define a structure of toplogical groupoid on $Z\rtimes G$. It is call
 
 Following \cite{TuBC2}, we present now an important class of $G$-spaces called $G$-simplicial complexes.
 
+\begin{definition}
+A map between two topological spaces $f : X\rightarrow Y$ is said to be locally injective if there exists an open cover $\mathcal U$ of $X$ such that, for all $U\in \mathcal U$, $f_{|U}$ is injective.
+\end{definition}
+
 \begin{definition} \label{Gcomplex}
 Let $n\in\N$. A $G$-simplicial complex of dimension $\leq n$ is a pair $(X,\Delta)$ where :
 \begin{itemize}
@@ -98,8 +102,22 @@ Let $n\in\N$. A $G$-simplicial complex of dimension $\leq n$ is a pair $(X,\Delt
 \end{itemize}
 For $\eta\in \Delta$, $\text{supp }\eta$ is called a simplex.
 \end{itemize}
+The complex is said to be typed if there exists a discrete $G$-space $T$ and a $G$-equivariant continuous map $\tau : X\rightarrow T$ such that, for every simplex $S$, $\tau_{|S}$ is injective.  
 \end{definition}
 
+For any typed proper $G$-compact $G$-simplicial complex $(X,\Delta)$ of dimension $\leq n$, one can decompose it into its $n$-skeleton $Z_0\subseteq Z_1 \subseteq ... \subseteq Z_n$, where each $Z_j$ is a closed $G$-invariant subset of $\Delta$ such that :
+\begin{itemize}
+\item[$\bullet$] for all $\eta \in Z_j \setminus Z_{j-1}$, $|\text{supp }\eta|= j$,
+\item[$\bullet$] $Z_j \setminus Z_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring\sigma_j \times ?$, where $\mathring\sigma_j $ is the interior of the standard simplex of dimension $j$.
+\end{itemize}
+
+\begin{definition}
+Let $(X,\Delta)$ be a $G$-simplicial complex of dimension $\leq n$. Its barycentric subdivision is the $G$-simplicial complex $(S,\Delta_S)$ of dimension $\leq n$ defined by :
+\[S = \cup_{\eta\in \Delta}\text{supp } \eta\subseteq \Delta ,\]
+i.e. the space of vertices $S$ contains $X$ plus the barycentric center of any simplex of $\Delta$, and $\Delta_S $ satisfies that $\sigma = \{ \eta_0, ...,\eta_k\}$ is a simplex in $\Delta_S$ iff $\cup_{0 \leq j \leq k}\text{ supp }(\eta_j)$ is a simplex of $\Delta$.
+\end{definition}
+
+This construction shows that, up to replacing a $G$-simplicial complex of dimension $\leq n$ by its barycentric subdivision, we can always suppose that it is a typed $G$-simplicial complex of dimension $\leq n$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{$G$-algebras and crossed products}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
