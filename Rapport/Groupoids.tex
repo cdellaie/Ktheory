@@ -6,8 +6,8 @@ A topological groupoid is the data of
 \item[$\bullet$] two topological spaces $G$ and $G^{(0)}$, called respectively the space of arrows, and the unit space,
 \item[$\bullet$] a topological embedding $e: G^{(0)}\rightarrow G; x\mapsto e_x$ called the unit map,
 \item[$\bullet$] source and range maps $r,s : G\rightarrow G^{(0)}$ which are continuous, surjective, and satisfy $r\circ e = s\circ e = Id_{G^{(0)}}$,
-\item[$\bullet$] a continuous multiplication map $m : G^{(2)}=G\times_{s,r}G\rightarrow G; (g,g')\mapsto gg'$ such that $(gg')g''=g(g'g'')$ for all triple $g,g',g''$ that are composable,
-\item[$\bullet$] an inverse map $\text{inv} : G\rightarrow G: g\mapsto g^{-1}$ which is continous and such that $\forall g\in G, gg^{-1}=e_{s(g)} \text{ and }g^{-1}g=e_{r(g)}$, and $g e_{s(g)} = e_{r(g)} g =g$.
+\item[$\bullet$] a continuous multiplication map $m : G^{(2)}=G\times_{s,r}G\rightarrow G; (g,g')\mapsto gg'$ such that $(gg')g''=g(g'g'')$ for all triple $g,g',g''$ that are composable, and $g e_{s(g)} = e_{r(g)} g =g$,
+\item[$\bullet$] an involutive map $\text{inv} : G\rightarrow G: g\mapsto g^{-1}$ which is continous and such that $s\circ \text{inv} = r$, $r\circ \text{inv} = s$ and $\forall g\in G, gg^{-1}=e_{s(g)} \text{ and }g^{-1}g=e_{r(g)}$. This map is called the inverse map.
 \end{itemize} 
 \end{definition}
 
@@ -35,18 +35,24 @@ Here are classical examples of groupoids.
 \begin{Expl}[Groups and spaces] Any group $G$ is a groupoid over a point $G^{(0)}=*$. $G$ is étale as a groupoid if it is a discrete group. A topological space is also a groupoid over itself, the only arrows being the units over the points : $G^{(0)} = X = G$, $s=r=id_X$, it is always étale.
 \end{Expl}
 
-\begin{Expl}[Pair groupoid] Let $X$ be a set, and consider $G=X\times X$ with base space $G^{(0)}=X$ and projection maps as traget and source $s=pr_1, r=pr_2$. Composition is given by $(x,y)(y,z)= (x,z)$, and one can easily check that $e_x=(x,x)$ and $(x,y)^{-1} = (y,x)$. $X\times X$ is étale if $X$ is discrete.
+\begin{Expl}[Pair groupoid] Let $X$ be a set, and consider $G=X\times X$ with base space $G^{(0)}=X$ and projection maps as target and source $s=pr_1, r=pr_2$. Composition is given by $(x,y)(y,z)= (x,z)$, and one can easily check that $e_x=(x,x)$ and $(x,y)^{-1} = (y,x)$. $X\times X$ is étale if $X$ is discrete.
 \end{Expl}
 
-\begin{Expl}[Equivalence relations and pull-back] More generally, consider an equivalence relation $R \subset X\times X$ on a topological space $X$. It naturally has a structure of topological groupoid, as a subgroupoid of $X\times X$. Consider a cover $\mathcal U$ of $G^{(0)}$ by open subsets, and let $p : \sqcup G_{|U} \rightarrow G$ be the natural projection. We define $G[\mathcal U]$ the topological groupoid obtained as the groupoid of the equivalence relation defined by $g\sim g'$ if and only if $p(g)=p(g')$. It is convient to represent this groupoid as the set of triples $(U,g,V)$ such that $s(g)\in U$ and $r(g)\in V$
+\begin{Expl}[Equivalence relations] More generally, consider an equivalence relation $R \subset X\times X$ on a topological space $X$. It naturally has a structure of topological groupoid, as a subgroupoid of $X\times X$. 
 \end{Expl}
 
-\begin{Expl}[Principal groupoid of a group action] Let $G$ be a group acting on a topological space $X$ by homeomorphisms. Define the groupoid $X\rtimes G$ as the topological space $X\times G$ over the base space $X$, endowed with the maps $s(x,g)=x$ and $r(x,g)=g.x$. The unit map will be given by $x\mapsto (x,e_G)$ and $(x,g)^{-1} = (g.x , g^{-1})$. This groupoid is called the principal action groupoid. It is étale when $G$ is a discrete group.  
+\begin{Expl}[Pull-back]
+Let $X$ be a topological space and $f : X\rightarrow G^{(0)} $ a continuous map. The pull-back groupoid of $G$ along $f$, denoted $G[X]$, is defined as $\{(x,g,y)\in X\times G \times X \text{ s.t. }g\in G_{f(x)}^{f(y)}\}$, with base space $X$. A particular example is given by considering an open cover $\mathcal U=(U_j)$ of $G^{(0)}$. Let $p : \coprod_{j} U_j \rightarrow G^{(0)}$ be the natural projection. Then $G[\mathcal U]$ denotes the pull-back of $G$ along $p$.
+%We define $G[\mathcal U]$ as the topological groupoid obtained as the set of triples $(U,g,V)$ such that $s(g)\in U$ and $r(g)\in V$ with base space the groupoid of the equivalence relation defined by $g\sim g'$ if and only if $p(g)=p(g')$. It is convient to represent this groupoid as the set of triples $(U,g,V)$ such that $s(g)\in U$ and $r(g)\in V$
 \end{Expl}
 
-These examples show how the notion of topological groupoid interpolates between a group and a space. However, other examples of interesting groupoids abound in analysis and geometry. For example, we will define later a so called Coarse Groupoid associated to any Coarse Space, after \cite{SkTuYu}, whose importance cannot be stressed enough to our approach to the Coarse Baum-Connes conjecture.\\
+\begin{Expl}[Action groupoid] Let $G$ be a group acting on a topological space $X$ by homeomorphisms. Define the groupoid $X\rtimes G$ as the topological space $X\times G$ over the base space $X$, endowed with the maps $s(x,g)=x$ and $r(x,g)=g.x$. The unit map will be given by $x\mapsto (x,e_G)$ and $(x,g)^{-1} = (g.x , g^{-1})$. This groupoid is called the action groupoid. It is étale when $G$ is a discrete group.  
+\end{Expl}
 
-Other examples includes the holonomy groupoid of a foliation \cite{connesfoliations}, Lie groupoids \cite{paterson}, etc. One of the reasons groupoids are such famous objects in noncommutative geometry is that we can still do analysis on it. According to the general philosophy of Connes \cite{Connes94}, groupoids encode geometric situations and remain available to analysis, even when the situation is so pathological that classical tools become trivial. For example, when confronted to a group action, considering the convolution algebra of the principal action groupoid can be a substitute to the studying the quotient space. It turns out that, when the action is free and proper, the envelopping $C^*$-algebra is Morita equivalent to $C_0(X/G)$, which represent the quotient space by Gelfand duality. However, when the quotient is badly behaved, the envelopping $C^*$-algebra still carries usefull information, even if the quotient  is such that $C_0(X/G) = \C$.
+These examples show how the notion of topological groupoid interpolates between a group and a space. However, other examples of interesting groupoids abound in analysis and geometry. For example, we will define later a so called Coarse Groupoid associated to any Coarse Space, after \cite{SkTuYu}, whose importance cannot be emphasized enough to our approach to the Coarse Baum-Connes conjecture.\\
+
+Other examples includes the holonomy groupoid of a foliation \cite{connesfoliations}, Lie groupoids \cite{paterson}, etc. One of the reasons groupoids are such famous objects in noncommutative geometry is that we can still do analysis on it. According to the general philosophy of Connes \cite{Connes94}, groupoids encode geometric situations and remain available to analysis, even when the situation is so pathological that classical tools become trivial. For example, when confronted to a group action, considering the convolution algebra of the principal action groupoid can be a substitute to the studying the quotient space. It turns out that, when the action is free and proper, the envelopping $C^*$-algebra is Morita equivalent to $C_0(X/G)$, which represent the quotient space by Gelfand duality. However, when the quotient is %badly behaved
+singular, the envelopping $C^*$-algebra still carries usefull information, even if the quotient  is such that $C_0(X/G) = \C$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Actions of groupoids}
@@ -128,7 +134,7 @@ This paragraph describes what is an action of a topological groupoid on a $C^*$-
 Let $X$ be a topological space. A $C(X)$-algebra is a $C^*$-algebra together with a $*$-homomorphism $\theta : C_0(X)\rightarrow Z(\mathcal M(A))$ such that $\overline{\theta (C_0(X)) A} = A$. The couple $(A,\theta)$ is then called a $C(X)$-structure.
 \end{definition} 
 
-If $f : X\rightarrow Y$ is a continuous map between locally compact spaces, and $A$ a $C(Y)$-algebra, then $f$ induces a $C(X)$-structure on $A$ by $f^* : C(Y) \rightarrow C_b(X); g\mapsto g\circ f$. Define $f^* A = A \otimes_{f^*} C_0(X)$ the resulting $C(X)$-algebra. For details on tensor products of $C(X)$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $C(X)$-algebra : for $x\in X$, $A_x = ev_x^* \ A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$. It is convenient to see $A_x$ as $A/ (I_x .A)$ where $I_x$ is the ideal ker $(ev_x : C_0(X) \rightarrow \C)$.\\
+If $f : X\rightarrow Y$ is a continuous map between locally compact spaces, and $A$ a $C(Y)$-algebra, then $f$ induces a $C(X)$-structure on $A$ by $f^* : C(Y) \rightarrow C_b(X); g\mapsto g\circ f$. Define $f^* A = A \otimes_{f^*} C_0(X)$ the resulting $C(X)$-algebra. For details on tensor products of $C(X)$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $C(X)$-algebra : for $x\in X$, $A_x = ev_x^* \ A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$. It is convenient to see $A_x$ as $A/ (I_x .A)$ where $I_x$ is the ideal ker $(ev_x : C_0(X) \rightarrow \C)$. Moreover we can describe the fibers of $f^*A$ : $(f^*A)_x \cong A_{f(x)}$ for all $x\in X$.\\
 
 A homomorphism between two $C(X)$-algebras $\alpha : A\rightarrow A'$ is a $*$-homomorphism which commutes with the action of $C_0(X)$, i.e. $\alpha(\theta(f)a)=\theta'(f)\alpha(a)$ for all $a\in A,f\in C_0(X)$. Its fibers are defined unambiguously by $\alpha_x = id_\C \otimes_{ev_x} \alpha$.\\
 
@@ -138,7 +144,7 @@ Notice that, if $A$ is a $C(G^{(0)})$-algebra, then $s^* A = A \otimes_s C_0(G)$
 An action of a groupoid $G$ on a $C^*$-algebra $A$ is a triple $(A,\theta,\alpha)$ where $(A,\theta)$ is a $C(G^{(0)})$-structure and $\alpha : s^* A \rightarrow r^* A$ is an isomorphism of $C(G)$-algebras such that $\alpha_{gg'}= \alpha_g\circ \alpha_{g'}$ for all $(g,g')\in G^{(2)}$.
 \end{definition} 
 
-If $A$ is a $G$-algebra, and $U \subset G^{(0)}$ is an open subset, recall \cite{LeGall} that the restriction $A_U$ is defined as $\eta^* A = C_0(U) \otimes_\eta A$ where $\eta : C(U) \hookrightarrow C_0(G^{(0)})$ is the canonical inclusion. 
+If $A$ is a $G$-algebra, and $U \subset G^{(0)}$ is an open subset, recall from \cite{LeGall} that the restriction $A_U$ is defined as $\eta^* A = C_0(U) \otimes_\eta A$ where $\eta : C(U) \hookrightarrow C_0(G^{(0)})$ is the canonical inclusion. 
 %Let $F= G^{(0)}\backslash U$. As $A_U$ is naturally embedded into $A$, define $A_F$ to be the complementary of $A_U$. \\
 
 The space of continuous sections with compact support is defined as :
@@ -229,9 +235,9 @@ Two $K$-cycles $(E,\pi,T)$ and $ (E',\pi',T')$ in $\mathbb E^G(A,B)$ are homotop
 
 One of the properties that makes equivariant $KK$-theory so powerful is the existence of a product, called the Kasparov product. Its existence is highly non trivial, and it fails to exists in the non-separable case or the $KK$-theory for Banach algebras developed by V. Lafforgue \cite{Lafforgue} for example.
 
-\begin{prop}\cite{LeGall} Let $A$, $B$ and $C$ be $G$-algebras such that $A$ is separable. There exists an associative map 
+\begin{prop}\cite{LeGall} Let $A$, $B$ and $C$ be $G$-algebras such that $A$ is separable. There exists a map 
 \[\otimes_B :\left\{\begin{array}{ccc} KK^G(A,B)\times KK^G(B,C) & \rightarrow & KK^G(A,C) \\ (z,z') & \mapsto & z\otimes_B z' \end{array}\right. \]
-which is distributive w.r.t. the addition of $K$-cycles. The Kasparov product is covariant w.r.t. $C$ and contravariant w.r.t. $A$.
+which is associative and distributive w.r.t. the addition of $K$-cycles. The Kasparov product is covariant w.r.t. $C$ and contravariant w.r.t. $A$.
 \end{prop}
 
 \begin{rk}
@@ -281,9 +287,9 @@ We saw that $KK^G(A,B)$ is a bifunctor w.r.t. $*$-homomorphisms, contravariant i
 such that, if $\phi' : G'\rightarrow G''$ is another strict morphism, then $(\phi'\circ\phi)^* =\phi^*\circ(\phi')^*$. In other words, $KK^G$ is contravariant in the $G$ variable.
 \end{prop}
 
-The next two propositions reminds the reader about crucial natural morphisms built by P.Y. Le Gall in his thesis that we will need later on. We only state results and remind the reader about the constructions, withut proofs. The reader can consult \cite{LeGall} for details.
+The next two propositions reminds the reader about crucial natural morphisms built by P.Y. Le Gall in his thesis that we will need later on. We only state results and remind the reader about the constructions, without proofs. The reader can consult \cite{LeGall} for details.
 
-\begin{prop}\cite{LeGall} Let $A$, $B$, and $C$ be $G$-algebras. Then 
+\begin{prop}\cite{LeGall} Let $A$, $B$, and $D$ be $G$-algebras. Then 
 \[\tau_D : 
 \left\{\begin{array}{rcl} 
 KK^G(A,B) & \rightarrow & KK^G(A\otimes D,B\otimes D) \\ 
@@ -304,7 +310,6 @@ KK^G(A,B) & \rightarrow & KK^G(A\rtimes_r G,B\rtimes_r G) \\
 defines a homomorphism of $\Z_2$-graded abelian groups which respects the Kasparov product, i.e. 
 \[j_G(x\otimes_B y) = j_G(x)\otimes_{B\rtimes_r G} j_G(y)\quad \forall x\in KK^G(A,B),y\in KK^G(B,C).\]
 \end{prop}
-
 
 The remainder of the section is devoted to compile some useful facts that we will use.\\
 
@@ -339,7 +344,7 @@ The boundary map $\partial_{J,A} : K_*(A/J)\rightarrow K_{*+1}(J)$ is given by t
 \[[\partial_{J,A}] = [\partial_{A/J}]\otimes_{} \beta^*([\alpha]^{-1}).\]
 \end{prop}
 
-The next lemma will be used during the proof of the functorial properties of the controlled Roe and Kasparov tranformations that will be defined later. These transformations are defined on $K$-cycle which are put in standard form, i.e. $[H_B,\pi,T]$, but changing the coefficients leads to $K$-cycles which are not of this form, hence the lemma. It states that we can always describe explicitely the standard form of a $K$-cycle pushed forward.
+The next lemma will be used during the proof of the functorial properties of the controlled Roe and Kasparov tranformations that will be defined later. These transformations are defined on $K$-cycle which are put in standard form, i.e. $[H_B,\pi,T]$. Changing the coefficients leads to $K$-cycles which are not of this form, hence the lemma. It states that we can always describe explicitely the standard form of a $K$-cycle pushed forward.
 
 \begin{lem}\label{isometryKK}
 Let $\phi : B\rightarrow B'$ be a $G$-equivariant homomorphism, and $z=[H_B,\pi, T]\in KK^G(A,B)$. Let $V\in\mathcal L_{B'}(H_B\otimes B', H_{B'})$ be the isometry of the remark \ref{isometry} and $p = VV^*\in\mathcal L_{B'}(H_{B'})$. Define $\pi' : A\rightarrow \mathcal L_{B'}(H_{B'})$ as $\pi'(a) = V\pi(a)V^*$ and $T'= V(T\otimes_\phi 1)V^* + 1-p \in \mathcal L_{B'}(H_B')$. Then $(H_{B'},\pi',T')$ is a $K$-cycle and 

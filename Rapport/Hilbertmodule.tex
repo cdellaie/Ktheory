@@ -16,7 +16,7 @@ For $x\in E$, we define $||x|| = ||\langle x,x\rangle ||^{\frac{1}{2}}$. It is a
 A $A$-Hilbert module $(E,\langle \cdot,\cdot \rangle)$ is a pre-Hilbert module which is complete for the norm $||\cdot ||$ defined above. $E$ is called a full Hilbert module if the linear span of $\{ <x,y> : x,y\in E\}$ is dense in $A$.
 \end{definition}
 
-The same definition exists for left-Hilbert modules. Usually, we will omit to precise right or left, as most of our modules will be right modules. By abuse of language, we will call the sesquilinear function $\langle \cdot,\cdot \rangle$ an inner product.
+The same definition exists for left-Hilbert modules. Usually, we will omit to precise right or left, as most of our modules will be right modules. Through misuse of language, we will call the sesquilinear function $\langle \cdot,\cdot \rangle$ an inner product.
 
 \begin{Expl} If $J$ is any closed right ideal in $A$, $J$ is naturally a $A$-Hilbert module with respect to the inner product $\langle a, b \rangle = a^* b$. In particular, $A$ is a $A$-Hilbert module.
 \end{Expl}
@@ -39,7 +39,7 @@ The operator $T^*$ is called the adjoint of $T$.
 Notice that any adjoinable operator is automatically a module map, and a linear map. Indeed, $\langle T(xa),y\rangle = \langle xa,T^* y \rangle = a^* \langle x, T^* y\rangle =a^*\langle Tx,  y\rangle =  \langle a(Tx),y \rangle$. It is also automatically bounded
 \end{rk}
 
-It turns out that $\mathcal L_A(E,F)$ with the operator norm is a $C^*$-algebra.\cite{Lance} For $x\in E,y\in F$, define $\theta_{x,y}\in\mathcal L_A,(F,E)$ as $\theta_{x,y}(z) = x\langle y,z\rangle$. It is indeed adjoinable as $\theta_{x,y}^*=\theta_{y,x}$.
+It turns out that $\mathcal L_A(E,F)$ with the operator norm is a $C^*$-algebra \cite{Lance}. For $x\in E,y\in F$, define $\theta_{x,y}\in\mathcal L_A,(F,E)$ as $\theta_{x,y}(z) = x\langle y,z\rangle$. It is indeed adjoinable as $\theta_{x,y}^*=\theta_{y,x}$.
 
 \begin{definition}
 Let $E$ and $F$ be two $A$-Hilbert modules. The set of compact operators $\mathfrak K_A(F,E)$ is defined as the closure for the operator norm of the linear span of $\{\theta_{x,y} : x\in E,y\in F\}$. It is a closed ideal in $\mathcal L_A(F,E)$.\cite{Lance}
@@ -65,7 +65,7 @@ As a corollary, we get that for any countably generated Hilbert $A$ module, ther
 
 Let $E$ a Hilbert $A$-module, $F$ a Hilbert $B$-module and $\phi : A \rightarrow \mathcal L_B(F)$ a $*$-homomorphism. The following section recalls the construction of the tensor product of $E$ and $F$ over $\phi$, denoted $E\otimes_\phi F$.\\
 
-We can give $F$ the structure of a left $A$-module via $\phi$ : $a\cdot \eta := \phi(a)\eta$ for $a\in A,\eta\in F$. Consider the algebraic tensor product of $A$-module $E\odot F$, with the structure of right $B$ module given by $x\otimes y \cdot b = x\otimes (yb)$. Define on $E\odot F$ the following sesquilinear function : $\langle x \otimes y , x'\otimes y'\rangle := \langle y, \phi(x^* x')y'\rangle_F $. It satisfies the condition for $(E\odot F,\langle \cdot , \cdot \rangle )$ to be a pre-Hilbert $B$-module.
+We can provide $F$ with the structure of a left $A$-module via $\phi$ : $a\cdot \eta := \phi(a)\eta$ for $a\in A,\eta\in F$. Consider the algebraic tensor product of $A$-module $E\odot F$, with the structure of right $B$ module given by $x\otimes y \cdot b = x\otimes (yb)$. Define on $E\odot F$ the following sesquilinear function : $\langle x \otimes y , x'\otimes y'\rangle := \langle y, \phi(\langle x, x'\rangle)y'\rangle_F $. It satisfies the condition for $(E\odot F,\langle \cdot , \cdot \rangle )$ to be a pre-Hilbert $B$-module.
 
 \begin{definition}
 The Hilbert $B$-module $E\otimes_\phi F$ is defined as the competion-separation of the pre-Hilbert $B$-module $E\odot F$ with respect to $\langle \cdot , \cdot \rangle$. It is called the interior tensor product of $E$ and $F$. When $F=B$, it can be called the push forward of $E$ along $\phi$.
@@ -90,7 +90,7 @@ The condition $\phi_*(\mathfrak K_A(E))\subset \mathfrak K_B(E\otimes_\phi F)$ h
 \begin{rk}\label{isometry}
 When we look at a $*$-homomorphism $\phi : A\rightarrow B$, we always have an isometry $V\in \mathcal L_B ( H_A\otimes_\phi B , H_B)$ defined on simple tensors as $(x_j)_j\otimes b \mapsto (\phi(x_j)b)_j$. Indeed, this map extends linearly to $H_A \odot B$, and if $x = (x_j)$ and $x'=(x'_j)$ are in $H_A$ : 
 \[\langle V (x\otimes b) , V(x'\otimes b')\rangle = b^* \sum_j \phi(x_j)^* \phi(x'_j) \  b' = b^*\phi(\langle x, x' \rangle)b' = \langle x\otimes b , x'\otimes b' \rangle . \] % Determiner V^* 
-This isometry can be used to explicitely describe the projection and the isomorphism appearing in the stabilization theorem in this particular example. Indeed $p = VV^*\in\mathcal L_B(H_A\otimes_\phi B)$ is a projection such that $p H_A \cong H_A\otimes_\phi B $.  
+This isometry can be used to explicitely describe the projection and the isomorphism appearing in the stabilization theorem in this particular example. Indeed $p = VV^*\in\mathcal L_B(H_B)$ is a projection such that $p H_A \cong H_A\otimes_\phi B $.  
 \end{rk}
 
 %\section{KK-theory}
