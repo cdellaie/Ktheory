@@ -69,6 +69,12 @@ Gennadi~G Kasparov.
 \newblock Equivariantkk-theory and the novikov conjecture.
 \newblock {\em Inventiones mathematicae}, 91(1):147--201, 1988.
 
+\bibitem{kazhdan}
+David~A Kazhdan.
+\newblock Connection of the dual space of a group with the structure of its
+  close subgroups.
+\newblock {\em Functional analysis and its applications}, 1(1):63--65, 1967.
+
 \bibitem{Lafforgue}
 Vincent Lafforgue.
 \newblock Banach kk-theory and the baum-connes conjecture.
@@ -93,6 +99,12 @@ E~Christopher Lance.
 Pierre-Yves Le~Gall.
 \newblock {\em Th{\'e}orie de Kasparov {\'e}quivariante et groupo{\"\i}des}.
 \newblock PhD thesis, 1994.
+
+\bibitem{MargulisExplicit}
+Grigorii~Aleksandrovich Margulis.
+\newblock Explicit group-theoretical constructions of combinatorial schemes and
+  their application to the design of expanders and concentrators.
+\newblock {\em Problemy peredachi informatsii}, 24(1):51--60, 1988.
 
 \bibitem{Murphy}
 Gerard~J. Murphy.

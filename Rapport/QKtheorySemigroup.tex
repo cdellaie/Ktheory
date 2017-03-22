@@ -1,9 +1,9 @@
 \section{$K$-theory controlled by a coarse structure}
 
-In this section, we define controlled $K$-theory in more generality than the functor defined in \cite{OY2} and in the previous section. The goal is to develop controlled $K$-theory to a broader setting that what is used until now. Notably, we give a definition that allows to state that the controlled $K$-theory is a true functor between well chosen categories. The price to pay is a little more generality, and functorial definitions, but the reward is a larger range of applications of the theory. We will show how it is possible to apply controlled-lingo to compact quantum groups in the sense of Woronowicz, foliations groupoids and twisted representations of locally compact groups.\\
+In this section, we define controlled $K$-theory in more generality than the functor defined in \cite{OY2} and in the previous section. The goal is to develop controlled $K$-theory to a broader setting that what is used until now. Notably, we give a definition that allows to state that the controlled $K$-theory is a genuine functor between appropriately chosen categories. The price to pay is a little more generality, and functorial definitions, but the reward is a larger range of applications of the theory. We will show how it is possible to apply controlled-lingo to compact quantum groups in the sense of Woronowicz, foliations groupoids and twisted representations of locally compact groups.\\
 
 \begin{definition}
-A coarse structure $\mathcal E$ is a lattice which is a semi-group. %such that $\forall E,E'\in \mathcal E$, $E\leq E'E$. 
+A coarse structure $\mathcal E$ is a lattice which is an abelian semi-group. %such that $\forall E,E'\in \mathcal E$, $E\leq E'E$. 
 Recall that a lattice is a poset for which every pair $(E,E')$ admits a supremum $E\vee E'$ and an infimum $E\wedge E'$.
 \end{definition}
 
@@ -28,7 +28,9 @@ If $(A,\mathcal E)$ and $(B,\mathcal E')$ are two filtered $C^*$-algebras, a fil
 
 The crucial example for us will be crossed products of $G$-algebras by an étale groupoid $G$. Note that this definition generalizes that of \cite{OY2}. Indeed, as will be recalled later, the Roe algebras can be expressed as a crossed product by a so-called coarse groupoid, which is étale \cite{SkTuYu}, and the definition given here, applied to this groupoid, gives back the filtration in the sense of \cite{OY2}. The second example will be that of crossed products by compact quantum groups of Woronowicz.\cite{Wo}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Almost unitaries and almost projections}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{definition}
 Let $(A,\mathcal E)$ be a unital filtered $C^*$-algebra. Let $\varepsilon\in(0,\frac{1}{4})$ and $E\in \mathcal E$ a controlled subset. The set of $\varepsilon$-$E$-unitaries is the set 
@@ -86,7 +88,7 @@ The controlled $K$-theory of a filtered $C^*$-algebra $(A,\mathcal E)$ is the fa
 
 We define canonical morphisms : if $\varepsilon, \varepsilon'\in (0,\frac{1}{4})$ and $E,E'\in\mathcal E$ such that $\varepsilon \leq \varepsilon'$ and $E \subset E'$, the natural homomorphism $K_*^{\varepsilon,E}(A)\hookrightarrow K_*^{\varepsilon',E'}(A)$ is denoted by $\iota_{\varepsilon,E}^{\varepsilon',E'}$. Notice that $\iota_{\varepsilon',E'}^{\varepsilon'',E''}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon,E}^{\varepsilon'',E''}$ when this expression makes sense.\\
 
-One has also forgetful morphisms $\iota_{\varepsilon,E} : K_*^{\varepsilon,E}\rightarrow K_*(A)$ given by $[p,l]_{\varepsilon,E} \mapsto [\kappa_0(p)]-[1_l]$ and $[u]_{\varepsilon,E} \mapsto [\kappa_0(u)] $, and 
+One has also forgetful morphisms $\iota_{\varepsilon,E} : K_*^{\varepsilon,E}\rightarrow K_*(A)$ given by $[p,l]_{\varepsilon,E} \mapsto [\kappa_0(p)]-[1_l]$ and $[u]_{\varepsilon,E} \mapsto [\kappa_1(u)] $, and 
 $\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon, E}$ holds. The controlled $K$-theory groups approximate the usual $K$-groups in the sense that $\varinjlim_{E} K_*^{\varepsilon,E}(A) = K_*(A)$ for any $\varepsilon\in (0,\frac{1}{4})$.\\
 
 \begin{Expl} Some examples that we will use :\\
@@ -123,7 +125,7 @@ Let $\hat{\mathcal O}$ and $\hat{\mathcal O'}$ be two quantitative objects and $
 
 \begin{rk}
 %If we don't specify any control pair, it is implicit and evident from the context, or it is not crucial to specify it. 
-When not specified, the control pair is evident from the context. For example, we will often refer to a controlled morphism, meaning a $\alpha$-controlled morphism for some control pair $\alpha$. For a controlled morphism $\hat F : \hat K(A)\rightarrow \hat K(B)$, we will denote $F:K(A)\rightarrow K(B)$ the unique homomorphism it induces in $K$-theory. We will always try to indicate an analogy with the classical case (as opposed to the controlled or quantitative case) by putting a hat on top of controlled objects that are hopefully inducing a well known object. For example, controlled $K$-theory is $\hat K$, but the controlled assembly map will be denoted $\hat \mu_{G,A}$, etc.\\
+When not specified, the control pair is evident from the context. For example, we will often refer to a controlled morphism, meaning a $\alpha$-controlled morphism for some control pair $\alpha$. For a controlled morphism $\hat F : \hat K(A)\rightarrow \hat K(B)$, we will denote $F:K(A)\rightarrow K(B)$ the unique homomorphism it induces in $K$-theory. We will always try to indicate an analogy with the classical case (as opposed to the controlled or quantitative case) by putting a hat on top of controlled objects that are hopefully inducing a well known object. For example, controlled $K$-theory is $\hat K$, the controlled assembly map will be denoted $\hat \mu_{G,A}$, etc.\\
 \end{rk}
 
 Let $\rho=(\lambda,h),\alpha,\beta$ be control pairs, and $F :  \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ and $G : \hat{\mathcal O} \rightarrow \hat{\mathcal O'}$ be $\alpha$- and $\beta$-controlled morphisms respectively. We write $F\sim_\rho G$ if :

@@ -5,18 +5,19 @@
 The $KK$-theory of Kasparov can be defined using the theory of Hilbert modules. We present in this section the basic facts about Hilbert modules that we will need.
 
 \begin{definition}
-Let $A$ be a $C^*$-algebra. A pre-Hilbert $A$-module is a right $A$-module $E$ endowed with a sesquilinear function $\langle\cdot, \cdot \rangle : E\times E \rightarrow A$ satisfying :
+Let $A$ be a $C^*$-algebra. A pre-Hilbert $A$-module is a $\C$-linear space which is a right $A$-module $E$ endowed with a sesquilinear function $\langle\cdot, \cdot \rangle : E\times E \rightarrow A$ satisfying :
 \begin{itemize}
+\item[$\bullet$] $(\lambda x)a = \lambda (xa) = x(\lambda a)$ for all $\lambda\in\C$, $x\in E$ and $a\in A$,
 \item[$\bullet$] $\langle x, ya\rangle = \langle x,y\rangle a $ for all $x,y\in E$ and $a\in A$,
 \item[$\bullet$] $\langle x,y\rangle^* = \langle y,x\rangle$ for all $x,y\in E$,
 \item[$\bullet$] $\langle x ,x\rangle \geq 0 $ and if $\langle x,x\rangle = 0$, then $x=0$, for all $x\in E$.
 \end{itemize}
-For $x\in E$, we define $||x|| = ||\langle x,x\rangle ||^{\frac{1}{2}}$. It is a norm on $E$.\cite{Lance}\\
+For $x\in E$, we define $||x|| = ||\langle x,x\rangle ||^{\frac{1}{2}}$. It is a norm on $E$ \cite{Lance}.\\
 
 A $A$-Hilbert module $(E,\langle \cdot,\cdot \rangle)$ is a pre-Hilbert module which is complete for the norm $||\cdot ||$ defined above. $E$ is called a full Hilbert module if the linear span of $\{ <x,y> : x,y\in E\}$ is dense in $A$.
 \end{definition}
 
-The same definition exists for left-Hilbert modules. Usually, we will omit to precise right or left, as most of our modules will be right modules. Through misuse of language, we will call the sesquilinear function $\langle \cdot,\cdot \rangle$ an inner product.
+The same definition exists for left-Hilbert modules. Usually, we will omit to precise right or left, as most of our modules will be right modules. Through misuse of language, we will call the sesquilinear function $\langle \cdot,\cdot \rangle$ an inner product. If the inner product satisfies all the conditions for $E$ to be a pre-Hilbert module but the last (if $\langle x,x\rangle = 0$, then $x=0$, for all $x\in E$), we call $E$ a semi-pre-Hilbert module.
 
 \begin{Expl} If $J$ is any closed right ideal in $A$, $J$ is naturally a $A$-Hilbert module with respect to the inner product $\langle a, b \rangle = a^* b$. In particular, $A$ is a $A$-Hilbert module.
 \end{Expl}
@@ -27,7 +28,7 @@ If $\{E_j\}_{j\in J}$ is a finite of countable family of $A$-Hilbert modules, de
 with the inner product $\langle x,y \rangle = \sum_{j\in J} \langle x_j, y_j\rangle_{E_j} $. It is a $A$-Hilbert module. As a particular case, we get a central example $H_A$ called the \textbf{standard $A$-Hilbert module}. It is obtained as the direct sum of the family $\{A\}_{j\in \N}$ where each $A$ is seen as a $A$-Hilbert module.
 \end{Expl}
 
-Let $E$ be a pre-Hilbert $A$-module. If the sesquilinear function $\langle \cdot ,\cdot \rangle$ has isotropy, i.e. there exists a non-zero $x\in E$ such that $\langle x,x\rangle =0$, we can divide out the null vector. Indeed, $N= \{x\in E : \langle x,x\rangle = 0\}$ is a sub-$A$-module of $A$, and $\langle x+ N,y+N\rangle := \langle x,y\rangle $ defines an inner product on $E/N$. The separation-completion of $E$ will refer to the Hilbert $A$-module obtained as the closure of $E/N$ with respect to this inner product. 
+Let $E$ be a semi-pre-Hilbert $A$-module. If the sesquilinear function $\langle \cdot ,\cdot \rangle$ has isotropy, i.e. there exists a non-zero $x\in E$ such that $\langle x,x\rangle =0$, we can divide out the null vector. Indeed, $N= \{x\in E : \langle x,x\rangle = 0\}$ is a sub-$A$-module of $A$, and $\langle x+ N,y+N\rangle := \langle x,y\rangle $ defines an inner product on $E/N$. The separation-completion of $E$ will refer to the Hilbert $A$-module obtained as the closure of $E/N$ with respect to this inner product. 
 
 \begin{definition}
 Let $E$ and $F$ be two $A$-Hilbert modules. The set of adjoinable operators $\mathcal L_A(E,F)$ is defined as the set of maps $T : E\rightarrow F $ such that there exists a map $T^* : F\rightarrow E$ satisfying 
@@ -65,10 +66,10 @@ As a corollary, we get that for any countably generated Hilbert $A$ module, ther
 
 Let $E$ a Hilbert $A$-module, $F$ a Hilbert $B$-module and $\phi : A \rightarrow \mathcal L_B(F)$ a $*$-homomorphism. The following section recalls the construction of the tensor product of $E$ and $F$ over $\phi$, denoted $E\otimes_\phi F$.\\
 
-We can provide $F$ with the structure of a left $A$-module via $\phi$ : $a\cdot \eta := \phi(a)\eta$ for $a\in A,\eta\in F$. Consider the algebraic tensor product of $A$-module $E\odot F$, with the structure of right $B$ module given by $x\otimes y \cdot b = x\otimes (yb)$. Define on $E\odot F$ the following sesquilinear function : $\langle x \otimes y , x'\otimes y'\rangle := \langle y, \phi(\langle x, x'\rangle)y'\rangle_F $. It satisfies the condition for $(E\odot F,\langle \cdot , \cdot \rangle )$ to be a pre-Hilbert $B$-module.
+We can provide $F$ with the structure of a left $A$-module via $\phi$ : $a\cdot \eta := \phi(a)\eta$ for $a\in A,\eta\in F$. Consider the algebraic tensor product of $A$-module $E\odot F$, with the structure of right $B$ module given by $x\otimes y \cdot b = x\otimes (yb)$. Define on $E\odot F$ the following sesquilinear function : $\langle x \otimes y , x'\otimes y'\rangle := \langle y, \phi(\langle x, x'\rangle)y'\rangle_F $. It satisfies the condition for $(E\odot F,\langle \cdot , \cdot \rangle )$ to be a semi-pre-Hilbert $B$-module.
 
 \begin{definition}
-The Hilbert $B$-module $E\otimes_\phi F$ is defined as the competion-separation of the pre-Hilbert $B$-module $E\odot F$ with respect to $\langle \cdot , \cdot \rangle$. It is called the interior tensor product of $E$ and $F$. When $F=B$, it can be called the push forward of $E$ along $\phi$.
+The Hilbert $B$-module $E\otimes_\phi F$ is defined as the competion-separation of the semi-pre-Hilbert $B$-module $E\odot F$ with respect to $\langle \cdot , \cdot \rangle$. It is called the interior tensor product of $E$ and $F$. When $F=B$, it can be called the push forward of $E$ along $\phi$.
 \end{definition} 
 
 \begin{Expl}
@@ -92,30 +93,3 @@ When we look at a $*$-homomorphism $\phi : A\rightarrow B$, we always have an is
 \[\langle V (x\otimes b) , V(x'\otimes b')\rangle = b^* \sum_j \phi(x_j)^* \phi(x'_j) \  b' = b^*\phi(\langle x, x' \rangle)b' = \langle x\otimes b , x'\otimes b' \rangle . \] % Determiner V^* 
 This isometry can be used to explicitely describe the projection and the isomorphism appearing in the stabilization theorem in this particular example. Indeed $p = VV^*\in\mathcal L_B(H_B)$ is a projection such that $p H_A \cong H_A\otimes_\phi B $.  
 \end{rk}
-
-%\section{KK-theory}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
