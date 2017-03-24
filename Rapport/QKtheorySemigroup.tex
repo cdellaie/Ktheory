@@ -91,15 +91,45 @@ We define canonical morphisms : if $\varepsilon, \varepsilon'\in (0,\frac{1}{4})
 One has also forgetful morphisms $\iota_{\varepsilon,E} : K_*^{\varepsilon,E}\rightarrow K_*(A)$ given by $[p,l]_{\varepsilon,E} \mapsto [\kappa_0(p)]-[1_l]$ and $[u]_{\varepsilon,E} \mapsto [\kappa_1(u)] $, and 
 $\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon, E}$ holds. The controlled $K$-theory groups approximate the usual $K$-groups in the sense that $\varinjlim_{E} K_*^{\varepsilon,E}(A) = K_*(A)$ for any $\varepsilon\in (0,\frac{1}{4})$.\\
 
-\begin{Expl} Some examples that we will use :\\
-\begin{itemize}
-\item[$\bullet$] Let $(X,\mathcal E)$ be a coarse space. The set of controlled subsets $\mathcal E$ is our proeminent example.
-\item[$\bullet$] Let $G$ be an étale groupoid. Then the set of open relatively compact subsets $\mathcal E$ of $G$ is a coarse structure. If $G$ is $\sigma$-compact, and $A$ is a $G$-algebra, $A\rtimes_r G$ is naturally filtered by $\mathcal E$ : if $E\subset G$ is open relatively compact, define $(A\rtimes_r G)_E = \{f\in C_c(G,A) : \text{ supp}(f)\subset E\cup E^{-1}\}$.
-\item[$\bullet$] Let $\mathbb G$ be a compact quantum group in the sense of Woronowicz. Then the set of finite dimensional representations of $\mathbb G$ is a coarse structure w.r.t. $\pi\circ \pi'=\pi\otimes \pi'$ as composition, and $\pi\leq\pi'$ if $\pi$ is equivalent to a subrepresentation of $\mathbb G$.
-\item[$\bullet$] Gomez-Aparicio : Let $G$ be a locally compact group, and $S$ be the set of representations of $G$ of the form $\lambda\otimes\pi$ for $\pi$ a finite dimensional representation of $G$.\end{itemize}   
+%\begin{Expl} Some examples that we will use :\\
+%\begin{itemize}
+%\item[$\bullet$] Let $(X,\mathcal E)$ be a coarse space. The set of controlled subsets $\mathcal E$ is our proeminent example.
+%\item[$\bullet$] Let $G$ be an étale groupoid. Then the set of open relatively compact subsets $\mathcal E$ of $G$ is a coarse structure. If $G$ is $\sigma$-compact, and $A$ is a $G$-algebra, $A\rtimes_r G$ is naturally filtered by $\mathcal E$ : if $E\subset G$ is open relatively compact, define $(A\rtimes_r G)_E = \{f\in C_c(G,A) : \text{ supp}(f)\subset E\cup E^{-1}\}$.
+%\item[$\bullet$] Let $\mathbb G$ be a compact quantum group in the sense of Woronowicz. Then the set of finite dimensional representations of $\mathbb G$ is a coarse structure w.r.t. $\pi\circ \pi'=\pi\otimes \pi'$ as composition, and $\pi\leq\pi'$ if $\pi$ is equivalent to a subrepresentation of $\mathbb G$.
+%\item[$\bullet$] Gomez-Aparicio : Let $G$ be a locally compact group, and $S$ be the set of representations of $G$ of the form $\lambda\otimes\pi$ for $\pi$ a finite dimensional representation of $G$.\end{itemize}   
+%\end{Expl}
+
+We list some examples that we will use, and some others that shall hopefully be developed in future work.
+
+\begin{Expl}
+Let $(X,\mathcal E)$ be a coarse space. The set of symmetric controlled subsets $\mathcal E_X$ is our proeminent example. Recall that it is the set of subsets $E\subseteq X\times X$ such that $\sup \{ d(x,y) : (x,y)\in E\}$ is finite and $E=E^{-1}$. Let $E,E'$ be such sets, their composition is given by :
+\[E\circ E' = EE' \cup E'E \text{ where }EE' = \{(x,y) \text{ s.t. }\exists z\in X / (x,z)\in E \text{ and }(z,y)\in E'\}.\]
 \end{Expl}
 
+\begin{Expl}
+Let $G$ be an étale groupoid. Then the set of symmetric compact subsets $\mathcal E_G$ of $G$ is a coarse structure. It is the set of compact subsets $E\subseteq G$ such that $E=E^{-1}$, where $E^{-1} = \{g^{-1} : g\in E\}$. For $E$ and $E'$ in $\mathcal E_G$, their composition is given by :
+\[E\circ E' = EE' \cup E'E \text{ where }EE' = \{gg' : (g,g')\in G^{(2)}\}.\] 
+If $G$ is $\sigma$-compact, and $A$ is a $G$-algebra, $A\rtimes_r G$ is naturally filtered by $\mathcal E_G$ : if $E\subset G$ is open relatively compact, define $(A\rtimes_r G)_E = \{f\in C_c(G,A) : \text{ supp}(f)\subset E\}$. This situation has important particular cases :
+\begin{itemize}
+\item[$\bullet$] Let $G$ be the coarse groupoid of a coarse space $(X,\mathcal E)$, which is étale. Then $\mathcal E_G$ is given by \[\{\overline{E} : E\in\mathcal E_X\} \cong \mathcal E_X.\] 
+\item[$\bullet$] Let $\Gamma$ be a finitely generated group acting by homeomorphism on a topological space $X$. Recall that the word length $l$ defines a proper metric on $\Gamma$. Define, for $R>0$ and $K\subseteq X$, 
+\[\Delta_{R,K} = \{(x,g)\in G \text{ s.t. } l(g)\leq R \text{ and } x\in K\}\] 
+and $\mathcal E_G $ as the set of $E\subseteq G$ such that $\exists R>0, E\subseteq \Delta_R$ and $E = E^{-1}$. It provides the étale action groupoid $G=X\rtimes \Gamma$ with a coarse structure.
+\end{itemize}
+\end{Expl}
+
+\begin{Expl}
+Let $\mathbb G$ be a compact quantum group in the sense of Woronowicz. Then the set $\mathcal E_{\mathbb G}$ of finite dimensional representations of $\mathbb G$ is a coarse structure w.r.t. the composition $\pi\circ \pi'=\pi\otimes \pi'$, and $\pi\leq\pi'$ if $\pi$ is equivalent to a subrepresentation of $\pi'$.
+\end{Expl}
+
+\begin{Expl}
+Let $G$ be a locally compact group, and $S$ be the set of representations of $G$ of the form $\lambda\otimes\pi$ for $\pi$ a finite dimensional representation of $G$ and $\lambda$ si the left regular representation of $G$. In \cite{Maria}
+\end{Expl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Quantitative objects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 In order to study functorial properties of controlled $K$-theory, we will adapt and study the notion of quantitative object defined in \cite{OY2}.\\
 
 \begin{definition}

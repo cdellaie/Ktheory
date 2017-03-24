@@ -193,12 +193,12 @@ An equivariant Hilbert $B$-module is a Hilbert $B$-module $E$ together with an u
 \end{definition}
 
 \begin{Expl} Define $L^2(G)$ as the completion of $C_c(G)$ seen as a pre-Hilbert $C_0(G^{(0)})$-module with the $C_0(G^{(0)})$-valued inner product 
-\[\langle \xi ,\eta\rangle (x) = \sum_{g\in G_x} \xi(g)^*\eta(g) \quad \forall \xi,\eta\in C_c(G).\]
-Its fibers are isomorphic to $l^2(G_x)$, and the action $\lambda : s^*L^2(G) \rightarrow r^* L^2(G)$ is given by left translation, i.e. if $\xi\in l^2(G_x)$, then
-\[(\lambda_g\xi)(h) = \xi(g^{-1}h)\quad \forall g,h\in G_x.\]
+\[\langle \xi ,\eta\rangle (x) = \sum_{g\in G^x} \xi(g)^*\eta(g) \quad \forall \xi,\eta\in C_c(G).\]
+Its fibers are isomorphic to $l^2(G^x)$, and the action $\lambda : s^*L^2(G) \rightarrow r^* L^2(G)$ is given by left translation, i.e. if $\xi\in l^2(G^x)$, then
+\[(\lambda_g\xi)(h) = \xi(g^{-1}h)\quad \forall g,h\in G^x.\]
 \end{Expl}
 
-\begin{Expl} Let $B$ be a $G$-algebra, the $C(G^{(0)})$-structure being given by $\theta : C_0(G^{(0)})\rightarrow Z(\mathcal M(B))\subseteq \mathcal L_B(B)$. The $G$-module $L^2(G,B)$ is defined as the tensor product $ L^2(G)\otimes_\theta B$. Its fibers are $l^2(G,B)$ and the action is given by $\lambda\otimes id_{B}$.
+\begin{Expl} Let $B$ be a $G$-algebra, the $C(G^{(0)})$-structure being given by $\theta : C_0(G^{(0)})\rightarrow Z(\mathcal M(B))\subseteq \mathcal L_B(B)$. The $G$-module $L^2(G,B)$ is defined as the tensor product $ L^2(G)\otimes_\theta B$. Its fibers are $l^2(G^x,B)$ and the action is given by $\lambda\otimes id_{B}$.
 \end{Expl}
 
 \begin{Expl} More generally, let $B$ be a $G$-algebra and $E$ be a $B$-module, with $C(G^{(0)})$-structure given by $\theta : C_0(G^{(0)})\rightarrow Z(\mathcal M(B))\subseteq \mathcal L_B(B)$. The $G$-equivariant $B$-Hilbert module $L^2(G,E)$ is defined as the tensor product $ L^2(G)\otimes_\theta E$.
@@ -206,7 +206,7 @@ Its fibers are isomorphic to $l^2(G_x)$, and the action $\lambda : s^*L^2(G) \ri
 
 \begin{rk}
 We could alternatively have defined, for $A$ a $G$-algebra, $A\rtimes_r G$ as a subalgebra of $\mathcal L_A(L^2(G,A))$. Indeed, any $f\in C_c(G,A)$ acts as a convolution operator on $L^2(G,A)$ :
-\[(\lambda(f)\xi)(h) = \sum_{g\in G_x} f(g)\alpha_g(\xi(g^{-1} h))\quad \forall \xi\in L^2(G,A),g,h\in G_x,\]
+\[(\lambda(f)\xi)(h) = \sum_{g\in G^x} f(g)\alpha_g(\xi(g^{-1} h))\quad \forall \xi\in L^2(G,A),g,h\in G^x,\]
 and $||f||_{r} = ||\lambda(f)||_{\mathcal L_A (L^2(G,A))}$.
 \end{rk}
 
