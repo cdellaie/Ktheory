@@ -91,7 +91,7 @@ Let $Z$ be a right $G$-space. Define :
 
 These maps define a structure of toplogical groupoid on $Z\rtimes G$. It is called the crossed product groupoid of $Z$ by $G$. It is étale if $G$ is.\\
 
-Following \cite{TuBC2}, we present now an important class of $G$-spaces called $G$-simplicial complexes.
+We present now an important class of $G$-spaces called $G$-simplicial complexes. The reader is referred to \cite{TuBC2} for details. 
 
 \begin{definition}
 A map between two topological spaces $f : X\rightarrow Y$ is said to be locally injective if there exists an open cover $\mathcal U$ of $X$ such that, for all $U\in \mathcal U$, $f_{|U}$ is injective.
@@ -106,7 +106,7 @@ Let $n\in\N$. A $G$-simplicial complex of dimension $\leq n$ is a pair $(X,\Delt
 \item[$\bullet$] for all $\eta\in\Delta$, there exists $x\in G^ {(0)}$ such that $\text{supp }\eta \subseteq p^{-1}(x)$ and $|\text{supp }\eta|\leq n+1$,
 \item[$\bullet$] if $\eta' \in \Delta$ and $\eta\in M_X$ such that $\text{supp }\eta \subseteq \text{supp }\eta'$, then $\eta\in \Delta$.
 \end{itemize}
-For $\eta\in \Delta$, $\text{supp }\eta$ is called a simplex.
+For $\eta\in \Delta$, $\text{supp }\eta$ is called a simplex, or a $j$-simplex when $|\text{supp }\eta | = j$.
 \end{itemize}
 The complex is said to be typed if there exists a discrete $G$-space $T$ and a $G$-equivariant continuous map $\tau : X\rightarrow T$ such that, for every simplex $S$, $\tau_{|S}$ is injective.  
 \end{definition}
@@ -114,7 +114,7 @@ The complex is said to be typed if there exists a discrete $G$-space $T$ and a $
 For any typed proper $G$-compact $G$-simplicial complex $(X,\Delta)$ of dimension $\leq n$, one can decompose it into its $n$-skeleton $Z_0\subseteq Z_1 \subseteq ... \subseteq Z_n$, where each $Z_j$ is a closed $G$-invariant subset of $\Delta$ such that :
 \begin{itemize}
 \item[$\bullet$] for all $\eta \in Z_j \setminus Z_{j-1}$, $|\text{supp }\eta|= j$,
-\item[$\bullet$] $Z_j \setminus Z_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring\sigma_j \times ?$, where $\mathring\sigma_j $ is the interior of the standard simplex of dimension $j$.
+\item[$\bullet$] $Z_j \setminus Z_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring\sigma_j \times \Sigma_j$, where $\mathring\sigma_j $ is the interior of the standard simplex of dimension $j$, and $\Sigma_j$ is the discrete subspace of centers of $j$-simplices.
 \end{itemize}
 
 \begin{definition}
@@ -124,6 +124,7 @@ i.e. the space of vertices $S$ contains $X$ plus the barycentric center of any s
 \end{definition}
 
 This construction shows that, up to replacing a $G$-simplicial complex of dimension $\leq n$ by its barycentric subdivision, we can always suppose that it is a typed $G$-simplicial complex of dimension $\leq n$.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{$G$-algebras and crossed products}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -231,11 +232,29 @@ The set of such $K$-cycles is denoted by $\mathbb E^G(A,B)$.
 \end{definition}
 
 \begin{definition}
-Two $K$-cycles $(E,\pi,T)$ and $ (E',\pi',T')$ in $\mathbb E^G(A,B)$ are homotopic if there exists $ (\tilde E,\tilde \pi,\tilde T) \in\mathbb E^G(A,B[0,1])$ such that $(\tilde E_0,\tilde \pi_0,\tilde T_0)\simeq (E,\pi,T)$ and $(\tilde E_1,\tilde \pi_1,\tilde T_1)\simeq (E',\pi',T')$.
+Two $K$-cycles $(E,\pi,T)$ and $ (E',\pi',T')$ in $\mathbb E^G(A,B)$ are homotopic if there exists $ (\tilde E,\tilde \pi,\tilde T) \in\mathbb E^G(A,B[0,1])$ such that $(\tilde E_0,\tilde \pi_0,\tilde T_0)\simeq (E,\pi,T)$ and $(\tilde E_1,\tilde \pi_1,\tilde T_1)\simeq (E',\pi',T')$. The action on $B[0,1]$ is the action obtained as the tensor product of the action on $B$ and of the trivial action on $C[0,1]$.
 \end{definition}
 
-\begin{definition} $KK_0^G(A,B)$ is defined as the quotient of $\mathbb E^G(A,B)$ by the equivalence relation given by homotopy. Let $\C_1$ denotes the trivial $G$-Hilbert module $\C^2$ with the standard grading given by $\begin{pmatrix}0 & 1 \\ 1 & 0 \end{pmatrix}$. $KK_1^G(A,B)$ is defined as $KK_0^G(A,B \otimes \C_1)$.
+\begin{definition} $KK_0^G(A,B)$ is defined as the quotient of $\mathbb E^G(A,B)$ by the equivalence relation given by homotopy. Let $\C_1$ denotes the trivial $G$-Hilbert module $\C^2$ with the standard grading given by $\begin{pmatrix}0 & 1 \\ 1 & 0 \end{pmatrix}$. $KK_1^G(A,B)$ is defined as $KK_0^G(A,B \otimes \C_1)$. 
 \end{definition}
+
+Doing computations, we will often use different equivalence relations which turn out to coincide when $A$ is separable and $B$ is $\sigma$-unital. See \cite{blackadar} for details.
+
+\begin{definition} Unitary and operator homotopy equivalences.
+\begin{itemize}
+\item[$\bullet$]  Unitary equivalence is defined as $(E,\pi,T)\sim_{u} (E',\pi',T')$ if there exists a unitary $u\in\mathcal L_B(E,E')$ such that $T = u^* T' u$ and $\pi(a) = u^* \pi'(a) u , \forall a\in A$.
+\item[$\bullet$] Let $\mathbb D^G(A,B) = \{(E,\pi,T) \in\mathbb E^G(A,B) \text{ s.t. } \pi(a)(F^2-1) = 0, [\pi(a),F]=0 \text{ and }V(s^*T)V^* = r^*T,\forall a\in A \}$. It is called the set of degenerate $K$-cycles.   
+\item[$\bullet$] An operator homotopy of $K$-cycles is a family $[0,1]\rightarrow \mathbb E^G(A,B) ; s\mapsto (E,\pi,T_s)$, where $s\mapsto T_s$ is norm-continuous. 
+\item[$\bullet$] $\sim_{oh}$ is the equivalence relation on $\mathbb E^G(A,B)$ generated by operator homotopy and addition of degenerate elements, i.e. $(E,\pi,T)\sim_{oh} (E',\pi',T')$ if there exists $(E'',\pi'',T'')\in\mathbb E^{G}(A,B)$ such that $(E,\pi,T)\oplus (E'',\pi'',T'')$ and $(E',\pi',T')\oplus (E'',\pi'',T'')$ are operator homotopic, up to unitary equivalence.
+\end{itemize}
+\end{definition}
+
+The following proposition summarizes propositions $17.2.3$ and $17.2.5$ from \cite{blackadar}. 
+ 
+\begin{prop}[\cite{blackadar}] If $(E,\pi,T)\in\mathbb D^G(A,B)$, then $(E,\pi,T)$ is homotopic to the $0$ $K$-cycle.
+If $(E,\pi,T')$ is a compact pertubation of $(E,\pi,T)$ in $\mathbb E^G(A,B)$, i.e. $T'-T\in \mathfrak K_B(E)$, then $(E,\pi,T')$ is operator homotopic to $(E,\pi,T)$.\\
+Moreover, if $A$ is separable and $B$ is $\sigma$-unital, then $\sim_{oh}$ coincides with homotopy equivalence of $K$-cycles.
+\end{prop}
 
 One of the properties that makes equivariant $KK$-theory so powerful is the existence of a product, called the Kasparov product. Its existence is highly non trivial, and it fails to exists in the non-separable case or the $KK$-theory for Banach algebras developed by V. Lafforgue \cite{Lafforgue} for example.
 
