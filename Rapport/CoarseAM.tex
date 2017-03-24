@@ -11,7 +11,7 @@ and $C^*(X,B)$ is the completion of $\cup_{R>0} C_R[X,B]$ for the operator norm 
 For $\phi : A\rightarrow B$, we use the notation $\phi_X $ for the induced $*$-homomorphism $C^*(X,A)\rightarrow C^*(X,B)$. For the reader's convenience, we give details for its construction, which is a standard fact in Coarse Geometry.
 
 \begin{thm}
-Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarrow B$ a $*$-morphism. Then there exists a $*$-morphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ extending $\phi$. Moreover, $\phi\mapsto \phi_X$ respects composition of $*$-morphisms.
+Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarrow B$ a $*$-homomorphism. Then there exists a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ extending $\phi$. Moreover, $\phi\mapsto \phi_X$ respects composition of $*$-homomorphisms.
 \end{thm}
 
 \begin{dem}
@@ -28,12 +28,12 @@ Let $D_{X,A} : \hat K_*(C^*(X,A))\rightarrow \hat K_*(C^*(X,SA))$ the controlled
 \end{prop}
 
 \begin{dem}
-The following diagram has exact rows and commutes
+Recall that $0\rightarrow \mathfrak K(l^2(\N)) \rightarrow \mathcal T_0\rightarrow S\rightarrow 0 $ is the Toeplitz extension. The following diagram has exact rows and commutes
 \[\begin{tikzcd} 
 SC^*(X,A) \arrow{d}\arrow{r} & CC^*(X,A) \arrow{d}\arrow{r} & C^*(X,A) \arrow{d} \\ 
 C^*(X,SA) \arrow{r}          & C^*(X,CA) \arrow{r}          & C^*(X,A)
 \end{tikzcd}\]
-so that remark \ref{rk3.8} implies that $D_{X,A} = \Psi_*\circ D_{C^*(X,A)}$. The following diagram has exact rows and commutes
+so that remark \ref{rk3.8} implies that $D_{X,A} = \Psi_*\circ D_{C^*(X,A)}$. The following diagram also has exact rows and commutes
 \[\begin{tikzcd} 
 \mathfrak K(l^2(\N))\otimes C^*(X,A) \arrow{d}\arrow{r} & \mathcal T_0 \otimes C^*(X,A) \arrow{d}\arrow{r} & SC^*(X,A) \arrow{d} \\ 
 C^*(X,\mathfrak K(l^2(\N))\otimes A) \arrow{r}          & C^*(X,\mathcal T_0 \otimes A) \arrow{r}          & C^*(X,SA)
@@ -43,7 +43,9 @@ so that remark \ref{rk3.8} implies that $D_{\mathfrak K(l^2(\N))\otimes C^*(X,A)
 \qed
 \end{dem}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Controlled descent functor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Every $K$-cycle $z\in KK(A,B)$ can be represented as a triplet $(H_B, \pi, T)$ where :
 \begin{itemize}
@@ -57,7 +59,7 @@ We first define a controlled morphism $\hat \sigma_X(z) : \hat K(A)\rightarrow \
 \subsubsection{Odd case}
 
 For $z\in KK_1(A,B)$, represented by $(H_B,\pi,T)\in E(A,B)$, define $P=(\frac{1+T}{2})\in \mathcal L(H_B)$ and $P_X\in\mathcal L(H_{C^*(X,B)})$, and  
-\[E^{(\pi,T)} = \{(a,P\pi(a)P + y) : a\in C^*(X,A),y\in C^*(X,B)\otimes \mathfrak K\} \]
+\[E^{(\pi,T)} = \{(a,P_X\pi_X(a)P_X + y) : a\in C^*(X,A),y\in C^*(X,B)\otimes \mathfrak K\} \]
 which is a $C^*$-algebra which make the following sequence exact :
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & C^*(X,B)\otimes \mathfrak K \arrow{r} & E^{(\pi,T)}\arrow{r} & C^*(X,A)\arrow{r} & 0 \end{tikzcd}.\]
 

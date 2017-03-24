@@ -6,23 +6,23 @@ In this section, all groupoids $G\rightrightarrows G^{(0)}$ are étale.
 
 \begin{definition}
 A topological groupoid $G\rightrightarrows G^{(0)}$ is proper if the map $G\times_s G^{(0)}\rightarrow G^{(0)}\times G^{(0)}$ defined by $(g,z)\mapsto (z,gz)$ is a proper map.\\
-A $G$-space $Z$ is said to be proper if the crossed-product groupoid $Z\rtimes G$ is proper. If the space of orbits $Z/G$ is compact, $Z$ is called $G$-compact.\\
+A $G$-space $Z$ is said to be proper if the crossed-product groupoid $Z\rtimes G$ is proper. If the space of orbits $Z/G$ is compact, $Z$ is called $G$-compact.
 \end{definition}
 
 \begin{definition}
 A $G$-space $\underline E G$ is called universal if, given any proper $G$-compact $G$-space $Z$, there exists a continuous $G$-equivariant map $Z\rightarrow \underline E G$.
 \end{definition}
 
-We now construct a model for universal spaces of $G$, based on J.-L.Tu's work \cite{TuBC2}. For any compact subset $K\subset G$, define $P_K(G)$ to be the space of probability measures $\nu $ with support contained in one and only one fiber $G^x$ for some $x\in G^{(0)}$, and such that if $g,g'\in \text{supp }(\nu)$, then $g'g^{-1}\in K$. We endow $P_K(G)$ with the weak-$*$ topology.\\
+We now construct a model for universal spaces of $G$, based on J.-L.Tu's work \cite{TuBC2}. For any compact subset $K\subseteq G$, define $P_K(G)$ to be the space of probability measures $\nu $ with support contained in one and only one fiber $G^x$ for some $x\in G^{(0)}$, and such that if $g,g'\in \text{supp }(\nu)$, then $g'g^{-1}\in K$. We endow $P_K(G)$ with the weak-$*$ topology.\\
 
-The action of $G$ is defined by translation. The momentum map $P_K(G)\rightarrow G^{(0)}$ is just the map associating to $\nu$ the only $x$ such that $\text{supp }(\nu) \subset G^x$. As the fibers are discrete, any $\nu\in P_K(G)$ can be represented as as sum $\nu = \sum_{g\in G^x} \lambda_g(\nu)\delta_g$, where $\delta_g$ is the Dirac measure at $g\in G $. The continuous functions $\lambda_g$ are called coordinate functions and satisfy $\sum_{g\in G^x} \lambda_g(\nu) =1$ for every $x\in G^{(0)}$. The action of $G$ is given by $g\lambda_h = \lambda_{g^{-1}h}$.\\
+The action of $G$ is defined by translation. The momentum map $P_K(G)\rightarrow G^{(0)}$ is just the map associating to $\nu$ the only $x$ such that $\text{supp }(\nu) \subseteq G^x$. As the fibers are discrete, any $\nu\in P_K(G)$ can be represented as as sum $\nu = \sum_{g\in G^x} \lambda_g(\nu)\delta_g$, where $\delta_g$ is the Dirac measure at $g\in G $. The continuous functions $\lambda_g$ are called coordinate functions and satisfy $\sum_{g\in G^x} \lambda_g(\nu) =1$ for every $x\in G^{(0)}$. The action of $G$ is given by $g\lambda_h = \lambda_{g^{-1}h}$.
 
 \begin{lem}[Tu,\cite{TuBC2}]
 The action of $G$ on $P_K(G)$ is proper and cocompact.
 \end{lem}  
 
 \begin{lem}[Tu,\cite{TuBC2}]
-Let $Z$ be a proper $G$-compact $G$-space. Then there exists a compact subset $K\subset G$ and a $G$-equivariant continuous map $Z\rightarrow P_K(G)$.
+Let $Z$ be a proper $G$-compact $G$-space. Then there exists a compact subset $K\subseteq G$ and a $G$-equivariant continuous map $Z\rightarrow P_K(G)$.
 \end{lem}  
 
 \subsection{Equivariant $K$-homology}
@@ -37,13 +37,13 @@ We will use the equivariant $KK$-theory developped by Le Gall in his thesis \cit
 
 \begin{definition}
 Let $Y$ be a proper $G$-space and $B$ a $G$-algebra. Then the analytic $K$-homology of $Y$ with coefficients in $B$ is defined by 
-\[RK^G(Y,B) = \varinjlim_{Z\subset Y} KK^G(C_0(Z),B), \]
+\[RK^G(Y,B) = \varinjlim_{Z\subseteq Y} KK^G(C_0(Z),B), \]
 the inductive limit being taken on proper $G$-compact $G$-subspaces $Z$ of $Y$.
 \end{definition}
 
-The previous lemmas assures that the analytic $K$-homology can be computed as an inducitve limit of the $K$-homology of the spaces $P_K(G)$ :
+The previous lemmas ensures that the analytic $K$-homology can be computed as an inducitve limit of the $K$-homology of the spaces $P_K(G)$ :
 %somehow restricted when it comes to the analytic $K$-homology of any universal space $\underline E G$ :
-\[RK^G(\underline E G,B) = \varinjlim_{K\subset G \text{ compact }} KK^G(C_0(P_K(G)),B).\]
+\[RK^G(\underline E G,B) = \varinjlim_{K\subseteq G \text{ compact }} KK^G(C_0(P_K(G)),B).\]
 
 \subsection{Descent functor}
 
@@ -96,7 +96,7 @@ Recall that a function $h : G\rightarrow \R$ is said to be of negative type if :
 \item[$\bullet$] $h(g)=h(g^{-1})$ for all $g\in G$,
 \item[$\bullet$] for all $t_i\geq 0, i=1,..,n$ such that $\sum t_i=0$ and all $g_1,...,g_n\in G$ having the same range, $\sum_i t_i t_j h(g_i^{-1} g_j )\leq 0$.
 \end{itemize}
-The function $h$ is said to be locally proper if, for every compact $K \subset G^{(0)}$, $h_{|G_K^K}$ is proper.\\
+The function $h$ is said to be locally proper if, for every compact $K \subseteq G^{(0)}$, $h_{|G_K^K}$ is proper.\\
 
 \begin{definition}
 A topological groupoid $G$ is said to be a-T-menable if it satisfies one of the following equivalent property :
@@ -126,7 +126,7 @@ This construction is functorial : any $*$-homomorphism $\phi: A\rightarrow B$ gi
 which respects the Kasparov product, i.e. $\sigma(z\otimes_D z')=\sigma_X(z)\otimes_{C^*(X,D)} \sigma_X(z')\quad,\forall z\in KK(A,D),z'\in KK(D,B)$.\\
 
 Let $X$ be a coarse space with bounded geometry. The Rips complex is the inductive system of finite dimensional simplicial complexes
-\[P_E(X)=\{\eta\in \text{Prob}(X)\text{ s.t. supp }\eta\subset E\}\quad,\forall E\in \mathcal E_X,\]
+\[P_E(X)=\{\eta\in \text{Prob}(X)\text{ s.t. supp }\eta\subseteq E\}\quad,\forall E\in \mathcal E_X,\]
 endowed with the $*$-weak topology. It is an inductive system with respect to inclusion of entourages.\\
  
 The coarse homology group of $X$ with coefficients in an arbitrary $C^*$-algebra $B$ is defined as 
