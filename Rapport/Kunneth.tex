@@ -38,52 +38,12 @@ The following corollary is obvious from the theorem.\cite{FinnSellFibred}
 Let $X$ be a proper discrete metric space with bounded geometry which admits a fibered coarse embedding into a Hilbert space and $A$ a $C^*$-algebra. If $A$ satisfies the Künneth formula, then $A\otimes K(l^2(X))$ satifies the quantitative Künneth formula.
 \end{cor}
 
-\subsection{Induction and Restriction functors}
+\input{Induction}
+\input{InductionSimple}
 
-We recall the following construction from \cite{LeGall}. Let $G$ and $G'$ two étale groupoids, and $\phi=(Z,p,p')$ a generalized morphism from $G$ to $G'$. \\
-
-For any $G'$-equivariant $B$-Hilbert module $E$, define $\phi^*E=l^2_Z\otimes_{C(G')} E$ where $l^2_Z $ is the completion of the space of sections $C_c(Z,B)$ such that $f(z)\in B_{p'(z)}$. Then $\phi^*E$ is a $G$-equivariant $\phi^*B$-Hilbert module. \\
-
-If $\pi : A\rightarrow \mathcal L_B(E)$ and every $F\in\mathcal L_B(E)$, define $\pi' = \pi\otimes_{C(G')} id_{C_0(G^{(0)})}$, and $F'=F\otimes id_{C_0(G^{(0)})}= $. If $(E,\pi,F)\in E^{G'}(A,B)$, we use the notation $\phi^* (E,\pi,F)=(\phi^*E,\pi',F')$.\\
-
-Le Gall proves \cite{LeGall} that $(E,\pi,F)\mapsto \phi^*(E,\pi,F)$ descends to a homomorphism of abelian groups $KK^{G'}(A,B)\rightarrow KK^{G}(\phi^*A,\phi^*B)$ which respects Kasparov products, i.e. $\phi^*(x\otimes_D y)= \phi^*(x)\otimes_{\phi^*D}\phi^*(y)$ holds for all $x,y\in KK^{G'}(A,B)$.\\
-
-Moreover, the association $(E,\pi)\mapsto (\phi^*E, \pi')$ is functorial at the level of $C^*$-correspondences.
-
-\begin{definition}
-$G$ and $G'$ are said to be Morita equivalent when there are two generalized morphisms $Z : G\rightarrow G'$ and $Z' : G'\rightarrow G$ such that their compositions are cohomologous to identities.  
-\end{definition}
-
-If $H$ is a subgroupoid of $G$, $G$ naturally carries left and right actions of $G/H\rtimes G$ and $H$, giving rise to two generalized morphisms $\phi : G/H\rtimes G\rightarrow H$ and $\psi : H \rightarrow G/H\rtimes G$, which are inverse of each others ($\phi \psi$ and $\psi\phi$ are cohomologous to the identity). In one sentence, $G/H\rtimes G$ and $H$ are Morita equivalent.\\
-
-If $H$ is compact, one can also see $G$ as a $H$ space, and consider the generalized inclusion  
-\[\iota : 
-\begin{tikzcd}[column sep = small] 
-H \arrow{d} \arrow{d} & \arrow{dl} G \arrow{dr} & G\arrow{d} \arrow{d} \\
- H^{(0)} & & G^{(0)}
-\end{tikzcd}\]
-and $\eta$ the opposite of $\iota$.  
-\begin{definition}
-The restriction and induction functors are defined by
-\[ \text{Res}_H^G = \iota^*;\quad \text{Ind}_H^G = \eta^*.\]
-These are functorial w.r.t. $C^*$-correspondences, and also w.r.t. $KK$-theory.
-\end{definition}
-
-The Morita equivalence $G/H\rtimes H \sim H$ allows us to give a very concrete definition of these functors, and actually help to prove that, when $H$ is a compact subgroupoid of $G$ and the action of $G$ is induced by $H$ , $\text{Res}_{H}^G : KK^G(A,B)\rightarrow KK^H( \text{Res}_{H}^G A , \text{Res}_{H}^G B)$ is an isomorphism of abelian groups for any $G$-algebras $A$ and $B$. This is locally satisfied for example when $G$ is ample, i.e. étale with totally disconnected base space.
-
-\begin{definition}
-The groupoid $G$ is said to be locally induced if there exists an open cover $\mathcal U$ of $G^{(0)}$ such that for all $U\in\mathcal U$, there exists a compact groupoid $H_U$ acting on $G_{|U}$ and an ismomorphism of groupoids $G_{|U }\simeq G_{|U}/ H_U \rtimes H_U$.  
-\end{definition}
-
-Since $G_{|U}/ H_U \rtimes H_U$ is Morita equivalent to $H_U$ and $G$ is Morita equivalent to the pull-back $G[\mathcal U]$, we have an isomorphism 
-\[KK^G(A,B) \simeq \prod_{U\in\mathcal U} KK^{H_U}(\phi^* A,\phi^* B).\]
-
-Ample groupoids are example of locally induced groupoid. Recall that an étale groupoid is ample iff the open compact bisections form  a basis of the groupoid. Now take $U$ an open compact bisection, and set $H_U = \{ g\in G\text{ s.t. } gU\cap U \neq \emptyset \}$, which is a compact subgroupoid of $G$ that fulfills the condition.\\
-
-The author presently doesn't kow of any other examples of locally induced groupoids which are not ample. Maybe looking into groupoids with finite asymptotic dimension. 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Baum-Connes and the Künneth formula}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The first step in proving theorem \ref{Kunneth} is to define a analytical version of $\alpha_{A,B}$ when an étale groupoid $G$ is given. More precisely, we first construct a homomorphism $\alpha_{A,B}^G : K_*^{top}(G,A)\otimes K_*(B)\rightarrow K_*^{top}(G,A\otimes B )$, inductive limit of $\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K_*(B)\rightarrow RK^G(Z,A\otimes B )$ where $Z$ runs through $G$-proper $G$-compact spaces. Then we show that the controlled assembly map intertwines $\alpha^{G,P_d(G)}_{A,B}$ and $\alpha_{A\rtimes_r G,B}$ uniformly.\\
 
 If $A$ is a $G$-algebra, and $B$ a $C^*$-algebra, $A\otimes B$ naturally inherits a $G$-algebra structure with trivial action of $G$ on the $B$ factor.\\

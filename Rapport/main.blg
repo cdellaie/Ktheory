@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 Case mismatch error between cite keys SkTuYU and SkTuYu
----line 90 of file main.aux
+---line 94 of file main.aux
  : \citation{SkTuYU
  :                 }
 I'm skipping whatever remains of this command
@@ -20,45 +20,45 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 30 entries,
+You've used 31 entries,
             2118 wiz_defined-function locations,
-            709 strings with 8169 characters,
-and the built_in function-call counts, 8789 in all, are:
-= -- 890
-> -- 295
+            715 strings with 8271 characters,
+and the built_in function-call counts, 9086 in all, are:
+= -- 922
+> -- 302
 < -- 9
-+ -- 127
-- -- 90
-* -- 564
-:= -- 1463
-add.period$ -- 90
-call.type$ -- 30
-change.case$ -- 127
++ -- 130
+- -- 92
+* -- 586
+:= -- 1512
+add.period$ -- 93
+call.type$ -- 31
+change.case$ -- 131
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 368
-empty$ -- 750
-format.name$ -- 90
-if$ -- 1830
+cite$ -- 38
+duplicate$ -- 379
+empty$ -- 777
+format.name$ -- 92
+if$ -- 1891
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 36
-newline$ -- 152
-num.names$ -- 60
-pop$ -- 142
+int.to.str$ -- 31
+missing$ -- 37
+newline$ -- 157
+num.names$ -- 62
+pop$ -- 144
 preamble$ -- 1
-purify$ -- 105
+purify$ -- 108
 quote$ -- 0
-skip$ -- 249
+skip$ -- 256
 stack$ -- 0
-substring$ -- 612
-swap$ -- 65
+substring$ -- 642
+swap$ -- 66
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 106
+type$ -- 110
 warning$ -- 7
-while$ -- 102
-width$ -- 32
-write$ -- 321
+while$ -- 106
+width$ -- 33
+write$ -- 332
 (There was 1 error message)

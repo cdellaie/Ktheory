@@ -82,6 +82,18 @@ A left action $(Z,p,\alpha)$ is said to be
 \end{itemize}
 Similarly, we define these notions for right actions.\\
 
+Let $G$ be a locally compact $\sigma$-compact Hausdorff groupoid. A cutoff function for $G$ is a continuous function $c : G^{(0)} \rightarrow \R_+$ such that :
+\begin{itemize}
+\item[$\bullet$] for all compact subsets $K\subseteq G^{(0)}$, $\text{supp }(c)\cap s(G^K)$ is compact,
+\item[$\bullet$] for all $x\in G^{(0)}$, $\int_{g\in G^x} c(s(g)) \lambda^x(dg) = 1$.
+\end{itemize}
+
+We recall the following proposition.
+
+\begin{prop}[\cite{TuNovikov}]
+A locally compact $\sigma$-compact Hausdorff groupoid is proper iff there exists a cutoff function for $G$. 
+\end{prop}
+
 Let $Z$ be a right $G$-space. Define :
 \begin{itemize}
 \item[$\bullet$] $(Z\rtimes G)^{(0)} = Z$, $Z\rtimes G = Z\times_{r,p} G$ as a topological space,
@@ -145,7 +157,7 @@ Notice that, if $A$ is a $C(G^{(0)})$-algebra, then $s^* A = A \otimes_s C_0(G)$
 An action of a groupoid $G$ on a $C^*$-algebra $A$ is a triple $(A,\theta,\alpha)$ where $(A,\theta)$ is a $C(G^{(0)})$-structure and $\alpha : s^* A \rightarrow r^* A$ is an isomorphism of $C(G)$-algebras such that $\alpha_{gg'}= \alpha_g\circ \alpha_{g'}$ for all $(g,g')\in G^{(2)}$.
 \end{definition} 
 
-If $A$ is a $G$-algebra, and $U \subset G^{(0)}$ is an open subset, recall from \cite{LeGall} that the restriction $A_U$ is defined as $\eta^* A = C_0(U) \otimes_\eta A$ where $\eta : C(U) \hookrightarrow C_0(G^{(0)})$ is the canonical inclusion. 
+If $A$ is a $G$-algebra, and $U \subset G^{(0)}$ is an open subset, recall from \cite{LeGall} that the restriction $A_U$ is defined as $\eta^* A = C_0(U) \otimes_\eta A$ where $\eta : C_0(U) \hookrightarrow C_0(G^{(0)})$ is the canonical inclusion. 
 %Let $F= G^{(0)}\backslash U$. As $A_U$ is naturally embedded into $A$, define $A_F$ to be the complementary of $A_U$. \\
 
 The space of continuous sections with compact support is defined as :
@@ -154,7 +166,7 @@ where $U$ runs through the open relatively compact subsets of $G$. It is natural
 \[\phi\ast \psi (g) = \int_{G^{r(g)}} \phi(h)\psi(h^{-1}g)\lambda^{r(g)}(h).\] 
 
 \begin{rk}
-Another possible definition of $C_c(A,G)$ would be to take a tensor product of Fréchet algebras $C_c(G)\otimes A$, which gives a Fréchet algebra. Even if this definition seems more elegant, this would require more definitions on Fréchet $G$-algebras, which we do not want to dive into.  
+Another possible definition of $C_c(G,A)$ would be to take a tensor product of Fréchet algebras $C_c(G)\otimes A$, which gives a Fréchet algebra. Even if this definition seems more elegant, this would require more definitions on Fréchet $G$-algebras, which we do not want to dive into.  
 \end{rk}
 
 %Let $E$ be a compact subset of $G$. The space of continuous sections with support in $E$ is defined as $A_E$. Then 

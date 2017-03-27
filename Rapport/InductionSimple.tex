@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Induction and Restriction functors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{definition} A subset $H\subseteq G$ is called a subgroupoid if :
+\begin{itemize}
+\item[$\bullet$] for all $h,h'\in H $ such that $s(h') = r(h)$, $h'h \in H$,
+\item[$\bullet$] if $h\in H$, $h^{-1}\in H$.
+\end{itemize}
+Then, the restriction of the multiplication, inverse, unit, target and source maps on $H$ defines a structure of groupoid on $H$ over $H^{(0)} = s(H)$. If $G$ is étale, $H$ is also étale. We will write $H< G$ to indicate that $H$ is a subgroupoid of $G$.
+\end{definition}
+
+In this section, we define for all subgroupoids $H < G$ induction and restriction transformations. Let $G$ be an étale groupoid and $H<G$.\\
+
+Let $A$ be a $H$-algebra. Define the induced $C(G^{(0)})$-algebra :
+\[\text{Ind}_H^G (A) = \{f \in C_0(G,A) \text{ s.t. } h^{-1} f(gh) = f(g),\forall h\in H\}. \]
+Left translation defines an action of $G$ on $\text{Ind}_H^G A$, so that $\text{Ind}_H^G A$ is a $G$-algebra.\\
+
+Let $E$ be a Hilbert $A$-module, endowed with an action $V\in\mathcal L_A(s^*E,r^*E)$ of $H$. Define the induced Hilbert module :
+\[\text{Ind}_H^G (E) = \{f \in C_0(G,E) \text{ s.t. } h^{-1} f(gh) = f(g),\forall h\in H\}. \]
+Left translation defines an action of $G$ on $\text{Ind}_H^G E$, hence $\text{Ind}_H^G E$ is a $G$-equivariant Hilbert $\text{Ind}_H^G A$-module.
+
+Let $A$ and $B$ be two $H$-algebras. For all $(E,\pi,T)\in \mathbb E^G(A,B)$, define $\text{Ind}_H^G \pi$ and $\text{Ind}_H^G T$ as pointwise evaluation and multiplication by $\pi$ and $T$. 
+
+\begin{definition}
+For all subgroupoids $H<G$, the map $(E,\pi,T)\mapsto ( \text{Ind}_H^G E, \text{Ind}_H^G\pi ,\text{Ind}_H^G T )$ induces an even homomorphism of $\Z_2$-graded abelian groups
+\[\text{Ind}_H^G : KK^H(A,B)\rightarrow KK^G( \text{Ind}_H^G A, \text{Ind}_H^G B) \] 
+called the induction transformation.\\
+Moreover, we naturally have an even homomorphism of $\Z_2$-graded abelian groups 
+\[\text{Res}_H^G : KK^G(A,B)\rightarrow KK^H( \text{Res}_H^G A, \text{Res}_H^G B) \] 
+called the restriction transformation.
+\end{definition}   
+
+
+
