@@ -16,15 +16,15 @@ Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarro
 
 \begin{dem}
 Recall that any $*$-morphism $\phi : A\rightarrow B$ induces, for any $A$-Hilbert module $E$, a $*$-morphism $\phi_* : \mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_A B)$. Now take $E$ to be $l^2(X)\otimes A$. Then $\eta\otimes a\otimes b\mapsto \eta \otimes\phi(a) b $ extends to an isometry $V\in \mathcal L_B(E\otimes_A B,l^2(X)\otimes B)$.\\
-The linear map $T \mapsto V\phi_*(T)V^*$ maps $C_R[X,A]$ into $C_R[X,B]$, and so extends to a $*$-morphism $C^*(X,A)\rightarrow C^*(X,B)$. The compostion property is clear from the construction.
+The linear map $T \mapsto V\phi_*(T)V^*$ maps $C_R[X,A]$ into $C_R[X,B]$, and so extends to a $*$-morphism $C^*(X,A)\rightarrow C^*(X,B)$. The composition property is clear from the construction.
 \end{dem}
 
 To construct the Coarse Assembly map, we will need the following proposition. 
 
 \begin{prop}
-Let $A$ be a $C^*$-algebra. The previous theorem allow us to take the image of the exact sequence $0 \rightarrow SA \rightarrow CA \rightarrow A \rightarrow 0 $ under the functor $C^*(X,\cdot)$ to get the following exact sequence 
+Let $A$ be a $C^*$-algebra. The previous theorem allow us to take the image of the exact sequence $0 \rightarrow SA \rightarrow CA \rightarrow A \rightarrow 0 $ under the functor $C^*(X,\cdot)$ to get the following filtered semi-split exact sequence 
 \[0 \rightarrow C^*(X,SA) \rightarrow C^*(X,CA) \rightarrow C^*(X,A) \rightarrow 0.\] 
-Let $D_{X,A} : \hat K_*(C^*(X,A))\rightarrow \hat K_*(C^*(X,SA))$ the controlled boundary morphism associated to this last extension. Then there exists a control pair $(\lambda,h)$ such that $D_X$ is $(\lambda,h)$-invertible.
+Let $D_{X,A} : \hat K_*(C^*(X,A))\rightarrow \hat K_*(C^*(X,SA))$ the controlled boundary morphism associated to this last extension. Then there exists a control pair $(\lambda,h)$, independant of $X$ and $A$, such that $D_{X,A}$ is $(\lambda,h)$-invertible.
 \end{prop}
 
 \begin{dem}
@@ -106,7 +106,7 @@ such that
 \begin{dem}
 \begin{enumerate}
 
-\item[(i)]The $K$-cycle $[\partial_{K_{C^*(X,B)},E^{(\pi,T)}}]\in KK_1(C^*(X,A), C^*(X,B))$ implementing the boundary of the extension $E^{(\pi,T)}$ induces the map $\sigma_X$ by definition, and modulo Morita equivalence, which immediately gives the first point.
+\item[(i)]The $K$-cycle $[\partial_{K_{C^*(X,B)},E^{(\pi,T)}}]\in KK_1(C^*(X,A), C^*(X,B))$ implementing the boundary of the extension $E^{(\pi,T)}$ induces the map $\sigma_X(z)$ by definition, and modulo Morita equivalence, which immediately gives the first point.
 
 \item[(ii)] If $z,z'$ are elements of $KK_1(A,B)$, represented by two $K$-cycles $(H_B,\pi_j,T_j)$, and if $(H_B,\pi,T)$ is a $K$-cycle representing the sum $z+z'$, then $E^{(\pi,T)}$ is naturally isomorphic to the extension sum of the $E_j:=E^{(\pi_j,T_j)}$, namely
 \[\begin{tikzcd}[column sep = small]
@@ -127,7 +127,8 @@ satisfies
 \end{tikzcd}.\]
 \item[$\bullet$] It intertwines the sections of the two extensions.
 \end{enumerate}
-Remark $3.7$ of \cite{OY2} assures that \[D_{K_{C^*(X,B)}, E^{f^*(\pi,T)} } =  D_{K_{C^*(X,B)}, E^{(\pi,T)} }\circ f_{X,*}\], and the claim is clear from composition by $\mathcal M_{C^*(X,B)}^{-1}$.
+Remark $3.7$ of \cite{OY2} assures that \[D_{K_{C^*(X,B)}, E^{f^*(\pi,T)} } =  D_{K_{C^*(X,B)}, E^{(\pi,T)} }\circ f_{X,*},\] 
+and the claim is clear from composition by $\mathcal M_{C^*(X,B)}^{-1}$.
 
 \item[(iv)] Let $\mathcal E = H_{B_1}\otimes_g B_2$, which is a countably generated Hilbert $B_2$-module. The homomorphism $g:B_1\rightarrow B_2$ gives rise to $g_* : \mathcal L_{B_1}(H_{B_1})\rightarrow \mathcal L_{B_2}(\mathcal E)$, which preserves compact operators : $g_*(K_{B_1})\subset K(\mathcal E)$. We have a similar statement for $g_X : C^*(X,B_1)\rightarrow C^*(X,B_2)$. We denote $\mathcal E_X$ the Hilbert $C^*(X,B_2)$-module $\mathcal C^*(X,E)\simeq H_{C^*(X,B_1)}\otimes_g (C^*(X,B_2))$.\\
 
@@ -160,7 +161,7 @@ Let $z \in KK(A,B_1)$ be represented by the $K$-cycle $(H_{B_1},\pi,T)$. Let $V\
 is also represented by $[H_{B_2}, \pi',T' ]$ where $\pi' = Ad_{V}\circ (\pi\otimes_g 1)$ and $T' = V(T\otimes_g 1)V^* +1-VV^*$. Let $\psi$ be given by the composition $Ad_{V_X}\circ (g_X)_*$.\\
 The map $\Psi :(x,y)\mapsto (x, \psi(y))$ defines a $*$-homomorphism $E^{(\pi,T)} \rightarrow E^{(\pi',T')}$ such that 
 \[\Psi(x,P_X\pi_G(x)P_X +y)= (x, P'_X  \pi_X'(a)P'_X + \psi(y)) ).\] 
-Indeed, the crossed-product functor commutes with pull-back by $*$-homomorphisms, and $Ad_{V_X}\circ(g_X)_*\circ\pi_X= (Ad_V\circ g_* \circ \pi)_X = \pi'_X$ and $\psi(P_X)= V_X (P_X\otimes_{g_X} 1)V^*_X = (V(P\otimes_g 1 ) V^*)_X = (P')_X$ so that 
+Indeed, the functor $C^*(X,-)$ commutes with pull-back by $*$-homomorphisms, and $Ad_{V_X}\circ(g_X)_*\circ\pi_X= (Ad_V\circ g_* \circ \pi)_X = \pi'_X$ and $\psi(P_X)= V_X (P_X\otimes_{g_X} 1)V^*_X = (V(P\otimes_g 1 ) V^*)_X = (P')_X$ so that 
 \[\psi(P_X \pi_X(x) P_X)=P'_X \pi'_X(x) P'_X. \]
 This gives a commutative diagram 
 \[\begin{tikzcd}[column sep = small]

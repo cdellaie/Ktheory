@@ -10,20 +10,20 @@ Recall that a lattice is a poset for which every pair $(E,E')$ admits a supremum
 \begin{definition}
 A $C^*$-algebra $A$ is said to be $\mathcal E$-filtered if there exists a coarse structure $\mathcal E$ and, for every $E\in \mathcal E$, linear subspaces $A_E$ of $A$ such that :\\
 \begin{itemize}
-\item[$\bullet$] if $E \leq E'$, then $A_E\subset A_{E'}$, and the inclusion $\phi_E^{E'}: A_E\hookrightarrow A_{E'}$ induces an inductive system of linear spaces,
+\item[$\bullet$] if $E \leq E'$, then $A_E\subseteq A_{E'}$, and the inclusion $\phi_E^{E'}: A_E\hookrightarrow A_{E'}$ induces an inductive system of linear spaces,
 \item[$\bullet$] $A_E$ is stable by involution,
-\item[$\bullet$] for all $E,E'\in\mathcal E$, $A_E.A_{E'}\subset A_{EE'}$,
+\item[$\bullet$] for all $E,E'\in\mathcal E$, $A_E.A_{E'}\subseteq A_{EE'}$,
 \item[$\bullet$] the union of subspaces is dense in $A$, i.e. $\overline{\cup_{E\in\mathcal E}A_E} = \varinjlim A_E = A$.
 \item[$\bullet$] if $A$ is unital, we impose that $1\in A_E,\forall E\in\mathcal E$.
 \end{itemize}
 \end{definition}
 
-If $A$ is a non-unital filtered $C^*$-algebra, we will by default endowed its unitalization $\tilde A$ with the filtration $\tilde A_E = A_E + \C$. A $*$-homomorphism $\phi : A \rightarrow B$ is said to be filtered if $\phi(A_E)\subset B_E$ for all $E\in\mathcal E$.\\
+If $A$ is a non-unital filtered $C^*$-algebra, we will by default endowed its unitalization $\tilde A$ with the filtration $\tilde A_E = A_E + \C$. A $*$-homomorphism $\phi : A \rightarrow B$ is said to be filtered if $\phi(A_E)\subseteq B_E$ for all $E\in\mathcal E$.\\
 
 If $(A,\mathcal E)$ and $(B,\mathcal E')$ are two filtered $C^*$-algebras, a filtered morphism $(\phi,\rho): (A,\mathcal E)\rightarrow (B,\mathcal E')$ is :
 \begin{itemize}
 \item[$\bullet$] a non-decreasing map $\rho : \mathcal E\rightarrow \mathcal E'$,
-\item[$\bullet$] a $*$-homomorphism $\phi: A\rightarrow B$ such that $\phi (A_E)\subset B_{\rho(E)}$ for all $E\in\mathcal E$.
+\item[$\bullet$] a $*$-homomorphism $\phi: A\rightarrow B$ such that $\phi (A_E)\subseteq B_{\rho(E)}$ for all $E\in\mathcal E$.
 \end{itemize}
 
 The crucial example for us will be crossed products of $G$-algebras by an étale groupoid $G$. Note that this definition generalizes that of \cite{OY2}. Indeed, as will be recalled later, the Roe algebras can be expressed as a crossed product by a so-called coarse groupoid, which is étale \cite{SkTuYu}, and the definition given here, applied to this groupoid, gives back the filtration in the sense of \cite{OY2}. The second example will be that of crossed products by compact quantum groups of Woronowicz.\cite{Wo}
@@ -86,7 +86,7 @@ and $K_1^{\varepsilon,E}(A)$ is defined as $U_\infty^{\varepsilon,E}(\tilde A)/ 
 The controlled $K$-theory of a filtered $C^*$-algebra $(A,\mathcal E)$ is the family of abelian groups $\hat K_0(A) = (K_0^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ and $\hat K_1(A) = (K_1^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}$ defined above.\\
 \end{definition}
 
-We define canonical morphisms : if $\varepsilon, \varepsilon'\in (0,\frac{1}{4})$ and $E,E'\in\mathcal E$ such that $\varepsilon \leq \varepsilon'$ and $E \subset E'$, the natural homomorphism $K_*^{\varepsilon,E}(A)\hookrightarrow K_*^{\varepsilon',E'}(A)$ is denoted by $\iota_{\varepsilon,E}^{\varepsilon',E'}$. Notice that $\iota_{\varepsilon',E'}^{\varepsilon'',E''}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon,E}^{\varepsilon'',E''}$ when this expression makes sense.\\
+We define canonical morphisms : if $\varepsilon, \varepsilon'\in (0,\frac{1}{4})$ and $E,E'\in\mathcal E$ such that $\varepsilon \leq \varepsilon'$ and $E \subseteq E'$, the natural homomorphism $K_*^{\varepsilon,E}(A)\hookrightarrow K_*^{\varepsilon',E'}(A)$ is denoted by $\iota_{\varepsilon,E}^{\varepsilon',E'}$. Notice that $\iota_{\varepsilon',E'}^{\varepsilon'',E''}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon,E}^{\varepsilon'',E''}$ when this expression makes sense.\\
 
 One has also forgetful morphisms $\iota_{\varepsilon,E} : K_*^{\varepsilon,E}\rightarrow K_*(A)$ given by $[p,l]_{\varepsilon,E} \mapsto [\kappa_0(p)]-[1_l]$ and $[u]_{\varepsilon,E} \mapsto [\kappa_1(u)] $, and 
 $\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon, E}$ holds. The controlled $K$-theory groups approximate the usual $K$-groups in the sense that $\varinjlim_{E} K_*^{\varepsilon,E}(A) = K_*(A)$ for any $\varepsilon\in (0,\frac{1}{4})$.\\
@@ -94,7 +94,7 @@ $\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\var
 %\begin{Expl} Some examples that we will use :\\
 %\begin{itemize}
 %\item[$\bullet$] Let $(X,\mathcal E)$ be a coarse space. The set of controlled subsets $\mathcal E$ is our proeminent example.
-%\item[$\bullet$] Let $G$ be an étale groupoid. Then the set of open relatively compact subsets $\mathcal E$ of $G$ is a coarse structure. If $G$ is $\sigma$-compact, and $A$ is a $G$-algebra, $A\rtimes_r G$ is naturally filtered by $\mathcal E$ : if $E\subset G$ is open relatively compact, define $(A\rtimes_r G)_E = \{f\in C_c(G,A) : \text{ supp}(f)\subset E\cup E^{-1}\}$.
+%\item[$\bullet$] Let $G$ be an étale groupoid. Then the set of open relatively compact subsets $\mathcal E$ of $G$ is a coarse structure. If $G$ is $\sigma$-compact, and $A$ is a $G$-algebra, $A\rtimes_r G$ is naturally filtered by $\mathcal E$ : if $E\subseteq G$ is open relatively compact, define $(A\rtimes_r G)_E = \{f\in C_c(G,A) : \text{ supp}(f)\subseteq E\cup E^{-1}\}$.
 %\item[$\bullet$] Let $\mathbb G$ be a compact quantum group in the sense of Woronowicz. Then the set of finite dimensional representations of $\mathbb G$ is a coarse structure w.r.t. $\pi\circ \pi'=\pi\otimes \pi'$ as composition, and $\pi\leq\pi'$ if $\pi$ is equivalent to a subrepresentation of $\mathbb G$.
 %\item[$\bullet$] Gomez-Aparicio : Let $G$ be a locally compact group, and $S$ be the set of representations of $G$ of the form $\lambda\otimes\pi$ for $\pi$ a finite dimensional representation of $G$.\end{itemize}   
 %\end{Expl}
@@ -107,9 +107,9 @@ Let $(X,\mathcal E)$ be a coarse space. The set of symmetric controlled subsets 
 \end{Expl}
 
 \begin{Expl}
-Let $G$ be an étale groupoid. Then the set of symmetric compact subsets $\mathcal E_G$ of $G$ is a coarse structure. It is the set of compact subsets $E\subseteq G$ such that $E=E^{-1}$, where $E^{-1} = \{g^{-1} : g\in E\}$. For $E$ and $E'$ in $\mathcal E_G$, their composition is given by :
+Let $G$ be a $\sigma$-compact étale groupoid. Then the set of symmetric compact subsets $\mathcal E_G$ of $G$ is a coarse structure. It is the set of compact subsets $E\subseteq G$ such that $E=E^{-1}$, where $E^{-1} = \{g^{-1} : g\in E\}$. For $E$ and $E'$ in $\mathcal E_G$, their composition is given by :
 \[E\circ E' = EE' \cup E'E \text{ where }EE' = \{gg' : (g,g')\in G^{(2)}\}.\] 
-If $G$ is $\sigma$-compact, and $A$ is a $G$-algebra, $A\rtimes_r G$ is naturally filtered by $\mathcal E_G$ : if $E\subset G$ is open relatively compact, define $(A\rtimes_r G)_E = \{f\in C_c(G,A) : \text{ supp}(f)\subset E\}$. This situation has important particular cases :
+If $G$ is $\sigma$-compact, and $A$ is a $G$-algebra, $A\rtimes_r G$ is naturally filtered by $\mathcal E_G$ : if $E\subseteq G$ is a compact subset, define $(A\rtimes_r G)_E = \{f\in C_c(G,A) : \text{ supp}(f)\subseteq E\}$. This situation has important particular cases :
 \begin{itemize}
 \item[$\bullet$] Let $G$ be the coarse groupoid of a coarse space $(X,\mathcal E)$, which is étale. Then $\mathcal E_G$ is given by \[\{\overline{E} : E\in\mathcal E_X\} \cong \mathcal E_X.\] 
 \item[$\bullet$] Let $\Gamma$ be a finitely generated group acting by homeomorphism on a topological space $X$. Recall that the word length $l$ defines a proper metric on $\Gamma$. Define, for $R>0$ and $K\subseteq X$, 
@@ -136,7 +136,7 @@ Let $\mathbb G$ be a compact quantum group in the sense of Woronowicz. Then the 
 In order to study functorial properties of controlled $K$-theory, we will adapt and study the notion of quantitative object defined in \cite{OY2}.\\
 
 \begin{definition}
-A quantitative object is a family of abelian groups $\hat{\mathcal{O}}=\{\mathcal{O}_{\varepsilon, E}\}_{\varepsilon\in (0,\frac{1}{4}, E\in\mathcal{E}}$ endowed with a family of group homorphisms $\phi_{\varepsilon, E}^{\varepsilon', E'} : \mathcal{O}_E\rightarrow \mathcal{O}_{E'}$ for any $E,E'\in\mathcal E$ and $0<\varepsilon\leq \varepsilon'<\frac{1}{4}$ such that $E\subset E'$, satisfying $\phi_{\varepsilon, E}^{\varepsilon, E}= id_{\mathcal{O}_E}$ and $\phi_{\varepsilon', E'}^{\varepsilon'', E''}\circ \phi_{\varepsilon, E}^{\varepsilon', E'} =\phi_{\varepsilon'', E''}^{\varepsilon, E}$ whenever $E\subset E' \subset E''$ and $\varepsilon<\varepsilon'<\varepsilon''$.
+A quantitative object is a family of abelian groups $\hat{\mathcal{O}}=\{\mathcal{O}_{\varepsilon, E}\}_{\varepsilon\in (0,\frac{1}{4}, E\in\mathcal{E}}$ endowed with a family of group homorphisms $\phi_{\varepsilon, E}^{\varepsilon', E'} : \mathcal{O}_E\rightarrow \mathcal{O}_{E'}$ for any $E,E'\in\mathcal E$ and $0<\varepsilon\leq \varepsilon'<\frac{1}{4}$ such that $E\subseteq E'$, satisfying $\phi_{\varepsilon, E}^{\varepsilon, E}= id_{\mathcal{O}_E}$ and $\phi_{\varepsilon', E'}^{\varepsilon'', E''}\circ \phi_{\varepsilon, E}^{\varepsilon', E'} =\phi_{\varepsilon'', E''}^{\varepsilon, E}$ whenever $E\subseteq E' \subseteq E''$ and $\varepsilon<\varepsilon'<\varepsilon''$.
 \end{definition}
 
 We need to define controlled morphisms between quantitative objects. We first define control pairs, which are essentially what ensures that the controlled morphisms do not distort too much the propagation.\\
@@ -153,7 +153,7 @@ We can also compare control pairs. Indeed, define the following partial order : 
 
 \begin{definition}
 Let $\hat{\mathcal O}$ and $\hat{\mathcal O'}$ be two quantitative objects and $\rho=(a,h)$ a control pair. A $\rho$-controlled morphism is a family of groups homomorphims $F_{\varepsilon, E} : \mathcal O_{\varepsilon, E} \rightarrow \mathcal{ O'}_{a\varepsilon, E^{h_\varepsilon}}$ for any $\varepsilon\in(0,\frac{1}{4a})$ and $E\in\mathcal E$, such that
-\[\phi^{a\varepsilon',E'^{h_\varepsilon'}}_{a\varepsilon,E^{h_\varepsilon}} \circ F_{\varepsilon, E} =F_{\varepsilon',E'} \circ \phi_{\varepsilon,E}^{\varepsilon',E'}\] for any $0<\varepsilon<\varepsilon'<\frac{1}{4a}$ and $E\subset E'$.
+\[\phi^{a\varepsilon',E'^{h_\varepsilon'}}_{a\varepsilon,E^{h_\varepsilon}} \circ F_{\varepsilon, E} =F_{\varepsilon',E'} \circ \phi_{\varepsilon,E}^{\varepsilon',E'}\] for any $0<\varepsilon<\varepsilon'<\frac{1}{4a}$ and $E\subseteq E'$.
 \end{definition}
 
 \begin{rk}
@@ -218,7 +218,7 @@ We will describe the $6$-term controlled exact sequence associated to a complete
 we denote $\partial_{J,A}$ the boundary map $K_*(A/J)\rightarrow K_{*+1}(J)$. The reader can find all the proofs and properties of the following results in \cite{OY2}.
 
 \begin{definition}
-Let $A$ a filtered $C^*$-algebra and $J\subset A$ an ideal. If $J_E = A_E\cap J$, the extension
+Let $A$ a filtered $C^*$-algebra and $J\subseteq A$ an ideal. If $J_E = A_E\cap J$, the extension
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0 \end{tikzcd}\]
 is said to be completely filtered if the continuous linear bijection $A_E/J_E \hookrightarrow (A_E+J)/J$ induced by the inclusion $A_E\hookrightarrow A$ is a complete isometry, i.e.
 \[ \inf_{y\in M_n(J_E)} ||x+y|| = \inf_{y\in M_n(J)} ||x+y||\quad,\forall n\in \N,x\in M_n(A_E),E\in \mathcal E.\]
@@ -254,14 +254,16 @@ The following remark can be found in \cite{OY2} (remark $3.8$) and will be used 
 Let $A$ and $B$ two $\mathcal E$-filtered $C^*$-algebras, and $\phi : A\rightarrow B$ a filtered $*$-homomorphism. Let $I$ and $J$ be respectively ideals in $A$ and $B$ and assume that :
 \begin{itemize}
 \item[$\bullet$] $0 \rightarrow I \rightarrow A \rightarrow A/ I \rightarrow 0$ and $0 \rightarrow J \rightarrow B \rightarrow B/J \rightarrow 0$ are completely filtered extensions of $C^*$-algebras,
-\item[$\bullet$] $\phi(I)\subset J$,
+\item[$\bullet$] $\phi(I)\subseteq J$,
 \end{itemize}
 then $D_{J,B}\circ \tilde\phi_* = \phi_* \circ D_{I,A}$.
 \end{rk}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Tensorisation in $KK$-theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-If $B$ is a filtered $C^*$-algebra and $A$ any $C^*$-algebra, and if $A\otimes B$ is the spatial tensor product, then $(A\otimes B_E)_{E\in\mathcal E}$ defines a filtration of $A\otimes B$. If $\phi : A_1 \rightarrow A_2$ is a $*$-homomorphism, we use the notation $\phi_B$ for the induced $*$-homomorphism $A_1\otimes B\rightarrow A_2\otimes B$. \\
+If $B$ is a filtered $C^*$-algebra and $A$ any $C^*$-algebra, and if $A\otimes B$ is the spatial tensor product, define, for all $E\in \mathcal E$, $A\otimes B_E)$ as the closure of the algebraic tensor product in $A\otimes B$. Then $(A\otimes B_E)_{E\in\mathcal E}$ defines a filtration of $A\otimes B$. If $\phi : A_1 \rightarrow A_2$ is a $*$-homomorphism, we use the notation $\phi_B$ for the induced $*$-homomorphism $A_1\otimes B\rightarrow A_2\otimes B$. \\
 
 In \cite{kasparovKKNovikov}, G. Kasparov defined a map
 \[\tau_B : KK(A_1,A_2)\rightarrow KK(A_1\otimes B, A_2\otimes B)\]
@@ -286,7 +288,7 @@ such that :
 This controlled tensorisation map respects Kasparov product. See \cite{OY2} for a proof.
 
 \begin{thm}
-There exists a linear control pair $\lambda$ such that, for any separable $C^*$-algebras $A_1$ and $A_2$, any filtered $C^*$-algebra $B$, the following holds : for any $z\in KK(A_1,A_2)$ and $z'\in KK(A_2,A_3)$,
+There exists a control pair $\lambda$ such that, for any separable $C^*$-algebras $A_1$ and $A_2$, any filtered $C^*$-algebra $B$, the following holds : for any $z\in KK(A_1,A_2)$ and $z'\in KK(A_2,A_3)$,
 \[\hat\tau_B(z\otimes z')\sim_\lambda \hat\tau_B(z')\circ\hat\tau_B(z)\]
 \end{thm}
 
@@ -296,31 +298,33 @@ This last proposition asserts that the controlled tensorisation map is natural w
 Let $B_1$ and $B_2$ be filtered $C^*$-algebras and $(\phi,\rho) :B_1\rightarrow B_2 $ a filtered morphism. Then $ (\phi_{A_2})_*\circ \hat \tau_{B_1}=\hat \tau_{B_2}(z)\circ(\phi_{A_1})_* $ for any $z\in KK(A_1,A_2)$.
 \end{prop}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Controlled Bott periodicity}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We recall in this section how to construct controlled Bott maps. \\
 
-Recall the definition of the Toeplitz extension. Let $S\in \mathcal L(l^2(\N))$ be the unilateral shift on $l^2(\N)$, i.e. $S(e_n) = e_{n+1}$ if $(e_n)_{n\in \N}$ is the canonical basis. Then $S$ is an isometry, i.e. $S^*S = 1$. Let us denote $\mathcal T $ the $C^*$-algebra of $\mathcal L(l^2(\N))$ generated by $S$. Then the sequence of $C^*$-algebras 
+Recall the definition of the Toeplitz extension. Let $v\in \mathcal L(l^2(\N))$ be the unilateral shift on $l^2(\N)$, i.e. $v(e_n) = e_{n+1}$ if $(e_n)_{n\in \N}$ is the canonical basis. Then $v$ is an isometry, i.e. $v^*v = 1$. Let us denote $\mathcal T $ the $C^*$-algebra of $\mathcal L(l^2(\N))$ generated by $v$. Then the sequence of $C^*$-algebras 
 \[0\rightarrow \mathfrak K(l^2(\N)) \rightarrow \mathcal T \rightarrow C(\mathbb S) \rightarrow 0 \]
 is exact. Set $\mathcal T_0$ the preimage of $C_0(0,1)$ under the last arrow, so that the sequence of $C^*$-algebras
 \[0\rightarrow \mathfrak K(l^2(\N)) \rightarrow \mathcal T_0 \rightarrow C_0(0,1) \rightarrow 0 \]
 is exact. This last sequence is called the Toeplitz extension, let $T\in KK_1(S, \mathfrak K(l^2(\N)) )$ denotes its boundary.\\
 
-Let us put $S = C_0(0,1)$ and $C= C_0(0,1]$ , so that evaluation at $1$ induces the following exact sequence of $C^*$-algebras $0\rightarrow S \rightarrow C \rightarrow \C \rightarrow  0 $. Let us denote by $[\partial]\in KK_1(\C,S)$ the homotopy class of this extension. It is called the Bott element, and is invertible in $KK_1(\C,S)$, its inverse being the boundary of the Toeplitz extension (see \cite{OY2}). Recall that the boundary of this extension is given by right Kasparov product by $[\partial]$.\\ 
+Let us put $S = C_0(0,1)$ and $C= C_0(0,1]$ , so that evaluation at $1$ induces the following exact sequence of $C^*$-algebras $0\rightarrow S \rightarrow C \rightarrow \C \rightarrow  0 $. Let us denote by $[\partial]\in KK_1(\C,S)$ the class in $KK$-theory of this extension. It is called the Bott element, and is invertible in $KK_1(\C,S)$, its inverse being the boundary of the Toeplitz extension (see \cite{OY2}). Recall that the boundary of this extension is given by right Kasparov product by $[\partial]$.\\ 
 
-For any $C^*$-algebra $A$, we can tensorize the previous extension by $A$ to have an exact sequence $0\rightarrow SA \rightarrow CA \rightarrow A \rightarrow  0 $. Its homotopy class, denoted $[\partial_{A}]\in KK_1(A,SA)$, actually satisfies $\tau_A([\partial ]) =[\partial_{A}]$. Let us denote $\partial_A : K_*(A)\rightarrow K_*(SA)$ the odd degree boundary homomorphism of the extension, it is induced by right multiplication by $[\partial_A]$. It is also invertible, as we can tensorize the Toeplitz extension to get the following exact sequence of $C^*$-algebras
+For any $C^*$-algebra $A$, we can tensorize the previous extension by $A$ to have an exact sequence $0\rightarrow SA \rightarrow CA \rightarrow A \rightarrow  0 $. Its class in $KK$-theory, denoted $[\partial_{A}]\in KK_1(A,SA)$, actually satisfies $\tau_A([\partial ]) =[\partial_{A}]$. Let us denote $\partial_A : K_*(A)\rightarrow K_*(SA)$ the odd degree boundary homomorphism of the extension, it is induced by right multiplication by $[\partial_A]$. It is also invertible, as we can tensorize the Toeplitz extension to get the following exact sequence of $C^*$-algebras
 \[0\rightarrow \mathfrak K(l^2(\N))\otimes A \rightarrow \mathcal T_0 \otimes A \rightarrow SA \rightarrow 0 \]
-whose boundary element $T_A =[\partial_{\mathcal T_0 \otimes A }]\in KK_1(SA,\mathfrak K(l^2(\N))\otimes A)$ satisfies $\tau_A(T)= T_A$. As $\tau_A$ respects Kapsarov product, one can see that $[\partial_A]$ and $T_A$ are mutual inverse.\\
+whose boundary element $T_A =[\partial_{\mathcal T_0 \otimes A }]\in KK_1(SA,\mathfrak K(l^2(\N))\otimes A)$ satisfies $\tau_A(T)= T_A$. As $\tau_A$ respects Kasparov product, one can see that $[\partial_A]$ and $T_A$ are mutual inverse.\\
 
-Tensorization by $S$ and $C$ is functorial with respect to $*$-homomorphisms, and if $g : A\rightarrow B$ is a $*$-homomorphism, we denote $Sg : SA\rightarrow SB$ and $Cg : CA\rightarrow CB$ the induced $*$-homomorphisms. By naturality of the Kasparov product, we get the following relation :
+Tensorization by $S$ and $C$ is functorial with respect to $*$-homomorphisms, and if $g : A\rightarrow B$ is a $*$-homomorphism, we denote $Sg : SA\rightarrow SB$ and $Cg : CA\rightarrow CB$ the induced $*$-homomorphisms. By naturality of boundary maps w.r.t. extensions, we get the following relation :
 \[(Sg)_*[\partial_{SA}] = [\partial_{SA}]\otimes_{SA} [Sg] = [g]\otimes_{B} [\partial_{SB}] = g^*[\partial_{SB}] .\]
 
 We can actually construct controlled morphisms $D_{A} :\hat K_0(A)\rightarrow \hat K_{1}(SA)$ and $Z_A :\hat K_1(SA)\rightarrow \hat K_{0}(A\otimes \mathfrak K)$ that induce right-multiplication by $[\partial_A]$ and $T_A$ respectively, i.e.
 \[\iota_{\varepsilon,E}\circ D_A(x) = \kappa_0(x) \otimes [\partial_A]\quad \iota_{\varepsilon,E}\circ Z_A(y) = \kappa_1(y) \otimes T_A \quad \forall x\in K_0^{\varepsilon, E}(A),y\in K_1^{\varepsilon, E}(SA). \]
 
-Recall that, if $p$ is a projection in $A$, $\partial_A [p]$ is given by the homotopy class of the path of unitaries 
+Recall that, if $A$ is unital and $p$ is a projection in $A$, $\partial_A [p]$ is given by the homotopy class of the path of unitaries 
 \[\left\{\begin{array}{rcl} [0,1] & \rightarrow & U(\tilde{SA}) \\ t & \mapsto & e^{2i\pi t}p + 1-p\end{array}\right.\]
-One can manage a similar construction in term of almsot-projections. Let $q\in P_n^{\varepsilon,E}(A)$ and $l$ an integer, define 
+One can perform a similar construction in term of almost-projections. Let $q\in P_n^{\varepsilon,E}(A)$ and $l$ an integer, define 
 \[V_{q,l}(t) = \text{diag }(e^{-2i\pi l t}, 1, 1,...,1) \ (e^{2i\pi t}q +1-q)\in U^{5\varepsilon,E}_n(\tilde{SA}),\]
 then 
 \[\left\{\begin{array}{rcl} 
@@ -330,9 +334,9 @@ K_0^{\varepsilon,E}(A) & \rightarrow & K_1^{\varepsilon,E}(SA) \\
 defines a $(5,\textbf{1})$-controlled morphism $Z_A : \hat K_0(A)\rightarrow \hat K_1(SA)$, where $\textbf{1}$ is the constant function $\textbf{1}_\varepsilon(E) = 1$, $\forall E\in\mathcal E$.
 
 \begin{prop}[\cite{OY2} Prop. $3.9$ and $3.10$]
-There exist universal control pairs $(\lambda,h)$ and $(\lambda',h')$ such that 
-\[\begin{array}{c} D^0_A \sim_{(\lambda,h)} Z_A \\
-D^1_{\mathcal T_0\otimes A}\circ Z_A\sim_{(\lambda',h')} \mathcal M_A \end{array}\]
+Let $A$ be a unital $C^*$-algebra. There exist universal control pairs $(\lambda,h)$ and $(\lambda',h')$ such that 
+\[\begin{array}{c} D^0_A \sim_{(\lambda,h)} Z_A \quad \text{and}\\
+D^1_{ \mathfrak K(l^2(\N)) \otimes A,\mathcal T_0\otimes A}\circ Z_A\sim_{(\lambda',h')} \mathcal M_A \end{array}\]
 where $\mathcal M_A$ is the controlled Morita equivalence.
 \end{prop}
 
