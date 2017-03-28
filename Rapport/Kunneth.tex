@@ -4,7 +4,14 @@ In this section, we present an application of the previous results to a Künneth
 
 Recall that for $A$ and $B$ two $C^*$-algebras, one can define a homomorphism
 \[\alpha_{A,B} : K_*(A)\otimes K_*(B)\rightarrow K_*(A\otimes B) \quad ; \quad (x,y)\mapsto x\otimes   \tau_A(y),\]
-where $\tau_A$ is the external Kapsarov product.
+where $\tau_A$ is the external Kapsarov product.\\
+
+Recall that, when $A$ and $B$ are unital $C^*$-algebras, if $p$ and $q$ are projections in $\mathfrak M_r(A)$ and $\mathfrak M_s(B)$ and $u$ and $v$ are unitaries in $\mathfrak M_r(A)$ and $\mathfrak M_s(B)$, then :
+\[\begin{array}{rl}
+\alpha_{A,B}([p]\otimes [q]) & = [p\otimes q], \\
+\alpha_{A,B}([u]\otimes [q]) & = [u \otimes q +1\otimes (1-q)], \\
+\alpha_{A,B}([p]\otimes [v]) & = [p\otimes v +(1-p)\otimes v] .\\
+\end{array}\]
 
 \begin{definition}
 A $C^*$-algebra $A$ is said to satisfy the Künneth formula if, for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group, $\alpha_{A,B}$ is an isomorphism.
@@ -24,7 +31,7 @@ A filtered $C^*$-algebra $(A,\mathcal E)$ is said to satisfy the quantitative K�
 The remainder of the section is devoted to prove the following theorem.
 
 \begin{thm}\label{Kunneth}
-Let $G$ be an $\sigma$-compact étale groupoid and $A$ a $G$-algebra. Suppose that 
+Let $G$ be a $\sigma$-compact étale groupoid and $A$ a $G$-algebra. Suppose that 
 \begin{itemize}
 \item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients,
 \item[$\bullet$] for every compact subgroupoid $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula.
@@ -38,8 +45,12 @@ The following corollary is obvious from the theorem.\cite{FinnSellFibred}
 Let $X$ be a proper discrete metric space with bounded geometry which admits a fibered coarse embedding into a Hilbert space and $A$ a $C^*$-algebra. If $A$ satisfies the Künneth formula, then $A\otimes K(l^2(X))$ satifies the quantitative Künneth formula.
 \end{cor}
 
-\input{Induction}
-\input{InductionSimple}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	INDUCTION	%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \input{Induction}	%
+\input{InductionSimple} %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Baum-Connes and the Künneth formula}
@@ -59,7 +70,7 @@ To prove theorem \ref{Kunneth}, we will need the following result.
 Let $E$ be an open relatively compact subset of $G$ and $P_E$. If for all compact subgroupoids $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula, then $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism for all $C^*$-algebras $B$ such that $K_*(B)$ is a free abelian group.
 \end{thm}
 
-\begin{proof}
+\begin{dem}
 Let $Z_0\subset Z_1\subset ... \subset Z_n $ be the skeleton decomposition of $P_E(G)$.\\
 
 Let us prove by induction that $\alpha_j=\alpha^{G,Z_j}_{A,B}$ is an isomorphism. By a standard argument similar to the proof of theorem \ref{prod}, it is sufficient to prove the statement for $j=0$.\\
@@ -71,7 +82,7 @@ RK_*^H(V, \text{Res}_H^GA)\otimes K_*(B) \arrow{r}{\alpha_{\text{Res}_H^G A,B}^{
 K_*(\text{Res}_H^G A\rtimes_r H)\otimes K_*(B)\arrow{r}{\alpha_{\text{Res}_H^G A,B}} & K_*\left((\text{Res}_H^G A\otimes B)\rtimes_r H\right) 
 \end{tikzcd}\]
 The first vertical arrows are isomorphisms by property of the restriction functor, the last horizontal one and the last vertical ones are by hypothesis, so that $\alpha_{A,B}^{G,U}$ is an isomorphism. By taking the inductive limit on $G$-proper $G$-compact spaces $U\subset Z_0$, we get that $\alpha_{A,B}^{G,Z_0}$ is an isomorphism.
-\end{proof}
+\end{dem}
 
 \begin{lem}\label{KunnethLemma}
 There exists a positive number $\kappa$ and a function $c : (0,\frac{1}{4\kappa})\times\mathcal E\rightarrow \mathcal E$, decreasing in $E$ and non increasing in $\varepsilon$ such that, for any étale groupoid $G$, any filtered $G$-algebra $(A,\mathcal E)$, and any $C^*$-algebra $B$, the following diagram commutes :
