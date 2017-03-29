@@ -227,13 +227,13 @@ because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Let $E\in\mathcal E$. There exists continuous functions $\lambda_g : P_E(G)\rightarrow [0,1]$ for all $g\in G$ such that $\eta = \sum_{g\in G^x}\lambda_g(\eta) \delta_g$ for any $\eta\in P_E(G)$. Define $h(x)=\lambda_{e_x}$ and $\phi = \sqrt\eta$. Notice that $g.h = \lambda_g$ for all $g\in G$, and as $\sum_{g\in G^x}\lambda_g = 1 ,\forall x\in G^{(0)}$, 
+Let $E\in\mathcal E$. There exists continuous functions $\lambda_g : P_E(G)\rightarrow [0,1]$ for all $g\in G$ such that $\eta = \sum_{g\in G^x}\lambda_g(\eta) \delta_g$ for any $\eta\in P_E(G)$. Define $h(x)=\lambda_{e_x}$ and $\phi = \sqrt h$. Notice that $g.h = \lambda_g$ for all $g\in G$, and as $\sum_{g\in G^x}\lambda_g = 1 ,\forall x\in G^{(0)}$, 
 \[\mathcal L_E =\sum_{g\in G^x} \phi(g.\phi)\]
-defines a projection of $C_0(P_E(G))\rtimes_r G$ with bounded propagation, and defines a $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$. Moreover, for such controlled susbets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.\\
+defines a projection of $C_0(P_E(G))\rtimes_r G$ with bounded propagation, and defines a $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$. Moreover, for such controlled subsets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.\\
 
 \begin{definition}
 Let $B$ be a $G$-algebra, and $\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E$. Let $F\in \mathcal E$ such that $k_J.E \subseteq F$. The controlled assembly map for $G$ is defined as the composition of $J_G$ with the evaluation at $[\mathcal L_E,0]_{\varepsilon,E}$ :
-\[\mu_B^{\varepsilon,F,E}\left\{
+\[\mu_{G,B}^{\varepsilon,E,F}\left\{
 \begin{array}{rcl}
 RK^G(P_E(G), B) & \rightarrow & K_*^{\varepsilon, F}(B\rtimes_r G)\\
 z & \mapsto & \iota_{k_j.E}^{F} \circ J_G^{\varepsilon, E}(z)([\mathcal L_E,0]_{\varepsilon , E})
@@ -246,13 +246,13 @@ z & \mapsto & \iota_{k_j.E}^{F} \circ J_G^{\varepsilon, E}(z)([\mathcal L_E,0]_{
 %%%%%%%%%%%%
 
 \begin{rk}
-The assembly map is defined for all reasonnable crossed-products by $G$. In particular for the reduced one and the maximal one, so that we have two different assembly, which we shall distinguish writing $J_{G,r}$ and $J_{G,max}$ if necessary.
+The assembly map is defined for any reasonnable crossed-products by $G$. In particular for the reduced one and the maximal one, so that we have two different assembly maps, which we shall distinguish writing $\mu_{G,r}$ and $\mu_{G,max}$ if necessary.
 \end{rk}
 
 \begin{rk} 
-The bunch of assembly maps $\mu_B^{\varepsilon,F,E}$ induces the Baum-Connes assembly map for $G$ in $K$-theory : the following diagram commutes
+The family of assembly maps $\mu_{G,B}^{\varepsilon,E,F}$ induces the Baum-Connes assembly map for $G$ in $K$-theory : the following diagram commutes
 \[\begin{tikzcd}
-RK^G(P_E(G),B) \arrow{r}{\mu_B^{\varepsilon,F,E}}\arrow{dr}{\mu_G^F} & K_*^{\varepsilon, E}(B\rtimes_r G)\arrow{d}{\iota_{\varepsilon,F}}\\ 
+RK^G(P_E(G),B) \arrow{r}{\mu_{G,B}^{\varepsilon,E,F}}\arrow{dr}{\mu_{G,B}^E} & K_*^{\varepsilon, F}(B\rtimes_r G)\arrow{d}{\iota_{\varepsilon,F}}\\ 
 		&  K_*(B\rtimes_r G)
 \end{tikzcd}\]
 because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^E(z)=[\mathcal L_E]\otimes j_G(z)$. But, as $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$ as soon as $E\subseteq F$, this diagram commutes with inductive limit over $E$.\\
@@ -316,7 +316,7 @@ then $\mu_{G,A}$ is injective.\\
 
 On the other hand, if this statement is true : \\
 
-$\bullet$(Quantitative Surjectivity) there exists $\varepsilon\in (0,\frac{1}{4})$ such that for all $E$ and $F$ controlled subsets such that $k_J.E\subseteq F$,$\exists \varepsilon',F'$ such that $\varepsilon'\leq \varepsilon<\frac{1}{4}$ and $k_J E\subseteq F\subseteq F'$, such that for all $y\in K_*^{\varepsilon,F}(A\rtimes_r G),\exists x \in RK_*^G(P_E(G),A)$ such that $\mu_{G,A}^{\varepsilon',E,F'}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$;\\
+$\bullet$(Quantitative Surjectivity) there exists $\varepsilon\in (0,\frac{1}{4})$ such that for any $E$ and $F$ controlled subsets such that $k_J.E\subseteq F$,$\exists \varepsilon',F'$ such that $\varepsilon'\leq \varepsilon<\frac{1}{4}$ and $k_J E\subseteq F\subseteq F'$, such that for all $y\in K_*^{\varepsilon,F}(A\rtimes_r G),\exists x \in RK_*^G(P_E(G),A)$ such that $\mu_{G,A}^{\varepsilon',E,F'}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$;\\
 
 then $\mu_{G,A}$ is surjective.
 \end{prop}
@@ -328,7 +328,7 @@ Let $x\in RK(P_E(G)),A)$ which satisfies $\mu_{G,A}(x)=0$, then $\iota_{\varepsi
 			& = & J_{G}^{\lambda\varepsilon,F'}(x)([\mathcal L_E,0]_{\lambda\varepsilon,F'}) \\
 			& = & \mu_{G,A}^{\lambda\varepsilon,E,F'}(x).
 \end{array}\]
-But then the quantitative injectivity condition ensures that $x=0$ in $RK^G(P_{E'}),A)$ and $x=0$ in the inductive limite over $E$ $K^{top}(G,A)$.\\
+But then the quantitative injectivity condition ensures that $x=0$ in $RK^G(P_{E'}(G),A)$ and $x=0$ in the inductive limit over $E$ $K^{top}(G,A)$.\\
 The second point is immediate. \\
 \qed
 \end{dem}
@@ -355,8 +355,8 @@ Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarr
 \end{lem}
 
 \begin{dem}
-Let $K$ be a compact fundamental domain for the action of $G$ on $Z$. By local injectivity of $p$, let $\mathcal U$ be a finite open cover of $K$ such that $p_{|U}$ is injective for all $U\in \mathcal U$. There exists compactly supported continuous functions $\phi_U : Z\rightarrow \R_+$ such that  \[\text{supp }\phi_U \subseteq U \quad\text{ and }\quad K\subseteq \cup_{U\in\mathcal U} \phi_U^{-1}(0,+\infty).\]
-Up to replacing $\phi_U$ by $\phi_U(z) / \sum_{V,g} \phi_V(z.g)$, we can suppose $\sum_{U\in\mathcal U,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. For $x\in G^{(0)}$, define 
+Let $K$ be a compact fundamental domain for the action of $G$ on $Z$. By local injectivity of $p$, let $\mathcal U$ be a finite open cover of $K$ such that $p_{|U}$ is injective for all $U\in \mathcal U$. There exists compactly supported continuous functions $\phi_U : Z\rightarrow [0,1]$ such that  \[\text{supp }\phi_U \subseteq U \quad\text{ and }\quad K\subseteq \cup_{U\in\mathcal U} \phi_U^{-1}(0,+\infty).\]
+Up to replacing $\phi_U$ by $\phi_U(z) / \sum_{V,g} \phi_V(z.g)$, we can assume $\sum_{U\in\mathcal U,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. For $x\in G^{(0)}$, define 
 \[F'_x = \sum_{U\in\mathcal U, g\in G^x} V_g\pi(\phi_U^{\frac{1}{2}}) F_{s(g)}\pi(\phi_U^{\frac{1}{2}})V_g^*.\] 
 The operator $F'$ is  $G$-invariant and commutes with the action of $C_0(Z)$. Indeed, by local injectivity, for all $g\in G$, there exists $z_g\in Z$ such that $Z_{s(g)}\cap U = \{z_g\}$, and for all $f\in C_0(Z_{s(g)})$, $[ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f ] = [ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f(z_g) \chi_{z_g} ]=0 $.\\
 
@@ -426,21 +426,21 @@ By naturality of the boundary element, the extension of $G$-algebras $0\rightarr
 %\prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z_j,B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\\
 %\end{tikzcd}\]
 \[\begin{tikzcd}
-RK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\delta}\arrow{r}{\Theta^j_{j-1}} & \prod_j RK^G_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{d}{\delta}  \\
-RK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_{j-1}}  & \prod_j RK^G_*(\tilde Z_{j-1},B_j \otimes K)\arrow{d} \\
-RK^G_*(Z_j,\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_j} & \prod_j RK^G_*(\tilde Z_j,B_j \otimes K)\arrow{d} \\
-RK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\delta}\arrow{r}{\Theta^j_{j-1}} & \prod_j RK^G_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{d}{\delta}\\
-RK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}{\Theta_{j-1}} & \prod_j RK^G_*(\tilde Z_{j-1},B_j \otimes K)
+RK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\delta}\arrow{r}{\Theta^j_{j-1}} & \prod_j RK^G_*( Z^j_{j-1},B_j \otimes K)\arrow{d}{\delta}  \\
+RK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_{j-1}}  & \prod_j RK^G_*( Z_{j-1},B_j \otimes K)\arrow{d} \\
+RK^G_*(Z_j,\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_j} & \prod_j RK^G_*( Z_j,B_j \otimes K)\arrow{d} \\
+RK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\delta}\arrow{r}{\Theta^j_{j-1}} & \prod_j RK^G_*( Z^j_{j-1},B_j \otimes K)\arrow{d}{\delta}\\
+RK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}{\Theta_{j-1}} & \prod_j RK^G_*( Z_{j-1},B_j \otimes K)
 \end{tikzcd}\]
 
-The five lemma ensures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, because $\Delta$ is a typed $G$-simplicial complex (see \ref{Gcomplex}), $X_j\setminus X_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicty ensures then that, if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta^j_{j-1}$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $G$-compact proper $G$-space, and its anchor map is just the target map $r:G\rightarrow G^{(0)}$, which is supposed to be étale, so locally injective.\\
+The five lemma ensures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, because $\Delta$ is a typed $G$-simplicial complex (see \ref{Gcomplex}), $X_j\setminus X_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicity ensures then that, if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta^j_{j-1}$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $G$-compact proper $G$-space, and its anchor map is just the target map $r:G\rightarrow G^{(0)}$, which is supposed to be étale, so locally injective.\\
 \qed
 \end{dem}
 
 We can now prove the theorem \ref{Quant1}.\\
 
 \begin{dem}
-Let $x\in KK^G(P_E(G),\tilde B)$ such that $\mu_{G,\tilde B}(x)=0$. Then, as the quantitative assembly maps factorize $\mu_{G,\tilde B}$, there exist $\varepsilon>0$ and $F$ such that $k_J. E \subseteq F$, satisfying $\mu_{G,\tilde B}^{\varepsilon,E,F}(x)=0$. Using the isomorphism of lemma \ref{prod} and the Morita equivalence, we can identify $x$ with $(x_j)_j$ under $RK^G(P_E(G),\tilde A)\simeq\prod_j RK^G(P_E(G),A)$. Now let $F'$ such that $F\subseteq F'$ and $QI_{A}(E,E',\varepsilon,F)$ holds. That ensures that $x_j=0$ in $RK^G(P_{E'}(G),B)$, and $x=0$.\\
+Let $x\in KK^G(P_E(G),\tilde B)$ such that $\mu_{G,\tilde B}^E(x)=0$. Then, as the quantitative assembly maps factorize $\mu_{G,\tilde B}$, there exist $\varepsilon>0$ and $F$ such that $k_J. E \subseteq F$, satisfying $\mu_{G,\tilde B}^{\varepsilon,E,F}(x)=0$. Using the isomorphism of lemma \ref{prod} and the Morita equivalence, we can identify $x$ with $(x_j)_j$ under $RK^G(P_E(G),\tilde A)\simeq\prod_j RK^G(P_E(G),A)$. Now let $F'$ such that $F\subseteq F'$ and $QI_{A}(E,E',\varepsilon,F)$ holds. That ensures that $x_j=0$ in $RK^G(P_{E'}(G),B)$, and $x=0$.\\
 
 For the converse, suppose one can find $E,\varepsilon,F$ such that $QI_{G,A}(E,E',\varepsilon,F)$ is NOT true for all $F'$ such that $F\subseteq F'$. Then one can extract a increasing sequence $E_j$ such that $\cup E_j =G$ and $x_j\in RK^G(P_E(G),A)$ such that $\mu_{G,\tilde B}^{\varepsilon,E,F}(x_j)=0$ and $x_j\neq 0$ in $RK^G(P_{E_j},A)$. Let $x\in RK^G(P_E(G),\tilde A)$ be the image of $(x_j)\in \prod RK^G(P_E(G),A)$. We have $\mu_{G,\tilde A}(x)=0$, and $x\neq 0$ in $RK^G(P_{E'}(G),\tilde A)$ for all $F'$ such that $F\subseteq F'$, so $\mu_{G,\tilde A}$ is not injective. \\
 \qed   
@@ -455,12 +455,12 @@ Let $B$ a $G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then there exists $\lam
 \begin{dem}
 Let $\lambda>0$ the universal constant of remark $1.18$ of \cite{OY2} : for any $C^*$-algebra and $x,y\in K^{\varepsilon, F}(A)$ such that $\iota_{\varepsilon,F} x =\iota_{\varepsilon,F}y$, there exists $F'$ such that $F\subseteq F'$ and $\iota_{\varepsilon,F}^{\lambda\varepsilon,F'} x =\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}y$.\\
 
-Let $y\in K_*(\tilde B\rtimes G)$, and take $z\in K^{\varepsilon,F}$, where $F$ is nonempty and $0<\varepsilon<\frac{1}{4\lambda}$, such that $\iota_{\varepsilon,F}(z) = y$. The projection on the $j^{th}$ component $\tilde B \rightarrow K_B $ used in $K$-theory then composed with Morita equivalence gives a map $K^{\varepsilon,F}(\tilde B\rtimes G)\rightarrow K^{\varepsilon ,F}(B\rtimes G)$, and $z_j$ denotes the image of $z$ under this map. We can pick $E$ and $F'$ such that $k_J.E\subseteq F$ and $QS(E,F,F',\varepsilon,\lambda\varepsilon)$ : for every $j$, there exists $x_j\in RK^G(P_E(G),B) $ such that $\mu_{G,B}^{\lambda\varepsilon,E,F'}(x_j)=\iota_{\varepsilon,RF}^{\lambda\varepsilon,F'}(z_j)$. 
-Let $x$ be the element of $RK^G(P_E(G),\tilde B)$ coresponding to $(x_j)\in RK^G(P_E(G),\tilde B)\simeq \prod_j KK^G(P_E(G),B)$ under the isomorphism $RK^G(P_E(G),\tilde B)\simeq \prod_j KK^G(P_E(G),B)$. Naturality of the assembly maps, and compatibility of quantitative assembly maps with the usual one ensures that $\mu_{G,\tilde B}(x)=z$, whereby $\mu_{G,\tilde B}$ is onto.\\
+Let $y\in K_*(\tilde B\rtimes G)$, and take $z\in K^{\varepsilon,F}(\tilde B\rtimes G)$, where $F$ is nonempty and $0<\varepsilon<\frac{1}{4\lambda}$, such that $\iota_{\varepsilon,F}(z) = y$. The projection on the $j^{th}$ component $\tilde B \rightarrow K_B $ used in $K$-theory then composed with Morita equivalence gives a map $K^{\varepsilon,F}(\tilde B\rtimes G)\rightarrow K^{\varepsilon ,F}(B\rtimes G)$, and $z_j$ denotes the image of $z$ under this map. We can pick $E$ and $F'$ such that $k_J.E\subseteq F$ and $QS(E,F,F',\varepsilon,\lambda\varepsilon)$ : for every $j$, there exists $x_j\in RK^G(P_E(G),B) $ such that $\mu_{G,B}^{\lambda\varepsilon,E,F'}(x_j)=\iota_{\varepsilon,RF}^{\lambda\varepsilon,F'}(z_j)$. 
+Let $x$ be the element of $RK^G(P_E(G),\tilde B)$ corresponding to $(x_j)\in RK^G(P_E(G),\tilde B)\simeq \prod_j KK^G(P_E(G),B)$ under the isomorphism $RK^G(P_E(G),\tilde B)\simeq \prod_j KK^G(P_E(G),B)$. Naturality of the assembly maps, and compatibility of quantitative assembly maps with the usual one ensures that $\mu_{G,\tilde B}(x)=z$, whereby $\mu_{G,\tilde B}$ is onto.\\
 
 Suppose that there exist $0<\varepsilon<\frac{1}{4\lambda}$ and nonempty $F$ such that for every $E\in\mathcal E$ and $F'$ such that $k_J. E \subseteq F$, $QS(E,F,F',\varepsilon,\lambda\varepsilon)$ does not hold. Let $(E_j)$ and $(F_j)$ be unbounded increasing sequences of controlled subsets and $y_j\in K^{\varepsilon,F}(B\rtimes G)$ such that $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)$ is not in the range of $\mu_{G,B}^{E_j,\lambda\varepsilon,F_j}$. Let $y\in K^{\varepsilon,F}(\tilde B\rtimes G)$ be an element such that its image with the previous map coincides with $y_j$. If there exists $x\in RK^G(P_{S},\tilde B)$ for a $S$ such that $E\subseteq S$ and $\iota_{\varepsilon,F}( y) =\mu_{G,\tilde B}^S(x)$ then there would exists a $F'$ such that $F\subseteq F'$ and
 \[\iota_{\varepsilon,F}^{\lambda\varepsilon, F'}( y) =\mu_{G,\tilde B}^{s,\lambda\varepsilon,F'}(x) = \iota_{\varepsilon,F}^{\lambda\varepsilon, F'}\circ\mu_{G,\tilde B}^{\varepsilon,S,F}(x).\]
-Now choose $j$ such that $S\subseteq E_j $ and $F'\subseteq F_j$, and compose the previous equality with $\iota_{\lambda\varepsilon,F'}^{\lambda\varepsilon,F_j}$ and $q_S^{E_j}$ to obtain $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)=\mu_{G,B}^{d_j,\lambda\varepsilon,F_j}$ which contradicts our assumption.\\
+Now choose $j$ such that $S\subseteq E_j $ and $F'\subseteq F_j$, and compose the previous equality with $\iota_{\lambda\varepsilon,F'}^{\lambda\varepsilon,F_j}$ and $q_S^{E_j}$ to obtain $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)=\mu_{G,B}^{d_j,\lambda\varepsilon,F_j}(x)$ which contradicts our assumption.\\
 \qed
 \end{dem}
 

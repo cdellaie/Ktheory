@@ -112,7 +112,7 @@ A map between two topological spaces $f : X\rightarrow Y$ is said to be locally 
 \begin{definition} \label{Gcomplex}
 Let $n\in\N$. A $G$-simplicial complex of dimension $\leq n$ is a pair $(X,\Delta)$ where :
 \begin{itemize}
-\item[$\bullet$] $X$ is a locally compact $G$-space, called the space of vertices, such that the anchor map $p : X\rightarrow G^{(0)}$ is locally injective;
+\item[$\bullet$] $X$ is a locally compact proper $G$-space, called the space of vertices, such that the anchor map $p : X\rightarrow G^{(0)}$ is locally injective;
 \item[$\bullet$] $\Delta$ is a closed $G$-invariant subset of the space of measures on $X$, denoted $M_X$, endowed with the weak $*$-topology. Moreover, $\Delta$ contains only probability measures and satisfies :
 \begin{itemize}
 \item[$\bullet$] for all $\eta\in\Delta$, there exists $x\in G^ {(0)}$ such that $\text{supp }\eta \subseteq p^{-1}(x)$ and $|\text{supp }\eta|\leq n+1$,
@@ -120,7 +120,7 @@ Let $n\in\N$. A $G$-simplicial complex of dimension $\leq n$ is a pair $(X,\Delt
 \end{itemize}
 For $\eta\in \Delta$, $\text{supp }\eta$ is called a simplex, or a $j$-simplex when $|\text{supp }\eta | = j$.
 \end{itemize}
-The complex is said to be typed if there exists a discrete $G$-space $T$ and a $G$-equivariant continuous map $\tau : X\rightarrow T$ such that, for every simplex $S$, $\tau_{|S}$ is injective.  
+The complex is said to be typed if there exists a discrete space $T$ and a $G$-invariant continuous map $\tau : X\rightarrow T$ such that, for every simplex $S$, $\tau_{|S}$ is injective.  
 \end{definition}
 
 For any typed proper $G$-compact $G$-simplicial complex $(X,\Delta)$ of dimension $\leq n$, one can decompose it into its $n$-skeleton $Z_0\subseteq Z_1 \subseteq ... \subseteq Z_n$, where each $Z_j$ is a closed $G$-invariant subset of $\Delta$ such that :
@@ -206,9 +206,9 @@ An equivariant Hilbert $B$-module is a Hilbert $B$-module $E$ together with an u
 \end{definition}
 
 \begin{Expl} Define $L^2(G)$ as the completion of $C_c(G)$ seen as a pre-Hilbert $C_0(G^{(0)})$-module with the $C_0(G^{(0)})$-valued inner product 
-\[\langle \xi ,\eta\rangle (x) = \sum_{g\in G^x} \xi(g)^*\eta(g) \quad \forall \xi,\eta\in C_c(G).\]
-Its fibers are isomorphic to $l^2(G^x)$, and the action $\lambda : s^*L^2(G) \rightarrow r^* L^2(G)$ is given by left translation, i.e. if $\xi\in l^2(G^x)$, then
-\[(\lambda_g\xi)(h) = \xi(g^{-1}h)\quad \forall g,h\in G^x.\]
+\[\langle \xi ,\eta\rangle (x) = \sum_{g\in G^x} \xi(g^{-1})^*\eta(g^{-1}) \quad \forall \xi,\eta\in C_c(G).\]
+Its fibers are isomorphic to $l^2(G^x)$, and the action $\lambda : s^*L^2(G) \rightarrow r^* L^2(G)$ is given by left translation, i.e. if $\xi\in l^2(G^{s(g)})$, then
+\[(\lambda_g\xi)(h) = \xi(g^{-1}h)\quad \forall h\in G^{r(g)}.\]
 \end{Expl}
 
 \begin{Expl} Let $B$ be a $G$-algebra, the $C(G^{(0)})$-structure being given by $\theta : C_0(G^{(0)})\rightarrow Z(\mathcal M(B))\subseteq \mathcal L_B(B)$. The $G$-module $L^2(G,B)$ is defined as the tensor product $ L^2(G)\otimes_\theta B$. Its fibers are $l^2(G^x,B)$ and the action is given by $\lambda\otimes id_{B}$.
