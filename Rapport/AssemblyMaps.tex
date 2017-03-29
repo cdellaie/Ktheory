@@ -15,13 +15,17 @@ A $G$-space $\underline E G$ is called universal if, given any proper $G$-space 
 
 We now construct a model for universal spaces of $G$, based on J.-L.Tu's work \cite{TuBC2}. For any compact subset $K\subseteq G$, define $P_K(G)$ to be the space of probability measures $\nu $ with support contained in one and only one fiber $G^x$ for some $x\in G^{(0)}$, and such that if $g,g'\in \text{supp }(\nu)$, then $g'g^{-1}\in K$. We endow $P_K(G)$ with the weak-$*$ topology.\\
 
-The action of $G$ is defined by translation. The momentum map $P_K(G)\rightarrow G^{(0)}$ is just the map associating to $\nu$ the only $x$ such that $\text{supp }(\nu) \subseteq G^x$. As the fibers are discrete, any $\nu\in P_K(G)$ can be represented as as sum $\nu = \sum_{g\in G^x} \lambda_g(\nu)\delta_g$, where $\delta_g$ is the Dirac measure at $g\in G $. The continuous functions $\lambda_g$ are called coordinate functions and satisfy $\sum_{g\in G^x} \lambda_g(\nu) =1$ for every $x\in G^{(0)}$. The action of $G$ is given by $g\lambda_h = \lambda_{g^{-1}h}$.
+The action of $G$ is defined by translation. The momentum map $p : P_K(G)\rightarrow G^{(0)}$ is the map associating to $\nu$ the only $x$ such that $\text{supp }(\nu) \subseteq G^x$. Let us show that $p$ is continuous. Let $U\subseteq G^{(0)}$ be an open set. Then, 
+\[p^{-1}(U) = \cup_{g\in G}\{\eta\in P_K(G) \text{ s.t. supp}( \eta ) \subseteq r^{-1}(U) \cap gK\}.\]
+As for all $g\in G$, $r^{-1}(U)\cap gK$ is compact, it is covered by a finite number of open bisections $S_1$, ... , $S_r$. Put $W_j= r^{-1}(U)\cap gK\cap S_j$ and choose open subsets $V_j\subseteq W_j$. Let us take, for each $j\in\{1,...,r\}$, a continuous function $\phi_j : G\rightarrow [0,1]$ such that $\phi$ is equal to $1$ on $V_j$ and $0$ outside of $W_j$. Then $\cup_j \{\eta\in P_K(G)\text{ s.t. } |\langle \eta, \phi_j\rangle -1|<\frac{1}{4} \}\subseteq \{\eta\in P_K(G) \text{ s.t. supp}( \eta ) \subseteq r^{-1}(U) \cap gK\}$, hence $p^{-1}(U)$ is open for the weak-$*$ topology.\\
+
+As the fibers are discrete, any $\nu\in P_K(G)$ can be represented as as sum $\nu = \sum_{g\in G^x} \lambda_g(\nu)\delta_g$, where $\delta_g$ is the Dirac measure at $g\in G $. The continuous functions $\lambda_g$ are called coordinate functions and satisfy $\sum_{g\in G^x} \lambda_g(\nu) =1$ for every $x\in G^{(0)}$. The action of $G$ is given by $g\lambda_h = \lambda_{g^{-1}h}$.
 
 \begin{lem}[Tu,\cite{TuBC2}]
 The action of $G$ on $P_K(G)$ is proper and cocompact.
 \end{lem}  
 
-\begin{lem}[Tu,\cite{TuBC2}]
+\begin{lem}[Tu,\cite{TuBC2}]\label{Gspace}
 Let $Z$ be a proper $G$-compact $G$-space. Then there exists a compact subset $K\subseteq G$ and a $G$-equivariant continuous map $Z\rightarrow P_K(G)$.
 \end{lem}  
 
@@ -38,12 +42,24 @@ We will use the equivariant $KK$-theory developped by Le Gall in his thesis \cit
 \begin{definition}
 Let $Y$ be a proper $G$-space and $B$ a $G$-algebra. Then the analytic $K$-homology of $Y$ with coefficients in $B$ is defined by 
 \[RK^G(Y,B) = \varinjlim_{Z\subseteq Y} KK^G(C_0(Z),B), \]
-the inductive limit being taken on proper $G$-compact $G$-subspaces $Z$ of $Y$.
+the inductive limit being taken on proper $G$-compact $G$-subspaces $Z$ of $Y$. The analytic $K$-homology of $G$ is defined as the analytic $K$-homology of $\underline E G$. In the litterature, the notation $K^{top}(G,B)$ is common to denote $RK^G(\underline E G,B)$.
 \end{definition}
 
-The previous lemmas ensures that the analytic $K$-homology can be computed as an inductive limit of the $K$-homology of the spaces $P_K(G)$ :
+The previous lemmas ensures that the analytic $K$-homology of $G$ can be computed as an inductive limit of the $K$-homology of the spaces $P_K(G)$ :
 %somehow restricted when it comes to the analytic $K$-homology of any universal space $\underline E G$ :
+\begin{lem} Let $B$ be a $G$-algebra. Then :
 \[RK^G(\underline E G,B) = \varinjlim_{K\subseteq G \text{ compact }} KK^G(C_0(P_K(G)),B).\]
+\end{lem}
+
+\begin{dem}
+Let $Z$ and $Z'$ be two proper $G$-compact $G$-spaces such that $Z\subseteq Z'$. By lemma \ref{Gspace}, there exists compact subsets $K$ and $K'$ of $G$ and $G$-equivariant continuous maps $h : Z\rightarrow P_K(G)$ and $h : Z'\rightarrow P_{K'}(G)$. As $h'_{|Z} = h $, the following diagram commutes
+\[\begin{tikzcd}
+KK^G(C_0(Z),B)\arrow{r}\arrow{d}{h^*} & KK^G(C_0(Z'),B)\arrow{d}{(h')^*} \\
+RK^G(P_{K}(G),B)\arrow{r} & RK^G(P_{K'}(G),B) \\
+\end{tikzcd},\]
+hence $\varinjlim_{K\subseteq G \text{ compact }} KK^G(C_0(P_K(G)),B)$ and $\varinjlim_{Z\subseteq Y} KK^G(C_0(Z),B)$ are equal.\\
+\qed
+\end{dem}
 
 \subsection{Descent functor}
 
@@ -66,7 +82,8 @@ If $Z$ is a proper $G$-compact $G$-space, $Z\rtimes G$ is a proper groupoid by d
 \begin{definition}
 The assembly map for $G$ with coefficients in $B$ is defined as the inductive limit of the maps $\mu_{G,B}^{(Z)} : KK^G(C_0(Z),B)\rightarrow K(B\rtimes_r B)$ given by
 \[\mu_{G,B}^{(Z)} (z)=[\mathcal L_Z]\otimes_{C_0(Z)\rtimes G} j_G(z),\]
-that is $\mu_{G,B} = \varinjlim \mu_{G,B}^{(Z)}$ (one has to check that theses maps respects the inductive systems, which they do).
+that is $\mu_{G,B} = \varinjlim \mu_{G,B}^{(Z)}$ (one has to check that theses maps respects the inductive systems, which they do).\\
+One can restrict to $Z$ of the form $P_E(G)$ for $E\subseteq G$ compact. We will denote by $\mu_{G,B}^E$ the assembly map $\mu_{G,B}^{P_E(G)}$, and $\mu_{G,B} = \varinjlim \mu_{G,B}^{E}$ still holds.
 \end{definition}
 
 %Another definition : with $Ad$...
@@ -84,10 +101,10 @@ The conjecture was first stated for groups in \cite{BaumConnes} and in \cite{Bau
 
 Here is the status of the conjecture :
 \begin{itemize}
-\item[$\bullet$] N. Higson and G. Kasparov proved that the conjecture with coefficients holds for groups having Haagerup property. 
-\item[$\bullet$] V. Lafforgue proved the conjecture with coefficients for hyperbolic groups.
-\item[$\bullet$] V. Lafforgue showed the conjecture for every semi-simple Lie group, real or $p$-adic reductive, and discrete cocompact subgroup of real rank $1$ Lie groups or of $SL(3,k)$ for any local field $k$. 
-\item[$\bullet$] The Connes-Kasparov conjecture was established by J. Chabert, S. Echterhoff and R. Nest, who proved that $\mu_{G}$ is an isomorphism for every secound countable almost connected group $G$, and every group of $k$-rational points of a linear algebraic group over a local field of characteristic $0$.\\
+\item[$\bullet$] N. Higson and G. Kasparov proved that the conjecture with coefficients holds for groups having Haagerup property \cite{higsonkasparov}. 
+\item[$\bullet$] V. Lafforgue proved the conjecture with coefficients for hyperbolic groups \cite{lafforgue2012conjecture}.
+\item[$\bullet$] V. Lafforgue showed the conjecture for every semi-simple Lie group, real or $p$-adic reductive, and discrete cocompact subgroup of real rank $1$ Lie groups or of $SL(3,k)$ for any local field $k$ \cite{lafforgueT}. 
+\item[$\bullet$] The Connes-Kasparov conjecture was established by J. Chabert, S. Echterhoff and R. Nest, who proved that $\mu_{G}$ is an isomorphism for every secound countable almost connected group $G$, and every group of $k$-rational points of a linear algebraic group over a local field of characteristic $0$ \cite{chabertEN}.\\
 \end{itemize}
 
 Recall that a function $h : G\rightarrow \R$ is said to be of negative type if :
@@ -117,7 +134,9 @@ Let $G$ be a locally compact $\sigma$-compact Hausdorff groupoid. Then if $G$ is
 
 The construction of the coarse assembly map is very similar to the assembly map for groupoids, but relies on different functors.\\
 
-Recall how to define the Roe algebra $C^*(X,B)$ of a discrete metric space with bounded geometry $X$ with coefficients in an arbitrary $C^*$-algebra $B$. For $R>0$, define $C_R[X,B]$ to be the involutive subspace of operators $T\in \mathcal L_B(l^2(X)\otimes H\otimes B)$ such that $T_{xy}\in \mathfrak K(H\otimes B)$ and $T_{xy}=0$ as soon as $d(x,y)>R$, and $\C[X,B]= \cup_{R>0} C_R[X,B]$. 
+The metric space $X$ is discrete, hence $l^2(X)$ is generated by $e_x = (\delta_{xy})_{y\in X}\in l^2(X)$. For $x,y\in X$ and $T\in \mathcal L_B(l^2(X)\otimes H_B)$, $T_{x,y}$ is defined as the unique operator in $\mathcal L_B(H_B)$ satisfying $\langle T_{xy}\xi,\eta\rangle = \langle T (e_x\otimes \xi),e_y\otimes \eta \rangle$ for all $\xi,\eta\in H_B$.\\
+
+Recall how to define the Roe algebra $C^*(X,B)$ of a discrete metric space with bounded geometry $X$ with coefficients in an arbitrary $C^*$-algebra $B$. For $R>0$, define $C_R[X,B]$ to be the involutive subspace of operators $T\in \mathcal L_B(l^2(X)\otimes H\otimes B)$ such that $T_{xy}\in \mathfrak K_B(H\otimes B)$ and $T_{xy}=0$ as soon as $d(x,y)>R$, and $\C[X,B]= \cup_{R>0} C_R[X,B]$. 
 
 \begin{definition}
 The Roe algebra $C^*(X,B)$ is defined as the Hibert $B$-module obtained after the completion of $\C[X,B]$ with respect to the operator norm in $\mathcal L_B(l^2(X)\otimes H\otimes B)$.

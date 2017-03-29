@@ -12,6 +12,10 @@ A level-1 auxiliary file: StronglyProper.aux
 A level-1 auxiliary file: NuclearDimAsdim.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
+Repeated entry---line 182 of file biblio2.bib
+ : @article{higsonkasparov
+ :                        ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Wo"
 Warning--can't use both volume and number fields in connesfoliations
 Warning--empty journal in OY3
@@ -20,45 +24,45 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 31 entries,
+You've used 35 entries,
             2118 wiz_defined-function locations,
-            715 strings with 8271 characters,
-and the built_in function-call counts, 9086 in all, are:
-= -- 922
-> -- 302
+            736 strings with 9096 characters,
+and the built_in function-call counts, 10263 in all, are:
+= -- 1044
+> -- 347
 < -- 9
-+ -- 130
-- -- 92
-* -- 586
-:= -- 1512
-add.period$ -- 93
-call.type$ -- 31
-change.case$ -- 131
++ -- 149
+- -- 106
+* -- 668
+:= -- 1714
+add.period$ -- 105
+call.type$ -- 35
+change.case$ -- 150
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 379
-empty$ -- 777
-format.name$ -- 92
-if$ -- 1891
+cite$ -- 42
+duplicate$ -- 422
+empty$ -- 872
+format.name$ -- 106
+if$ -- 2129
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 37
-newline$ -- 157
-num.names$ -- 62
-pop$ -- 144
+int.to.str$ -- 35
+missing$ -- 41
+newline$ -- 177
+num.names$ -- 70
+pop$ -- 157
 preamble$ -- 1
-purify$ -- 108
+purify$ -- 123
 quote$ -- 0
-skip$ -- 256
+skip$ -- 285
 stack$ -- 0
-substring$ -- 642
-swap$ -- 66
+substring$ -- 732
+swap$ -- 70
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 110
+type$ -- 126
 warning$ -- 7
-while$ -- 106
-width$ -- 33
-write$ -- 332
-(There was 1 error message)
+while$ -- 120
+width$ -- 37
+write$ -- 375
+(There were 2 error messages)

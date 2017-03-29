@@ -16,6 +16,13 @@ Bruce Blackadar.
 \newblock {\em K-theory for operator algebras}, volume~5.
 \newblock Cambridge University Press, 1998.
 
+\bibitem{chabertEN}
+J{\'e}r{\^o}me Chabert, Siegfried Echterhoff, and Ryszard Nest.
+\newblock The connes-kasparov conjecture for almost connected groups and for
+  linear $ p $-adic groups.
+\newblock {\em Publications Math{\'e}matiques de l'Institut des Hautes
+  {\'E}tudes Scientifiques}, 97:239--278, 2003.
+
 \bibitem{ChenWangYu}
 Xiaoman Chen, Qin Wang, and Guoliang Yu.
 \newblock The maximal coarse baum--connes conjecture for spaces which admit a
@@ -59,6 +66,12 @@ Erik Guentner, Rufus Willett, and Guoliang Yu.
 G.~Yu H.~Oyono-Oyono.
 \newblock Persitance approximation property and controlled k-theory.
 
+\bibitem{higsonkasparov}
+Nigel Higson and Gennadi Kasparov.
+\newblock E-theory and kk-theory for groups which act properly and
+  isometrically on hilbert space.
+\newblock {\em Inventiones mathematicae}, 144(1):23--74, 2001.
+
 \bibitem{HigsonLaffSk}
 Nigel Higson, Vincent Lafforgue, and Georges Skandalis.
 \newblock Counterexamples to the baum—connes conjecture.
@@ -75,6 +88,14 @@ David~A Kazhdan.
   close subgroups.
 \newblock {\em Functional analysis and its applications}, 1(1):63--65, 1967.
 
+\bibitem{lafforgueT}
+Vincent Lafforgue.
+\newblock Une d{\'e}monstration de la conjecture de baum-connes pour les
+  groupes r{\'e}ductifs sur un corps p-adique et pour certains groupes discrets
+  poss{\'e}dant la propri{\'e}t{\'e} (t).
+\newblock {\em Comptes Rendus de l'Acad{\'e}mie des Sciences-Series
+  I-Mathematics}, 327(5):439--444, 1998.
+
 \bibitem{Lafforgue}
 Vincent Lafforgue.
 \newblock Banach kk-theory and the baum-connes conjecture.
@@ -88,6 +109,12 @@ Vincent Lafforgue.
   d’herv{\'e} oyono-oyono.
 \newblock {\em Journal of the Institute of Mathematics of Jussieu},
   6(03):415--451, 2007.
+
+\bibitem{lafforgue2012conjecture}
+Vincent Lafforgue.
+\newblock La conjecture de baum-connes$\backslash$a coefficients pour les
+  groupes hyperboliques.
+\newblock {\em arXiv preprint arXiv:1201.4653}, 2012.
 
 \bibitem{Lance}
 E~Christopher Lance.
