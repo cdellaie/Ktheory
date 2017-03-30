@@ -141,16 +141,28 @@ Recall how to define the Roe algebra $C^*(X,B)$ of a discrete metric space with 
 \begin{definition}
 The Roe algebra $C^*(X,B)$ is defined as the Hibert $B$-module obtained after the completion of $\C[X,B]$ with respect to the operator norm in $\mathcal L_B(l^2(X)\otimes H\otimes B)$.
 \end{definition} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This construction is functorial : any $*$-homomorphism $\phi: A\rightarrow B$ gives rise to a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$. For the reader's convenience, we give details for the construction of $\phi\mapsto \phi_X$, which is a standard fact in Coarse Geometry.
 
-This construction is functorial : any $*$-homomorphism $\phi: A\rightarrow B$ gives rise to a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$. Moreover this functoriality extends to $KK$-theory : there exists a natural transformation 
+\begin{thm}\label{Xfunctor}
+Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarrow B$ a $*$-homomorphism. Then there exists a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ extending $\phi$. Moreover, $\phi\mapsto \phi_X$ respects composition of $*$-homomorphisms.
+\end{thm}
+
+\begin{dem}
+Recall that any $*$-morphism $\phi : A\rightarrow B$ induces, for any $A$-Hilbert module $E$, a $*$-morphism $\phi_* : \mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_A B)$. Now take $E$ to be $l^2(X)\otimes A$. Then $\eta\otimes a\otimes b\mapsto \eta \otimes\phi(a) b $ extends to an isometry $V\in \mathcal L_B(E\otimes_A B,l^2(X)\otimes B)$.\\
+The linear map $T \mapsto V\phi_*(T)V^*$ maps $C_R[X,A]$ into $C_R[X,B]$, and so extends to a $*$-morphism $C^*(X,A)\rightarrow C^*(X,B)$. The composition property is clear from the construction.\\
+\qed
+\end{dem}
+%%%%%%%%%%%%%%%%%%%%%%%
+This functoriality extends to $KK$-theory : there exists a natural transformation 
 \[\sigma_X : KK(A,B)\rightarrow KK(C^*(X,A),C^*(X,B))\]
-which respects the Kasparov product, i.e. $\sigma(z\otimes_D z')=\sigma_X(z)\otimes_{C^*(X,D)} \sigma_X(z')\quad,\forall z\in KK(A,D),z'\in KK(D,B)$.\\
+which transforms the Kasparov product into composition, i.e. $\sigma(z\otimes_D z')= \sigma_X(z')\circ \sigma_X(z) \quad,\forall z\in KK(A,D),z'\in KK(D,B)$, where the $KK$-elements $ \sigma_X(z)$ and  $\sigma_X(z')$ are also seen as the maps they induce in $K$-theory. This relation has to be thought as if $\sigma_X$ respects the Kasparov product. The problem is that $C^*(X,A)$ is not a separable $C^*$-algebra in general, a condition which is required for the domain of the left element in the Kasparov product. As $K(A) \cong KK(\C,A)$ for every $C^*$-algebra $A$, if $x\in K(C^*(X,A))$, $x\otimes_{C^*(X,A)}\sigma_X(z)\in KK(\C,C^*(X,B))\cong K(C^*(X,B))$ is well defined. The map $x\mapsto x\otimes_{C^*(X,A)}\sigma_X(z)$ is what we called the map induced by $\sigma_X(z)$ in $K$-theory.\\
 
 Let $X$ be a coarse space with bounded geometry. The Rips complex is the inductive system of finite dimensional simplicial complexes
 \[P_E(X)=\{\eta\in \text{Prob}(X)\text{ s.t. supp }\eta\subseteq E\}\quad,\forall E\in \mathcal E_X,\]
 endowed with the $*$-weak topology. It is an inductive system with respect to inclusion of entourages.\\
  
-The coarse homology group of $X$ with coefficients in an arbitrary $C^*$-algebra $B$ is defined as 
+Let us recall the definiton of the left-hand side of the coarse assembly map. The coarse homology group of $X$ with coefficients in an arbitrary $C^*$-algebra $B$ is defined as 
 \[KX_*(X,B)=\varinjlim_{E\in \mathcal E_X} KK(C_0(P_E(X)),B)\]
 where the limit is taken along the inductive system $\{P_E(X)\}_{E\in\mathcal E_X}$. \\
 
@@ -159,24 +171,32 @@ Let $E\in \mathcal E_X$. Any simplex $\eta\in P_E(X)$ can be written as a finite
  C_0(P_E(X)) & \rightarrow 	& l^2(X)\otimes C_0(P_E(X)) 		\\ 
  f           & \mapsto 		& (\lambda_x^{\frac{1}{2}}f)_{x\in X} 
 \end{array}\right.\] 
-is an isometry of $C_0(P_E(X))$-modules, and $V_0V_0^*\otimes id_H$ defines a projection in $l^2(X)\otimes H\otimes C_0(P_E(X))$ with finite propagation, so class $[\mathcal L_E]\in K_0(C^*(X,C_0(P_E(X)))$.\\
+is an isometry of $C_0(P_E(X))$-modules, and $V_0V_0^*\otimes id_H$ defines a projection in $l^2(X)\otimes H\otimes C_0(P_E(X))$ with finite propagation (less than $R= \sup_E d$, because $\text{supp }(V_0 V_0^*)\subseteq E$), so a class $[\mathcal L_E]\in K_0(C^*(X,C_0(P_E(X)))$.\\
 
 \begin{definition}
 The coarse assembly map $\mu:KX_*(X,B)\rightarrow K_*(C^*(X,B))$ for $X$ with coefficients in $B$ is defined as 
 \[\forall z\in RK(P_E(X), B), \mu_{X,B}(z)=[\mathcal L_E]\otimes_{C^*(X,C_0(P_E(X)))} \sigma_X(z).\]
 \end{definition}
 
-The Coarse Baum-Connes conjecture is the following claim.\\
+The coarse Baum-Connes conjecture is the following claim.\\
 
 \begin{conj}[Coarse Baum-Connes conjecture]
 For any coarse space $X$ with bounded geometry, the coarse assembly map $\mu_{X,\C}$ is an isomorphism.\\
 \end{conj}
 
+%%% Descent principle
+
+One of the interesting properties of the coarse Baum-Connes conjecture is the following application to topology, which is called the descent principle. The reader is referred to J. Roe's book \cite{RoeIndex} for details. Recall that if $\Gamma$ is a finitely generated group, $|\Gamma|$ denotes the metric space obtained by choosing a set of generators and endowing $\Gamma$ with the  associated word-length metric. Also, $B\Gamma$ denotes the classifying space of $\Gamma$, which is defined in any standard textbook on algebraic topology, see \cite{May} for instance. Definitions ans statements of the Novikov conjectures can be found in \cite{ferrynovikov}.
+
+\begin{thm}[Descent principle]
+Let $\Gamma$ be a finitely generated group such that the classifying space $B\Gamma$ has the homotopy type of a finite CW-complex. Then, the coarse Baum-Connes conjecture for $|\Gamma |$ implies the strong Novikov conjecture for $\Gamma$. 
+\end{thm}
+
 Here are some remarks about the status of the conjecture :
 \begin{itemize}
 \item[$\bullet$] the conjecture is known to hold for any coarse space that admits a coarse embedding into a  separable Hilbert space\cite{Yu2}.
-\item[$\bullet$] couterexamples have been constructed \cite{HigsonLaffSk},
-\item[$\bullet$] Let $\Gamma$ be a finitely generated group, and $|\Gamma|$ the coarse space associated to the word-length metric (any two left invariant metric on $\Gamma$ are coarsely equivalent). Then the Coarse Baum-Connes conjecture for $|\Gamma|$ implies the Novikov conjecture for higher signatures for $\Gamma$.\\
+\item[$\bullet$] counterexamples have been constructed \cite{HigsonLaffSk},
+%\item[$\bullet$] Let $\Gamma$ be a finitely generated group, and $|\Gamma|$ the coarse space associated to the word-length metric (any two left invariant metric on $\Gamma$ are coarsely equivalent). Then the Coarse Baum-Connes conjecture for $|\Gamma|$ implies the Novikov conjecture for higher signatures for $\Gamma$.\\
 \end{itemize}
 
 Here is another description of the coarse assembly map which will be of some interest for us.\\
@@ -189,22 +209,22 @@ is an isomorphism, which does only depend on the coarse class of the barycentric
 
 With that in mind, one can show that $\mu_{X}([H,\pi,T])=(Ad_{V_0})_*[T']$.\\
 
-The point of the article \cite{SkTuYu} is to show that the Coarse Assembly map is equivalent to the Assembly map for the coarse groupoid $G=G(X)$ with coefficients in the $G$-algebra $l^\infty=l^\infty(X,\mathfrak K)$. \\
+The point of the article \cite{SkTuYu} is to show that the coarse assembly map is equivalent to the assembly map for the coarse groupoid $G=G(X)$ with coefficients in the $G$-algebra $l^\infty=l^\infty(X,\mathfrak K)$. \\
 
 More precisely, let $x\in X$. Then $Z=P_{\overline E}(G)$ is a proper cocompact $G$-space with fiber $Z_x\simeq P_E(X)$, and $l^\infty_x \simeq \mathfrak K$, so that the inclusion of groupoid $\{x\}\hookrightarrow G $ induces a morphism $\iota_Z : RK^G(Z,l^\infty)\rightarrow KK(Z_x,\mathfrak K)$ which is actually an isomorphism. Recall that one can construct a $*$-isomorphism $\Psi_X: l^\infty \rtimes_r G\rightarrow C^*(X)$, and $\mu_X^{(Z_x)}\circ \iota_Z = (\Psi_X)_*\circ \mu_{G,l^\infty}^{(Z)}$ holds and respects inductive limits over $Z$ to give the following commutative diagram :
 \[\begin{tikzcd}
 K_*^{top}(\underline E G, l^\infty) \arrow{r}{\mu_{G,l^\infty}}\arrow{d}{\varinjlim \iota_Z} & K_*(l^\infty\rtimes_r G)\arrow{d}{(\Psi_X)_*} \\
 KX_*(X)\arrow{r}{\mu_X} & K_*(C^*(X))
 \end{tikzcd}\]  
-with vertical arrows being isomorphism.\\
+with vertical arrows being isomorphism. We will give another proof of this result, based on controlled $K$-theory. Indeed, we actually prove a stronger result in theorem \ref{BCCeq}, which induces the previous result. \\
 
-A key point is to use how analytical properties of $G$ translate coarse properties of $X$. In particular, 
-\begin{itemize}
-\item[$\bullet$] in \cite{SkTuYu} is proved that $X$ admits a coarse embedding into Hilbert space iff $G(X)$ is a-T-menable, 
-\item[$\bullet$] in \cite{SkTuYu} is proved that $X$ has property A iff $G(X)$ is amenable, 
-\item[$\bullet$] in \cite{FinnSellFibred}, M. Finn-Sell shows that if $X$ admits a coarse fibered embedding, then $G_\partial = G(X)_{|\partial \beta X}$ is a-T-menable. 
-\end{itemize}
-All of these results, combined with theorem \ref{Tu}, give examples of coarse spaces satisfying the Coarse Baum-Connes conjecture and the Boundary Coarse Baum-Connes conjecture.
+A key point is to use how analytical properties of $G$ translate coarse properties of $X$. In particular, the results of theorem \ref{propertiesXG}, combined with theorem \ref{Tu}, give examples of coarse spaces satisfying the coarse Baum-Connes conjecture and the boundary coarse Baum-Connes conjecture.
+
+%\begin{itemize}
+%\item[$\bullet$] in \cite{SkTuYu} is proved that $X$ admits a coarse embedding into Hilbert space iff $G(X)$ is a-T-menable, 
+%\item[$\bullet$] in \cite{SkTuYu} is proved that $X$ has property A iff $G(X)$ is amenable, 
+%\item[$\bullet$] in \cite{FinnSellFibred}, M. Finn-Sell shows that if $X$ admits a coarse fibered embedding, then $G_\partial = G(X)_{|\partial \beta X}$ is a-T-menable. 
+%\end{itemize}
 
 
 

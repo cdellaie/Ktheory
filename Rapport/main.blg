@@ -12,7 +12,7 @@ A level-1 auxiliary file: StronglyProper.aux
 A level-1 auxiliary file: NuclearDimAsdim.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
-Repeated entry---line 182 of file biblio2.bib
+Repeated entry---line 191 of file biblio2.bib
  : @article{higsonkasparov
  :                        ,
 I'm skipping whatever remains of this entry
@@ -24,45 +24,45 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 35 entries,
+You've used 38 entries,
             2118 wiz_defined-function locations,
-            736 strings with 9096 characters,
-and the built_in function-call counts, 10263 in all, are:
-= -- 1044
-> -- 347
-< -- 9
-+ -- 149
-- -- 106
-* -- 668
-:= -- 1714
-add.period$ -- 105
-call.type$ -- 35
-change.case$ -- 150
+            751 strings with 9490 characters,
+and the built_in function-call counts, 11136 in all, are:
+= -- 1122
+> -- 385
+< -- 12
++ -- 165
+- -- 118
+* -- 715
+:= -- 1855
+add.period$ -- 114
+call.type$ -- 38
+change.case$ -- 163
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 422
-empty$ -- 872
-format.name$ -- 106
-if$ -- 2129
+cite$ -- 45
+duplicate$ -- 467
+empty$ -- 948
+format.name$ -- 118
+if$ -- 2320
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 41
-newline$ -- 177
-num.names$ -- 70
-pop$ -- 157
+int.to.str$ -- 38
+missing$ -- 46
+newline$ -- 192
+num.names$ -- 76
+pop$ -- 182
 preamble$ -- 1
-purify$ -- 123
+purify$ -- 135
 quote$ -- 0
-skip$ -- 285
+skip$ -- 316
 stack$ -- 0
-substring$ -- 732
-swap$ -- 70
-text.length$ -- 9
+substring$ -- 754
+swap$ -- 83
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 126
+type$ -- 134
 warning$ -- 7
-while$ -- 120
-width$ -- 37
-write$ -- 375
+while$ -- 127
+width$ -- 40
+write$ -- 408
 (There were 2 error messages)

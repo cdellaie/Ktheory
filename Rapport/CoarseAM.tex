@@ -8,21 +8,24 @@ For any positive number $R>0$, define the family of linear subspaces
 \[C_R[X,B]=\{T\in \mathcal L(l^2(X)\otimes H_B) \text{ s.t. } T_{xy}\in \mathfrak K(H_B) \text{ and }T_{xy}=0 \text{ for }(x,y)\not\in \Delta_R  \}\]
 and $C^*(X,B)$ is the completion of $\cup_{R>0} C_R[X,B]$ for the operator norm in $\mathcal L(l^2(X)\otimes H_B) $. Remark that the $C^*$-algebra $C^*(X,B)$ is filtered by $\mathcal E$, and also by $\R_+^*$, seen as a coarse structure.\\
 
-For $\phi : A\rightarrow B$, we use the notation $\phi_X $ for the induced $*$-homomorphism $C^*(X,A)\rightarrow C^*(X,B)$. For the reader's convenience, we give details for its construction, which is a standard fact in Coarse Geometry.
+%%%%%%%%%%%%%%%%%%%%
+%For $\phi : A\rightarrow B$, we use the notation $\phi_X $ for the induced $*$-homomorphism $C^*(X,A)\rightarrow C^*(X,B)$. For the reader's convenience, we give details for its construction, which is a standard fact in Coarse Geometry.
 
-\begin{thm}
-Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarrow B$ a $*$-homomorphism. Then there exists a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ extending $\phi$. Moreover, $\phi\mapsto \phi_X$ respects composition of $*$-homomorphisms.
-\end{thm}
+%\begin{thm}
+%Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarrow B$ a $*$-homomorphism. Then there exists a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ extending $\phi$. Moreover, $\phi\mapsto \phi_X$ respects composition of $*$-homomorphisms.
+%\end{thm}
 
-\begin{dem}
-Recall that any $*$-morphism $\phi : A\rightarrow B$ induces, for any $A$-Hilbert module $E$, a $*$-morphism $\phi_* : \mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_A B)$. Now take $E$ to be $l^2(X)\otimes A$. Then $\eta\otimes a\otimes b\mapsto \eta \otimes\phi(a) b $ extends to an isometry $V\in \mathcal L_B(E\otimes_A B,l^2(X)\otimes B)$.\\
-The linear map $T \mapsto V\phi_*(T)V^*$ maps $C_R[X,A]$ into $C_R[X,B]$, and so extends to a $*$-morphism $C^*(X,A)\rightarrow C^*(X,B)$. The composition property is clear from the construction.
-\end{dem}
+%\begin{dem}
+%Recall that any $*$-morphism $\phi : A\rightarrow B$ induces, for any $A$-Hilbert module $E$, a $*$-morphism $\phi_* : \mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_A B)$. Now take $E$ to be $l^2(X)\otimes A$. Then $\eta\otimes a\otimes b\mapsto \eta \otimes\phi(a) b $ extends to an isometry $V\in \mathcal L_B(E\otimes_A B,l^2(X)\otimes B)$.\\
+%The linear map $T \mapsto V\phi_*(T)V^*$ maps $C_R[X,A]$ into $C_R[X,B]$, and so extends to a $*$-morphism $C^*(X,A)\rightarrow C^*(X,B)$. The composition property is clear from the construction.\\
+%\qed
+%\end{dem}
+%%%%%%%%%%%%%%%%%%%%%%%
 
-To construct the Coarse Assembly map, we will need the following proposition. 
+To construct the Coarse Assembly map, we will need the following proposition.
 
 \begin{prop}
-Let $A$ be a $C^*$-algebra. The previous theorem allow us to take the image of the exact sequence $0 \rightarrow SA \rightarrow CA \rightarrow A \rightarrow 0 $ under the functor $C^*(X,\cdot)$ to get the following filtered semi-split exact sequence 
+Let $A$ be a $C^*$-algebra. The theorem \ref{Xfunctor} allows us to take the image of the exact sequence $0 \rightarrow SA \rightarrow CA \rightarrow A \rightarrow 0 $ under the functor $C^*(X,\cdot)$ to get the following filtered semi-split exact sequence 
 \[0 \rightarrow C^*(X,SA) \rightarrow C^*(X,CA) \rightarrow C^*(X,A) \rightarrow 0.\] 
 Let $D_{X,A} : \hat K_*(C^*(X,A))\rightarrow \hat K_*(C^*(X,SA))$ the controlled boundary morphism associated to this last extension. Then there exists a control pair $(\lambda,h)$, independant of $X$ and $A$, such that $D_{X,A}$ is $(\lambda,h)$-invertible.
 \end{prop}
