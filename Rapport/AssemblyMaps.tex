@@ -154,9 +154,24 @@ The linear map $T \mapsto V\phi_*(T)V^*$ maps $C_R[X,A]$ into $C_R[X,B]$, and so
 \qed
 \end{dem}
 %%%%%%%%%%%%%%%%%%%%%%%
-This functoriality extends to $KK$-theory : there exists a natural transformation 
+This functoriality extends to $KK$-theory.
+
+\begin{thm} There exists a natural transformation 
 \[\sigma_X : KK(A,B)\rightarrow KK(C^*(X,A),C^*(X,B))\]
-which transforms the Kasparov product into composition, i.e. $\sigma(z\otimes_D z')= \sigma_X(z')\circ \sigma_X(z) \quad,\forall z\in KK(A,D),z'\in KK(D,B)$, where the $KK$-elements $ \sigma_X(z)$ and  $\sigma_X(z')$ are also seen as the maps they induce in $K$-theory. This relation has to be thought as if $\sigma_X$ respects the Kasparov product. The problem is that $C^*(X,A)$ is not a separable $C^*$-algebra in general, a condition which is required for the domain of the left element in the Kasparov product. As $K(A) \cong KK(\C,A)$ for every $C^*$-algebra $A$, if $x\in K(C^*(X,A))$, $x\otimes_{C^*(X,A)}\sigma_X(z)\in KK(\C,C^*(X,B))\cong K(C^*(X,B))$ is well defined. The map $x\mapsto x\otimes_{C^*(X,A)}\sigma_X(z)$ is what we called the map induced by $\sigma_X(z)$ in $K$-theory.\\
+which transforms the Kasparov product into composition, i.e. 
+\[\sigma(z\otimes_D z')= \sigma_X(z')\circ \sigma_X(z) \quad \forall z\in KK(A,D),z'\in KK(D,B),\]
+where the $KK$-elements $\sigma(z\otimes_D z')$, $ \sigma_X(z)$ and $\sigma_X(z')$ are seen as the maps they induce in $K$-theory. 
+\end{thm}
+
+\begin{rk}
+This relation has to be thought as if $\sigma_X$ respects the Kasparov product. The problem is that $C^*(X,A)$ is not a separable $C^*$-algebra in general, a condition which is required for the domain of the left element in the Kasparov product. As $K(A) \cong KK(\C,A)$ for every $C^*$-algebra $A$, if $x\in K(C^*(X,A))$, $x\otimes_{C^*(X,A)}\sigma_X(z)\in KK(\C,C^*(X,B))\cong K(C^*(X,B))$ is well defined. The map $x\mapsto x\otimes_{C^*(X,A)}\sigma_X(z)$ is what we called the map induced by $\sigma_X(z)$ in $K$-theory.
+\end{rk}
+
+Let us recall the construction of $\sigma_X$. Let us first notice that $C^*(X;B\otimes\mathfrak K)\cong C^*(X,B)$. Indeed, $H$ being the separable Hilbert space, any linear isomorphism induces a $*$-isomorphism $\mathfrak K \otimes \mathfrak K \cong \mathfrak K$. An element $T\in C_R[X,B\otimes\mathfrak K]$ is then an operator such that $T_{xy}\in \mathfrak K_{B\otimes\mathfrak K}= \mathfrak K\otimes \mathfrak K \otimes B \cong \mathfrak K\otimes B$ for every $x,y\in X$. As the propagation is on the $l^2(X)$ factor, this induces the claimed isomorphism. \\
+
+Let $(H_B,\pi,T)\in\mathbb E(A,B)$ be a $K$-cycle. Put $E = l^2(X)\otimes H\otimes A$. We can construct the internal tensor product  $E\otimes_\pi H_B$ with the help of the $*$-homomorphism $\pi : A \rightarrow \mathcal L_B(H_B)$. We also dispose of a $*$-homomorphism $\mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_\pi H_B)$. But the map 
+\[(\xi\otimes a)\otimes_\pi \eta \in E\otimes_\pi H_B \mapsto \xi\otimes (\pi(a)\eta)\in l^2(X)\otimes H\otimes H_B \] %\cong l^2(X)\otimes H_B
+extends to an isometry $E\otimes_\pi H_B \rightarrow l^2(X)\otimes H\otimes  H_B$. As in remark \ref{isometry}, the conjugation by this isometry sends compact operators to compact operators. Moreover, it does not alter propagation, hence $\mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_\pi H_B)\subseteq \mathcal L_B(l^2(X)\otimes H\otimes H_B)$ induces a map $\tilde \pi : C^*(X,A)\rightarrow \mathcal \mathcal M(C^*(X,B\otimes\mathfrak K))\cong \mathcal L_{C^*(X,B)}(C^*(X,B))$. Define $\tilde T$ as $1\otimes T$ acting on $l^2(X)\otimes H \otimes H_B$. Then $(l^2(X)\otimes H\otimes B,\tilde \pi,\tilde T)\in \mathbb E(C^*(X,A),C^*(X,B))$ and we put $\sigma_X([H_B,\pi,T])=[l^2(X)\otimes H\otimes B,\tilde \pi,\tilde T]\in KK(C^*(X,A),C^*(X,B))$.\\
 
 Let $X$ be a coarse space with bounded geometry. The Rips complex is the inductive system of finite dimensional simplicial complexes
 \[P_E(X)=\{\eta\in \text{Prob}(X)\text{ s.t. supp }\eta\subseteq E\}\quad,\forall E\in \mathcal E_X,\]
@@ -195,7 +210,7 @@ Let $\Gamma$ be a finitely generated group such that the classifying space $B\Ga
 Here are some remarks about the status of the conjecture :
 \begin{itemize}
 \item[$\bullet$] the conjecture is known to hold for any coarse space that admits a coarse embedding into a  separable Hilbert space\cite{Yu2}.
-\item[$\bullet$] counterexamples have been constructed \cite{HigsonLaffSk},
+\item[$\bullet$] counterexamples have been constructed \cite{HigsonLaffSk}.\\
 %\item[$\bullet$] Let $\Gamma$ be a finitely generated group, and $|\Gamma|$ the coarse space associated to the word-length metric (any two left invariant metric on $\Gamma$ are coarsely equivalent). Then the Coarse Baum-Connes conjecture for $|\Gamma|$ implies the Novikov conjecture for higher signatures for $\Gamma$.\\
 \end{itemize}
 
