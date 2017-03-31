@@ -220,10 +220,18 @@ Let $E\in \mathcal E_X$ be an entourage. Take a cycle $(H,\pi, T)\in E(C_0(P_E(X
 \[T'=\sum \lambda_x^{\frac{1}{2}} T \lambda_x^{\frac{1}{2}} \] 
 is a compact perturbation of $T$ in $\mathcal L(H)$ with bounded propagation, and is invertible modulo $C^*(P_E(X),H)$, so defines a class $[T']\in K_0(C^*(P_E(X),H))$. 
 %But $P_E(X)$ and $X$ are coarsely equivalent, the barycentric map $P_E(X)\rightarrow X$ is a coarse equivalence which is covered by $V_0$, so that 
-\[(Ad_{V_0})_* : K_*(C^*(P_E(X),H))\rightarrow K_*(C^*(X,l^2(X)\otimes H))\]
-is an isomorphism, which does only depend on the coarse class of the barycentric map.\\
+The same formula for $V_0$, i.e. $V_0f = (\lambda_x^{\frac{1}{2}}f)_{x}$ defines an isometry of Hilbert spaces, still denoted $V_0$, from $l^2(P_E(X))$ to $l^2(X)\otimes l^2(P_E(X))$. Multiplication by $C_0(P_E(X))$ on the $l^2(P_E(X))$ factor endows these Hilbert spaces with a structure of $P_E(X)$-module, with respect to which the propagation of $V_0$ is bounded by $s = \sup_E d$. Put $V = 1\otimes V_0 $ which defines a $*$-homomorphism
+\[Ad_{V} :\left\{\begin{array}{rcl} 
+\mathcal L(H\otimes l^2(X)\otimes l^2(P_E(X)) ) & \rightarrow & \mathcal L(H\otimes l^2(X)\otimes l^2(P_E(X)) ) \\
+T &\mapsto & VTV^* \\
+\end{array}\right.\]
+which sends operators of propagation $R$ to operators of propagation $R+2s$ and respects local compactness. Hence, it induces a $*$-homomorphism $C^*(P_E(X))\rightarrow C^*(X)$ and a homomorphism
+\[(Ad_{V})_* : K_*(C^*(P_E(X)))\rightarrow K_*(C^*(X)).\]
+%is an isomorphism, which does only depend on the coarse class of the barycentric map.\\
 
 With that in mind, one can show that $\mu_{X}([H,\pi,T])=(Ad_{V_0})_*[T']$.\\
+
+Indeed, with the same notations and if $z=[H,\pi,T]\in KK(C_0(P_E(X)),\C)$, we want to compute the Kasparov product $[\mathcal L_E]\otimes \sigma_X(z)$. According to Proposition $8.7.2$ of \cite{HigsonRoe}, this is equal to the Fredholm index of $P(1\otimes T)P$ where $P=VV^*$. A simple computation shows that $V^*(1\otimes T)V=T'$ so that $P(1\otimes T)P = Ad_V(T')$, hence the equality.\\
 
 The point of the article \cite{SkTuYu} is to show that the coarse assembly map is equivalent to the assembly map for the coarse groupoid $G=G(X)$ with coefficients in the $G$-algebra $l^\infty=l^\infty(X,\mathfrak K)$. \\
 

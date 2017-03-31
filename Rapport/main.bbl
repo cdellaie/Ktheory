@@ -62,12 +62,6 @@ Martin Finn-Sell and Nick Wright.
   graphs.
 \newblock {\em Adv. Math. C}, 259:306--338, 2014.
 
-\bibitem{GWY}
-Erik Guentner, Rufus Willett, and Guoliang Yu.
-\newblock Dynamic asymptotic dimension: relation to dynamics, topology, coarse
-  geometry, and c\^{}*-algebras.
-\newblock {\em Mathematische Annalen}, pages 1--45, 2015.
-
 \bibitem{OY3}
 G.~Yu H.~Oyono-Oyono.
 \newblock Persitance approximation property and controlled k-theory.
@@ -82,6 +76,11 @@ Nigel Higson and Gennadi Kasparov.
 Nigel Higson, Vincent Lafforgue, and Georges Skandalis.
 \newblock Counterexamples to the baum—connes conjecture.
 \newblock {\em Geometric and Functional Analysis}, 12(2):330--354, 2002.
+
+\bibitem{HigsonRoe}
+Nigel Higson and John Roe.
+\newblock {\em Analytic K-homology}.
+\newblock OUP Oxford, 2000.
 
 \bibitem{kasparovKKNovikov}
 Gennadi~G Kasparov.

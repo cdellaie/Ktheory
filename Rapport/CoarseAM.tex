@@ -27,7 +27,7 @@ To construct the Coarse Assembly map, we will need the following proposition.
 \begin{prop}
 Let $A$ be a $C^*$-algebra. The theorem \ref{Xfunctor} allows us to take the image of the exact sequence $0 \rightarrow SA \rightarrow CA \rightarrow A \rightarrow 0 $ under the functor $C^*(X,\cdot)$ to get the following filtered semi-split exact sequence 
 \[0 \rightarrow C^*(X,SA) \rightarrow C^*(X,CA) \rightarrow C^*(X,A) \rightarrow 0.\] 
-Let $D_{X,A} : \hat K_*(C^*(X,A))\rightarrow \hat K_*(C^*(X,SA))$ the controlled boundary morphism associated to this last extension. Then there exists a control pair $(\lambda,h)$, independant of $X$ and $A$, such that $D_{X,A}$ is $(\lambda,h)$-invertible.
+Let $D_{X,A} : \hat K_*(C^*(X,A))\rightarrow \hat K_*(C^*(X,SA))$ the controlled boundary morphism associated to this last extension. Then there exists a control pair $(\lambda,h)$, independent of $X$ and $A$, such that $D_{X,A}$ is $(\lambda,h)$-invertible.
 \end{prop}
 
 \begin{dem}
@@ -57,30 +57,39 @@ Every $K$-cycle $z\in KK(A,B)$ can be represented as a triplet $(H_B, \pi, T)$ w
 \item[$\bullet$] $T$ and $\pi$ satisfy the $K$-cycle condition, i.e. $[T,\pi(a)]$, $\pi(a)(T^*-T)$ and $\pi(a)(T^2-id_{H_B})$ are compact operators in $\mathfrak K_B(H_B)\cong \mathfrak K \otimes B$ for all $a\in A$.\\
 \end{itemize}
 
-We first define a controlled morphism $\hat \sigma_X(z) : \hat K(A)\rightarrow \hat K(B)$ of odd degree for all $z\in KK(A,B)$, which we name the controlled Roe transform. It induces $-\otimes \sigma_X(z)$ in $K$-theory, and will be needed in the definition of the Controlled Coarse Assembly map.
+We first define a controlled morphism $\hat \sigma_X(z) : \hat K(A)\rightarrow \hat K(B)$ of odd degree for all $z\in KK(A,B)$, which we name the controlled Roe transform. It induces $-\otimes \sigma_X(z)$ in $K$-theory, and will be needed in the definition of the Controlled Coarse Assembly map. Recall that if $\phi : A \rightarrow B$ is a $*$-homomorphism, we denote by $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ the induced $*$-homomorphism.
 
 \subsubsection{Odd case}
 
-For $z\in KK_1(A,B)$, represented by $(H_B,\pi,T)\in E(A,B)$, define $P=(\frac{1+T}{2})\in \mathcal L(H_B)$ and $P_X\in\mathcal L(H_{C^*(X,B)})$, and  
-\[E^{(\pi,T)} = \{(a,P_X\pi_X(a)P_X + y) : a\in C^*(X,A),y\in C^*(X,B)\otimes \mathfrak K\} \]
-which is a $C^*$-algebra which make the following sequence exact :
-\[\begin{tikzcd}[column sep = small]0\arrow{r} & C^*(X,B)\otimes \mathfrak K \arrow{r} & E^{(\pi,T)}\arrow{r} & C^*(X,A)\arrow{r} & 0 \end{tikzcd}.\]
+For $z\in KK_1(A,B)$, represented by $(H_B,\pi,T)\in E(A,B)$, define $P=(\frac{1+T}{2})\in \mathcal L_B(H_B)$ and 
+%$P_X\in\mathcal L(H_{C^*(X,B)})$, and  
+\[E^{(\pi,T)} = \{(a,P\pi(a)P + y) : a\in A,y\in  B\otimes \mathfrak K\} \]
+which is a $C^*$-algebra such that the following sequence :
+\[\begin{tikzcd}[column sep = small]0\arrow{r} & B\otimes \mathfrak K \arrow{r} & E^{(\pi,T)}\arrow{r} & A\arrow{r} & 0 \end{tikzcd}.\]
+is exact and semi-split by the completely positive section $s : A\rightarrow B\otimes\mathfrak K ; a\mapsto P\pi(a)P$. Define $E_X = C^*(X,E^{(\pi,T)})$. Up to the $*$-isomomorphism $C^*(X,B\otimes\mathfrak K)\cong C^*(X,B)$, the following sequence
+\[\begin{tikzcd}[column sep = small]0\arrow{r} & C^*(X,B) \arrow{r} & E_X^{(\pi,T)}\arrow{r} & C^*(X,A)\arrow{r} & 0 \end{tikzcd}.\]
+is exact and semi-split by the completely positive section $s_X : C^*(X,A)\rightarrow E_X^{(\pi,T)}$.\\
 
-Let us show that the controlled boundary map $D^{(\pi,T)}=D_{C^*(X,B)\otimes \mathfrak K,E^{(\pi,T)}}$ only depends on the class $z$.
+\begin{prop}
+The controlled boundary map $D^{(\pi,T)}=D_{C^*(X,B),E_X^{(\pi,T)}}$ of the extension $E_X^{(\pi,T)}$ only depends on the class $z$.
+\end{prop}
 
-Let $(H_B, \pi_j,T_j), j=0,1$ two $K$-cycles which are homotopic via $(H_{B[0,1]},\pi,T)$. We denote $e_t$ the evaluation at $t\in[0,1]$ for an element of $B[0,1]$, and set $y_t=e_t(y)$ for such a $y$. The $*$-morphism
-\[\phi : \left\{\begin{array}{lll}E^{(\pi,T)} & \rightarrow & E^{(\pi_t,T_t)} \\ (x,y) & \mapsto & (x, y_t)\end{array}\right.\]
-satisfies $\phi(C^*(X,K_{B[0,1]}))\subset K_{C^*(X,B)}$ and makes the following diagram commute
+\begin{dem}
+Let $(H_B, \pi_j,T_j), j=0,1$ two $K$-cycles which are homotopic via $(H_{B[0,1]},\pi,T)$. We denote $e_t$ the evaluation at $t\in[0,1]$ for an element of $B[0,1]$, and set $y_t=(e_t)_X(y)$ for every $y\in C^*(X,B[0,1])$. The $*$-homomorphism
+\[\phi : \left\{\begin{array}{lll}E_X^{(\pi,T)} & \rightarrow & E_X^{(\pi_t,T_t)} \\ (x,y) & \mapsto & (x, y_t)\end{array}\right.\]
+satisfies $\phi(C^*(X,B[0,1]))\subseteq C^*(X,B)$ and makes the following diagram commute
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & C^*(X,K_{B[0,1]})\arrow{r}\arrow{d}{\phi_{|C^*(X,K_{B[0,1]})}} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi} & C^*(X,A)\arrow{r}\arrow{d}{=}& 0 \\
-0\arrow{r} & C^*(X,B)\otimes\mathfrak K\arrow{r} &  E^{(\pi_t,T_t)} \arrow{r} & C^*(X,A) \arrow{r} & 0
+0\arrow{r} & C^*(X,B[0,1])\arrow{r}\arrow{d}{\phi_{|C^*(X,B[0,1])}} & E_X^{(\pi,T)} \arrow{r}\arrow{d}{\phi} & C^*(X,A)\arrow{r}\arrow{d}{=}& 0 \\
+0\arrow{r} & C^*(X,B)\arrow{r} &  E_X^{(\pi_t,T_t)} \arrow{r} & C^*(X,A) \arrow{r} & 0
 \end{tikzcd}.\]
 
-According to \cite{OY2}, remark $3.7.$, the following holds
-\[D_{C^*(X,B)\otimes\mathfrak K,E^{(\pi_t,T_t)}} = \phi_* \circ D_{C^*(X,B[0,1])\otimes\mathfrak K,E^{(\pi,T)}}.\]
-As $id \otimes e_t$ gives a homotopy between $id\otimes e_0$ and $id\otimes e_1$, and as if two $*$-morphisms are homotopic, then they are equal in controlled $K$-theory, 
-\[D_{C^*(X,B)\otimes\mathfrak K, E^{(\pi_0,T_0)}}=D_{C^*(X,B)\otimes\mathfrak K, E^{(\pi_1,T_1)}}\]
-holds, and the boundary of the extension $E^{(\pi,T)}$ depends only on $z$.\\
+According to remark \ref{rk3.8}, the following holds
+\[D_{C^*(X,B),E_X^{(\pi_t,T_t)}} = \phi_* \circ D_{C^*(X,B[0,1]),E_X^{(\pi,T)}}.\]
+As $id \otimes (e_t)_X$ gives a homotopy between $id\otimes (e_0)_X$ and $id\otimes (e_1)_X$, and as if two $*$-homomorphisms are homotopic, then they are equal in controlled $K$-theory, 
+\[D_{C^*(X,B), E_X^{(\pi_0,T_0)}}=D_{C^*(X,B), E_X^{(\pi_1,T_1)}}\]
+holds, and the boundary of the extension $E_X^{(\pi,T)}$ depends only on $z$.\\
+\qed
+\end{dem}
 
 \begin{definition}
 We define the Roe transformation $\hat\sigma_X$ as 
@@ -123,7 +132,7 @@ Naturality of the controlled boundary maps \cite{OY2} ensures that the boundary 
 ( x, P_X(f^*\pi)(x)P_X+y) & \rightarrow & ( f_X(x), P_X(f^*\pi)(x)P_X+y) \end{array}\right. \]
 satisfies
 \begin{enumerate}
-\item[$\bullet$] $\phi(K_{C^*(X,B)})\subset K_{C^*(X,B)}$, and makes the following diagram commute
+\item[$\bullet$] $\phi(K_{C^*(X,B)})\subseteq K_{C^*(X,B)}$, and makes the following diagram commute
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & K_{C^*(X,B)}\arrow{r}\arrow{d}{=} & E^{f^*(\pi,T)} \arrow{r}\arrow{d}{\phi}& C^*(X,A_1)\arrow{r}\arrow{d}{f_X} & 0\\
 0\arrow{r} & K_{C^*(X,B)}\arrow{r} & E^{(\pi,T)} \arrow{r}& C^*(X,A_2)\arrow{r} & 0
@@ -133,7 +142,7 @@ satisfies
 Remark $3.7$ of \cite{OY2} assures that \[D_{K_{C^*(X,B)}, E^{f^*(\pi,T)} } =  D_{K_{C^*(X,B)}, E^{(\pi,T)} }\circ f_{X,*},\] 
 and the claim is clear from composition by $\mathcal M_{C^*(X,B)}^{-1}$.
 
-\item[(iv)] Let $\mathcal E = H_{B_1}\otimes_g B_2$, which is a countably generated Hilbert $B_2$-module. The homomorphism $g:B_1\rightarrow B_2$ gives rise to $g_* : \mathcal L_{B_1}(H_{B_1})\rightarrow \mathcal L_{B_2}(\mathcal E)$, which preserves compact operators : $g_*(K_{B_1})\subset K(\mathcal E)$. We have a similar statement for $g_X : C^*(X,B_1)\rightarrow C^*(X,B_2)$. We denote $\mathcal E_X$ the Hilbert $C^*(X,B_2)$-module $\mathcal C^*(X,E)\simeq H_{C^*(X,B_1)}\otimes_g (C^*(X,B_2))$.\\
+\item[(iv)] Let $\mathcal E = H_{B_1}\otimes_g B_2$, which is a countably generated Hilbert $B_2$-module. The homomorphism $g:B_1\rightarrow B_2$ gives rise to $g_* : \mathcal L_{B_1}(H_{B_1})\rightarrow \mathcal L_{B_2}(\mathcal E)$, which preserves compact operators : $g_*(K_{B_1})\subseteq K(\mathcal E)$. We have a similar statement for $g_X : C^*(X,B_1)\rightarrow C^*(X,B_2)$. We denote $\mathcal E_X$ the Hilbert $C^*(X,B_2)$-module $\mathcal C^*(X,E)\simeq H_{C^*(X,B_1)}\otimes_g (C^*(X,B_2))$.\\
 
 Let $z\in KK(A,B_1)$ be represented by the $K$-cycle $(H_{B_1},\pi,T)$. Then $(H_{B_1}\otimes_g B_2,g_*\circ\pi, g_*(T))=(\mathcal E, \tilde\pi,\tilde T)$ represents $g_*(z)$.\\
 
@@ -146,7 +155,7 @@ Now, by the stabilisation lemma, we know that the countably generated Hilbert mo
 0\arrow{r} & K_{C^*(X,B_1)}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& C^*(X,A)\arrow{r}\arrow{d}{=} & 0\\
 0\arrow{r} & K_{C^*(X,B_2)}\arrow{r} & E^{g_*(\pi,T)} \arrow{r}& C^*(X,A)\arrow{r} & 0
 \end{tikzcd}.\]
-and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi_{|K_{C^*(X,B_1)}}\subset K_{C^*(X,B_2)}$, so that we can again apply the remark $3.7$ of \cite{OY2} to state
+and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi_{|K_{C^*(X,B_1)}}\subseteq K_{C^*(X,B_2)}$, so that we can again apply the remark $3.7$ of \cite{OY2} to state
 \[ D_{K_{C^*(X,B_2)},E^{g_*(\pi,T)}}=\psi_*\circ D_{K_{C^*(X,B_1)},E^{(\pi,T)}},\]
 which we compose by the Morita equivalence on the left $M_{C^*(X,B_2)}^{-1}$
 \[\hat\sigma_X(g_*(z)) = M_{C^*(X,B_2)}^{-1}\circ g_{X,*}\circ D_{K_{C^*(X,B_1)},E^{(\pi,T)}}.\]
@@ -171,7 +180,7 @@ This gives a commutative diagram
 0\arrow{r} & K_{C^*(X,B_1)}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& C^*(X,A)\arrow{r}\arrow{d}{=} & 0\\
 0\arrow{r} & K_{C^*(X,B_2)}\arrow{r} & E^{(\pi',T')} \arrow{r}& C^*(X,A)\arrow{r} & 0
 \end{tikzcd}.\]
-and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi_{|K_{C^*(X,B_1)}}\subset K_{C^*(X,B_2)}$, so that we can again apply the remark $3.8$ of \cite{OY2} to state
+and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi_{|K_{C^*(X,B_1)}}\subseteq K_{C^*(X,B_2)}$, so that we can again apply the remark $3.8$ of \cite{OY2} to state
 \[ D_{K_{C^*(X,B_2)},E^{(\pi',T')}}=\psi_*\circ D_{K_{C^*(X,B_1)},E^{(\pi,T)}},\]
 which we compose by the Morita equivalence on the left $M_{C^*(X,B_2)}^{-1}$
 \[\sigma_X(g_*(z)) = M_{C^*(X,B_2)}^{-1}\circ g_{X,*}\circ D_{K_{C^*(X,B_1)},E^{(\pi,T)}}.\]
@@ -226,7 +235,7 @@ holds.
 
 \subsection{Controlled coarse assembly maps}
 
-If $(X,\mathcal E_X)$ is a coarse space, and $E\in\mathcal E_X$ a controlled subset, any simplex $\eta$ of the Rips complex $P_E(X) = \{m \in Prob(X)\text{ s.t. supp }m \subset E\}$ can be written as $\eta = \sum_{x\in X} \lambda_x(\eta) \delta_x$, where $\delta_x$ si the Dirac probability at $x$, and $\lambda_x : P_E(X)\rightarrow [0,1]$ is a continuous function. Set :
+If $(X,\mathcal E_X)$ is a coarse space, and $E\in\mathcal E_X$ a controlled subset, any simplex $\eta$ of the Rips complex $P_E(X) = \{m \in Prob(X)\text{ s.t. supp }m \subseteq E\}$ can be written as $\eta = \sum_{x\in X} \lambda_x(\eta) \delta_x$, where $\delta_x$ si the Dirac probability at $x$, and $\lambda_x : P_E(X)\rightarrow [0,1]$ is a continuous function. Set :
 \[ P_E : \left\{\begin{array}{rcl} X \times X & \rightarrow & C_0(P_E(X))\\  (x,y) & \mapsto & \lambda_x^{\frac{1}{2}}\lambda_y^{\frac{1}{2}}\end{array}\right. \]  
 As $\sum \lambda_x =1$, $P_E$ is a projection of $\mathfrak K(l^2(X)) \otimes C_0(P_E(X))$ of controlled support in $E$, which gives you class in $[P_E,0]_{\varepsilon, E'}\in K_0^{\varepsilon, E'} (C^*(X,C_0(P_E(X)))$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $E'$ containing $E$.\\
 

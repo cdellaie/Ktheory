@@ -187,7 +187,9 @@ Let $\rho=(\lambda,h)$ and $\alpha$ be controlled pairs, and $F : \hat{\mathcal 
 \end{itemize}
 \end{definition}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Controlled exact sequences}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{definition}
 Let $F : \hat{\mathcal O}\rightarrow \hat{\mathcal O'}$ and $G : \hat{\mathcal O'}\rightarrow \hat{\mathcal O''}$ be $(\alpha,h)$-controlled and a $(\beta,k)$-controlled morphisms respectively. The sequence
@@ -200,11 +202,14 @@ is said to be $\rho$-exact if the sequence
 is $\rho$-exact at $\hat{\mathcal O_j}$ for all $j$.
 \end{definition}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Morita equivalence}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 A controlled version of the Morita equivalence exists. Indeed, the classical Morita equivalence states that, if $e$ is a rank $1$ projection in $\mathcal L (H)$, the map $A\rightarrow A\otimes \mathfrak K(H) ; a\mapsto a\otimes e$ induces an isomorphism in $K$-theory. But this map preserves propagation, hence the same proof as in \cite{OY2} gives the following proposition.
 
 \begin{prop}
-Let $A$ be a filtered $C^*$-algebra and $H$ a separable Hilbert space. Then the $*$-morphism
+Let $A$ be a $\mathcal E$-filtered $C^*$-algebra and $H$ a separable Hilbert space. Then the $*$-homomorphism
 \[A\rightarrow A\otimes \mathfrak K(H) ; \quad a\mapsto 
 \begin{pmatrix}a & & \\  & 0 & \\ & & ... \end{pmatrix}\]
 induces a group isomorphism 
@@ -212,7 +217,10 @@ induces a group isomorphism
 for every $\varepsilon\in(0,\frac{1}{4})$ and $E\in\mathcal E$. The family $\mathcal M_A = (\mathcal M_A^{\varepsilon,E} )_{\varepsilon\in(0,\frac{1}{4}),E\in\mathcal E}$ is called the controlled Morita equivalence and is a controlled morphism. It induces the usual Morita equivalence $M_A: K(A)\rightarrow K(A\otimes \mathfrak K(H))$ in $K$-theory. 
 \end{prop}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Controlled $6$-term exact sequences}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 We will describe the $6$-term controlled exact sequence associated to a completely filtered extension of $C^*$-algebras. For any extension of $C^*$-algebras 
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0 \end{tikzcd},\]
 we denote $\partial_{J,A}$ the boundary map $K_*(A/J)\rightarrow K_{*+1}(J)$. The reader can find all the proofs and properties of the following results in \cite{OY2}.
@@ -295,7 +303,7 @@ There exists a control pair $\lambda$ such that, for any separable $C^*$-algebra
 This last proposition asserts that the controlled tensorisation map is natural with respect to morphism of filtered $C^*$-algebras. \cite{OY2}
 
 \begin{prop}
-Let $B_1$ and $B_2$ be filtered $C^*$-algebras and $(\phi,\rho) :B_1\rightarrow B_2 $ a filtered morphism. Then $ (\phi_{A_2})_*\circ \hat \tau_{B_1}=\hat \tau_{B_2}(z)\circ(\phi_{A_1})_* $ for any $z\in KK(A_1,A_2)$.
+Let $B_1$ and $B_2$ be $\mathcal E$-filtered $C^*$-algebras and $(\phi,\rho) :B_1\rightarrow B_2 $ a filtered morphism. Then $ (\phi_{A_2})_*\circ \hat \tau_{B_1}=\hat \tau_{B_2}(z)\circ(\phi_{A_1})_* $ for any $z\in KK(A_1,A_2)$.
 \end{prop}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

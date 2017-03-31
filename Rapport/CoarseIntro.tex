@@ -300,13 +300,19 @@ $G$ is totally disconnected, and the set of the closure in $\beta (X\times X)$ o
 \end{array}\]
 
 Moreover :
-
 \[ \begin{array}{rl} 
-||(\sum_j \lambda_j\chi_{E_j}, (E_j.f))|| 
- \ & \leq (\sup_j |\lambda_j|) \times  ||f|| \\ 
- %\ & \leq \sup \{ \sum_j |\lambda'_j| \times  ||f'_j||\text{ s.t. }\sum \lambda'_j \chi_{E'_j}\otimes f'_j  =h\}=||h||, \\ 
-\ & \leq ||\sum_j \lambda_j \chi_{E_j}|| \times  ||f||, \\
+||\sum_j \lambda_j\chi_{E_j}\otimes(E_j.f)|| 
+ \ & \leq \sum_j |\lambda_j|\ ||f_j|| \\ 
+ \ & \leq \sup \{ \sum_j |\lambda'_j| \times  ||f'_j||\text{ s.t. }\sum \lambda'_j \chi_{E'_j}\otimes f'_j  =h\}, \\ 
+\ & \leq ||h||, \\
 \end{array}\]
+
+%\[ \begin{array}{rl} 
+%||(\sum_j \lambda_j\chi_{E_j}, (E_j.f))|| 
+% \ & \leq (\sup_j |\lambda_j|) \times  ||f|| \\ 
+ %\ & \leq \sup \{ \sum_j |\lambda'_j| \times  ||f'_j||\text{ s.t. }\sum \lambda'_j \chi_{E'_j}\otimes f'_j  =h\}=||h||, \\ 
+%\ & \leq ||\sum_j \lambda_j \chi_{E_j}|| \times  ||f||, \\
+%\end{array}\]
 so $V$ extends by continuity to a bounded bilinar map $ C_0(G)\times\tilde B \rightarrow r^* \tilde B$. This map being $C(\beta X)$-linear, $V$ extends to a $C(\beta X)$-algebra morphism $V :s^*\tilde B \rightarrow r^* \tilde B$. The rule $\chi_E \otimes_r f\mapsto \chi_E \otimes_r (E^{-1}.f)$ defines similarly a $C(\beta X)$-algebra morphism between $r^*\tilde B \rightarrow s^*\tilde B$. It is the inverse of $V$, hence $V$ is a isomorphism of $C(\beta X)$-algebras.\\
 
 Let us show $V$ is an action. For $g\in G$, denote by $V_g : (\tilde B)_{s(g)}\rightarrow (\tilde B)_{r(g)}$ the induced map between the fibers of $s^*\tilde B$ and $r^*\tilde B$. Let $(g,g')\in G^{(2)}$, and choose partial translations $E, E'\subseteq X\times X$ such that $g\in \overline E$ and $g'\in \overline{E'}$. Then $g'\circ g\in \overline{E'\circ E}$ and $E'\circ E$ is a partial translation. Then if $f\in s^* \tilde B$, $V_g(f_{s(g)}) = (E.f)_{r(g)}$. Then :
