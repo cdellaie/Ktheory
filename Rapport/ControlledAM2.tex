@@ -86,10 +86,11 @@ such that
 
 \item[(ii)] If $z,z'$ are elements of $KK_1^G(A,B)$, represented by two $K$-cycles $(H_B,\pi_j,T_j)$, and if $(H_B,\pi,T)$ is a $K$-cycle representing the sum $z+z'$, then $E^{(\pi,T)}$ is naturally isomorphic to the extension sum of the $E_j:=E^{(\pi_j,T_j)}$, namely
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & K_{B\rtimes_r G} \arrow{r} & D \arrow{r} & A\rtimes_r G \arrow{r} & 0
+0\arrow{r} & \mathfrak M_2(K_{B\rtimes_r G}) \arrow{r} & D \arrow{r} & A\rtimes_r G \arrow{r} & 0
 \end{tikzcd}\]
 where 
-\[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K(E_j,E_i)\right\}.\]
+\[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K(E_j,E_i)\right\},\]
+with $p_j : E_j\rightarrow A\rtimes_r G$ the $*$-homomorphisms of the extensions.
 Naturality of the controlled boundary maps \cite{OY2} ensures that the boundary of the sum of two extensions is the sum of the boundary of each, thus the result.
 \item[(iii)] Let $z\in KK_1^G(A_2,B)$, represented by a cycle $(H_B,\pi,T)$. Representing $f^*(z)$ is $(H_B,f^*\pi,T)$ with $f^*\pi=\pi \circ f$. The map 
 \[\phi : \left\{\begin{array}{lll} E^{f^*(\pi,T)} & \rightarrow & E^{(\pi,T)} \\
@@ -186,7 +187,7 @@ of the same degree as $z$, such that
 
 \begin{dem} Let $z\in KK_0^G(A,B)$.
 \begin{itemize}
-\item[$(i)$] $J_{red,G}(z)$ induces in $K$-theory right multiplication by $j_{red,G}(z\otimes [\partial_{SB}])\otimes \tau_{B\rtimes_r G}([\partial]^{-1})$. But $j_{red, G}$ respects Kasparov products, and by \ref{}, $j_{red,G}([\partial_{SB}]) = [\partial_{SB\rtimes_r G}]$ and $\tau_{B\rtimes_r G}([\partial]^{-1}) = [\partial_{SB\rtimes_r G }]^{-1}$ are inverse of each others.
+\item[$(i)$] $J_{red,G}(z)$ induces in $K$-theory right multiplication by $j_{red,G}(z\otimes [\partial_{SB}])\otimes \tau_{B\rtimes_r G}([\partial]^{-1})$. But $j_{red, G}$ respects Kasparov products, and by \cite{LeGall}, $j_{red,G}([\partial_{SB}]) = [\partial_{SB\rtimes_r G}]$ and $\tau_{B\rtimes_r G}([\partial]^{-1}) = [\partial_{SB\rtimes_r G }]^{-1}$ are inverse of each others.
 \item[$(ii)$] Additivity follows from additivity of the Kasparov product and of proposition \ref{Kasparov1}.
 \item[$(iii)$] Recall the equality $f^*(x)\otimes y = f^*(x\otimes y)$. As a consequence of the previous proposition \ref{Kasparov1},
 \[\begin{array}{lcl} J_{red,G}(f^*(z)) & = &  \hat\tau_{B\rtimes_r G}([\partial]^{-1}) \circ J_{red,G}(f^*(z)\otimes [\partial_{SB}]) \\
@@ -217,7 +218,7 @@ J_G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_G(\alpha\otimes z)\circ J
 			& \sim & J_G(\theta^*(\alpha\otimes z))\circ J_G(\alpha)\\
 			& \sim & J_G(z)\circ J_G(\alpha) \\
 \end{array}\] 
-because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The control on the propagation of the first line follows from remark $2.5$ of \cite{OY2} and point $(v)$, the other lines are equal by points $(iii)$ and $(iv)$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes, and $(\alpha_K,k_K)$ can be taken to be $(d \alpha_J^{2d},( k_J*k_J)^{*d})$.
+because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The control on the propagation of the first line follows from remark $2.5$ of \cite{OY2} and point $(v)$, the other lines are equal by points $(iii)$ and $(iv)$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes, and $(\alpha_K,k_K)$ can be taken to be $( \alpha_J^{2d},( k_J)^{*2d})$.
 \qed
 \end{dem}
 
@@ -227,9 +228,19 @@ because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Let $E\in\mathcal E$. There exists continuous functions $\lambda_g : P_E(G)\rightarrow [0,1]$ for all $g\in G$ such that $\eta = \sum_{g\in G^x}\lambda_g(\eta) \delta_g$ for any $\eta\in P_E(G)$. Define $h(x)=\lambda_{e_x}$ and $\phi = \sqrt h$. Notice that $g.h = \lambda_g$ for all $g\in G$, and as $\sum_{g\in G^x}\lambda_g = 1 ,\forall x\in G^{(0)}$, 
-\[\mathcal L_E =\sum_{g\in G^x} \phi(g.\phi)\]
-defines a projection of $C_0(P_E(G))\rtimes_r G$ with bounded propagation, and defines a $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$. Moreover, for such controlled subsets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.\\
+Let $E\in\mathcal E$. Recall that every $\eta\in P_E(G)$ is a finite probabilty measure in $G^{p(\eta)}$, hence can be written as a finite sum 
+\[\eta = \sum_{g\in G^{p(\eta)}}\lambda_g(\eta)\delta_g,\]
+where $\delta_g$ is the Dirac probability at $g\in G^{p(\eta)}$. This defines a map 
+\[\lambda : \left\{\begin{array}{rcl}
+G\times_{s,p} P_E(G) & \rightarrow & [0,1] \\
+ (g,\eta) & \mapsto & \lambda_g(\eta)\end{array}\right. .\] 
+Let us show that $\lambda \in C_c(G\times_{s,p} P_E(G))$.\\
+
+Define $h\in C_c(G^{(0)}\times_{s,p}P_E(G))$ as the restriction of $\lambda$ to $G^{(0)}\times_{s,p}P_E(G))$, i.e. $h(x,\eta) = \lambda_{e_x}(\eta)$, for every $x\in G^{(0)}$ and $\eta\in P_E(G)$ such that $p(\eta) = x$. Notice that $h(x,g.\eta)= \lambda(g,\eta) = \lambda_g(\eta)$ for every $(g,\eta)\in G\times_{s,p} P_E(G)$. Let us put $\mathcal L_E(g,\eta) = h^{\frac{1}{2}}(\eta) (g.h)^{\frac{1}{2}}(\eta)$. Because $\sum_{g\in G^{p(\eta)}}\lambda_g(\eta) = 1 ,\forall (g,\eta)\in G\times_{s,p} P_E(G)$, this defines a projection in $C_c(G\times_{s,p} P_E(G))$, hence in $C_0(P_E(G))\rtimes_r G$. Moreover $\mathcal L_E$ is of bounded propagation $E$, and defines a $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$. Moreover, for such controlled subsets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.
+
+%There exists continuous functions $\lambda_g : P_E(G)\rightarrow [0,1]$ for all $g\in G$ such that $\eta = \sum_{g\in G^x}\lambda_g(\eta) \delta_g$ for any $\eta\in P_E(G)$. Define $h(x)=\lambda_{e_x}$ and $\phi = \sqrt h$. Notice that $g.h = \lambda_g$ for all $g\in G$, and as $\sum_{g\in G^x}\lambda_g = 1 ,\forall x\in G^{(0)}$, 
+%\[\mathcal L_E =\sum_{g\in G^x} \phi(g.\phi)\]
+%defines a projection of $C_0(P_E(G))\rtimes_r G$ with bounded propagation, and defines a $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$. Moreover, for such controlled subsets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.\\
 
 \begin{definition}
 Let $B$ be a $G$-algebra, and $\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E$. Let $F\in \mathcal E$ such that $k_J.E \subseteq F$. The controlled assembly map for $G$ is defined as the composition of $J_G$ with the evaluation at $[\mathcal L_E,0]_{\varepsilon,E}$ :
