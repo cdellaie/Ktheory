@@ -338,17 +338,19 @@ because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^E(
 \subsection{Quantitative statements}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+In this subsection, the groupoid $G$ must have a compact unit space $G^{(0)}$.
+
 \begin{prop} 
 Let A be a $G$-algebra.\\
 If the following statement is true :\\
 
-$\bullet$(Quantitative Injectivity) $\forall E\in\mathcal E$, there exists $\varepsilon\in (0,\frac{1}{4})$ such that, for all $F$ such that $k_J . E\subseteq F$, there exists $E'$ such that $E\subseteq E'$ satisfying : if $x\in RK_*^G(P_E(G),A)$ satisfies $\mu_{G,A}^{\varepsilon,E,F}(x)=0\in K^{\varepsilon,F}(A\rtimes_r G)$, then $x=0$ in $RK^G(P_{E'}(G),A)$;\\
+$\bullet$(Quantitative Injectivity) $\forall E\in\mathcal E$, there exists $\varepsilon\in (0,\frac{1}{4})$ such that, for all $F\in\mathcal E$ such that $k_J(\varepsilon) . E\subseteq F$, there exists $E'\in\mathcal E$ such that $E\subseteq E'$ satisfying : for every $x\in RK_*^G(P_E(G),A)$ satisfiying $\mu_{G,A}^{\varepsilon,E,F}(x)=0\in K^{\varepsilon,F}(A\rtimes_r G)$, then $q_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),A)$;\\
 
 then $\mu_{G,A}$ is injective.\\
 
 On the other hand, if this statement is true : \\
 
-$\bullet$(Quantitative Surjectivity) there exists $\varepsilon\in (0,\frac{1}{4})$ such that for any $E$ and $F$ controlled subsets such that $k_J.E\subseteq F$,$\exists \varepsilon',F'$ such that $\varepsilon'\leq \varepsilon<\frac{1}{4}$ and $k_J E\subseteq F\subseteq F'$, such that for all $y\in K_*^{\varepsilon,F}(A\rtimes_r G),\exists x \in RK_*^G(P_E(G),A)$ such that $\mu_{G,A}^{\varepsilon',E,F'}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$;\\
+$\bullet$(Quantitative Surjectivity) there exists $\varepsilon\in (0,\frac{1}{4})$ such that for any controlled subsets $E,F\in\mathcal E$  such that $k_J(\varepsilon).E\subseteq F$,$\exists \varepsilon',F'$ such that $\varepsilon'\leq \varepsilon<\frac{1}{4}$ and $k_J E\subseteq F\subseteq F'$, such that for all $y\in K_*^{\varepsilon,F}(A\rtimes_r G),\exists x \in RK_*^G(P_E(G),A)$ such that $\mu_{G,A}^{\varepsilon',E,F'}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$;\\
 
 then $\mu_{G,A}$ is surjective.
 \end{prop}
@@ -365,14 +367,14 @@ The second point is immediate. \\
 \qed
 \end{dem}
 
-This kind of statement leads us to define the following proprieties, following \cite{OY3}.\\
+This kind of statement leads us to define the following properties, following \cite{OY3}.\\
 \begin{itemize}
-\item[$\bullet$] $QI_{G,B}(E,E',F,\varepsilon)$ : for any $x\in RK^G(P_E(G), B )$, $\mu^{\varepsilon,E,F}_G(x) = 0$ implies $\iota_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),B)$.
-\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : for any $y\in K^{\varepsilon,F}(B\rtimes G)$, there exists $x\in KK^G(P_E(G),B)$ such that $\mu^{\varepsilon',F'}_G(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.
+\item[$\bullet$] $QI_{G,B}(E,E',F,\varepsilon)$ : for any $x\in RK^G(P_E(G), B )$, then $\mu^{\varepsilon,E,F}_G(x) = 0$ implies $q_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),B)$.
+\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : for any $y\in K^{\varepsilon,F}(B\rtimes G)$, there exists $x\in RK^G(P_E(G),B)$ such that $\mu^{\varepsilon',E,F'}_G(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.
 \end{itemize} 
 
 \begin{thm}\label{Quant1}
-Let $B$ a $G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then $\mu_{G,\tilde B}$ is injective if and only if for all $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ and $F$ such that $k_J.E\subseteq F$, there exists $E' \in\mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(E,E',\varepsilon,F)$. 
+Let $B$ a $G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then $\mu_{G,\tilde B}$ is injective if and only if for every $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ and $F$ such that $k_J.E\subseteq F$, there exists $E' \in\mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(E,E',\varepsilon,F)$. 
 \end{thm}
 
 To prove the theorem, we will need a serie of lemmas. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}.
@@ -387,7 +389,7 @@ Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarr
 \end{lem}
 
 \begin{dem}
-Let $K$ be a compact fundamental domain for the action of $G$ on $Z$. By local injectivity of $p$, let $\mathcal U$ be a finite open cover of $K$ such that $p_{|U}$ is injective for all $U\in \mathcal U$. There exists compactly supported continuous functions $\phi_U : Z\rightarrow [0,1]$ such that  \[\text{supp }\phi_U \subseteq U \quad\text{ and }\quad K\subseteq \cup_{U\in\mathcal U} \phi_U^{-1}(0,+\infty).\]
+Let $(H_B,\pi,T)\in \mathbb E(C_0(X),B)$ be a $K$-cycle. Let $K$ be a compact fundamental domain for the action of $G$ on $Z$. By local injectivity of $p$, let $\mathcal U$ be a finite open cover of $K$ such that $p_{|U}$ is injective for all $U\in \mathcal U$. There exists compactly supported continuous functions $\phi_U : Z\rightarrow [0,1]$ such that  \[\text{supp }\phi_U \subseteq U \quad\text{ and }\quad K\subseteq \cup_{U\in\mathcal U} \phi_U^{-1}(0,+\infty).\]
 Up to replacing $\phi_U$ by $\phi_U(z) / \sum_{V,g} \phi_V(z.g)$, we can assume $\sum_{U\in\mathcal U,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. For $x\in G^{(0)}$, define 
 \[F'_x = \sum_{U\in\mathcal U, g\in G^x} V_g\pi(\phi_U^{\frac{1}{2}}) F_{s(g)}\pi(\phi_U^{\frac{1}{2}})V_g^*.\] 
 The operator $F'$ is  $G$-invariant and commutes with the action of $C_0(Z)$. Indeed, by local injectivity, for all $g\in G$, there exists $z_g\in Z$ such that $Z_{s(g)}\cap U = \{z_g\}$, and for all $f\in C_0(Z_{s(g)})$, $[ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f ] = [ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f(z_g) \chi_{z_g} ]=0 $.\\
