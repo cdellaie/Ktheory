@@ -19,7 +19,7 @@ $G$ is said to be principal if $r\times s : G\rightarrow G^{(0)}\times G^{(0)}$ 
 
 If $G$ is étale, then any $g\in G$ has an open neighborhood $U$ such that $r$ and $s$ are injective on $U$. The element $g$ defines in this way a partial homeomorphism $\alpha_U = r\circ (s_{|U})^{-1} : s(U)\rightarrow r(U)$. Such open sets $U$ where $r$ and $s$ are injective are called bisections. The set of bisections is naturally an inverse semi-group. \cite{paterson}\\
 
-For $U,V\subset G^{(0)}$, we will us the notations $G_U=s^{-1}(U)$, $G^V=r^{-1}(V)$ and $G_U^V=s^{-1}(U)\cap r^{-1}(V)$. If one of the subsets is reduced to a single point, we will use $G_x=G_{\{x\}}$, etc. We will write $G_{|U}$ for $G_U^U$. It is a subgroupoid of $G$.\\
+For $U,V\subseteq G^{(0)}$, we will us the notations $G_U=s^{-1}(U)$, $G^V=r^{-1}(V)$ and $G_U^V=s^{-1}(U)\cap r^{-1}(V)$. If one of the subsets is reduced to a single point, we will use $G_x=G_{\{x\}}$, etc. We will write $G_{|U}$ for $G_U^U$. It is a subgroupoid of $G$.\\
 
 A Haar system on $G$ is a family of borelian measures $(\lambda^x)_{x\in G^{(0)}}$ such that 
 \begin{itemize}
@@ -38,7 +38,7 @@ Here are classical examples of groupoids.
 \begin{Expl}[Pair groupoid] Let $X$ be a set, and consider $G=X\times X$ with base space $G^{(0)}=X$ and projection maps as target and source $s=pr_1, r=pr_2$. Composition is given by $(x,y)(y,z)= (x,z)$, and one can easily check that $e_x=(x,x)$ and $(x,y)^{-1} = (y,x)$. $X\times X$ is étale if $X$ is discrete.
 \end{Expl}
 
-\begin{Expl}[Equivalence relations] More generally, consider an equivalence relation $R \subset X\times X$ on a topological space $X$. It naturally has a structure of topological groupoid, as a subgroupoid of $X\times X$. 
+\begin{Expl}[Equivalence relations] More generally, consider an equivalence relation $R \subseteq X\times X$ on a topological space $X$. It naturally has a structure of topological groupoid, as a subgroupoid of $X\times X$. 
 \end{Expl}
 
 \begin{Expl}[Pull-back]
@@ -157,7 +157,7 @@ Notice that, if $A$ is a $C(G^{(0)})$-algebra, then $s^* A = A \otimes_s C_0(G)$
 An action of a groupoid $G$ on a $C^*$-algebra $A$ is a triple $(A,\theta,\alpha)$ where $(A,\theta)$ is a $C(G^{(0)})$-structure and $\alpha : s^* A \rightarrow r^* A$ is an isomorphism of $C(G)$-algebras such that $\alpha_{gg'}= \alpha_g\circ \alpha_{g'}$ for all $(g,g')\in G^{(2)}$.
 \end{definition} 
 
-If $A$ is a $G$-algebra, and $U \subset G^{(0)}$ is an open subset, recall from \cite{LeGall} that the restriction $A_U$ is defined as $\eta^* A = C_0(U) \otimes_\eta A$ where $\eta : C_0(U) \hookrightarrow C_0(G^{(0)})$ is the canonical inclusion. 
+If $A$ is a $G$-algebra, and $U \subseteq G^{(0)}$ is an open subset, recall from \cite{LeGall} that the restriction $A_U$ is defined as $\eta^* A = C_0(U) \otimes_\eta A$ where $\eta : C_0(U) \hookrightarrow C_0(G^{(0)})$ is the canonical inclusion. 
 %Let $F= G^{(0)}\backslash U$. As $A_U$ is naturally embedded into $A$, define $A_F$ to be the complementary of $A_U$. \\
 
 The space of continuous sections with compact support is defined as :

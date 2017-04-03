@@ -228,27 +228,45 @@ because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Let $E\in\mathcal E$. Recall that every $\eta\in P_E(G)$ is a finite probabilty measure in $G^{p(\eta)}$, hence can be written as a finite sum 
+Let $E\in\mathcal E$. Recall that every $\eta\in P_E(G)$ is a finite probability measure in $G^{p(\eta)}$, hence can be written as a finite sum 
 \[\eta = \sum_{g\in G^{p(\eta)}}\lambda_g(\eta)\delta_g,\]
 where $\delta_g$ is the Dirac probability at $g\in G^{p(\eta)}$. This defines a map 
 \[\lambda : \left\{\begin{array}{rcl}
 G\times_{s,p} P_E(G) & \rightarrow & [0,1] \\
  (g,\eta) & \mapsto & \lambda_g(\eta)\end{array}\right. .\] 
-Let us show that $\lambda \in C_c(G\times_{s,p} P_E(G))$.\\
 
-Define $h\in C_c(G^{(0)}\times_{s,p}P_E(G))$ as the restriction of $\lambda$ to $G^{(0)}\times_{s,p}P_E(G))$, i.e. $h(x,\eta) = \lambda_{e_x}(\eta)$, for every $x\in G^{(0)}$ and $\eta\in P_E(G)$ such that $p(\eta) = x$. Notice that $h(x,g.\eta)= \lambda(g,\eta) = \lambda_g(\eta)$ for every $(g,\eta)\in G\times_{s,p} P_E(G)$. Let us put $\mathcal L_E(g,\eta) = h^{\frac{1}{2}}(\eta) (g.h)^{\frac{1}{2}}(\eta)$. Because $\sum_{g\in G^{p(\eta)}}\lambda_g(\eta) = 1 ,\forall (g,\eta)\in G\times_{s,p} P_E(G)$, this defines a projection in $C_c(G\times_{s,p} P_E(G))$, hence in $C_0(P_E(G))\rtimes_r G$. Moreover $\mathcal L_E$ is of bounded propagation $E$, and defines a $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$. Moreover, for such controlled subsets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.
+\begin{lem}
+The function $\lambda : G\times_{s,p} P_E(G) \rightarrow [0,1]$ is continuous. 
+\end{lem}
+
+\begin{dem}
+Let $\{(g_k,\eta_k)\}_{k\in\N}\subseteq G\times_{s,p}P_E(G)$ be a sequence converging to $(g,\eta)\in G\times_{s,p}P_E(G)$. Let $x=p(\eta) = s(g)$ and $x_k=p(\eta_k) = s(g_k)$. There exist an open neighborhood $U\subseteq G^{(0)}$ of $x$ and an integer $k_0>0$ such that $s$ is injective on $s^{-1}(U)$ and $x_k\in U$ for every $k\geq k_0$. Then we can decompose $s^{-1}(U) = \coprod_{g\in G^x} S_g$ with, for each $g\in G^x$, an open bisection $S_g\subseteq G$. Let, for every $g\in G^x$, $\phi_g : G\rightarrow [0,1]$ be a continuous function equal to $1$ on $S_g$ and vanishing outside a small neighborhood of $S_g$. Then $\lambda_g(\eta) = \langle \eta,\phi_g\rangle / \sum_{h\in G^x}\langle \eta,\phi_h\rangle$ and $\lambda_{g_k}(\eta_k) = \langle \eta_k,\phi_g\rangle / \sum_{h\in G^x}\langle \eta_k,\phi_h\rangle$ for every $k\geq k_0$. It is now clear, by definition of the weak-$*$ topology, that $\lambda_{g_k}(\eta_k)$ converges to $\lambda_{g}(\eta)$.  \\
+\qed
+\end{dem}
+
+%Let $K\subseteq P_E(G)$ be a compact. Then $\{g\in G \text{ s.t. }\lambda(g,\eta)= 0\ \forall \eta \in K\}$ is compact. 
+Define $h$ as the restriction of $\lambda$ to $G^{(0)}\times_{s,p}P_E(G)$, i.e. $h(x,\eta) = \lambda_{e_x}(\eta)$, for every $x\in G^{(0)}$ and $\eta\in P_E(G)$ such that $p(\eta) = x$. Notice that $h(x,g.\eta)= \lambda(g,\eta) = \lambda_g(\eta)$ for every $(g,\eta)\in G\times_{s,p} P_E(G)$. Let us put 
+\[\mathcal L_E(g,\eta) = h^{\frac{1}{2}}(\eta) (g.h)^{\frac{1}{2}}(\eta)= \lambda_{e_x}^{\frac{1}{2}}(\eta)\lambda_g^{\frac{1}{2}}(\eta).\] 
+Notice that $\text{supp }\mathcal L_E\subseteq E\times_{s,p} p^{-1}(r(E))$, which is compact. Hence $\mathcal L_E\in C_c(G,C_0(P_E(G)))$. Because $\sum_{g\in G^{p(\eta)}}\lambda_g(\eta) = 1 ,\forall (g,\eta)\in G\times_{s,p} P_E(G)$, this defines a projection in $C_0(P_E(G))\rtimes_r G$ of propagation less than $E$. Moreover $\mathcal L_E$ defines a controlled $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$.\\ %Moreover, for such controlled subsets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.\\
 
 %There exists continuous functions $\lambda_g : P_E(G)\rightarrow [0,1]$ for all $g\in G$ such that $\eta = \sum_{g\in G^x}\lambda_g(\eta) \delta_g$ for any $\eta\in P_E(G)$. Define $h(x)=\lambda_{e_x}$ and $\phi = \sqrt h$. Notice that $g.h = \lambda_g$ for all $g\in G$, and as $\sum_{g\in G^x}\lambda_g = 1 ,\forall x\in G^{(0)}$, 
 %\[\mathcal L_E =\sum_{g\in G^x} \phi(g.\phi)\]
 %defines a projection of $C_0(P_E(G))\rtimes_r G$ with bounded propagation, and defines a $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$. Moreover, for such controlled subsets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.\\
 
+For every $G$-algebra $B$ and every controlled subsets $E,E'\in\mathcal E$ such that $E\subseteq E'$, the canonical inclusion $P_E(G)\hookrightarrow P_{E'}(G)$ induces a $*$-homomorphism $q_E^{E'} : C_0(P_{E'}(G))\rightarrow C_0(P_{E}(G))$, hence a map $(q_E^{E'})^* : RK^G(P_E(G),B)\rightarrow RK^G(P_{E'}(G),B)$ in $K$-homology and a map $((q_E^{E'})_G)_* : K(C_0(P_{E'}(G))\rtimes_r G)\rightarrow K(C_0(P_{E}(G))\rtimes_r G)$ in $K$-theory. The family of projections $\mathcal L_E$ are compatible with the morphisms $q_E^{E'}$, i.e. $((q_E^{E'})_G)_*[\mathcal L_{E'},0]_{\varepsilon,E'} = [\mathcal L_{E},0]_{\varepsilon,E}$, for every $\varepsilon\in (0,\frac{1}{4})$.
+
 \begin{definition}
-Let $B$ be a $G$-algebra, and $\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E$. Let $F\in \mathcal E$ such that $k_J.E \subseteq F$. The controlled assembly map for $G$ is defined as the composition of $J_G$ with the evaluation at $[\mathcal L_E,0]_{\varepsilon,E}$ :
+Let $B$ be a $G$-algebra, $\varepsilon\in (0,\frac{1}{4})$, and $E\in\mathcal E$. Let $F\in \mathcal E$ such that $k_J(\varepsilon).E \subseteq F$. The controlled assembly map for $G$ is defined as the family of maps :
 \[\mu_{G,B}^{\varepsilon,E,F}\left\{
 \begin{array}{rcl}
 RK^G(P_E(G), B) & \rightarrow & K_*^{\varepsilon, F}(B\rtimes_r G)\\
-z & \mapsto & \iota_{k_j.E}^{F} \circ J_G^{\varepsilon, E}(z)([\mathcal L_E,0]_{\varepsilon , E})
+z & \mapsto & \iota_{\alpha_J\varepsilon', k_J(\varepsilon').F'}^{\varepsilon,F} \circ J_G^{\varepsilon', F'}(z)([\mathcal L_E,0]_{\varepsilon' , F'})
 \end{array}\right.\]
+where $\varepsilon'$ and $F'$ satisfy :
+\begin{itemize}
+\item[$\bullet$] $\varepsilon\in (0,\frac{1}{4})$ such that $\alpha_J \varepsilon'\leq \varepsilon$,
+\item[$\bullet$] and $F'\in\mathcal E$ such that $E\subseteq F'$ and $k_J(\varepsilon).F'\subseteq F$.
+\end{itemize}
 \end{definition}
 
 
@@ -258,6 +276,9 @@ z & \mapsto & \iota_{k_j.E}^{F} \circ J_G^{\varepsilon, E}(z)([\mathcal L_E,0]_{
 
 \begin{rk}
 The assembly map is defined for any reasonnable crossed-products by $G$. In particular for the reduced one and the maximal one, so that we have two different assembly maps, which we shall distinguish writing $\mu_{G,r}$ and $\mu_{G,max}$ if necessary.
+\end{rk}
+
+\begin{rk} As for the controlled coarse assembly map, the controlled assembly map for an étale groupoid is compatible with the structure morphisms $q_{E}^{E'}$, and $\iota_{\varepsilon,E}^{\varepsilon',F'}$.
 \end{rk}
 
 \begin{rk} 
