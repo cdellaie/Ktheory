@@ -47,12 +47,14 @@ so that remark \ref{rk3.8} implies that $D_{\mathfrak K(l^2(\N))\otimes C^*(X,A)
 \qed
 \end{dem}
 
-\begin{rk} This result induces in $K$-theory and in $KK$-theory similar statements. Namely : 
-\begin{itemize}
-\item[$\bullet$] the boundary maps of the extensions $0 \rightarrow C^*(X,SA) \rightarrow C^*(X,CA) \rightarrow C^*(X,A) \rightarrow 0$ and
-$0 \rightarrow\mathfrak K(l^2(\N))\otimes C^*(X,A) \rightarrow \mathcal T_0 \otimes C^*(X,A) \rightarrow SC^*(X,A) \rightarrow 0$ are inverse of each other in $K$-theory,  
-\item[$\bullet$] $[\partial_{K(l^2(\N))\otimes C^*(X,A), T_0 \otimes C^*(X,A)}]$ and $[\partial_{C^*(X,SA),C^*(X,CA)}]$ are $KK$-inverse of each other.
-\end{itemize}
+\begin{rk} This result induces a similar statement in $K$-theory. %and in $KK$-theory similar statements. Namely : 
+Namely, the boundary maps of the extensions $0 \rightarrow C^*(X,SA) \rightarrow C^*(X,CA) \rightarrow C^*(X,A) \rightarrow 0$ and
+$0 \rightarrow\mathfrak K(l^2(\N))\otimes C^*(X,A) \rightarrow \mathcal T_0 \otimes C^*(X,A) \rightarrow SC^*(X,A) \rightarrow 0$ are inverse of each other in $K$-theory.
+%\begin{itemize}
+%\item[$\bullet$] the boundary maps of the extensions $0 \rightarrow C^*(X,SA) \rightarrow C^*(X,CA) \rightarrow C^*(X,A) \rightarrow 0$ and
+%$0 \rightarrow\mathfrak K(l^2(\N))\otimes C^*(X,A) \rightarrow \mathcal T_0 \otimes C^*(X,A) \rightarrow SC^*(X,A) \rightarrow 0$ are inverse of each other in $K$-theory,  
+%\item[$\bullet$] $[\partial_{K(l^2(\N))\otimes C^*(X,A), T_0 \otimes C^*(X,A)}]$ and $[\partial_{C^*(X,SA),C^*(X,CA)}]$ are $KK$-inverse of each other.
+%\end{itemize}
 \end{rk}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -199,10 +201,10 @@ The homomorphisms inducing the Morita equivalence make the following diagram com
 \[\begin{tikzcd}C^*(X,B_1)\arrow{r}{g_X}\arrow{d} & C^*(X,B_2)\arrow{d} \\ K_{C^*(X,B_1) } \arrow{r}{\psi}& K_{C^*(X,B_2)}\end{tikzcd},\]
 and $\sigma_X(g_*(z))= g_{X,*}\circ M_{C^*(X,B_1)}^{-1}\circ D_{K_{C^*(X,B_1)},E^{(\pi,T)}}=g_{X,*}\circ \sigma_X(z)$.\\
 
-\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_{J,A}]$ and $P=\frac{1+T}{2}$. Consider the following commutative diagram :
+\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_{J,A}]$ and $P=\frac{1+T}{2}$. Put $C=(1-P)\mathcal L_J(H_J)(1-P) $ and consider the following commutative diagram :
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} &J\arrow{r}\arrow{d} & A \arrow{r}\arrow{d}{\phi}& A/J\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} & J\otimes \mathfrak K\arrow{r} & E^{(\pi,T)} \arrow{r}& A/J\arrow{r} & 0
+0\arrow{r} & J\otimes \mathfrak K\arrow{r} & E^{(\pi,T)}\arrow{r}& A/J\arrow{r} & 0
 \end{tikzcd},\]
 where $\phi(a) = (q(a),P\pi(q(a))P)$ and $J\rightarrow J\otimes \mathfrak K; j\mapsto j\otimes e;$ with $e$ a rank one projection. We apply $C^*(X,-)$ to get the commutative diagram
 \[\begin{tikzcd}[column sep = small]
