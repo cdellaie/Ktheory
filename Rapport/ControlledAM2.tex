@@ -373,12 +373,12 @@ Let us prove the second point. Let $y\in K(B\rtimes_r G)$, and let $\varepsilon\
 This kind of statement leads us to define the following properties, following \cite{OY3}.\\
 \begin{itemize}
 \item[$\bullet$] $QI_{G,B}(E,E',F,\varepsilon)$ : for any $x\in RK^G(P_E(G), B )$, then $\mu^{\varepsilon,E,F}_G(x) = 0$ implies $q_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),B)$.
-\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : for any $y\in K^{\varepsilon,F}(B\rtimes G)$, there exists $x\in RK^G(P_E(G),B)$ such that $\mu^{\varepsilon',E,F'}_G(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.
+\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : for any $y\in K^{\varepsilon,F}(B\rtimes G)$, there exists $x\in RK^G(P_E(G),B)$ such that $\mu^{\varepsilon',E,F'}_G(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
 \end{itemize} 
 
 %%%%%%%%
 
-To prove the quantitative statements, we will need a serie of lemmas. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}.
+To prove the main theorems of this section, what we called quantitative statements, we will need a serie of lemmas. The first part is devoted to a study of the behaviour of $K$-homology under product of the coefficients. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}.
 
 \begin{lem}[lemma $3.6$,\cite{TuBC2}]\label{JLTform}
 Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarrow G^{(0)}$ is locally injective, and let $B$ be a $G$-algebra. Then for every $z\in RK^G(X,B)$ there exists a $G$-proper $G$-compact space $Z$ and a $K$-cycle $(H_B, \pi, T)\in \mathbb E^G(C_0(Z),B)$ representing $z$ such that :
@@ -472,8 +472,10 @@ The five lemma ensures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphi
 \qed
 \end{dem}
 
+%%%%%%%%
+
 We now turn to the behaviour of controlled $K$-theory with respect to products. Let $\mathcal B = (B_j)_j$ a countable family of $\mathcal E$-filtered $C^*$-algebras. For every $E\in\mathcal E$, put 
-\[\mathcal B_E = \prod_{E\in\mathcal E} (B_j)_E\otimes \mathfrak K.\]
+\[\mathcal B_E = \prod_{j} (B_j)_E\otimes \mathfrak K.\]
 Define $\mathcal B_\infty$ as the closure of $\cup_{E\in\mathcal E}\mathcal B_E$ in $\prod_j (B_j\otimes \mathfrak K)$. This construction is called the controlled product of a family of filtered $C^*$-algebras, and is also a $\mathcal E$-filtered $C^*$-algebra. The following lemma (\cite{OY3}, lemma $1.14$) relates the controlled $K$-theory of $\mathcal B_\infty$ and the product of the controlled $K$-theory groups of $B_j$.\\
 
 \begin{lem}[\cite{OY3}] Let $\mathcal B$ be a countable family of $\mathcal E$-filtered $C^*$-algebras. With the previous notations, and for every $\varepsilon\in(0,\frac{1}{4})$ and every $E\in\mathcal E$, there exists a control pair $(\alpha, h)$, independent of the family $\mathcal B$, such that the family of  maps 
@@ -482,9 +484,20 @@ induced by the composition $\prod B_j\otimes \mathfrak K\rightarrow B_k\otimes \
 \[\hat K(\mathcal B_\infty)\rightarrow \prod \hat K(B_j).\]
 \end{lem}
 
-\begin{lem}
+\begin{lem} Let $G$ be an étale groupoid with compact base space $G^{(0)}$. Let $(B_j)_j$ be a countable family of $G$-algebras, and $\mathfrak K$ the $G$-algebra of compact operators on a separable Hilbert space with trivial $G$-action. Then, $\mathcal B^G = ((B_j\otimes \mathfrak K)\rtimes_r G)_j$ is a countable family of $\mathcal E$-filtered $C^*$-algebra, and there exists a filtered $*$-isomorphism :
+\[\mathcal B^G_\infty \rightarrow (\prod_j B_j\otimes\mathfrak K)\rtimes_r G .\]
 \end{lem}
 
+\begin{dem} Notice that, as $\mathfrak K$ is endowed with the trivial action, $(B_j\rtimes_r G)\otimes\mathfrak K \cong (B_j\otimes\mathfrak K)\rtimes_r G$ for every $j$. By definition, for every $E\in \mathcal E$,  $\left( (\prod B_j\otimes\mathfrak K)\rtimes_r G \right)_E = \prod_j \left( (B_j\otimes\mathfrak K)\rtimes_r G\right)_E \cong \prod_j \left((B_j\rtimes_r G)_E \otimes \mathfrak K \right) = (\mathcal B^G_\infty )_E$.\\
+\qed
+\end{dem}
+
+The two previous lemmas entail the following result.
+
+\begin{cor}  Let $G$ be an étale groupoid with compact base space $G^{(0)}$. Let $(B_j)_j$ be a countable family of $G$-algebras, and $\mathfrak K$ the $G$-algebra of compact operators on a separable Hilbert space with trivial $G$-action. Then, there exists a control pair $(\alpha, h)$ and a $(\alpha, h)$-controlled isomorphism
+\[ \hat K(\mathcal B^G_\infty) \rightarrow \prod \hat K(B_j\rtimes_r G). \]
+\end{cor}
+%%%%%%%%%%
 We can now prove the quantitative statements.\\
 
 \begin{thm}\label{Quant1}
