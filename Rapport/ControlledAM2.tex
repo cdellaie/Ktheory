@@ -264,7 +264,7 @@ z & \mapsto & \iota_{\alpha_J\varepsilon', k_J(\varepsilon').F'}^{\varepsilon,F}
 \end{array}\right.\]
 where $\varepsilon'$ and $F'$ satisfy :
 \begin{itemize}
-\item[$\bullet$] $\varepsilon\in (0,\frac{1}{4})$ such that $\alpha_J \varepsilon'\leq \varepsilon$,
+\item[$\bullet$] $\varepsilon'\in (0,\frac{1}{4})$ such that $\alpha_J \varepsilon'\leq \varepsilon$,
 \item[$\bullet$] and $F'\in\mathcal E$ such that $E\subseteq F'$ and $k_J(\varepsilon).F'\subseteq F$.
 \end{itemize}
 \end{definition}
@@ -356,13 +356,13 @@ then $\mu_{G,A}$ is surjective.
 \end{prop}
 
 \begin{dem}
-Let $x\in RK(P_E(G)),A)$ which satisfies $\mu_{G,A}(x)=0$, then $\iota_{\varepsilon,F}\circ\mu_{G,A}^{\varepsilon,E,F}(x)=0$. By remark $1.18$ of \cite{OY2}, there exists a universal $\lambda>0$ and a certain $F''>0$ such that
+Let $E\in\mathcal E$ and $x\in RK(P_E(G)),A)$ such that $\mu_{G,A}(x)=0$. Then, for every $\varepsilon\in (0,\frac{1}{4})$ and every $F\in\mathcal E$ such that $k_J(\varepsilon).E\subseteq F$, $\iota_{\varepsilon,F}\circ\mu_{G,A}^{\varepsilon,E,F}(x)=0$. Let $\varepsilon''>0$ and $F''\in\mathcal E$ satisfying $\alpha_J\varepsilon''\leq \varepsilon$ and $k_J(\varepsilon''). F''\subseteq F$. By remark \ref{approximation}, there exists a universal $\lambda>0$ and a controlled subset $F'\in\mathcal E$ such that $F\subseteq F'$ and
 \[\begin{array}{lll}0 &  =  & \iota_{\varepsilon,F}^{\lambda\varepsilon,F'}\circ \mu_{G,A}^{\varepsilon,E,F}(x) \\
-			& = & \iota_{\varepsilon,F}^{\lambda\varepsilon,F'} (J_{G}^{\varepsilon,F}(x)([\mathcal L_E,0]_{\varepsilon,F})) \\
+			& = & \iota_{\varepsilon,F}^{\lambda\varepsilon,F'}\circ \iota^{\varepsilon,F}_{\alpha_J\varepsilon'',k_J(\varepsilon'').F''} (J_{G}^{\varepsilon'',F''}(x)([\mathcal L_E,0]_{\varepsilon'',F''})) \\
 			& = & J_{G}^{\lambda\varepsilon,F'}(x)([\mathcal L_E,0]_{\lambda\varepsilon,F'}) \\
 			& = & \mu_{G,A}^{\lambda\varepsilon,E,F'}(x).
 \end{array}\]
-But then the quantitative injectivity condition ensures that $x=0$ in $RK^G(P_{E'}(G),A)$ and $x=0$ in the inductive limit over $E$ $K^{top}(G,A)$.\\
+But then the quantitative injectivity condition ensures that $q_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),A)$ and $x=0$ in $K^{top}(G,A)$, which is an inductive limit over $E$.\\
 The second point is immediate. \\
 \qed
 \end{dem}
@@ -373,11 +373,9 @@ This kind of statement leads us to define the following properties, following \c
 \item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : for any $y\in K^{\varepsilon,F}(B\rtimes G)$, there exists $x\in RK^G(P_E(G),B)$ such that $\mu^{\varepsilon',E,F'}_G(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.
 \end{itemize} 
 
-\begin{thm}\label{Quant1}
-Let $B$ a $G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then $\mu_{G,\tilde B}$ is injective if and only if for every $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ and $F$ such that $k_J.E\subseteq F$, there exists $E' \in\mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(E,E',\varepsilon,F)$. 
-\end{thm}
+%%%%%%%%
 
-To prove the theorem, we will need a serie of lemmas. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}.
+To prove the quantitative statements, we will need a serie of lemmas. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}.
 
 \begin{lem}[lemma $3.6$,\cite{TuBC2}]\label{JLTform}
 Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarrow G^{(0)}$ is locally injective, and let $B$ be a $G$-algebra. Then for every $z\in RK^G(X,B)$ there exists a $G$-proper $G$-compact space $Z$ and a $K$-cycle $(H_B, \pi, T)\in \mathbb E^G(C_0(Z),B)$ representing $z$ such that :
@@ -471,7 +469,11 @@ The five lemma ensures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphi
 \qed
 \end{dem}
 
-We can now prove the theorem \ref{Quant1}.\\
+We can now prove the quantitative statements.\\
+
+\begin{thm}\label{Quant1}
+Let $B$ a $G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then $\mu_{G,\tilde B}$ is injective if and only if for every $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ and $F$ such that $k_J.E\subseteq F$, there exists $E' \in\mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(E,E',\varepsilon,F)$. 
+\end{thm}
 
 \begin{dem}
 Let $x\in KK^G(P_E(G),\tilde B)$ such that $\mu_{G,\tilde B}^E(x)=0$. Then, as the quantitative assembly maps factorize $\mu_{G,\tilde B}$, there exist $\varepsilon>0$ and $F$ such that $k_J. E \subseteq F$, satisfying $\mu_{G,\tilde B}^{\varepsilon,E,F}(x)=0$. Using the isomorphism of lemma \ref{prod} and the Morita equivalence, we can identify $x$ with $(x_j)_j$ under $RK^G(P_E(G),\tilde A)\simeq\prod_j RK^G(P_E(G),A)$. Now let $F'$ such that $F\subseteq F'$ and $QI_{A}(E,E',\varepsilon,F)$ holds. That ensures that $x_j=0$ in $RK^G(P_{E'}(G),B)$, and $x=0$.\\
