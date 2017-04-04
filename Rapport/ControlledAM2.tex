@@ -341,16 +341,18 @@ because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^E(
 In this subsection, the groupoid $G$ must have a compact unit space $G^{(0)}$.
 
 \begin{prop} 
-Let A be a $G$-algebra.\\
+Let B be a $G$-algebra.\\
 If the following statement is true :\\
 
-$\bullet$(Quantitative Injectivity) $\forall E\in\mathcal E$, there exists $\varepsilon\in (0,\frac{1}{4})$ such that, for all $F\in\mathcal E$ such that $k_J(\varepsilon) . E\subseteq F$, there exists $E'\in\mathcal E$ such that $E\subseteq E'$ satisfying : for every $x\in RK_*^G(P_E(G),A)$ satisfiying $\mu_{G,A}^{\varepsilon,E,F}(x)=0\in K^{\varepsilon,F}(A\rtimes_r G)$, then $q_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),A)$;\\
+$\bullet$(Quantitative Injectivity) $\forall E\in\mathcal E$, there exists $\varepsilon\in (0,\frac{1}{4})$ such that, for all $F\in\mathcal E$ such that $k_J(\varepsilon) . E\subseteq F$, there exists $E'\in\mathcal E$ such that $E\subseteq E'$ satisfying : for every $x\in RK_*^G(P_E(G),B)$ satisfiying $\mu_{G,B}^{\varepsilon,E,F}(x)=0\in K^{\varepsilon,F}(B\rtimes_r G)$, then $q_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),B)$;\\
 
 then $\mu_{G,A}$ is injective.\\
 
 On the other hand, if this statement is true : \\
 
-$\bullet$(Quantitative Surjectivity) there exists $\varepsilon\in (0,\frac{1}{4})$ such that for any controlled subsets $E,F\in\mathcal E$  such that $k_J(\varepsilon).E\subseteq F$,$\exists \varepsilon',F'$ such that $\varepsilon'\leq \varepsilon<\frac{1}{4}$ and $k_J E\subseteq F\subseteq F'$, such that for all $y\in K_*^{\varepsilon,F}(A\rtimes_r G),\exists x \in RK_*^G(P_E(G),A)$ such that $\mu_{G,A}^{\varepsilon',E,F'}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$;\\
+%$\bullet$(Quantitative Surjectivity) there exists $\varepsilon\in (0,\frac{1}{4})$ such that for any controlled subsets $E,F\in\mathcal E$  such that $k_J(\varepsilon).E\subseteq F$,$\exists \varepsilon',F'$ such that $\varepsilon'\leq \varepsilon<\frac{1}{4}$ and $k_J E\subseteq F\subseteq F'$, such that for all $y\in K_*^{\varepsilon,F}(A\rtimes_r G),\exists x \in RK_*^G(P_E(G),A)$ such that $\mu_{G,A}^{\varepsilon',E,F'}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$;\\
+
+$\bullet$(Quantitative Surjectivity) For every $\varepsilon\in (0,\frac{1}{4\alpha_J})$, every $F\in\mathcal E$ and every $y\in K^{\varepsilon,F}(B\rtimes_r G)$, there exist $\varepsilon'\in (0,\frac{1}{4\alpha_J})$, $E,F'\in\mathcal E$ and $z\in RK^G(P_E(G), B)$ such that $\varepsilon\leq \varepsilon'$, $F\subseteq F'$, $k_J(\varepsilon')E\subset F'$ and $\mu_{G,B}^{\varepsilon',E,F'}(z) = \iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.  \\
 
 then $\mu_{G,A}$ is surjective.
 \end{prop}
@@ -363,7 +365,8 @@ Let $E\in\mathcal E$ and $x\in RK(P_E(G)),A)$ such that $\mu_{G,A}(x)=0$. Then, 
 			& = & \mu_{G,A}^{\lambda\varepsilon,E,F'}(x).
 \end{array}\]
 But then the quantitative injectivity condition ensures that $q_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),A)$ and $x=0$ in $K^{top}(G,A)$, which is an inductive limit over $E$.\\
-The second point is immediate. \\
+
+Let us prove the second point. Let $y\in K(B\rtimes_r G)$, and let $\varepsilon\in (0,\frac{1}{4})$, $F\in\mathcal E$ and $x\in K^{\varepsilon,F}(B\rtimes_r G)$ such that $\iota_{\varepsilon,F}(x) =y$. The quantitative surjectivity condition implies that there exist $\varepsilon'\in (0,\frac{1}{4})$, $E,F'\in\mathcal E$, and $z\in RK^G(P_E(G),B)$ satisfying $\varepsilon\leq \varepsilon'$, $k_J(\varepsilon').E\subseteq F'$, $F\subseteq F'$ and $\mu_{G,B}^{\varepsilon',E,F'}(z) = \iota_{\varepsilon,F}^{\varepsilon',F'} (x)$, hence $\mu_{G,B}(z) =y$.\\
 \qed
 \end{dem}
 
@@ -468,6 +471,19 @@ RK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}{\Theta_{j-1}} & \prod_j RK^G_*( Z_
 The five lemma ensures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, because $\Delta$ is a typed $G$-simplicial complex (see \ref{Gcomplex}), $X_j\setminus X_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicity ensures then that, if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta^j_{j-1}$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $G$-compact proper $G$-space, and its anchor map is just the target map $r:G\rightarrow G^{(0)}$, which is supposed to be étale, so locally injective.\\
 \qed
 \end{dem}
+
+We now turn to the behaviour of controlled $K$-theory with respect to products. Let $\mathcal B = (B_j)_j$ a countable family of $\mathcal E$-filtered $C^*$-algebras. For every $E\in\mathcal E$, put 
+\[\mathcal B_E = \prod_{E\in\mathcal E} (B_j)_E\otimes \mathfrak K.\]
+Define $\mathcal B_\infty$ as the closure of $\cup_{E\in\mathcal E}\mathcal B_E$ in $\prod_j (B_j\otimes \mathfrak K)$. This construction is called the controlled product of a family of filtered $C^*$-algebras, and is also a $\mathcal E$-filtered $C^*$-algebra. The following lemma (\cite{OY3}, lemma $1.14$) relates the controlled $K$-theory of $\mathcal B_\infty$ and the product of the controlled $K$-theory groups of $B_j$.\\
+
+\begin{lem}[\cite{OY3}] Let $\mathcal B$ be a countable family of $\mathcal E$-filtered $C^*$-algebras. With the previous notations, and for every $\varepsilon\in(0,\frac{1}{4})$ and every $E\in\mathcal E$, there exists a control pair $(\alpha, h)$, independent of the family $\mathcal B$, such that the family of  maps 
+\[K^{\varepsilon,E}(\mathcal B_\infty)\rightarrow \prod K^{\varepsilon,E}(B_j)\]
+induced by the composition $\prod B_j\otimes \mathfrak K\rightarrow B_k\otimes \mathfrak K$ and the controlled Morita equivalence gives a $(\alpha,h)$-controlled isomorphism
+\[\hat K(\mathcal B_\infty)\rightarrow \prod \hat K(B_j).\]
+\end{lem}
+
+\begin{lem}
+\end{lem}
 
 We can now prove the quantitative statements.\\
 
