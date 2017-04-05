@@ -146,7 +146,7 @@ This gives a commutative diagram
 0\arrow{r} & K_{B_1\rtimes G}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& A\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
 0\arrow{r} & K_{B_2\rtimes G}\arrow{r} & E^{(\pi',T')} \arrow{r}& A\rtimes G\arrow{r} & 0
 \end{tikzcd}.\]
-and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi(\mathfrak K_{B_1\rtimes G})\subseteq K_{B_2\rtimes G}$, so that we can again apply the remark $3.8$ of \cite{OY2} to state
+and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, recall from remark \ref{isometry} that $\Psi( K_{B_1\rtimes G})\subseteq K_{B_2\rtimes G}$, hence we can again apply the remark $3.8$ of \cite{OY2} to state
 \[ D_{K_{B_2\rtimes G},E^{(\pi',T')}}=\psi_*\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}},\]
 which we compose by the Morita equivalence on the left $M_{B_2\rtimes G}^{-1}$
 \[J_G(g_*(z)) = M_{B_2\rtimes G}^{-1}\circ g_{G,*}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}.\]
@@ -169,7 +169,7 @@ where the lines are semi-split filtered and exact. Remark \ref{rk3.8} applies an
 0\arrow{r} &  K_{J\rtimes_r G}\arrow{r}\arrow{d}{=} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi_G}& A/J\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
 0\arrow{r} &  K_{J\rtimes_r G}\arrow{r} & \mathcal C\rtimes_r G\arrow{r}& A/J\rtimes_r G\arrow{r} & 0
 \end{tikzcd},\]
-hence another application of remark \ref{rk3.8} yields $D_{K_{J\rtimes_r G},A\rtimes_r G} = D_{K_{J\rtimes_r G},E^{(\pi,T)}}$. Composing the inverse of the Morita equivalence concludes.
+hence another application of remark \ref{rk3.8} yields $D_{K_{J\rtimes_r G},A\rtimes_r G} = D_{K_{J\rtimes_r G},E^{(\pi,T)}}$. Composing the inverse of the Morita equivalence concludes.\\
 \qed
 \end{enumerate}
 \end{dem}
@@ -222,7 +222,7 @@ holds.
 \end{prop}
 \begin{dem}
 %We will use the following fact : there exists a positive integer $d$ such that every cycle $z\in KK^G(A,B)$ has decomposition property $(d)$. For more details, we send to the appendice of the article of V. Lafforgue \cite{LaffOY} where H. Oyono-Oyono shows that claim. We just need to know that $z$ satisfies the decomposition property $(d)$ if there exist $d+1$ $G$-$C^*$-algebras $A_j$  and $d$ cycles $\alpha_j\in KK^G(A_{j-1},A_j), j=1,d$ such that $A_0=A$, $A_d=B$ and each $\alpha_j$ is either coming from a $*$-morphism $A_{j-1}\rightarrow A_j$, or there is a $*$-morphism $\theta_j: A_j\rightarrow A_{j-1}$ such that $\alpha_j \otimes_{A_j} [\theta_j]=1$ in $KK^G(A_{j-1},A_{j-1})$.\\
-Recall from \ref{propertyD} that every $\alpha\in KK^G(A,B)$ satisfies property $(d)$. This property reduces the proof to the special case of $\alpha\in KK^G(A,B)$ being the inverse of a $*$-homomorphism $\theta : B\rightarrow A$ in $KK^G$-theory : $\alpha\otimes_B [\theta]=1_A$. Let $z\in KK^G(B,C)$ :
+Recall from \ref{propertyD} that every $\alpha\in KK_0^G(A,B)$ satisfies property $(d)$. This property reduces the proof to the special case of $\alpha\in KK^G(A,B)$ being the inverse of a $*$-homomorphism $\theta : B\rightarrow A$ in $KK^G$-theory : $\alpha\otimes_B [\theta]=1_A$. Let $z\in KK^G(B,C)$ :
 \[\begin{array}{rcl}
 J_G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_G(\alpha\otimes z)\circ J_G(\alpha\otimes [\theta]) \\
 			& \sim & J_G(\alpha\otimes z)\circ J_G(\theta_*(\alpha))\\
@@ -230,7 +230,16 @@ J_G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_G(\alpha\otimes z)\circ J
 			& \sim & J_G(\theta^*(\alpha\otimes z))\circ J_G(\alpha)\\
 			& \sim & J_G(z)\circ J_G(\alpha) \\
 \end{array}\] 
-because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The control on the propagation of the first line follows from remark $2.5$ of \cite{OY2} and point $(v)$, the other lines are equal by points $(iii)$ and $(iv)$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes, and $(\alpha_K,k_K)$ can be taken to be $( \alpha_J^{2d},( k_J)^{*2d})$.
+because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The control on the propagation of the first line follows from remark $2.5$ of \cite{OY2} and point $(v)$, the other lines are equal by points $(iii)$ and $(iv)$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes, and $(\alpha_K,k_K)$ can be taken to be $( \alpha_J^{2d},( k_J)^{*2d})$. The same argument works if $z'$ is an even $KK$-element.\\
+
+Let $z$ and $z'$ be odd $KK$-elements. Then, as for $\hat\sigma_X$, we have :
+\[\begin{array}{rcl}
+J_G (z\otimes z') & = &  J_G (z\otimes_B [\partial_{B}]\otimes_{SB} [\partial_B]^{-1}\otimes_B z') \\
+			& \sim & J_G ( [\partial_B]^{-1}\otimes_B z')\circ J_G (z\otimes_B [\partial_{B}])\\
+			& \sim & J_G ( [\partial_B]^{-1}\otimes_B z')\circ J_G ( [\partial_B])\circ J_G( [\partial_B]^{-1})\circ J_G (z\otimes_B [\partial_{B}])\\		
+			& \sim & J_G (  z')\circ J_G (z),\\
+\end{array}\] 
+where we used the previous case for the second line, Lemma \ref{Kasparov1} for the third line, and Proposition \ref{InverseEven} for the last one.\\
 \qed
 \end{dem}
 
@@ -252,14 +261,16 @@ The function $\lambda : G\times_{s,p} P_E(G) \rightarrow [0,1]$ is continuous.
 \end{lem}
 
 \begin{dem}
-Let $\{(g_k,\eta_k)\}_{k\in\N}\subseteq G\times_{s,p}P_E(G)$ be a sequence converging to $(g,\eta)\in G\times_{s,p}P_E(G)$. Let $x=p(\eta) = s(g)$ and $x_k=p(\eta_k) = s(g_k)$. There exist an open neighborhood $U\subseteq G^{(0)}$ of $x$ and an integer $k_0>0$ such that $s$ is injective on $s^{-1}(U)$ and $x_k\in U$ for every $k\geq k_0$. Then we can decompose $s^{-1}(U) = \coprod_{g\in G^x} S_g$ with, for each $g\in G^x$, an open bisection $S_g\subseteq G$. Let, for every $g\in G^x$, $\phi_g : G\rightarrow [0,1]$ be a continuous function equal to $1$ on $S_g$ and vanishing outside a small neighborhood of $S_g$. Then $\lambda_g(\eta) = \langle \eta,\phi_g\rangle / \sum_{h\in G^x}\langle \eta,\phi_h\rangle$ and $\lambda_{g_k}(\eta_k) = \langle \eta_k,\phi_g\rangle / \sum_{h\in G^x}\langle \eta_k,\phi_h\rangle$ for every $k\geq k_0$. It is now clear, by definition of the weak-$*$ topology, that $\lambda_{g_k}(\eta_k)$ converges to $\lambda_{g}(\eta)$.  \\
+Let $\{(g_j,\eta_j)\}_{j\in J}\subseteq G\times_{s,p}P_E(G)$ be a sequence converging to $(g,\eta)\in G\times_{s,p}P_E(G)$. Let $x=p(\eta) = s(g)$ and $x_j=p(\eta_j) = s(g_j)$. There exists an open neighborhood $U\subseteq G^{(0)}$ of $x$ such that $s$ is injective on $s^{-1}(U)$ and such that $x_j$ belongs ultimately to $U$. We can suppose $x_j\in U$ for every $j$. Then we can decompose $s^{-1}(U) = \coprod_{g\in G^x} S_g$ with, for each $g\in G^x$, an open bisection $S_g\subseteq G$. Let, for every $g\in G^x$, $\phi_g : G\rightarrow [0,1]$ be a continuous function equal to $1$ on $S_g$ and vanishing outside a small neighborhood of $S_g$. Then $\lambda_g(\eta) = \langle \eta,\phi_g\rangle / \sum_{h\in G^x}\langle \eta,\phi_h\rangle$ and $\lambda_{g_j}(\eta_j) = \langle \eta_j,\phi_g\rangle / \sum_{h\in G^x}\langle \eta_j,\phi_h\rangle$ for every $j\in J$. It is now clear, by definition of the weak-$*$ topology, that $\lambda_{g_j}(\eta_j)$ converges to $\lambda_{g}(\eta)$.  \\
 \qed
 \end{dem}
 
 %Let $K\subseteq P_E(G)$ be a compact. Then $\{g\in G \text{ s.t. }\lambda(g,\eta)= 0\ \forall \eta \in K\}$ is compact. 
-Define $h$ as the restriction of $\lambda$ to $G^{(0)}\times_{s,p}P_E(G)$, i.e. $h(x,\eta) = \lambda_{e_x}(\eta)$, for every $x\in G^{(0)}$ and $\eta\in P_E(G)$ such that $p(\eta) = x$. Notice that $h(x,g.\eta)= \lambda(g,\eta) = \lambda_g(\eta)$ for every $(g,\eta)\in G\times_{s,p} P_E(G)$. Let us put 
-\[\mathcal L_E(g,\eta) = h^{\frac{1}{2}}(\eta) (g.h)^{\frac{1}{2}}(\eta)= \lambda_{e_x}^{\frac{1}{2}}(\eta)\lambda_g^{\frac{1}{2}}(\eta).\] 
-Notice that $\text{supp }\mathcal L_E\subseteq E\times_{s,p} p^{-1}(r(E))$, which is compact. Hence $\mathcal L_E\in C_c(G,C_0(P_E(G)))$. Because $\sum_{g\in G^{p(\eta)}}\lambda_g(\eta) = 1 ,\forall (g,\eta)\in G\times_{s,p} P_E(G)$, this defines a projection in $C_0(P_E(G))\rtimes_r G$ of propagation less than $E$. Moreover $\mathcal L_E$ defines a controlled $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$.\\ %Moreover, for such controlled subsets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.\\
+Notice that $\lambda_{g'}(g.\eta) = \lambda_{g^{-1}g'}(\eta)$ for every $\eta\in P_E(G)$, $g\in G_{p(\eta)}$ and $g'\in G^{r(g)}$. Define $h$ as the restriction of $\lambda$ to $G^{(0)}\times_{s,p}P_E(G)$, i.e. $h(x,\eta) = \lambda_{e_x}(\eta)$, for every $x\in G^{(0)}$ and $\eta\in P_E(G)$ such that $p(\eta) = x$. Notice that $h(x,g^{-1}.\eta)= \lambda(g,\eta) = \lambda_g(\eta)$ for every $(g,\eta)\in G\times_{s,p} P_E(G)$. Let us put
+ 
+\[\mathcal L_E(g,\eta) = h^{\frac{1}{2}}(x,\eta) h^{\frac{1}{2}}(x,g^{-1}.\eta)= \lambda_{e_x}^{\frac{1}{2}}(\eta)\lambda_g^{\frac{1}{2}}(\eta).\] 
+
+Notice that $\text{supp }\mathcal L_E\subseteq E\times_{s,p} p^{-1}(r(E))$, which is compact. Hence $\mathcal L_E$ is an element of $C_c(G,C_0(P_E(G)))$. Because $\sum_{g\in G^{p(\eta)}}\lambda_g(\eta) = 1 ,\forall (g,\eta)\in G\times_{s,p} P_E(G)$, this defines a projection in $C_0(P_E(G))\rtimes_r G$ of propagation less than $E$. Moreover $\mathcal L_E$ defines a controlled $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$.\\ %Moreover, for such controlled subsets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.\\
 
 %There exists continuous functions $\lambda_g : P_E(G)\rightarrow [0,1]$ for all $g\in G$ such that $\eta = \sum_{g\in G^x}\lambda_g(\eta) \delta_g$ for any $\eta\in P_E(G)$. Define $h(x)=\lambda_{e_x}$ and $\phi = \sqrt h$. Notice that $g.h = \lambda_g$ for all $g\in G$, and as $\sum_{g\in G^x}\lambda_g = 1 ,\forall x\in G^{(0)}$, 
 %\[\mathcal L_E =\sum_{g\in G^x} \phi(g.\phi)\]
@@ -364,13 +375,13 @@ On the other hand, if this statement is true : \\
 
 %$\bullet$(Quantitative Surjectivity) there exists $\varepsilon\in (0,\frac{1}{4})$ such that for any controlled subsets $E,F\in\mathcal E$  such that $k_J(\varepsilon).E\subseteq F$,$\exists \varepsilon',F'$ such that $\varepsilon'\leq \varepsilon<\frac{1}{4}$ and $k_J E\subseteq F\subseteq F'$, such that for all $y\in K_*^{\varepsilon,F}(A\rtimes_r G),\exists x \in RK_*^G(P_E(G),A)$ such that $\mu_{G,A}^{\varepsilon',E,F'}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$;\\
 
-$\bullet$(Quantitative Surjectivity) For every $\varepsilon\in (0,\frac{1}{4\alpha_J})$, every $F\in\mathcal E$ and every $y\in K^{\varepsilon,F}(B\rtimes_r G)$, there exist $\varepsilon'\in (0,\frac{1}{4\alpha_J})$, $E,F'\in\mathcal E$ and $z\in RK^G(P_E(G), B)$ such that $\varepsilon\leq \varepsilon'$, $F\subseteq F'$, $k_J(\varepsilon')E\subset F'$ and $\mu_{G,B}^{\varepsilon',E,F'}(z) = \iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.  \\
+$\bullet$(Quantitative Surjectivity) For every $\varepsilon\in (0,\frac{1}{4\alpha_J})$, every $F\in\mathcal E$ and every $y\in K^{\varepsilon,F}(B\rtimes_r G)$, there exist $\varepsilon'\in (0,\frac{1}{4\alpha_J})$, $E,F'\in\mathcal E$ and $z\in RK^G(P_E(G), B)$ such that $\varepsilon\leq \varepsilon'$, $F\subseteq F'$, $k_J(\varepsilon')E\subseteq F'$ and $\mu_{G,B}^{\varepsilon',E,F'}(z) = \iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.  \\
 
 then $\mu_{G,A}$ is surjective.
 \end{prop}
 
 \begin{dem}
-Let $E\in\mathcal E$ and $x\in RK(P_E(G)),A)$ such that $\mu_{G,A}(x)=0$. Then, for every $\varepsilon\in (0,\frac{1}{4})$ and every $F\in\mathcal E$ such that $k_J(\varepsilon).E\subseteq F$, $\iota_{\varepsilon,F}\circ\mu_{G,A}^{\varepsilon,E,F}(x)=0$. Let $\varepsilon''>0$ and $F''\in\mathcal E$ satisfying $\alpha_J\varepsilon''\leq \varepsilon$ and $k_J(\varepsilon''). F''\subseteq F$. By remark \ref{approximation}, there exists a universal $\lambda>0$ and a controlled subset $F'\in\mathcal E$ such that $F\subseteq F'$ and
+Let $E\in\mathcal E$ and $x\in RK(P_E(G)),A)$ such that $\mu_{G,A}^E(x)=0$. Then, for every $\varepsilon\in (0,\frac{1}{4})$ and every $F\in\mathcal E$ such that $k_J(\varepsilon).E\subseteq F$, $\iota_{\varepsilon,F}\circ\mu_{G,A}^{\varepsilon,E,F}(x)=0$. Let $\varepsilon''>0$ and $F''\in\mathcal E$ satisfying $\alpha_J\varepsilon''\leq \varepsilon$ and $k_J(\varepsilon''). F''\subseteq F$. By remark \ref{approximation}, there exists a universal $\lambda>0$ and a controlled subset $F'\in\mathcal E$ such that $F\subseteq F'$ and
 \[\begin{array}{lll}0 &  =  & \iota_{\varepsilon,F}^{\lambda\varepsilon,F'}\circ \mu_{G,A}^{\varepsilon,E,F}(x) \\
 			& = & \iota_{\varepsilon,F}^{\lambda\varepsilon,F'}\circ \iota^{\varepsilon,F}_{\alpha_J\varepsilon'',k_J(\varepsilon'').F''} (J_{G}^{\varepsilon'',F''}(x)([\mathcal L_E,0]_{\varepsilon'',F''})) \\
 			& = & J_{G}^{\lambda\varepsilon,F'}(x)([\mathcal L_E,0]_{\lambda\varepsilon,F'}) \\

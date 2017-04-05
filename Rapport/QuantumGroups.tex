@@ -1,0 +1,39 @@
+\section{Discrete and Compact Quantum groups}
+
+We recall in this section basic facts about the theory of compact quantum groups. This theory was developed by Woronowicz in the $1980$'s. The reader can find more details in \cite{Wo}. Our presentation ows a lot to the article \cite{VerVaes}. We recall that $\otimes$ denotes the minimal or spatial tensor product of $C^*$-algebras.
+
+\begin{definition}
+A compact quantum group is a pair $\mathbb G = (C(\mathbb G),\Delta)$ where $C(\mathbb G)$ is a unital $C^*$-algebra and $\Delta : C(\mathbb G) \rightarrow C(\mathbb G)\otimes C(\mathbb G)$ is a unital $*$-homomorphism satisfying :
+\begin{itemize}
+\item[$\bullet$] the coassociativity condition, i.e. $(\Delta \otimes id)\Delta=(id\otimes \Delta )\Delta$ ;
+\item[$\bullet$] the left and right cancellation property, i.e. the linear spans of $\Delta(C(\mathbb G))(1\otimes C(\mathbb G))$ and $\Delta(C(\mathbb G))(C(\mathbb G)\otimes C(\mathbb G))$ are dense in $C(\mathbb G)\otimes C(\mathbb G)$.
+\end{itemize} 
+\end{definition}
+
+\begin{Expl} Let $G$ be a compact group, and define $\Delta : C(G)\rightarrow C(G)\otimes C(G)$ by $(\Delta f)(g,g') = f(gg')$, where $C(G)\otimes C(G)$ is identified with $C(G\times G)$. Then $(C(G),\Delta ) $ is a compact quantum group.
+\end{Expl}
+
+The notation $C(\mathbb G)$ was adopted to suggest an analogy with this example. In general though, the $C^*$-algebra is noncommutative, and there is no topological space underlying the quantum group. Still, one often talks of $C(\mathbb G)$ as "the algebra of continous functions" on $\mathbb G$.
+
+\begin{Expl}
+Let $\Gamma$ be a discrete group and define the reduced $C^*$-algebra $C_r^*(\Gamma)$ of $\Gamma$. It coincides with $\C\rtimes_r \Gamma$ and is unital. The map $ \lambda_\gamma \mapsto \lambda_\gamma\otimes \lambda_\gamma$ extends to a unital $*$-homomorphism $\Delta :C_r^*(\Gamma)\rightarrow C_r^*(\Gamma)\otimes C_r^*(\Gamma) $. Then $(C_r^*(\Gamma),\Delta)$ is a compact quantum group, which can be seen as a candidate for what should be the continuous functions on the reduced dual $\hat\Gamma$. By Fourier transform, it is exactly the case when $\Gamma$ is commutative.
+\end{Expl}
+
+\begin{definition} A unitary representation $(H,U)$ of $\mathbb G$ on a Hilbert space $H$ is a unitary element $U \in \mathcal M(\mathfrak K(H)\otimes C(\mathbb G))$ such that $(id\otimes\Delta)(U) = U_{12}U_{13}$. Let $(H,U)$ and $(H',U')$ be two unitary representations of $\mathbb G$. The space of intertwiners between $U$ and $U'$ is defined as 
+\[Hom(U,U') = \{T\in \mathcal L(H',H) \text{ s.t. }U(T\otimes 1) = (T\otimes 1) U' \}.\]
+We denote by $End(U)$ the intertwiners of $Hom(U,U)$. A unitary representation is called irreducible if $End(U) = \C 1$. 
+\end{definition}
+
+We define sum and tensor product of representations as follows. Let $(H,U)$ and $(H',U')$ be two unitary representations. Then the sum is defined as $(H\oplus H', U\oplus U')$. The tensor product is defined as $(H\otimes H',W)$ where $W = U_{13} U'_{23}\in \mathcal M(\mathfrak K(H\otimes H')\otimes C(\mathbb G))$.
+
+\begin{definition}
+As in the case of compact groups, we define an equivalence relation on unitary representations of $\mathbb G$ by 
+\[(H,U)\sim (H',U') \text{ iff } Hom(U,U') \text{ contains a non trivial unitary operator}.\]
+The set of equivalence classes of unitary representations is denoted by $Irrep(\mathbb G)$. We choose for each $\pi\in Irrep (\mathbb G)$ a unitary representation $(H_\pi, U^{\pi})$. 
+\end{definition}
+
+The following theorem is crucial, and is a generalization of the classical case. 
+
+\begin{thm} Every irreducible representation of a compact quantum group is finite dimensional. Every finite dimensional repreesentation of a compact quantum group is equivalent to a sum of irreducible unitary representations. 
+\end{thm}
+ 
