@@ -155,7 +155,7 @@ Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarro
 \end{thm}
 
 \begin{dem}
-Recall that any $*$-morphism $\phi : A\rightarrow B$ induces, for any $A$-Hilbert module $E$, a $*$-morphism $\phi_* : \mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_A B)$. Now take $E$ to be $l^2(X)\otimes A$. Then $\eta\otimes a\otimes b\mapsto \eta \otimes\phi(a) b $ extends to an isometry $V\in \mathcal L_B(E\otimes_A B,l^2(X)\otimes B)$.\\
+Recall that any $*$-morphism $\phi : A\rightarrow B$ induces, for any $A$-Hilbert module $E$, a $*$-morphism $\phi_* : \mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_A B)$. Now take $E$ to be $l^2(X)\otimes A$. Then, according to remark \ref{isometry}, $\eta\otimes a\otimes b\mapsto \eta \otimes\phi(a) b $ extends to an isometry $V\in \mathcal L_B(E\otimes_A B,l^2(X)\otimes B)$ which respects compact operators.\\
 The linear map $T \mapsto V\phi_*(T)V^*$ maps $C_R[X,A]$ into $C_R[X,B]$, and so extends to a $*$-morphism $C^*(X,A)\rightarrow C^*(X,B)$. The composition property is clear from the construction.\\
 \qed
 \end{dem}
@@ -177,18 +177,20 @@ Let us recall the construction of $\sigma_X$. Let us first notice that $C^*(X;B\
 
 Let $(H_B,\pi,T)\in\mathbb E(A,B)$ be a $K$-cycle. Put $E = l^2(X)\otimes H\otimes A$. We can construct the internal tensor product  $E\otimes_\pi H_B$ with the help of the $*$-homomorphism $\pi : A \rightarrow \mathcal L_B(H_B)$. We also dispose of a $*$-homomorphism $\mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_\pi H_B)$. But the map 
 \[(\xi\otimes a)\otimes_\pi \eta \in E\otimes_\pi H_B \mapsto \xi\otimes (\pi(a)\eta)\in l^2(X)\otimes H\otimes H_B \] %\cong l^2(X)\otimes H_B
-extends to an isometry $E\otimes_\pi H_B \rightarrow l^2(X)\otimes H\otimes  H_B$. As in remark \ref{isometry}, the conjugation by this isometry sends compact operators to compact operators. Moreover, it does not alter propagation, hence $\mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_\pi H_B)\subseteq \mathcal L_B(l^2(X)\otimes H\otimes H_B)$ induces a map $\tilde \pi : C^*(X,A)\rightarrow \mathcal \mathcal M(C^*(X,B\otimes\mathfrak K))\cong \mathcal L_{C^*(X,B)}(C^*(X,B))$. Define $\tilde T$ as $1\otimes T$ acting on $l^2(X)\otimes H \otimes H_B$. Then $(l^2(X)\otimes H\otimes B,\tilde \pi,\tilde T)\in \mathbb E(C^*(X,A),C^*(X,B))$ and we put $\sigma_X([H_B,\pi,T])=[l^2(X)\otimes H\otimes B,\tilde \pi,\tilde T]\in KK(C^*(X,A),C^*(X,B))$.\\
+extends to an isometry $E\otimes_\pi H_B \rightarrow l^2(X)\otimes H\otimes  H_B$. As in remark \ref{isometry}, the conjugation by this isometry sends compact operators to compact operators. Moreover, it does not alter propagation, hence $\mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_\pi H_B)\subseteq \mathcal L_B(l^2(X)\otimes H\otimes H_B)$ induces a map $\tilde \pi : C^*(X,A)\rightarrow \mathcal \mathcal M(C^*(X,B\otimes\mathfrak K))\cong \mathcal L_{C^*(X,B)}(C^*(X,B))$. Define $\tilde T$ as $1\otimes T$ acting on $l^2(X)\otimes H \otimes H_B$. Then, according to remark \ref{isometry}, the $K$-cycle relations are satisfied for $\tilde T$ and $\tilde \pi$. Hence $(l^2(X)\otimes H\otimes B,\tilde \pi,\tilde T)\in \mathbb E(C^*(X,A),C^*(X,B))$ and we put $\sigma_X([H_B,\pi,T])=[l^2(X)\otimes H\otimes B,\tilde \pi,\tilde T]\in KK(C^*(X,A),C^*(X,B))$.\\
+
+A proof of the compatibility with Kasparov products can be found in \cite{OY3}. Notice than it can be deduced from Proposition \ref{Roe2}, where we construct a controlled morphism which induces right-multiplication by $\sigma_X(z)$ in $K$-theory and respects Kasparov products.\\ 
 
 Let $X$ be a coarse space with bounded geometry. The Rips complex is the inductive system of finite dimensional simplicial complexes
 \[P_E(X)=\{\eta\in \text{Prob}(X)\text{ s.t. supp }\eta\subseteq E\}\quad,\forall E\in \mathcal E_X,\]
 endowed with the $*$-weak topology. It is an inductive system with respect to inclusion of entourages.\\
  
-Let us recall the definiton of the left-hand side of the coarse assembly map. The coarse homology group of $X$ with coefficients in an arbitrary $C^*$-algebra $B$ is defined as 
+Let us recall the definition of the left-hand side of the coarse assembly map. The coarse homology group of $X$ with coefficients in an arbitrary $C^*$-algebra $B$ is defined as 
 \[KX_*(X,B)=\varinjlim_{E\in \mathcal E_X} KK(C_0(P_E(X)),B)\]
 where the limit is taken along the inductive system $\{P_E(X)\}_{E\in\mathcal E_X}$. \\
 
 Let $E\in \mathcal E_X$. Any simplex $\eta\in P_E(X)$ can be written as a finite sum $\eta=\sum_x \lambda_x(\eta)\delta_x$ by boundedness of the geometry. Here, $\delta_x$ is the Dirac measure at $x\in X$. The functions $\lambda_x :\eta\mapsto \lambda_x(\eta)$ are continuous and satifisfy $\sum\lambda_x(\eta) = 1,\forall\eta\in P_E(X)$, so that
-\[V_0\left\{\begin{array}{rcl} 
+\[\label{V0}\tag{1} V_0\left\{\begin{array}{rcl} 
  C_0(P_E(X)) & \rightarrow 	& l^2(X)\otimes C_0(P_E(X)) 		\\ 
  f           & \mapsto 		& (\lambda_x^{\frac{1}{2}}f)_{x\in X} 
 \end{array}\right.\] 
@@ -226,12 +228,12 @@ Let $E\in \mathcal E_X$ be an entourage. Take a cycle $(H,\pi, T)\in E(C_0(P_E(X
 \[T'=\sum \lambda_x^{\frac{1}{2}} T \lambda_x^{\frac{1}{2}} \] 
 is a compact perturbation of $T$ in $\mathcal L(H)$ with bounded propagation, and is invertible modulo $C^*(P_E(X),H)$, so defines a class $[T']\in K_0(C^*(P_E(X),H))$. 
 %But $P_E(X)$ and $X$ are coarsely equivalent, the barycentric map $P_E(X)\rightarrow X$ is a coarse equivalence which is covered by $V_0$, so that 
-The same formula for $V_0$, i.e. $V_0f = (\lambda_x^{\frac{1}{2}}f)_{x}$ defines an isometry of Hilbert spaces, still denoted $V_0$, from $l^2(P_E(X))$ to $l^2(X)\otimes l^2(P_E(X))$. Multiplication by $C_0(P_E(X))$ on the $l^2(P_E(X))$ factor endows these Hilbert spaces with a structure of $P_E(X)$-module, with respect to which the propagation of $V_0$ is bounded by $s = \sup_E d$. Put $V = 1\otimes V_0 $ which defines a $*$-homomorphism
+The same formula for $V_0$ than formula \ref{V0}, i.e. $V_0f = (\lambda_x^{\frac{1}{2}}f)_{x}$ defines an isometry of Hilbert spaces, still denoted $V_0$, from $l^2(P_E(X))$ to $l^2(X)\otimes l^2(P_E(X))$. Multiplication by $C_0(P_E(X))$ on the $l^2(P_E(X))$ factor endows these Hilbert spaces with a structure of $P_E(X)$-module, with respect to which the propagation of $V_0$ is bounded by $s = 2\sup_E d$. Put $V = 1\otimes V_0 $ which defines a $*$-homomorphism
 \[Ad_{V} :\left\{\begin{array}{rcl} 
 \mathcal L(H\otimes l^2(X)\otimes l^2(P_E(X)) ) & \rightarrow & \mathcal L(H\otimes l^2(X)\otimes l^2(P_E(X)) ) \\
 T &\mapsto & VTV^* \\
 \end{array}\right.\]
-which sends operators of propagation $R$ to operators of propagation $R+2s$ and respects local compactness. Hence, it induces a $*$-homomorphism $C^*(P_E(X))\rightarrow C^*(X)$ and a homomorphism
+which sends operators of finte propagation to operators of finite propagation and respects local compactness. Hence, it induces a $*$-homomorphism $C^*(P_E(X))\rightarrow C^*(X)$ and a homomorphism
 \[(Ad_{V})_* : K_*(C^*(P_E(X)))\rightarrow K_*(C^*(X)).\]
 %is an isomorphism, which does only depend on the coarse class of the barycentric map.\\
 

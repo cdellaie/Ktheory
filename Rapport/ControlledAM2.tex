@@ -8,13 +8,15 @@ In this section, we will always use a coarse structure $\mathcal E$ of a locally
 
 %Let $A$ and $B$ be two $G$-$C^*$-algebras, and $H$ a separable Hilbert space, $l^2(\Z)$ for instance, and $H_G= H\otimes L^2(G,\lambda)$. The standard Hilbert module over $B$ is denoted by $H_B=H_G\otimes B$, and $K_B$ is the algebra of compact operators for $H_B$, i.e. $K(H)\otimes L^2(G,\lambda)\otimes B$. \\
 
+In this section, for every $G$-algebra $B$, we use the notation $K_{B\rtimes_r G}$ for $\mathfrak K_{B \rtimes_r G}(B \rtimes_r G)\cong \mathfrak K \otimes (B\rtimes_r G)$.\\
+
 Let $A$ and $B$ be two $G$-$C^*$-algebras. If $\beta : s^* B \rightarrow r^* B$ is the action of $G$, notice that the canonical action on the standard Hilbert module $H_B$ is given by $V=id_H\otimes \beta : s^* H_B \cong H_{s^* B} \rightarrow r^* H_B \cong H_{r^* B}$. \\
 
 Recall that every $K$-cycle $z\in KK^G(A,B)$ can be represented as a triple $(H_B, \pi, T)$ where :
 \begin{itemize}
 \item[$\bullet$]$\pi : A\rightarrow \mathcal L_B(H_B)$ is a $*$-representation of $A$ on $H_B$.
 \item[$\bullet$]$T\in \mathcal L_B(H_B)$ is a self-adjoint operator.
-\item[$\bullet$] $T$ and $\pi$ satisfy the $K$-cycle condition, i.e. $[T,\pi(a)]$, $\pi(a)(T^2-id_{H_B})$ are compact operatros in $\mathfrak K_B(H_B)$ and $\pi(a)(r^*T-Vs^*T V^*)$ are compact operators in $\mathfrak K_{r^* B}(r^* H_B)\cong \mathfrak K_{r^* B}(H_{r^* B})$ for all $a\in A, g\in G$.\\
+\item[$\bullet$] $T$ and $\pi$ satisfy the $K$-cycle conditions, i.e. $[T,\pi(a)]$, $\pi(a)(T^2-id_{H_B})$ are compact operators in $\mathfrak K_B(H_B)$ and $\pi(a)(r^*T-Vs^*T V^*)$ are compact operators in $\mathfrak K_{r^* B}(r^* H_B)\cong \mathfrak K_{r^* B}(H_{r^* B})$ for all $a\in A, g\in G$.\\
 \end{itemize}
 
 Set $T_G= T\otimes id_{B\rtimes_r G}\in \mathcal L_{B\rtimes_r G}(H_B\otimes (B\rtimes_r G))\simeq \mathcal L_{B\rtimes_r G}(H_{B\rtimes_r G})$, and $\pi_G: A\rtimes_r G \rightarrow L_{B\rtimes_r G}(H_{B\rtimes_r G})$. Then, according to Le Gall \cite{LeGall}, $(H_{B\rtimes_r G}, \pi_G, T_G)$ represents the $K$-cycle $j_G(z)\in KK(A\rtimes_r G,B\rtimes_r G)$. Let us construct a controlled morphism associated to $z$,
@@ -144,7 +146,7 @@ This gives a commutative diagram
 0\arrow{r} & K_{B_1\rtimes G}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& A\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
 0\arrow{r} & K_{B_2\rtimes G}\arrow{r} & E^{(\pi',T')} \arrow{r}& A\rtimes G\arrow{r} & 0
 \end{tikzcd}.\]
-and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi_{|K_{B_1\rtimes G}}\subseteq K_{B_2\rtimes G}$, so that we can again apply the remark $3.8$ of \cite{OY2} to state
+and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi(\mathfrak K_{B_1\rtimes G})\subseteq K_{B_2\rtimes G}$, so that we can again apply the remark $3.8$ of \cite{OY2} to state
 \[ D_{K_{B_2\rtimes G},E^{(\pi',T')}}=\psi_*\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}},\]
 which we compose by the Morita equivalence on the left $M_{B_2\rtimes G}^{-1}$
 \[J_G(g_*(z)) = M_{B_2\rtimes G}^{-1}\circ g_{G,*}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}.\]
@@ -152,12 +154,22 @@ The homomorphisms inducing the Morita equivalence make the following diagram com
 \[\begin{tikzcd}B_1\rtimes G\arrow{r}{g_G}\arrow{d} & B_2\rtimes G\arrow{d} \\ K_{B_1\rtimes G } \arrow{r}{\psi}& K_{B_2\rtimes G }\end{tikzcd},\]
 and $J_G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes G}^{-1}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}=g_{G,*}\circ J_G(z)$.\\
 
-\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_J]$. Then we apply remark $3.7$ of \cite{OY2} to the commutative diagram
+\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_{J,A}]$ and $P=\frac{1+T}{2}$. Put $\mathcal C=A\oplus \mathcal L_J(H_J)$ and consider the following commutative diagram :
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & J\rtimes G\arrow{r}\arrow{d} & A\rtimes G \arrow{r}\arrow{d}{s\circ q_G}& A/J\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} & K_{J\rtimes G}\arrow{r} & E^{(\pi,T)} \arrow{r}& A/J\rtimes G\arrow{r} & 0
+0\arrow{r} &J\arrow{r}\arrow{d} & A \arrow{r}\arrow{d}{\phi}& A/J\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & J\otimes \mathfrak K\arrow{r} & \mathcal C \arrow{r}& A/J\arrow{r} & 0
 \end{tikzcd},\]
-where the first vertical arrow is the canonical mapping that induces the Morita equivalence. \\
+where $\phi(a) = (q(a),\pi(q(a)))$ and $J\rightarrow J\otimes \mathfrak K; j\mapsto j\otimes e;$ with $e$ a rank one projection. We apply $-\rtimes_r G$ to get the commutative diagram
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & J\rtimes_r G\arrow{r}\arrow{d} & A\rtimes_r G \arrow{r}\arrow{d}{\phi_G}& A/J\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} &  K_{J\rtimes_r G}\arrow{r} & \mathcal C\rtimes_r G \arrow{r}& A/J\rtimes_r G\arrow{r} & 0
+\end{tikzcd},\]
+where the lines are semi-split filtered and exact. Remark \ref{rk3.8} applies and $D_{J\rtimes_r G,A\rtimes_r G} = D_{ K_{J\rtimes_r G},\mathcal C\rtimes_r G}$. But $E^{(\pi,T)}$ is a $C^*$-subalgebra of $\mathcal C\rtimes_r G$ which makes the following diagram commutative :
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} &  K_{J\rtimes_r G}\arrow{r}\arrow{d}{=} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi_G}& A/J\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} &  K_{J\rtimes_r G}\arrow{r} & \mathcal C\rtimes_r G\arrow{r}& A/J\rtimes_r G\arrow{r} & 0
+\end{tikzcd},\]
+hence another application of remark \ref{rk3.8} yields $D_{K_{J\rtimes_r G},A\rtimes_r G} = D_{K_{J\rtimes_r G},E^{(\pi,T)}}$. Composing the inverse of the Morita equivalence concludes.
 \qed
 \end{enumerate}
 \end{dem}

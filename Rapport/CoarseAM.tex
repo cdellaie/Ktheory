@@ -23,12 +23,18 @@ and $C^*(X,B)$ is the completion of $\cup_{R>0} C_R[X,B]$ for the operator norm 
 %\end{dem}
 %%%%%%%%%%%%%%%%%%%%%%%
 
-To construct the coarse assembly map, we will need the following proposition.
-
-\begin{prop}\label{InverseEven}
+To construct the coarse assembly map, we will need the following proposition.\\
+ 
 Let $A$ be a $C^*$-algebra. The theorem \ref{Xfunctor} allows us to take the image of the exact sequence $0 \rightarrow SA \rightarrow CA \rightarrow A \rightarrow 0 $ under the functor $C^*(X,\cdot)$ to get the following filtered semi-split exact sequence 
 \[0 \rightarrow C^*(X,SA) \rightarrow C^*(X,CA) \rightarrow C^*(X,A) \rightarrow 0.\] 
-Let $D_{X,A} : \hat K_*(C^*(X,A))\rightarrow \hat K_*(C^*(X,SA))$ the controlled boundary morphism associated to this last extension. Then there exists a control pair $(\lambda,h)$, independent of $X$ and $A$, such that $D_{X,A}$ is $(\lambda,h)$-invertible.
+Let $D_{X,A} : \hat K_*(C^*(X,A))\rightarrow \hat K_*(C^*(X,SA))$ the controlled boundary morphism associated to this last extension.
+
+\begin{prop}\label{InverseEven}
+Let $A$ be a $C^*$-algebra. 
+%The theorem \ref{Xfunctor} allows us to take the image of the exact sequence $0 \rightarrow SA \rightarrow CA \rightarrow A \rightarrow 0 $ under the functor $C^*(X,\cdot)$ to get the following filtered semi-split exact sequence 
+%\[0 \rightarrow C^*(X,SA) \rightarrow C^*(X,CA) \rightarrow C^*(X,A) \rightarrow 0.\] 
+%Let $D_{X,A} : \hat K_*(C^*(X,A))\rightarrow \hat K_*(C^*(X,SA))$ the controlled boundary morphism associated to this last extension. 
+Then there exists a control pair $(\lambda,h)$, independent of $X$ and $A$, such that $D_{X,A}$ is $(\lambda,h)$-invertible.
 \end{prop}
 
 \begin{dem}
@@ -47,7 +53,7 @@ so that remark \ref{rk3.8} implies that $D_{\mathfrak K(l^2(\N))\otimes C^*(X,A)
 \qed
 \end{dem}
 
-\begin{rk} This result induces a similar statement in $K$-theory. %and in $KK$-theory similar statements. Namely : 
+\begin{rk}\label{rkInverse} This result induces a similar statement in $K$-theory. %and in $KK$-theory similar statements. Namely : 
 Namely, the boundary maps of the extensions $0 \rightarrow C^*(X,SA) \rightarrow C^*(X,CA) \rightarrow C^*(X,A) \rightarrow 0$ and
 $0 \rightarrow\mathfrak K(l^2(\N))\otimes C^*(X,A) \rightarrow \mathcal T_0 \otimes C^*(X,A) \rightarrow SC^*(X,A) \rightarrow 0$ are inverse of each other in $K$-theory.
 %\begin{itemize}
@@ -201,17 +207,22 @@ The homomorphisms inducing the Morita equivalence make the following diagram com
 \[\begin{tikzcd}C^*(X,B_1)\arrow{r}{g_X}\arrow{d} & C^*(X,B_2)\arrow{d} \\ K_{C^*(X,B_1) } \arrow{r}{\psi}& K_{C^*(X,B_2)}\end{tikzcd},\]
 and $\sigma_X(g_*(z))= g_{X,*}\circ M_{C^*(X,B_1)}^{-1}\circ D_{K_{C^*(X,B_1)},E^{(\pi,T)}}=g_{X,*}\circ \sigma_X(z)$.\\
 
-\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_{J,A}]$ and $P=\frac{1+T}{2}$. Put $C=(1-P)\mathcal L_J(H_J)(1-P) $ and consider the following commutative diagram :
+\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_{J,A}]$ and $P=\frac{1+T}{2}$. Put $\mathcal C=A\oplus \mathcal L_J(H_J)$ and consider the following commutative diagram :
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} &J\arrow{r}\arrow{d} & A \arrow{r}\arrow{d}{\phi}& A/J\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} & J\otimes \mathfrak K\arrow{r} & E^{(\pi,T)}\arrow{r}& A/J\arrow{r} & 0
+0\arrow{r} & J\otimes \mathfrak K\arrow{r} & \mathcal C \arrow{r}& A/J\arrow{r} & 0
 \end{tikzcd},\]
-where $\phi(a) = (q(a),P\pi(q(a))P)$ and $J\rightarrow J\otimes \mathfrak K; j\mapsto j\otimes e;$ with $e$ a rank one projection. We apply $C^*(X,-)$ to get the commutative diagram
+where $\phi(a) = (q(a),\pi(q(a)))$ and $J\rightarrow J\otimes \mathfrak K; j\mapsto j\otimes e;$ with $e$ a rank one projection. We apply $C^*(X,-)$ to get the commutative diagram
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & C^*(X,J)\arrow{r}\arrow{d} & C^*(X,A) \arrow{r}\arrow{d}{\phi_X}& C^*(X,A/J)\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} & C^*(X,J)\arrow{r} & E_X^{(\pi,T)} \arrow{r}& C^*(X,A/J)\arrow{r} & 0
+0\arrow{r} & C^*(X,J)\arrow{r} & C^*(X,\mathcal C) \arrow{r}& C^*(X,A/J)\arrow{r} & 0
 \end{tikzcd},\]
-where the lines are semi-split filtered and exact. Remark \ref{rk3.8} applies and $D_{J,A} = D_{C^*(X,J),E_X^{(\pi,T)}}$.\\
+where the lines are semi-split filtered and exact. Remark \ref{rk3.8} applies and $D_{C^*(X,J),C^*(X,A)} = D_{C^*(X,J),C^*(X,\mathcal C)}$. But $E^{(\pi,T)}_X$ is a $C^*$-subalgebra of $C^*(X,\mathcal C)$ which makes the following diagram commutative :
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} & C^*(X,J)\arrow{r}\arrow{d}{=} & E_X^{(\pi,T)} \arrow{r}\arrow{d}{\phi_X}& C^*(X,A/J)\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & C^*(X,J)\arrow{r} & C^*(X,\mathcal C) \arrow{r}& C^*(X,A/J)\arrow{r} & 0
+\end{tikzcd},\]
+hence another application of remark \ref{rk3.8} yields $D_{J,A} = D_{C^*(X,J),E_X^{(\pi,T)}}$. 
 %where the first vertical arrow is the canonical mapping that induces the Morita equivalence. \\
 \end{enumerate}
 \qed
@@ -244,7 +255,7 @@ of the same degree as $z$, such that
 
 \begin{dem} The work is already done for odd $KK$-elements. Let $z\in KK_0(A,B)$.
 \begin{enumerate}
-\item[(i)] Proposition \ref{Roe1} ensures that $\hat \sigma_X(z\otimes [\partial_{SB}])$ induces right multiplication by $\sigma_X(z\otimes [\partial_{SB}])$ in $K$-theory. Proposition \ref{InverseEven} implies that $T_{X,B}$ induces multiplication by $[\partial_{C^*(X,B),C^*(X,B\otimes\mathcal T_0)}]^{-1}$ in $K$-theory. Hence, according to theorem \ref{sigma}, their composition induces $ \sigma_X([\partial_{A,\mathcal T_0 \otimes  A}]^{-1})\circ\sigma_X([\partial_{SB}])\circ\sigma_X(z)$ where we identify $KK$-elements with the maps they induce in $K$-theory. But this element is just $\sigma_X(z)$, because  $\sigma_X([\partial_{A,\mathcal T_0 \otimes  A}]^{-1})\circ\sigma_X([\partial_{SB}])= id_{K(C^*(X,B))}$.
+\item[(i)] Proposition \ref{Roe1} ensures that $\hat \sigma_X(z\otimes [\partial_{SB}])$ induces right multiplication by $\sigma_X(z\otimes [\partial_{SB}])$ in $K$-theory. Proposition \ref{InverseEven} implies that $T_{X,B}$ induces multiplication by $[\partial_{C^*(X,B),C^*(X,B\otimes\mathcal T_0)}]^{-1}$ in $K$-theory. Hence, according to theorem \ref{sigma}, their composition induces $ \sigma_X([\partial_{A,\mathcal T_0 \otimes  A}]^{-1})\circ\sigma_X([\partial_{SB}])\circ\sigma_X(z)$ where we identify $KK$-elements with the maps they induce in $K$-theory. But this element is just $\sigma_X(z)$, because, by remark \ref{rkInverse}, $\sigma_X([\partial_{A,\mathcal T_0 \otimes  A}]^{-1})\circ\sigma_X([\partial_{SB}])= id_{K(C^*(X,B))}$.
 \item[(ii)] This is clear by \ref{Roe1}.
 \item[(iii)] It is a consequence of the previous proposition \ref{Roe1}, and of the equality $f^*(x)\otimes_D y = f^*(x\otimes_D y)$ for every $*$-homomorphism $f : A'\rightarrow A$ and for every $x\in KK(A,D),y\in KK(D,B)$.
 \item[(iv)] By naturality of the boundary element, we have $g_*(z)\otimes_{B_2} [\partial_{SB_2}] = z\otimes_{B_1} g^{*}[\partial _{SB_2}] = (Sg)_{*}(z\otimes_{B_1} [\partial _{SB_1}])$, hence, by proposition \ref{Roe1}, 
@@ -257,7 +268,7 @@ Controlled boundaries are natural, hence $T_{X,B_2}\circ ((Sg)_X)_* = (g_X)_* \c
 
 We now show that the Roe transform respects in a quantitative way the Kasparov product. Let us recall the following result from \cite{lafforgue2002k}. It states that every $KK$-element comes from the product of an element coming from a $*$-homomorphism and an element coming from the inverse in $KK$-theory of a $*$-homomorphism. Recall property $(d)$ from \ref{propertyD}, which is just this statement for groupoids. In other words, when the groupoid is a locally compact group, property $d$ is property $2$.
 
-\begin{lem}[\cite{lafforgue2002k}, lemma $1.6.11$] Let $A$ and $B$ be two $C^*$-algebras and $z\in KK(A,B)$. Then, there exists a $C^*$-algebra $A_1$, an element $\alpha \in KK(A,A_1)$ and $*$-homomorphims $\theta : A_1 \rightarrow A$ and $\eta : A_1 \rightarrow B$ such that
+\begin{lem}[\cite{lafforgue2002k}, lemma $1.6.11$] Let $A$ and $B$ be two $C^*$-algebras and $z\in KK_0(A,B)$. Then, there exists a $C^*$-algebra $A_1$, an element $\alpha \in KK(A,A_1)$ and $*$-homomorphims $\theta : A_1 \rightarrow A$ and $\eta : A_1 \rightarrow B$ such that
 $\theta^*(\alpha) = id_{A_1}$, $\theta_*(\alpha) = id_{A}$ and $\theta^*(z) = \eta$.
 \end{lem}
 
@@ -267,7 +278,7 @@ holds.
 \end{prop}
 
 \begin{dem}
-The previous lemma reduces the proof to the special case of $\alpha\in KK(A,B)$ being the inverse of a $*$-homomorphism $\theta : B\rightarrow A$ in $KK$-theory : $\alpha\otimes_B [\theta]=1_A$. Let $z\in KK(B,C)$ :
+Assume $\alpha\in KK_0(A,B)$. The previous lemma reduces the proof to the special case of $\alpha$ being the inverse of a $*$-homomorphism $\theta : B\rightarrow A$ in $KK$-theory : $\alpha\otimes_B [\theta]=1_A$. Let $z\in KK(B,C)$ :
 \[\begin{array}{rcl}
 \hat\sigma_X (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  \hat\sigma_X (\alpha\otimes z)\circ \hat\sigma_X (\alpha\otimes [\theta]) \\
 			& \sim & \hat\sigma_X (\alpha\otimes z)\circ \hat\sigma_X (\theta_*(\alpha))\\
@@ -275,7 +286,16 @@ The previous lemma reduces the proof to the special case of $\alpha\in KK(A,B)$ 
 			& \sim & \hat\sigma_X (\theta^*(\alpha\otimes z))\circ \hat\sigma_X (\alpha)\\
 			& \sim & \hat\sigma_X (z)\circ \hat\sigma_X (\alpha) \\
 \end{array}\] 
-because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The control on the propagation of the first line follows from remark $2.5$ of \cite{OY2} and point $(v)$, the other lines are equal by points $(iii)$ and $(iv)$, hence $(\alpha_R,k_R)$ can be taken to be $(2 \alpha_X^{4},( k_X)^{*2})$.
+because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The control on the propagation of the first line follows from remark $2.5$ of \cite{OY2} and point $(v)$, the other lines are equal by points $(iii)$ and $(iv)$, hence $(\alpha_R,k_R)$ can be taken to be $(2 \alpha_X^{4},( k_X)^{*2})$. If $z'$ is even, we can apply the same argument.\\
+
+Let $z$ and $z'$ be odd $KK$-elements. Then :
+\[\begin{array}{rcl}
+\hat\sigma_X (z\otimes z') & = &  \hat\sigma_X (z\otimes_B [\partial_{B}]\otimes_{SB} [\partial_B]^{-1}\otimes_B z') \\
+			& \sim & \hat\sigma_X ( [\partial_B]^{-1}\otimes_B z')\circ \hat\sigma_X (z\otimes_B [\partial_{B}])\\
+			& \sim & \hat\sigma_X ( [\partial_B]^{-1}\otimes_B z')\circ \hat\sigma_X ( [\partial_B])\circ\hat\sigma_X( [\partial_B]^{-1})\circ \hat\sigma_X (z\otimes_B [\partial_{B}])\\		
+			& \sim & \hat\sigma_X (  z')\circ \hat\sigma_X (z),\\
+\end{array}\] 
+where we used the previous case for the second line, Lemma \ref{Roe1} for the third line, and Proposition \ref{InverseEven} for the last one.\\
 \qed
 \end{dem}
 
@@ -283,8 +303,10 @@ because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The
 
 %If $(X,\mathcal E_X)$ is a coarse space, and $E\in\mathcal E_X$ a controlled subset, any simplex $\eta$ of the Rips complex $P_E(X) = \{m \in Prob(X)\text{ s.t. supp }m \subseteq E\}$ can be written as $\eta = \sum_{x\in X} \lambda_x(\eta) \delta_x$, where $\delta_x$ si the Dirac probability at $x$, and $\lambda_x : P_E(X)\rightarrow [0,1]$ is a continuous function. Set :
 Let $E\in\mathcal E$ be a controlled subset. Then any simplex $\eta$ of the Rips complex $P_E(X)$ can be written as $\eta = \sum_{x\in X} \lambda_x(\eta) \delta_x$, where $\delta_x$ si the Dirac probability at $x$, and $\lambda_x : P_E(X)\rightarrow [0,1]$ is a continuous function. Set :
-\[ P_E : \left\{\begin{array}{rcl} X \times X & \rightarrow & C_0(P_E(X))\\  (x,y) & \mapsto & \lambda_x^{\frac{1}{2}}\lambda_y^{\frac{1}{2}}\end{array}\right. \]  
-As $\sum_{x\in X} \lambda_x =1$, $P_E$ is a projection of $\mathfrak K(l^2(X)) \otimes C_0(P_E(X))$ of controlled support : $\text{supp }P_E\subseteq E$. Hence $P_E$ defines a class $[P_E,0]_{\varepsilon, E'}\in K_0^{\varepsilon, E'} (C^*(X,C_0(P_E(X)))$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $E'\in\mathcal E$ satisfying $E\subseteq E'$.\\
+\[ h_E : \left\{\begin{array}{rcl} X \times X & \rightarrow & C_0(P_E(X))\\  (x,y) & \mapsto & \lambda_x^{\frac{1}{2}}\lambda_y^{\frac{1}{2}}\end{array}\right. \]  
+Let $(e_x)_{x\in X}$ be the canonical basis of $l^2(X)$, $e$ be a rank-one projection in $H$ and $P_E$ be defined as the extension by linearity and continuity of
+\[P_E(e_x\otimes\xi\otimes f)= \sum_{y\in X} e_y\otimes (e\xi)\otimes (h(x,y)f)\] 
+for every $x\in X$, $\xi\in H$ and $f\in C_0(P_E(X))$. As $\sum_{x\in X} \lambda_x =1$, $P_E$ is a projection of $\mathfrak K(l^2(X)) \otimes C_0(P_E(X))$ of controlled support : $\text{supp }P_E\subseteq E$. Indeed, $\lambda_x^{\frac{1}{2}}\lambda_y^{\frac{1}{2}} =0$ as soon as $(x,y)\notin E$. Hence $P_E$ defines a class $[P_E,0]_{\varepsilon, E'}\in K_0^{\varepsilon, E'} (C^*(X,C_0(P_E(X)))$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $E'\in\mathcal E$ satisfying $E\subseteq E'$.\\
 
 For every $C^*$-algebra $B$ and every controlled subsets $E,E'\in\mathcal E$ such that $E\subseteq E'$, the canonical inclusion $P_E(X)\hookrightarrow P_{E'}(X)$ induces a $*$-homomorphism $q_E^{E'} : C_0(P_{E'}(X))\rightarrow C_0(P_{E}(X))$, hence a map $(q_E^{E'})^* : KK(C_0(P_E(X)),B)\rightarrow KK(C_0(P_{E'}(X)),B)$ in $KK$-theory. It induces another map $((q_E^{E'})_X)_* : K(C^*(X,C_0(P_{E'}(X))))\rightarrow K(C^*(X,C_0(P_{E}(X))))$ in $K$-theory. The family of projections $P_E$ are compatible with the morphisms $q_E^{E'}$, i.e. $((q_E^{E'})_X)_*[P_{E'},0]_{\varepsilon,E'} = [P_{E},0]_{\varepsilon,E}$, for every $\varepsilon\in (0,\frac{1}{4})$.
 %Moreover, the inclusion being an isometry, we have a map $K(C^*(P_E(X), B)) \rightarrow K(C^*(P_E(X), B))$, still denoted $q_E^{E'}$.
@@ -306,7 +328,10 @@ where $\varepsilon'$ and $F'$ satisfy :
 Hence $\hat\mu_{X,B}^{\varepsilon,E,F}\circ(q_E^{E'})^* =\hat\mu_{X,B}^{\varepsilon,E',F}$.
 \end{rk}
 
-\begin{rk} The controlled coarse assembly map is also compatible with the structure morphisms $\iota_{\varepsilon,E}^{\varepsilon',E'}$, i.e. $\iota_{\varepsilon,F}^{\varepsilon',F'}\circ\hat\mu_{X,B}^{\varepsilon,E,F} =\hat\mu_{X,B}^{\varepsilon',E,F'}$. Hence, the controlled coarse assembly map $\hat \mu_{X,B}$ induces the coarse assembly map $\mu_{X,B}$ in $K$-theory.
+\begin{rk} The controlled coarse assembly map is also compatible with the structure morphisms $\iota_{\varepsilon,E}^{\varepsilon',E'}$, i.e. $\iota_{\varepsilon,F}^{\varepsilon',F'}\circ\hat\mu_{X,B}^{\varepsilon,E,F} =\hat\mu_{X,B}^{\varepsilon',E,F'}$ for every $F\subseteq F'$ and $\varepsilon\leq \varepsilon'$ such that this equality is defined. 
+\end{rk}
+
+\begin{rk}According to Proposition \ref{Roe2}, $\hat\sigma_X(z)$ induces right-multiplication by $\sigma_X(z)$. Hence, the controlled coarse assembly map $\hat \mu_{X,B}$ induces the coarse assembly map $\mu_{X,B}$ in $K$-theory.
 \end{rk}
 
 \begin{rk}
