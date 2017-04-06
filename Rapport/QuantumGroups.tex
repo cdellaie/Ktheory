@@ -1,6 +1,6 @@
 \section{Discrete and Compact Quantum groups}
 
-We recall in this section basic facts about the theory of compact quantum groups. This theory was developed by Woronowicz in the $1980$'s. The reader can find more details in \cite{Wo}. Our presentation ows a lot to the article \cite{VerVaes}. We recall that $\otimes$ denotes the minimal or spatial tensor product of $C^*$-algebras.
+We recall in this section basic facts about the theory of compact quantum groups. This theory was developed by Woronowicz in the $1980$'s. The reader can find more details in \cite{Wo}. Our goal is to present reduced cross products by discrete quantum group. Our presentation ows a lot to the article \cite{VerVaes}. We recall that $\otimes$ denotes the minimal or spatial tensor product of $C^*$-algebras.
 
 \begin{definition}
 A compact quantum group is a pair $\mathbb G = (C(\mathbb G),\Delta)$ where $C(\mathbb G)$ is a unital $C^*$-algebra and $\Delta : C(\mathbb G) \rightarrow C(\mathbb G)\otimes C(\mathbb G)$ is a unital $*$-homomorphism satisfying :
@@ -21,19 +21,110 @@ Let $\Gamma$ be a discrete group and define the reduced $C^*$-algebra $C_r^*(\Ga
 
 \begin{definition} A unitary representation $(H,U)$ of $\mathbb G$ on a Hilbert space $H$ is a unitary element $U \in \mathcal M(\mathfrak K(H)\otimes C(\mathbb G))$ such that $(id\otimes\Delta)(U) = U_{12}U_{13}$. Let $(H,U)$ and $(H',U')$ be two unitary representations of $\mathbb G$. The space of intertwiners between $U$ and $U'$ is defined as 
 \[Hom(U,U') = \{T\in \mathcal L(H',H) \text{ s.t. }U(T\otimes 1) = (T\otimes 1) U' \}.\]
-We denote by $End(U)$ the intertwiners of $Hom(U,U)$. A unitary representation is called irreducible if $End(U) = \C 1$. 
+We denote by $End(U)$ the intertwiners of $Hom(U,U)$. A unitary representation is called irreducible if $End(U) = \C 1$. The trivial representation is denoted $\varepsilon$.
 \end{definition}
 
-We define sum and tensor product of representations as follows. Let $(H,U)$ and $(H',U')$ be two unitary representations. Then the sum is defined as $(H\oplus H', U\oplus U')$. The tensor product is defined as $(H\otimes H',W)$ where $W = U_{13} U'_{23}\in \mathcal M(\mathfrak K(H\otimes H')\otimes C(\mathbb G))$.
+We define sum and tensor product of representations as follows. Let $(H,U)$ and $(H',U')$ be two unitary representations. Then the sum is defined as $(H\oplus H', U\oplus U')$. The tensor product is defined as $(H\otimes H',W)$ where $W = U_{13} U'_{23}\in \mathcal M(\mathfrak K(H\otimes H')\otimes C(\mathbb G))$. 
 
 \begin{definition}
 As in the case of compact groups, we define an equivalence relation on unitary representations of $\mathbb G$ by 
 \[(H,U)\sim (H',U') \text{ iff } Hom(U,U') \text{ contains a non trivial unitary operator}.\]
-The set of equivalence classes of unitary representations is denoted by $Irrep(\mathbb G)$. We choose for each $\pi\in Irrep (\mathbb G)$ a unitary representation $(H_\pi, U^{\pi})$. 
+The set of equivalence classes of irreducible unitary representations is denoted by $Irrep(\mathbb G)$. We choose for each $\pi\in Irrep (\mathbb G)$ a unitary representation $(H_\pi, U^{\pi})$. 
 \end{definition}
 
 The following theorem is crucial, and is a generalization of the classical case. 
 
-\begin{thm} Every irreducible representation of a compact quantum group is finite dimensional. Every finite dimensional repreesentation of a compact quantum group is equivalent to a sum of irreducible unitary representations. 
+\begin{thm} Every irreducible representation of a compact quantum group is finite dimensional. Every finite dimensional representation of a compact quantum group is equivalent to a sum of irreducible unitary representations. 
 \end{thm}
  
+We also have the analog of the Haar measure, and of the regular representations.
+
+\begin{prop}
+For every compact quantum group $\mathbb G$, there exists a unique state $h$ on $C(\mathbb G)$, called the Haar state on $\mathbb G$, satisfying $(id\otimes h)\Delta(a) = h(a)1$ for every $a\in C(\mathbb G)$. 
+\end{prop}
+
+For every $\pi\in Irrep(\mathbb G)$, there exists a unique $\pi^*\in Irrep(\mathbb G)$ such that $Hom(\pi\otimes \pi^*,\varepsilon)\neq 0 \neq Hom(\varepsilon,\pi\otimes \pi^*) $. For a representative $(H_\pi,U^\pi)$, $(H_{\pi^*},U^{\pi^*})$ is called the contragredient representation. Define :
+\[L^2(\mathbb G) = \bigoplus_{\pi\in Irrep(\mathbb G)} H_\pi \otimes h_{\pi^*}. \]
+Then the right regular representation is defined by
+\[\rho\left\{\begin{array}{rcl}
+C(\mathbb G) & \rightarrow & \mathcal L(L^2(\mathbb G)) \\
+??	& \mapsto & ??\\
+\end{array}\right.\]
+
+We now turn to discrete quantum group. We will define it as dual of a compact quantum group. An intrinsic definition (without reference to a given compact quantum group) exists and can be found in \cite{vandaele}.\\
+
+Define the following $C^*$-algebras :
+\[\begin{array}{c}
+c_0(\hat{\mathbb G})= \bigoplus_{\pi\in Irred(\mathbb G)} \mathcal L(H_\pi),\\
+l^\infty(\hat{\mathbb G})= \prod_{\pi\in Irred(\mathbb G)} \mathcal L(H_\pi).
+\end{array}\]
+Up to our choice of representations $\{(H_\pi,U^\pi)\}_{\pi\in Irrep(\mathbb G)}$, we can define a unitary $U = \bigoplus_{\pi\in Irrep(\mathbb G)} U^\pi\in \mathcal M(c_0(\hat{\mathbb G}) \otimes C(\mathbb G))$. This allows to define a unital $*$-homomorphism $\hat \Delta : l^\infty(\hat{\mathbb G}) \rightarrow l^\infty(\hat{\mathbb G})\otimes l^\infty(\hat{\mathbb G})$ by 
+\[\hat\Delta ( x) = U(x \otimes 1)U^*\quad \forall x\in l^\infty(\hat{\mathbb G})).\]
+This $*$-homomorphism satisfies $\hat\Delta(c_0(\hat{\mathbb G}))\subseteq \mathcal M(c_0(\hat{\mathbb G})\otimes c_0(\hat{\mathbb G}))$ and \textbf{OTHER CONDITION}.
+\begin{definition}
+Let $\mathbb G$ be a compact quantum group. With the above notations, its dual is defined as the discrete quantum group $\hat{\mathbb G} = (c_0(\mathbb G),\hat\Delta)$.
+\end{definition}
+
+\begin{Expl} Let $\Gamma$ be a discrete group and consider the compact quantum group $\mathbb G=(C^*(\Gamma),\Delta)$. Then, $\gamma\mapsto \lambda_\gamma$ gives a bijection $Irrep(\mathbb G)\cong \Gamma$, and $\hat{\mathbb G}$ is $c_0(\Gamma)$ with comultiplication $\hat\Delta (f)(\gamma,\gamma') = f(\gamma\gamma')$ for every $f\in c_0(\Gamma)$ and $\gamma,\gamma'\in\Gamma$.
+\end{Expl}
+
+The dual of a compact quantum group is also represented on $L^2(\mathbb G)$ via the regular repsentations. Let us define the dual left regular representation by :
+\[\hat\lambda\left\{\begin{array}{rcl}
+l^\infty(\hat{\mathbb G}) & \rightarrow & \mathcal L(L^2(\mathbb G)) \\
+a	& \mapsto & \hat\lambda (a) : \xi \mapsto \{(a_\pi\otimes 1)\xi_\pi\}_\pi\\
+\end{array}\right.\]
+
+
+\begin{definition} An action of a discrete quantum group $\hat{\mathbb G}$ on a $C^*$-algebra $A$ is a nondegenerate $*$-homomorphism $A\rightarrow \mathcal M(A\otimes c_0(\hat{\mathbb G}))$ such that :
+\begin{itemize}
+\item[$\bullet$] $(\alpha \otimes id )\alpha = (id\otimes \hat\Delta) \alpha$
+\item[$\bullet$] for every $a\in A$, $(\hat\varepsilon \otimes id)\alpha(a) = a$.
+\end{itemize}
+Such a pair $(A\alpha)$ is called a $\hat{\mathbb G}$-algebra.
+\end{definition}
+
+\begin{definition} Let $(A,\alpha)$ be a $\hat{\mathbb G}$-algebra. The reduced crossed product $A\rtimes_r \hat{\mathbb G}$ is the $C^*$-algebra generated by 
+\[\{\theta(a)(w\otimes id)(\hat W_{12}), a\in A , w\in l^\infty(\hat{\mathbb G})_* \},\]
+where $\theta = (\hat\lambda \otimes id)\alpha$ and $\hat W = (id\otimes \rho)(U)$.  
+\end{definition}
+
+\begin{rk}
+There is also a notion of maximal (or full) crossed product for $\hat{\mathbb G}$-algebras.
+\end{rk}
+
+\begin{rk}
+As in the classical case, the reduced and the maximal crossed products respect the semi-split exact sequences of $\hat{\mathbb G}$-algebras.
+\end{rk}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
