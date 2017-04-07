@@ -1,21 +1,57 @@
-\section{Résumé de la thèse}
+\section*{Résumé de la thèse}
 
-Cette thèse porte sur la $K$-théorie contrôllée, ou $K$-théorie quantitative, ainsi que ses applications en géométrie non-commutative, ainsi que sur la conjecture de Baum-Connes.\\
+Cette thèse porte sur la $K$-théorie contrôlée, ou $K$-théorie quantitative, ainsi que ses applications en géométrie non-commutative, ainsi que sur la conjecture de Baum-Connes.\\
 
-La $K$-théorie contrôlée est un raffinement de la $K$-théorie opératorielle qui a été introduit par H. Oyono-Oyono et G. Yu dans \cite{OY2}. Elle permet de prendre en compte les phénomènes de propagation en $K$-théorie. Détaillons un peu notre propos.\\
+La $K$-théorie contrôlée, introduite par H. Oyono-Oyono et G. Yu dans \cite{OY2}, est un raffinement de la $K$-théorie opératorielle. Elle permet de prendre en compte les phénomènes de propagation en $K$-théorie. Détaillons un peu notre propos.\\
 
-Dans le cadre des $C^*$-algèbres, l'on dispose d'un foncteur à valeurs dans la catégorie des groupes abéliens $A\mapsto K_*(A)$, qui a une $C^*$-algèbre $A$ associe ses groupes de $K$-théorie $K_0(A)$ et $K_1(A)$.\\
+Dans le cadre des $C^*$-algèbres, l'on dispose d'un foncteur à valeurs dans la catégorie des groupes abéliens $A\mapsto K_*(A)$, qui à une $C^*$-algèbre $A$ associe ses groupes de $K$-théorie $K_0(A)$ et $K_1(A)$. Calculer la $K$-théorie d'une $C^*$-algèbre est un problème important mais souvent difficile. Dans les années 90, P. Baum, A. Connes et N. Higson proposèrent dans \cite{BaumConnesHigson} de calculer la $K$-théorie de la $C^*$-algèbre réduite d'un groupe localement compact $G$ grâce à une application d'assemblage $\mu_G : K^{top}(G)\rightarrow K(C_r^*(G))$. Le membre de gauche est appelée la $K$-homologie analytique de $G$, et est censé être plus facile à calculer. La conjecture de Baum-Connes affirme que l'application d'assemblage est un isomorphisme.\\
+
+S'inspirant de cette conjecture, une application d'assemblage fut définie dans le cadre de la géométrie coarse. La géométrie coarse s'intéresse à une certaine classe d'espaces métriques, dont elle cherche à determiner les propriétés à grande échelle. Si l'on se donne un espace coarse $X$, on peut construire la $C^*$-algèbre de Roe $C^*(X)$ et essayer de calculer sa $K$-théorie. Il est alors possible de définir une application d'assemblage coarse $\mu_X : KX(X)\rightarrow K(C^*(X))$. Le membre de gauche est appelé $K$-homologie coarse de $X$. La conjecture de Baum-Connes coarse affirme que cette application est un isomorphisme pour tout espace coarse à géometrie bornée.\\
 
 De larges classes d'exemples de $C^*$-algèbres sont construites à partir :\\ 
 \begin{itemize}
 \item[$\bullet$] d'espaces métrique $(X,d)$ : les algèbres de Roe $C^*(X)$,
 \item[$\bullet$] de groupes localement compacts $G$ : les $C^*$-algèbres réduite $C^*_r(G)$ et maximale $C_{max}(G)$, et les produits croisés $A\rtimes G$. Plus généralement, les mêmes notions existent pour les groupoïdes localement compacts avec système de Haar,
-\item[$\bullet$] de groupes quantiques compact $\mathbb G$ et de leur duals, les groupes quantiques discrets $\hat{\mathbb G}$ : à nouveau leurs $C^*$-réduites, maximales et leurs produits croisés.\\
+\item[$\bullet$] de groupes quantiques compact $\mathbb G$ et de leur duals, les groupes quantiques discrets $\hat{\mathbb G}$ : à nouveau leurs $C^*$-algèbres réduites, maximales et leurs produits croisés.\\
 \end{itemize}
 
-Hors dans la plupart des cas, ces $C^*$-algèbres possède une structure supplémentaire appelée filtration. La première étape de notre travail a consisté en une généralisation de la notion de filtration, ce qui permet d'appliquer les techniques développées dans \cite{OY2} et \cite{OY3}.\\
+Hors, dans la plupart des cas, ces $C^*$-algèbres possèdent une structure supplémentaire appelée filtration. La première étape de notre travail a consisté en une généralisation de la notion de filtration, ce qui permet d'appliquer les techniques développées dans \cite{OY2} et \cite{OY3} à de nouveaux exemples. Dans ces articles, les auteurs définissent une $C^*$-algèbre filtrée de la manière suivante.
 
-La première partie de la thèse rappelle les notions nécessaire à la compréhension du texte. Dans la seconde partie, nous développons ce que nous appelons %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{definition}
+Une $C^*$-algèbre $A$ est filtrée s'il existe une famille de sous-espace vectoriels fermés auto-adjoints $\{A_R\}_{R>0}$ de $A$ telle que :
+\begin{itemize}
+\item[$\bullet$] si $R\leq R'$, alors $A_R\subseteq A_{R'}$,
+\item[$\bullet$] pour tout $R,R'>0$, $A_R.A_{R'}\subseteq A_{R+R'}$,
+\item[$\bullet$] $A$ est l'adhérence de l'union des sous-espaces $A_R$, i.e. $\overline{\cup_{R>0}A_R} = A$.
+\item[$\bullet$] si $A$ est unitale, on a de plus $1\in A_R,\forall R>0$.
+\end{itemize}
+\end{definition}
+
+Nous proposons alors d'étendre cette définition en considérant des familles des sous-espaces indexées par des structures plus générales que nous appelons structures coarses. 
+
+\begin{definition}
+Une structure coarse $\mathcal E$ est un semi-groupe abélien qui est aussi un treillis. %is a lattice which is an abelian semi-group. %such that $\forall E,E'\in \mathcal E$, $E\leq E'E$. 
+Rappelons qu'un treillis est un ensemble partiellement ordonné tel que toute paire $(E,E')$ admette un supremum $E\vee E'$ et un infimum $E\wedge E'$.
+\end{definition}
+
+Si une structure coarse $\mathcal E$ est donnée, une $C^*$-algèbre $\mathcal E$-filtrée est définie comme dans la définition précédente, en remplaçant les nombres positifs par des éléments de la structure coarse, et l'addition par la composition. On montre alors comment la $K$-théorie contrôlée de \cite{OY2} s'adapte à ce cadre plus général.\\
+
+De nouvelles $C^*$-algèbres peuvent alors être vue comme des $C^*$-algèbres filtrées. Voici des exemples qui sont détaillés par la suite.
+\begin{itemize} 
+\item[$\bullet$] Soit $(X,d)$ un espace métrique discret à géométrie bornée. Alors les ensembles $E\subset X$ symmétriques tels que $\sup d<\infty$, sont munis d'un ordre partiel $\subseteq$ et d'une loi de composition donnée par 
+\[E\circ E = EE'\cup E'E,\]
+où $EE' = \{(x,y)\in X\times X \text{ t.q. }\exists z\in X / (x,z)\in E \text{ et }(z,y)\in E'\}$. Cela définit une structure coarse $\mathcal E_X$.
+\item[$\bullet$] Soit $G$ un groupoïde étale $\sigma$-compact. Alors les ensembles $E\subset G$ symmétriques compacts, sont munis d'un ordre partiel $\subseteq$ et d'une loi de composition donnée par 
+\[E\circ E = EE'\cup E'E,\]
+où $EE' = \{gg' ; (g,g')\in G^{(2)}\}$. Cela définit une structure coarse $\mathcal E_G$.
+\item[$\bullet$] Soit $\mathbb G$ un groupe quantique compact. Alors l'ensemble des classes d'équivalence des représentations unitaires finies de $\mathbb G$ est muni de l'ordre suivant : $\pi\leq \pi'$ ssi $\pi$ est unitairement équivalente à une sous-représentation de $\pi$. De plus, le produit tensoriel fournit une loi de composition, et cela définit une structure coarse $\mathcal E_{\mathbb G}$.\\
+\end{itemize} 
+
+Il s'avère que les algèbres de Roe $C^*(X,B)$, les produits croisés par $G$, et les produits croisés par $\hat{\mathbb G}$ sont filtrés par $\mathcal E_X$, $\mathcal E_G$ et $\mathcal E_{\mathbb G}$ respectivement.\\
+
+%La première partie de la thèse rappelle les notions nécessaire à la compréhension du texte. Dans la seconde partie, nous développons ce que nous appelons %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+La deuxième partie de la thèse s'intéresse à la construction d'applications d'assemblage à valeurs dans la $K$-théorie contrôlée, dans le cas des espaces coarse et dans celui des groupoïdes étales. Une propriété importante est que ces applications factorisent les applications d'assemblage classiques. Cela permet de relier les conjectures de Baum-Connes et de Baum-Connes coarse aux propriétés de nos applications. Ces dernières sont définies en deux étapes. La première est de définir ce que l'on appelle un foncteur de descente. Puis, on définit le complexe de Rips associé à $X$ et à $G$, et un certain projecteur canonique associé. \\
 
 Plus précisément, soit $(X,d)$ un espace métrique dénombrable discret, que l'on suppose à géométrie bornée; i.e. $\forall R>0,\sup |(x,y) \in X\times X \text{ s.t. }d(x,y)<R\}<\infty$. Nous construisons d'abord la transformation de Roe contrôlée $\sigma_X(z)$ pour tout élément $z\in KK(A,B)$. Les propositions \ref{Roe1} et \ref{Roe2}, qui décrivent ses propriétés, peuvent être résumées dans la proposition suivante :
 
@@ -50,7 +86,7 @@ où $\varepsilon'$ et $F'$ vérifient :
 \end{itemize}
 \end{definition}
 
-Nous définissons des applications analogues pour les groupoïdes étales. Plus précisément, soit $G$ un groupoïde étale localement compact et $\sigma$-compact. La première étape est à nouveau de construire un analogue du foncteur de descente en $K$-théorie contrôlée. Les propositions \ref{Kasparov1} et \ref{Kasparov} peuvent être résumées dans la proposition suivante. 
+Nous définissons des applications analogues pour les groupoïdes étales. Plus précisément, soit $G$ un groupoïde étale localement compact et $\sigma$-compact. Nous montrons que les ensembles $E\subseteq G$ compacts symmétriques forment une structure coarse $\mathcal E$, et que les produits croisés réduits de $G$ sont filtrés par $\mathcal E$. La première étape est à nouveau de construire un analogue du foncteur de descente en $K$-théorie contrôlée. Les propositions \ref{Kasparov1} et \ref{Kasparov} peuvent être résumées dans la proposition suivante. 
 
 \begin{prop}
 Soient $A$ et $B$ deux $G$-$C^*$-algèbres. Pour tout $z\in KK^G_*(A,B)$, il existe une paire de contrôle $(\alpha_J,k_J)$ et un morphisme $(\alpha_J,k_J)$-contrôlé
@@ -62,7 +98,7 @@ de même degré que $z$, tel que
 \[J_{red,G}(z+z')=J_{red,G}(z)+J_{red,G}(z').\]
 \item[(iii)] Pour tout $G$-morphisme $f : A_1\rightarrow A_2$,
 \[J_{red,G}(f^*(z))=J_{red,G}(z)\circ f_{G,red,*}\] for all $z\in KK_*^G(A_2,B)$.
-\item[(iv)] POur tout $G$-morphisme $g : B_1\rightarrow B_2$,
+\item[(iv)] Pour tout $G$-morphisme $g : B_1\rightarrow B_2$,
 \[J_{red,G}(g_*(z))= g_{G,red,*}\circ J_{red,G}(z)\] for all $z\in KK_*^G(A,B_1)$.
 \item[(v)] Soit $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ une extension semi-scindée $G$-équivariante de $G$-algèbres et  $[\partial_J]\in KK_1^G(A/J,J)$ son bord en $KK^G$-théorie. Alors 
 \[J_G([\partial_J])=D_{J\rtimes_r G,A\rtimes_rG}.\] 
@@ -70,11 +106,78 @@ de même degré que $z$, tel que
 \end{enumerate}
 \end{prop}
 
+Cette transformation, que nous appelons transformation de Kasparov contrôlée, permet de construire l'application d'assemblage contrôlée $\mu_{G,B}$ pour toute $G$-algèbre $B$. Pour tout ensemble contrôlé $E\subseteq G$, on dispose d'un projecteur $\mathcal L_E\in C_0(P_E(G))\rtimes_r G$ qui est de propagation finie. Il définit donc une classe de $K$-théorie contrôlée.
 
+\begin{definition}
+Soit $B$ une $G$-algèbre, $\varepsilon\in (0,\frac{1}{4})$, et $E\in\mathcal E$. Soit $F\in \mathcal E$ tel que $k_J(\varepsilon).E \subseteq F$. L'application d'assemblage contrôlée pour $G$ est définie comme la famille d'applications :
+\[\mu_{G,B}^{\varepsilon,E,F}\left\{
+\begin{array}{rcl}
+RK^G(P_E(G), B) & \rightarrow & K_*^{\varepsilon, F}(B\rtimes_r G)\\
+z & \mapsto & \iota_{\alpha_J\varepsilon', k_J(\varepsilon').F'}^{\varepsilon,F} \circ J_G^{\varepsilon', F'}(z)([\mathcal L_E,0]_{\varepsilon' , F'})
+\end{array}\right.\]
+où $\varepsilon'$ et $F'$ vérifient :
+\begin{itemize}
+\item[$\bullet$] $\varepsilon'\in (0,\frac{1}{4})$ tel que $\alpha_J \varepsilon'\leq \varepsilon$,
+\item[$\bullet$] et $F'\in\mathcal E$ tel que $E\subseteq F'$ et $k_J(\varepsilon).F'\subseteq F$.
+\end{itemize}
+\end{definition}
 
+La deuxième étape du travail est de relier l'application d'assemblage contrôlée à l'application d'assemblage classique. Les théorèmes qui réalisent ce programme sont les théorèmes \ref{Quant1} et \ref{Quant2}, que nous appelons énoncés quantitatifs. Pour cela, il nous faut d'abord introduire les propriétés suivantes :
+\begin{itemize}
+\item[$\bullet$] $QI_{G,B}(E,E',F,\varepsilon)$ : pour tout $x\in RK^G(P_E(G), B )$, alors $\mu^{\varepsilon,E,F}_G(x) = 0$ implique $q_E^{E'}(x)=0$ dans $RK^G(P_{E'}(G),B)$.
+\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : pour tout $y\in K^{\varepsilon,F}(B\rtimes G)$, il existe $x\in RK^G(P_E(G),B)$ tel que $\mu^{\varepsilon',E,F'}_G(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
+\end{itemize} 
 
+Les énoncés quantitatifs prennent alors la forme suivante.
 
+\begin{thm}
+Soit $B$ une $G$-algèbre, et $\tilde B = l^\infty(X,K_B)$. Alors $\mu_{G,\tilde B}$ est injective ssi pour tout $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ et $F$ tel que $k_J.E\subseteq F$, il existe $E' \in\mathcal E$ tel que $E\subseteq E'$ et $QI_{G,B}(E,E',\varepsilon,F)$. 
+\end{thm}
 
+\begin{thm}
+Soit $B$ une $G$-algèbre, et $\tilde B = l^\infty(X,K_B)$. Alors il existe $\lambda>1$ tel que $\mu_{G,\tilde B}$ est surjective ssi pour tout $0<\varepsilon<\frac{1}{4\lambda}$ et $F\in\mathcal E$ non-vide, il existe $E\in\mathcal E$ et $F'$ tel que $k_J .E \subseteq F$ tel que $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ soit vérifiée.
+\end{thm}
+
+Rappelons la définition de la propriété d'approxiamation persistante (PAP), donnée dans \cite{OY3}.
+
+\begin{definition}
+Soit $(B,\mathcal E)$ une $C^*$-algèbre filtrée, et soient $\varepsilon,\varepsilon'$ des nombres positifs tels que $0<\varepsilon <\varepsilon' <\frac{1}{4}$ et $F,F'\in\mathcal E$ non-vides tels que $F\subseteq F'$. 
+\begin{itemize}
+\item[$\bullet$] $PA_B(\varepsilon,\varepsilon',F,F')$ : pour tout $x\in K_*^{\varepsilon,F}(B)$ tel que $\iota_{\varepsilon,F}(x)=0$ in $K_*(B)$, alors $\iota_{\varepsilon,F}^{\varepsilon',F'}(x)=0$ dans $K_*^{\varepsilon',F'}(B)$.
+\item[$\bullet$] $B$ satisfait la propriété d'approximation persistante (PAP) si pour tout $F$ non-vide et $\varepsilon\in (0,\frac{1}{4})$, il existe $F'$ non-vide et $\varepsilon'\in [\varepsilon,\frac{1}{4})$ tel que $PA(\varepsilon,\varepsilon',F,F')$ soit vérifiée.
+\end{itemize}
+\end{definition}
+
+Le théorème \ref{PAPG} permet de relier l'application d'assemblage contrôlée et la propriété d'approximation persistante. 
+
+\begin{thm} 
+Soit $G$ est à base compacte. Alors, si $\mu_{G,l^\infty(\N, K_A)}$ est surjective et $\mu_{G,A}$ est injective, alors, pour une constante universelle $\lambda_{PA}$, pour tout $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ et $F$ non-vide, il existe $F'$ tel que $F\subseteq F'$ et tel que $PA_{A\rtimes G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ soit vérifiée.
+\end{thm}
+
+La dernière partie se concentre sur les applications de ces constructions. La première application concerne la géométrie coarse. Un moyen pour ce faire est d'utiliser le groupoïde coarse $G(X)$, introduit dans \cite{SkTuYu}, qui est un groupoïde étale associé à tout espace coarse. Notamment, nous démontrons que l'application d'assemblage coarse contrôlée pour $X$ à valeurs dans $B$ est équivalente à l'application d'assemblage contrôlée pour $G(X)$ à valeurs dans $l^\infty(X,B\otimes\mathfrak K)$. Le théorème \ref{BCCeq} est le suivant.
+
+\begin{thm}
+Soit $B$ une $C^*$-algèbre, $R>0$ et $\Delta_R\subseteq X\times X$ l'entourage correspondant. Alors, pour tout $z\in RK^G(P_{\overline \Delta_R}(G),l^\infty)$ et tout $\varepsilon\in(0,\frac{1}{4})$, l'égalité suivante est vérifiée :
+\[(\Psi_B)_*\circ\mu^{\epsilon,\overline\Delta_R}_{G,\tilde B} (z) = \mu_{X,B}^{\epsilon,R}(\iota^*(z)).\]
+\end{thm}
+
+Ce théorème induit en $K$-théorie un résultat de G. Skandalis, J-L. Tu et G. Yu \cite{SkTuYu}, qui établit l'équivalence entre la conjecture de Baum-Connes coarse pour $X$ à coefficients dans $B$ et la conjecture de Baum-Connes pour $G(X)$ à coefficients dans $l^\infty(X,B\otimes \mathfrak K)$. \\
+
+\begin{cor}
+Soit $X$ un espace coarse qui admet un plongement fibré dans l'espace de Hilbert. Alors $\hat \mu_{X}^{max}$ est un isomorphisme contrôlé, i.e. $X$ vérifié la conjecture de Baum-Connes coarse contrôlée.
+\end{cor}
+
+La dernière application concerne une formule de Kûnneth en $K$-théorie quantitative, qui constitue le théorème \ref{Kunneth}. Pour cela, nous avons besoin de définir le foncteur de restriction à un sous-groupoïde compact $H$ de $G$ en $KK$-théorie équivariante, ainsi qu'une propriété, appelée propreté forte, qui assure que $Res_H^G : KK^G \rightarrow KK^H$ est un isomorphisme. Voici le contenu du théorème.
+
+\begin{thm}
+Soit $G$ un groupoïde $\sigma$-compact étale et $A$ une $G$-algèbre. Si 
+\begin{itemize}
+\item[$\bullet$] $G$ vérifie la conjecture de Baum-Connes à coefficients,
+\item[$\bullet$] $G$ est un groupoïde fortement propre,
+\item[$\bullet$] pour tout sous-groupoïde compact $H$ de $G$, $A\rtimes_r H$ vérifie la formule de Kûnneth.
+\end{itemize} 
+Alors $A\rtimes_r G$ vérifie la formule de Künneth contrôlée.
+\end{thm}
 
 
 
