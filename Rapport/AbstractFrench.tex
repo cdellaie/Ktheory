@@ -1,0 +1,111 @@
+\section{Résumé de la thèse}
+
+Cette thèse porte sur la $K$-théorie contrôllée, ou $K$-théorie quantitative, ainsi que ses applications en géométrie non-commutative, ainsi que sur la conjecture de Baum-Connes.\\
+
+La $K$-théorie contrôlée est un raffinement de la $K$-théorie opératorielle qui a été introduit par H. Oyono-Oyono et G. Yu dans \cite{OY2}. Elle permet de prendre en compte les phénomènes de propagation en $K$-théorie. Détaillons un peu notre propos.\\
+
+Dans le cadre des $C^*$-algèbres, l'on dispose d'un foncteur à valeurs dans la catégorie des groupes abéliens $A\mapsto K_*(A)$, qui a une $C^*$-algèbre $A$ associe ses groupes de $K$-théorie $K_0(A)$ et $K_1(A)$.\\
+
+De larges classes d'exemples de $C^*$-algèbres sont construites à partir :\\ 
+\begin{itemize}
+\item[$\bullet$] d'espaces métrique $(X,d)$ : les algèbres de Roe $C^*(X)$,
+\item[$\bullet$] de groupes localement compacts $G$ : les $C^*$-algèbres réduite $C^*_r(G)$ et maximale $C_{max}(G)$, et les produits croisés $A\rtimes G$. Plus généralement, les mêmes notions existent pour les groupoïdes localement compacts avec système de Haar,
+\item[$\bullet$] de groupes quantiques compact $\mathbb G$ et de leur duals, les groupes quantiques discrets $\hat{\mathbb G}$ : à nouveau leurs $C^*$-réduites, maximales et leurs produits croisés.\\
+\end{itemize}
+
+Hors dans la plupart des cas, ces $C^*$-algèbres possède une structure supplémentaire appelée filtration. La première étape de notre travail a consisté en une généralisation de la notion de filtration, ce qui permet d'appliquer les techniques développées dans \cite{OY2} et \cite{OY3}.\\
+
+La première partie de la thèse rappelle les notions nécessaire à la compréhension du texte. Dans la seconde partie, nous développons ce que nous appelons %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Plus précisément, soit $(X,d)$ un espace métrique dénombrable discret, que l'on suppose à géométrie bornée; i.e. $\forall R>0,\sup |(x,y) \in X\times X \text{ s.t. }d(x,y)<R\}<\infty$. Nous construisons d'abord la transformation de Roe contrôlée $\sigma_X(z)$ pour tout élément $z\in KK(A,B)$. Les propositions \ref{Roe1} et \ref{Roe2}, qui décrivent ses propriétés, peuvent être résumées dans la proposition suivante :
+
+\begin{prop}
+Soient $A$ et $B$ deux $C^*$-algèbres. Pour tout $z\in KK_*(A,B)$, il existe une paire de contrôle $(\alpha_X,k_X)$ et un morphisme $(\alpha_X,k_X)$-contrôlé
+\[\hat\sigma_X(z) : \hat K(C^*(X,A))\rightarrow \hat K(C^*(X,B))\]
+de même degré que $z$, tel que :
+\begin{enumerate}
+\item[(i)] $\hat\sigma_X(z)$ induit la multiplication à droite par $\sigma_X(z)$ en $K$-théorie ;
+\item[(ii)] $\hat\sigma_X$ est additif, i.e.
+\[\hat\sigma_X(z+z')=\hat\sigma_X(z)+\hat\sigma_X(z').\]
+\item[(iii)] Pour tout $*$-homomorphisme $f : A_1\rightarrow A_2$,
+\[\hat\sigma_X(f^*(z))=\hat\sigma_X(z)\circ f_{X,*}\] for all $z\in KK_*(A_2,B)$.
+\item[(iv)] Pour tout $*$-homomorphisme $g : B_1\rightarrow B_2$,
+\[\hat\sigma_X(g_*(z))= g_{X,*}\circ \hat\sigma_X(z)\] for all $z\in KK_*(A,B_1)$.
+\item[(v)] Soit $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ une extension semi-scindée de $C^*$-algèbres et $[\partial_J]\in KK_1(A/J,J)$ son bord en $KK$-théorie. Alors : 
+\[\hat\sigma_X([\partial_{J,A}])=D_{C^*(X,J),C^*(X,A)}.\] 
+\item[(vi)] $\hat\sigma_X([id_A]) \sim_{(\alpha_X,k_X)} id_{\hat K(C^*(X,A))}$
+\end{enumerate}
+\end{prop}
+
+La transformation de Roe contrôlée est une application de descente, et l'étape suivante naturelle est la construction de l'application d'assemblage contrôlée $\mu_{X,B}$ , pour toute $C^*$-algèbre $B$. Pour cela, pour tout entourage $E$, on définit une projection canonique $P_E\in C^*(X,C_0(P_E(X)))$. Cette projection étant de propagation finie, elle définit une classe paire de $K$-théorie contrôlée.
+
+\begin{definition}
+Soit $B$ une $C^*$-algèbre, $\varepsilon\in (0,\frac{1}{4})$ et $E,F\in\mathcal E_X$ des entourages tels que $k_X(\varepsilon).E\subseteq F$. L'application d'assemblage contrôllée $\hat\mu_{X,B}=(\mu_{X,B}^{\varepsilon,E,F})_{\varepsilon,E}$ est définie comme la famille d'applications
+\[\hat\mu_{X,B}^{\varepsilon, E,F} :\left\{\begin{array}{rcl} KK(C_0(P_E(X)),B) & \rightarrow & K^{\varepsilon, F}(C^*(X,B)) \\
+					z & \mapsto & \iota_{\alpha_X \varepsilon',k_X(\varepsilon').F'}^{\varepsilon,F}\circ\hat\sigma_X(z)[P_{E},0]_{\varepsilon', F'}\end{array}\right.\]
+où $\varepsilon'$ et $F'$ vérifient :
+\begin{itemize}
+\item[$\bullet$] $\varepsilon\in (0,\frac{1}{4})$ tels que $\alpha_X \varepsilon'\leq \varepsilon$,
+\item[$\bullet$] et $F'\in\mathcal E$ tels que $E\subseteq F'$ et $k_X(\varepsilon).F'\subseteq F$.
+\end{itemize}
+\end{definition}
+
+Nous définissons des applications analogues pour les groupoïdes étales. Plus précisément, soit $G$ un groupoïde étale localement compact et $\sigma$-compact. La première étape est à nouveau de construire un analogue du foncteur de descente en $K$-théorie contrôlée. Les propositions \ref{Kasparov1} et \ref{Kasparov} peuvent être résumées dans la proposition suivante. 
+
+\begin{prop}
+Soient $A$ et $B$ deux $G$-$C^*$-algèbres. Pour tout $z\in KK^G_*(A,B)$, il existe une paire de contrôle $(\alpha_J,k_J)$ et un morphisme $(\alpha_J,k_J)$-contrôlé
+\[J_{red,G}(z) : \hat K(A\rtimes_r G)\rightarrow \hat K(B\rtimes_r G)\]
+de même degré que $z$, tel que
+\begin{enumerate}
+\item[(i)] $J_{red,G}(z)$ induit la multiplication à droite par $j_{red,G}(z)$ en $K$-théorie ;
+\item[(ii)] $J_{red,G}$ est additif, i.e.
+\[J_{red,G}(z+z')=J_{red,G}(z)+J_{red,G}(z').\]
+\item[(iii)] Pour tout $G$-morphisme $f : A_1\rightarrow A_2$,
+\[J_{red,G}(f^*(z))=J_{red,G}(z)\circ f_{G,red,*}\] for all $z\in KK_*^G(A_2,B)$.
+\item[(iv)] POur tout $G$-morphisme $g : B_1\rightarrow B_2$,
+\[J_{red,G}(g_*(z))= g_{G,red,*}\circ J_{red,G}(z)\] for all $z\in KK_*^G(A,B_1)$.
+\item[(v)] Soit $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ une extension semi-scindée $G$-équivariante de $G$-algèbres et  $[\partial_J]\in KK_1^G(A/J,J)$ son bord en $KK^G$-théorie. Alors 
+\[J_G([\partial_J])=D_{J\rtimes_r G,A\rtimes_rG}.\] 
+\item[(vi)] $J_{red,G}([id_A]) \sim_{(\alpha_J,k_J)} id_{\hat K(A\rtimes G)}$
+\end{enumerate}
+\end{prop}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

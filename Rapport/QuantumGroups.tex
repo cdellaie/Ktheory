@@ -1,6 +1,6 @@
 \section{Discrete and Compact Quantum groups}
 
-We recall in this section basic facts about the theory of compact quantum groups. This theory was developed by Woronowicz in the $1980$'s. The reader can find more details in \cite{Wo}. Our goal is to present reduced cross products by discrete quantum group. Our presentation ows a lot to the article \cite{VerVaes}. We recall that $\otimes$ denotes the minimal or spatial tensor product of $C^*$-algebras.
+We recall in this section basic facts about the theory of compact quantum groups. This theory was developed by Woronowicz in the $1980$'s. The reader can find more details in \cite{Wo}. Our goal is to present reduced cross products by discrete quantum group. Our presentation is strongly inspired by the article \cite{VerVaes}. We recall that $\otimes$ denotes the minimal or spatial tensor product of $C^*$-algebras. If $x\in A\otimes A$, we will use the notation $a_{ij}$ for the obvious element in $A\otimes A\otimes A$, e.g. $a_{12} = a\otimes 1$.
 
 \begin{definition}
 A compact quantum group is a pair $\mathbb G = (C(\mathbb G),\Delta)$ where $C(\mathbb G)$ is a unital $C^*$-algebra and $\Delta : C(\mathbb G) \rightarrow C(\mathbb G)\otimes C(\mathbb G)$ is a unital $*$-homomorphism satisfying :
@@ -16,7 +16,7 @@ A compact quantum group is a pair $\mathbb G = (C(\mathbb G),\Delta)$ where $C(\
 The notation $C(\mathbb G)$ was adopted to suggest an analogy with this example. In general though, the $C^*$-algebra is noncommutative, and there is no topological space underlying the quantum group. Still, one often talks of $C(\mathbb G)$ as "the algebra of continous functions" on $\mathbb G$.
 
 \begin{Expl}
-Let $\Gamma$ be a discrete group and define the reduced $C^*$-algebra $C_r^*(\Gamma)$ of $\Gamma$. It coincides with $\C\rtimes_r \Gamma$ and is unital. The map $ \lambda_\gamma \mapsto \lambda_\gamma\otimes \lambda_\gamma$ extends to a unital $*$-homomorphism $\Delta :C_r^*(\Gamma)\rightarrow C_r^*(\Gamma)\otimes C_r^*(\Gamma) $. Then $(C_r^*(\Gamma),\Delta)$ is a compact quantum group, which can be seen as a candidate for what should be the continuous functions on the reduced dual $\hat\Gamma$. By Fourier transform, it is exactly the case when $\Gamma$ is commutative.
+Let $\Gamma$ be a discrete group and define the reduced $C^*$-algebra $C_r^*(\Gamma)$ of $\Gamma$. Recall that it is the $C^*$-algebra generated in $\mathcal L(l^2(\Gamma))$ by the left translation operators $\lambda_\gamma$, for every $\gamma\in\Gamma$. The map $ \lambda_\gamma \mapsto \lambda_\gamma\otimes \lambda_\gamma$ extends to a unital $*$-homomorphism $\Delta :C_r^*(\Gamma)\rightarrow C_r^*(\Gamma)\otimes C_r^*(\Gamma) $. Then $(C_r^*(\Gamma),\Delta)$ is a compact quantum group. It can be seen as a candidate for what should be the continuous functions on the reduced dual $\hat\Gamma$. By Fourier transform, it is exactly the case when $\Gamma$ is commutative.
 \end{Expl}
 
 \begin{definition} A unitary representation $(H,U)$ of $\mathbb G$ on a Hilbert space $H$ is a unitary element $U \in \mathcal M(\mathfrak K(H)\otimes C(\mathbb G))$ such that $(id\otimes\Delta)(U) = U_{12}U_{13}$. Let $(H,U)$ and $(H',U')$ be two unitary representations of $\mathbb G$. The space of intertwiners between $U$ and $U'$ is defined as 
@@ -34,7 +34,7 @@ The set of equivalence classes of irreducible unitary representations is denoted
 
 The following theorem is crucial, and is a generalization of the classical case. 
 
-\begin{thm} Every irreducible representation of a compact quantum group is finite dimensional. Every finite dimensional representation of a compact quantum group is equivalent to a sum of irreducible unitary representations. 
+\begin{thm} Every irreducible representation of a compact quantum group is finite dimensional. Every unitary representation of a compact quantum group is equivalent to a direct sum of irreducible unitary representations. 
 \end{thm}
  
 We also have the analog of the Haar measure, and of the regular representations.
@@ -43,8 +43,14 @@ We also have the analog of the Haar measure, and of the regular representations.
 For every compact quantum group $\mathbb G$, there exists a unique state $h$ on $C(\mathbb G)$, called the Haar state on $\mathbb G$, satisfying $(id\otimes h)\Delta(a) = h(a)1$ for every $a\in C(\mathbb G)$. 
 \end{prop}
 
-For every $\pi\in Irrep(\mathbb G)$, there exists a unique $\pi^*\in Irrep(\mathbb G)$ such that $Hom(\pi\otimes \pi^*,\varepsilon)\neq 0 \neq Hom(\varepsilon,\pi\otimes \pi^*) $. For a representative $(H_\pi,U^\pi)$, $(H_{\pi^*},U^{\pi^*})$ is called the contragredient representation. Define :
-\[L^2(\mathbb G) = \bigoplus_{\pi\in Irrep(\mathbb G)} H_\pi \otimes h_{\pi^*}. \]
+Let us denote by $L^2(\mathbb G)$ the Hilbert space obtained as the GNS construction with respect to the Haar state, i.e. $L^2(\mathbb G) = L^2(C(\mathbb G),h)$. We denote by $\xi_h\in L^2(\mathbb G)$ and $\pi_h : C(\mathbb G)\rightarrow \mathcal L(L^2(\mathbb G))$ the corresponding cyclic vector and representation. According to \cite{Wo}, there exists a unique unitary $W\in \mathcal L(L^2(\mathbb G) \otimes L^2(\mathbb G) )$ satisfying 
+\[W^*(\xi\otimes \pi_h(a)\xi_h ) = (\pi_h\otimes\pi_h)\circ \Delta(a)(\xi\otimes \xi_h)\quad \forall \xi\in L^2(\mathbb G),a\in C(\mathbb G).\] 
+\begin{definition}
+The reduced form of $\mathbb G$ is defined as the $C^*$-algebra $\pi_h(C(\mathbb G))$. The unitary $W$ defines a unitary representation $W\in\mathcal M(C_red(\mathbb G)\otimes \mathfrak K(L^2(\mathbb G))$ called the regular representation of $\mathbb G$.
+\end{definition}
+
+According to \cite{Wo}, for every $\pi\in Irrep(\mathbb G)$, there exists a unique $\pi^*\in Irrep(\mathbb G)$ such that $Hom(\pi\otimes \pi^*,\varepsilon)\neq 0 \neq Hom(\varepsilon,\pi\otimes \pi^*) $. For a representative $(H_\pi,U^\pi)$, $(H_{\pi^*},U^{\pi^*})$ is called the contragredient representation. Define :
+\[L^2(\mathbb G) = \bigoplus_{\pi\in Irrep(\mathbb G)} H_\pi \otimes H_{\pi^*}. \]
 Then the right regular representation is defined by
 \[\rho\left\{\begin{array}{rcl}
 C(\mathbb G) & \rightarrow & \mathcal L(L^2(\mathbb G)) \\
