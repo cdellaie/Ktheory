@@ -64,7 +64,7 @@ Martin Finn-Sell and Nick Wright.
 
 \bibitem{OY3}
 G.~Yu H.~Oyono-Oyono.
-\newblock Persitance approximation property and controlled k-theory.
+\newblock Persitance approximation property and controlled {K}-theory.
 
 \bibitem{higsonkasparov}
 Nigel Higson and Gennadi Kasparov.
@@ -149,6 +149,11 @@ J~Peter May.
 \newblock {\em A concise course in algebraic topology}.
 \newblock University of Chicago press, 1999.
 
+\bibitem{MeyerNest}
+Ralf Meyer and Ryszard Nest.
+\newblock The baum--connes conjecture via localisation of categories.
+\newblock {\em Topology}, 45(2):209--259, 2006.
+
 \bibitem{Murphy}
 Gerard~J. Murphy.
 \newblock {\em $C^*$-algebras and operator theory}.
@@ -184,12 +189,12 @@ John Roe and Conference~Board of~the Mathematical~Sciences.
 
 \bibitem{SkTuYu}
 Georges Skandalis, Jean-Louis Tu, and Guoliang Yu.
-\newblock The coarse baum--connes conjecture and groupoids.
+\newblock The coarse {B}aum-{C}onnes conjecture and groupoids.
 \newblock {\em Topology}, 41(4):807--834, 2002.
 
 \bibitem{TuThese}
 Jean-Louis Tu.
-\newblock La conjecture de baum--connes pour les feuilletages moyennables.
+\newblock La conjecture de {B}aum-{C}onnes pour les feuilletages moyennables.
 \newblock {\em K-theory}, 17(3):215--264, 1999.
 
 \bibitem{TuNovikov}
@@ -199,12 +204,12 @@ Jean~Louis Tu.
 
 \bibitem{TuBC}
 Jean-Louis Tu.
-\newblock The baum-connes conjecture for groupoids.
+\newblock The {B}aum-{C}onnes conjecture for groupoids.
 \newblock pages 227--242, 2000.
 
 \bibitem{TuBC2}
 Jean-Louis Tu.
-\newblock The coarse baum--connes conjecture and groupoids. ii.
+\newblock The coarse {B}aum-{C}onnes conjecture and groupoids. ii.
 \newblock {\em New York J. Math}, 18:1--27, 2012.
 
 \bibitem{VerVaes}
@@ -218,9 +223,15 @@ Alfons Van~Daele.
 \newblock Discrete quantum groups.
 \newblock {\em Journal of Algebra}, 180(2):431--444, 1996.
 
+\bibitem{vergnioux}
+Roland Vergnioux.
+\newblock {\em {KK}-th{\'e}orie {\'e}quivariante et op{\'e}rateur de
+  Julg-Valette pour les groupes quantiques}.
+\newblock PhD thesis, Universit{\'e} Paris-Diderot-Paris VII, 2002.
+
 \bibitem{WeggeOlsen}
 NE~Wegge-Olsen.
-\newblock K-theory and c-star-algebras: A friendly approach.
+\newblock K-theory and {C}\^{}*-algebras: A friendly approach.
 \newblock 1993.
 
 \bibitem{Wo}
@@ -228,10 +239,15 @@ Stanis{\l}aw~L Woronowicz.
 \newblock Compact quantum groups.
 \newblock {\em Sym{\'e}tries quantiques (Les Houches, 1995)}, 845:884, 1998.
 
+\bibitem{Yu1}
+Guoliang Yu.
+\newblock The {N}ovikov conjecture for groups with finite asymptotic dimension.
+\newblock {\em Annals of Mathematics}, 147(2):325--355, 1998.
+
 \bibitem{Yu2}
 Guoliang Yu.
-\newblock The coarse baum--connes conjecture for spaces which admit a uniform
-  embedding into hilbert space.
+\newblock The coarse {B}aum-{C}onnes conjecture for spaces which admit a
+  uniform embedding into {H}ilbert space.
 \newblock {\em Inventiones Mathematicae}, 139(1):201--240, 2000.
 
 \end{thebibliography}

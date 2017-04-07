@@ -1,0 +1,66 @@
+\section{Controlled Kasparov transform for discrete Quantum Groups}
+
+We would like to conclude this chapter by a remark. \\
+
+Let $\mathbb G$ be a compact quantum group, and $\mathcal E_{\mathbb G}$ be the coarse structure defined by its finite dimensional representations. Then, for every $\hat{\mathbb G}$-algebra $A$, the reduced cross product $A\rtimes_r \hat{\mathbb G}$ and the maximal cross product $A\rtimes_{max}\hat{\mathbb G}$ are filtered by the family of subspaces of coefficients of finite dimensional representations, namely the closure of the linear spans $C_{\pi}(\hat{\mathbb G},A)$ of
+\[\{\theta(a)(id\otimes w_{\xi,\eta})(\hat W_{12})) , a\in A, \xi,\eta\in H_\pi\},\]
+for $\pi$ a finite dimensional unitary representation of $\mathbb G$.\\
+
+Everything we have done works for functors which preserve filtered semi-split extension of filtered $C^*$-algebras. In particular, the reduced and maximal cross products of a discrete quantum group do. We thus get the following proposition :
+
+\begin{prop}
+Let $A$ and $B$ two $\hat{\mathbb G}$-algebras. For every $z\in KK^{\hat{\mathbb G}}_*(A,B)$, there exists a control pair $(\alpha_J,k_J)$ and a $(\alpha_J,k_J)$-controlled morphism
+\[J_{red,\hat{\mathbb G}}(z) : \hat K(A\rtimes_r \hat{\mathbb G})\rightarrow \hat K(B\rtimes_r \hat{\mathbb G})\]
+of the same degree as $z$, such that
+\begin{enumerate}
+\item[(i)] $J_{red,\hat{\mathbb G}}(z)$ induces right multiplication by $j_{red,\hat{\mathbb G}}(z)$ in $K$-theory ;
+\item[(ii)] $J_{red,\hat{\mathbb G}}$ is additive, i.e.
+\[J_{red,\hat{\mathbb G}}(z+z')=J_{red,\hat{\mathbb G}}(z)+J_{red,\hat{\mathbb G}}(z').\]
+\item[(iii)] For every $\hat{\mathbb G}$-equivariant morphism $f : A_1\rightarrow A_2$,
+\[J_{red,\hat{\mathbb G}}(f^*(z))=J_{red,\hat{\mathbb G}}(z)\circ f_{\hat{\mathbb G},red,*}\] for all $z\in KK_*^{\hat{\mathbb G}}(A_2,B)$.
+\item[(iv)] For every $\hat{\mathbb G}$-morphism $g : B_1\rightarrow B_2$,
+\[J_{red,\hat{\mathbb G}}(g_*(z))= g_{\hat{\mathbb G},red,*}\circ J_{red,\hat{\mathbb G}}(z)\] for all $z\in KK_*^{\hat{\mathbb G}}(A,B_1)$.
+\item[(v)] Let $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ be a semi-split equivariant extension of $\hat{\mathbb G}$-algebras and $[\partial_J]\in KK_1^{\hat{\mathbb G}}(A/J,J)$ be its boundary element. Then 
+\[J_{red,\hat{\mathbb G}}([\partial_J])=D_{J\rtimes_r \hat{\mathbb G},A\rtimes_r \hat{\mathbb G}}.\] 
+\item[(vi)] $J_{red,\hat{\mathbb G}}([id_A]) \sim_{(\alpha_J,k_J)} id_{\hat K(A\rtimes \hat{\mathbb G})}$
+\end{enumerate}
+\end{prop}
+
+As every $KK^{\hat{\mathbb G}}$-element satisfies property $(d)$, we also can prove, using the same proof as the groupoid case, that $J_{red,\hat{\mathbb G}}$ respects Kasparov products.
+
+\begin{prop} There exists a control pair $(\alpha_K,k_K)$ such that for every $\hat{\mathbb G}$-algebras $A$, $B$ and $C$, and every $z\in KK^{\hat{\mathbb G}}(A,B),z'\in KK^{\hat{\mathbb G}}(B,C)$, the controlled equality
+\[J_{\hat{\mathbb G}}(z\otimes_B z') \sim_{\alpha_K,k_K} J_{\hat{\mathbb G}}(z')\circ J_{\hat{\mathbb G}}(z)\]
+holds.
+\end{prop}
+
+The problem to define a controlled assembly map for $\hat{\mathbb G}$ is that there does not exist at this time any construction similar to the Rips complex for discrete quantum groups. Worse, the universal space for proper action is not defined. The only contruction of assembly maps for quantum groups the author is aware of relies on the work of R. Meyer and R. Nest in \cite{MeyerNest}. It is based on localisation of functors in triangulated categories. In the case of locally compact group, they first define a triangulated categories $\mathcal {KK}^G$ based on $KK^G$-theory. Let $F$ be the functor $A\rightarrow K(A \rtimes_r G)$. It is triangulated on $\mathcal {KK}^G$ and the natural transformation $\mathbb L F(A)\rightarrow F(A)$ can be shown to be isomorphic to the assembly map. The natural path taken by the authors is to define the assembly map as $\mathbb L F(A)\rightarrow F(A)$ in the case of quantum groups.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

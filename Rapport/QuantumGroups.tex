@@ -102,7 +102,27 @@ There is also a notion of maximal (or full) crossed product for $\hat{\mathbb G}
 As in the classical case, the reduced and the maximal crossed products respect the semi-split exact sequences of $\hat{\mathbb G}$-algebras.
 \end{rk}
 
+As in the case of locally compact groups or locally compact $\sigma$-compact groupoids with Haar system, equivariant $KK$-theory was developped by R. Vergnioux in \cite{vergnioux}. Details are beyond the scope of this memoir, and we refer to \cite{vergnioux} for details.\\
 
+\begin{prop}[\cite{vergnioux}]
+Let $A$ and $B$ be two $\hat{\mathbb G}$-algebras. Then there exists a $\Z_2$-graded abelian group $KK^{\hat{\mathbb G}}(A,B) $ such that :
+\begin{itemize}
+\item[$\bullet$] every $\hat{\mathbb G}$-equivariant $*$-homomorphism $\phi : A\rightarrow B$ defines a class $[\phi]\in KK^{\hat{\mathbb G}}(A,B)$,
+\item[$\bullet$] $KK^{\hat{\mathbb G}}(A,B)$ is a contravariant functor in the $A$ variable w.r.t. $\hat{\mathbb G}$-equivariant $*$-homomorphisms,
+\item[$\bullet$] $KK^{\hat{\mathbb G}}(A,B)$ is a covariant functor in the $B$ variable w.r.t. $\hat{\mathbb G}$-equivariant $*$-homomorphisms,
+\item[$\bullet$] for every $\hat{\mathbb G}$-algebra $D$, and if $A$ is separable, there exists a bilinear map called the Kasparov product 
+\[\otimes_D : KK^{\hat{\mathbb G}}(A,D)\times KK^{\hat{\mathbb G}}(D,B)  \rightarrow  KK^{\hat{\mathbb G}}(A,B)\]
+such that 
+\[ [\phi]\otimes_D z' = \phi^*(z') \text{ and } z\otimes_D[\phi'] = \phi'_*(z)\]
+for every $z\in KK^{\hat{\mathbb G}}(A,D)$, $z\in KK^{\hat{\mathbb G}}(D,B)$, and every $\hat{\mathbb G}$-equivariant $*$-homomorphisms $\phi : A \rightarrow D$ and $\phi' : D\rightarrow B$.
+\end{itemize}
+Moreover, one can construct a descent morphism
+\[j_{\hat{\mathbb G}} : KK^{\hat{\mathbb G}}(A,B)\rightarrow KK(A\rtimes_r \hat{\mathbb G},B\rtimes_r \hat{\mathbb G})\]
+compatible with Kasparov products, i.e. 
+\[j_{\hat{\mathbb G}}(z\otimes_D z') = j_{\hat{\mathbb G}}(z)\otimes_{D\rtimes \hat{\mathbb G}} j_{\hat{\mathbb G}}(z')\quad \forall z\in KK^{\hat{\mathbb G}}(A,D),z'\in KK^{\hat{\mathbb G}}(D,B) \]
+\end{prop}
+
+It turns out that every $KK^{\hat{\mathbb G}}$-element satisfies property $(d)$ for some universal $d>0$ independent of $\mathbb G$ as well.
 
 
 

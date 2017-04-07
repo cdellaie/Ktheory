@@ -1,14 +1,17 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
+A level-1 auxiliary file: Remerciements.aux
+A level-1 auxiliary file: AbstractFrench.aux
+A level-1 auxiliary file: Motivation.aux
 Case mismatch error between cite keys SkTuYU and SkTuYu
----line 94 of file main.aux
+---line 96 of file main.aux
  : \citation{SkTuYU
  :                 }
 I'm skipping whatever remains of this command
+A level-1 auxiliary file: QuantumGroups.aux
 A level-1 auxiliary file: FDC.aux
 A level-1 auxiliary file: StandardModules.aux
-A level-1 auxiliary file: QuantumGroups.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
 Repeated entry---line 191 of file biblio2.bib
@@ -22,45 +25,45 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 42 entries,
+You've used 45 entries,
             2118 wiz_defined-function locations,
-            771 strings with 9839 characters,
-and the built_in function-call counts, 12154 in all, are:
-= -- 1224
-> -- 419
+            792 strings with 10298 characters,
+and the built_in function-call counts, 12985 in all, are:
+= -- 1312
+> -- 446
 < -- 11
-+ -- 180
-- -- 128
-* -- 785
-:= -- 2035
-add.period$ -- 126
-call.type$ -- 42
-change.case$ -- 178
++ -- 193
+- -- 136
+* -- 842
+:= -- 2179
+add.period$ -- 135
+call.type$ -- 45
+change.case$ -- 190
 chr.to.int$ -- 0
-cite$ -- 49
-duplicate$ -- 507
-empty$ -- 1041
-format.name$ -- 128
-if$ -- 2524
+cite$ -- 52
+duplicate$ -- 538
+empty$ -- 1109
+format.name$ -- 136
+if$ -- 2691
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 51
-newline$ -- 212
-num.names$ -- 84
-pop$ -- 194
+int.to.str$ -- 45
+missing$ -- 53
+newline$ -- 227
+num.names$ -- 90
+pop$ -- 202
 preamble$ -- 1
-purify$ -- 147
+purify$ -- 157
 quote$ -- 0
-skip$ -- 339
+skip$ -- 360
 stack$ -- 0
-substring$ -- 825
-swap$ -- 82
+substring$ -- 892
+swap$ -- 85
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 148
+type$ -- 160
 warning$ -- 7
-while$ -- 139
-width$ -- 44
-write$ -- 451
+while$ -- 149
+width$ -- 47
+write$ -- 484
 (There were 2 error messages)
