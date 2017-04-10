@@ -261,7 +261,7 @@ The function $\lambda : G\times_{s,p} P_E(G) \rightarrow [0,1]$ is continuous.
 \end{lem}
 
 \begin{dem}
-Let $\{(g_j,\eta_j)\}_{j\in J}\subseteq G\times_{s,p}P_E(G)$ be a sequence converging to $(g,\eta)\in G\times_{s,p}P_E(G)$. Let $x=p(\eta) = s(g)$ and $x_j=p(\eta_j) = s(g_j)$. There exists an open neighborhood $U\subseteq G^{(0)}$ of $x$ such that $s$ is injective on $s^{-1}(U)$ and such that $x_j$ belongs ultimately to $U$. We can suppose $x_j\in U$ for every $j$. Then we can decompose $s^{-1}(U) = \coprod_{g\in G^x} S_g$ with, for each $g\in G^x$, an open bisection $S_g\subseteq G$. Let, for every $g\in G^x$, $\phi_g : G\rightarrow [0,1]$ be a continuous function equal to $1$ on $S_g$ and vanishing outside a small neighborhood of $S_g$. Then $\lambda_g(\eta) = \langle \eta,\phi_g\rangle / \sum_{h\in G^x}\langle \eta,\phi_h\rangle$ and $\lambda_{g_j}(\eta_j) = \langle \eta_j,\phi_g\rangle / \sum_{h\in G^x}\langle \eta_j,\phi_h\rangle$ for every $j\in J$. It is now clear, by definition of the weak-$*$ topology, that $\lambda_{g_j}(\eta_j)$ converges to $\lambda_{g}(\eta)$.  \\
+Let $\{(g_j,\eta_j)\}_{j\in J}\subseteq G\times_{s,p}P_E(G)$ be a generalized sequence converging to $(g,\eta)\in G\times_{s,p}P_E(G)$. Let $x=p(\eta) = s(g)$ and $x_j=p(\eta_j) = s(g_j)$. There exists an open neighborhood $U\subseteq G^{(0)}$ of $x$ such that $s$ is injective on $s^{-1}(U)$ and such that $x_j$ belongs ultimately to $U$. We can suppose $x_j\in U$ for every $j$. Then we can decompose $s^{-1}(U) = \coprod_{g\in G^x} S_g$ with, for each $g\in G^x$, an open bisection $S_g\subseteq G$. Let, for every $g\in G^x$, $\phi_g : G\rightarrow [0,1]$ be a continuous function equal to $1$ on $S_g$ and vanishing outside a small neighborhood of $S_g$. Then $\lambda_g(\eta) = \langle \eta,\phi_g\rangle / \sum_{h\in G^x}\langle \eta,\phi_h\rangle$ and $\lambda_{g_j}(\eta_j) = \langle \eta_j,\phi_g\rangle / \sum_{h\in G^x}\langle \eta_j,\phi_h\rangle$ for every $j\in J$. It is now clear, by definition of the weak-$*$ topology, that $\lambda_{g_j}(\eta_j)$ converges to $\lambda_{g}(\eta)$.  \\
 \qed
 \end{dem}
 
@@ -396,12 +396,14 @@ Let us prove the second point. Let $y\in K(B\rtimes_r G)$, and let $\varepsilon\
 This kind of statement leads us to define the following properties, following \cite{OY3}.\\
 \begin{itemize}
 \item[$\bullet$] $QI_{G,B}(E,E',F,\varepsilon)$ : for any $x\in RK^G(P_E(G), B )$, then $\mu^{\varepsilon,E,F}_{G,B}(x) = 0$ implies $q_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),B)$.
-\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : for any $y\in K^{\varepsilon,F}(B\rtimes G)$, there exists $x\in RK^G(P_E(G),B)$ such that $\mu^{\varepsilon',E,F'}_{G,B}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
+\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : for any $y\in K^{\varepsilon,F}(B\rtimes_r G)$, there exists $x\in RK^G(P_E(G),B)$ such that $\mu^{\varepsilon',E,F'}_{G,B}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
 \end{itemize} 
 
 %%%%%%%%
 
-To prove the main theorems of this section, what we called quantitative statements, we will need a serie of lemmas. The first part is devoted to a study of the behaviour of $K$-homology under product of the coefficients. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}.
+To prove the main theorems of this section, what we called quantitative statements, we will need a serie of lemmas. The first part is devoted to a study of the behaviour of $K$-homology under product of the coefficients. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}. \\
+
+Recall first that the Haar system $(\lambda^x)_{x\in G^{(0)}}$ on $G$ defines, for every $f\in C_c(G)$, a continuous function $x\mapsto \int_{g\in G^x}f(g)d\lambda^x(g)$. We denote by $\int f d\lambda$ the element of $C_0(X)$ obtained when integrating a compactly supported function $f$ w.r.t. the Haar system. If $A$ is a $G$-algebra and $E$ is a $A$-Hilbert module, $f\mapsto \int f d\lambda$ extends by linearity and continuity to $C_c(G,A)\subseteq r^*A $ and $C_c(G,E)\subseteq r^*E$. We will still denote by $\int fd\lambda$ the element in $A$ or $E$ if $f$ is in $r^* A$ or $r^* E$ respectively. %Notice that the invariance of the Haar system implies that, if $V\in\mathcal L_{s^*B}(s^*E,r^*E)$ denotes the action of $G$ on $E$, then $\int V F V^* d\lambda = \int F d\lambda$ in $\mathcal L_B(E)$ , for every $F\in\mathcal L_B(E)$. 
 
 \begin{lem}[lemma $3.6$,\cite{TuBC2}]\label{JLTform}
 Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarrow G^{(0)}$ is locally injective, and let $B$ be a $G$-algebra. Then for every $z\in RK^G(X,B)$ there exists a $G$-proper $G$-compact space $Z$ and a $K$-cycle $(H_B, \pi, T)\in \mathbb E^G(C_0(Z),B)$ representing $z$ such that :
@@ -429,6 +431,33 @@ F_x -F'_x 	& = (\sum_{g\in G^x,U\in\mathcal U} V_g \phi_U V_g^*)F_x -F'_x \\
 For every $x$, the sum is finite, and each of the summand is compact, hence $[H_B, \pi,T]=[H_B,\pi,T']$.\\ 
 \qed
 \end{dem}
+
+%%%%%%%%%%%%% NOUVELLE PREUVE
+\begin{dem}
+Let $(E,\pi,T)\in \mathbb E(C_0(X),B)$ be a $K$-cycle. Denote by $\alpha : s^* C_0(Z) \rightarrow r^*C_0(Z)$ the action of $G$. Let $K$ be a compact fundamental domain for the action of $G$ on $Z$. By local injectivity of $p$, let $(U_j)_j$ be a finite open cover of $K$ such that $p_{|U_j}$ is injective for every $U_j\in \mathcal U$. There exist compactly supported continuous functions $\phi_j : Z\rightarrow [0,1]$ such that  \[\text{supp }\phi_j \subseteq U_j \quad\text{ and }\quad K\subseteq \cup_{j} \phi_j^{-1}(0,+\infty).\]
+Up to replacing $\phi_j$ by the continuous function $\phi_j(z) / \sum_{k,g} \phi_k(z.g)$, we can assume $\sum_{j,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. The latter would indeed be continuous, as it can be expressed as $\frac{\phi_j} {(\sum_j\int \phi_j d\lambda ) \circ p }$. The condition $\sum_{j,g\in G^{p(z)}} \phi_j (z.g) = 1,\forall z\in Z$ implies that 
+\[\sum_j \int V(s^*\pi(\phi_j))V^*d\lambda = id_E.\] 
+Indeed, $\pi$ is $G$-equivariant, and by invariance of the Haar system, $\sum_j\int \alpha(s^*\phi_j)d\lambda = 1_{C_0(Z)}$. Composing with $\pi$ gives the equality by continuity and linearity of $\pi$.\\  
+
+Define $F_j = \pi(\phi_j^\frac{1}{2}) F \pi(\phi_j^\frac{1}{2})\in\mathcal L_B(E)$. Then $s^* F_j\in C_c(G,\mathcal L_{s^* B}(s^* E))$ and put
+\[F'= \sum_{j} \int V (s^*F_j) V^* d\lambda.\] 
+The operator $F'$ is  $G$-invariant and commutes with the action of $C_0(Z)$. Indeed, we can compute its fibers : for every $x\in G^{(0)}$,
+\[F'_x = \sum_{j, g\in G^x} V_g\pi(\phi_j^{\frac{1}{2}}) F_{s(g)}\pi(\phi_j^{\frac{1}{2}})V_g^*.\] 
+Hence, by local injectivity, for all $g\in G$, there exists $z_g\in Z$ such that $Z_{s(g)}\cap U = \{z_g\}$, and for all $f\in C_0(Z_{s(g)})$, $[ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f ] = [ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f(z_g) \chi_{z_g} ]=0 $.\\
+
+Moreover, $F'$ is a compact perturbation of $F$ as the following computation shows.\\
+\[\begin{array}{rl}
+F -F' 	& = (\sum_{j} \int V (s^* \phi_j) V^*d\lambda)F -F' \\
+		& = \sum_{j}\int V (s^*\phi_j^{\frac{1}{2}}) \ 
+\left( (s^*\phi_j^\frac{1}{2}) V^* (r^*F) V- (s^*F)(s^*\phi_j^\frac{1}{2}) \right) \ V^* \ d\lambda\\
+		& = \sum_{j} \int V (s^*\phi_j^{\frac{1}{2}}) \ 
+			\left( (s^*\phi_j^\frac{1}{2}) (V^* (r^*F)V - (s^*F)) + s^*(\phi_j^\frac{1}{2} [\phi_j^\frac{1}{2},F] )\right) \ 
+				V^* \ d\lambda	  	
+\end{array}\]
+Each of the summand is compact, hence $[H_B, \pi,T]=[H_B,\pi,T']$.\\ 
+\qed
+\end{dem}
+%%%%%%%%%%%%%%%%%%%%
 
 \begin{lem}
 Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarrow G^{(0)}$ is locally injective, and let $(B_j)_j$ be a countable family of $G$-algebras. Then the projection $\prod_j B_j \otimes K \rightarrow B_j\otimes K$ induces an isomorphism
@@ -551,9 +580,9 @@ Let $\lambda>0$ the universal constant of remark \ref{approximation} : for any $
 Let $y\in K_*(\tilde B\rtimes_r G)$. By remark \ref{approximation}, there exist $\varepsilon\in (0,\frac{1}{4})$, $F\in\mathcal E$ and $z\in K^{\varepsilon,F}(\tilde B\rtimes G)$ such that $\iota_{\varepsilon,F}(z) = y$. Let $(z_j)$ the element of $\prod_j K^{\varepsilon,F}(B\rtimes_r G)$ corresponding to $z$ under the isomorphism of corollary \ref{controlledprod}. Let $E$ and $F'$ such that $k_J(\varepsilon).E\subseteq F$ and $QS(E,F,F',\varepsilon,\lambda\varepsilon)$ : for every $j$, there exists $x_j\in RK^G(P_E(G),B) $ such that $\mu_{G,B}^{\lambda\varepsilon,E,F'}(x_j)=\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}(z_j)$. 
 Let $x\in RK^G(P_E(G),\tilde B)$ be the element of $RK^G(P_E(G),\tilde B)$ corresponding to $(x_j)\in \prod_j RK^G(P_E(G),B)$ under the isomorphism of lemma \ref{prod}. Naturality of the assembly maps, and compatibility of the controlled assembly maps with the usual one ensures that $\mu_{G,\tilde B}(x)=z$, whereby $\mu_{G,\tilde B}$ is onto.\\
 
-Suppose that there exist $\varepsilon \in (0,\frac{1}{4\lambda})$ and a nonempty controlled subset $F\in\mathcal E$ such that for every $E,F'\in\mathcal E$ such that $k_J(\varepsilon). E \subseteq F$, $QS_{G,B}(E,F,F',\varepsilon,\lambda\varepsilon)$ does not hold. Let $(E_j)$ and $(F_j)$ be unbounded increasing sequences of controlled subsets such that $F\subseteq F_j$ and $k_J(\varepsilon).E_j\subseteq F_j$. Let $y_j\in K^{\varepsilon,F}(B\rtimes_r G)$ such that $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)$ is not in the range of $\mu_{G,B}^{E_j,\lambda\varepsilon,F_j}$. Let $y\in K^{\varepsilon,F}(\tilde B\rtimes_r G)$ be the element of corresponding to $(y_j)_j$ under the isomorphism of corollary \ref{controlledprod}. If there exists $x\in RK^G(P_{E'}(G),\tilde B)$ for a $E'\in\mathcal E$ such that $E\subseteq E'$ and $\iota_{\varepsilon,F}( y) =\mu_{G,\tilde B}^{E'}(x)$ then there would exists a $F'\in\mathcal E$ such that $F\subseteq F'$ and
+Suppose that there exist $\varepsilon \in (0,\frac{1}{4\lambda})$ and a nonempty controlled subset $F\in\mathcal E$ such that for every $E,F'\in\mathcal E$ such that $k_J(\varepsilon). E \subseteq F$, $QS_{G,B}(E,F,F',\varepsilon,\lambda\varepsilon)$ does not hold. Let $(E_j)$ and $(F_j)$ be unbounded increasing sequences of controlled subsets such that $F\subseteq F_j$ and $k_J(\varepsilon).E_j\subseteq F_j$. Let $y_j\in K^{\varepsilon,F}(B\rtimes_r G)$ such that $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)$ is not in the range of $\mu_{G,B}^{\lambda\varepsilon, E_j , F_j}$. Let $y\in K^{\varepsilon,F}(\tilde B\rtimes_r G)$ be the element of corresponding to $(y_j)_j$ under the isomorphism of corollary \ref{controlledprod}. If there exists $x\in RK^G(P_{E'}(G),\tilde B)$ for a $E'\in\mathcal E$ such that $E\subseteq E'$ and $\iota_{\varepsilon,F}( y) =\mu_{G,\tilde B}^{E'}(x)$ then there would exists a $F'\in\mathcal E$ such that $F\subseteq F'$ and
 \[\iota_{\varepsilon,F}^{\lambda\varepsilon, F'}( y) =\mu_{G,\tilde B}^{\lambda\varepsilon,E',F'}(x) = \iota_{\varepsilon,F}^{\lambda\varepsilon, F'}\circ\mu_{G,\tilde B}^{\varepsilon,E',F}(x).\]
-Now choose $j$ such that $E'\subseteq E_j $ and $F'\subseteq F_j$, and compose the previous equality with $\iota_{\lambda\varepsilon,F'}^{\lambda\varepsilon,F_j}$ and $q_{E'}^{E_j}$ to obtain $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)=\mu_{G,B}^{d_j,\lambda\varepsilon,F_j}(x)$ which contradicts our assumption. Hence $\mu_{G,\tilde B}$ is not onto. \\
+Now choose $j$ such that $E'\subseteq E_j $ and $F'\subseteq F_j$, and compose the previous equality with $\iota_{\lambda\varepsilon,F'}^{\lambda\varepsilon,F_j}$ and $q_{E'}^{E_j}$ to obtain $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)=\mu_{G,B}^{\lambda\varepsilon , E_j,F_j}(x)$ which contradicts our assumption. Hence $\mu_{G,\tilde B}$ is not onto. \\
 \qed
 \end{dem}
 
@@ -586,28 +615,46 @@ Now choose $j$ such that $E'\subseteq E_j $ and $F'\subseteq F_j$, and compose t
 We recall the following definition from \cite{OY3}.
 
 \begin{definition}
-Let $B$ be a filtered $C^*$-algebra, posiive numbers $\varepsilon,\varepsilon'$ such that $0<\varepsilon <\varepsilon' <\frac{1}{4}$ and nonempty $F,F'\in\mathcal E$ such that $F\subseteq F'$. 
+Let $B$ be a $\mathcal E$-filtered $C^*$-algebra, $\varepsilon,\varepsilon'$ be positive numbers such that $0<\varepsilon <\varepsilon' <\frac{1}{4}$ and $F,F'\in\mathcal E$ be nonempty controlled subsets such that $F\subseteq F'$. The following property is called Persistance Approximation Property :
 \begin{itemize}
 \item[$\bullet$] $PA_B(\varepsilon,\varepsilon',F,F')$ : for every $x\in K_*^{\varepsilon,F}(B)$ such that $\iota_{\varepsilon,F}(x)=0$ in $K_*(B)$, then $\iota_{\varepsilon,F}^{\varepsilon',F'}(x)=0$ in $K_*^{\varepsilon',F'}(B)$.
-\item[$\bullet$] $B$ is said to satisfy the Persistance Approximation Property (PAP) if for every nonempty $F$ and $\varepsilon\in (0,\frac{1}{4})$, there exists nonempty $F'$ and $\varepsilon'\in [\varepsilon,\frac{1}{4})$ such that $PA(\varepsilon,\varepsilon',F,F')$ holds.
+\item[$\bullet$] $B$ is said to satisfy the Persistance Approximation Property (PAP) if for every nonempty $F\in\mathcal E$ and every $\varepsilon\in (0,\frac{1}{4})$, there exists $F'\in\mathcal E$ nonempty and $\varepsilon'\in [\varepsilon,\frac{1}{4})$ such that $PA_B(\varepsilon,\varepsilon',F,F')$ holds.
 \end{itemize}
 \end{definition}
 
+%\begin{thm} \label{PAPG}
+%Up to some hypothesis, if $\mu_{G,l^\infty(\N, K_A)}$ is onto and $\mu_{G,A}$ is one-to-one, then, for a universal constant $\lambda_{PA}$, for all $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ and nonempty $F$, there exists $F'$ such that $F\subseteq F'$ and $PA_{A\rtimes G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ holds.
+%\end{thm}
+
+The following result gives a sufficient condition for (PAP) to be satisfied for a large class of $C^*$-algebras.
+
 \begin{thm} \label{PAPG}
-Up to some hypothesis, if $\mu_{G,l^\infty(\N, K_A)}$ is onto and $\mu_{G,A}$ is one-to-one, then, for a universal constant $\lambda_{PA}$, for all $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ and nonempty $F$, there exists $F'$ such that $F\subseteq F'$ and $PA_{A\rtimes G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ holds.
+Let $G$ be an étale groupoid with compact base space. There exists a universal constant $\lambda_{PA}$ such that, for every $G$-algebra $A$, if $\mu_{G,l^\infty(\N, A\otimes\mathfrak K)}$ is onto and $\mu_{G,A}$ is one-to-one, then for every $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ and every nonempty $F\in\mathcal E$, there exists $F'\in\mathcal E$ such that $F\subseteq F'$ and $PA_{A\rtimes_r G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ holds.
 \end{thm}
 
 \begin{dem}
-We denote $l^\infty(\N,K_A)$ by $\tilde A$.\\
-Assume the statement does not holds : there exists $\varepsilon$ and $F$ such that $PA(\varepsilon,\varepsilon',F,F')$ is not true for every $F \subseteq F'$. Then we can extract a increasing unbounded sequence of positive numbers $F_j$ and elements $x_j\in K_*^{\varepsilon,F}(A\rtimes G)$ such that $\iota_{\varepsilon,F}(x_j)=0$ and $\iota_{\varepsilon,F}^{\lambda_{PA},F_j}(x)\neq 0$. \\
-According to the lemma \ref{LocalInjectivity}, there exists $x\in K_*^{\alpha\varepsilon,h_\varepsilon F}(\tilde A\rtimes G)$ such that $p_j(x)=x_j$ where $p_j$ is the composition of the projection on the $j^{th}$ factor $\tilde A \rtimes G \rightarrow K_A \rtimes G$ and the Morita equivalence in K-theory.
-By naturality of the quantitative assembly maps, the following diagram commutes
+Let us denote $l^\infty(\N,A\otimes\mathfrak K)$ by $\tilde A$.\\
+
+Assume the statement does not holds : there exists $\varepsilon$ and $F$ such that $PA_{A\rtimes_r G}(\varepsilon,\varepsilon',F,F')$ is not true for every $F'\in\mathcal E$ such that $F \subseteq F'$. Then we can extract an increasing unbounded sequence of nonempty controlled subsets $F_j$ and elements $x_j\in K^{\varepsilon,F}(A\rtimes_r G)$ such that $\iota_{\varepsilon,F}(x_j)=0$ and $\iota_{\varepsilon,F}^{\lambda_{PA},F_j}(x)\neq 0$. \\
+
+Let $x$ be the element of $K^{\varepsilon,F}(A\rtimes_r G)$ corresponding to $(x_j)\in\prod_j K^{\varepsilon,F}(A\rtimes_r G)$ under the isomorphism of corollary \ref{controlledprod}. By naturality of the quantitative assembly maps, the following diagram commutes
+%According to the lemma \ref{LocalInjectivity}, there exists $x\in K_*^{\alpha\varepsilon,h_\varepsilon F}(\tilde A\rtimes G)$ such that $p_j(x)=x_j$ where $p_j$ is the composition of the projection on the $j^{th}$ factor $\tilde A \rtimes G \rightarrow K_A \rtimes G$ and the Morita equivalence in K-theory.
 \[\begin{tikzcd}
-RK^G(P_E(G),\tilde A) \arrow{r}{\mu_{G,\tilde A}^{\alpha\varepsilon,E, h_\varepsilon F}} \arrow{rd}{\mu_{G,\tilde A}^d} & K^{\alpha\varepsilon,h_\varepsilon F}(\tilde A\rtimes G) \arrow{d}{\iota_{\alpha\varepsilon, h_\varepsilon F}}\\
+RK^G(P_E(G),\tilde A) \arrow{r}{\mu_{G,\tilde A}^{\alpha\varepsilon,E, h_\varepsilon F}} \arrow{rd}{\mu_{G,\tilde A}^E} & K^{\alpha\varepsilon,h_\varepsilon F}(\tilde A\rtimes G) \arrow{d}{\iota_{\alpha\varepsilon, h_\varepsilon F}}\\
                                                       \                          & K(\tilde A\rtimes G)
 \end{tikzcd}\]
 
-If $\iota_{\alpha\varepsilon,h_\varepsilon F}(x)$ is in the range of $\mu_{G,\tilde A}$, there exists a nonempty $E$ and $z\in RK^G(P_E(G),\tilde A)$ such that $\mu_{G,\tilde A}(z)=\iota_{\alpha\varepsilon,h_\varepsilon F}(x)$. Denote the image of $z$ under the isomorphism $RK^G(P_E(G),\tilde A) \simeq \prod RK^G(P_E(G),A)$ by $(z_j)_j$. By naturality, $\mu_{G,\tilde A}^E(z_j)=\iota_{\alpha\varepsilon,h_\varepsilon F}^{\lambda\varepsilon,F_j}(x_j)\neq 0$ and $\mu_{G,A}(z)=0$ so that $\mu_{G,A}$ is not injective.\\
+If $\iota_{\alpha\varepsilon,h_\varepsilon F}(x)$ is in the range of $\mu_{G,\tilde A}$, there exists a nonempty $E\in\mathcal E$ and $z\in RK^G(P_E(G),\tilde A)$ such that $\mu_{G,\tilde A}(z)=\iota_{\alpha\varepsilon,h_\varepsilon F}(x)$. Denote by $(z_j)$ the element of $\prod_j RK^G(P_E(G),A)$ corresponding to $z$ under the isomorphism $RK^G(P_E(G),\tilde A) \cong \prod_j RK^G(P_E(G),A)$ of lemma \ref{prod}. By naturality, $\mu_{G,\tilde A}^E(z_j)=\iota_{\alpha\varepsilon,h_\varepsilon F}^{\lambda\varepsilon,F_j}(x_j)\neq 0$ and $\mu_{G,A}(z)=0$ so that $\mu_{G,A}$ is not injective. Hence either $\mu_{G,\tilde A}$ is not onto, either $\mu_{G,A}$ is not one to one. \\
 \qed
 \end{dem}
 
+\begin{rk}
+The theorems \ref{Quant1} and \ref{Quant2} provide examples that satisfy (PAP). Recall that every a-T-menable groupoid satisfies the Baum-Connes conjecture with coefficients, hence satisfies the hypothesis of the theorem \ref{PAPG}.
+\end{rk}
+
+\begin{rk}
+The theorem \ref{PAPG} provides an obstruction for the Baum-Connes conjecture to be satisfied. 
+\end{rk}
+
+\begin{rk} One can ignore the condition of $G^{(0)}$ being compact. Then theorems \ref{Quant1}, \ref{Quant2} and \ref{PAPG} remain true when $l^\infty(\N, A\otimes\mathfrak K)\rtimes_r G$ is replaced by the controlled product $\mathcal A^G_\infty$, where $\mathcal A^G$ is the constant family of $\mathcal E$-controlled $C^*$-algebras $(A\rtimes_r G)$. You will still need $G$ to be $\sigma$-compact in order to be able to extract countable sequences from the quantitative statements.
+\end{rk}
