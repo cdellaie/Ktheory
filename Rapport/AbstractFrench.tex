@@ -55,7 +55,7 @@ Il s'avère que les algèbres de Roe $C^*(X,B)$, les produits croisés par $G$, 
 
 La deuxième partie de la thèse s'intéresse à la construction d'applications d'assemblage à valeurs dans la $K$-théorie contrôlée, dans le cas des espaces coarse et dans celui des groupoïdes étales. Une propriété importante est que ces applications factorisent les applications d'assemblage classiques. Cela permet de relier les conjectures de Baum-Connes et de Baum-Connes coarse aux propriétés de nos applications. Ces dernières sont définies en deux étapes. La première est de définir ce que l'on appelle un foncteur de descente. Puis, on définit le complexe de Rips associé à $X$ et à $G$, et un certain projecteur canonique associé. \\
 
-Plus précisément, soit $(X,d)$ un espace métrique dénombrable discret, que l'on suppose à géométrie bornée; i.e. $\forall R>0,\sup |(x,y) \in X\times X \text{ s.t. }d(x,y)<R\}<\infty$. Nous construisons d'abord la transformation de Roe contrôlée $\sigma_X(z)$ pour tout élément $z\in KK(A,B)$. Les propositions \ref{Roe1} et \ref{Roe2}, qui décrivent ses propriétés, peuvent être résumées dans la proposition suivante :
+Plus précisément, soit $(X,d)$ un espace métrique dénombrable discret, que l'on suppose à géométrie bornée; i.e. $\forall R>0,\sup |(x,y) \in X\times X \text{ s.t. }d(x,y)<R\}<\infty$. Nous construisons d'abord la transformation de Roe contrôlée $\hat\sigma_X(z)$ pour tout élément $z\in KK(A,B)$. Les propositions \ref{Roe1} et \ref{Roe2}, qui décrivent ses propriétés, peuvent être résumées dans la proposition suivante :
 
 \begin{prop}
 Soient $A$ et $B$ deux $C^*$-algèbres. Pour tout $z\in KK_*(A,B)$, il existe une paire de contrôle $(\alpha_X,k_X)$ et un morphisme $(\alpha_X,k_X)$-contrôlé
@@ -66,16 +66,16 @@ de même degré que $z$, tel que :
 \item[(ii)] $\hat\sigma_X$ est additif, i.e.
 \[\hat\sigma_X(z+z')=\hat\sigma_X(z)+\hat\sigma_X(z').\]
 \item[(iii)] Pour tout $*$-homomorphisme $f : A_1\rightarrow A_2$,
-\[\hat\sigma_X(f^*(z))=\hat\sigma_X(z)\circ f_{X,*}\] for all $z\in KK_*(A_2,B)$.
+\[\hat\sigma_X(f^*(z))=\hat\sigma_X(z)\circ f_{X,*}\] pour tout $z\in KK_*(A_2,B)$.
 \item[(iv)] Pour tout $*$-homomorphisme $g : B_1\rightarrow B_2$,
-\[\hat\sigma_X(g_*(z))= g_{X,*}\circ \hat\sigma_X(z)\] for all $z\in KK_*(A,B_1)$.
+\[\hat\sigma_X(g_*(z))= g_{X,*}\circ \hat\sigma_X(z)\] pour tout $z\in KK_*(A,B_1)$.
 \item[(v)] Soit $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ une extension semi-scindée de $C^*$-algèbres et $[\partial_J]\in KK_1(A/J,J)$ son bord en $KK$-théorie. Alors : 
 \[\hat\sigma_X([\partial_{J,A}])=D_{C^*(X,J),C^*(X,A)}.\] 
 \item[(vi)] $\hat\sigma_X([id_A]) \sim_{(\alpha_X,k_X)} id_{\hat K(C^*(X,A))}$
 \end{enumerate}
 \end{prop}
 
-La transformation de Roe contrôlée est une application de descente, et l'étape suivante naturelle est la construction de l'application d'assemblage contrôlée $\mu_{X,B}$ , pour toute $C^*$-algèbre $B$. Pour cela, pour tout entourage $E$, on définit une projection canonique $P_E\in C^*(X,C_0(P_E(X)))$. Cette projection étant de propagation finie, elle définit une classe paire de $K$-théorie contrôlée.
+La transformation de Roe contrôlée est une application de descente, et l'étape suivante naturelle est la construction de l'application d'assemblage contrôlée $\hat\mu_{X,B}$ , pour toute $C^*$-algèbre $B$. Pour cela, pour tout entourage $E$, on définit une projection canonique $P_E\in C^*(X,C_0(P_E(X)))$. Cette projection étant de propagation finie, elle définit une classe paire de $K$-théorie contrôlée.
 
 \begin{definition}
 Soit $B$ une $C^*$-algèbre, $\varepsilon\in (0,\frac{1}{4})$ et $E,F\in\mathcal E_X$ des entourages tels que $k_X(\varepsilon).E\subseteq F$. L'application d'assemblage contrôllée $\hat\mu_{X,B}=(\mu_{X,B}^{\varepsilon,E,F})_{\varepsilon,E}$ est définie comme la famille d'applications
@@ -91,7 +91,7 @@ où $\varepsilon'$ et $F'$ vérifient :
 Nous définissons des applications analogues pour les groupoïdes étales. Plus précisément, soit $G$ un groupoïde étale localement compact et $\sigma$-compact. Nous montrons que les ensembles $E\subseteq G$ compacts symmétriques forment une structure coarse $\mathcal E$, et que les produits croisés réduits de $G$ sont filtrés par $\mathcal E$. La première étape est à nouveau de construire un analogue du foncteur de descente en $K$-théorie contrôlée. Les propositions \ref{Kasparov1} et \ref{Kasparov} peuvent être résumées dans la proposition suivante. 
 
 \begin{prop}
-Soient $A$ et $B$ deux $G$-$C^*$-algèbres. Pour tout $z\in KK^G_*(A,B)$, il existe une paire de contrôle $(\alpha_J,k_J)$ et un morphisme $(\alpha_J,k_J)$-contrôlé
+Soient $A$ et $B$ deux $G$-algèbres. Pour tout $z\in KK^G_*(A,B)$, il existe une paire de contrôle $(\alpha_J,k_J)$ et un morphisme $(\alpha_J,k_J)$-contrôlé
 \[J_{red,G}(z) : \hat K(A\rtimes_r G)\rightarrow \hat K(B\rtimes_r G)\]
 de même degré que $z$, tel que
 \begin{enumerate}
@@ -99,16 +99,16 @@ de même degré que $z$, tel que
 \item[(ii)] $J_{red,G}$ est additif, i.e.
 \[J_{red,G}(z+z')=J_{red,G}(z)+J_{red,G}(z').\]
 \item[(iii)] Pour tout $G$-morphisme $f : A_1\rightarrow A_2$,
-\[J_{red,G}(f^*(z))=J_{red,G}(z)\circ f_{G,red,*}\] for all $z\in KK_*^G(A_2,B)$.
+\[J_{red,G}(f^*(z))=J_{red,G}(z)\circ f_{G,red,*}\] pour tout $z\in KK_*^G(A_2,B)$.
 \item[(iv)] Pour tout $G$-morphisme $g : B_1\rightarrow B_2$,
-\[J_{red,G}(g_*(z))= g_{G,red,*}\circ J_{red,G}(z)\] for all $z\in KK_*^G(A,B_1)$.
+\[J_{red,G}(g_*(z))= g_{G,red,*}\circ J_{red,G}(z)\] pour tout $z\in KK_*^G(A,B_1)$.
 \item[(v)] Soit $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ une extension semi-scindée $G$-équivariante de $G$-algèbres et  $[\partial_J]\in KK_1^G(A/J,J)$ son bord en $KK^G$-théorie. Alors 
 \[J_G([\partial_J])=D_{J\rtimes_r G,A\rtimes_rG}.\] 
 \item[(vi)] $J_{red,G}([id_A]) \sim_{(\alpha_J,k_J)} id_{\hat K(A\rtimes G)}$
 \end{enumerate}
 \end{prop}
 
-Cette transformation, que nous appelons transformation de Kasparov contrôlée, permet de construire l'application d'assemblage contrôlée $\mu_{G,B}$ pour toute $G$-algèbre $B$. Pour tout ensemble contrôlé $E\subseteq G$, on dispose d'un projecteur $\mathcal L_E\in C_0(P_E(G))\rtimes_r G$ qui est de propagation finie. Il définit donc une classe de $K$-théorie contrôlée.
+Cette transformation, que nous appelons transformation de Kasparov contrôlée, permet de construire l'application d'assemblage contrôlée $\hat\mu_{G,B}$ pour toute $G$-algèbre $B$. Pour tout ensemble contrôlé $E\subseteq G$, on dispose d'un projecteur $\mathcal L_E\in C_0(P_E(G))\rtimes_r G$ qui est de propagation finie. Il définit donc une classe de $K$-théorie contrôlée.
 
 \begin{definition}
 Soit $B$ une $G$-algèbre, $\varepsilon\in (0,\frac{1}{4})$, et $E\in\mathcal E$. Soit $F\in \mathcal E$ tel que $k_J(\varepsilon).E \subseteq F$. L'application d'assemblage contrôlée pour $G$ est définie comme la famille d'applications :
@@ -126,8 +126,8 @@ où $\varepsilon'$ et $F'$ vérifient :
 
 La deuxième étape du travail est de relier l'application d'assemblage contrôlée à l'application d'assemblage classique. Les théorèmes qui réalisent ce programme sont les théorèmes \ref{Quant1} et \ref{Quant2}, que nous appelons énoncés quantitatifs. Pour cela, il nous faut d'abord introduire les propriétés suivantes :
 \begin{itemize}
-\item[$\bullet$] $QI_{G,B}(E,E',F,\varepsilon)$ : pour tout $x\in RK^G(P_E(G), B )$, alors $\mu^{\varepsilon,E,F}_G(x) = 0$ implique $q_E^{E'}(x)=0$ dans $RK^G(P_{E'}(G),B)$.
-\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : pour tout $y\in K^{\varepsilon,F}(B\rtimes G)$, il existe $x\in RK^G(P_E(G),B)$ tel que $\mu^{\varepsilon',E,F'}_G(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
+\item[$\bullet$] $QI_{G,B}(E,E',F,\varepsilon)$ : pour tout $x\in RK^G(P_E(G), B )$, alors $\mu^{\varepsilon,E,F}_{G,B}(x) = 0$ implique $q_E^{E'}(x)=0$ dans $RK^G(P_{E'}(G),B)$.
+\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : pour tout $y\in K^{\varepsilon,F}(B\rtimes G)$, il existe $x\in RK^G(P_E(G),B)$ tel que $\mu^{\varepsilon',E,F'}x_{G,B}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
 \end{itemize} 
 
 Les énoncés quantitatifs prennent alors la forme suivante.
@@ -180,6 +180,8 @@ Soit $G$ un groupoïde $\sigma$-compact étale et $A$ une $G$-algèbre. Si
 \end{itemize} 
 Alors $A\rtimes_r G$ vérifie la formule de Künneth contrôlée.
 \end{thm}
+
+En remarque, nous affirmons aussi que la tranformation de Kasparov contrôlée $J_G$ peut se définir pour les produits croisés réduits de groupes quantiques discrets de la même manière que dans le cas des groupoïdes étales. Pour ce faire, il suffit de remarquer que les propriétés importantes que vérifie le produit croisé, et qui permettent de contruire $J_G$, restent vraies dans le cas quantique.
 
 
 
