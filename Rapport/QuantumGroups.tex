@@ -1,6 +1,6 @@
 \section{Discrete and Compact Quantum groups}
 
-We recall in this section basic facts about the theory of compact quantum groups. This theory was developed by Woronowicz in the $1980$'s. The reader can find more details in \cite{Wo}. Our goal is to present reduced cross products by discrete quantum group. Our presentation is strongly inspired by the article \cite{VerVaes}. We recall that $\otimes$ denotes the minimal or spatial tensor product of $C^*$-algebras. If $x\in A\otimes A$, we will use the notation $a_{ij}$ for the obvious element in $A\otimes A\otimes A$, e.g. $a_{12} = a\otimes 1$.
+We recall in this section basic facts about the theory of compact quantum groups. This theory was developed by Woronowicz in the $1980$'s. The reader can find more details in \cite{Wo}. Our goal is to present reduced cross products by discrete quantum group. Our presentation is strongly inspired by the article \cite{VerVaes}. We recall that $\otimes$ denotes the minimal or spatial tensor product of $C^*$-algebras. If $x\in A\otimes A$, we will use the notation $a_{ij}$ for the obvious element in $A\otimes A\otimes A$, e.g. $a_{12} = a\otimes 1$. For every Hilbert space $H$ and every $\xi,\eta \in H$, $\omega_{\xi,\eta}$ denotes the linear form on $\mathcal L(H)$ defined by $\omega_{\xi,\eta}(T) = \langle T\eta,\xi\rangle$.
 
 \begin{definition}
 A compact quantum group is a pair $\mathbb G = (C(\mathbb G),\Delta)$ where $C(\mathbb G)$ is a unital $C^*$-algebra and $\Delta : C(\mathbb G) \rightarrow C(\mathbb G)\otimes C(\mathbb G)$ is a unital $*$-homomorphism satisfying :
@@ -21,7 +21,7 @@ Let $\Gamma$ be a discrete group and define the reduced $C^*$-algebra $C_r^*(\Ga
 
 \begin{definition} A unitary representation $(H,U)$ of $\mathbb G$ on a Hilbert space $H$ is a unitary element $U \in \mathcal M(\mathfrak K(H)\otimes C(\mathbb G))$ such that $(id\otimes\Delta)(U) = U_{12}U_{13}$. Let $(H,U)$ and $(H',U')$ be two unitary representations of $\mathbb G$. The space of intertwiners between $U$ and $U'$ is defined as 
 \[Hom(U,U') = \{T\in \mathcal L(H',H) \text{ s.t. }U(T\otimes 1) = (T\otimes 1) U' \}.\]
-We denote by $End(U)$ the intertwiners of $Hom(U,U)$. A unitary representation is called irreducible if $End(U) = \C 1$. The trivial representation is denoted $\varepsilon$.
+We denote by $End(U)$ the intertwiners of $Hom(U,U)$. A unitary representation is called irreducible if $End(U) = \C 1$. The trivial representation is denoted by $\varepsilon$. If $(H,U)$ is a unitary representation of $\mathbb G$, and $\eta,\xi\in H$, then $U_{\xi,\eta} = (\omega_{\xi,\eta}\otimes 1)( U )$ is called a coefficient of $U$.
 \end{definition}
 
 We define sum and tensor product of representations as follows. Let $(H,U)$ and $(H',U')$ be two unitary representations. Then the sum is defined as $(H\oplus H', U\oplus U')$. The tensor product is defined as $(H\otimes H',W)$ where $W = U_{13} U'_{23}\in \mathcal M(\mathfrak K(H\otimes H')\otimes C(\mathbb G))$. 
@@ -50,7 +50,8 @@ Let us denote by $L^2(\mathbb G)$ the Hilbert space obtained as the GNS construc
 The reduced form $C_r^*(\mathbb G)$ of $\mathbb G$ is defined as the $C^*$-algebra $\pi_h(C(\mathbb G))$. The unitary $W$ defines a unitary representation $W\in\mathcal M(C_r^*(\mathbb G)\otimes \mathfrak K(L^2(\mathbb G))$ called the regular representation of $\mathbb G$.
 \end{definition}
 
-According to \cite{Wo}, for every $\pi\in Irrep(\mathbb G)$, there exists a unique $\pi^*\in Irrep(\mathbb G)$ such that $Hom(\pi\otimes \pi^*,\varepsilon)\neq 0 \neq Hom(\varepsilon,\pi\otimes \pi^*) $. For a representative $(H_\pi,U^\pi)$, $(H_{\pi^*},U^{\pi^*})$ is called the contragredient representation. %Define :
+According to \cite{Wo}, for every $\pi\in Irrep(\mathbb G)$, there exists a unique $\pi^*\in Irrep(\mathbb G)$ such that $Hom(\pi\otimes \pi^*,\varepsilon)\neq 0 \neq Hom(\varepsilon,\pi\otimes \pi^*) $. For a representative $(H_\pi,U^\pi)$, $(H_{\pi^*},U^{\pi^*})$ is called the contragredient representation.\\
+ %Define :
 %\[L^2(\mathbb G) = \bigoplus_{\pi\in Irrep(\mathbb G)} H_\pi \otimes H_{\pi^*}. \]
 %Then the right regular representation is defined by
 %\[\rho\left\{\begin{array}{rcl}
@@ -67,9 +68,10 @@ l^\infty(\hat{\mathbb G})= \prod_{\pi\in Irred(\mathbb G)} \mathcal L(H_\pi).
 \end{array}\]
 Up to our choice of representations $\{(H_\pi,U^\pi)\}_{\pi\in Irrep(\mathbb G)}$, we can define a unitary $U = \bigoplus_{\pi\in Irrep(\mathbb G)} U^\pi\in \mathcal M(c_0(\hat{\mathbb G}) \otimes C(\mathbb G))$ which is a unitary representation of $\mathbb G$. This allows to define a unital $*$-homomorphism $\hat \Delta : l^\infty(\hat{\mathbb G}) \rightarrow l^\infty(\hat{\mathbb G})\otimes l^\infty(\hat{\mathbb G})$ by 
 \[\hat\Delta ( x) = U(x \otimes 1)U^*\quad \forall x\in l^\infty(\hat{\mathbb G})).\]
-This $*$-homomorphism satisfies $\hat\Delta(c_0(\hat{\mathbb G}))\subseteq \mathcal M(c_0(\hat{\mathbb G})\otimes c_0(\hat{\mathbb G}))$ and \textbf{OTHER CONDITION}.
+This $*$-homomorphism satisfies $\hat\Delta(c_0(\hat{\mathbb G}))\subseteq \mathcal M(c_0(\hat{\mathbb G})\otimes c_0(\hat{\mathbb G}))$ and $(\hat\Delta \otimes id) \hat\Delta = (id\otimes \hat\Delta)\hat\Delta$. %\textbf{OTHER CONDITION}.
+
 \begin{definition}
-Let $\mathbb G$ be a compact quantum group. With the above notations, its dual is defined as the discrete quantum group $\hat{\mathbb G} = (c_0(\mathbb G),\hat\Delta)$.
+Let $\mathbb G$ be a compact quantum group. With the above notations, its dual is defined as the discrete quantum group $\hat{\mathbb G} = (c_0(\hat{\mathbb G}),\hat\Delta)$.
 \end{definition}
 
 \begin{Expl} Let $\Gamma$ be a discrete group and consider the compact quantum group $\mathbb G=(C^*(\Gamma),\Delta)$. Then, $\gamma\mapsto \lambda_\gamma$ gives a bijection $Irrep(\mathbb G)\cong \Gamma$, and $\hat{\mathbb G}$ is $c_0(\Gamma)$ with comultiplication $\hat\Delta (f)(\gamma,\gamma') = f(\gamma\gamma')$ for every $f\in c_0(\Gamma)$ and $\gamma,\gamma'\in\Gamma$.
@@ -77,7 +79,7 @@ Let $\mathbb G$ be a compact quantum group. With the above notations, its dual i
 
 The dual of a compact quantum group is also represented on $L^2(\mathbb G)$ via the regular representations. 
 \begin{prop}
-For every compact quantum group $\mathbb G$, there exists a unique state $h$ on $c_0(\hat{\mathbb G})$, called the left Haar state on $\hat{mathbb G}$, satisfying $(id\otimes h)\Delta(a) = h(a)1 = (h\otimes id)\Delta(a)$ for every $a\in C(\mathbb G)$. The GNS Hilbert space is canonically isomorphic to $L^2(\mathbb G)$. We will denote by $\hat \pi_h : c_0(\hat{\mathbb G})\rightarrow \mathcal L(L^2(\mathbb G))$ and $\hat \xi_h$ the associated representation and cyclic vector respectively.  
+For every compact quantum group $\mathbb G$, there exists a unique state $h$ on $c_0(\hat{\mathbb G})$, called the left Haar state on $\hat{\mathbb G}$, satisfying $(id\otimes \hat h)\hat\Delta(a) = \hat h(a)1 $ for every $a\in C(\mathbb G)$. The GNS Hilbert space is canonically isomorphic to $L^2(\mathbb G)$. We will denote by $\hat \pi_h : c_0(\hat{\mathbb G})\rightarrow \mathcal L(L^2(\mathbb G))$ and $\hat \xi_h$ the corresponding representation and cyclic vector respectively.  
 \end{prop}
 
 %Let us define the dual left regular representation by :
@@ -95,9 +97,11 @@ For every compact quantum group $\mathbb G$, there exists a unique state $h$ on 
 Such a pair $(A,\alpha)$ is called a $\hat{\mathbb G}$-algebra.
 \end{definition}
 
-Let $(A,\alpha)$ be a $\hat{\mathbb G}$-algebra. Define $W= id_A \otimes (id\otimes\pi_h)(U) \in \mathcal M (A\otimes c_0(\mathbb G)\otimes C^*_r(\mathbb G))  $. Let $\pi\in Irrep(\mathbb G)$, and $\xi,\eta \in H_\pi$. Then the coefficient $W^\pi_{\xi,\eta}:=(id\otimes w_{\xi,\eta})(W)$ is an element of $\mathcal M(A\otimes C_r^*(\mathbb G)) \subseteq \mathcal L_A(A\otimes L^2(\mathbb G))$. 
+Let $\alpha : A\rightarrow \mathcal M(A\otimes c_0(\hat{\mathbb G}))$ be an action of $\hat{\mathbb G}$, and $\pi\in Irrep(\mathbb G)$ a unitary representation of $\mathbb G$. Let $p_\pi\in c_0(\hat{\mathbb G}) $ be the orthogonal projection on $H_\pi$. We define the coefficients of $\alpha$ as the elements $\alpha^\pi_{\xi,\eta}(a) = ( id_A \otimes \omega_{\xi,\eta})(\alpha(a)( id _A\otimes p_\pi)) \in A$.\\  
 
-\begin{definition} Let $(A,\alpha)$ be a $\hat{\mathbb G}$-algebra. The reduced crossed product $A\rtimes_r \hat{\mathbb G}$ is the $C^*$-algebra generated by 
+Let $(A,\alpha)$ be a $\hat{\mathbb G}$-algebra. Define $W= id_A \otimes (id\otimes\pi_h)(U) \in \mathcal M (A\otimes c_0(\mathbb G)\otimes C^*_r(\mathbb G))  $. Let $\pi\in Irrep(\mathbb G)$, and $\xi,\eta \in H_\pi$. Then the coefficient $W^\pi_{\xi,\eta}:=(id\otimes \omega_{\xi,\eta})(W)$ is an element of $\mathcal M(A\otimes C_r^*(\mathbb G)) \subseteq \mathcal L_A(A\otimes L^2(\mathbb G))$. 
+
+\begin{definition} Let $(A,\alpha)$ be a $\hat{\mathbb G}$-algebra. The reduced crossed product $A\rtimes_r \hat{\mathbb G}$ is the $C^*$-subalgebra of $\mathcal L_A(A\otimes L^2(\mathbb G))$ generated by 
 \[\{\ \theta(a)W^\pi_{\xi,\eta}\ , a\in A , \pi\in Irrep(\mathbb G),\xi,\eta\in H_\pi\},\]
 where $\theta = (\hat\pi_h \otimes id)\alpha$.  
 \end{definition}
@@ -112,16 +116,17 @@ As in the classical case, the reduced and the maximal crossed products respect t
 
 \begin{rk} Denote by $\mathcal E_{\mathbb G}$ the set of finite dimensional unitary representations $\pi$ of $\mathbb G$ such that $\pi$ and $\pi^*$ are unitarly equivalent. For every $\pi\in \mathcal E_{\mathbb G}$, denote by $C_\pi(\hat{\mathbb G}, A)$ the closure of the linear spans of 
 \[\{\ \theta(a) W_{\xi,\eta}^\pi \ ,a\in A, \xi,\eta\in H_\pi\}.\]
-Then $A\rtimes_r \hat{\mathbb G}$ is the closure of $\cup_{\pi\in \mathcal E_{\mathbb G}}$. Moreover,
-\[C_\pi(\hat{\mathbb G}, A).C_\pi(\hat{\mathbb G}, A) \subseteq C_\pi(\hat{\mathbb G}, A).\]
-Indeed, choose an orthonormal basis $\{\xi_1,...,\xi_{dim\ \pi}\}$ for every $\pi\in\mathcal E_{\mathbb G}$. Then the coefficient $W_{\xi,\eta}^\pi$ are uniquely determined by the coefficients $W_{i,j}^\pi := W_{\xi_i,\xi_j}^\pi$. Moreover, the following relation holds
-\[\theta(a)W_{i,j}^\pi = \sum_k W_{i,k}^\pi \theta(\alpha_{k,j}^\pi(a))\quad \forall a\in A,\]
-hence, for $\pi$ and $\pi'$ in $\mathcal E_{\mathbb G}$,
+Then $A\rtimes_r \hat{\mathbb G}$ is the closure of $\cup_{\pi\in \mathcal E_{\mathbb G}} C_\pi(\hat{\mathbb G}, A)$. Moreover,
+\[C_\pi(\hat{\mathbb G}, A).C_{\pi'}(\hat{\mathbb G}, A) \subseteq C_{\pi \otimes \pi'}(\hat{\mathbb G}, A).\]
+Indeed, choose an orthonormal basis $\{\xi_1,...,\xi_{dim\ \pi}\}$ for every $\pi\in\mathcal E_{\mathbb G}$. Then the coefficients $W_{\xi,\eta}^\pi$ are uniquely determined by the coefficients $W_{i,j}^\pi := W_{\xi_i,\xi_j}^\pi$. Moreover, the following relation holds
+\[W_{i,j}^\pi \theta(a)= \sum_k \theta(\alpha_{i,k}^\pi(a)) W_{k,j}^\pi \quad \forall a\in A,\]
+hence, for $\pi$ and $\pi'$ in $\mathcal E_{\mathbb G}$, and every $a,a'\in A$,
 \[\theta(a) W_{i,j}^\pi \theta(a')W_{p,q}^{\pi'} = \sum_k \theta(a \alpha_{i,k}^{\pi}(a')) W_{k,j}^\pi W_{p,q}^{\pi'} 
-= \sum_k \theta(a \alpha_{i,k}^{\pi}(a')) W_{kp,jq}^{\pi\otimes \pi'}. \]
+= \sum_k \theta(a \alpha_{i,k}^{\pi}(a')) W_{kp,jq}^{\pi\otimes \pi'}, \]
+where, if $\{\xi_k\}$ and $\{\xi'_p\}$ are orthonormal basis of $H_\pi$ and $H_{\pi'}$ respectively, $W_{kp,jq}^{\pi\otimes \pi'}$ denotes the coefficient $W_{\xi_k\otimes \xi'_p,\xi_j \otimes \xi'_q}^{\pi\otimes \pi'}$.
 \end{rk}
 
-As in the case of locally compact groups or locally compact $\sigma$-compact groupoids with Haar system, equivariant $KK$-theory was developped by R. Vergnioux in \cite{vergnioux}. Details are beyond the scope of this memoir, and we refer to \cite{vergnioux} for details.\\
+As in the case of locally compact groups or locally compact $\sigma$-compact groupoids with Haar system, equivariant $KK$-theory was developped by R. Vergnioux in \cite{vergnioux}. Details are beyond the scope of this thesis, and we refer to \cite{vergnioux} for details.\\
 
 \begin{prop}[\cite{vergnioux}]
 Let $A$ and $B$ be two $\hat{\mathbb G}$-algebras. Then there exists a $\Z_2$-graded abelian group $KK^{\hat{\mathbb G}}(A,B) $ such that :
