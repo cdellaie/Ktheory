@@ -14,7 +14,7 @@ Let $A$ and $B$ be two $G$-$C^*$-algebras. If $\beta : s^* B \rightarrow r^* B$ 
 
 Recall that every $K$-cycle $z\in KK^G(A,B)$ can be represented as a triple $(H_B, \pi, T)$ where :
 \begin{itemize}
-\item[$\bullet$]$\pi : A\rightarrow \mathcal L_B(H_B)$ is a $*$-representation of $A$ on $H_B$.
+\item[$\bullet$]$\pi : A\rightarrow \mathcal L_B(H_B)$ is a $G$-equivariant $*$-homomorphism.
 \item[$\bullet$]$T\in \mathcal L_B(H_B)$ is a self-adjoint operator.
 \item[$\bullet$] $T$ and $\pi$ satisfy the $K$-cycle conditions, i.e. $[T,\pi(a)]$, $\pi(a)(T^2-id_{H_B})$ are compact operators in $\mathfrak K_B(H_B)$ and $\pi(a)(r^*T-Vs^*T V^*)$ are compact operators in $\mathfrak K_{r^* B}(r^* H_B)\cong \mathfrak K_{r^* B}(H_{r^* B})$ for all $a\in A, g\in G$.\\
 \end{itemize}
@@ -414,23 +414,23 @@ Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarr
 \end{itemize}
 \end{lem}
 
-\begin{dem}
-Let $(H_B,\pi,T)\in \mathbb E(C_0(X),B)$ be a $K$-cycle. Let $K$ be a compact fundamental domain for the action of $G$ on $Z$. By local injectivity of $p$, let $\mathcal U$ be a finite open cover of $K$ such that $p_{|U}$ is injective for all $U\in \mathcal U$. There exists compactly supported continuous functions $\phi_U : Z\rightarrow [0,1]$ such that  \[\text{supp }\phi_U \subseteq U \quad\text{ and }\quad K\subseteq \cup_{U\in\mathcal U} \phi_U^{-1}(0,+\infty).\]
-Up to replacing $\phi_U$ by $\phi_U(z) / \sum_{V,g} \phi_V(z.g)$, we can assume $\sum_{U\in\mathcal U,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. For $x\in G^{(0)}$, define 
-\[F'_x = \sum_{U\in\mathcal U, g\in G^x} V_g\pi(\phi_U^{\frac{1}{2}}) F_{s(g)}\pi(\phi_U^{\frac{1}{2}})V_g^*.\] 
-The operator $F'$ is  $G$-invariant and commutes with the action of $C_0(Z)$. Indeed, by local injectivity, for all $g\in G$, there exists $z_g\in Z$ such that $Z_{s(g)}\cap U = \{z_g\}$, and for all $f\in C_0(Z_{s(g)})$, $[ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f ] = [ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f(z_g) \chi_{z_g} ]=0 $.\\
+%\begin{dem}
+%Let $(H_B,\pi,T)\in \mathbb E(C_0(X),B)$ be a $K$-cycle. Let $K$ be a compact fundamental domain for the action of $G$ on $Z$. By local injectivity of $p$, let $\mathcal U$ be a finite open cover of $K$ such that $p_{|U}$ is injective for all $U\in \mathcal U$. There exists compactly supported continuous functions $\phi_U : Z\rightarrow [0,1]$ such that  \[\text{supp }\phi_U \subseteq U \quad\text{ and }\quad K\subseteq \cup_{U\in\mathcal U} \phi_U^{-1}(0,+\infty).\]
+%Up to replacing $\phi_U$ by $\phi_U(z) / \sum_{V,g} \phi_V(z.g)$, we can assume $\sum_{U\in\mathcal U,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. For $x\in G^{(0)}$, define 
+%\[F'_x = \sum_{U\in\mathcal U, g\in G^x} V_g\pi(\phi_U^{\frac{1}{2}}) F_{s(g)}\pi(\phi_U^{\frac{1}{2}})V_g^*.\] 
+%The operator $F'$ is  $G$-invariant and commutes with the action of $C_0(Z)$. Indeed, by local injectivity, for all $g\in G$, there exists $z_g\in Z$ such that $Z_{s(g)}\cap U = \{z_g\}$, and for all $f\in C_0(Z_{s(g)})$, $[ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f ] = [ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f(z_g) \chi_{z_g} ]=0 $.\\
 
-Moreover, $F'$ is a compact perturbation of $F$ as the following computation shows.\\
-\[\begin{array}{rl}
-F_x -F'_x 	& = (\sum_{g\in G^x,U\in\mathcal U} V_g \phi_U V_g^*)F_x -F'_x \\
-		& = \sum_{g,U} V_g\phi_U^{\frac{1}{2}} \ (\phi_U^\frac{1}{2} V_g^* F_x V_g- F_{s(g)}\phi_U^\frac{1}{2}) \ V_g^*\\
-		& = \sum_{g,U} V_g\phi_U^{\frac{1}{2}} \ 
-			\left(\phi_U^\frac{1}{2} (V_g^* F_x V_g- F_{s(g)}) + [F_{s(g)},\phi_U^\frac{1}{2}]\right) \ 
-				V_g^*	  	
-\end{array}\]
-For every $x$, the sum is finite, and each of the summand is compact, hence $[H_B, \pi,T]=[H_B,\pi,T']$.\\ 
-\qed
-\end{dem}
+%Moreover, $F'$ is a compact perturbation of $F$ as the following computation shows.\\
+%\[\begin{array}{rl}
+%F_x -F'_x 	& = (\sum_{g\in G^x,U\in\mathcal U} V_g \phi_U V_g^*)F_x -F'_x \\
+%		& = \sum_{g,U} V_g\phi_U^{\frac{1}{2}} \ (\phi_U^\frac{1}{2} V_g^* F_x V_g- F_{s(g)}\phi_U^\frac{1}{2}) \ V_g^*\\
+%		& = \sum_{g,U} V_g\phi_U^{\frac{1}{2}} \ 
+%			\left(\phi_U^\frac{1}{2} (V_g^* F_x V_g- F_{s(g)}) + [F_{s(g)},\phi_U^\frac{1}{2}]\right) \ 
+%				V_g^*	  	
+%\end{array}\]
+%For every $x$, the sum is finite, and each of the summand is compact, hence $[H_B, \pi,T]=[H_B,\pi,T']$.\\ 
+%\qed
+%\end{dem}
 
 %%%%%%%%%%%%% NOUVELLE PREUVE
 \begin{dem}
@@ -496,14 +496,14 @@ defines a $L$-Lipschitz operator homotopy between $0$ and $(H_{B_\infty},\pi,T) 
 %END NEW PROOF
 
 \begin{lem}\label{prod}
-Let $G$ be a locally compact, $\sigma$-compact étale groupoid, $\{B_j\}_{j\geq  0}$ a family of $G$-algebras and $\mathfrak K$ the algebra of compact operators over a separable Hilbert space. For $E\in\mathcal E$, set $\Delta=P_E(G)$. Then, we have an $\Z_2$-graded isomorphism of abelian groups
+Let $G$ be a locally compact, $\sigma$-compact étale groupoid, $\{B_j\}_{j\geq  0}$ a family of $G$-algebras and $\mathfrak K$ the algebra of compact operators over a separable Hilbert space. Then, for every finite dimensional proper $G$-compact $G$-simplicial complex $\Delta$, we have an $\Z_2$-graded isomorphism of abelian groups
 \[RK^G(\Delta,\prod_j B_j\otimes \mathfrak K)\cong \prod_j RK^G(\Delta,B_j)\]
 \end{lem}
 
 \begin{dem}
 For all $j$ and any locally compact $G$-space $X$, the projection $\prod_j B_j\otimes K\rightarrow B_j \otimes K$ induces a morphism
 \[\Theta^X : KK^G(C_0(X),\prod_j B_j\otimes K )\rightarrow \prod_j  KK^G(C_0(X),B_j\otimes K ).\]
-Let $X_0\subseteq X_1 \subseteq...\subseteq X_n$ be the $n$-skeleton decomposition associated to the simplicial structure of the Rips complex $\Delta$ and let $Z_j = C_0(X_j)$, $Z^j_{j-1} = C_0(X_j \setminus X_{j-1})$ and $\Theta_j = \Theta^{X_j}$.
+Let $X_0\subseteq X_1 \subseteq...\subseteq X_n$ be the $n$-skeleton decomposition associated to the simplicial structure of $G$-simplicial complex $\Delta$ and let $Z_j = C_0(X_j)$, $Z^j_{j-1} = C_0(X_j \setminus X_{j-1})$ and $\Theta_j = \Theta^{X_j}$.
 We will show the claim by induction on the dimension of $\Delta$.\\
 
 By naturality of the boundary element, the extension of $G$-algebras $0\rightarrow Z^j_{j-1} \rightarrow Z_j \rightarrow Z_{j-1}\rightarrow 0$ gives a commutative diagram with exact rows :
@@ -513,20 +513,25 @@ By naturality of the boundary element, the extension of $G$-algebras $0\rightarr
 %\prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z_j,B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\\
 %\end{tikzcd}\]
 \[\begin{tikzcd}
-RK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\delta}\arrow{r}{\Theta^j_{j-1}} & \prod_j RK^G_*( Z^j_{j-1},B_j \otimes K)\arrow{d}{\delta}  \\
-RK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_{j-1}}  & \prod_j RK^G_*( Z_{j-1},B_j \otimes K)\arrow{d} \\
-RK^G_*(Z_j,\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_j} & \prod_j RK^G_*( Z_j,B_j \otimes K)\arrow{d} \\
-RK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\delta}\arrow{r}{\Theta^j_{j-1}} & \prod_j RK^G_*( Z^j_{j-1},B_j \otimes K)\arrow{d}{\delta}\\
-RK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}{\Theta_{j-1}} & \prod_j RK^G_*( Z_{j-1},B_j \otimes K)
+KK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\partial}\arrow{r}{\Theta^j_{j-1}} & \prod_j KK^G_*( Z^j_{j-1},B_j \otimes K)\arrow{d}{\partial}  \\
+KK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_{j-1}}  & \prod_j KK^G_*( Z_{j-1},B_j \otimes K)\arrow{d} \\
+KK^G_*(Z_j,\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_j} & \prod_j KK^G_*( Z_j,B_j \otimes K)\arrow{d} \\
+KK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\partial}\arrow{r}{\Theta^j_{j-1}} & \prod_j KK^G_*( Z^j_{j-1},B_j \otimes K)\arrow{d}{\partial}\\
+KK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}{\Theta_{j-1}} & \prod_j KK^G_*( Z_{j-1},B_j \otimes K)
 \end{tikzcd}\]
 
-The five lemma ensures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, because $\Delta$ is a typed $G$-simplicial complex (see \ref{Gcomplex}), $X_j\setminus X_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _ j $ denotes the interior of the standard simplex, and   $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$. Bott periodicity ensures then that, if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta^j_{j-1}$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $G$-compact proper $G$-space, and its anchor map is just the target map $r:G\rightarrow G^{(0)}$, which is supposed to be étale, so locally injective.\\
+The five lemma ensures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, because $\Delta$ is a typed $G$-simplicial complex (see \ref{Gcomplex}), $X_j\setminus X_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _j $ denotes the interior of the standard simplex, $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$, and where $G$ acts trivially on $\mathring \sigma _j$. Bott periodicity ensures then that the following diagram commutes :
+\[\begin{tikzcd}
+KK^G(Z_{j-1}^j,\prod_k B_k\otimes K) \arrow{r}{\Theta_{j-1}^j}\arrow{d}{\cong} & \prod_k KK^G(Z_{j-1}^j,B_k) \arrow{d}{\cong}\\
+KK^G(\Sigma_j,\prod_k B_k\otimes K) \arrow{r}{\Theta^{\Sigma_j}} & \prod_k KK^G(\Sigma_j ,B_k)\\ 
+\end{tikzcd}\]
+with vertical arrows being isomorphisms given by Bott periodicity. By lemma \ref{LocalInjectivity}, $\Theta^{\Sigma_j}$ is an isomorphism, hence $\Theta_{j-1}^j$ is an isomorphism. We proved that if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta_j$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $G$-compact proper $G$-space, and its anchor map is just the target map $r:G\rightarrow G^{(0)}$, which is supposed to be étale, so locally injective.\\
 \qed
 \end{dem}
 
 %%%%%%%%
 
-We now turn to the behaviour of controlled $K$-theory with respect to products. Let $\mathcal B = (B_j)_j$ a countable family of $\mathcal E$-filtered $C^*$-algebras. For every $E\in\mathcal E$, put 
+We now turn our attention to the behaviour of controlled $K$-theory with respect to products. Let $\mathcal B = (B_j)_j$ a countable family of $\mathcal E$-filtered $C^*$-algebras. For every $E\in\mathcal E$, put 
 \[\mathcal B_E = \prod_{j} (B_j)_E\otimes \mathfrak K.\]
 Define $\mathcal B_\infty$ as the closure of $\cup_{E\in\mathcal E}\mathcal B_E$ in $\prod_j (B_j\otimes \mathfrak K)$. This construction is called the controlled product of a family of filtered $C^*$-algebras, and is also a $\mathcal E$-filtered $C^*$-algebra. The following lemma (\cite{OY3}, Lemma $1.14$) relates the controlled $K$-theory of $\mathcal B_\infty$ and the product of the controlled $K$-theory groups of $B_j$.\\
 
