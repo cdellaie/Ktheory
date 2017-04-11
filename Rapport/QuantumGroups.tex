@@ -40,11 +40,12 @@ The following theorem is crucial, and is a generalization of the classical case.
 We also have the analog of the Haar measure, and of the regular representations.
 
 \begin{prop}
-For every compact quantum group $\mathbb G$, there exists a unique state $h$ on $C(\mathbb G)$, called the Haar state on $\mathbb G$, satisfying $(id\otimes h)\Delta(a) = h(a)1$ for every $a\in C(\mathbb G)$. 
+For every compact quantum group $\mathbb G$, there exists a unique state $h$ on $C(\mathbb G)$, called the Haar state on $\mathbb G$, satisfying $(id\otimes h)\Delta(a) = h(a)1 = (h\otimes id)\Delta(a)$ for every $a\in C(\mathbb G)$. 
 \end{prop}
 
 Let us denote by $L^2(\mathbb G)$ the Hilbert space obtained as the GNS construction with respect to the Haar state, i.e. $L^2(\mathbb G) = L^2(C(\mathbb G),h)$. We denote by $\xi_h\in L^2(\mathbb G)$ and $\pi_h : C(\mathbb G)\rightarrow \mathcal L(L^2(\mathbb G))$ the corresponding cyclic vector and representation. According to \cite{Wo}, there exists a unique unitary $W\in \mathcal L(L^2(\mathbb G) \otimes L^2(\mathbb G) )$ satisfying 
 \[W^*(\xi\otimes \pi_h(a)\xi_h ) = (\pi_h\otimes\pi_h)\circ \Delta(a)(\xi\otimes \xi_h)\quad \forall \xi\in L^2(\mathbb G),a\in C(\mathbb G).\] 
+
 \begin{definition}
 The reduced form $C_r^*(\mathbb G)$ of $\mathbb G$ is defined as the $C^*$-algebra $\pi_h(C(\mathbb G))$. The unitary $W$ defines a unitary representation $W\in\mathcal M(C_r^*(\mathbb G)\otimes \mathfrak K(L^2(\mathbb G))$ called the regular representation of $\mathbb G$.
 \end{definition}
@@ -64,7 +65,7 @@ Define the following $C^*$-algebras :
 c_0(\hat{\mathbb G})= \bigoplus_{\pi\in Irred(\mathbb G)} \mathcal L(H_\pi),\\
 l^\infty(\hat{\mathbb G})= \prod_{\pi\in Irred(\mathbb G)} \mathcal L(H_\pi).
 \end{array}\]
-Up to our choice of representations $\{(H_\pi,U^\pi)\}_{\pi\in Irrep(\mathbb G)}$, we can define a unitary $U = \bigoplus_{\pi\in Irrep(\mathbb G)} U^\pi\in \mathcal M(c_0(\hat{\mathbb G}) \otimes C(\mathbb G))$. This allows to define a unital $*$-homomorphism $\hat \Delta : l^\infty(\hat{\mathbb G}) \rightarrow l^\infty(\hat{\mathbb G})\otimes l^\infty(\hat{\mathbb G})$ by 
+Up to our choice of representations $\{(H_\pi,U^\pi)\}_{\pi\in Irrep(\mathbb G)}$, we can define a unitary $U = \bigoplus_{\pi\in Irrep(\mathbb G)} U^\pi\in \mathcal M(c_0(\hat{\mathbb G}) \otimes C(\mathbb G))$ which is a unitary representation of $\mathbb G$. This allows to define a unital $*$-homomorphism $\hat \Delta : l^\infty(\hat{\mathbb G}) \rightarrow l^\infty(\hat{\mathbb G})\otimes l^\infty(\hat{\mathbb G})$ by 
 \[\hat\Delta ( x) = U(x \otimes 1)U^*\quad \forall x\in l^\infty(\hat{\mathbb G})).\]
 This $*$-homomorphism satisfies $\hat\Delta(c_0(\hat{\mathbb G}))\subseteq \mathcal M(c_0(\hat{\mathbb G})\otimes c_0(\hat{\mathbb G}))$ and \textbf{OTHER CONDITION}.
 \begin{definition}
@@ -74,11 +75,16 @@ Let $\mathbb G$ be a compact quantum group. With the above notations, its dual i
 \begin{Expl} Let $\Gamma$ be a discrete group and consider the compact quantum group $\mathbb G=(C^*(\Gamma),\Delta)$. Then, $\gamma\mapsto \lambda_\gamma$ gives a bijection $Irrep(\mathbb G)\cong \Gamma$, and $\hat{\mathbb G}$ is $c_0(\Gamma)$ with comultiplication $\hat\Delta (f)(\gamma,\gamma') = f(\gamma\gamma')$ for every $f\in c_0(\Gamma)$ and $\gamma,\gamma'\in\Gamma$.
 \end{Expl}
 
-The dual of a compact quantum group is also represented on $L^2(\mathbb G)$ via the regular repsentations. Let us define the dual left regular representation by :
-\[\hat\lambda\left\{\begin{array}{rcl}
-l^\infty(\hat{\mathbb G}) & \rightarrow & \mathcal L(L^2(\mathbb G)) \\
-a	& \mapsto & \hat\lambda (a) : \xi \mapsto \{(a_\pi\otimes 1)\xi_\pi\}_\pi\\
-\end{array}\right.\]
+The dual of a compact quantum group is also represented on $L^2(\mathbb G)$ via the regular representations. 
+\begin{prop}
+For every compact quantum group $\mathbb G$, there exists a unique state $h$ on $c_0(\hat{\mathbb G})$, called the left Haar state on $\hat{mathbb G}$, satisfying $(id\otimes h)\Delta(a) = h(a)1 = (h\otimes id)\Delta(a)$ for every $a\in C(\mathbb G)$. The GNS Hilbert space is canonically isomorphic to $L^2(\mathbb G)$. We will denote by $\hat \pi_h : c_0(\hat{\mathbb G})\rightarrow \mathcal L(L^2(\mathbb G))$ and $\hat \xi_h$ the associated representation and cyclic vector respectively.  
+\end{prop}
+
+%Let us define the dual left regular representation by :
+%\[\hat\lambda\left\{\begin{array}{rcl}
+%l^\infty(\hat{\mathbb G}) & \rightarrow & \mathcal L(L^2(\mathbb G)) \\
+%a	& \mapsto & \hat\lambda (a) : \xi \mapsto \{(a_\pi\otimes 1)\xi_\pi\}_\pi\\
+%\end{array}\right.\]
 
 
 \begin{definition} An action of a discrete quantum group $\hat{\mathbb G}$ on a $C^*$-algebra $A$ is a nondegenerate $*$-homomorphism $A\rightarrow \mathcal M(A\otimes c_0(\hat{\mathbb G}))$ such that :
@@ -86,12 +92,14 @@ a	& \mapsto & \hat\lambda (a) : \xi \mapsto \{(a_\pi\otimes 1)\xi_\pi\}_\pi\\
 \item[$\bullet$] $(\alpha \otimes id )\alpha = (id\otimes \hat\Delta) \alpha$
 \item[$\bullet$] for every $a\in A$, $(\hat\varepsilon \otimes id)\alpha(a) = a$.
 \end{itemize}
-Such a pair $(A\alpha)$ is called a $\hat{\mathbb G}$-algebra.
+Such a pair $(A,\alpha)$ is called a $\hat{\mathbb G}$-algebra.
 \end{definition}
 
+Let $(A,\alpha)$ be a $\hat{\mathbb G}$-algebra. Define $W= id_A \otimes (id\otimes\pi_h)(U) \in \mathcal M (A\otimes c_0(\mathbb G)\otimes C^*_r(\mathbb G))  $. Let $\pi\in Irrep(\mathbb G)$, and $\xi,\eta \in H_\pi$. Then the coefficient $W^\pi_{\xi,\eta}:=(id\otimes w_{\xi,\eta})(W)$ is an element of $\mathcal M(A\otimes C_r^*(\mathbb G)) \subseteq \mathcal L_A(A\otimes L^2(\mathbb G))$. 
+
 \begin{definition} Let $(A,\alpha)$ be a $\hat{\mathbb G}$-algebra. The reduced crossed product $A\rtimes_r \hat{\mathbb G}$ is the $C^*$-algebra generated by 
-\[\{\theta(a)(w\otimes id)(\hat W_{12}), a\in A , w\in l^\infty(\hat{\mathbb G})_* \},\]
-where $\theta = (\hat\lambda \otimes id)\alpha$ and $\hat W = (id\otimes \rho)(U)$.  
+\[\{\ \theta(a)W^\pi_{\xi,\eta}\ , a\in A , \pi\in Irrep(\mathbb G),\xi,\eta\in H_\pi\},\]
+where $\theta = (\hat\pi_h \otimes id)\alpha$.  
 \end{definition}
 
 \begin{rk}
@@ -100,6 +108,17 @@ There is also a notion of maximal (or full) crossed product for $\hat{\mathbb G}
 
 \begin{rk}
 As in the classical case, the reduced and the maximal crossed products respect the semi-split exact sequences of $\hat{\mathbb G}$-algebras.
+\end{rk}
+
+\begin{rk} Denote by $\mathcal E_{\mathbb G}$ the set of finite dimensional unitary representations $\pi$ of $\mathbb G$ such that $\pi$ and $\pi^*$ are unitarly equivalent. For every $\pi\in \mathcal E_{\mathbb G}$, denote by $C_\pi(\hat{\mathbb G}, A)$ the closure of the linear spans of 
+\[\{\ \theta(a) W_{\xi,\eta}^\pi \ ,a\in A, \xi,\eta\in H_\pi\}.\]
+Then $A\rtimes_r \hat{\mathbb G}$ is the closure of $\cup_{\pi\in \mathcal E_{\mathbb G}}$. Moreover,
+\[C_\pi(\hat{\mathbb G}, A).C_\pi(\hat{\mathbb G}, A) \subseteq C_\pi(\hat{\mathbb G}, A).\]
+Indeed, choose an orthonormal basis $\{\xi_1,...,\xi_{dim\ \pi}\}$ for every $\pi\in\mathcal E_{\mathbb G}$. Then the coefficient $W_{\xi,\eta}^\pi$ are uniquely determined by the coefficients $W_{i,j}^\pi := W_{\xi_i,\xi_j}^\pi$. Moreover, the following relation holds
+\[\theta(a)W_{i,j}^\pi = \sum_k W_{i,k}^\pi \theta(\alpha_{k,j}^\pi(a))\quad \forall a\in A,\]
+hence, for $\pi$ and $\pi'$ in $\mathcal E_{\mathbb G}$,
+\[\theta(a) W_{i,j}^\pi \theta(a')W_{p,q}^{\pi'} = \sum_k \theta(a \alpha_{i,k}^{\pi}(a')) W_{k,j}^\pi W_{p,q}^{\pi'} 
+= \sum_k \theta(a \alpha_{i,k}^{\pi}(a')) W_{kp,jq}^{\pi\otimes \pi'}. \]
 \end{rk}
 
 As in the case of locally compact groups or locally compact $\sigma$-compact groupoids with Haar system, equivariant $KK$-theory was developped by R. Vergnioux in \cite{vergnioux}. Details are beyond the scope of this memoir, and we refer to \cite{vergnioux} for details.\\
