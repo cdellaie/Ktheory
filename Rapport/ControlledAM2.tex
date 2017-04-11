@@ -361,7 +361,7 @@ because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^E(
 \subsection{Quantitative statements}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this subsection, the groupoid $G$ must have a compact unit space $G^{(0)}$.
+In this subsection, the groupoid $G$ must have a compact unit space $G^{(0)}$. Then, if $\{B_j\}$ is a countable family of $G$-algebras, the diagonal action of $G$ on the product provides $\prod_j B_j$ with the structure of a $G$-algebra. 
 
 \begin{prop} 
 Let B be a $G$-algebra.\\
@@ -402,6 +402,12 @@ This kind of statement leads us to define the following properties, following \c
 %%%%%%%%
 
 To prove the main theorems of this section, what we called quantitative statements, we will need a serie of lemmas. The first part is devoted to a study of the behaviour of $K$-homology under product of the coefficients. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}. \\
+
+Let us begin with a remark that will be useful later.
+
+\begin{rk}\label{construction}
+Let $\{B_j\}_{j\in\N}$ be a family of $G$-algebras and let $T_j \in \mathfrak K (H_{B_j})\cong B_j \otimes\mathfrak K$ such that $\sup_j ||T_j||<\infty$. Then we can define  
+\end{rk}
 
 Recall first that the Haar system $(\lambda^x)_{x\in G^{(0)}}$ on $G$ defines, for every $f\in C_c(G)$, a continuous function $x\mapsto \int_{g\in G^x}f(g)d\lambda^x(g)$. We denote by $\int f d\lambda$ the element of $C_0(X)$ obtained when integrating a compactly supported function $f$ w.r.t. the Haar system. If $A$ is a $G$-algebra and $E$ is a $A$-Hilbert module, $f\mapsto \int f d\lambda$ extends by linearity and continuity to $C_c(G,A)\subseteq r^*A $ and $C_c(G,E)\subseteq r^*E$. We will still denote by $\int fd\lambda$ the element in $A$ or $E$ if $f$ is in $r^* A$ or $r^* E$ respectively. %Notice that the invariance of the Haar system implies that, if $V\in\mathcal L_{s^*B}(s^*E,r^*E)$ denotes the action of $G$ on $E$, then $\int V F V^* d\lambda = \int F d\lambda$ in $\mathcal L_B(E)$ , for every $F\in\mathcal L_B(E)$. 
 
@@ -484,13 +490,29 @@ Put $B_\infty = \prod_j B_j\otimes \mathfrak K $. Let us define a $Z_2$-graded h
 \[\eta :  \prod_j RK^G(X,B_j\otimes K) \rightarrow RK^G(X,\prod_j B_j\otimes \mathfrak K).\] 
 Let $Z\subseteq X$ be a $G$-proper $G$-compact subspace, and, for all $j$, let $z_j\in KK^G(C_0(Z),B_j)$ be represented by a standard $K$-cycle $(H_{B_j},\pi_j ,T_j)$. By lemma \ref{JLTform}, we can suppose that $T_j$ is $G$-equivariant, commutes with the action of $C_0(Z)$ and $-1\leq T_j \leq 1$. These conditions ensure that $T = (T_j)$ defines an operator in $\prod_j \mathcal L_{B_j\otimes \mathfrak K}(H_{B_j\otimes \mathfrak K})\subseteq \mathcal L_{B_\infty}(H_{B_\infty})$.\\
 
-Define $\pi(a) = (\pi_j(a))_j\in  \mathcal L_{B_\infty}(H_{B_\infty})$, as $\sup ||\pi_j(a)||\leq ||a||$. Then, $[\pi(a),T]=0$ and $r^*T = Vs^*T V^*$. Moreover, $0\leq T_j^2-1\leq 1$ and $-2\leq T_j^*-T_j\leq 2$, hence $T^2-1$ and $T^*-T$ are in $\prod \mathfrak K_{B_j\otimes\mathfrak K}\subseteq \mathfrak K_{B_\infty}(H_{B_\infty})$. This ensures that $[H_{B_\infty},\pi,T]\in KK^G(C_0(Z),B_\infty)$. Let $\eta((z_j)_j) = [H_{B_\infty},\pi,T] $. It is clear that $\Theta\circ \eta = id_{\prod_j RK^G(X,B_j\otimes K) }$, and $\Theta $ is onto.\\
+Define $\pi(a) = (\pi_j(a))_j\in  \mathcal L_{B_\infty}(H_{B_\infty})$, as $\sup ||\pi_j(a)||\leq ||a||$. Then, $[\pi(a),T]=0$ and $r^*T = Vs^*T V^*$. Moreover $0\leq T_j^2-1\leq 1$ and $-2\leq T_j^*-T_j\leq 2$, hence, according to the remark \ref{construction}, $T^2-1$ and $T^*-T$ are in $\mathfrak K_{B_\infty}(H_{B_\infty})$. 
+%Indeed, these elements are uniformly bounded elements of $\prod \mathfrak K_{B_j\otimes\mathfrak K}$, which are in $\mathfrak K_{B_\infty}(H_{B_\infty})$. 
+This ensures that $[H_{B_\infty},\pi,T]\in KK^G(C_0(Z),B_\infty)$. Let $\eta((z_j)_j) = [H_{B_\infty},\pi,T] $. It is clear that $\Theta\circ \eta = id_{\prod_j RK^G(X,B_j\otimes K) }$, and $\Theta $ is onto.\\
 
 Let $z\in KK^G(C_0(Z),B_\infty)$ such that $\Theta(z) = 0$. Let us denote $\Theta(z) = (z_j)_j$ where each $z_j\in KK^G(C_0(Z),B_j)$ is represented by $K$-cycles $(H_{B_j}, \pi_j,T_j)$ homotopic to $0$ by an operator homotopy 
 \[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (H_{B_j}, \pi_j,T_j(s))\end{array}\right.\] 
-Then $s\mapsto T_j(s)$ descends to an homotopy of unitaries in the Calkin algebra $\mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j}) $ and, according to Proposition \ref{Lip}, we can choose the homotopy to be $L$-Lipschitz for a universal constant $L>0$, hence (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a family of compact operators $F_j(s,t)\in \mathfrak K_{B_j}(H_{B_j})$ such that $||T_j(s)-T_j(t)+F_j(s,t)||\leq L|s-t|$ for all $s,t\in[0,1]$. But $s\mapsto T'_j(s)= T_j(s)+F_j(0,s)$ is a compact perturbation of $s\mapsto T_j(s)$ in $\mathcal L_{B_j}(\mathcal H_{B_j})$ which is $L$-Lipschitz. Up to replace $(T_j(s))_s$ by $(T'_j(s))_s$, we can suppose the homotopies $s\mapsto T_j(s)$ are $L$-Lipschitz for all $j$. Hence $s\mapsto (T_j(s))_j$ is in $\prod\mathcal L_{B_j\otimes \mathfrak K}(H_{B_j\otimes \mathfrak K}) $. Define $T : s\mapsto (T_j(s))_j$ so that :
+
+As $\sup_j ||T_j||\leq 1$, there exists an integer $L>0$ such that, if $|s-t|<\frac{1}{L}$, then $\sup_j ||T_j(s)-T_j(t)||< 1$. Put $t_k=\frac{k}{L}$ for $k\in\{0,..., L\}$. Then (\cite{WeggeOlsen}, Proposition $4.2.4$) for every $j$ and $k$, there exists $a_j^{(k)}\in \mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$ such that :
+\[T_j(t_{k+1})T_j(t_{k})^*=e^{2i\pi a_j^{(k)}} \ mod \ {\mathfrak K}_{B_j}(H_{B_j}) \text{ and such that } ||a_j^{(k)}||<1.\] 
+Then (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a lift $x_j^{(k)}\in  \mathcal L_{B_j}(H_{B_j})$ of $a_j^{(k)}$ such that $||a_j^{(k)}||= ||x_j^{(k)}||$ for every $j$ and $k$. For each $k$, choose a continuous function $\phi_k : [0,1]\rightarrow [0,1]$ such that :
+\begin{itemize}
+\item[$\bullet$] $\phi_j $ is constant equal to $0$ on $[0,t_k ]$,
+\item[$\bullet$] $\phi_j$ is affine on $[t_k,t_{k+1}]$,
+\item[$\bullet$] $\phi_j $ is constant equal to $0$ on $t_{k+1},1 ]$.
+\end{itemize}
+Define \[\tilde T_j(s) = \prod_{k=0}^{L} e^{2i\pi \phi_j(s) x_j^{(k)}}.\] 
+Then $s\mapsto \tilde T_j(s)$ is $2\pi L$-Lipschitz for every $j$, and it provides a homotopy between $T_j$ and a degenerate operator. Up to replace $(T_j(s))_s$ by $(\tilde T_j(s))_s$, we can suppose the homotopies $s\mapsto T_j(s)$ are $2\pi L$-Lipschitz for all $j$. Hence $s\mapsto (T_j(s))_j$ is in $\prod\mathcal L_{B_j\otimes \mathfrak K}(H_{B_j\otimes \mathfrak K}) $. Define $T : s\mapsto (T_j(s))_j$ so that :
 \[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (H_{B_\infty}, \pi,T(s))\end{array}\right.\]
-defines a $L$-Lipschitz operator homotopy between $0$ and $(H_{B_\infty},\pi,T) = \eta()$. 
+defines a $L$-Lipschitz operator homotopy between $0$ and $z$.\\
+
+%Then $s\mapsto T_j(s)$ descends to an homotopy of unitaries in the Calkin algebra $\mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j}) $ and, according to Proposition \ref{Lip}, we can choose the homotopy to be $L$-Lipschitz for a universal constant $L>0$, hence (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a family of compact operators $F_j(s,t)\in \mathfrak K_{B_j}(H_{B_j})$ such that $||T_j(s)-T_j(t)+F_j(s,t)||\leq L|s-t|$ for all $s,t\in[0,1]$. But $s\mapsto T'_j(s)= T_j(s)+F_j(0,s)$ is a compact perturbation of $s\mapsto T_j(s)$ in $\mathcal L_{B_j}(\mathcal H_{B_j})$ which is $L$-Lipschitz. Up to replace $(T_j(s))_s$ by $(T'_j(s))_s$, we can suppose the homotopies $s\mapsto T_j(s)$ are $L$-Lipschitz for all $j$. Hence $s\mapsto (T_j(s))_j$ is in $\prod\mathcal L_{B_j\otimes \mathfrak K}(H_{B_j\otimes \mathfrak K}) $. Define $T : s\mapsto (T_j(s))_j$ so that :
+%\[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (H_{B_\infty}, \pi,T(s))\end{array}\right.\]
+%defines a $L$-Lipschitz operator homotopy between $0$ and $(H_{B_\infty},\pi,T) = \eta()$. 
 \qed
 \end{dem}
 %END NEW PROOF
