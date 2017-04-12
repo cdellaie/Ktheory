@@ -47,9 +47,13 @@ The induced $G$-space of a $H$-space $Z$ is defined as $Z\times_H G = (Z\times G
 
 Notice that we have a natural identification between $\text{Ind}_H^G C_0(Z)$ and $C_0(Z\times_H G)$.\\
 
-\begin{lem} \label{Restriction} Let $H$ be a sugroupoid of $G$. Then, for every $H$-algebra $A$ and every $G$-algebra $B$, the transformations $Res_H^G$ and $Ind_H^G$ induce isomorphisms
-\[KK^G( Ind_H^G(A), B) \cong KK^H(A, Res_H^G B).\]
+\begin{lem} \label{Restriction} Let $H$ be an open subgroupoid of $G$, and $X$ a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective. Then, for every $H$-algebra $A$ and every $G$-algebra $B$, the transformations $Res_H^G$ and $Ind_H^G$ induce an isomorphism of $\Z_2$-graded abelian groups :
+\[RK^G( G\times_H V, B) \cong RK^H(V, Res_H^G B).\]
 \end{lem}
+
+\begin{dem}
+It is clear that induction followed by restriction is the identity. For the converse, 
+\end{dem}
 
 \begin{dem} 
 Let $A$ be a $H$-algebra, and $B$ a $G$-algebra.
@@ -78,7 +82,7 @@ We now introduce a property on groupoids that will entail a nice result on induc
 \begin{definition}\label{StronglyProper}
 A groupoid $G$ is said to be strongly proper if there exists an open cover $\mathcal U$ of $G^{(0)}$ such that, for all $U\in\mathcal U$, there exists a compact open subgroupoid $H_U$ of $G$ and a $H_U$-space $Z_U$ together with a $G$-equivariant homeomorphism
 \[\psi_U : U \rightarrow G\times_{H_U} Z_U.\] 
-An action of $G$ on a space $Z$ is said to be strongly proper if the groupoid $Z\rtimes G$ is strongly proper.
+An action of $G$ on a space $Z$ is said to be strongly proper if the groupoid $Z\rtimes G$ is strongly proper. A groupoid is said to be in the class $\mathcal C$ if every proper action of $G$ is strongly proper.
 \end{definition}
 
 \begin{rk}
@@ -95,7 +99,7 @@ for every $G$-algebra $B$.
 % Ce morceau bug sous windows : pourquoi ?
 %\end{prop}
 
-Let us give examples of strongly proper groupoids. Recall the following definition from \cite{Renault} (page $20$).
+Let us give examples of groupoids in class $\mathcal C$. Recall the following definition from \cite{Renault} (page $20$).
 
 \begin{definition}
 A topological groupoid is said to be ample if it has a basis $G^a$ of neighborhoods consisting of compact open susbets.
@@ -104,7 +108,7 @@ A topological groupoid is said to be ample if it has a basis $G^a$ of neighborho
 In \cite{paterson} (page $17$) is stated the following property. An étale groupoid $G$ is ample iff $G^{(0)}$ is totally disconnected. Hence the coarse groupoid of every coarse space $X$ is ample, its basis being $\beta X$.
 
 \begin{prop}
-Every ample groupoid is strongly proper.
+Every ample groupoid is in class $\mathcal C$.
 \end{prop}
 
 \begin{dem} The following argument was explained to me by Christian Bönicke.\\ 
@@ -113,8 +117,12 @@ Hence $G^{(0)}$ is covered by open subsets of the form $G\times_H V$, with $H$ b
 \qed
 \end{dem}
 
+\begin{rk}
+Let $\Gamma$ be a discrete group. Then every proper action of $\Gamma$ on a space $Z$ is strongly proper by definition.
+\end{rk}
 
-The author presently doesn't know of any other examples of strongly proper groupoids which are not ample.% Maybe looking into groupoids with finite asymptotic dimension. 
+
+%The author presently doesn't know of any other examples of strongly proper groupoids which are not ample.% Maybe looking into groupoids with finite asymptotic dimension. 
 
 %Ample groupoids are example of locally induced groupoid. Recall that an étale groupoid is ample iff the open compact bisections form  a basis of the groupoid. Now take $U$ an open compact bisection, and set $H_U = \{ g\in G\text{ s.t. } gU\cap U \neq \emptyset \}$, which is a compact subgroupoid of $G$ that fulfills the condition.\\
 
