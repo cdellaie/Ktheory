@@ -10,6 +10,11 @@ Case mismatch error between cite keys SkTuYU and SkTuYu
  :                 }
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: QuantumGroups.aux
+Case mismatch error between cite keys Paterson and paterson
+---line 249 of file main.aux
+ : \citation{Paterson
+ :                   }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: FDC.aux
 A level-1 auxiliary file: StandardModules.aux
 The style file: plain.bst
@@ -25,45 +30,45 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 45 entries,
+You've used 46 entries,
             2118 wiz_defined-function locations,
-            792 strings with 10298 characters,
-and the built_in function-call counts, 12985 in all, are:
-= -- 1312
-> -- 446
+            798 strings with 10398 characters,
+and the built_in function-call counts, 13202 in all, are:
+= -- 1331
+> -- 453
 < -- 11
-+ -- 193
-- -- 136
-* -- 842
-:= -- 2179
-add.period$ -- 135
-call.type$ -- 45
-change.case$ -- 190
++ -- 197
+- -- 138
+* -- 850
+:= -- 2217
+add.period$ -- 138
+call.type$ -- 46
+change.case$ -- 193
 chr.to.int$ -- 0
-cite$ -- 52
-duplicate$ -- 538
-empty$ -- 1109
-format.name$ -- 136
-if$ -- 2691
+cite$ -- 53
+duplicate$ -- 550
+empty$ -- 1131
+format.name$ -- 138
+if$ -- 2737
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 53
-newline$ -- 227
-num.names$ -- 90
-pop$ -- 202
+int.to.str$ -- 46
+missing$ -- 55
+newline$ -- 232
+num.names$ -- 92
+pop$ -- 210
 preamble$ -- 1
-purify$ -- 157
+purify$ -- 160
 quote$ -- 0
-skip$ -- 360
+skip$ -- 366
 stack$ -- 0
-substring$ -- 892
-swap$ -- 85
+substring$ -- 898
+swap$ -- 86
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 160
+type$ -- 162
 warning$ -- 7
-while$ -- 149
-width$ -- 47
-write$ -- 484
-(There were 2 error messages)
+while$ -- 151
+width$ -- 48
+write$ -- 494
+(There were 3 error messages)

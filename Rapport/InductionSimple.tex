@@ -28,7 +28,7 @@ Let $A$ and $B$ be two $H$-algebras. For all $(E,\pi,T)\in \mathbb E^G(A,B)$, de
 For all subgroupoids $H<G$, let $A$, $B$ and $D$ be $G$-algebras and $A'$, $B'$ and $D'$ be $H$-algebras. Then, the map $(E,\pi,T)\mapsto ( \text{Ind}_H^G E, \text{Ind}_H^G\pi ,\text{Ind}_H^G T )$ induces an even homomorphism of $\Z_2$-graded abelian groups
 \[\text{Ind}_H^G : KK_*^H(A',B')\rightarrow KK_*^G( \text{Ind}_H^G A', \text{Ind}_H^G B') \] 
 called the induction transformation.\\
-Moreover, we naturally have an even homomorphism of $\Z_2$-graded abelian groups 
+Moreover, by forgetting the action, we naturally have an even homomorphism of $\Z_2$-graded abelian groups 
 \[\text{Res}_H^G : KK_*^G(A,B)\rightarrow KK_*^H( \text{Res}_H^G A, \text{Res}_H^G B) \] 
 called the restriction transformation by restricting the action.\\
 These two transformations respect the Kasparov product, i.e. 
@@ -45,40 +45,86 @@ Let $Z$ be a right $H$-space. Define on $Z\times G$ the following equivalence re
 The induced $G$-space of a $H$-space $Z$ is defined as $Z\times_H G = (Z\times G) / \sim_H$. 
 \end{definition}
 
-Notice that we have a natural identification between $\text{Ind}_H^G C_0(Z)$ and $C_0(Z\times_H G)$.
+Notice that we have a natural identification between $\text{Ind}_H^G C_0(Z)$ and $C_0(Z\times_H G)$.\\
+
+\begin{lem} \label{Restriction} Let $H$ be a sugroupoid of $G$. Then, for every $H$-algebra $A$ and every $G$-algebra $B$, the transformations $Res_H^G$ and $Ind_H^G$ induce isomorphisms
+\[KK^G( Ind_H^G(A), B) \cong KK^H(A, Res_H^G B).\]
+\end{lem}
+
+\begin{dem} 
+Let $A$ be a $H$-algebra, and $B$ a $G$-algebra.
+Let us first notice that the statement holds for equivariant $*$-homomorphisms. Namely,\\
+
+\begin{itemize} 
+\item[$\bullet$] if $\phi : Ind_H^G(A) \rightarrow B$ is a $G$-equivariant $*$-homomorphism, then $A = A\otimes C_0(G^{(0)})$ is a $H$-invariant subalgebra of $Ind_H^G(A)$, and the restriction $\phi_H$ of $\phi$ to $A$ is a $H$-equivariant $*$-homomorphism ;   
+\item[$\bullet$] if $\psi : A \rightarrow Res_H^G(B)$ is a $H$-equivariant $*$-homomorphism, then $\psi_G = \psi \otimes id_{C_0(G)}$ is a $H$-equivariant $*$-homomorphism.\\
+\end{itemize}
+
+And these constructions satisfy $(\phi_H)_G = \phi$ and $(\psi_G)_H = \phi$. Moreover, in $KK$-theory, one has $Res_H^G([\phi]) = [\phi_H]\in KK^H(Ind_H^G(A), B)$ and $Ind_H^G([\psi]) = [\psi_H]\in KK^H( A,Res_H^G (B))$.\\
+
+Let $z\in KK^H(Ind_H^G(A), B)$. As the restriction and induction transformations respect Kasparov products, by property $(d)$ and naturality of the boundary map, we can suppose that $z$ is the inverse in $KK$-theory of a $H$-equivariant $*$-homomorphism. Hence there exists a $H$-equivariant $*$-homomorphism $\phi : B \rightarrow Ind_H^G(A)$ such that $z\otimes_B [\phi] = 1_{Ind_H^G(A)}$ and $[\phi]\otimes_{Ind_H^G(A)} z  = 1_B$. Taking the induction, we get $Ind_H^G(z) = Ind_H^G([\phi])^{-1} = [\phi_G]^{-1}$, and $Res_H^G \circ Ind_H^G(z) = z$. We can similarly prove that $Ind_H^G \circ Res_H^G (z') = z'$ for every $z\in KK^G(A,Res_H^G(B))$.\\
+\qed
+\end{dem}
+
+%\begin{prop} Let $H$ be an open compact subgroupoid of $G$, $U$ a $H$-space and $B$ a $H$-algebra. Then :
+%\[Res_H^G : RK^G(G\times_H U , B)\rightarrow RK^H(U , Res_H^G(B)) \]
+%is an isomorphism of $\Z_2$-graded abelian groups.
+%\end{prop}
 
 \subsection{Strongly proper groupoids}
 
 We now introduce a property on groupoids that will entail a nice result on induction and restriction transformations at the level of $K$-homology.
 
 \begin{definition}\label{StronglyProper}
-A groupoid $G$ is said to be strongly proper if there exists an open cover $\mathcal U$ of $G^{(0)}$ such that, for all $U\in\mathcal U$, there exists a compact subgroupoid $H_U$ of $G$ and a $H_U$-space $Z_U$ together with a $G$-equivariant homeomorphism
+A groupoid $G$ is said to be strongly proper if there exists an open cover $\mathcal U$ of $G^{(0)}$ such that, for all $U\in\mathcal U$, there exists a compact open subgroupoid $H_U$ of $G$ and a $H_U$-space $Z_U$ together with a $G$-equivariant homeomorphism
 \[\psi_U : U \rightarrow G\times_{H_U} Z_U.\] 
+An action of $G$ on a space $Z$ is said to be strongly proper if the groupoid $Z\rtimes G$ is strongly proper.
 \end{definition}
 
-\begin{prop}
-Let $G$ be a strongly proper groupoid, and $\mathcal U$ an open cover satisfying the conditions of definition \ref{StronglyProper}. Then, the $G$-map $\psi_U $ extends to an isomorphism of groupoids
+\begin{rk}
+For any strongly proper action of $G$ on a space $Z$, there exists an open cover of $Z$ by subsets of the type $V=G\times_H U$, where $H$ is a compact open subgroupoid and $U$ is a $H$-space. Then, by the previous section, we have an isomorphism
+\[RK^G(V,B)\cong RK^H(U, Res_H^G (B))\]
+for every $G$-algebra $B$. 
+\end{rk}
+%\begin{prop}
+%Let $G$ be a strongly proper groupoid, and $\mathcal U$ an open cover satisfying the conditions of definition \ref{StronglyProper}. Then, the $G$-map $\psi_U $ extends to an isomorphism of groupoids
 %\[\begin{tikzcd}
 % G_{|U}\arrow{r}\arrow[shift right]{d}\arrow[shift left]{d} & Z_U\rtimes H_U \arrow[shift right]{d}\arrow[shift left]{d} \\
 % U \arrow{r}{\psi_U} & G\times_{H_U} Z_U 
 %\end{tikzcd}.\]
 % Ce morceau bug sous windows : pourquoi ?
-\end{prop}
+%\end{prop}
 
-\begin{Expl}
-Recall that $G$ is ample if $G$ is étale and $G^{(0)}$ is totally disconnected. An ample groupoid is strongly proper.
-\end{Expl}
+Let us give examples of strongly proper groupoids. Recall the following definition from \cite{Renault} (page $20$).
 
 \begin{definition}
-The groupoid $G$ is said to be locally induced if there exists an open cover $\mathcal U$ of $G^{(0)}$ such that for all $U\in\mathcal U$, there exists a compact groupoid $H_U$ acting on $G_{|U}$ and an ismomorphism of groupoids $G_{|U }\simeq G_{|U}/ H_U \rtimes H_U$.  
+A topological groupoid is said to be ample if it has a basis $G^a$ of neighborhoods consisting of compact open susbets.
 \end{definition}
 
-Since $G_{|U}/ H_U \rtimes H_U$ is Morita equivalent to $H_U$ and $G$ is Morita equivalent to the pull-back $G[\mathcal U]$, we have an isomorphism 
-\[KK^G(A,B) \simeq \prod_{U\in\mathcal U} KK^{H_U}(\phi^* A,\phi^* B).\]
+In \cite{paterson} (page $17$) is stated the following property. An étale groupoid $G$ is ample iff $G^{(0)}$ is totally disconnected. Hence the coarse groupoid of every coarse space $X$ is ample, its basis being $\beta X$.
 
-Ample groupoids are example of locally induced groupoid. Recall that an étale groupoid is ample iff the open compact bisections form  a basis of the groupoid. Now take $U$ an open compact bisection, and set $H_U = \{ g\in G\text{ s.t. } gU\cap U \neq \emptyset \}$, which is a compact subgroupoid of $G$ that fulfills the condition.\\
+\begin{prop}
+Every ample groupoid is strongly proper.
+\end{prop}
 
-The author presently doesn't know of any other examples of locally induced groupoids which are not ample. Maybe looking into groupoids with finite asymptotic dimension. 
+\begin{dem} The following argument was explained to me by Christian Bönicke.\\ 
+Let $G$ be an étale ample groupoid. Let $\mathcal U$ be an open cover of $G$ by compact bisections. Let $U\in\mathcal U$, then by compactness $r(U)$ is a finite union of orbits of open subsets. We can suppose it is of the form $r(U)= G.V$, for $V\subset r(U)$ open. Put $H = (s^{-1}(V)\cap r^{-1}(V))\cup e(V)$, which is a compact subgroupoid of $G$ such that $r(U) = G\times_H V$. \\
+Hence $G^{(0)}$ is covered by open subsets of the form $G\times_H V$, with $H$ being compact open subgroupoids and $V$ being $H$-spaces.\\ 
+\qed
+\end{dem}
+
+
+The author presently doesn't know of any other examples of strongly proper groupoids which are not ample.% Maybe looking into groupoids with finite asymptotic dimension. 
+
+%Ample groupoids are example of locally induced groupoid. Recall that an étale groupoid is ample iff the open compact bisections form  a basis of the groupoid. Now take $U$ an open compact bisection, and set $H_U = \{ g\in G\text{ s.t. } gU\cap U \neq \emptyset \}$, which is a compact subgroupoid of $G$ that fulfills the condition.\\
+
+%\begin{definition}
+%The groupoid $G$ is said to be locally induced if there exists an open cover $\mathcal U$ of $G^{(0)}$ such that for all $U\in\mathcal U$, there exists a compact groupoid $H_U$ acting on $G_{|U}$ and an ismomorphism of groupoids $G_{|U }\simeq G_{|U}/ H_U \rtimes H_U$.  
+%\end{definition}
+
+%Since $G_{|U}/ H_U \rtimes H_U$ is Morita equivalent to $H_U$ and $G$ is Morita equivalent to the pull-back $G[\mathcal U]$, we have an isomorphism 
+%\[KK^G(A,B) \simeq \prod_{U\in\mathcal U} KK^{H_U}(\phi^* A,\phi^* B).\]
+
 
 
 

@@ -68,7 +68,7 @@ which respects inductive limits w.r.t. inclusions of $G$-proper spaces, so that 
 To prove theorem \ref{Kunneth}, we will need the following result.
 
 \begin{thm}\label{TopologicalKunneth}
-Let $E$ be an open relatively compact subset of $G$ and $P_E$. If for all compact subgroupoids $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula, then $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism for all $C^*$-algebras $B$ such that $K_*(B)$ is a free abelian group.
+Let $G$ be a strongly proper étale groupoid, and let $E\in\mathcal E$ be a controlled subset of $G$ and $P_E(G)$ be the corresponding Rips complex. If for all open compact subgroupoids $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula, then $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism for all $C^*$-algebras $B$ such that $K_*(B)$ is a free abelian group.
 \end{thm}
 
 \begin{dem}
@@ -76,13 +76,13 @@ Let $Z_0\subset Z_1\subset ... \subset Z_n $ be the skeleton decomposition of $P
 
 Let us prove by induction that $\alpha_j=\alpha^{G,Z_j}_{A,B}$ is an isomorphism. By a standard argument similar to the proof of theorem \ref{prod}, it is sufficient to prove the statement for $j=0$.\\
 
-Let $U\subset Z_0$ be a $G$-compact $G$-proper space. There exists a compact subgroupoid $H$ of $G$ and a proper $H$-space such that $U = \text{Ind}_H^G V$. The following diagram is commutative :
+Let $U\subset Z_0$ be a $G$-compact $G$-proper space. By strong properness, $U$ can be finitely covered by open subsets of the type $G \times_H V$. By a standard Mayer-Vietoris argument, we can suppose that there exists a compact open subgroupoid $H$ of $G$ and a proper $H$-space such that $U = G \times_H V$. The following diagram is commutative :
 \[\begin{tikzcd}[column sep = small] RK_*^G(U,A)\otimes K_*(B) \arrow{r}{\alpha_{A,B}^{G,U}} \arrow{d}{\text{Res}_H^G} & RK^G(U, A\otimes B) \arrow{d}{\text{Res}_H^G}\\
-RK_*^H(V, \text{Res}_H^GA)\otimes K_*(B) \arrow{r}{\alpha_{\text{Res}_H^G A,B}^{H,V}} \arrow{d}{\mu_{H,\text{Res}_H^G A \otimes id}} & 
-	RK_*^H(V, \text{Res}_H^G A\otimes B)\arrow{d}{\mu_{H,\text{Res}_H^G A }} \\
-K_*(\text{Res}_H^G A\rtimes_r H)\otimes K_*(B)\arrow{r}{\alpha_{\text{Res}_H^G A,B}} & K_*\left((\text{Res}_H^G A\otimes B)\rtimes_r H\right) 
+RK_*^H(V, \text{Res}_H^G (A))\otimes K_*(B) \arrow{r}{\alpha_{\text{Res}_H^G A,B}^{H,V}} \arrow{d}{\mu_{H,\text{Res}_H^G A \otimes id}} & 
+	RK_*^H(V, \text{Res}_H^G (A)\otimes B)\arrow{d}{\mu_{H,\text{Res}_H^G A }} \\
+K_*(\text{Res}_H^G (A)\rtimes_r H)\otimes K_*(B)\arrow{r}{\alpha_{\text{Res}_H^G A,B}} & K_*\left((\text{Res}_H^G A\otimes B)\rtimes_r H\right) 
 \end{tikzcd}\]
-The first vertical arrows are isomorphisms by property of the restriction functor, the last horizontal one and the last vertical ones are by hypothesis, so that $\alpha_{A,B}^{G,U}$ is an isomorphism. By taking the inductive limit on $G$-proper $G$-compact spaces $U\subset Z_0$, we get that $\alpha_{A,B}^{G,Z_0}$ is an isomorphism.
+The first vertical arrows are isomorphisms by Proposition \ref{Restriction}, the last horizontal one is by hypothesis. The last vertical ones are by compactness of $H$, hence $\alpha_{A,B}^{G,U}$ is an isomorphism. By taking the inductive limit on $G$-proper $G$-compact spaces $U\subset Z_0$, we get that $\alpha_{A,B}^{G,Z_0}$ is an isomorphism.
 \end{dem}
 
 \begin{lem}\label{KunnethLemma}
@@ -93,7 +93,8 @@ RK_*^G(P_E(G),A\otimes B) \arrow{d}{\mu_{G,A}^{\alpha_ \tau\varepsilon,h_\vareps
 K_*^{\varepsilon,F}(A\rtimes_r G)\otimes K_*(B) \arrow{r}{\alpha_{A\rtimes_r G,B}^{\varepsilon,F}} & 
 K_*^{\alpha_\tau\varepsilon,h_{\varepsilon}F}((A\otimes B)\rtimes_r G)\\
 \end{tikzcd}\] 
-for all $\varepsilon\in(0,\frac{1}{4\kappa})$ and $E,F\in\mathcal E$ such that $F\geq c(\varepsilon,E)$. 
+for all $\varepsilon\in(0,\frac{1}{4\kappa})$ and $E,F\in\mathcal E$ such that $F\geq c(\varepsilon,E)$. \\
+\qed
 \end{lem}
 
 \begin{dem}
@@ -111,7 +112,7 @@ Let $\kappa>0$ and $c : (0,\frac{1}{\kappa})\times\mathcal E\rightarrow \mathcal
 
 Let $A$ be a $G$-algebra and $B$ a $C^*$-algebra, seen as a $G$-algebra with trivial action. As $(A\otimes B)\rtimes_r G \simeq (A\rtimes_r G)\otimes B$, we will make the slight abuse of coufounding them. Let us prove that $\hat \alpha_{A\rtimes_r G,B}$ is a controlled isomorphism.\\
 
-Let $F\in\mathcal E$ and $\varepsilon\in (0,\frac{1}{4})$. Choose $E \in\mathcal E$ such that $F\geq R(\varepsilon,E)$. By controlled surjectivity, there exists $F'\in \mathcal E$ such that $QS_{G,A\otimes B}(\varepsilon,\lambda\varepsilon, F,F',E)$ holds.\\
+Let $F\in\mathcal E$ and $\varepsilon\in (0,\frac{1}{4})$. Choose $E \in\mathcal E$ such that $k_J(\varepsilon).E\subseteq F$. By controlled surjectivity, there exists $F'\in \mathcal E$ such that $QS_{G,A\otimes B}(\varepsilon,\lambda\varepsilon, F,F',E)$ holds.\\
 
 Let $y\in K^{\varepsilon,F}_*((A\otimes B)\rtimes_r G)$. By controlled surjectivity of $\hat\mu_{G,A\otimes B}$, there exists $z\in RK_*^G(P_E(G), A\otimes B) $ such that $\mu_{G,A\otimes B}^{\kappa\varepsilon,F'}(z)=\iota_{\varepsilon,F}^{\kappa\varepsilon,F'}(y)$. Theorem \ref{TopologicalKunneth} entails that there exists $z_1 \in RK_*^G(P_E(G),A)\otimes K_*(B) $ such that $\alpha_{A,B}^{G,P_E(G)}(z_1)=z$, and lemma \ref{KunnethLemma} shows that, if $z_2=(\mu_{G,A}^{\varepsilon,E,F} \otimes id_{\hat K_*(B)})(z_1)$, then $\alpha_{A\rtimes_r G,B}(z_2)=\iota_{}^{}(y)$.\\
 
