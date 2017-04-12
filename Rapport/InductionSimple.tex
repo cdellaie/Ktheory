@@ -12,7 +12,7 @@ Then, the restriction of the multiplication, inverse, unit, target and source ma
 
 In this section, we define for all subgroupoids $H < G$ induction and restriction transformations. Let $G$ be an étale groupoid and $H<G$.\\
 
-Let $A$ be a $H$-algebra, with action $\alpha : s^*A \rightarrow r^* A$. Put $\phi=r\circ \iota$ where $\iota : H^{(0)}\hookrightarrow G^{(0)}$ is the canonical inclusion, hence $\phi^*A = A\otimes_\phi C_0(G)$ is a $C(G)$-algebra . Define the induced $C(G^{(0)})$-algebra :
+Let $A$ be a $H$-algebra, with action given by $\alpha : s^*A \rightarrow r^* A$. Put $\phi=r\circ \iota$ where $\iota : H^{(0)}\hookrightarrow G^{(0)}$ is the canonical inclusion, hence $\phi^*A = A\otimes_\phi C_0(G)$ is a $C(G)$-algebra . Define the induced $C(G^{(0)})$-algebra :
 %\[\text{Ind}_H^G (A) = \{f \in C_0(G,A) \text{ s.t. } h^{-1} f(gh) = f(g),\forall h\in H\}. \]
 \[\text{Ind}_H^G (A) = \{f \in \phi^* A \text{ s.t. } \alpha_{h^{-1}}(f_{hg}) = f_g,\forall h\in H\}. \]
 Left translation defines an action of $G$ on $\text{Ind}_H^G A$, so that $\text{Ind}_H^G A$ is a $G$-algebra.\\
@@ -52,7 +52,7 @@ Notice that we have a natural identification between $\text{Ind}_H^G C_0(Z)$ and
 We now introduce a property on groupoids that will entail a nice result on induction and restriction transformations at the level of $K$-homology.
 
 \begin{definition}\label{StronglyProper}
-A groupoid $G$ is said to be strongly proper if there exists an open cover $\mathcal U$ such that, for all $U\in\mathcal U$, there exists a compact subgroupoid $H_U$ of $G$ and a $H_U$-space $Z_U$ together with a $G$-equivariant homeomorphism
+A groupoid $G$ is said to be strongly proper if there exists an open cover $\mathcal U$ of $G^{(0)}$ such that, for all $U\in\mathcal U$, there exists a compact subgroupoid $H_U$ of $G$ and a $H_U$-space $Z_U$ together with a $G$-equivariant homeomorphism
 \[\psi_U : U \rightarrow G\times_{H_U} Z_U.\] 
 \end{definition}
 
@@ -66,7 +66,7 @@ Let $G$ be a strongly proper groupoid, and $\mathcal U$ an open cover satisfying
 \end{prop}
 
 \begin{Expl}
-Recall that $G$ is ample if $G$ is étale and $G^{[0)}$ is totally disconnected. An ample groupoid is strongly proper.
+Recall that $G$ is ample if $G$ is étale and $G^{(0)}$ is totally disconnected. An ample groupoid is strongly proper.
 \end{Expl}
 
 \begin{definition}

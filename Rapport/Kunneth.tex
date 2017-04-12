@@ -4,7 +4,7 @@ In this section, we present an application of the previous results to a Künneth
 
 Recall that for $A$ and $B$ two $C^*$-algebras, one can define a homomorphism
 \[\alpha_{A,B} : K_*(A)\otimes K_*(B)\rightarrow K_*(A\otimes B) \quad ; \quad (x,y)\mapsto x\otimes   \tau_A(y),\]
-where $\tau_A$ is the external Kapsarov product.\\
+where $\tau_A$ is the external Kasparov product.\\
 
 Recall that, when $A$ and $B$ are unital $C^*$-algebras, if $p$ and $q$ are projections in $\mathfrak M_r(A)$ and $\mathfrak M_s(B)$ and $u$ and $v$ are unitaries in $\mathfrak M_r(A)$ and $\mathfrak M_s(B)$, then :
 \[\begin{array}{rl}
@@ -20,7 +20,7 @@ A $C^*$-algebra $A$ is said to satisfy the Künneth formula if, for every $C^*$-
 If $A$ satifies the Künneth formula, then, for any $C^*$-algebra $B$, one has the following exact sequence
 \[\begin{tikzcd}[column sep = small] 0 \arrow{r} & K_*(A)\otimes K_*(B)\arrow{r} & K_*(A\otimes B) \arrow{r} & Tor(K_*(A),K_*(B))\arrow{r} & 0 \end{tikzcd}\]
 
-If $(A,\mathcal E)$ is now filtered, $(A\otimes B,\mathcal E)$ is also filtered, and one can define a controlled morphism
+If $(A,\mathcal E)$ is now a $\mathcal E$-filtered $C^*$-algebra, $(A\otimes B,\mathcal E)$ is also filtered, and one can define a controlled morphism
 \[\hat\alpha_{A,B} : \hat K_*(A)\otimes K_*(B)\rightarrow \hat K_*(A\otimes B) \quad ; \quad (x,y)\mapsto \hat\tau_A(y)(x),\]
 which induces $\alpha_{A,B}$ in $K$-theory. \\
 
@@ -56,9 +56,9 @@ Let $X$ be a proper discrete metric space with bounded geometry which admits a f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Baum-Connes and the Künneth formula}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The first step in proving theorem \ref{Kunneth} is to define a analytical version of $\alpha_{A,B}$ when an étale groupoid $G$ is given. More precisely, we first construct a homomorphism $\alpha_{A,B}^G : K_*^{top}(G,A)\otimes K_*(B)\rightarrow K_*^{top}(G,A\otimes B )$, inductive limit of $\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K_*(B)\rightarrow RK^G(Z,A\otimes B )$ where $Z$ runs through $G$-proper $G$-compact spaces. Then we show that the controlled assembly map intertwines $\alpha^{G,P_d(G)}_{A,B}$ and $\alpha_{A\rtimes_r G,B}$ uniformly.\\
+The first step in proving theorem \ref{Kunneth} is to define a analytical version of $\alpha_{A,B}$ when an étale groupoid $G$ is given. More precisely, we first construct a homomorphism $\alpha_{A,B}^G : K_*^{top}(G,A)\otimes K_*(B)\rightarrow K_*^{top}(G,A\otimes B )$, inductive limit of $\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K_*(B)\rightarrow RK^G(Z,A\otimes B )$ where $Z$ runs through $G$-proper $G$-compact spaces. Then we show that the controlled assembly map intertwines $\alpha^{G,P_E(G)}_{A,B}$ and $\alpha_{A\rtimes_r G,B}$ uniformly.\\
 
-If $A$ is a $G$-algebra, and $B$ a $C^*$-algebra, $A\otimes B$ naturally inherits a $G$-algebra structure with trivial action of $G$ on the $B$ factor.\\
+If $A$ is a $G$-algebra, and $B$ a $C^*$-algebra, $A\otimes B$ naturally inherits a $G$-algebra structure with trivial action of $G$ on the $B$ factor. Then $(A\rtimes_r G)\otimes B \cong (A\otimes B)\rtimes_r G$.\\
 
 Let $Z$ be a $G$-proper space. Define the homomorphism :
 \[\alpha_{A,B}^{G,Z} : RK^G_*(Z,A)\otimes K_*(B)\rightarrow RK_*^G(Z,A\otimes B) \quad ; \quad (x,y)\mapsto x\otimes_{}   \tau_A(y),\]
@@ -107,9 +107,9 @@ which is just the statement of the lemma.\\
 %\textbf{SHOW THAT $\hat J_G(z)\circ \hat\tau(y)=$}
 
 \begin{dem} \textit{of theorem \ref{Kunneth}}\\
-Let $\kappa>0$ and $c : (0,\frac{1}{\kappa})\times\mathcal E\rightarrow \mathcal E$ as in lemma \ref{KunnethLemma}.
+Let $\kappa>0$ and $c : (0,\frac{1}{\kappa})\times\mathcal E\rightarrow \mathcal E$ as in lemma \ref{KunnethLemma}.\\
 
-Fix two $G$-algebras $A$ and a $C^*$-algebra $B$, seen as a $G$-algebra with trivial action. As $(A\otimes B)\rtimes_r G \simeq (A\rtimes_r G)\otimes B$, we will make the slight abuse of coufounding them. Let us prove that $\hat \alpha_{A\rtimes_r G,B}$ is a controlled isomorphism.\\
+Let $A$ be a $G$-algebra and $B$ a $C^*$-algebra, seen as a $G$-algebra with trivial action. As $(A\otimes B)\rtimes_r G \simeq (A\rtimes_r G)\otimes B$, we will make the slight abuse of coufounding them. Let us prove that $\hat \alpha_{A\rtimes_r G,B}$ is a controlled isomorphism.\\
 
 Let $F\in\mathcal E$ and $\varepsilon\in (0,\frac{1}{4})$. Choose $E \in\mathcal E$ such that $F\geq R(\varepsilon,E)$. By controlled surjectivity, there exists $F'\in \mathcal E$ such that $QS_{G,A\otimes B}(\varepsilon,\lambda\varepsilon, F,F',E)$ holds.\\
 
@@ -117,8 +117,8 @@ Let $y\in K^{\varepsilon,F}_*((A\otimes B)\rtimes_r G)$. By controlled surjectiv
 
 Let us show the controlled injectivity. Let $\varepsilon\in(0,\frac{1}{4})$ and $F\in\mathcal E$.\\ 
 
-Let $x\in K^{\varepsilon,F}_*(A\rtimes_r G)\otimes K_*(B)$ such that $\alpha_{A\rtimes_r G,B}^{\varepsilon,F}(x)=0$ in $K^{\alpha_\tau,h_{\tau,\varepsilon} F}((A\otimes B)\rtimes_r G)$. By controlled surjectivity of $\hat\mu_{G,A}$, there exists $z\in RK(P_E(G),A)\otimes K_*(B)$ such that $\mu_{G,A}^{\alpha_\tau,h_{\tau,\alpha_\tau\varepsilon} F}(z)=(\iota_{\varepsilon,F}^{\varepsilon',F'}\otimes id) (x)$. If $z' = \alpha_{A,B}^{G,P_E(G)}(z)$, lemma \ref{KunnethLemma} entails that $\mu^{E}_{G,A\otimes B}(z)=0$, which by controlled injectivity implies that $q_E^{E'}(z')=0$ in $RK^G(P_{E'}(G),A\otimes B)$. As $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism, $q_E^{E'}(z)=0$ in $RK^G(P_{E'}(G),A)\otimes K(B)$.
-
+Let $x\in K^{\varepsilon,F}_*(A\rtimes_r G)\otimes K_*(B)$ such that $\alpha_{A\rtimes_r G,B}^{\varepsilon,F}(x)=0$ in $K^{\alpha_\tau,h_{\tau,\varepsilon} F}((A\otimes B)\rtimes_r G)$. By controlled surjectivity of $\hat\mu_{G,A}$, there exists $z\in RK(P_E(G),A)\otimes K_*(B)$ such that $\mu_{G,A}^{\alpha_\tau,h_{\tau,\alpha_\tau\varepsilon} F}(z)=(\iota_{\varepsilon,F}^{\varepsilon',F'}\otimes id) (x)$. If $z' = \alpha_{A,B}^{G,P_E(G)}(z)$, lemma \ref{KunnethLemma} entails that $\mu^{E}_{G,A\otimes B}(z)=0$, which by controlled injectivity implies that $q_E^{E'}(z')=0$ in $RK^G(P_{E'}(G),A\otimes B)$. As $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism, $q_E^{E'}(z)=0$ in $RK^G(P_{E'}(G),A)\otimes K(B)$.\\
+\qed
 \end{dem}
 
 
