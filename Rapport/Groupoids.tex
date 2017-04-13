@@ -120,19 +120,19 @@ Let $n\in\N$. A $G$-simplicial complex of dimension $\leq n$ is a pair $(X,\Delt
 \end{itemize}
 For $\eta\in \Delta$, $\text{supp }\eta$ is called a simplex, or a $j$-simplex when $|\text{supp }\eta | = j$.
 \end{itemize}
-The complex is said to be typed if there exists a discrete space $T$ and a $G$-invariant continuous map $\tau : X\rightarrow T$ such that, for every simplex $S$, $\tau_{|S}$ is injective.  
+The complex is said to be typed if there exists a finite space $T$ and a $G$-invariant continuous map $\tau : X\rightarrow T$ such that, for every simplex $S$, $\tau_{|S}$ is injective.  
 \end{definition}
 
 For any typed proper $G$-compact $G$-simplicial complex $(X,\Delta)$ of dimension $\leq n$, one can decompose it into its $n$-skeleton $Z_0\subseteq Z_1 \subseteq ... \subseteq Z_n$, where each $Z_j$ is a closed $G$-invariant subset of $\Delta$ such that :
 \begin{itemize}
 \item[$\bullet$] for all $\eta \in Z_j \setminus Z_{j-1}$, $|\text{supp }\eta|= j$,
-\item[$\bullet$] $Z_j \setminus Z_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring\sigma_j \times \Sigma_j$, where $\mathring\sigma_j $ is the interior of the standard simplex of dimension $j$, and $\Sigma_j$ is the discrete subspace of centers of $j$-simplices.
+\item[$\bullet$] $Z_j \setminus Z_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring\sigma_j \times \Sigma_j$, where $\mathring\sigma_j $ is the interior of the standard simplex of dimension $j$, and $\Sigma_j$ is the subspace of centers of $j$-simplices.
 \end{itemize}
 
 \begin{definition}
 Let $(X,\Delta)$ be a $G$-simplicial complex of dimension $\leq n$. Its barycentric subdivision is the $G$-simplicial complex $(S,\Delta_S)$ of dimension $\leq n$ defined by :
-\[S = \cup_{\eta\in \Delta}\text{supp } \eta\subseteq \Delta ,\]
-i.e. the space of vertices $S$ contains $X$ plus the barycentric center of any simplex of $\Delta$, and $\Delta_S $ satisfies that $\sigma = \{ \eta_0, ...,\eta_k\}$ is a simplex in $\Delta_S$ iff $\cup_{0 \leq j \leq k}\text{ supp }(\eta_j)$ is a simplex of $\Delta$.
+\[S = \left\{ \frac{1}{|\text{supp } \eta|}\sum_{x\in \text{supp } \eta} \delta_x\ ,\eta\in \Delta \right\} \subseteq \Delta ,\]
+i.e. the space of vertices $S$ contains $X$ plus the barycentric center of any simplex of $\Delta$, and $\Delta_S $ satisfies that $\sigma = \{ \eta_0, ...,\eta_k\}$ is a simplex in $\Delta_S$ iff $\{\text{supp }(\eta_0),...,\text{supp }(\eta_k) \}$ is totally ordered for the inclusion. %$\cup_{0 \leq j \leq k}\text{ supp }(\eta_j)$ is a simplex of $\Delta$.
 \end{definition}
 
 This construction shows that, up to replacing a $G$-simplicial complex of dimension $\leq n$ by its barycentric subdivision, we can always suppose that it is a typed $G$-simplicial complex of dimension $\leq n$.

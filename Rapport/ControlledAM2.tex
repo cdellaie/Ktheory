@@ -403,11 +403,11 @@ This kind of statement leads us to define the following properties, following \c
 
 To prove the main theorems of this section, what we called quantitative statements, we will need a serie of lemmas. The first part is devoted to a study of the behaviour of $K$-homology under product of the coefficients. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}. \\
 
-Let us begin with a remark that will be useful later.
+%Let us begin with a remark that will be useful later.
 
-\begin{rk}\label{construction}
-Let $\{B_j\}_{j\in\N}$ be a family of $G$-algebras and let $T_j \in \mathfrak K (H_{B_j})\cong B_j \otimes\mathfrak K$ such that $\sup_j ||T_j||<\infty$. Then we can define  
-\end{rk}
+%\begin{rk}\label{construction}
+%Let $\{B_j\}_{j\in\N}$ be a family of $G$-algebras and let $T_j \in \mathfrak K (H_{B_j})\cong B_j \otimes\mathfrak K$ such that $\sup_j ||T_j||<\infty$. Then we can define  
+%\end{rk}
 
 Recall first that the Haar system $(\lambda^x)_{x\in G^{(0)}}$ on $G$ defines, for every $f\in C_c(G)$, a continuous function $x\mapsto \int_{g\in G^x}f(g)d\lambda^x(g)$. We denote by $\int f d\lambda$ the element of $C_0(X)$ obtained when integrating a compactly supported function $f$ w.r.t. the Haar system. If $A$ is a $G$-algebra and $E$ is a $A$-Hilbert module, $f\mapsto \int f d\lambda$ extends by linearity and continuity to $C_c(G,A)\subseteq r^*A $ and $C_c(G,E)\subseteq r^*E$. We will still denote by $\int fd\lambda$ the element in $A$ or $E$ if $f$ is in $r^* A$ or $r^* E$ respectively. %Notice that the invariance of the Haar system implies that, if $V\in\mathcal L_{s^*B}(s^*E,r^*E)$ denotes the action of $G$ on $E$, then $\int V F V^* d\lambda = \int F d\lambda$ in $\mathcal L_B(E)$ , for every $F\in\mathcal L_B(E)$. 
 
@@ -495,9 +495,12 @@ Define $E_\infty = \prod_j (E_j\otimes \mathfrak K)$. It is a $B_\infty$-Hilbert
 for every $\xi = (\xi_j\otimes F_j)$ and $\eta = (\eta_j\otimes F'_j)$ in $E_\infty$. Define $T = (T_j\otimes E_{11})$, where $E_{11}(x)= \langle e_1,x\rangle. e_1$ is the rank-one operator projecting on $e_1$. ($\{e_j\}$ denote the canonical orthonormal basis of $l^2(\mathbb N)$).
 These conditions ensure that $T $ defines an operator in $\mathcal L_{B_\infty}(E_\infty)$.\\
 
-Define $\pi(a) = (\pi_j(a))_j\in  \mathcal L_{B_\infty}(H_{B_\infty})$, as $\sup ||\pi_j(a)||\leq ||a||$. Then, $[\pi(a),T]=0$, $T_j^*=T_j$ and $r^*T = Vs^*T V^*$. Moreover $0\leq T_j^2-1\leq 1$, hence, according to the remark \ref{construction}, $T^2-1$ is in $\mathfrak K_{B_\infty}(E_\infty)$. 
+Define $\pi(a) = (\pi_j(a))_j\in  \mathcal L_{B_\infty}(H_{B_\infty})$, as $\sup ||\pi_j(a)||\leq ||a||$. Then, $[\pi(a),T]=0$, $T_j^*=T_j$ and $r^*T = Vs^*T V^*$. %Moreover $0\leq T_j^2-1\leq 1$, hence, according to the remark \ref{construction},
+Let us show that $T^2-1$ is in $\mathfrak K_{B_\infty}(E_\infty)$.\\ 
+
+Indeed, each $F_j = T_j^2-1\in \mathfrak K \otimes B_j$ can be approximated by a finite rank operator, hence there exist $N_j>0$, and $\xi_k^{(j)},\eta_k^{(j)}\in H_{B_j}$ such that $F_j= \sum_{k=1}^{N_j}\theta_{\xi_k^{(j)},\eta_k^{(j)}}$. A computation shows that $T\otimes E_{11} = \theta_{\tilde\xi_k,\tilde \eta_k}$ where $\tilde \xi_k = (\xi_k^{(j)}\otimes E_{j1})$ and $\tilde \eta_k = (\eta_k^{(j)}\otimes E_{j1})$, which is a rank one operator, hence $T^2-1$ is compact.\\ 
 %Indeed, these elements are uniformly bounded elements of $\prod \mathfrak K_{B_j\otimes\mathfrak K}$, which are in $\mathfrak K_{B_\infty}(H_{B_\infty})$. 
-This ensures that $[H_{B_\infty},\pi,T]\in KK^G(C_0(Z),B_\infty)$. Let $\eta((z_j)_j) = [H_{B_\infty},\pi,T] $. It is clear that $\Theta\circ \eta = id_{\prod_j RK^G(X,B_j\otimes K) }$, and $\Theta $ is onto.\\
+This ensures that $[E_\infty,\pi,T]\in KK^G(C_0(Z),B_\infty)$. Let $\eta((z_j)_j) = [H_{B_\infty},\pi,T] $. It is clear that $\Theta\circ \eta = id_{\prod_j RK^G(X,B_j\otimes K) }$, and $\Theta $ is onto.\\
 
 Let $z\in KK^G(C_0(Z),B_\infty)$ such that $\Theta(z) = 0$. Let us denote $\Theta(z) = (z_j)_j$ where each $z_j\in KK^G(C_0(Z),B_j)$ is represented by $K$-cycles $(H_{B_j}, \pi_j,T_j)$ homotopic to $0$ by an operator homotopy 
 \[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (H_{B_j}, \pi_j,T_j(s))\end{array}\right.\] 
