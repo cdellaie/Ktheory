@@ -16,6 +16,64 @@ Great success was achieved in the study of the conjecture. It is known to hold :
 \end{itemize}  
 Even if these class of examples is very large, counterexamples have been exhibited by N. Higson, V. Lafforgue, and G. Skandalis in \cite{HigsonLaffSk}. One of the interest of the Baum-Connes conjectures is the way they relate to other conjectures. For instance, the injectivity of the Baum-Connes assembly map for a discrete group ensures that, by a principle descent, the group satisfies the Novikov conjecture for higher signatures. The different assembly maps also interelates between each other. In \cite{SkTuYu}, G. Skandalis, J-L. Tu and G. Yu proved that the coarse assembly map is equivalent to the assembly map associated to a topological groupoid canonically defined from the coarse space. \\
 
-We are interested by G. Yu's celebrated proof of the Baum-Connes conjecture for coarse spaces with finite asymptotic dimension \cite{Yu1}. It is worth noticing that any coarse space with finite asymptotic dimension satisfies property A, hence this proof is less general that the one in \cite{Yu2}. Nonetheless, the idea is very different. To simplify, we could see this proof as a "controlled cutting and pasting" : the finite asymtpotic-dimensional coarse space is cut into smaller pieces, which are shown to satisfy the coarse Baum-Connes conjecture. One need then to paste the different pieces in a way compatible with the assembly maps. It is in this part of the proof that appeared some modified $K$-theory groups that were essential to the proof. \\
+We are interested by G. Yu's celebrated proof of the Baum-Connes conjecture for coarse spaces with finite asymptotic dimension \cite{Yu1}. It is worth noticing that any coarse space with finite asymptotic dimension satisfies property A, hence this proof is less general that the one in \cite{Yu2}. Nonetheless, the idea is very different. To simplify, we could see this proof as a "controlled cutting and pasting" : the finite asymtpotic-dimensional coarse space is cut into smaller pieces, which are shown to satisfy the coarse Baum-Connes conjecture. One need then to paste the different pieces in a way compatible with the assembly maps. It is in this part of the proof that appeared some modified $K$-theory groups that were essential for the "cutting and pasting". \\
 
-In order to apply this strategy to more general situations, controlled $K$-theory was developed in \cite{OY2} by H. Oyono-Oyono and G. Yu. Controlled $K$-theory is defined in the setting of filtered $C^*$-algebras. 
+In order to apply this strategy to more general situations, controlled $K$-theory was developed in \cite{OY2} by H. Oyono-Oyono and G. Yu. Controlled $K$-theory is defined in the setting of filtered $C^*$-algebras. Roe algebras of metric spaces, crossed products of $C^*$-algebras by discrete groups, or by groupoids endowed with a proper length, are examples of filtered $C^*$-algebras. The filtration encodes propagation of operators. An good analogy to understand propagation is the case of differential operators. A differential operator is said to be of bounded propagation if, applied to a function with bounded support, the output remains a function with bounded support.\\
+
+In \cite{OY2} and \cite{OY3}, a controlled $K$-theory was developed in this general setting. It is a refinement of operator $K$-theory, which keeps track of the filtration by replacing the $K$-groups $K_*(A)$ of a $C^*$-algebra $A$ by a family of groups $\hat K_*(A)= \{K_*^{\varepsilon,R}(A)\}_{\varepsilon\in (0\frac{1}{4}),R>0}$. These controlled groups are naturally related to the usual $K$-theory, and are compatible when one increases the propagation. A new parameter appears, $\varepsilon\in (0 , \frac{1}{4})$, which is a technical adjustment to make sure controlled $K$-theory are genuine groups. The bound $\frac{1}{4}$ is not crucial, it is the greater bound that allows one to get $K$-theory element out of any controlled $K$-theory class. One could in principle take any lesser bound.\\ 
+
+%%%%% PLAN %%%%%
+
+The idea behind this thesis is, first, to extend the setting of controlled $K$-theory, and then to define controlled assembly maps. We develop a formulation general enough to include the study of the Roe algebra of coarse spaces and crossed products of $C^*$-algebras by étale groupoids and discrete quantum groups. Let us detail the plan.\\ 
+
+The first part is devoted to remind the reader of the definitions and results we will need. After a quick introduction to $C^*$-algebras and to Hilbert modules, the reader is guided through étale groupoids, coarse spaces and their relations. We give details on an important construction of \cite{SkTuYu}, the (étale) coarse groupoid $G(X)$ associated to a coarse space $X$. We also give a detailed proof of the $*$-isomorphism between the Roe algebra of $X$ with coefficients in a $C^*$-algebra $B$ and the reduced crossed product of $l^\infty (X,B\otimes\mathfrak K)$ with the natural action of $G(X)$. We end this section with a quick reminder of the construction of crossed products in the setting of discrete quantum groups.\\
+ 
+In the second part, the first chapter begins with a definition of a filtered $C^*$-algebra with respect to what we call a coarse structure. An exposition of the controlled $K$-theory in this setting follows. All the results obtained by H. Oyono-Oyono and G. Yu in \cite{OY2} and \cite{OY3} are true in this setting. The interesting part is the definition of a coarse structure and the examples which cannot fit into the former formalism adopted in \cite{OY2}. These examples are given by the coarse structure $\mathcal E_X$ generated by entourages of a coarse space $X$, the coarse structure $\mathcal E_G$ generated by compact subsets of an étale groupoid $G$, and the coarse structure $\mathcal E_{\mathbb G}$ generated by unitary finite dimensional representations of a discrete quantum group $\mathbb G$. We show that these strcutures define filtration on the Roe algebras of $X$, and crossed products of $C^*$-algebras endowed with an action of $G$ and $\hat{\mathbb G}$ respectively.\\
+
+The next chapter is divided into three parts. Th first contains definitions of the usual assembly maps for étale groupoids and coarse spaces. It is followed by two very similar parts, so as to underline the similarity between the two situations, in which the controlled assembly maps are built. The steps are the following. First, define a descent transformation, called the controlled Roe transformation in the coarse setting, and the controlled Kasparov transformation in the groupoid setting. These are transformations that map $KK$-elements from $A$ to $B$ to controlled morphism from $\hat K(A)$ to $\hat K(B)$. We always begin with odd $KK$-elements, and realize them as boundaries of a well chosen semi-split extension of $C^*$-algebras. Taking the reduced crossed product (or the Roe algebra, depending on the setting) preserves these properties, and the controlled transformation is defined as the boundary of the resulting extension composed by some invertible controlled transformation. The odd case is obtaine using Bott periodicity. We then study properties of the descent transformation, the most crucial being that it is natural and respects the Kasparov product. The controlled assembly maps are defined from canonical projections $P_E$ and $\mathcal L_E$. At the end of the third part, we states what we called quantitative statements, relating the behaviour of usual assembly maps to controlled assembly maps. Doing so requires some interesting results on the $K$-homology groups with respect to infinite products of stable $C^*$-algebras, i.e. the content of the lemma \ref{prod}. We end the chapter by stating that the descent transformation can be defined in a similar way for quantum groups.\\
+
+The following chapter gives two applications of the controlled assembly maps. The first application deals with a controlled version of the main result of \cite{SkTuYu} : the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ and the Baum-Connes conjecture for $G(X)$ with coefficients in $l^\infty (X, B\otimes\mathfrak K)$ are equivalent. We are able to prove in theorem \ref{BCCeq} that the two corresponding controlled assembly maps are equivalent. This result induces the classical one, and gives another proof. We apply the equivalence between the two controlled assembly maps to obtain some result about spaces which admit fibred coarse embedding into Hilbert space. The following application deals with a controlled Künneth formula for étale groupoids which satisfy a certain property. We call this class of groupoids the class $\mathcal C$, and prove that ample groupoids are in this class. This class seems worth studying. Notably, induction and restriction are interesting to study. \\  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
