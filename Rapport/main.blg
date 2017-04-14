@@ -10,11 +10,6 @@ Case mismatch error between cite keys SkTuYU and SkTuYu
  :                 }
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: QuantumGroups.aux
-Case mismatch error between cite keys Paterson and paterson
----line 249 of file main.aux
- : \citation{Paterson
- :                   }
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: FDC.aux
 A level-1 auxiliary file: StandardModules.aux
 The style file: plain.bst
@@ -23,6 +18,7 @@ Repeated entry---line 191 of file biblio2.bib
  : @article{higsonkasparov
  :                        ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "HisgonLaffSk"
 Warning--can't use both volume and number fields in connesfoliations
 Warning--empty journal in OY3
 Warning--empty year in OY3
@@ -32,7 +28,7 @@ Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
 You've used 46 entries,
             2118 wiz_defined-function locations,
-            798 strings with 10398 characters,
+            800 strings with 10422 characters,
 and the built_in function-call counts, 13202 in all, are:
 = -- 1331
 > -- 453
@@ -71,4 +67,4 @@ warning$ -- 7
 while$ -- 151
 width$ -- 48
 write$ -- 494
-(There were 3 error messages)
+(There were 2 error messages)
