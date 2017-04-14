@@ -18,7 +18,9 @@ Repeated entry---line 191 of file biblio2.bib
  : @article{higsonkasparov
  :                        ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "HisgonLaffSk"
+Warning--I didn't find a database entry for "RTY"
+Warning--I didn't find a database entry for "DrutuNowak"
+Warning--I didn't find a database entry for "WY"
 Warning--can't use both volume and number fields in connesfoliations
 Warning--empty journal in OY3
 Warning--empty year in OY3
@@ -26,45 +28,45 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 46 entries,
+You've used 48 entries,
             2118 wiz_defined-function locations,
-            800 strings with 10422 characters,
-and the built_in function-call counts, 13202 in all, are:
-= -- 1331
-> -- 453
-< -- 11
-+ -- 197
-- -- 138
-* -- 850
-:= -- 2217
-add.period$ -- 138
-call.type$ -- 46
-change.case$ -- 193
+            818 strings with 10732 characters,
+and the built_in function-call counts, 13923 in all, are:
+= -- 1406
+> -- 484
+< -- 12
++ -- 209
+- -- 148
+* -- 901
+:= -- 2334
+add.period$ -- 144
+call.type$ -- 48
+change.case$ -- 204
 chr.to.int$ -- 0
-cite$ -- 53
-duplicate$ -- 550
-empty$ -- 1131
-format.name$ -- 138
-if$ -- 2737
+cite$ -- 55
+duplicate$ -- 577
+empty$ -- 1185
+format.name$ -- 148
+if$ -- 2889
 int.to.chr$ -- 0
-int.to.str$ -- 46
-missing$ -- 55
-newline$ -- 232
-num.names$ -- 92
-pop$ -- 210
+int.to.str$ -- 48
+missing$ -- 57
+newline$ -- 242
+num.names$ -- 96
+pop$ -- 219
 preamble$ -- 1
-purify$ -- 160
+purify$ -- 169
 quote$ -- 0
-skip$ -- 366
+skip$ -- 387
 stack$ -- 0
-substring$ -- 898
-swap$ -- 86
-text.length$ -- 11
+substring$ -- 952
+swap$ -- 93
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 162
+type$ -- 170
 warning$ -- 7
-while$ -- 151
-width$ -- 48
-write$ -- 494
+while$ -- 160
+width$ -- 50
+write$ -- 516
 (There were 2 error messages)

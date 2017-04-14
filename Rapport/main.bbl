@@ -62,6 +62,12 @@ Martin Finn-Sell and Nick Wright.
   graphs.
 \newblock {\em Adv. Math. C}, 259:306--338, 2014.
 
+\bibitem{GWY}
+Erik Guentner, Rufus Willett, and Guoliang Yu.
+\newblock Dynamic asymptotic dimension: relation to dynamics, topology, coarse
+  geometry, and c\^{}*-algebras.
+\newblock {\em Mathematische Annalen}, pages 1--45, 2015.
+
 \bibitem{OY3}
 G.~Yu H.~Oyono-Oyono.
 \newblock Persitance approximation property and controlled {K}-theory.
@@ -238,6 +244,11 @@ Roland Vergnioux.
 NE~Wegge-Olsen.
 \newblock K-theory and {C}\^{}*-algebras: A friendly approach.
 \newblock 1993.
+
+\bibitem{WillettYu}
+Rufus Willett and Guoliang Yu.
+\newblock Geometric property (t).
+\newblock {\em Chinese Annals of Mathematics, Series B}, 35(5):761--800, 2014.
 
 \bibitem{Wo}
 Stanis{\l}aw~L Woronowicz.
