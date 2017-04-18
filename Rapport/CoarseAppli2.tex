@@ -11,7 +11,7 @@ Moreover, it is filtered in the strong sense : for all $R>0$, $\Psi_B(C_{\overli
 The following theorem is proved in \cite{SkTuYu}. It states the equivalence between the coarse Baum-Connes conjecture with coefficients in $B$ and the Baum-Connes conjecture for $G(X)$ with coefficients in $l^\infty(X,B\otimes\mathfrak K)$.  
 
 \begin{thm}
-Let $X$ be a discrete metric space with bounded geometry. Let $\Psi_B$ be the isomorphism of theorem \ref{IsomCoarseGroupoid}, $x\in X$ and $\iota :\{x\}\rightarrow G$ be the natural inclusion of groupoids. Denote by $G=G(X)$ the coarse groupoid of $X$ and by $l^\infty$ the $G$-algebra $l^\infty (X,B\otimes\mathfrak K)$. Then, for every controlled subset $E\subseteq X\times X$, the following diagram is commutative with vertical arrows being isomorphisms :
+Let $X$ be a discrete metric space with bounded geometry. Let $\Psi_B$ be the isomorphism of theorem \ref{IsomCoarseGroupoid}, $x\in X$ and $\iota :\{x\}\rightarrow G(X)$ be the natural inclusion of groupoids. Denote by $G=G(X)$ the coarse groupoid of $X$ and by $l^\infty$ the $G$-algebra $l^\infty (X,B\otimes\mathfrak K)$. Then, for every controlled subset $E\subseteq X\times X$, the following diagram is commutative with vertical arrows being isomorphisms :
 \[\begin{tikzcd}
 RK_*^G(P_E(G),l^\infty) \arrow{r}{\mu_{G,l^\infty}^d}\arrow{d}{\iota^*}& K_*(l^\infty\rtimes_r G)\arrow{d}{(\Psi_B)_*}\\
 RK_*(P_d(X),B) \arrow{r}{\mu_{X,B}^d}& K_*(C^*(X,B))
@@ -19,7 +19,7 @@ RK_*(P_d(X),B) \arrow{r}{\mu_{X,B}^d}& K_*(C^*(X,B))
 where $\iota^*$ is the natural transformation induced by $\iota$ and $d= \sup_E d$.
 \end{thm}
 
-We claim that we can prove a controlled analogue of this result which induces it in $K$-theory. We need the following lemma. %s.
+We shall prove a controlled analogue of this result which induces it in $K$-theory. We need the following lemma. %s.
 
 %\begin{lem}
 %Let $G$ be an étale groupoid,$x\in G$, $Z$ a proper $G$-space and $B$ a $C^*$-algebra. Denote by $\tilde A$ the $G$-algebra $C_0(Z)$ and $\iota : \{x\} \rightarrow G$ the natural inclusion of groupoids. Then :
@@ -33,12 +33,12 @@ We claim that we can prove a controlled analogue of this result which induces it
 %\qed
 %\end{dem}
 
-\begin{lem} Let $A$ and $B$ be $C^*$-algebras, and $\tilde A = l^\infty(X,A\otimes \mathfrak K)$ and $\tilde B = l^\infty(X,B\otimes \mathfrak K)$. Then, for every $z\in KK^G(\tilde A,\tilde B)$, the following equality of controlled morphisms holds :
+\begin{lem} Let $Z$ be a proper $G$-space and $B$ be $C^*$-algebra. Denote $C_0(Z)$ by $A$ and $\tilde A = l^\infty(X,A\otimes \mathfrak K)$ and $\tilde B = l^\infty(X,B\otimes \mathfrak K)$. Then, for every $z\in KK^G(\tilde A,\tilde B)$, the following equality of controlled morphisms holds :
 \[\hat\sigma_X(\iota^*(z))\circ (\Psi_A)_* = (\Psi_B)_*\circ \hat J_G(z).\]  
 \end{lem}
 
 \begin{dem}
-Let $z\in KK^G(\tilde A,\tilde B)$ be represented by the $K$-cycle $[H_{\tilde B},\pi,T]$ and let $P=\frac{1+T}{2}$. %We can suppose that $T$ is $G$-equivariant, i.e. $T = T'\otimes id_{L^2(G)}$ for some $T'\in \mathcal L_B(H\otimes B)$. 
+Let $z\in KK_1^G(\tilde A,\tilde B)$ be represented by the $K$-cycle $[H_{\tilde B},\pi,T]$ and let $P=\frac{1+T}{2}$. We can suppose that $T$ is $G$-equivariant. %We can suppose that $T$ is $G$-equivariant, i.e. $T = T'\otimes id_{L^2(G)}$ for some $T'\in \mathcal L_B(H\otimes B)$. 
 Recall that $E^{(\pi,T)} = \{(x,P_G\pi_G(x)P_G+y : x\in \tilde A\rtimes_r G,y\in (\tilde B\rtimes_r G)\otimes\mathfrak K\}$.\\
 
 Let us show how to extend $\Psi$ to $E^{(\pi,T)}$. For any $C^*$-algebra $B$, $\tilde B$ is naturally a $C^*$-subalgebra of both $\tilde B\rtimes_r G$ and $C^*(X,B)$, and the two inclusions commute modulo $\Psi_B$. We have a diagram :

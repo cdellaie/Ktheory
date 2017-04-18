@@ -506,23 +506,30 @@ Let $z\in KK^G(C_0(Z),B_\infty)$ such that $\Theta(z) = 0$. Let us denote $\Thet
 such that $T_j(s)$ is $G$-equivariant self-adjoint, commutes with the action of $C_0(Z)$ and $-1\leq T_j \leq 1$ for every $s\in [0,1]$.\\
 
 %%%
-Denote by $\overline T_j$ the class of $T_j$ in $\mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$. For every $j$, let $t_0=0< t_1 < ... < t_l=1$ be a partition of $[0,1]$ such that $||\overline{T}_j(t_{k+1})-\overline{T}_j(t_k)||< 1$ for every $k\in\{0,..,l-1\}$. Then (\cite{WeggeOlsen}, Proposition $4.2.4$) for every $j$ and $k$, there exists $a_j^{(k)}\in \mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$ such that :
-\[\overline{T}_j(t_{k+1})\overline{T}_j(t_{k})^*=e^{ a_j^{(k)}} \text{ and such that } ||a_j^{(k)}||<1.\] 
-Then (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a lift $x_j^{(k)}\in  \mathcal L_{B_j}(H_{B_j})$ of $a_j^{(k)}$ such that $||a_j^{(k)}||= ||x_j^{(k)}||$ for every $j$ and $k$. For each $k$, choose a continuous function $\phi_k : [0,1]\rightarrow [0,1]$ such that :
+Denote by $\overline T_j$ the class of $T_j$ in $\mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$. For every $j$, let $t_0=0< t_1 < ... < t_l=1$ be a partition of $[0,1]$ such that $||\overline{T}_j(t_{k+1})-\overline{T}_j(t_k)||< 1$ for every $k\in\{0,..,l-1\}$. Put $T_j(t_k) = T_{j,k}$. Then 
+\[diag(\overline{T}_{j,0},1,1,1,1,...)= diag(1,\overline{T}_{j,1}^*,...,\overline{T}_{j,l}^*,1,1,1,...) \ diag(\overline{T}_{j,0},\overline{T}_{j,1},...,\overline{T}_{j,l},1,1,1,...)\]
+is $2$-Lipschitz homotopic to 
+\[diag(\overline{T}_{j,1}^*,...,\overline{T}_{j,l}^*,1,1,1,1,...) \ diag(\overline{T}_{j,0},\overline{T}_{j,1},...,\overline{T}_{j,l},1,1,1,...)=diag(\overline{T}_{j,1}^*\overline{T}_{j,0} ,..., \overline{T}_{j,l}^*\overline{T}_{j,l-1},\overline{T}_{j,l},1,1,1,...) \] %diag(e^{ a_j^{(1)}} ,..., e^{ a_j^{(l)}},1,1,1,...)
+by rotations. Then (\cite{WeggeOlsen}, Proposition $4.2.4$) for every $j$ and $k$, there exists $a_j^{(k)}\in \mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$ such that :
+\[\overline{T}_{j,k+1}^*\overline{T}_{j,k}=e^{ a_j^{(k)}} \text{ and such that } ||a_j^{(k)}||<1.\] 
+%Then (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a lift $x_j^{(k)}\in  \mathcal L_{B_j}(H_{B_j})$ of $a_j^{(k)}$ such that $||a_j^{(k)}||= ||x_j^{(k)}||$ for every $j$ and $k$.
+For each $k$, choose a continuous function $\phi_k : [0,1]\rightarrow [0,1]$ such that :\\
 \begin{itemize}
 \item[$\bullet$] $\phi_j $ is constant equal to $0$ on $[0,t_k ]$,
 \item[$\bullet$] $\phi_j$ is affine on $[t_k,t_{k+1}]$,
-\item[$\bullet$] $\phi_j $ is constant equal to $1$ on $[t_{k+1},1 ]$.
+\item[$\bullet$] $\phi_j $ is constant equal to $1$ on $[t_{k+1},1 ]$.\\
 \end{itemize}
-Put $T_j(t_k) = T_{j,k}$.
-\[diag(\overline{T}_{j,0},1,1,1,1,...)= diag(1,\overline{T}_{j,1}^*,...,\overline{T}_{j,l}^*,1,1,1,...) \ diag(\overline{T}_{j,0},\overline{T}_{j,1},...,\overline{T}_{j,l},1,1,1,...)\]
-is $2$-Lipschitz homotopic to 
-\[diag(\overline{T}_{j,1}^*,...,\overline{T}_{j,l}^*,1,1,1,1,...) \ diag(\overline{T}_{j,0},\overline{T}_{j,1},...,\overline{T}_{j,l},1,1,1,...)=diag(e^{ a_j^{(1)}} ,..., e^{ a_j^{(l)}},1,1,1,...) \]
-by rotations. Define
-\[\tilde T_j(s) = diag(e^{\phi_j(s) x_j^{(1)}},..., e^{\phi_j(s) x_j^{(l)}},1,1,1,...).\] 
-Then $s\mapsto \tilde T_j(s)$ is $L$-Lipschitz for every $j$, and it provides a homotopy between $diag(T_j,1,1,..)$ and a degenerate operator. Up to replace $(T_j(s))_s$ by $(\tilde T_j(s))_s$, we can suppose the homotopies $s\mapsto T_j(s)$ are $L$-Lipschitz for all $j$. Hence $s\mapsto (T_j(s))_j$ is in $\prod\mathcal L_{B_j\otimes \mathfrak K}(H_{B_j\otimes \mathfrak K}) $. Define $T : s\mapsto (T_j(s))_j$ so that :
-\[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (H_{B_\infty}, \pi,T(s))\end{array}\right.\]
-defines a $2$-Lipschitz operator homotopy between $0$ and $z$.\\
+Define
+\[\tilde T_j(s) = diag(e^{\phi_j(s) a_j^{(1)}},..., e^{\phi_j(s) a_j^{(l)}},\overline{T}_{j,l},1,1,1,...).\] 
+Then $s\mapsto \tilde T_j(s)$ composed with the first homotopy by rotation is $L$-Lipschitz for every $j$ for some constant $L$ independent of $j$, and it provides a homotopy between $diag(\overline{T}_j,1,1,..)$ and a degenerate operator. Hence we get a $L$-Lipschitz element of $C([0,1],\mathcal L_{B_\infty}(E_\infty)/\mathfrak K_{B_\infty}(E_\infty))$, and we can lift it to $T\in C([0,1],\mathcal L_{B_\infty}(E_\infty))$, which gives a $L$-Lipschitz homotopy as well. \\
+
+Hence
+\[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (E_\infty, \pi,T(s))\end{array}\right.\]
+defines a $L$-Lipschitz operator homotopy between $0$ and $z$.\\
+
+%Up to replace $(T_j(s))_s$ by $(\tilde T_j(s))_s$, we can suppose the homotopies $s\mapsto T_j(s)$ are $L$-Lipschitz for all $j$. Hence $s\mapsto (T_j(s))_j$ is in $\prod\mathcal L_{B_j\otimes \mathfrak K}(H_{B_j\otimes \mathfrak K}) $. Define $T : s\mapsto (T_j(s))_j$ so that :
+%\[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (H_{B_\infty}, \pi,T(s))\end{array}\right.\]
+%defines a $2$-Lipschitz operator homotopy between $0$ and $z$.\\
 
 %%
 %As $\sup_j ||T_j||\leq 1$, there exists an integer $L>0$ such that, if $|s-t|<\frac{1}{L}$, then $\sup_j ||T_j(s)-T_j(t)||< 1$. Put $t_k=\frac{k}{L}$ for $k\in\{0,..., L\}$. Then (\cite{WeggeOlsen}, Proposition $4.2.4$) for every $j$ and $k$, there exists $a_j^{(k)}\in \mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$ such that :
