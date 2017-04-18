@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{BaajSk}
+Saad Baaj and Georges Skandalis.
+\newblock C*-algebres de hopf et th{\'e}orie de kasparov {\'e}quivariante.
+\newblock {\em K-theory}, 2(6):683--721, 1989.
+
 \bibitem{BaumConnes}
 Paul Baum and Alain Connes.
 \newblock Geometric {K}-theory for lie groups and foliations.
@@ -239,6 +244,12 @@ Roland Vergnioux.
 \newblock {\em {KK}-th{\'e}orie {\'e}quivariante et op{\'e}rateur de
   Julg-Valette pour les groupes quantiques}.
 \newblock PhD thesis, Universit{\'e} Paris-Diderot-Paris VII, 2002.
+
+\bibitem{VergniouxKamenability}
+Roland Vergnioux.
+\newblock K-amenability for amalgamated free products of amenable discrete
+  quantum groups.
+\newblock {\em Journal of Functional Analysis}, 212(1):206--221, 2004.
 
 \bibitem{WeggeOlsen}
 NE~Wegge-Olsen.

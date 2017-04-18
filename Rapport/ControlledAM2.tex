@@ -10,8 +10,7 @@ In this section, we will always use a coarse structure $\mathcal E$ of a locally
 
 In this section, for every $G$-algebra $B$, we use the notation $K_{B\rtimes_r G}$ for $\mathfrak K_{B \rtimes_r G}(B \rtimes_r G)\cong \mathfrak K \otimes (B\rtimes_r G)$.\\
 
-Let $A$ and $B$ be two $G$-$C^*$-algebras. If $\beta : s^* B \rightarrow r^* B$ is the action of $G$, notice that the canonical action on the standard Hilbert module $H_B$ is given by $V=id_H\otimes \beta : s^* H_B \cong H_{s^* B} \rightarrow r^* H_B \cong H_{r^* B}$. \\
-
+Let $A$ and $B$ be two $G$-$C^*$-algebras, with actions denoted by $\alpha : s^* A \rightarrow r^* A$ and $\beta : s^* B \rightarrow r^* B$. %is the action of $G$, notice that the canonical action on the standard Hilbert module $H_B$ is given by $V=id_H\otimes \beta : s^* H_B \cong H_{s^* B} \rightarrow r^* H_B \cong H_{r^* B}$. \\
 Recall that every $K$-cycle $z\in KK^G(A,B)$ can be represented as a triple $(H_B, \pi, T)$ where :
 \begin{itemize}
 \item[$\bullet$]$\pi : A\rightarrow \mathcal L_B(H_B)$ is a $G$-equivariant $*$-homomorphism.
@@ -19,7 +18,7 @@ Recall that every $K$-cycle $z\in KK^G(A,B)$ can be represented as a triple $(H_
 \item[$\bullet$] $T$ and $\pi$ satisfy the $K$-cycle conditions, i.e. $[T,\pi(a)]$, $\pi(a)(T^2-id_{H_B})$ are compact operators in $\mathfrak K_B(H_B)$ and $\pi(a)(r^*T-Vs^*T V^*)$ are compact operators in $\mathfrak K_{r^* B}(r^* H_B)\cong \mathfrak K_{r^* B}(H_{r^* B})$ for all $a\in A, g\in G$.\\
 \end{itemize}
 
-Set $T_G= T\otimes id_{B\rtimes_r G}\in \mathcal L_{B\rtimes_r G}(H_B\otimes (B\rtimes_r G))\simeq \mathcal L_{B\rtimes_r G}(H_{B\rtimes_r G})$, and $\pi_G: A\rtimes_r G \rightarrow L_{B\rtimes_r G}(H_{B\rtimes_r G})$. Then, according to Le Gall \cite{LeGall}, $(H_{B\rtimes_r G}, \pi_G, T_G)$ represents the $K$-cycle $j_G(z)\in KK(A\rtimes_r G,B\rtimes_r G)$. Let us construct a controlled morphism associated to $z$,
+Set $T_G= T\otimes id_{B\rtimes_r G}\in \mathcal L_{B\rtimes_r G}(H_B\otimes (B\rtimes_r G))\simeq \mathcal L_{B\rtimes_r G}(H_{B\rtimes_r G})$, and $\pi_G: A\rtimes_r G \rightarrow \mathcal L_{B\rtimes_r G}(H_{B\rtimes_r G})$. Then, according to Le Gall \cite{LeGall}, $(H_{B\rtimes_r G}, \pi_G, T_G)$ represents the $K$-cycle $j_G(z)\in KK(A\rtimes_r G,B\rtimes_r G)$. Let us construct a controlled morphism associated to $z$,
 \[J_G(z) : \hat K(A\rtimes_r G)\rightarrow \hat K(B\rtimes_r G), \]
 which induces right multiplication by $j_G(z)$ in $K$-theory.
 
@@ -49,7 +48,7 @@ satisfies $\phi(K_{B[0,1] \rtimes_r G})\subseteq K_{B \rtimes_r G}$ and makes th
 0\arrow{r} & K_{B \rtimes_r G}\arrow{r} &  E^{(\pi_t,T_t)} \arrow{r} & A\rtimes_r G \arrow{r} & 0
 \end{tikzcd}.\]
 
-According to \cite{OY2}, remark $3.7.$, the following holds
+According to remark \ref{rk3.8}, the following holds
 \[D_{K_{B\rtimes_r G},E^{(\pi_t,T_t)}} = \phi_* \circ D_{K_{B[0,1]\rtimes_r G},E^{(\pi,T)}}.\]
 As $id \otimes e_t$ gives a homotopy between $id\otimes e_0$ and $id\otimes e_1$, and as if two $*$-morphisms are homotopic, then they are equal in controlled $K$-theory, 
 \[D_{K_{B\rtimes_r G}, E^{(\pi_0,T_0)}}=D_{K_{B\rtimes_r G}, E^{(\pi_1,T_1)}}\]
@@ -136,7 +135,7 @@ Remark \ref{rk3.8} ensures that \[D_{K_{B\rtimes_r G}, E^{f^*(\pi,T)} } =  D_{K_
 \item[(iv)] %New proof.\\
 Let $z \in KK^G(A,B_1)$ be represented by the $K$-cycle $(H_{B_1},\pi,T)$. Let $V\in \mathcal L_{B_2}(H_{B_1}\otimes_g B_2,H_{B_2})$ be the isometry of remark \ref{isometry}. Notice that $V$ intertwines the actions of $G$ on $ H_{B_1}\otimes B_2 $ and $H_{B_2}$. According to Lemma \ref{isometryKK}, 
 \[g_*(z)=[H_{B_1}\otimes_g B_2, \pi\otimes_g 1, T\otimes_g 1]\in KK^G(A,B_2)\] 
-is also represented by $[H_{B_2}, \pi',T' ]$ where $\pi' = Ad_{V}\circ (\pi\otimes_g 1)$ and $T' = V(T\otimes_g 1)V^* +1-VV^*$. Let $\psi$ be given by the composition $Ad_{V_G}\circ g_G$.\\
+is also represented by $[H_{B_2}, \pi',T' ]$ where $\pi' = Ad_{V}\circ (\pi\otimes_g 1)$ and $T' = V(T\otimes_g 1)V^* +1-VV^*$. Let $\psi$ be given by the composition $Ad_{V_G}\circ g_G$, and $P' = \frac{1+T'}{2}$.\\
 The map $\Psi :(x,y)\mapsto (x, \psi(y))$ defines a $*$-homomorphism $E^{(\pi,T)} \rightarrow E^{(\pi',T')}$ such that 
 \[\Psi(x,P_G\pi_G(x)P_G +y)= (x, P'_G  \pi_G'(a)P'_G + \psi(y)) ).\] 
 Indeed, the crossed-product functor commutes with pull-back by $G$-morphisms, and $Ad_{V_G}\circ g_G \circ\pi_G= (Ad_V\circ g_* \circ \pi)_G = \pi'_G$ and $\psi(P_G)= V_G (P_G\otimes_{g_G} 1)V^*_G = (V(P\otimes_g 1 ) V^*)_G = (P')_G$ so that 
@@ -146,7 +145,7 @@ This gives a commutative diagram
 0\arrow{r} & K_{B_1\rtimes G}\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& A\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
 0\arrow{r} & K_{B_2\rtimes G}\arrow{r} & E^{(\pi',T')} \arrow{r}& A\rtimes G\arrow{r} & 0
 \end{tikzcd}.\]
-and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, recall from remark \ref{isometry} that $\Psi( K_{B_1\rtimes G})\subseteq K_{B_2\rtimes G}$, hence we can again apply the remark $3.8$ of \cite{OY2} to state
+and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, recall from remark \ref{isometry} that $\Psi( K_{B_1\rtimes G})\subseteq K_{B_2\rtimes G}$, hence we can again apply the remark \ref{rk3.8} to state
 \[ D_{K_{B_2\rtimes G},E^{(\pi',T')}}=\psi_*\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}},\]
 which we compose by the Morita equivalence on the left $M_{B_2\rtimes G}^{-1}$
 \[J_G(g_*(z)) = M_{B_2\rtimes G}^{-1}\circ g_{G,*}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}.\]
@@ -222,7 +221,7 @@ holds.
 \end{prop}
 \begin{dem}
 %We will use the following fact : there exists a positive integer $d$ such that every cycle $z\in KK^G(A,B)$ has decomposition property $(d)$. For more details, we send to the appendice of the article of V. Lafforgue \cite{LaffOY} where H. Oyono-Oyono shows that claim. We just need to know that $z$ satisfies the decomposition property $(d)$ if there exist $d+1$ $G$-$C^*$-algebras $A_j$  and $d$ cycles $\alpha_j\in KK^G(A_{j-1},A_j), j=1,d$ such that $A_0=A$, $A_d=B$ and each $\alpha_j$ is either coming from a $*$-morphism $A_{j-1}\rightarrow A_j$, or there is a $*$-morphism $\theta_j: A_j\rightarrow A_{j-1}$ such that $\alpha_j \otimes_{A_j} [\theta_j]=1$ in $KK^G(A_{j-1},A_{j-1})$.\\
-Recall from \ref{propertyD} that every $\alpha\in KK_0^G(A,B)$ satisfies property $(d)$. This property reduces the proof to the special case of $\alpha\in KK^G(A,B)$ being the inverse of a $*$-homomorphism $\theta : B\rightarrow A$ in $KK^G$-theory : $\alpha\otimes_B [\theta]=1_A$. Let $z\in KK^G(B,C)$ :
+Recall from \ref{propertyD} that every $\alpha\in KK_0^G(A,B)$ satisfies property $(d)$. By naturality, this property reduces the proof to the special case of $\alpha\in KK^G(A,B)$ being the inverse of a $*$-homomorphism $\theta : B\rightarrow A$ in $KK^G$-theory : $\alpha\otimes_B [\theta]=1_A$. Let $z\in KK^G(B,C)$ :
 \[\begin{array}{rcl}
 J_G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_G(\alpha\otimes z)\circ J_G(\alpha\otimes [\theta]) \\
 			& \sim & J_G(\alpha\otimes z)\circ J_G(\theta_*(\alpha))\\
@@ -261,8 +260,8 @@ The function $\lambda : G\times_{s,p} P_E(G) \rightarrow [0,1]$ is continuous.
 \end{lem}
 
 \begin{dem}
-Let $\{(g_j,\eta_j)\}_{j\in J}\subseteq G\times_{s,p}P_E(G)$ be a generalized sequence converging to $(g,\eta)\in G\times_{s,p}P_E(G)$. Let $x=p(\eta) = s(g)$ and $x_j=p(\eta_j) = s(g_j)$. There exists an open neighborhood $U\subseteq G^{(0)}$ of $x$ such that $s$ is injective on $s^{-1}(U)$ and such that $x_j$ belongs ultimately to $U$. We can suppose $x_j\in U$ for every $j$. Then we can decompose $s^{-1}(U) = \coprod_{g\in G^x} S_g$ with, for each $g\in G^x$, an open bisection $S_g\subseteq G$. Let, for every $g\in G^x$, $\phi_g : G\rightarrow [0,1]$ be a continuous function equal to $1$ on $S_g$ and vanishing outside a small neighborhood of $S_g$. Then $\lambda_g(\eta) = \langle \eta,\phi_g\rangle / \sum_{h\in G^x}\langle \eta,\phi_h\rangle$ and $\lambda_{g_j}(\eta_j) = \langle \eta_j,\phi_g\rangle / \sum_{h\in G^x}\langle \eta_j,\phi_h\rangle$ for every $j\in J$. It is now clear, by definition of the weak-$*$ topology, that $\lambda_{g_j}(\eta_j)$ converges to $\lambda_{g}(\eta)$.  \\
-\qed
+Let $\{(g_j,\eta_j)\}_{j\in J}\subseteq G\times_{s,p}P_E(G)$ be a generalized sequence converging to $(g,\eta)\in G\times_{s,p}P_E(G)$. Let $x=p(\eta) = s(g)$ and $x_j=p(\eta_j) = s(g_j)$. There exists an open neighborhood $U\subseteq G^{(0)}$ of $x$ such that $s$ is injective on $s^{-1}(U)$ and such that $x_j$ belongs ultimately to $U$. We can suppose $x_j\in U$ for every $j$. Then we can decompose $s^{-1}(U) = \coprod_{g\in G^x} S_g$ with, for each $g\in G^x$, an open bisection $S_g\subseteq G$. Let, for every $g\in G^x$, $\phi_g : G\rightarrow [0,1]$ be a continuous function equal to $1$ on $S_g$ and vanishing outside a small neighborhood of $S_g$. Then $\lambda_g(\eta) =\langle \eta,\phi_g\rangle$ and $\lambda_{g_j}(\eta_j) = \langle \eta_j,\phi_g\rangle$ for every $j\in J$. It is now clear, by definition of the weak-$*$ topology, that $\lambda_{g_j}(\eta_j)$ converges to $\lambda_{g}(\eta)$.  \\
+\qed %$\langle \eta,\phi_g\rangle / \sum_{h\in G^x}\langle \eta,\phi_h\rangle$ / \sum_{h\in G^x}\langle \eta_j,\phi_h\rangle
 \end{dem}
 
 %Let $K\subseteq P_E(G)$ be a compact. Then $\{g\in G \text{ s.t. }\lambda(g,\eta)= 0\ \forall \eta \in K\}$ is compact. 
@@ -447,7 +446,7 @@ Indeed, $\pi$ is $G$-equivariant, and by invariance of the Haar system, $\sum_j\
 
 Define $F_j = \pi(\phi_j^\frac{1}{2}) F \pi(\phi_j^\frac{1}{2})\in\mathcal L_B(E)$. Then $s^* F_j\in C_c(G,\mathcal L_{s^* B}(s^* E))$ and put
 \[F'= \sum_{j} \int V (s^*F_j) V^* d\lambda.\] 
-The operator $F'$ is  $G$-invariant and commutes with the action of $C_0(Z)$. Indeed, we can compute its fibers : for every $x\in G^{(0)}$,
+By invariance of the Haar system, the operator $F'$ is  $G$-invariant. Moreover it commutes with the action of $C_0(Z)$. Indeed, we can compute its fibers : for every $x\in G^{(0)}$,
 \[F'_x = \sum_{j, g\in G^x} V_g\pi(\phi_j^{\frac{1}{2}}) F_{s(g)}\pi(\phi_j^{\frac{1}{2}})V_g^*.\] 
 Hence, by local injectivity, for all $g\in G$, there exists $z_g\in Z$ such that $Z_{s(g)}\cap U = \{z_g\}$, and for all $f\in C_0(Z_{s(g)})$, $[ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f ] = [ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f(z_g) \chi_{z_g} ]=0 $.\\
 
@@ -492,31 +491,52 @@ Let $Z\subseteq X$ be a $G$-proper $G$-compact subspace, and, for all $j$, let $
 
 Define $E_\infty = \prod_j (E_j\otimes \mathfrak K)$. It is a $B_\infty$-Hilbert module with respect to the scalar product 
 \[\langle \xi,\eta\rangle = \prod (\langle \xi_j,\eta_j\rangle \otimes F_j^* F'_j )\in B_\infty\] 
-for every $\xi = (\xi_j\otimes F_j)$ and $\eta = (\eta_j\otimes F'_j)$ in $E_\infty$. Define $T = (T_j\otimes E_{11})_j$, where $E_{11}(x)= \langle e_1,x\rangle. e_1$ is the rank-one operator projecting on $e_1$. ($\{e_j\}$ denote the canonical orthonormal basis of $l^2(\mathbb N)$).
+for every $\xi = (\xi_j\otimes F_j)$ and $\eta = (\eta_j\otimes F'_j)$ in $E_\infty$. Define $T = (T_j\otimes E_{11} + id_{E_j}\otimes (1-E_{11}))_j$, where $E_{11}(x)= \langle e_1,x\rangle. e_1$ is the rank-one operator projecting on $e_1$. ($\{e_j\}$ denote the canonical orthonormal basis of $l^2(\mathbb N)$).
 These conditions ensure that $T $ defines an operator in $\mathcal L_{B_\infty}(E_\infty)$.\\
 
-Define $\pi(a) = (\pi_j(a))_j\in  \mathcal L_{B_\infty}(H_{B_\infty})$, as $\sup ||\pi_j(a)||\leq ||a||$. Then, $[\pi(a),T]=0$, $T_j^*=T_j$ and $r^*T = Vs^*T V^*$. %Moreover $0\leq T_j^2-1\leq 1$, hence, according to the remark \ref{construction},
+Define $\pi(a) = (\pi_j(a)\otimes id_{\mathfrak K})_j\in  \mathcal L_{B_\infty}(E_\infty)$, as $\sup ||\pi_j(a)||\leq ||a||$. Then, $[\pi(a),T]=0$, $T_j^*=T_j$ and $r^*T = Vs^*T V^*$. %Moreover $0\leq T_j^2-1\leq 1$, hence, according to the remark \ref{construction},
 Let us show that $T^2-1$ is in $\mathfrak K_{B_\infty}(E_\infty)$.\\ 
 
 Indeed, each $F_j = T_j^2-1\in \mathfrak K \otimes B_j$ can be approximated by a finite rank operator, hence there exist $N_j>0$, and $\xi_k^{(j)},\eta_k^{(j)}\in H_{B_j}$ such that $F_j= \sum_{k=1}^{N_j}\theta_{\xi_k^{(j)},\eta_k^{(j)}}$ for every $j$. A computation shows that $(F_j\otimes E_{11})_j = \theta_{\sum_k \tilde\xi_k,\sum_k \tilde \eta_k}$ where $\tilde \xi_k = (\xi_k^{(j)}\otimes E_{j1})$ and $\tilde \eta_k = (\eta_k^{(j)}\otimes E_{j1})$, which is a rank one operator, hence $T^2-1$ is compact since a product of rank one operators is of rank one.\\ 
 %Indeed, these elements are uniformly bounded elements of $\prod \mathfrak K_{B_j\otimes\mathfrak K}$, which are in $\mathfrak K_{B_\infty}(H_{B_\infty})$. 
 This ensures that $[E_\infty,\pi,T]\in KK^G(C_0(Z),B_\infty)$. Let $\eta((z_j)_j) = [H_{B_\infty},\pi,T] $. It is clear that $\Theta\circ \eta = id_{\prod_j RK^G(X,B_j\otimes K) }$, and $\Theta $ is onto.\\
 
-Let $z\in KK^G(C_0(Z),B_\infty)$ such that $\Theta(z) = 0$. Let us denote $\Theta(z) = (z_j)_j$ where each $z_j\in KK^G(C_0(Z),B_j)$ is represented by $K$-cycles $(H_{B_j}, \pi_j,T_j)$ homotopic to $0$ by an operator homotopy 
+Let $z\in KK^G(C_0(Z),B_\infty)$ such that $\Theta(z) = 0$. Let us denote $\Theta(z) = (z_j)_j$ where each $z_j\in KK^G(C_0(Z),B_j)$ is represented by $K$-cycles $(H_{B_j}, \pi_j,T_j)$ homotopic to a degenerate $K$-cycle by an operator homotopy 
 \[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (H_{B_j}, \pi_j,T_j(s))\end{array}\right.\] 
+such that $T_j(s)$ is $G$-equivariant self-adjoint, commutes with the action of $C_0(Z)$ and $-1\leq T_j \leq 1$ for every $s\in [0,1]$.\\
 
-As $\sup_j ||T_j||\leq 1$, there exists an integer $L>0$ such that, if $|s-t|<\frac{1}{L}$, then $\sup_j ||T_j(s)-T_j(t)||< 1$. Put $t_k=\frac{k}{L}$ for $k\in\{0,..., L\}$. Then (\cite{WeggeOlsen}, Proposition $4.2.4$) for every $j$ and $k$, there exists $a_j^{(k)}\in \mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$ such that :
-\[T_j(t_{k+1})T_j(t_{k})^*=e^{ a_j^{(k)}} \ mod \ {\mathfrak K}_{B_j}(H_{B_j}) \text{ and such that } ||a_j^{(k)}||<1.\] 
+%%%
+Denote by $\overline T_j$ the class of $T_j$ in $\mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$. For every $j$, let $t_0=0< t_1 < ... < t_l=1$ be a partition of $[0,1]$ such that $||\overline{T}_j(t_{k+1})-\overline{T}_j(t_k)||< 1$ for every $k\in\{0,..,l-1\}$. Then (\cite{WeggeOlsen}, Proposition $4.2.4$) for every $j$ and $k$, there exists $a_j^{(k)}\in \mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$ such that :
+\[\overline{T}_j(t_{k+1})\overline{T}_j(t_{k})^*=e^{ a_j^{(k)}} \text{ and such that } ||a_j^{(k)}||<1.\] 
 Then (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a lift $x_j^{(k)}\in  \mathcal L_{B_j}(H_{B_j})$ of $a_j^{(k)}$ such that $||a_j^{(k)}||= ||x_j^{(k)}||$ for every $j$ and $k$. For each $k$, choose a continuous function $\phi_k : [0,1]\rightarrow [0,1]$ such that :
 \begin{itemize}
 \item[$\bullet$] $\phi_j $ is constant equal to $0$ on $[0,t_k ]$,
 \item[$\bullet$] $\phi_j$ is affine on $[t_k,t_{k+1}]$,
-\item[$\bullet$] $\phi_j $ is constant equal to $0$ on $t_{k+1},1 ]$.
+\item[$\bullet$] $\phi_j $ is constant equal to $1$ on $[t_{k+1},1 ]$.
 \end{itemize}
-Define \[\tilde T_j(s) = \prod_{k=0}^{L} e^{\phi_j(s) x_j^{(k)}}.\] 
-Then $s\mapsto \tilde T_j(s)$ is $L$-Lipschitz for every $j$, and it provides a homotopy between $T_j$ and a degenerate operator. Up to replace $(T_j(s))_s$ by $(\tilde T_j(s))_s$, we can suppose the homotopies $s\mapsto T_j(s)$ are $L$-Lipschitz for all $j$. Hence $s\mapsto (T_j(s))_j$ is in $\prod\mathcal L_{B_j\otimes \mathfrak K}(H_{B_j\otimes \mathfrak K}) $. Define $T : s\mapsto (T_j(s))_j$ so that :
+Put $T_j(t_k) = T_{j,k}$.
+\[diag(\overline{T}_{j,0},1,1,1,1,...)= diag(1,\overline{T}_{j,1}^*,...,\overline{T}_{j,l}^*,1,1,1,...) \ diag(\overline{T}_{j,0},\overline{T}_{j,1},...,\overline{T}_{j,l},1,1,1,...)\]
+is $2$-Lipschitz homotopic to 
+\[diag(\overline{T}_{j,1}^*,...,\overline{T}_{j,l}^*,1,1,1,1,...) \ diag(\overline{T}_{j,0},\overline{T}_{j,1},...,\overline{T}_{j,l},1,1,1,...)=diag(e^{ a_j^{(1)}} ,..., e^{ a_j^{(l)}},1,1,1,...) \]
+by rotations. Define
+\[\tilde T_j(s) = diag(e^{\phi_j(s) x_j^{(1)}},..., e^{\phi_j(s) x_j^{(l)}},1,1,1,...).\] 
+Then $s\mapsto \tilde T_j(s)$ is $L$-Lipschitz for every $j$, and it provides a homotopy between $diag(T_j,1,1,..)$ and a degenerate operator. Up to replace $(T_j(s))_s$ by $(\tilde T_j(s))_s$, we can suppose the homotopies $s\mapsto T_j(s)$ are $L$-Lipschitz for all $j$. Hence $s\mapsto (T_j(s))_j$ is in $\prod\mathcal L_{B_j\otimes \mathfrak K}(H_{B_j\otimes \mathfrak K}) $. Define $T : s\mapsto (T_j(s))_j$ so that :
 \[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (H_{B_\infty}, \pi,T(s))\end{array}\right.\]
-defines a $L$-Lipschitz operator homotopy between $0$ and $z$.\\
+defines a $2$-Lipschitz operator homotopy between $0$ and $z$.\\
+
+%%
+%As $\sup_j ||T_j||\leq 1$, there exists an integer $L>0$ such that, if $|s-t|<\frac{1}{L}$, then $\sup_j ||T_j(s)-T_j(t)||< 1$. Put $t_k=\frac{k}{L}$ for $k\in\{0,..., L\}$. Then (\cite{WeggeOlsen}, Proposition $4.2.4$) for every $j$ and $k$, there exists $a_j^{(k)}\in \mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$ such that :
+%\[T_j(t_{k+1})T_j(t_{k})^*=e^{ a_j^{(k)}} \ mod \ {\mathfrak K}_{B_j}(H_{B_j}) \text{ and such that } ||a_j^{(k)}||<1.\] 
+%Then (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a lift $x_j^{(k)}\in  \mathcal L_{B_j}(H_{B_j})$ of $a_j^{(k)}$ such that $||a_j^{(k)}||= ||x_j^{(k)}||$ for every $j$ and $k$. For each $k$, choose a continuous function $\phi_k : [0,1]\rightarrow [0,1]$ such that :
+%\begin{itemize}
+%\item[$\bullet$] $\phi_j $ is constant equal to $0$ on $[0,t_k ]$,
+%\item[$\bullet$] $\phi_j$ is affine on $[t_k,t_{k+1}]$,
+%\item[$\bullet$] $\phi_j $ is constant equal to $1$ on $[t_{k+1},1 ]$.
+%\end{itemize}
+%Define \[\tilde T_j(s) = \prod_{k=0}^{L} e^{\phi_j(s) x_j^{(k)}}.\] 
+%Then $s\mapsto \tilde T_j(s)$ is $L$-Lipschitz for every $j$, and it provides a homotopy between $T_j$ and a degenerate operator. Up to replace $(T_j(s))_s$ by $(\tilde T_j(s))_s$, we can suppose the homotopies $s\mapsto T_j(s)$ are $L$-Lipschitz for all $j$. Hence $s\mapsto (T_j(s))_j$ is in $\prod\mathcal L_{B_j\otimes \mathfrak K}(H_{B_j\otimes \mathfrak K}) $. Define $T : s\mapsto (T_j(s))_j$ so that :
+%\[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (H_{B_\infty}, \pi,T(s))\end{array}\right.\]
+%defines a $L$-Lipschitz operator homotopy between $0$ and $z$.\\
 
 %Then $s\mapsto T_j(s)$ descends to an homotopy of unitaries in the Calkin algebra $\mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j}) $ and, according to Proposition \ref{Lip}, we can choose the homotopy to be $L$-Lipschitz for a universal constant $L>0$, hence (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a family of compact operators $F_j(s,t)\in \mathfrak K_{B_j}(H_{B_j})$ such that $||T_j(s)-T_j(t)+F_j(s,t)||\leq L|s-t|$ for all $s,t\in[0,1]$. But $s\mapsto T'_j(s)= T_j(s)+F_j(0,s)$ is a compact perturbation of $s\mapsto T_j(s)$ in $\mathcal L_{B_j}(\mathcal H_{B_j})$ which is $L$-Lipschitz. Up to replace $(T_j(s))_s$ by $(T'_j(s))_s$, we can suppose the homotopies $s\mapsto T_j(s)$ are $L$-Lipschitz for all $j$. Hence $s\mapsto (T_j(s))_j$ is in $\prod\mathcal L_{B_j\otimes \mathfrak K}(H_{B_j\otimes \mathfrak K}) $. Define $T : s\mapsto (T_j(s))_j$ so that :
 %\[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (H_{B_\infty}, \pi,T(s))\end{array}\right.\]
@@ -533,7 +553,7 @@ Let $G$ be a locally compact, $\sigma$-compact étale groupoid, $\{B_j\}_{j\geq 
 \begin{dem}
 For all $j$ and any locally compact $G$-space $X$, the projection $\prod_j B_j\otimes K\rightarrow B_j \otimes K$ induces a morphism
 \[\Theta^X : KK^G(C_0(X),\prod_j B_j\otimes K )\rightarrow \prod_j  KK^G(C_0(X),B_j\otimes K ).\]
-Let $X_0\subseteq X_1 \subseteq...\subseteq X_n$ be the $n$-skeleton decomposition associated to the simplicial structure of $G$-simplicial complex $\Delta$ and let $Z_j = C_0(X_j)$, $Z^j_{j-1} = C_0(X_j \setminus X_{j-1})$ and $\Theta_j = \Theta^{X_j}$.
+Let $X_0\subseteq X_1 \subseteq...\subseteq X_n$ be the $n$-skeleton decomposition associated to the simplicial structure of typed $G$-simplicial complex $\Delta$ and let $Z_j = C_0(X_j)$, $Z^j_{j-1} = C_0(X_j \setminus X_{j-1})$ and $\Theta_j = \Theta^{X_j}$.
 We will show the claim by induction on the dimension of $\Delta$.\\
 
 By naturality of the boundary element, the extension of $G$-algebras $0\rightarrow Z^j_{j-1} \rightarrow Z_j \rightarrow Z_{j-1}\rightarrow 0$ gives a commutative diagram with exact rows :
@@ -572,7 +592,7 @@ induced by the composition $\prod B_j\otimes \mathfrak K\rightarrow B_k\otimes \
 \end{lem}
 
 \begin{lem} Let $G$ be an étale groupoid with compact base space $G^{(0)}$. Let $(B_j)_j$ be a countable family of $G$-algebras, and $\mathfrak K$ the $G$-algebra of compact operators on a separable Hilbert space with trivial $G$-action. Then, $\mathcal B^G = ((B_j\otimes \mathfrak K)\rtimes_r G)_j$ is a countable family of $\mathcal E$-filtered $C^*$-algebra, and there exists a filtered $*$-isomorphism :
-\[\mathcal B^G_\infty \rightarrow (\prod_j B_j\otimes\mathfrak K)\rtimes_r G .\]
+\[ (\prod_j B_j\otimes\mathfrak K)\rtimes_r G \rightarrow  \mathcal B^G_\infty.\]
 \end{lem}
 
 \begin{dem} Notice that, as $\mathfrak K$ is endowed with the trivial action, $(B_j\rtimes_r G)\otimes\mathfrak K \cong (B_j\otimes\mathfrak K)\rtimes_r G$ for every $j$. By definition, for every $E\in \mathcal E$,  $\left( (\prod B_j\otimes\mathfrak K)\rtimes_r G \right)_E = \prod_j \left( (B_j\otimes\mathfrak K)\rtimes_r G\right)_E \cong \prod_j \left((B_j\rtimes_r G)_E \otimes \mathfrak K \right) = (\mathcal B^G_\infty )_E$.\\

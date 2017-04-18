@@ -14,7 +14,7 @@ A level-1 auxiliary file: FDC.aux
 A level-1 auxiliary file: StandardModules.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
-Repeated entry---line 191 of file biblio2.bib
+Repeated entry---line 202 of file biblio2.bib
  : @article{higsonkasparov
  :                        ,
 I'm skipping whatever remains of this entry
@@ -28,45 +28,45 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 48 entries,
+You've used 50 entries,
             2118 wiz_defined-function locations,
-            818 strings with 10732 characters,
-and the built_in function-call counts, 13923 in all, are:
-= -- 1406
-> -- 484
+            830 strings with 10988 characters,
+and the built_in function-call counts, 14553 in all, are:
+= -- 1473
+> -- 504
 < -- 12
-+ -- 209
-- -- 148
-* -- 901
-:= -- 2334
-add.period$ -- 144
-call.type$ -- 48
-change.case$ -- 204
++ -- 217
+- -- 154
+* -- 949
+:= -- 2438
+add.period$ -- 150
+call.type$ -- 50
+change.case$ -- 213
 chr.to.int$ -- 0
-cite$ -- 55
-duplicate$ -- 577
-empty$ -- 1185
-format.name$ -- 148
-if$ -- 2889
+cite$ -- 57
+duplicate$ -- 599
+empty$ -- 1239
+format.name$ -- 154
+if$ -- 3018
 int.to.chr$ -- 0
-int.to.str$ -- 48
-missing$ -- 57
-newline$ -- 242
-num.names$ -- 96
-pop$ -- 219
+int.to.str$ -- 50
+missing$ -- 59
+newline$ -- 252
+num.names$ -- 100
+pop$ -- 224
 preamble$ -- 1
-purify$ -- 169
+purify$ -- 176
 quote$ -- 0
-skip$ -- 387
+skip$ -- 402
 stack$ -- 0
-substring$ -- 952
-swap$ -- 93
+substring$ -- 1012
+swap$ -- 95
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 170
+type$ -- 178
 warning$ -- 7
-while$ -- 160
-width$ -- 50
-write$ -- 516
+while$ -- 168
+width$ -- 52
+write$ -- 538
 (There were 2 error messages)

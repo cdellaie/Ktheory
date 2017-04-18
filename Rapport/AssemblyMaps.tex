@@ -155,8 +155,9 @@ Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarro
 \end{thm}
 
 \begin{dem}
-Recall that any $*$-morphism $\phi : A\rightarrow B$ induces, for any $A$-Hilbert module $E$, a $*$-morphism $\phi_* : \mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_A B)$. Now take $E$ to be $l^2(X)\otimes A$. Then, according to remark \ref{isometry}, $\eta\otimes a\otimes b\mapsto \eta \otimes\phi(a) b $ extends to an isometry $V\in \mathcal L_B(E\otimes_A B,l^2(X)\otimes B)$ which respects compact operators.\\
-The linear map $T \mapsto V\phi_*(T)V^*$ maps $C_R[X,A]$ into $C_R[X,B]$, and so extends to a $*$-morphism $C^*(X,A)\rightarrow C^*(X,B)$. The composition property is clear from the construction.\\
+Recall that any $*$-morphism $\phi : A\rightarrow B$ induces, for any $A$-Hilbert module $E$, a $*$-morphism $\phi_* : \mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_A B)$. Now take $E$ to be $l^2(X)\otimes A$. Then, according to remark \ref{isometry}, $\eta\otimes a\otimes b\mapsto \eta \otimes\phi(a) b $ extends to an isometry $V\in \mathcal L_B(E\otimes_A B,l^2(X)\otimes B)$ which respects compact operators. The composition $Ad_V\circ\phi_*$ sends a compact operator $(T_{xy})_{x,y}$ to $(\phi(T_{xy}))_{x,y}$.\\
+
+Hence, the linear map $T \mapsto V\phi_*(T)V^*$ maps $C_R[X,A]$ into $C_R[X,B]$, and so extends to a $*$-morphism $C^*(X,A)\rightarrow C^*(X,B)$. The composition property is clear from the construction.\\
 \qed
 \end{dem}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -239,7 +240,7 @@ which sends operators of finte propagation to operators of finite propagation an
 
 With that in mind, one can show that $\mu_{X}([H,\pi,T])=(Ad_{V_0})_*[T']$.\\
 
-Indeed, with the same notations and if $z=[H,\pi,T]\in KK(C_0(P_E(X)),\C)$, we want to compute the Kasparov product $[\mathcal L_E]\otimes \sigma_X(z)$. According to Proposition $8.7.2$ of \cite{HigsonRoe}, this is equal to the Fredholm index of $P(1\otimes T)P$ where $P=VV^*$. A simple computation shows that $V^*(1\otimes T)V=T'$ so that $P(1\otimes T)P = Ad_V(T')$, hence the equality.\\
+Indeed, with the same notations and if $z=[H,\pi,T]\in KK(C_0(P_E(X)),\C)$, we want to compute the Kasparov product $[\mathcal L_E]\otimes \sigma_X(z)$. According to Proposition $8.7.2$ of \cite{HigsonRoe}, this is equal to the Fredholm index of $P(1\otimes T)P$ where $P=VV^*$. A simple computation shows that $V^*(1\otimes T)V=T'$ so that $P(1\otimes T)P = Ad_V(T')$, hence the equality holds.\\
 
 The point of the article \cite{SkTuYu} is to show that the coarse assembly map is equivalent to the assembly map for the coarse groupoid $G=G(X)$ with coefficients in the $G$-algebra $l^\infty=l^\infty(X,\mathfrak K)$. \\
 

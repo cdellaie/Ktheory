@@ -154,7 +154,11 @@ A homomorphism between two $C(X)$-algebras $\alpha : A\rightarrow A'$ is a $*$-h
 Notice that, if $A$ is a $C(G^{(0)})$-algebra, then $s^* A = A \otimes_s C_0(G)$ and $r^* A = A \otimes_r C_0(G)$ are $C(G)$-algebra with fibers $(s^*A)_g \cong A_{s(g)}$ and $(r^*A)_g \cong A_{r(g)}$ respectively, for all $g\in G$.
 
 \begin{definition}
-An action of a groupoid $G$ on a $C^*$-algebra $A$ is a triple $(A,\theta,\alpha)$ where $(A,\theta)$ is a $C(G^{(0)})$-structure and $\alpha : s^* A \rightarrow r^* A$ is an isomorphism of $C(G)$-algebras such that $\alpha_{gg'}= \alpha_g\circ \alpha_{g'}$ for all $(g,g')\in G^{(2)}$.
+An action of a groupoid $G$ on a $C^*$-algebra $A$ is a triple $(A,\theta,\alpha)$ where $(A,\theta)$ is a $C(G^{(0)})$-structure and $\alpha : s^* A \rightarrow r^* A$ is an isomorphism of $C(G)$-algebras such that $\alpha_{gg'}= \alpha_g\circ \alpha_{g'}$ for all $(g,g')\in G^{(2)}$. Such an action will be called a $G$-algebra. 
+\end{definition} 
+
+\begin{definition}
+Let $A$ and $B$ be two $G$-algebras, with action $\alpha$ and $\beta$ respectively. A $G$-equivariant $*$-homomorphism $\phi :A \rightarrow B$ is a morphism of $C(G^{(0)})$-algebra which intertwines the action, i.e. such that $(r^*\phi)(\alpha(a) ) =\beta((s^*\phi)(a))$ for every $a\in s^* A$.
 \end{definition} 
 
 If $A$ is a $G$-algebra, and $U \subseteq G^{(0)}$ is an open subset, recall from \cite{LeGall} that the restriction $A_U$ is defined as $\eta^* A = C_0(U) \otimes_\eta A$ where $\eta : C_0(U) \hookrightarrow C_0(G^{(0)})$ is the canonical inclusion. If $U\subseteq G$ is an open subset, we can define in a similar way $A_U$ as $C_0(U) \otimes_r A$.\\
@@ -194,6 +198,8 @@ Define, for $f\in C_c(G,A)$, the reduced norm as
 \begin{definition}
 The reduced crossed product $A\rtimes_r G$ is defined as the completion of $C_c(G,A)$ under the reduced norm.
 \end{definition}
+
+When $G$ is étale, $G^{(0)}$ is open in $G$, hence $A$ is a sub-$C^*$-algebra of $A\rtimes_r G$. For every $G$-equivariant $*$-homomorphism $\phi : A \rightarrow B$, we denote by $\phi_G$ the $*$-homomorphism $id_{C_0(G)}\otimes\phi : A\rtimes_r G \rightarrow B\rtimes_r G $. It is the unique $*$-homomorphism extending $\phi$. Moreover, the rule $\phi \mapsto \phi_G$ is functorial. 
 
 % Propriete, fonctorialite etc....
 
@@ -237,11 +243,15 @@ In \cite{LeGall}, Le Gall defined, for any locally compact groupoid $G$, and $G$
 \begin{definition} A $K$-cycle is a triple $(E,\pi,T)$ where :
 \begin{itemize}
 \item[$\bullet$] $E$ is a right $\Z_2$-graded $B$-Hilbert module, equipped with a unitary action of $G$, i.e. an even unitary $V\in\mathcal L_B(s^*E,r^*E)$ such that $V_g V_{g'} = V_{gg'}$ for all $(g,g')\in G^{(2)}$,
-\item[$\bullet$] $\pi : A\rightarrow \mathcal L_B(E)$ is a $*$-homomorphism whose image is contained in even operators, and we will often write $a$ instead of $\pi(a)$,
+\item[$\bullet$] $\pi : A\rightarrow \mathcal L_B(E)$ is a $G$-equivariant $*$-homomorphism whose image is contained in even operators, and we will often write $a$ instead of $\pi(a)$,
 \item[$\bullet$] $T\in\mathcal L_B(E)$ is an odd bounded $B$-linear operator satifying the $K$-cycle relations i.e. $[a, T]$, $a(T-T^*)$, $a(T^2-1)$ are compact operators in $\mathfrak K_B(E)$ and $a(r^* T -V s^*T V^*)$ is a compact operator in $\mathfrak K_{r^* B}(r^* E)$ for all $a\in A$.
 \end{itemize} 
 The set of such $K$-cycles is denoted by $\mathbb E^G(A,B)$.
 \end{definition}
+
+\begin{rk} The $*$-homomorphism $\pi$ is $G$-equivariant in the following sense : \[(r^*\pi)(\alpha(s^*a)) = V \ (r^*\pi)(r^*a) \ V^*\] 
+for every $a\in A$. By convention, for every $G$-equivariant Hilbert module $E$ with action $V$, $\mathcal L_B(E)$ will be endowed with a $G$-algebra structure given by $Ad_V(T) = VTV^*$.  
+\end{rk}
 
 \begin{definition}
 Two $K$-cycles $(E,\pi,T)$ and $ (E',\pi',T')$ in $\mathbb E^G(A,B)$ are homotopic if there exists $ (\tilde E,\tilde \pi,\tilde T) \in\mathbb E^G(A,B[0,1])$ such that $(\tilde E_0,\tilde \pi_0,\tilde T_0)\simeq (E,\pi,T)$ and $(\tilde E_1,\tilde \pi_1,\tilde T_1)\simeq (E',\pi',T')$. The action on $B[0,1]$ is the action obtained as the tensor product of the action on $B$ and of the trivial action on $C[0,1]$.
@@ -286,12 +296,12 @@ If $\phi : A\rightarrow B$ is a $G$-equivariant $*$-homomorphism, it induces a $
 \[ [\phi'\circ \phi] = [\phi]\otimes_B [\phi'].\]
 \end{Expl}
 
-\begin{Expl} Let $0 \rightarrow B\otimes \mathfrak K \rightarrow_\iota E \rightarrow_p A \rightarrow 0 $ be a $G$-equivariant split exact sequence of $G$-algebras. Denote by $s : A \rightarrow E$ the cross section of $p$ and by $\sigma $ the compostion $s\circ p$. Then 
-\[(H_B \oplus H_B^{op},\omega \oplus (\omega \circ \sigma ), \begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix} )\] 
-defines a $K$-cycle, hence an element of $KK_0^G(A,B)$ called the splitting morphism of the extension. % Definir w et op
-\end{Expl}
+%\begin{Expl} Let $0 \rightarrow B\otimes \mathfrak K \rightarrow_\iota E \rightarrow_p A \rightarrow 0 $ be a $G$-equivariant split exact sequence of $G$-algebras. Denote by $s : A \rightarrow E$ the cross section of $p$ and by $\sigma $ the compostion $s\circ p$. Then 
+%\[(H_B \oplus H_B^{op},\omega \oplus (\omega \circ \sigma ), \begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix} )\] 
+%defines a $K$-cycle, hence an element of $KK_0^G(A,B)$ called the splitting morphism of the extension. % Definir w et op
+%\end{Expl}
 
-The first example allows one to think of $KK(A,B)$ as generalized morphisms between $A$ and $B$ : every $*$-homomorphism induces a $K$-cycle such that composition is preserved. Actually, it turns out that generalized morphisms are not so far from coming from genuine $*$-homomorphisms. Indeed, H. Oyono-Oyono has shown in the appendice of \cite{LaffOY} that every element of $KK^G(A,B)$ can be written as the Kasparov product of at most $d$ elements, each one coming either from a $*$-homormorphism or from a $KK$-inverse of a $*$-homomorphism.\\
+This example allows one to think of $KK(A,B)$ as generalized morphisms between $A$ and $B$ : every $*$-homomorphism induces a $K$-cycle such that composition is preserved. Actually, it turns out that generalized morphisms are not so far from coming from genuine $*$-homomorphisms. Indeed, H. Oyono-Oyono has shown in the appendice of \cite{LaffOY} that every element of $KK^G(A,B)$ can be written as the Kasparov product of at most $d$ elements, each one coming either from a $*$-homormorphism or from a $KK$-inverse of a $*$-homomorphism.\\
 
 %%%%%%%%%%%%%%%%%%
 %%  PROPERTY D  %%

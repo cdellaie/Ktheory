@@ -33,7 +33,21 @@ As every $KK^{\hat{\mathbb G}}$-element satisfies property $(d)$, we also can pr
 holds.
 \end{prop}
 
-The problem to define a controlled assembly map for $\hat{\mathbb G}$ is that there does not exist at this time any construction similar to the Rips complex for discrete quantum groups. Worse, the universal space for proper action is not defined. The only contruction of assembly maps for quantum groups the author is aware of relies on the work of R. Meyer and R. Nest in \cite{MeyerNest}. It is based on localisation of functors in triangulated categories. In the case of locally compact group, they first define a triangulated categories $\mathcal {KK}^G$ based on $KK^G$-theory. Let $F$ be the functor $A\rightarrow K(A \rtimes_r G)$. It is triangulated on $\mathcal {KK}^G$ and the natural transformation $\mathbb L F(A)\rightarrow F(A)$ can be shown to be isomorphic to the assembly map. The natural path taken by the authors is to define the assembly map as $\mathbb L F(A)\rightarrow F(A)$ in the case of quantum groups.
+The problem to define a controlled assembly map for $\hat{\mathbb G}$ is that there does not exist at this time any construction similar to the Rips complex for discrete quantum groups. Worse, the universal space for proper action is not defined. The only contruction of assembly maps for quantum groups the author is aware of relies on the work of R. Meyer and R. Nest in \cite{MeyerNest}. It is based on localisation of functors in triangulated categories. In the case of locally compact group, they first define a triangulated categories $\mathcal {KK}^G$ based on $KK^G$-theory. Let $F$ be the functor $A\rightarrow K(A \rtimes_r G)$. It is triangulated on $\mathcal {KK}^G$ and the natural transformation $\mathbb L F(A)\rightarrow F(A)$ can be shown to be isomorphic to the assembly map. The natural path taken by the authors is to define the assembly map as $\mathbb L F(A)\rightarrow F(A)$ in the case of quantum groups.\\
+
+We give the following application of controlled $K$-theory to $K$-amenability of quantum groups. The following definition of $K$-amenability can be found in \cite{VergniouxKamenability} (section $1$). Recall that, by universal property, for every $\hat{\mathbb G}$-algebra $A$, there exists a $*$-homomorphism $\lambda_A : A\rtimes_{max} G \rightarrow A\rtimes_{r} G$, and it is onto and filtered.
+
+\begin{definition}[\cite{VergniouxKamenability}]
+A discrete quantum group $\hat{\mathbb G}$ is $K$-amenable if the $KK$-element $1_{\hat{\mathbb G}} = [\C, 0, id_\C]\in KK^{\hat{\mathbb G}}(\C,\C)$ ($\C$ is endowed with the trivial action) can be represented by a $K$-cycle $(E,\pi,T)$ such that the representation of the quantum group on $E$ is weakly contained in the regular representation.
+\end{definition}
+
+Amenable quantum groups are $K$-amenable. In \cite{VergniouxKamenability}, R. Vergnioux proved that amalgamated free products of amenable discrete quantum groups are $K$-amenable. We refer to \cite{VergniouxKamenability} for definitions. The proof of \cite{OY2} (theorem $5.10$) can be reproduce and give the following result.
+
+\begin{prop}
+Let $\hat{\mathbb G}$ be a $K$-amenable discrete quantum group. Then, there exists a control pair $\rho$ such that, for every $\hat{\mathbb G}$-algebra $A$,
+\[(\lambda_A)_* : \hat K(A\rtimes_{max} G) \rightarrow \hat K(A\rtimes_r G) \]
+is a $\rho$-controlled isomorphism.
+\end{prop}
 
 
 
