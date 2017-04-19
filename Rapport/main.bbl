@@ -109,6 +109,11 @@ David~A Kazhdan.
   close subgroups.
 \newblock {\em Functional analysis and its applications}, 1(1):63--65, 1967.
 
+\bibitem{kreckluck}
+Matthias Kreck and Wolfgang L{\"u}ck.
+\newblock The novikov conjecture.
+\newblock In {\em Oberwolfach Seminar, January}. Springer, 2004.
+
 \bibitem{lafforgueT}
 Vincent Lafforgue.
 \newblock Une d{\'e}monstration de la conjecture de baum-connes pour les
@@ -153,6 +158,11 @@ E~Christopher Lance.
 Pierre-Yves Le~Gall.
 \newblock {\em Th{\'e}orie de Kasparov {\'e}quivariante et groupo{\"\i}des}.
 \newblock PhD thesis, 1994.
+
+\bibitem{lusztig}
+George Lusztig et~al.
+\newblock {\em Nokikov's higher signature and families of elliptic operators.}
+\newblock PhD thesis, Princeton., 1971.
 
 \bibitem{MargulisExplicit}
 Grigorii~Aleksandrovich Margulis.
