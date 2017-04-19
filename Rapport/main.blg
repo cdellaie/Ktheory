@@ -10,17 +10,12 @@ Case mismatch error between cite keys SkTuYU and SkTuYu
  :                 }
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: QuantumGroups.aux
-A level-1 auxiliary file: FDC.aux
-A level-1 auxiliary file: StandardModules.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
-Repeated entry---line 220 of file biblio2.bib
+Repeated entry---line 227 of file biblio2.bib
  : @article{higsonkasparov
  :                        ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "RTY"
-Warning--I didn't find a database entry for "DrutuNowak"
-Warning--I didn't find a database entry for "WY"
 Warning--can't use both volume and number fields in connesfoliations
 Warning--empty journal in OY3
 Warning--empty year in OY3
@@ -28,45 +23,45 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 53 entries,
+You've used 55 entries,
             2118 wiz_defined-function locations,
-            845 strings with 11299 characters,
-and the built_in function-call counts, 15399 in all, are:
-= -- 1560
-> -- 543
+            849 strings with 11624 characters,
+and the built_in function-call counts, 16003 in all, are:
+= -- 1620
+> -- 574
 < -- 12
-+ -- 233
-- -- 166
-* -- 998
-:= -- 2587
-add.period$ -- 160
-call.type$ -- 53
-change.case$ -- 226
++ -- 245
+- -- 176
+* -- 1041
+:= -- 2693
+add.period$ -- 166
+call.type$ -- 55
+change.case$ -- 237
 chr.to.int$ -- 0
-cite$ -- 60
-duplicate$ -- 633
-empty$ -- 1307
-format.name$ -- 166
-if$ -- 3194
+cite$ -- 62
+duplicate$ -- 654
+empty$ -- 1351
+format.name$ -- 176
+if$ -- 3315
 int.to.chr$ -- 0
-int.to.str$ -- 53
-missing$ -- 61
-newline$ -- 267
-num.names$ -- 106
-pop$ -- 239
+int.to.str$ -- 55
+missing$ -- 63
+newline$ -- 277
+num.names$ -- 110
+pop$ -- 248
 preamble$ -- 1
-purify$ -- 187
+purify$ -- 196
 quote$ -- 0
-skip$ -- 424
+skip$ -- 439
 stack$ -- 0
-substring$ -- 1053
-swap$ -- 99
+substring$ -- 1088
+swap$ -- 101
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 190
+type$ -- 198
 warning$ -- 7
-while$ -- 176
-width$ -- 55
-write$ -- 571
+while$ -- 182
+width$ -- 57
+write$ -- 592
 (There were 2 error messages)

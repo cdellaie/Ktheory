@@ -49,6 +49,11 @@ Joachim Cuntz and Georges Skandalis.
 \newblock Mapping cones and exact sequences in kk-theory.
 \newblock {\em J. Operator theory}, 15(1):163--180, 1986.
 
+\bibitem{DrutuNowak}
+Cornelia Dru{\c{t}}u and Piotr~W Nowak.
+\newblock Kazhdan projections, random walks and ergodic theorems.
+\newblock {\em arXiv preprint arXiv:1501.03473}, 2015.
+
 \bibitem{ferrynovikov}
 S~Ferry, AA~Ranicki, and J~Rosenberg.
 \newblock Novikov conjecture, rigidity and index theorems.
@@ -201,6 +206,13 @@ Alan Paterson.
 \newblock {\em Groupoids, inverse semigroups, and their operator algebras},
   volume 170.
 \newblock Springer Science \& Business Media, 2012.
+
+\bibitem{RTY}
+Daniel~A Ramras, Romain Tessera, and Guoliang Yu.
+\newblock Finite decomposition complexity and the integral novikov conjecture
+  for higher algebraic k-theory.
+\newblock {\em Journal f{\"u}r die reine und angewandte Mathematik (Crelles
+  Journal)}, 2014(694):129--178, 2014.
 
 \bibitem{Renault}
 Jean Renault.
