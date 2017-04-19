@@ -91,13 +91,37 @@ The last example gives easily the following corollary.
 Let $X$ be a coarse space that admits a fibred coarse embedding into Hilbert space. Then $\hat \mu_{X}^{max}$ is a controlled isomorphism, i.e. $X$ satisfies the controlled Coarse Baum-Connes conjecture.
 \end{cor}
 
+%\begin{dem}
+%The maximal crossed product turns restriction of a groupoid to invariant open subsets into exact sequences of $C^*$-algebras, with $F=\partial\beta X$ and $U= F^c$, hence the following diagram commutes
+%\[\begin{tikzcd}
+%RK^{G_{|U}}(P_F(G_{|U}),l^\infty)\arrow{r}\arrow{d}{\mu_{G_{|U}}^{\varepsilon,E,F}} & RK^G(P_F(G),l^\infty)\arrow{r}\arrow{d}{\mu_{G}^{\varepsilon,E,F}}  & RK^{G_{|F}}(P_F(G_{|F}),l^\infty)\arrow{d}{\mu_{G_{|F}}^{\varepsilon,E,F}}  \\
+%K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G_{|U}) \arrow{r} & K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G) \arrow{r} & K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G_{|F}) \\
+%\end{tikzcd}.\]
+%Now, $G_{|F}$ being a-T-menable and $G_{|U}$ being proper, the two exterior vertical maps are isomorphisms, and the five lemma concludes the proof.\\
+%\qed
+%\end{dem}
+
+%%% NEW PROOF
 \begin{dem}
-Just use that the maximal crossed product turns restriction of a groupoid to invariant open subsets into exact sequences of $C^*$-algebras, with $F=\partial\beta X$ and $U= F^c$, hence the following diagramm commutes
+The maximal crossed product turns restriction of a groupoid to invariant open subsets into exact sequences of $C^*$-algebras, hence  
+\[0\rightarrow l^\infty \rtimes_{max} G_{|U} \rightarrow l^\infty \rtimes_{max} G \rightarrow l^\infty \rtimes_{max} G_{|F} \rightarrow 0\]
+is exact, with $F=\partial\beta X$ and $U= F^c$. Moreover 
+\[l^\infty \rtimes_{max} G_{|U}\cong l^\infty_{|U} \rtimes_{max} G
+\quad \text{ and } \quad l^\infty \rtimes_{max} G_{|F}\cong (l^\infty/l^\infty_{|U}) \rtimes_{max} G,\] 
+hence $[\partial_{l^\infty \rtimes G_{|U},l^\infty\rtimes_r G}]=j_G([\partial_{l^\infty_{|U},l^\infty}]) $. 
+Recall from Proposition \ref{Kasparov1} that $J_G([\partial_{l^\infty_{|U},l^\infty}])=D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G}$, hence for every $z\in RK^G(P_E(G),l^\infty / l^\infty_{|U} )$, 
+\[\mu_{G}^{\varepsilon,E,F}(z\otimes [\partial_{l^\infty_{|U},l^\infty}] ) 
+\sim D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G} \circ \mu_{G}^{\varepsilon,E,F}(z )\]
+
+Hence the following diagram commutes :
 \[\begin{tikzcd}
-RK^{G_{|U}}(P_F(G_{|U}),l^\infty)\arrow{r}\arrow{d}{\mu_{G_{|U}}^{\varepsilon,E,F}} & RK^G(P_F(G),l^\infty)\arrow{r}\arrow{d}{\mu_{G}^{\varepsilon,E,F}}  & RK^{G_{|F}}(P_F(G_{|F}),l^\infty)\arrow{d}{\mu_{G_{|F}}^{\varepsilon,E,F}}  \\
-K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G_{|U}) \arrow{r} & K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G) \arrow{r} & K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G_{|F}) \\
+RK^G(P_E(G),l^\infty_{|F}) \arrow{d}{\otimes[\partial_{l^\infty_{|U},l^\infty}]} \arrow{r}{\mu_{G}^{\varepsilon,E,F}} & K_*^{\varepsilon,F}(l^\infty_{|F} \rtimes_{max} G) \arrow{d}{D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G}} \\
+RK^G(P_E(G),l^\infty_{|U} )\arrow{d}\arrow{r}{\mu_{G}^{\varepsilon,E,F}} & K_*^{\varepsilon,F}(l^\infty_{|U} \rtimes_{max} G) \arrow{d} \\
+RK^G(P_E(G),l^\infty)      \arrow{d}\arrow{r}{\mu_{G}^{\varepsilon,E,F}} & K_*^{\varepsilon,F}(l^\infty \rtimes_{max} G)      \arrow{d} \\
+RK^G(P_E(G),l^\infty_{|F}) \arrow{d}{\otimes[\partial_{l^\infty_{|U},l^\infty}]}\arrow{r}{\mu_{G}^{\varepsilon,E,F}} & K_*^{\varepsilon,F}(l^\infty_{|F} \rtimes_{max} G) \arrow{d}{D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G}} \\
+RK^G(P_E(G),l^\infty)               \arrow{r}{\mu_{G}^{\varepsilon,E,F}} & K_*^{\varepsilon,F}(l^\infty_{|U} \rtimes_{max} G) \\
 \end{tikzcd}.\]
-Now, $G_{|F}$ being a-T-menable and $G_{|U}$ being proper, the two exterior vertical maps are isomorphisms, and the five lemma concludes the proof.\\
+Now, $G_{|F}$ being a-T-menable and $G_{|U}$ being proper, the four exterior horizontal maps are isomorphisms, and the five lemma concludes the proof.\\
 \qed
 \end{dem}
 

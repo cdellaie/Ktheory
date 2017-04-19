@@ -2,18 +2,19 @@
 
 \bibitem{BaajSk}
 Saad Baaj and Georges Skandalis.
-\newblock C*-algebres de hopf et th{\'e}orie de kasparov {\'e}quivariante.
+\newblock C*-alg{\`e}bres de {H}opf et th{\'e}orie de {K}asparov
+  {\'e}quivariante.
 \newblock {\em K-theory}, 2(6):683--721, 1989.
 
 \bibitem{BaumConnes}
 Paul Baum and Alain Connes.
-\newblock Geometric {K}-theory for lie groups and foliations.
+\newblock Geometric {K}-theory for {L}ie groups and foliations.
 \newblock {\em ENSEIGNEMENT MATHEMATIQUE}, 46(1/2):3--42, 2000.
 
 \bibitem{BaumConnesHigson}
 Paul Baum, Alain Connes, and Nigel Higson.
 \newblock Classifying space for proper actions and {K}-theory of group
-  c\^{}*-algebras.
+  {C}*-algebras.
 \newblock {\em Contemporary Mathematics}, 167:241--291, 1994.
 
 \bibitem{blackadar}
@@ -30,8 +31,8 @@ J{\'e}r{\^o}me Chabert, Siegfried Echterhoff, and Ryszard Nest.
 
 \bibitem{ChenWangYu}
 Xiaoman Chen, Qin Wang, and Guoliang Yu.
-\newblock The maximal coarse baum--connes conjecture for spaces which admit a
-  fibred coarse embedding into hilbert space.
+\newblock The maximal coarse {B}aum-{C}onnes conjecture for spaces which admit
+  a fibred coarse embedding into {H}ilbert space.
 \newblock {\em Advances in Mathematics}, 249:88--130, 2013.
 
 \bibitem{connesfoliations}
@@ -46,7 +47,7 @@ Alain Connes.
 
 \bibitem{CuSk}
 Joachim Cuntz and Georges Skandalis.
-\newblock Mapping cones and exact sequences in kk-theory.
+\newblock Mapping cones and exact sequences in {KK}-theory.
 \newblock {\em J. Operator theory}, 15(1):163--180, 1986.
 
 \bibitem{DrutuNowak}
@@ -62,50 +63,50 @@ S~Ferry, AA~Ranicki, and J~Rosenberg.
 
 \bibitem{FimaGraphs}
 Pierre Fima and Amaury Freslon.
-\newblock Graphs of quantum groups and k-amenability.
+\newblock Graphs of quantum groups and {K}-amenability.
 \newblock {\em Advances in Mathematics}, 260:233--280, 2014.
 
 \bibitem{FinnSellFibred}
 Martin Finn-Sell.
-\newblock Fibred coarse embeddings, at-menability and the coarse analogue of
-  the novikov conjecture.
+\newblock Fibred coarse embeddings, a-{T}-menability and the coarse analogue of
+  the {N}ovikov conjecture.
 \newblock {\em Journal of Functional Analysis}, 267(10):3758--3782, 2014.
 
 \bibitem{FinnCoarse}
 Martin Finn-Sell and Nick Wright.
-\newblock The coarse baum-connes conjecture, boundary groupoids and expander
-  graphs.
+\newblock The coarse {B}aum-{C}onnes conjecture, boundary groupoids and
+  expander graphs.
 \newblock {\em Adv. Math. C}, 259:306--338, 2014.
 
 \bibitem{GWY}
 Erik Guentner, Rufus Willett, and Guoliang Yu.
 \newblock Dynamic asymptotic dimension: relation to dynamics, topology, coarse
-  geometry, and c\^{}*-algebras.
+  geometry, and {C}*-algebras.
 \newblock {\em Mathematische Annalen}, pages 1--45, 2015.
 
 \bibitem{OY3}
 G.~Yu H.~Oyono-Oyono.
-\newblock Persitance approximation property and controlled {K}-theory.
+\newblock Persitance {A}pproximation {P}roperty and controlled {K}-theory.
 
 \bibitem{higsonkasparov}
 Nigel Higson and Gennadi Kasparov.
-\newblock E-theory and kk-theory for groups which act properly and
-  isometrically on hilbert space.
+\newblock E-theory and {KK}-theory for groups which act properly and
+  isometrically on {H}ilbert space.
 \newblock {\em Inventiones mathematicae}, 144(1):23--74, 2001.
 
 \bibitem{HigsonLaffSk}
 Nigel Higson, Vincent Lafforgue, and Georges Skandalis.
-\newblock Counterexamples to the baum—connes conjecture.
+\newblock Counterexamples to the {B}aum—{C}onnes conjecture.
 \newblock {\em Geometric and Functional Analysis}, 12(2):330--354, 2002.
 
 \bibitem{HigsonRoe}
 Nigel Higson and John Roe.
-\newblock {\em Analytic K-homology}.
+\newblock {\em Analytic {K}-homology}.
 \newblock OUP Oxford, 2000.
 
 \bibitem{kasparovKKNovikov}
 Gennadi~G Kasparov.
-\newblock Equivariantkk-theory and the novikov conjecture.
+\newblock Equivariant {KK}-theory and the {N}ovikov conjecture.
 \newblock {\em Inventiones mathematicae}, 91(1):147--201, 1988.
 
 \bibitem{kazhdan}
@@ -116,12 +117,12 @@ David~A Kazhdan.
 
 \bibitem{kreckluck}
 Matthias Kreck and Wolfgang L{\"u}ck.
-\newblock The novikov conjecture.
+\newblock The {N}ovikov conjecture.
 \newblock In {\em Oberwolfach Seminar, January}. Springer, 2004.
 
 \bibitem{lafforgueT}
 Vincent Lafforgue.
-\newblock Une d{\'e}monstration de la conjecture de baum-connes pour les
+\newblock Une d{\'e}monstration de la conjecture de {B}aum-{C}onnes pour les
   groupes r{\'e}ductifs sur un corps p-adique et pour certains groupes discrets
   poss{\'e}dant la propri{\'e}t{\'e} (t).
 \newblock {\em Comptes Rendus de l'Acad{\'e}mie des Sciences-Series
@@ -129,14 +130,14 @@ Vincent Lafforgue.
 
 \bibitem{Lafforgue}
 Vincent Lafforgue.
-\newblock Banach kk-theory and the baum-connes conjecture.
+\newblock Banach {KK}-theory and the {B}aum-{C}onnes conjecture.
 \newblock In {\em European Congress of Mathematics}, pages 31--46. Springer,
   2001.
 
 \bibitem{lafforgue2002k}
 Vincent Lafforgue.
-\newblock K-th{\'e}orie bivariante pour les algebres de banach et conjecture de
-  baum-connes.
+\newblock K-th{\'e}orie bivariante pour les algebres de {B}anach et conjecture
+  de {B}aum-{C}onnes.
 \newblock {\em Inventiones Mathematicae}, 149(1):1--95, 2002.
 
 \bibitem{LaffOY}
@@ -155,13 +156,13 @@ Vincent Lafforgue.
 
 \bibitem{Lance}
 E~Christopher Lance.
-\newblock {\em Hilbert C*-modules: a toolkit for operator algebraists}, volume
-  210.
+\newblock {\em Hilbert {C}*-modules: a toolkit for operator algebraists},
+  volume 210.
 \newblock Cambridge University Press, 1995.
 
 \bibitem{LeGall}
 Pierre-Yves Le~Gall.
-\newblock {\em Th{\'e}orie de Kasparov {\'e}quivariante et groupo{\"\i}des}.
+\newblock {\em Th{\'e}orie de {K}asparov {\'e}quivariante et groupo{\"\i}des}.
 \newblock PhD thesis, 1994.
 
 \bibitem{lusztig}
@@ -182,7 +183,7 @@ J~Peter May.
 
 \bibitem{MeyerNest}
 Ralf Meyer and Ryszard Nest.
-\newblock The baum--connes conjecture via localisation of categories.
+\newblock The {B}aum--{C}onnes conjecture via localisation of categories.
 \newblock {\em Topology}, 45(2):209--259, 2006.
 
 \bibitem{Murphy}
@@ -197,7 +198,7 @@ Piotr~W Nowak and Guoliang Yu.
 
 \bibitem{OY2}
 Herv{\'e} Oyono-Oyono and Guoliang Yu.
-\newblock On quantitative operator k--theory.
+\newblock On quantitative operator {K}--theory.
 \newblock {\em Ann. Inst. Fourier (Grenoble). Available at www. math.
   univ-metz. fr/\~{} oyono/pub. html}, 2011.
 
@@ -209,8 +210,8 @@ Alan Paterson.
 
 \bibitem{RTY}
 Daniel~A Ramras, Romain Tessera, and Guoliang Yu.
-\newblock Finite decomposition complexity and the integral novikov conjecture
-  for higher algebraic k-theory.
+\newblock Finite decomposition complexity and the integral {N}ovikov conjecture
+  for higher algebraic {K}-theory.
 \newblock {\em Journal f{\"u}r die reine und angewandte Mathematik (Crelles
   Journal)}, 2014(694):129--178, 2014.
 
@@ -242,7 +243,7 @@ Jean-Louis Tu.
 
 \bibitem{TuNovikov}
 Jean~Louis Tu.
-\newblock La conjecture de novikov pour les feuilletages hyperboliques.
+\newblock La conjecture de {N}ovikov pour les feuilletages hyperboliques.
 \newblock {\em K-theory}, 16(2):129--184, 1999.
 
 \bibitem{TuBC}
@@ -280,12 +281,12 @@ Roland Vergnioux.
 
 \bibitem{WeggeOlsen}
 NE~Wegge-Olsen.
-\newblock K-theory and {C}\^{}*-algebras: A friendly approach.
+\newblock K-theory and {C}*-algebras: A friendly approach.
 \newblock 1993.
 
 \bibitem{WillettYu}
 Rufus Willett and Guoliang Yu.
-\newblock Geometric property (t).
+\newblock Geometric property ({T}).
 \newblock {\em Chinese Annals of Mathematics, Series B}, 35(5):761--800, 2014.
 
 \bibitem{Wo}

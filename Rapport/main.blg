@@ -25,7 +25,7 @@ Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
 You've used 55 entries,
             2118 wiz_defined-function locations,
-            849 strings with 11624 characters,
+            849 strings with 11699 characters,
 and the built_in function-call counts, 16003 in all, are:
 = -- 1620
 > -- 574
