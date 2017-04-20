@@ -26,6 +26,10 @@ Let $\Gamma$ be a discrete group and define the reduced $C^*$-algebra $C_r^*(\Ga
 We denote by $End(U)$ the intertwiners of $Hom(U,U)$. A unitary representation is called irreducible if $End(U) = \C 1$. The trivial representation is denoted by $\varepsilon$. If $(H,U)$ is a unitary representation of $\mathbb G$, and $\eta,\xi\in H$, then $U_{\xi,\eta} = (\omega_{\xi,\eta}\otimes 1)( U )$ is called a coefficient of $U$.
 \end{definition}
 
+\begin{Expl} Let $\Gamma$ be a discrete group and $\mathbb G = (C_r^*(\Gamma),\Delta)$ be the corresponding compact quantum group. Then a finite dimensional unitary representation $U\in \mathcal M(\mathfrak K(H)\otimes C(\mathbb G))\cong\mathfrak M_n(C^*_r(\Gamma))$ of $\mathbb G$ is given by a family of orthogonal projections $P_\gamma\in \mathfrak M_n(\C)$ for every $\gamma\in \Gamma$ such that 
+\[P_{\gamma}P_{\gamma'} = \delta_{\gamma,\gamma'} P_{\gamma}\quad\text{ and }\quad \sum_{\gamma\in\Gamma} P_{\gamma} = I_n.\]
+\end{Expl}
+
 We define sum and tensor product of representations as follows. Let $(H,U)$ and $(H',U')$ be two unitary representations. Then the sum is defined as $(H\oplus H', U\oplus U')$. The tensor product is defined as $(H\otimes H',W)$ where $W = U_{13} U'_{23}\in \mathcal M(\mathfrak K(H\otimes H')\otimes C(\mathbb G))$. 
 
 \begin{definition}
@@ -68,9 +72,16 @@ Define the following $C^*$-algebras :
 c_0(\hat{\mathbb G})= \bigoplus_{\pi\in Irred(\mathbb G)} \mathcal L(H_\pi),\\
 l^\infty(\hat{\mathbb G})= \prod_{\pi\in Irred(\mathbb G)} \mathcal L(H_\pi).
 \end{array}\]
-Up to our choice of representations $\{(H_\pi,U^\pi)\}_{\pi\in Irrep(\mathbb G)}$, we can define a unitary $U = \bigoplus_{\pi\in Irrep(\mathbb G)} U^\pi\in \mathcal M(c_0(\hat{\mathbb G}) \otimes C(\mathbb G))$ which is a unitary representation of $\mathbb G$. This allows to define a unital $*$-homomorphism $\hat \Delta : l^\infty(\hat{\mathbb G}) \rightarrow l^\infty(\hat{\mathbb G})\otimes l^\infty(\hat{\mathbb G})$ by 
-\[\hat\Delta ( x) = U(x \otimes 1)U^*\quad \forall x\in l^\infty(\hat{\mathbb G})).\]
-This $*$-homomorphism satisfies $\hat\Delta(c_0(\hat{\mathbb G}))\subseteq \mathcal M(c_0(\hat{\mathbb G})\otimes c_0(\hat{\mathbb G}))$ and $(\hat\Delta \otimes id) \hat\Delta = (id\otimes \hat\Delta)\hat\Delta$. %\textbf{OTHER CONDITION}.
+Up to our choice of representations $\{(H_\pi,U^\pi)\}_{\pi\in Irrep(\mathbb G)}$, we can define a unitary $U = \bigoplus_{\pi\in Irrep(\mathbb G)} U^\pi\in \mathcal M(c_0(\hat{\mathbb G}) \otimes C(\mathbb G))$ which is a unitary representation of $\mathbb G$. 
+
+\begin{prop}[\cite{PodlesWo}, Theorem $2.1$] There exists a unique $*$-homomorphism $\hat \Delta : c_0(\hat{\mathbb G}) \rightarrow \mathcal M(c_0(\hat{\mathbb G})\otimes c_0(\hat{\mathbb G}))$ such that \[(\hat\Delta\otimes id ) U = U_{12}U_{13}.\]
+Moreover, $\hat\Delta$ is coassociative, i.e. $(\hat\Delta \otimes id) \hat\Delta = (id\otimes \hat\Delta) \hat\Delta$.
+%for every $\pi\in Irrep(\mathbb G)$ and every $T\in\mathcal L(H_\pi)$,
+%\[\hat\Delta(T)\circ \phi = \phi \circ T \quad \forall y,z\in Irrep(\mathbb G), \forall \phi \in Hom(\pi,y\otimes z).\]
+\end{prop}
+%This allows to define a unital $*$-homomorphism $\hat \Delta : l^\infty(\hat{\mathbb G}) \rightarrow l^\infty(\hat{\mathbb G})\otimes l^\infty(\hat{\mathbb G})$ by 
+%\[\hat\Delta ( x) = U(x \otimes 1)U^*\quad \forall x\in l^\infty(\hat{\mathbb G})).\]
+%This $*$-homomorphism satisfies $\hat\Delta(c_0(\hat{\mathbb G}))\subseteq \mathcal M(c_0(\hat{\mathbb G})\otimes c_0(\hat{\mathbb G}))$ and $(\hat\Delta \otimes id) \hat\Delta = (id\otimes \hat\Delta)\hat\Delta$. %\textbf{OTHER CONDITION}.
 
 \begin{definition}
 Let $\mathbb G$ be a compact quantum group. With the above notations, its dual is defined as the discrete quantum group $\hat{\mathbb G} = (c_0(\hat{\mathbb G}),\hat\Delta)$.

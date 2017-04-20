@@ -23,45 +23,45 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 57 entries,
+You've used 58 entries,
             2118 wiz_defined-function locations,
-            863 strings with 12005 characters,
-and the built_in function-call counts, 16688 in all, are:
-= -- 1696
-> -- 588
+            870 strings with 12159 characters,
+and the built_in function-call counts, 17021 in all, are:
+= -- 1731
+> -- 601
 < -- 13
-+ -- 251
-- -- 180
-* -- 1082
-:= -- 2797
-add.period$ -- 172
-call.type$ -- 57
-change.case$ -- 245
++ -- 256
+- -- 184
+* -- 1108
+:= -- 2852
+add.period$ -- 175
+call.type$ -- 58
+change.case$ -- 250
 chr.to.int$ -- 0
-cite$ -- 64
-duplicate$ -- 685
-empty$ -- 1410
-format.name$ -- 180
-if$ -- 3466
+cite$ -- 65
+duplicate$ -- 696
+empty$ -- 1437
+format.name$ -- 184
+if$ -- 3534
 int.to.chr$ -- 0
-int.to.str$ -- 57
-missing$ -- 65
-newline$ -- 287
-num.names$ -- 114
-pop$ -- 254
+int.to.str$ -- 58
+missing$ -- 66
+newline$ -- 292
+num.names$ -- 116
+pop$ -- 257
 preamble$ -- 1
-purify$ -- 202
+purify$ -- 206
 quote$ -- 0
-skip$ -- 465
+skip$ -- 473
 stack$ -- 0
-substring$ -- 1155
-swap$ -- 112
+substring$ -- 1185
+swap$ -- 113
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 206
+type$ -- 210
 warning$ -- 7
-while$ -- 191
-width$ -- 59
-write$ -- 614
+while$ -- 195
+width$ -- 60
+write$ -- 625
 (There were 2 error messages)

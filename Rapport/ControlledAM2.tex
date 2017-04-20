@@ -90,7 +90,7 @@ such that
 0\arrow{r} & \mathfrak M_2(K_{B\rtimes_r G}) \arrow{r} & D \arrow{r} & A\rtimes_r G \arrow{r} & 0
 \end{tikzcd}\]
 where 
-\[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K(E_j,E_i)\right\},\]
+\[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K_{B\rtimes_r G}\right\},\]
 with $p_j : E_j\rightarrow A\rtimes_r G$ the $*$-homomorphisms of the extensions.
 Naturality of the controlled boundary maps \cite{OY2} ensures that the boundary of the sum of two extensions is the sum of the boundary of each, thus the result.
 \item[(iii)] Let $z\in KK_1^G(A_2,B)$, represented by a cycle $(H_B,\pi,T)$. Representing $f^*(z)$ is $(H_B,f^*\pi,T)$ with $f^*\pi=\pi \circ f$. The map 
@@ -446,8 +446,10 @@ Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarr
 %%%%%%%%%%%%% NOUVELLE PREUVE
 \begin{dem}
 Let $(E,\pi,T)\in \mathbb E(C_0(X),B)$ be a $K$-cycle. Denote by $\alpha : s^* C_0(Z) \rightarrow r^*C_0(Z)$ the action of $G$. Let $K$ be a compact fundamental domain for the action of $G$ on $Z$. By local injectivity of $p$, let $(U_j)_j$ be a finite open cover of $K$ such that $p_{|U_j}$ is injective for every $U_j\in \mathcal U$. There exist compactly supported continuous functions $\phi_j : Z\rightarrow [0,1]$ such that  \[\text{supp }\phi_j \subseteq U_j \quad\text{ and }\quad K\subseteq \cup_{j} \phi_j^{-1}(0,+\infty).\]
-Up to replacing $\phi_j$ by the continuous function $\phi_j(z) / \sum_{k,g} \phi_k(z.g)$, we can assume $\sum_{j,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. The latter would indeed be continuous, as it can be expressed as $\frac{\phi_j} {(\sum_j\int \phi_j d\lambda ) \circ p }$. The condition $\sum_{j,g\in G^{p(z)}} \phi_j (z.g) = 1,\forall z\in Z$ implies that 
-\[\sum_j \int V(s^*\pi(\phi_j))V^*d\lambda = id_E.\] 
+Up to replacing $\phi_j$ by the continuous function $\phi_j(z) / \sum_{k,g} \phi_k(z.g)$, we can assume $\sum_{j,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. The latter would indeed be continuous, as it can be expressed as $\frac{\phi_j} {(\sum_j\int \phi_j d\lambda ) }$. The condition $\sum_{j,g\in G^{p(z)}} \phi_j (z.g) = 1,\forall z\in Z$ implies that 
+\[\sum_j \int V(s^*\pi(\phi_j))V^*d\lambda = id_E ,\]
+in the sense of a weak integral, i.e. the equality holds when evaluated on elements of $E$.\\
+  
 Indeed, $\pi$ is $G$-equivariant, and by invariance of the Haar system, $\sum_j\int \alpha(s^*\phi_j)d\lambda = 1_{C_0(Z)}$. Composing with $\pi$ gives the equality by continuity and linearity of $\pi$.\\  
 
 Define $F_j = \pi(\phi_j^\frac{1}{2}) F \pi(\phi_j^\frac{1}{2})\in\mathcal L_B(E)$. Then $s^* F_j\in C_c(G,\mathcal L_{s^* B}(s^* E))$ and put
