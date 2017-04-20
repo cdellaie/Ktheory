@@ -153,22 +153,27 @@ The homomorphisms inducing the Morita equivalence make the following diagram com
 \[\begin{tikzcd}B_1\rtimes G\arrow{r}{g_G}\arrow{d} & B_2\rtimes G\arrow{d} \\ K_{B_1\rtimes G } \arrow{r}{\psi}& K_{B_2\rtimes G }\end{tikzcd},\]
 and $J_G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes G}^{-1}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}=g_{G,*}\circ J_G(z)$.\\
 
-\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_{J,A}]$ and $P=\frac{1+T}{2}$. Put $\mathcal C=A\oplus \mathcal L_J(H_J)$ and consider the following commutative diagram :
-\[\begin{tikzcd}[column sep = small]
-0\arrow{r} &J\arrow{r}\arrow{d} & A \arrow{r}\arrow{d}{\phi}& A/J\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} & J\otimes \mathfrak K\arrow{r} & \mathcal C \arrow{r}& A/J\arrow{r} & 0
-\end{tikzcd},\]
-where $\phi(a) = (q(a),\pi(q(a)))$ and $J\rightarrow J\otimes \mathfrak K; j\mapsto j\otimes e;$ with $e$ a rank one projection. We apply $-\rtimes_r G$ to get the commutative diagram
-\[\begin{tikzcd}[column sep = small]
-0\arrow{r} & J\rtimes_r G\arrow{r}\arrow{d} & A\rtimes_r G \arrow{r}\arrow{d}{\phi_G}& A/J\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} &  K_{J\rtimes_r G}\arrow{r} & \mathcal C\rtimes_r G \arrow{r}& A/J\rtimes_r G\arrow{r} & 0
-\end{tikzcd},\]
-where the lines are semi-split filtered and exact. Remark \ref{rk3.8} applies and $D_{J\rtimes_r G,A\rtimes_r G} = D_{ K_{J\rtimes_r G},\mathcal C\rtimes_r G}$. But $E^{(\pi,T)}$ is a $C^*$-subalgebra of $\mathcal C\rtimes_r G$ which makes the following diagram commutative :
-\[\begin{tikzcd}[column sep = small]
-0\arrow{r} &  K_{J\rtimes_r G}\arrow{r}\arrow{d}{=} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi_G}& A/J\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} &  K_{J\rtimes_r G}\arrow{r} & \mathcal C\rtimes_r G\arrow{r}& A/J\rtimes_r G\arrow{r} & 0
-\end{tikzcd},\]
-hence another application of remark \ref{rk3.8} yields $D_{K_{J\rtimes_r G},A\rtimes_r G} = D_{K_{J\rtimes_r G},E^{(\pi,T)}}$. Composing the inverse of the Morita equivalence concludes.\\
+%% NEW PROOF
+\item[(v)] We can suppose $A$ unital. Let $0 \rightarrow J \rightarrow A \rightarrow A /J \rightarrow 0$ be a $G$-equivariant semi-split extension of $G$-algebras. Let us denote by $s : A/J \rightarrow A $ the $G$-equivariant completely positive cross section.  According to Kasparov-Stinespring theorem \ref{KasparovStinespring}, there exists a $A$-Hilbert module $E$ and a $*$-homomorphism $\pi : A/J \rightarrow \mathcal L_{A}(A\oplus E)$ such that $s(x) = P \pi(x) P$, where $P \in \mathcal L_{A}(A\oplus E)$ is the projection on the $A$ factor. Put $T= 2P-1$. Then, according to \cite{SkandalisExtension}, 
+\[[A\oplus E, \pi , T] = [\partial_J]\]
+in $KK_1^G(A/J,J)$. Up to adding a degenerate $K$-cycle, we can suppose that $A\oplus E$ is standard. This entails that the boundary of $E^{(\pi,T)}$ and right multiplication by $[\partial_J]$ coincides. Hence $J_G([\partial_J]) = D_{J\rtimes_r G,A\rtimes_r G}$.
+%% END NEW PROOF
+%\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_{J,A}]$ and $P=\frac{1+T}{2}$. Put $\mathcal C=A\oplus \mathcal L_J(H_J)$ and consider the following commutative diagram :
+%\[\begin{tikzcd}[column sep = small]
+%0\arrow{r} &J\arrow{r}\arrow{d} & A \arrow{r}\arrow{d}{\phi}& A/J\arrow{r}\arrow{d}{=} & 0\\
+%0\arrow{r} & J\otimes \mathfrak K\arrow{r} & \mathcal C \arrow{r}& A/J\arrow{r} & 0
+%\end{tikzcd},\]
+%where $\phi(a) = (q(a),\pi(q(a)))$ and $J\rightarrow J\otimes \mathfrak K; j\mapsto j\otimes e;$ with $e$ a rank one projection. We apply $-\rtimes_r G$ to get the commutative diagram
+%\[\begin{tikzcd}[column sep = small]
+%0\arrow{r} & J\rtimes_r G\arrow{r}\arrow{d} & A\rtimes_r G \arrow{r}\arrow{d}{\phi_G}& A/J\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
+%0\arrow{r} &  K_{J\rtimes_r G}\arrow{r} & \mathcal C\rtimes_r G \arrow{r}& A/J\rtimes_r G\arrow{r} & 0
+%\end{tikzcd},\]
+%where the lines are semi-split filtered and exact. Remark \ref{rk3.8} applies and $D_{J\rtimes_r G,A\rtimes_r G} = D_{ K_{J\rtimes_r G},\mathcal C\rtimes_r G}$. But $E^{(\pi,T)}$ is a $C^*$-subalgebra of $\mathcal C\rtimes_r G$ which makes the following diagram commutative :
+%\[\begin{tikzcd}[column sep = small]
+%0\arrow{r} &  K_{J\rtimes_r G}\arrow{r}\arrow{d}{=} & E^{(\pi,T)} \arrow{r}\arrow{d}{\phi_G}& A/J\rtimes_r G\arrow{r}\arrow{d}{=} & 0\\
+%0\arrow{r} &  K_{J\rtimes_r G}\arrow{r} & \mathcal C\rtimes_r G\arrow{r}& A/J\rtimes_r G\arrow{r} & 0
+%\end{tikzcd},\]
+%hence another application of remark \ref{rk3.8} yields $D_{K_{J\rtimes_r G},A\rtimes_r G} = D_{K_{J\rtimes_r G},E^{(\pi,T)}}$. Composing the inverse of the Morita equivalence concludes.\\
 \qed
 \end{enumerate}
 \end{dem}

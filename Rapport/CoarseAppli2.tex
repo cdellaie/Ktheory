@@ -10,11 +10,11 @@ Moreover, it is filtered in the strong sense : for all $R>0$, $\Psi_B(C_{\overli
 
 The following theorem is proved in \cite{SkTuYu}. It states the equivalence between the coarse Baum-Connes conjecture with coefficients in $B$ and the Baum-Connes conjecture for $G(X)$ with coefficients in $l^\infty(X,B\otimes\mathfrak K)$.  
 
-\begin{thm}
-Let $X$ be a discrete metric space with bounded geometry. Let $\Psi_B$ be the isomorphism of theorem \ref{IsomCoarseGroupoid}, $x\in X$ and $\iota :\{x\}\rightarrow G(X)$ be the natural inclusion of groupoids. Denote by $G=G(X)$ the coarse groupoid of $X$ and by $l^\infty$ the $G$-algebra $l^\infty (X,B\otimes\mathfrak K)$. Then, for every controlled subset $E\subseteq X\times X$, the following diagram is commutative with vertical arrows being isomorphisms :
+\begin{thm}[\cite{SkTuYu}]
+Let $X$ be a discrete metric space with bounded geometry. Let $\Psi_B$ be the isomorphism of theorem \ref{IsomCoarseGroupoid}, $x\in X$ and $\iota :\{x\}\rightarrow G(X)$ be the natural inclusion of groupoids. Denote by $G=G(X)$ the coarse groupoid of $X$ and by $\tilde B$ the $G$-algebra $l^\infty (X,B\otimes\mathfrak K)$. Then, for every controlled subset $E\subseteq X\times X$, the following diagram is commutative with vertical arrows being isomorphisms :
 \[\begin{tikzcd}
-RK_*^G(P_E(G),l^\infty) \arrow{r}{\mu_{G,l^\infty}^d}\arrow{d}{\iota^*}& K_*(l^\infty\rtimes_r G)\arrow{d}{(\Psi_B)_*}\\
-RK_*(P_d(X),B) \arrow{r}{\mu_{X,B}^d}& K_*(C^*(X,B))
+RK_*^G(P_{\overline{E}}(G),\tilde B) \arrow{r}{\mu_{G,\tilde B}^{\overline E}}\arrow{d}{\iota^*}& K_*(\tilde B\rtimes_r G)\arrow{d}{(\Psi_B)_*}\\
+RK_*(P_E(X),B) \arrow{r}{\mu_{X,B}^E}& K_*(C^*(X,B))
 \end{tikzcd},\]
 where $\iota^*$ is the natural transformation induced by $\iota$ and $d= \sup_E d$.
 \end{thm}
@@ -32,15 +32,17 @@ We shall prove a controlled analogue of this result which induces it in $K$-theo
 %\[(\tilde\pi) = \pi \otimes id\]
 %\qed
 %\end{dem}
-\begin{lem}\label{iota}
+\begin{lem}[\cite{SkTuYu}]\label{iota}
 Let $x\in X$ and $\iota : \{x\}\hookrightarrow G$ the natural inclusion of groupoids. Then 
 \[\iota^* : KK^G(C_0(P_{\overline E}(G),\tilde B) \rightarrow KK(C_0(P_{E}(X),B) \]
 is an isomorphism of $\Z_2$-graded abelian groups.
 \end{lem}
 
-The reader can find a proof in \cite{SkTuYu} (Lemma $4.7$). We recall the explicit construction of the inverse $j:KK(C_0(P_{E}(X),B) \rightarrow KK^G(C_0(P_{\overline E}(G),\tilde B)$ of $\iota^*$. Let $(H_B,\pi,T)\in\mathbb E (C_0(P_{E}(X),B)$ be a standard $K$-cycle. Let $E= l^\infty(X,B\otimes\mathfrak K)$, $(\tilde \pi (a)\xi)(x) = \pi(a(x))\xi(x)$ and $(\tilde F\xi ) (x) = F\xi(x)$, for every $x\in X$ and $\xi\in E$. Then $j([H_B,\pi,T])=[E,\tilde \pi, \tilde F]$.
+The reader can find a proof in \cite{SkTuYu} (Lemma $4.7$). We recall the explicit construction of the inverse 
+\[j:KK(C_0(P_{E}(X),B) \rightarrow KK^G(C_0(P_{\overline E}(G),\tilde B)\] 
+of $\iota^*$. Let $(H_B,\pi,T)\in\mathbb E (C_0(P_{E}(X),B)$ be a standard $K$-cycle. Let $E= l^\infty(X,B\otimes\mathfrak K)$, $(\tilde \pi (a)\xi)(x) = \pi(a(x))\xi(x)$ and $(\tilde F\xi ) (x) = F\xi(x)$, for every $x\in X$ and $\xi\in E$. Then $j([H_B,\pi,T])=[E,\tilde \pi, \tilde F]$.
 
-\begin{lem} Let $Z$ be a proper $G$-space and $B$ be $C^*$-algebra. Denote $C_0(Z)$ by $A$ and $\tilde A = l^\infty(X,A\otimes \mathfrak K)$ and $\tilde B = l^\infty(X,B\otimes \mathfrak K)$. Then, for every $z\in KK^G(\tilde A,\tilde B)$, the following equality of controlled morphisms holds :
+\begin{lem} Let $E\subseteq X\times X$ be controlled subset and $B$ be $C^*$-algebra. Denote $C_0(P_E(X))$ by $A$, $C_0(P_{\overline E}(G))$ by $\tilde A$ and $\tilde B = l^\infty(X,B\otimes \mathfrak K)$. Then, for every $z\in KK^G(\tilde A,\tilde B)$, the following equality of controlled morphisms holds :
 \[\hat\sigma_X(\iota^*(z))\circ (\Psi_A)_* = (\Psi_B)_*\circ \hat J_G(z).\]  
 \end{lem}
 
@@ -113,9 +115,9 @@ This result induces the result of \cite{SkTuYu} in $K$-theory. It also implies i
 
 We now present an application to fibred coarse embedding.\\
 
-If $X$ admits a fibred coarse embedding into Hilbert space, then $G(X)_{|\partial \beta X}$ is a-$t$-menable.\cite{FinnSellFibred} For interesting examples of this type, recall the definition of a box space. Let $\Gamma$ be a finitely generated group, and $\mathcal N$ a family of nested normal subgroups with trivial intersection, which have finite index in $\Gamma$. Take the coarse union of the quotients to construct a coarse space $X_{\mathcal N}(\Gamma)= \cup_{H\in \mathcal N } \Gamma/ H$. Then, $X_{\mathcal N}(\Gamma)$ admits a fibred coarse embedding if and only if $\Gamma$ is a-$T$-menable. But if $X_{\mathcal N}$ is an expander, it cannot be coarsely embedded into a Hilbert space, so just take an a-$T$-menable group which has a box space $X$ which is an expander to get a coarse space that is not coarsely embeddable into Hilbert space ($SL(2,\Z)$ works), but admits a fibred coarse embedding.\\
+Recall that if $X$ admits a fibred coarse embedding into Hilbert space, then $G(X)_{|\partial \beta X}$ is a-$t$-menable \cite{FinnSellFibred}. For interesting examples of this type, recall the definition of a box space. Let $\Gamma$ be a finitely generated group, and $\mathcal N$ a family of nested normal subgroups with trivial intersection, which have finite index in $\Gamma$. Take the coarse union of the quotients to construct a coarse space $X_{\mathcal N}(\Gamma)= \cup_{H\in \mathcal N } \Gamma/ H$. Then, $X_{\mathcal N}(\Gamma)$ admits a fibred coarse embedding if and only if $\Gamma$ is a-$T$-menable. But if $X_{\mathcal N}$ is an expander, it cannot be coarsely embedded into a Hilbert space, so just take an a-$T$-menable group which has a box space $X$ which is an expander to get a coarse space that is not coarsely embeddable into Hilbert space ($SL(2,\Z)$ works), but admits a fibred coarse embedding.\\
 
-The last example gives easily the following corollary.
+The last example gives the following corollary.
 
 \begin{cor}
 Let $X$ be a coarse space that admits a fibred coarse embedding into Hilbert space. Then $\hat \mu_{X}^{max}$ is a controlled isomorphism, i.e. $X$ satisfies the controlled Coarse Baum-Connes conjecture.

@@ -109,6 +109,11 @@ Gennadi~G Kasparov.
 \newblock Equivariant {KK}-theory and the {N}ovikov conjecture.
 \newblock {\em Inventiones mathematicae}, 91(1):147--201, 1988.
 
+\bibitem{KasparovStinespring}
+GG~Kasparov.
+\newblock Hilbert {C}*-modules: theorems of {S}tinespring and {V}oiculescu.
+\newblock {\em Journal of operator theory}, pages 133--150, 1980.
+
 \bibitem{kazhdan}
 David~A Kazhdan.
 \newblock Connection of the dual space of a group with the structure of its
@@ -136,15 +141,15 @@ Vincent Lafforgue.
 
 \bibitem{lafforgue2002k}
 Vincent Lafforgue.
-\newblock K-th{\'e}orie bivariante pour les algebres de {B}anach et conjecture
-  de {B}aum-{C}onnes.
+\newblock K-th{\'e}orie bivariante pour les alg{\`e}bres de {B}anach et
+  conjecture de {B}aum-{C}onnes.
 \newblock {\em Inventiones Mathematicae}, 149(1):1--95, 2002.
 
 \bibitem{LaffOY}
 Vincent Lafforgue.
-\newblock K-th{\'e}orie bivariante pour les alg{\`e}bres de banach,
-  groupo{\"\i}des et conjecture de baum--connes. avec un appendice
-  d’herv{\'e} oyono-oyono.
+\newblock K-th{\'e}orie bivariante pour les alg{\`e}bres de {B}anach,
+  groupo{\"\i}des et conjecture de {B}aum--{C}onnes. {A}vec un appendice
+  d’{H}erv{\'e} {O}yono-{O}yono.
 \newblock {\em Journal of the Institute of Mathematics of Jussieu},
   6(03):415--451, 2007.
 
@@ -230,6 +235,11 @@ John Roe and Conference~Board of~the Mathematical~Sciences.
 \newblock {\em Index theory, coarse geometry, and topology of manifolds},
   volume~90.
 \newblock American Mathematical Soc., 1996.
+
+\bibitem{SkandalisExtension}
+Georges Skandalis.
+\newblock Exact sequences for the {K}asparov groups of graded algebras.
+\newblock {\em Can. J. Math}, 37(2):193--216, 1985.
 
 \bibitem{SkTuYu}
 Georges Skandalis, Jean-Louis Tu, and Guoliang Yu.

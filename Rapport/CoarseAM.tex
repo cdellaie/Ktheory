@@ -196,8 +196,8 @@ Indeed, the functor $C^*(X,-)$ commutes with pull-back by $*$-homomorphisms, and
 \[\psi(P_X \pi_X(x) P_X)=P'_X \pi'_X(x) P'_X. \]
 This gives a commutative diagram 
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & C^*(X,B_1)\arrow{r}\arrow{d}{\psi} & E^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& C^*(X,A)\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} & C^*(X,B_2)\arrow{r} & E^{(\pi',T')} \arrow{r}& C^*(X,A)\arrow{r} & 0
+0\arrow{r} & C^*(X,B_1)\arrow{r}\arrow{d}{\psi} & E_X^{(\pi,T)} \arrow{r}\arrow{d}{\Psi}& C^*(X,A)\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & C^*(X,B_2)\arrow{r} & E_X^{(\pi',T')} \arrow{r}& C^*(X,A)\arrow{r} & 0
 \end{tikzcd}.\]
 and $\Psi$ intertwines the two filtered sections by the previous relation. Moreover, $\Psi (C^*(X,B_1))\subseteq C^*(X,B_2)$, so that we can again apply the remark \ref{rk3.8} to state
 \[ D_{C^*(X,B_2),E_X^{(\pi',T')}}=\psi_*\circ D_{C^*(X,B_1),E_X^{(\pi,T)}}\ .\]
@@ -208,22 +208,24 @@ The homomorphisms inducing the Morita equivalence make the following diagram com
 \[\begin{tikzcd}C^*(X,B_1)\arrow{r}{g_X}\arrow{d} & C^*(X,B_2)\arrow{d} \\ K_{C^*(X,B_1) } \arrow{r}{\psi}& K_{C^*(X,B_2)}\end{tikzcd},\]
 and $\sigma_X(g_*(z))= g_{X,*}\circ M_{C^*(X,B_1)}^{-1}\circ D_{K_{C^*(X,B_1)},E^{(\pi,T)}}=g_{X,*}\circ \sigma_X(z)$.\\
 
-\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_{J,A}]$ and $P=\frac{1+T}{2}$. Put $\mathcal C=A\oplus \mathcal L_J(H_J)$ and consider the following commutative diagram :
-\[\begin{tikzcd}[column sep = small]
-0\arrow{r} &J\arrow{r}\arrow{d} & A \arrow{r}\arrow{d}{\phi}& A/J\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} & J\otimes \mathfrak K\arrow{r} & \mathcal C \arrow{r}& A/J\arrow{r} & 0
-\end{tikzcd},\]
-where $\phi(a) = (q(a),\pi(q(a)))$ and $J\rightarrow J\otimes \mathfrak K; j\mapsto j\otimes e;$ with $e$ a rank one projection. We apply $C^*(X,-)$ to get the commutative diagram
-\[\begin{tikzcd}[column sep = small]
-0\arrow{r} & C^*(X,J)\arrow{r}\arrow{d} & C^*(X,A) \arrow{r}\arrow{d}{\phi_X}& C^*(X,A/J)\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} & C^*(X,J)\arrow{r} & C^*(X,\mathcal C) \arrow{r}& C^*(X,A/J)\arrow{r} & 0
-\end{tikzcd},\]
-where the lines are semi-split filtered and exact. Remark \ref{rk3.8} applies and $D_{C^*(X,J),C^*(X,A)} = D_{C^*(X,J),C^*(X,\mathcal C)}$. But $E^{(\pi,T)}_X$ is a $C^*$-subalgebra of $C^*(X,\mathcal C)$ which makes the following diagram commutative :
-\[\begin{tikzcd}[column sep = small]
-0\arrow{r} & C^*(X,J)\arrow{r}\arrow{d}{=} & E_X^{(\pi,T)} \arrow{r}\arrow{d}{\phi_X}& C^*(X,A/J)\arrow{r}\arrow{d}{=} & 0\\
-0\arrow{r} & C^*(X,J)\arrow{r} & C^*(X,\mathcal C) \arrow{r}& C^*(X,A/J)\arrow{r} & 0
-\end{tikzcd},\]
-hence another application of remark \ref{rk3.8} yields $D_{J,A} = D_{C^*(X,J),E_X^{(\pi,T)}}$. 
+%% NEW PROOF
+\item[(v)] We can suppose $A$ unital. Let $0 \rightarrow J \rightarrow A \rightarrow A /J \rightarrow 0$ be a semi-split extension of $C^*$-algebras. Let us denote by $s : A/J \rightarrow A $ the completely positive cross section.  According to Kasparov-Stinespring theorem \ref{KasparovStinespring}, there exists a $A$-Hilbert module $E$ and a $*$-homomorphism $\pi : A/J \rightarrow \mathcal L_{A}(A\oplus E)$ such that $s(x) = P \pi(x) P$, where $P \in \mathcal L_{A}(A\oplus E)$ is the projection on the $A$ factor. Put $T= 2P-1$. Then, according to \cite{SkandalisExtension}, 
+\[[A\oplus E, \pi , T] = [\partial_J]\]
+in $KK_1(A/J,J)$. Up to adding a degenerate $K$-cycle, we can suppose that $A\oplus E$ is standard. This entails that the boundary of $E^{(\pi,T)}$ and right multiplication by $[\partial_J]$ coincides. Hence $\hat\sigma([\partial_J]) = D_{C^*(X,J),C^*(X,A)}$.
+%% END NEW PROOF
+%\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_{J,A}]$ and $P=\frac{1+T}{2}$. Put $\mathcal C=A\oplus \mathcal L_J(H_J)$ and consider the following commutative diagram :
+%\[\begin{tikzcd}[column sep = small]
+%0\arrow{r} &J\arrow{r}\arrow{d} & A \arrow{r}\arrow{d}{\phi}& A/J\arrow{r}\arrow{d}{=} & 0\\
+%0\arrow{r} & J\otimes \mathfrak K\arrow{r} & \mathcal C \arrow{r}& A/J\arrow{r} & 0\end{tikzcd},\]
+%where $\phi(a) = (q(a),\pi(q(a)))$ and $J\rightarrow J\otimes \mathfrak K; j\mapsto j\otimes e;$ with $e$ a rank one projection. We apply $C^*(X,-)$ to get the commutative diagram
+%\[\begin{tikzcd}[column sep = small]
+%0\arrow{r} & C^*(X,J)\arrow{r}\arrow{d} & C^*(X,A) \arrow{r}\arrow{d}{\phi_X}& C^*(X,A/J)\arrow{r}\arrow{d}{=} & 0\\
+%0\arrow{r} & C^*(X,J)\arrow{r} & C^*(X,\mathcal C) \arrow{r}& C^*(X,A/J)\arrow{r} & 0\end{tikzcd},\]
+%where the lines are semi-split filtered and exact. Remark \ref{rk3.8} applies and $D_{C^*(X,J),C^*(X,A)} = D_{C^*(X,J),C^*(X,\mathcal C)}$. But $E^{(\pi,T)}_X$ is a $C^*$-subalgebra of $C^*(X,\mathcal C)$ which makes the following diagram commutative :
+%\[\begin{tikzcd}[column sep = small]
+%0\arrow{r} & C^*(X,J)\arrow{r}\arrow{d}{=} & E_X^{(\pi,T)} \arrow{r}\arrow{d}{\phi_X}& C^*(X,A/J)\arrow{r}\arrow{d}{=} & 0\\
+%0\arrow{r} & C^*(X,J)\arrow{r} & C^*(X,\mathcal C) \arrow{r}& C^*(X,A/J)\arrow{r} & 0\end{tikzcd},\]
+%hence another application of remark \ref{rk3.8} yields $D_{J,A} = D_{C^*(X,J),E_X^{(\pi,T)}}$. 
 %where the first vertical arrow is the canonical mapping that induces the Morita equivalence. \\
 \end{enumerate}
 \qed

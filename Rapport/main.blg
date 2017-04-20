@@ -5,14 +5,14 @@ A level-1 auxiliary file: Remerciements.aux
 A level-1 auxiliary file: AbstractFrench.aux
 A level-1 auxiliary file: Motivation.aux
 Case mismatch error between cite keys SkTuYU and SkTuYu
----line 96 of file main.aux
+---line 99 of file main.aux
  : \citation{SkTuYU
  :                 }
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: QuantumGroups.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
-Repeated entry---line 227 of file biblio2.bib
+Repeated entry---line 236 of file biblio2.bib
  : @article{higsonkasparov
  :                        ,
 I'm skipping whatever remains of this entry
@@ -23,45 +23,45 @@ Warning--empty school in LeGall
 Warning--empty publisher in NowakYu
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 55 entries,
+You've used 57 entries,
             2118 wiz_defined-function locations,
-            849 strings with 11699 characters,
-and the built_in function-call counts, 16003 in all, are:
-= -- 1620
-> -- 574
-< -- 12
-+ -- 245
-- -- 176
-* -- 1041
-:= -- 2693
-add.period$ -- 166
-call.type$ -- 55
-change.case$ -- 237
+            863 strings with 12005 characters,
+and the built_in function-call counts, 16688 in all, are:
+= -- 1696
+> -- 588
+< -- 13
++ -- 251
+- -- 180
+* -- 1082
+:= -- 2797
+add.period$ -- 172
+call.type$ -- 57
+change.case$ -- 245
 chr.to.int$ -- 0
-cite$ -- 62
-duplicate$ -- 654
-empty$ -- 1351
-format.name$ -- 176
-if$ -- 3315
+cite$ -- 64
+duplicate$ -- 685
+empty$ -- 1410
+format.name$ -- 180
+if$ -- 3466
 int.to.chr$ -- 0
-int.to.str$ -- 55
-missing$ -- 63
-newline$ -- 277
-num.names$ -- 110
-pop$ -- 248
+int.to.str$ -- 57
+missing$ -- 65
+newline$ -- 287
+num.names$ -- 114
+pop$ -- 254
 preamble$ -- 1
-purify$ -- 196
+purify$ -- 202
 quote$ -- 0
-skip$ -- 439
+skip$ -- 465
 stack$ -- 0
-substring$ -- 1088
-swap$ -- 101
-text.length$ -- 12
+substring$ -- 1155
+swap$ -- 112
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 198
+type$ -- 206
 warning$ -- 7
-while$ -- 182
-width$ -- 57
-write$ -- 592
+while$ -- 191
+width$ -- 59
+write$ -- 614
 (There were 2 error messages)
