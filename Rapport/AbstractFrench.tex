@@ -46,7 +46,7 @@ où $EE' = \{(x,y)\in X\times X \text{ t.q. }\exists z\in X / (x,z)\in E \text{ 
 \item[$\bullet$] Soit $G$ un groupoïde étale $\sigma$-compact. Alors les ensembles $E\subset G$ symmétriques compacts, sont munis d'un ordre partiel $\subseteq$ et d'une loi de composition donnée par 
 \[E\circ E = EE'\cup E'E,\]
 où $EE' = \{gg' ; (g,g')\in G^{(2)}\}$. Cela définit une structure coarse $\mathcal E_G$.
-\item[$\bullet$] Soit $\mathbb G$ un groupe quantique compact. Alors l'ensemble des classes d'équivalence des représentations unitaires finies de $\mathbb G$ est muni de l'ordre suivant : $\pi\leq \pi'$ ssi $\pi$ est unitairement équivalente à une sous-représentation de $\pi$. De plus, le produit tensoriel fournit une loi de composition, et cela définit une structure coarse $\mathcal E_{\mathbb G}$.\\
+\item[$\bullet$] Soit $\mathbb G$ un groupe quantique compact. Alors l'ensemble des classes d'équivalence des représentations unitaires symétriques de dimension finie de $\mathbb G$ est muni de l'ordre suivant : $\pi\leq \pi'$ ssi $\pi$ est unitairement équivalente à une sous-représentation de $\pi$. De plus, le produit tensoriel symétrisé fournit une loi de composition, et cela définit une structure coarse $\mathcal E_{\mathbb G}$.\\
 \end{itemize} 
 
 Il s'avère que les algèbres de Roe $C^*(X,B)$, les produits croisés par $G$, et les produits croisés par $\hat{\mathbb G}$ sont filtrés par $\mathcal E_X$, $\mathcal E_G$ et $\mathcal E_{\mathbb G}$ respectivement.\\
@@ -84,7 +84,7 @@ Soient $B$ une $C^*$-algèbre, $\varepsilon\in (0,\frac{1}{4})$ et $E,F\in\mathc
 où $\varepsilon'$ et $F'$ vérifient :
 \begin{itemize}
 \item[$\bullet$] $\varepsilon'\in (0,\frac{1}{4})$ tel que $\alpha_X \varepsilon'\leq \varepsilon$,
-\item[$\bullet$] et $F'\in\mathcal E$ tel que $E\subseteq F'$ et $k_X(\varepsilon).F'\subseteq F$.
+\item[$\bullet$] et $F'\in\mathcal E$ tel que $E\subseteq F'$ et $k_X(\varepsilon').F'\subseteq F$.
 \end{itemize}
 \end{definition}
 
@@ -140,20 +140,28 @@ Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(X,K_B)$. Alors $\mu_{G,\til
 Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(X,K_B)$. Alors il existe $\lambda>1$ tel que $\mu_{G,\tilde B}$ est surjective ssi pour tout $0<\varepsilon<\frac{1}{4\lambda}$ et $F\in\mathcal E$ non-vide, il existe $E\in\mathcal E$ et $F'$ tel que $k_J .E \subseteq F$ tel que $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ soit vérifiée.
 \end{thm}
 
-Rappelons la définition de la propriété d'approxiamation persistante (PAP), donnée dans \cite{OY3}.
+Ils admettent une version uniforme :
+\begin{thm} Soit $G$ un groupoïde étale avec une base compacte. 
+\begin{itemize}
+\item[$\bullet$] Supposons que pour toute $G$-algèbre $B$, $\mu_{G,B}$ soit injective. Alors, pour tout $\varepsilon\in (0,\frac{1}{4})$ et tout $E,F\in\mathcal E$ tels que $k_J(\varepsilon). E\subseteq F$, il existe $E'\in\mathcal E$ tel que $E\subseteq E'$ et tel que $QI_{G,A}(E,E',\varepsilon,F)$ soit satisfait pout toute $G$-algèbre $B$.
+\item[$\bullet$] Supposons que pour toute $G$-algèbre $B$, $\mu_{G,B}$ soit surjective. Alors, pour un certain $\lambda>0$ et pour tout $\varepsilon\in (0,\frac{1}{4\lambda})$ et tout $F\in\mathcal E$, il existe $E,F'\in\mathcal E$ tels que $k_J(\varepsilon). E\subseteq F'$ et $F\subseteq F'$ tel que, pour toute $G$-algèbre $B$, $QS_{G,A}(E, F,F',\varepsilon,\lambda \varepsilon)$ soit satisfait.
+\end{itemize}
+\end{thm}
+
+Rappelons la définition de la propriété d'approximation persistante (PAP), donnée dans \cite{OY3}.
 
 \begin{definition}
-Soit $(B,\mathcal E)$ une $C^*$-algèbre filtrée, et soient $\varepsilon,\varepsilon'$ des nombres positifs tels que $0<\varepsilon <\varepsilon' <\frac{1}{4}$ et $F,F'\in\mathcal E$ non-vides tels que $F\subseteq F'$. 
+Soit $(B,\mathcal E)$ une $C^*$-algèbre filtrée, $\lambda>0$ et soient $\varepsilon,\varepsilon'$ des nombres positifs tels que $0<\varepsilon <\varepsilon' <\frac{1}{4}$ et $F,F'\in\mathcal E$ non-vides tels que $F\subseteq F'$. 
 \begin{itemize}
 \item[$\bullet$] $PA_B(\varepsilon,\varepsilon',F,F')$ : pour tout $x\in K_*^{\varepsilon,F}(B)$ tel que $\iota_{\varepsilon,F}(x)=0$ dans $K_*(B)$, alors $\iota_{\varepsilon,F}^{\varepsilon',F'}(x)=0$ dans $K_*^{\varepsilon',F'}(B)$.
-\item[$\bullet$] $B$ satisfait la propriété d'approximation persistante (PAP) si pour tout $F$ non-vide et $\varepsilon\in (0,\frac{1}{4})$, il existe $F'$ non-vide et $\varepsilon'\in [\varepsilon,\frac{1}{4})$ tel que $PA(\varepsilon,\varepsilon',F,F')$ soit vérifiée.
+\item[$\bullet$] $B$ satisfait la propriété d'approximation persistante $(PAP)_\lambda$ si pour tout $F$ non-vide et $\varepsilon\in (0,\frac{1}{4})$, il existe $F'$ non-vide tel que $PA(\varepsilon,\lambda\varepsilon,F,F')$ soit vérifiée.
 \end{itemize}
 \end{definition}
 
 Le théorème \ref{PAPG} permet de relier l'application d'assemblage contrôlée et la propriété d'approximation persistante. 
 
 \begin{thm} 
-Soit $G$ à base compacte. Si $\mu_{G,l^\infty(\N, K_A)}$ est surjective et $\mu_{G,A}$ est injective, alors, pour une constante universelle $\lambda_{PA}$, pour tout $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ et $F\in\mathcal E$ non-vide, il existe $F'\in\mathcal E$ tel que $F\subseteq F'$ et tel que $PA_{A\rtimes G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ soit vérifiée.
+Soit $G$ un groupoïde étale à base compacte qui admet un classifiant des actions propres cocompact. Si $\mu_{G,l^\infty(\N, K_A)}$ est surjective et $\mu_{G,A}$ est injective, alors, pour une constante universelle $\lambda_{PA}$, pour tout $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ et $F\in\mathcal E$ non-vide, il existe $F'\in\mathcal E$ tel que $F\subseteq F'$ et tel que $PA_{A\rtimes G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ soit vérifiée.
 \end{thm}
 
 En remarque, nous affirmons aussi que la tranformation de Kasparov contrôlée $J_G$ peut se définir pour les produits croisés réduits de groupes quantiques discrets de la même manière que dans le cas des groupoïdes étales. Pour ce faire, il suffit de remarquer que les propriétés importantes que vérifie le produit croisé, et qui permettent de contruire $J_G$, restent vraies dans le cas quantique. Les preuves écrites dans le cadre des groupoïdes étales se transposent alors sans modification.\\
@@ -169,8 +177,8 @@ est un isomorphisme $\rho$-contrôlé.
 La dernière partie se concentre sur les applications de ces constructions. La première application concerne la géométrie coarse. Un moyen pour ce faire est d'utiliser le groupoïde coarse $G(X)$, introduit dans \cite{SkTuYu}, qui est un groupoïde étale associé à tout espace coarse. Notamment, nous démontrons que l'application d'assemblage coarse contrôlée pour $X$ à valeurs dans $B$ est équivalente à l'application d'assemblage contrôlée pour $G(X)$ à valeurs dans $l^\infty(X,B\otimes\mathfrak K)$. Le théorème \ref{BCCeq} est le suivant.
 
 \begin{thm}
-Soient $B$ une $C^*$-algèbre, $R>0$ et $\Delta_R\subseteq X\times X$ l'entourage correspondant. Alors, pour tout $z\in RK^G(P_{\overline \Delta_R}(G),l^\infty)$ et tout $\varepsilon\in(0,\frac{1}{4})$, l'égalité suivante est vérifiée :
-\[(\Psi_B)_*\circ\mu^{\epsilon,\overline\Delta_R}_{G,\tilde B} (z) = \mu_{X,B}^{\epsilon,R}(\iota^*(z)).\]
+Soient $B$ une $C^*$-algèbre, $E\in\mathcal E_X$ un entourage et $\tilde B$ la $G$-algèbre $l^\infty(X,B\otimes \mathfrak K)$. Alors, pour tout $z\in RK^G(P_{\overline E}(G),l^\infty)$ et tout $\varepsilon\in(0,\frac{1}{4})$, l'égalité suivante est vérifiée :
+\[(\Psi_B)_*\circ\mu^{\epsilon,\overline E}_{G,\tilde B} (z) = \mu_{X,B}^{\epsilon,E}(\iota^*(z)).\]
 \end{thm}
 
 Ce théorème induit en $K$-théorie un résultat de G. Skandalis, J-L. Tu et G. Yu \cite{SkTuYu}, qui établit l'équivalence entre la conjecture de Baum-Connes coarse pour $X$ à coefficients dans $B$ et la conjecture de Baum-Connes pour $G(X)$ à coefficients dans $l^\infty(X,B\otimes \mathfrak K)$. \\
@@ -179,7 +187,7 @@ Ce théorème induit en $K$-théorie un résultat de G. Skandalis, J-L. Tu et G.
 Soit $X$ un espace coarse qui admet un plongement fibré dans l'espace de Hilbert. Alors $\hat \mu_{X}^{max}$ est un isomorphisme contrôlé, i.e. $X$ vérifie la conjecture de Baum-Connes coarse contrôlée.
 \end{cor}
 
-La dernière application concerne une formule de Kûnneth en $K$-théorie quantitative, qui constitue le théorème \ref{Kunneth}. Pour cela, nous avons besoin de définir le foncteur de restriction à un sous-groupoïde compact $H$ de $G$ en $KK$-théorie équivariante, ainsi qu'une propriété, appelée propreté forte, qui assure que $Res_H^G : KK^G \rightarrow KK^H$ est un isomorphisme. Voici le contenu du théorème.
+La dernière application concerne une formule de Kûnneth en $K$-théorie quantitative, qui constitue le théorème \ref{Kunneth}. Le cas des groupes a été couvert dans un article de H. Oyono-Oyono et G. Yu \cite{OY4}. Pour cela, nous avons besoin de définir le foncteur de restriction à un sous-groupoïde compact $H$ de $G$ en $KK$-théorie équivariante, ainsi qu'une propriété, appelée propreté forte, qui assure que $Res_H^G : KK^G \rightarrow KK^H$ est un isomorphisme. Voici le contenu du théorème.
 
 \begin{thm}
 Soit $G$ un groupoïde $\sigma$-compact étale et $A$ une $G$-algèbre. Si 
