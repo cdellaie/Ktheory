@@ -154,9 +154,15 @@ The homomorphisms inducing the Morita equivalence make the following diagram com
 and $J_G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes G}^{-1}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}=g_{G,*}\circ J_G(z)$.\\
 
 %% NEW PROOF
-\item[(v)] We can suppose $A$ unital. Let $0 \rightarrow J \rightarrow A \rightarrow A /J \rightarrow 0$ be a $G$-equivariant semi-split extension of $G$-algebras. Let us denote by $s : A/J \rightarrow A $ the $G$-equivariant completely positive cross section.  According to Kasparov-Stinespring theorem \ref{KasparovStinespring}, there exists a $A$-Hilbert module $E$ and a $*$-homomorphism $\pi : A/J \rightarrow \mathcal L_{A}(A\oplus E)$ such that $s(x) = P \pi(x) P$, where $P \in \mathcal L_{A}(A\oplus E)$ is the projection on the $A$ factor. Put $T= 2P-1$. Then, according to \cite{SkandalisExtension}, 
-\[[A\oplus E, \pi , T] = [\partial_J]\]
-in $KK_1^G(A/J,J)$. Up to adding a degenerate $K$-cycle, we can suppose that $A\oplus E$ is standard. This entails that the boundary of $E^{(\pi,T)}$ and right multiplication by $[\partial_J]$ coincides. Hence $J_G([\partial_J]) = D_{J\rtimes_r G,A\rtimes_r G}$.
+\item[(v)] We can suppose $A$ unital. Let $0 \rightarrow J \rightarrow A \rightarrow A /J \rightarrow 0$ be a $G$-equivariant semi-split extension of $G$-algebras with $q:A\rightarrow A/J$ the quotient map. Let us denote by $s : A/J \rightarrow A $ the $G$-equivariant completely positive cross section.  According to the equivariant Kasparov-Stinespring theorem \ref{GKasparovStinespring}, there exists an equivariant $A$-Hilbert module $E$ and a $G$-equivariant $*$-homomorphism $\pi : A/J \rightarrow \mathcal L_{A}(A\oplus E)$ such that $s(x) = P \pi(x) P$, where $P \in \mathcal L_{A}(A\oplus E)$ is the projection on the $A$ factor. Consider the $J$-Hilbert module $E' = (A\oplus E)\otimes_J J \cong J\oplus (E\otimes_J J)$, and the natural map $\tilde\pi =\pi\otimes_J 1: A/ J \rightarrow \mathcal L_{J}(E')$. Put $T= (2P-1)\otimes_J id_J$. Then, according to \cite{SkandalisExtension}, 
+\[[E', \tilde \pi , T] = [\partial_J]\]
+in $KK_1^G(A/J,J)$. Up to adding a degenerate $K$-cycle, we can suppose that $E'$ is standard. Put $\psi ( a ) = (q(a), \tilde \pi (a))$, hence the following diagram is commutative with exact rows:
+\[\begin{tikzcd}[column sep = small]
+0\arrow{r} &J\arrow{r}\arrow{d}{\psi_0} & A \arrow{r}\arrow{d}{\psi}& A/J\arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & \mathfrak K_J(E')\arrow{r} & A/J \oplus \mathcal L_J (E') \arrow{r}& A/J\arrow{r} & 0
+\end{tikzcd},\]
+where $J \rightarrow  \mathfrak K_J(E') $ is defined by $\psi_0(x)(\xi\oplus y) = \xi\oplus (xy) $ for every $\xi\in E$ and $x,y\in J$. 
+This entails that the boundary of $E^{(\pi,T)}$ and right multiplication by $[\partial_J]$ coincides. Hence, by functoriality and semi-split exactness of the reduced cross product, remark \ref{rk3.8} ensures that $J_G([\partial_J]) = D_{J\rtimes_r G,A\rtimes_r G}$.
 %% END NEW PROOF
 %\item[(v)] Let $q:A\rightarrow A/J$ be the quotient map and $(H_J, \pi, T)$ be a cycle representing $[\partial_{J,A}]$ and $P=\frac{1+T}{2}$. Put $\mathcal C=A\oplus \mathcal L_J(H_J)$ and consider the following commutative diagram :
 %\[\begin{tikzcd}[column sep = small]
@@ -366,23 +372,22 @@ because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^E(
 \subsection{Quantitative statements}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this subsection, the groupoid $G$ must have a compact unit space $G^{(0)}$. Then, if $\{B_j\}$ is a countable family of $G$-algebras, the diagonal action of $G$ on the product provides $\prod_j B_j$ with the structure of a $G$-algebra. 
+In this subsection, the groupoid $G$ must have a compact unit space $G^{(0)}$. Then, if $\{B_j\}$ is a countable family of $G$-algebras, the diagonal action of $G$ on the product provides $\prod_j B_j$ with the structure of a $G$-algebra. \\
+
+Let $A$ be a $G$-algebra. We will say that :\\
+
+$\bullet$(Quantitative Injectivity) $\mu_{G,A}$ is quantitatively injective if, for every $E\in \mathcal E$, there exists $\varepsilon\in (0,\frac{1}{4})$ such that, for every $F\in\mathcal E$ satisfying $k_J(\varepsilon). E \subseteq F$, there exists $E'\in\mathcal E$ such that $E\subseteq E'$ and 
+\[\forall z\in RK^G(P_E(G),A),\quad\mu_{G,A}^{\varepsilon,E,F}(z) = 0 \text{ implies } q_E^{E'}(z)=0.\]
+
+$\bullet$(Quantitative Surjectivity) $\mu_{G,A}$ is quantitatively surjective if there exists $\varepsilon$ such that for every $F\in \mathcal E$ such that, there exists $\varepsilon' \in (\varepsilon,\frac{1}{4})$ and $E,F'\in\mathcal E$ such that $F \subseteq F'$ and $k_J(\varepsilon'). E\subseteq F'$,  
+\[\forall y\in K^{\varepsilon, F}(A\rtimes_r G),\exists z\in RK^G(P_E(G),A) \text{ such that } \mu_{G,A}^{\varepsilon', E, F'}(z)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y).\]
 
 \begin{prop} 
-Let B be a $G$-algebra.\\
-If the following statement is true :\\
+Let $G$ be an étale groupoid with compact base space, and let $B$ be a $G$-algebra.\\
 
-$\bullet$(Quantitative Injectivity) $\forall E\in\mathcal E$, there exists $\varepsilon\in (0,\frac{1}{4})$ such that, for all $F\in\mathcal E$ such that $k_J(\varepsilon) . E\subseteq F$, there exists $E'\in\mathcal E$ such that $E\subseteq E'$ satisfying : for every $x\in RK_*^G(P_E(G),B)$ satisfiying $\mu_{G,B}^{\varepsilon,E,F}(x)=0\in K^{\varepsilon,F}(B\rtimes_r G)$, then $q_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),B)$;\\
-
-then $\mu_{G,A}$ is injective.\\
-
-On the other hand, if this statement is true : \\
-
+$\bullet$(Quantitative Injectivity) If $\mu_{G,A}$ is quantitatively injective then $\mu_{G,A}$ is one-to-one.\\
 %$\bullet$(Quantitative Surjectivity) there exists $\varepsilon\in (0,\frac{1}{4})$ such that for any controlled subsets $E,F\in\mathcal E$  such that $k_J(\varepsilon).E\subseteq F$,$\exists \varepsilon',F'$ such that $\varepsilon'\leq \varepsilon<\frac{1}{4}$ and $k_J E\subseteq F\subseteq F'$, such that for all $y\in K_*^{\varepsilon,F}(A\rtimes_r G),\exists x \in RK_*^G(P_E(G),A)$ such that $\mu_{G,A}^{\varepsilon',E,F'}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$;\\
-
-$\bullet$(Quantitative Surjectivity) For every $\varepsilon\in (0,\frac{1}{4\alpha_J})$, every $F\in\mathcal E$ and every $y\in K^{\varepsilon,F}(B\rtimes_r G)$, there exist $\varepsilon'\in (0,\frac{1}{4\alpha_J})$, $E,F'\in\mathcal E$ and $z\in RK^G(P_E(G), B)$ such that $\varepsilon\leq \varepsilon'$, $F\subseteq F'$, $k_J(\varepsilon').E\subseteq F'$ and $\mu_{G,B}^{\varepsilon',E,F'}(z) = \iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.  \\
-
-then $\mu_{G,A}$ is surjective.
+$\bullet$(Quantitative Surjectivity) If $\mu_{G,A}$ is quantitatively surjective then $\mu_{G,A}$ is onto.\\
 \end{prop}
 
 \begin{dem}
@@ -474,7 +479,7 @@ Each of the summand is compact, hence $[H_B, \pi,T]=[H_B,\pi,T']$.\\
 
 \begin{lem}
 Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarrow G^{(0)}$ is locally injective, and let $(B_j)_j$ be a countable family of $G$-algebras. Then the projection $\prod_j B_j \otimes K \rightarrow B_j\otimes K$ induces an isomorphism
-\[\Theta : RK^G(X,\prod_j B_j\otimes K)\rightarrow \prod_j RK^G(X,B_j\otimes K)\cong \prod_j RK^G(X,B_j).\]
+\[\Theta : RK^G(X,\prod_j B_j\otimes \mathfrak K)\rightarrow \prod_j RK^G(X,B_j\otimes \mathfrak K)\cong \prod_j RK^G(X,B_j).\]
 \label{LocalInjectivity}
 \end{lem}
 
@@ -494,7 +499,7 @@ Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarr
 % NEW PROOF
 \begin{dem}
 Put $B_\infty = \prod_j B_j\otimes \mathfrak K $. Let us define a $Z_2$-graded homomorphism 
-\[\eta :  \prod_j RK^G(X,B_j\otimes K) \rightarrow RK^G(X,\prod_j B_j\otimes \mathfrak K).\] 
+\[\eta :  \prod_j RK^G(X,B_j\otimes \mathfrak K) \rightarrow RK^G(X,\prod_j B_j\otimes \mathfrak K).\] 
 Let $Z\subseteq X$ be a $G$-proper $G$-compact subspace, and, for all $j$, let $z_j\in KK^G(C_0(Z),B_j)$ be represented by a standard $K$-cycle $(H_{B_j},\pi_j ,T_j)$. By lemma \ref{JLTform}, we can suppose that $T_j$ is $G$-equivariant self-adjoint, commutes with the action of $C_0(Z)$ and $-1\leq T_j \leq 1$. \\
 
 Define $E_\infty = \prod_j (E_j\otimes \mathfrak K)$. It is a $B_\infty$-Hilbert module with respect to the scalar product 
@@ -623,7 +628,7 @@ The two previous lemmas entail the following result.
 We can now prove the quantitative statements.\\
 
 \begin{thm}\label{Quant1}
-Let $B$ a $G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then $\mu_{G,\tilde B}$ is injective if and only if for every $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ and $F$ such that $k_J(\varepsilon).E\subseteq F$, there exists $E' \in\mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(E,E',\varepsilon,F)$. 
+Let $B$ a $G$-algebra, and $\tilde B = l^\infty(\N,B\otimes \mathfrak K)$. Then $\mu_{G,\tilde B}$ is injective if and only if for every $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ and $F$ such that $k_J(\varepsilon).E\subseteq F$, there exists $E' \in\mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(E,E',\varepsilon,F)$. 
 \end{thm}
 
 \begin{dem}
@@ -638,7 +643,7 @@ For the converse, suppose one can find $E,\varepsilon,F$ such that $QI_{G,B}(E,E
 We also have a theorem relating quantitative surjectivity for $\hat\mu_{G,B}$ and surjectivity of $\mu_{G,\tilde B}$.
 
 \begin{thm}\label{Quant2}
-Let $B$ a $G$-algebra, and $\tilde B = l^\infty(X,K_B)$. Then there exists $\lambda>1$ such that $\mu_{G,\tilde B}$ is onto if and only if for any $\varepsilon\in ( 0 ,\frac{1}{4\lambda})$ and every nonempty $F\in\mathcal E$, there exist $E,F'\in\mathcal E$ such that  $k_J(\varepsilon) .E \subseteq F$, $F\subseteq F'$ and such that $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ holds.
+Let $B$ a $G$-algebra, and $\tilde B = l^\infty(\N,B\otimes \mathfrak K)$. Then there exists $\lambda>1$ such that $\mu_{G,\tilde B}$ is onto if and only if for any $\varepsilon\in ( 0 ,\frac{1}{4\lambda})$ and every nonempty $F\in\mathcal E$, there exist $E,F'\in\mathcal E$ such that  $k_J(\varepsilon) .E \subseteq F$, $F\subseteq F'$ and such that $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ holds.
 \end{thm}
 
 \begin{dem}
@@ -680,7 +685,7 @@ Now choose $j$ such that $E'\subseteq E_j $ and $F'\subseteq F_j$, and compose t
 %\qed
 %\end{dem}
 
-Using one way of the proofs of the quantitative statements, we can easily prove the following theorem.
+Using one way of the proofs of the quantitative statements, we can easily prove the following theorem by replacing $l^\infty(X,B\otimes \mathfrak K)$ by $\prod (B_j \otimes \mathfrak K)$.
 
 \begin{thm} Let $G$ be an étale groupoid with compact base space. 
 \begin{itemize}
@@ -694,10 +699,10 @@ Using one way of the proofs of the quantitative statements, we can easily prove 
 We recall the following definition from \cite{OY3}.
 
 \begin{definition}
-Let $B$ be a $\mathcal E$-filtered $C^*$-algebra, $\varepsilon,\varepsilon'$ be positive numbers such that $0<\varepsilon <\varepsilon' <\frac{1}{4}$ and $F,F'\in\mathcal E$ be nonempty controlled subsets such that $F\subseteq F'$. The following property is called Persistance Approximation Property :
+Let $B$ be a $\mathcal E$-filtered $C^*$-algebra, $\lambda>0$, $\varepsilon,\varepsilon'$ be positive numbers such that $0<\varepsilon <\varepsilon' <\frac{1}{4}$ and $F,F'\in\mathcal E$ be nonempty controlled subsets such that $F\subseteq F'$. The following property is called Persistance Approximation Property :
 \begin{itemize}
 \item[$\bullet$] $PA_B(\varepsilon,\varepsilon',F,F')$ : for every $x\in K_*^{\varepsilon,F}(B)$ such that $\iota_{\varepsilon,F}(x)=0$ in $K_*(B)$, then $\iota_{\varepsilon,F}^{\varepsilon',F'}(x)=0$ in $K_*^{\varepsilon',F'}(B)$.
-\item[$\bullet$] $B$ is said to satisfy the Persistance Approximation Property (PAP) if for every nonempty $F\in\mathcal E$ and every $\varepsilon\in (0,\frac{1}{4})$, there exists $F'\in\mathcal E$ nonempty and $\varepsilon'\in [\varepsilon,\frac{1}{4})$ such that $PA_B(\varepsilon,\varepsilon',F,F')$ holds.
+\item[$\bullet$] $B$ is said to satisfy the Persistance Approximation Property $(PAP)_\lambda$ if for every nonempty $F\in\mathcal E$ and every $\varepsilon\in (0,\frac{1}{4})$, there exists $F'\in\mathcal E$ nonempty such that $PA_B(\varepsilon,\lambda\varepsilon,F,F')$ holds.
 \end{itemize}
 \end{definition}
 
@@ -705,10 +710,10 @@ Let $B$ be a $\mathcal E$-filtered $C^*$-algebra, $\varepsilon,\varepsilon'$ be 
 %Up to some hypothesis, if $\mu_{G,l^\infty(\N, K_A)}$ is onto and $\mu_{G,A}$ is one-to-one, then, for a universal constant $\lambda_{PA}$, for all $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ and nonempty $F$, there exists $F'$ such that $F\subseteq F'$ and $PA_{A\rtimes G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ holds.
 %\end{thm}
 
-The following result gives a sufficient condition for (PAP) to be satisfied for a large class of $C^*$-algebras.
+The following result gives a sufficient condition for $(PAP)_\lambda$ to be satisfied for a large class of $C^*$-algebras.
 
 \begin{thm} \label{PAPG}
-Let $G$ be an étale groupoid with compact base space. There exists a universal constant $\lambda_{PA}$ such that, for every $G$-algebra $A$, if $\mu_{G,l^\infty(\N, A\otimes\mathfrak K)}$ is onto and $\mu_{G,A}$ is one-to-one, then for every $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ and every nonempty $F\in\mathcal E$, there exists $F'\in\mathcal E$ such that $F\subseteq F'$ and $PA_{A\rtimes_r G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ holds.
+Let $G$ be an étale groupoid with compact base space. Assume that $G$ admits a cocompact universal space for proper actions. Then there exists a universal constant $\lambda_{PA}$ such that, for every $G$-algebra $A$, if $\mu_{G,l^\infty(\N, A\otimes\mathfrak K)}$ is onto and $\mu_{G,A}$ is one-to-one, then for every $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ and every nonempty $F\in\mathcal E$, there exists $F'\in\mathcal E$ such that $F\subseteq F'$ and $PA_{A\rtimes_r G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ holds.
 \end{thm}
 
 \begin{dem}
@@ -735,5 +740,5 @@ The theorems \ref{Quant1} and \ref{Quant2} provide examples that satisfy (PAP). 
 The theorem \ref{PAPG} provides an obstruction for the Baum-Connes conjecture to be satisfied. 
 \end{rk}
 
-\begin{rk} One can ignore the condition of $G^{(0)}$ being compact. Then theorems \ref{Quant1}, \ref{Quant2} and \ref{PAPG} remain true when $l^\infty(\N, A\otimes\mathfrak K)\rtimes_r G$ is replaced by the controlled product $\mathcal A^G_\infty$, where $\mathcal A^G$ is the constant family of $\mathcal E$-controlled $C^*$-algebras $(A\rtimes_r G)$. You will still need $G$ to be $\sigma$-compact in order to be able to extract countable sequences from the quantitative statements.
-\end{rk}
+%\begin{rk} One can ignore the condition of $G^{(0)}$ being compact. Then theorems \ref{Quant1}, \ref{Quant2} and \ref{PAPG} remain true when $l^\infty(\N, A\otimes\mathfrak K)\rtimes_r G$ is replaced by the controlled product $\mathcal A^G_\infty$, where $\mathcal A^G$ is the constant family of $\mathcal E$-controlled $C^*$-algebras $(A\rtimes_r G)$. You will still need $G$ to be $\sigma$-compact in order to be able to extract countable sequences from the quantitative statements.
+%\end{rk}
