@@ -76,7 +76,7 @@ Let $Z_0\subseteq Z_1\subseteq ... \subseteq Z_n $ be the skeleton decomposition
 
 Let us prove by induction that $\alpha_j=\alpha^{G,Z_j}_{A,B}$ is an isomorphism. By a standard argument similar to the proof of theorem \ref{prod}, it is sufficient to prove the statement for $j=0$.\\
 
-Let $U\subseteq Z_0$ be a $G$-compact $G$-proper space. By strong properness, $U$ can be finitely covered by open subsets of the type $G \times_H V$. By a standard Mayer-Vietoris argument, we can suppose that there exists a compact open subgroupoid $H$ of $G$ and a proper $H$-space such that $U = G \times_H V$. The following diagram is commutative :
+Let $U\subseteq Z_0$ be a $G$-compact $G$-proper space. By strong properness, $U$ can be finitely covered by open subsets of the type $G \times_H V$. By a standard Mayer-Vietoris argument, we can suppose that there exists a compact open subgroupoid $H$ of $G$ and a compact $H$-space $V$ such that $U = G \times_H V$. The following diagram is commutative :
 \[\begin{tikzcd}[column sep = small] RK_*^G(U,A)\otimes K_*(B) \arrow{r}{\alpha_{A,B}^{G,U}} \arrow{d}{\text{Res}_H^G} & RK^G(U, A\otimes B) \arrow{d}{\text{Res}_H^G}\\
 RK_*^H(V, \text{Res}_H^G (A))\otimes K_*(B) \arrow{r}{\alpha_{\text{Res}_H^G A,B}^{H,V}} \arrow{d}{\mu_{H,\text{Res}_H^G A \otimes id}} & 
 	RK_*^H(V, \text{Res}_H^G (A)\otimes B)\arrow{d}{\mu_{H,\text{Res}_H^G A }} \\
@@ -88,8 +88,8 @@ The first vertical arrows are isomorphisms by Proposition \ref{Restriction}, the
 \begin{lem}\label{KunnethLemma}
 There exists a positive number $\kappa$ and a function $c : (0,\frac{1}{4\kappa})\times\mathcal E\rightarrow \mathcal E$, decreasing in $E$ and non increasing in $\varepsilon$ such that, for any étale groupoid $G$, any filtered $G$-algebra $(A,\mathcal E)$, and any $C^*$-algebra $B$, the following diagram commutes :
 \[\begin{tikzcd}
-RK_*^G(P_E(G),A)\otimes K_*(B) \arrow{r}{\alpha^{G,P_E(G)}_{A,B}}\arrow{d}{\mu_{G,A}^{\varepsilon,F}\otimes \text{id}_{K_*(B)}} & 
-RK_*^G(P_E(G),A\otimes B) \arrow{d}{\mu_{G,A}^{\alpha_ \tau\varepsilon,h_\varepsilon F}} \\
+RK_*^G(P_E(G),A)\otimes K_*(B) \arrow{r}{\alpha^{G,P_E(G)}_{A,B}}\arrow{d}{\mu_{G,A}^{\varepsilon,E,F}\otimes \text{id}_{K_*(B)}} & 
+RK_*^G(P_E(G),A\otimes B) \arrow{d}{\mu_{G,A}^{\alpha_ \tau\varepsilon,E,h_\varepsilon F}} \\
 K_*^{\varepsilon,F}(A\rtimes_r G)\otimes K_*(B) \arrow{r}{\alpha_{A\rtimes_r G,B}^{\varepsilon,F}} & 
 K_*^{\alpha_\tau\varepsilon,h_{\varepsilon}F}((A\otimes B)\rtimes_r G)\\
 \end{tikzcd}\] 
@@ -110,11 +110,11 @@ which is just the statement of the lemma.\\
 \begin{dem} \textit{of theorem \ref{Kunneth}}\\
 Let $\kappa>0$ and $c : (0,\frac{1}{\kappa})\times\mathcal E\rightarrow \mathcal E$ as in lemma \ref{KunnethLemma}.\\
 
-Let $A$ be a $G$-algebra and $B$ a $C^*$-algebra, seen as a $G$-algebra with trivial action. As $(A\otimes B)\rtimes_r G \simeq (A\rtimes_r G)\otimes B$, we will make the slight abuse of coufounding them. Let us prove that $\hat \alpha_{A\rtimes_r G,B}$ is a controlled isomorphism.\\
+Let $A$ be a $G$-algebra and $B$ a $C^*$-algebra, seen as a $G$-algebra with trivial action. As $(A\otimes B)\rtimes_r G \simeq (A\rtimes_r G)\otimes B$, we will identify them in the remaining of the proof. Let us prove that $\hat \alpha_{A\rtimes_r G,B}$ is a controlled isomorphism.\\
 
 Let $F\in\mathcal E$ and $\varepsilon\in (0,\frac{1}{4})$. Choose $E \in\mathcal E$ such that $k_J(\varepsilon).E\subseteq F$. By controlled surjectivity, there exists $F'\in \mathcal E$ such that $QS_{G,A\otimes B}(\varepsilon,\lambda\varepsilon, F,F',E)$ holds.\\
 
-Let $y\in K^{\varepsilon,F}_*((A\otimes B)\rtimes_r G)$. By controlled surjectivity of $\hat\mu_{G,A\otimes B}$, there exists $z\in RK_*^G(P_E(G), A\otimes B) $ such that $\mu_{G,A\otimes B}^{\kappa\varepsilon,F'}(z)=\iota_{\varepsilon,F}^{\kappa\varepsilon,F'}(y)$. Theorem \ref{TopologicalKunneth} entails that there exists $z_1 \in RK_*^G(P_E(G),A)\otimes K_*(B) $ such that $\alpha_{A,B}^{G,P_E(G)}(z_1)=z$, and lemma \ref{KunnethLemma} shows that, if $z_2=(\mu_{G,A}^{\varepsilon,E,F} \otimes id_{\hat K_*(B)})(z_1)$, then $\alpha_{A\rtimes_r G,B}(z_2)=\iota_{}^{}(y)$.\\
+Let $y\in K^{\varepsilon,F}_*((A\otimes B)\rtimes_r G)$. By controlled surjectivity of $\hat\mu_{G,A\otimes B}$, there exists $z\in RK_*^G(P_E(G), A\otimes B) $ such that $\mu_{G,A\otimes B}^{\kappa\varepsilon,F'}(z)=\iota_{\varepsilon,F}^{\kappa\varepsilon,F'}(y)$. Theorem \ref{TopologicalKunneth} entails that there exists $z_1 \in RK_*^G(P_E(G),A)\otimes K_*(B) $ such that $\alpha_{A,B}^{G,P_E(G)}(z_1)=z$, and lemma \ref{KunnethLemma} shows that, if $z_2=(\mu_{G,A}^{\varepsilon,E,F} \otimes id_{\hat K_*(B)})(z_1)$, then $\alpha_{A\rtimes_r G,B}^{\varepsilon,F} (z_2)=\iota_{\varepsilon,F}^{\alpha_\tau\varepsilon,h_\varepsilon F}(y)$.\\
 
 Let us show the controlled injectivity. Let $\varepsilon\in(0,\frac{1}{4})$ and $F\in\mathcal E$.\\ 
 
