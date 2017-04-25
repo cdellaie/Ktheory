@@ -11,19 +11,29 @@
 Then, the restriction of the multiplication, inverse, unit, target and source maps on $H$ defines a structure of groupoid on $H$ over $H^{(0)} = s(H)$. If $G$ is étale, $H$ is also étale. We will write $H< G$ to indicate that $H$ is a subgroupoid of $G$.
 \end{definition}
 
-In this section, we define for all subgroupoids $H < G$ induction and restriction transformations. Let $G$ be an étale groupoid and $H<G$.\\
+In this section, we define for all subgroupoids $H < G$ induction and restriction transformations. Let $G$ be an étale groupoid and $H<G$. The action of $G$ on $C_0(G)$ given by 
+\[\left\{ \begin{array}{rcl}
+C_0(G) & \rightarrow & C_0(G) \\
+f & \mapsto  & [x\in G^{s(g)}\mapsto f(gx) ]
+\end{array}\right.\] 
+is called left translation.\\
 
-Let $A$ be a $H$-algebra, with action given by $\alpha : s^*A \rightarrow r^* A$. Put $\phi=r\circ \iota$ where $\iota : H^{(0)}\hookrightarrow G^{(0)}$ is the canonical inclusion, hence $\phi^*A = A\otimes_\phi C_0(G)$ is a $C(G)$-algebra . Define the induced $C(G^{(0)})$-algebra :
+Let $A$ be a $H$-algebra, with action given by $\alpha : s^*A \rightarrow r^* A$. Consider the tensor product of $C(H^{(0)})$-algebras $C_0(G)\otimes_{C(H^{(0)})} A$. Left translation provides a structure of $G$-algebra on $C_0(G)\otimes_{C(H^{(0)})} A$. Define the induced $C(G^{(0)})$-algebra by :
 %\[\text{Ind}_H^G (A) = \{f \in C_0(G,A) \text{ s.t. } h^{-1} f(gh) = f(g),\forall h\in H\}. \]
-\[\text{Ind}_H^G (A) = \{f \in \phi^* A \text{ s.t. } \alpha_{h^{-1}}(f_{hg}) = f_g,\forall h\in H,g\in G^{s(h)}\}. \]
-Left translation defines an action of $G$ on $\text{Ind}_H^G A$, so that $\text{Ind}_H^G A$ is a $G$-algebra.\\
+\[\text{Ind}_H^G (A) = \{f \in C_0(G)\otimes_{C(H^{(0)})} A \text{ s.t. } \alpha_{h^{-1}}(f_{hg}) = f_g,\forall h\in H,g\in G^{s(h)}\}. \]
+Notice that $\text{Ind}_H^G A$ can be identified with the $G$-algebra of $H$-invariant element of $C_0(G)\otimes_{C(H^{(0)})} A$, which we will denote by $(C_0(G)\otimes A )^H$ for the remainder of the section.\\
 
-Let $E$ be a Hilbert $A$-module, endowed with an action $V\in\mathcal L_A(s^*E,r^*E)$ of $H$. Define the induced Hilbert module :
+%Let $A$ be a $H$-algebra, with action given by $\alpha : s^*A \rightarrow r^* A$. Put $\phi=r\circ \iota$ where $\iota : H^{(0)}\hookrightarrow G^{(0)}$ is the canonical inclusion, hence $\phi^*A = A\otimes_\phi C_0(G)$ is a $C(G)$-algebra . Define the induced $C(G^{(0)})$-algebra :
+%\[\text{Ind}_H^G (A) = \{f \in C_0(G,A) \text{ s.t. } h^{-1} f(gh) = f(g),\forall h\in H\}. \]
+%\[\text{Ind}_H^G (A) = \{f \in \phi^* A \text{ s.t. } \alpha_{h^{-1}}(f_{hg}) = f_g,\forall h\in H,g\in G^{s(h)}\}. \]
+%Left translation defines an action of $G$ on $\text{Ind}_H^G A$, so that $\text{Ind}_H^G A$ is a $G$-algebra.\\
+
+Let $E$ be a Hilbert $A$-module, endowed with an action $V\in\mathcal L_A(s^*E,r^*E)$ of $H$. Define the induced Hilbert module by :
 %\[\text{Ind}_H^G (E) = \{f \in C_0(G,E) \text{ s.t. } h^{-1} f(gh) = f(g),\forall h\in H\}. \]
-\[\text{Ind}_H^G (E) = \{f \in \phi^* E \text{ s.t. } \alpha_{h^{-1}}(f_{hg}) = f_g,\forall h\in H,g\in G^{s(h)}\}. \]
-Left translation defines an action of $G$ on $\text{Ind}_H^G E$, hence $\text{Ind}_H^G E$ is a $G$-equivariant Hilbert $\text{Ind}_H^G A$-module.
+\[\text{Ind}_H^G (E) = \{f \in C_0(G)\otimes_{C(H^{(0)}} E \text{ s.t. } \alpha_{h^{-1}}(f_{hg}) = f_g,\forall h\in H,g\in G^{s(h)}\}. \]
+Left translation defines an action of $G$ on $\text{Ind}_H^G E$, hence $\text{Ind}_H^G E$ is a $G$-equivariant Hilbert $\text{Ind}_H^G A$-module. As before, $\text{Ind}_H^G A$ can be identified with the $H$-invariant elements $(C_0(G)\otimes_{C(H^{(0)})} E)^H$.\\
 
-Let $A$ and $B$ be two $H$-algebras. For all $(E,\pi,T)\in \mathbb E^G(A,B)$, define $\text{Ind}_H^G \pi$ and $\text{Ind}_H^G T$ as pointwise evaluation and multiplication by $\pi$ and $T$, i.e. $\text{Ind}_H^G T = T\otimes_\phi 1$ and $\text{Ind}_H^G \pi  = \pi\otimes_\phi id$.
+Let $A$ and $B$ be two $H$-algebras. For all $(E,\pi,T)\in \mathbb E^G(A,B)$, define $\text{Ind}_H^G \pi$ and $\text{Ind}_H^G T$ as pointwise evaluation and multiplication by $\pi$ and $T$, i.e. $\text{Ind}_H^G T = T\otimes 1$ and $\text{Ind}_H^G \pi  = \pi\otimes id$.
 
 \begin{definition}
 For all subgroupoids $H<G$, let $A$, $B$ and $D$ be $G$-algebras and $A'$, $B'$ and $D'$ be $H$-algebras. Then, the map $(E,\pi,T)\mapsto ( \text{Ind}_H^G E, \text{Ind}_H^G\pi ,\text{Ind}_H^G T )$ induces an even homomorphism of $\Z_2$-graded abelian groups
@@ -49,7 +59,7 @@ Let $Z$ be a left $H$-space. Define on $G \times_{s,p} Z $ the following equival
 The induced $G$-space of a left $H$-space $Z$ is defined as $ G\times_H Z = (G \times_{s,p} Z) / \sim_H$. 
 \end{definition}
 
-Notice that we have a natural identification between $\text{Ind}_H^G C_0(Z)$ and $C_0(Z\times_H G)$.\\
+Notice that we have a natural identification between $\text{Ind}_H^G C_0(Z)$ and $C_0(G \times_H Z)$.\\
 
 \begin{lem} \label{Restriction} Let $H$ be a compact open subgroupoid of $G$, and $V$ a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective. Then, for every $H$-algebra $A$ and every $G$-algebra $B$, the transformations $Res_H^G$ and $Ind_H^G$ induce an isomorphism of $\Z_2$-graded abelian groups :
 \[RK^G( G\times_H V, B) \cong RK^H(V, Res_H^G B).\]
