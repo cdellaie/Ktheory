@@ -13,8 +13,8 @@ Bien qu'ouverte dans le cas général, la conjecture de Baum-Connes a été dém
 Par exemple, de larges classes de $C^*$-algèbres sont construites à partir :\\ 
 \begin{itemize}
 \item[$\bullet$] d'espaces métrique $(X,d)$ : les algèbres de Roe $C^*(X)$,
-\item[$\bullet$] de groupes localement compacts $G$ : les $C^*$-algèbres réduite $C^*_r(G)$ et maximale $C_{max}(G)$, et les produits croisés $A\rtimes G$. Plus généralement, les mêmes notions existent pour les groupoïdes localement compacts avec système de Haar,
-\item[$\bullet$] de groupes quantiques compact $\mathbb G$ et de leur duals, les groupes quantiques discrets $\hat{\mathbb G}$ : à nouveau leurs $C^*$-algèbres réduites, maximales et leurs produits croisés.\\
+\item[$\bullet$] de groupes localement compacts $G$ : les $C^*$-algèbres réduite $C^*_r(G)$ et maximale $C^*_{max}(G)$, et les produits croisés $A\rtimes G$. Plus généralement, les mêmes notions existent pour les groupoïdes localement compacts avec système de Haar,
+\item[$\bullet$] de groupes quantiques compacts $\mathbb G$ et de leur duals, les groupes quantiques discrets $\hat{\mathbb G}$ : à nouveau leurs $C^*$-algèbres réduites, maximales et leurs produits croisés.\\
 \end{itemize}
 
 Or, dans la plupart des cas, ces $C^*$-algèbres possèdent une structure supplémentaire appelée filtration. La première étape de notre travail a consisté en une généralisation de la notion de filtration, ce qui permet d'appliquer les techniques développées dans \cite{OY2} et \cite{OY3} à de nouveaux exemples. Dans ces articles, les auteurs définissent une $C^*$-algèbre filtrée de la manière suivante.
@@ -29,7 +29,7 @@ Une $C^*$-algèbre $A$ est filtrée s'il existe une famille de sous-espace vecto
 \end{itemize}
 \end{definition}
 
-Nous proposons alors d'étendre cette définition en considérant des familles des sous-espaces indexées par des structures plus générales que nous appelons structures coarses. 
+Nous proposons alors d'étendre cette définition en considérant des familles des sous-espaces vectoriels indexés par des structures plus générales que nous appelons structures coarses. 
 
 \begin{definition}
 Une structure coarse $\mathcal E$ est un semi-groupe abélien qui est aussi un treillis. %is a lattice which is an abelian semi-group. %such that $\forall E,E'\in \mathcal E$, $E\leq E'E$. 
@@ -40,10 +40,10 @@ Si une structure coarse $\mathcal E$ est donnée, une $C^*$-algèbre $\mathcal E
 
 De nouvelles $C^*$-algèbres peuvent alors être vues comme des $C^*$-algèbres filtrées. Voici des exemples qui sont détaillés par la suite.
 \begin{itemize} 
-\item[$\bullet$] Soit $(X,d)$ un espace métrique discret à géométrie bornée. Alors les ensembles $E\subset X$ symmétriques tels que $\sup d<\infty$, sont munis d'un ordre partiel $\subseteq$ et d'une loi de composition donnée par 
+\item[$\bullet$] Soit $(X,d)$ un espace métrique discret à géométrie bornée. Alors les ensembles $E\subseteq X$ symmétriques tels que $\sup d<\infty$, sont munis d'un ordre partiel $\subseteq$ et d'une loi de composition donnée par 
 \[E\circ E = EE'\cup E'E,\]
 où $EE' = \{(x,y)\in X\times X \text{ t.q. }\exists z\in X / (x,z)\in E \text{ et }(z,y)\in E'\}$. Cela définit une structure coarse $\mathcal E_X$.
-\item[$\bullet$] Soit $G$ un groupoïde étale $\sigma$-compact. Alors les ensembles $E\subset G$ symmétriques compacts, sont munis d'un ordre partiel $\subseteq$ et d'une loi de composition donnée par 
+\item[$\bullet$] Soit $G$ un groupoïde étale $\sigma$-compact. Alors les ensembles $E\subseteq G$ symmétriques compacts, sont munis d'un ordre partiel $\subseteq$ et d'une loi de composition donnée par 
 \[E\circ E = EE'\cup E'E,\]
 où $EE' = \{gg' ; (g,g')\in G^{(2)}\}$. Cela définit une structure coarse $\mathcal E_G$.
 \item[$\bullet$] Soit $\mathbb G$ un groupe quantique compact. Alors l'ensemble des classes d'équivalence des représentations unitaires symétriques de dimension finie de $\mathbb G$ est muni de l'ordre suivant : $\pi\leq \pi'$ ssi $\pi$ est unitairement équivalente à une sous-représentation de $\pi$. De plus, le produit tensoriel symétrisé fournit une loi de composition, et cela définit une structure coarse $\mathcal E_{\mathbb G}$.\\
@@ -53,7 +53,7 @@ Il s'avère que les algèbres de Roe $C^*(X,B)$, les produits croisés par $G$, 
 
 %La première partie de la thèse rappelle les notions nécessaire à la compréhension du texte. Dans la seconde partie, nous développons ce que nous appelons %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-La deuxième partie de la thèse s'intéresse à la construction d'applications d'assemblage à valeurs dans la $K$-théorie contrôlée, dans le cas des espaces coarse et dans celui des groupoïdes étales. Une propriété importante est que ces applications factorisent les applications d'assemblage classiques. Cela permet de relier les conjectures de Baum-Connes et de Baum-Connes coarse aux propriétés de nos applications. Ces dernières sont définies en deux étapes. La première est de définir ce que l'on appelle un foncteur de descente. Puis, on définit le complexe de Rips associé à $X$ et à $G$, et un certain projecteur canonique associé. \\
+La deuxième partie de la thèse s'intéresse à la construction d'applications d'assemblage à valeurs dans la $K$-théorie contrôlée, dans le cas des espaces coarses et dans celui des groupoïdes étales. Une propriété importante est que ces applications factorisent les applications d'assemblage classiques. Cela permet de relier les conjectures de Baum-Connes et de Baum-Connes coarse aux propriétés de nos applications. Ces dernières sont définies en deux étapes. La première est de définir ce que l'on appelle un foncteur de descente. Puis, on définit le complexe de Rips associé à $X$ et à $G$, et un certain projecteur canonique associé. \\
 
 Plus précisément, soit $(X,d)$ un espace métrique dénombrable discret, que l'on suppose à géométrie bornée; i.e. $\forall R>0,\sup | \{ (x,y) \in X\times X \text{ t.q. }d(x,y)<R\} |<\infty$. Nous construisons d'abord la transformation de Roe contrôlée $\hat\sigma_X(z)$ pour tout élément $z\in KK(A,B)$. Les propositions \ref{Roe1} et \ref{Roe2}, qui décrivent ses propriétés, peuvent être résumées dans la proposition suivante :
 
@@ -127,17 +127,17 @@ où $\varepsilon'$ et $F'$ vérifient :
 La deuxième étape du travail est de relier l'application d'assemblage contrôlée à l'application d'assemblage classique. Les théorèmes qui réalisent ce programme sont les théorèmes \ref{Quant1} et \ref{Quant2}, que nous appelons énoncés quantitatifs. Pour cela, il nous faut d'abord introduire les propriétés suivantes :
 \begin{itemize}
 \item[$\bullet$] $QI_{G,B}(E,E',F,\varepsilon)$ : pour tout $x\in RK^G(P_E(G), B )$, alors $\mu^{\varepsilon,E,F}_{G,B}(x) = 0$ implique que $q_E^{E'}(x)=0$ dans $RK^G(P_{E'}(G),B)$.
-\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : pour tout $y\in K^{\varepsilon,F}(B\rtimes G)$, il existe $x\in RK^G(P_E(G),B)$ tel que $\mu^{\varepsilon',E,F'}x_{G,B}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
+\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : pour tout $y\in K^{\varepsilon,F}(B\rtimes G)$, il existe $x\in RK^G(P_E(G),B)$ tel que $\mu^{\varepsilon',E,F'}_{G,B}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
 \end{itemize} 
 
 Les énoncés quantitatifs prennent alors la forme suivante.
 
 \begin{thm}
-Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(X,K_B)$. Alors $\mu_{G,\tilde B}$ est injective ssi pour tout $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ et $F$ tel que $k_J(\varepsilon).E\subseteq F$, il existe $E' \in\mathcal E$ tel que $E\subseteq E'$ et $QI_{G,B}(E,E',\varepsilon,F)$. 
+Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(\N,B\otimes\mathfrak K)$. Alors $\mu_{G,\tilde B}$ est injective ssi pour tout $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ et $F$ tel que $k_J(\varepsilon).E\subseteq F$, il existe $E' \in\mathcal E$ tel que $E\subseteq E'$ et $QI_{G,B}(E,E',\varepsilon,F)$. 
 \end{thm}
 
 \begin{thm}
-Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(X,K_B)$. Alors il existe $\lambda>1$ tel que $\mu_{G,\tilde B}$ est surjective ssi pour tout $0<\varepsilon<\frac{1}{4\lambda}$ et $F\in\mathcal E$ non-vide, il existe $E\in\mathcal E$ et $F'$ tel que $k_J .E \subseteq F$ tel que $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ soit vérifiée.
+Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(\N,B\otimes\mathfrak K)$. Alors il existe $\lambda>1$ tel que $\mu_{G,\tilde B}$ est surjective ssi pour tout $0<\varepsilon<\frac{1}{4\lambda}$ et $F\in\mathcal E$ non-vide, il existe $E\in\mathcal E$ et $F'$ tel que $k_J .E \subseteq F$ tel que $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ soit vérifiée.
 \end{thm}
 
 Ils admettent une version uniforme :
@@ -187,14 +187,14 @@ Ce théorème induit en $K$-théorie un résultat de G. Skandalis, J-L. Tu et G.
 Soit $X$ un espace coarse qui admet un plongement fibré dans l'espace de Hilbert. Alors $\hat \mu_{X}^{max}$ est un isomorphisme contrôlé, i.e. $X$ vérifie la conjecture de Baum-Connes coarse contrôlée.
 \end{cor}
 
-La dernière application concerne une formule de Kûnneth en $K$-théorie quantitative, qui constitue le théorème \ref{Kunneth}. Le cas des groupes a été couvert dans un article de H. Oyono-Oyono et G. Yu \cite{OY4}. Pour cela, nous avons besoin de définir le foncteur de restriction à un sous-groupoïde compact $H$ de $G$ en $KK$-théorie équivariante, ainsi qu'une propriété, appelée propreté forte, qui assure que $Res_H^G : KK^G \rightarrow KK^H$ est un isomorphisme. Voici le contenu du théorème.
+La dernière application concerne une formule de Kûnneth en $K$-théorie quantitative, qui constitue le théorème \ref{Kunneth}. Le cas des groupes a été couvert dans un article de H. Oyono-Oyono et G. Yu \cite{OY4}. Pour cela, nous avons besoin de définir le foncteur de restriction à un sous-groupoïde compact $H$ de $G$ en $KK$-théorie équivariante, ainsi qu'une propriété, appelée propreté forte. Voici le contenu du théorème.
 
 \begin{thm}
 Soit $G$ un groupoïde $\sigma$-compact étale et $A$ une $G$-algèbre. Si 
 \begin{itemize}
 \item[$\bullet$] $G$ vérifie la conjecture de Baum-Connes à coefficients,
 \item[$\bullet$] $G$ est un groupoïde fortement propre,
-\item[$\bullet$] pour tout sous-groupoïde compact $H$ de $G$, $A\rtimes_r H$ vérifie la formule de Kûnneth.
+\item[$\bullet$] pour tout sous-groupoïde compact $H$ de $G$ et tout $H$-espace $V$ telle que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective, $\alpha_{Res_H^G(A),B}^{G,V}$ est un isomorphisme.
 \end{itemize} 
 Alors $A\rtimes_r G$ vérifie la formule de Künneth contrôlée.
 \end{thm}

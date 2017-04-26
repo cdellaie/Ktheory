@@ -66,7 +66,7 @@ As a corollary, we get that for any countably generated Hilbert $A$-module, ther
 
 Let $E$ a Hilbert $A$-module, $F$ a Hilbert $B$-module and $\phi : A \rightarrow \mathcal L_B(F)$ a $*$-homomorphism. The following section recalls the construction of the tensor product of $E$ and $F$ over $\phi$, denoted $E\otimes_\phi F$.\\
 
-We can provide $F$ with the structure of a left $A$-module via $\phi$ : $a\cdot \eta := \phi(a)\eta$ for $a\in A,\eta\in F$. Consider the algebraic tensor product of $A$-module $E\odot F$, with the structure of right $B$ module given by $x\otimes y \cdot b = x\otimes (yb)$. Define on $E\odot F$ the following sesquilinear function : $\langle x \otimes y , x'\otimes y'\rangle := \langle y, \phi(\langle x, x'\rangle)y'\rangle_F $. It satisfies the condition for $(E\odot F,\langle \cdot , \cdot \rangle )$ to be a semi-pre-Hilbert $B$-module.
+We can provide $F$ with the structure of a left $A$-module via $\phi$ : $a\cdot \eta := \phi(a)\eta$ for $a\in A,\eta\in F$. Consider the algebraic tensor product of $A$-modules $E\odot F$, with the structure of right $B$ module given by $x\otimes y \cdot b = x\otimes (yb)$. Define on $E\odot F$ the following sesquilinear function : $\langle x \otimes y , x'\otimes y'\rangle := \langle y, \phi(\langle x, x'\rangle)y'\rangle_F $. It satisfies the condition for $(E\odot F,\langle \cdot , \cdot \rangle )$ to be a semi-pre-Hilbert $B$-module.
 
 \begin{definition}
 The Hilbert $B$-module $E\otimes_\phi F$ is defined as the competion-separation of the semi-pre-Hilbert $B$-module $E\odot F$ with respect to $\langle \cdot , \cdot \rangle$. It is called the interior tensor product of $E$ and $F$. When $F=B$, it can be called the push forward of $E$ along $\phi$.
@@ -81,11 +81,11 @@ This tensor product operation enjoys functorial properties that will be useful f
 \begin{prop}\cite{Lance}
 Let $T\in\mathcal L_A(E)$. The map $x\otimes y \mapsto (Tx)\otimes y$ extends to a adjoinable operator $\phi_*(T)\in\mathcal L_B(E\otimes_\phi F)$, and this defines a unital $*$-homomorphism 
 \[\phi_*\left\{\begin{array}{rcl} \mathcal L_A(E) & \rightarrow & \mathcal L_B(E\otimes_\phi F) \\ T & \mapsto & \phi_*(T)\end{array}\right.\]
-which is injective is $\phi$ is. We will write $\phi_*(T) := T\otimes_\phi 1$ or even $T\otimes 1$. 
+which is injective if $\phi$ is. We will write $\phi_*(T) := T\otimes_\phi 1$ or even $T\otimes 1$. 
 \end{prop} 
 
 \begin{rk}
-The condition $\phi_*(\mathfrak K_A(E))\subset \mathfrak K_B(E\otimes_\phi F)$ holds when $\phi(A)\subset \mathfrak K_B(F)$ \cite{Lance}, and this condition will be satisfied when we will consider the push-forward with respect to $\phi : A\rightarrow B$ as $\mathfrak K_B(B) \cong B$. 
+The condition $\phi_*(\mathfrak K_A(E))\subseteq \mathfrak K_B(E\otimes_\phi F)$ holds when $\phi(A)\subseteq \mathfrak K_B(F)$ \cite{Lance}, and this condition will be satisfied when we will consider the push-forward with respect to $\phi : A\rightarrow B$ as $\mathfrak K_B(B) \cong B$. 
 \end{rk}
 
 \begin{rk}\label{isometry}

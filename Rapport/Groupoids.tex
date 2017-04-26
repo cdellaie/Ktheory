@@ -7,7 +7,7 @@ A topological groupoid is the data of
 \item[$\bullet$] a topological embedding $e: G^{(0)}\rightarrow G; x\mapsto e_x$ called the unit map,
 \item[$\bullet$] source and range maps $r,s : G\rightarrow G^{(0)}$ which are continuous, surjective, and satisfy $r\circ e = s\circ e = Id_{G^{(0)}}$,
 \item[$\bullet$] a continuous multiplication map $m : G^{(2)}=G\times_{s,r}G\rightarrow G; (g,g')\mapsto gg'$ such that $(gg')g''=g(g'g'')$ for all triple $g,g',g''$ that are composable, and $g e_{s(g)} = e_{r(g)} g =g$,
-\item[$\bullet$] an involutive map $\text{inv} : G\rightarrow G: g\mapsto g^{-1}$ which is continous and such that $s\circ \text{inv} = r$, $r\circ \text{inv} = s$ and $\forall g\in G, gg^{-1}=e_{s(g)} \text{ and }g^{-1}g=e_{r(g)}$. This map is called the inverse map.
+\item[$\bullet$] an involutive map $\text{inv} : G\rightarrow G: g\mapsto g^{-1}$ which is continuous and such that $s\circ \text{inv} = r$, $r\circ \text{inv} = s$ and $\forall g\in G, gg^{-1}=e_{s(g)} \text{ and }g^{-1}g=e_{r(g)}$. This map is called the inverse map.
 \end{itemize} 
 \end{definition}
 
@@ -17,9 +17,9 @@ $G$ is said to be étale if the range map $r:G\rightarrow G^{(0)}$ is a local ho
 $G$ is said to be principal if $r\times s : G\rightarrow G^{(0)}\times G^{(0)}$ is injective, transitive if $r\times s $ is surjective, and proper if $r\times s $ is a proper map. 
 \end{definition}
 
-If $G$ is étale, then any $g\in G$ has an open neighborhood $U$ such that $r$ and $s$ are injective on $U$. The element $g$ defines in this way a partial homeomorphism $\alpha_U = r\circ (s_{|U})^{-1} : s(U)\rightarrow r(U)$. Such open sets $U$ where $r$ and $s$ are injective are called bisections. The set of bisections is naturally an inverse semi-group. \cite{paterson}\\
+If $G$ is étale, then any $g\in G$ has an open neighborhood $U$ such that $r$ and $s$ are injective on $U$. The element $g$ defines in this way a partial homeomorphism $\alpha_U = r\circ (s_{|U})^{-1} : s(U)\rightarrow r(U)$. Such open sets $U$ where $r$ and $s$ are injective are called bisections.\\ %The set of bisections is naturally an inverse semi-group \cite{paterson}.\\
 
-For $U,V\subseteq G^{(0)}$, we will us the notations $G_U=s^{-1}(U)$, $G^V=r^{-1}(V)$ and $G_U^V=s^{-1}(U)\cap r^{-1}(V)$. If one of the subsets is reduced to a single point, we will use $G_x=G_{\{x\}}$, etc. We will write $G_{|U}$ for $G_U^U$. It is a subgroupoid of $G$.\\
+For $U,V\subseteq G^{(0)}$, we will use the notations $G_U=s^{-1}(U)$, $G^V=r^{-1}(V)$ and $G_U^V=s^{-1}(U)\cap r^{-1}(V)$. If one of the subsets is reduced to a single point, we will use $G_x=G_{\{x\}}$, etc. We will write $G_{|U}$ for $G_U^U$. It is a subgroupoid of $G$.\\
 
 A Haar system on $G$ is a family of borelian measures $(\lambda^x)_{x\in G^{(0)}}$ such that 
 \begin{itemize}
@@ -46,13 +46,13 @@ Let $X$ be a topological space and $f : X\rightarrow G^{(0)} $ a continuous map.
 %We define $G[\mathcal U]$ as the topological groupoid obtained as the set of triples $(U,g,V)$ such that $s(g)\in U$ and $r(g)\in V$ with base space the groupoid of the equivalence relation defined by $g\sim g'$ if and only if $p(g)=p(g')$. It is convient to represent this groupoid as the set of triples $(U,g,V)$ such that $s(g)\in U$ and $r(g)\in V$
 \end{Expl}
 
-\begin{Expl}[Action groupoid] Let $G$ be a group acting on a topological space $X$ by homeomorphisms. Define the groupoid $X\rtimes G$ as the topological space $X\times G$ over the base space $X$, endowed with the maps $s(x,g)=x$ and $r(x,g)=g.x$. The unit map will be given by $x\mapsto (x,e_G)$ and $(x,g)^{-1} = (g.x , g^{-1})$. This groupoid is called the action groupoid. It is étale when $G$ is a discrete group.  
+\begin{Expl}[Action groupoid] Let $G$ be a group acting on a topological space $X$ by homeomorphisms. Define the groupoid $X\rtimes G$ as the topological space $X\times G$ over the base space $X$, endowed with the maps $s(x,g)=x$ and $r(x,g)=g.x$. The unit map will be given by $x\mapsto (x,e_G)$ and the inverse by $(x,g)^{-1} = (g.x , g^{-1})$. This groupoid is called the action groupoid. It is étale when $G$ is a discrete group.  
 \end{Expl}
 
 These examples show how the notion of topological groupoid interpolates between a group and a space. However, other examples of interesting groupoids abound in analysis and geometry. For example, we will define later a so called Coarse Groupoid associated to any Coarse Space, after \cite{SkTuYu}, whose importance cannot be emphasized enough to our approach to the Coarse Baum-Connes conjecture.\\
 
 Other examples includes the holonomy groupoid of a foliation \cite{connesfoliations}, Lie groupoids \cite{paterson}, etc. One of the reasons groupoids are such famous objects in noncommutative geometry is that we can still do analysis on it. According to the general philosophy of Connes \cite{Connes94}, groupoids encode geometric situations and remain available to analysis, even when the situation is so pathological that classical tools become trivial. For example, when confronted to a group action, considering the convolution algebra of the principal action groupoid can be a substitute to the studying the quotient space. It turns out that, when the action is free and proper, the envelopping $C^*$-algebra is Morita equivalent to $C_0(X/G)$, which represent the quotient space by Gelfand duality. However, when the quotient is %badly behaved
-singular, the envelopping $C^*$-algebra still carries usefull information, even if the quotient  is such that $C_0(X/G) = \C$.
+singular, the envelopping $C^*$-algebra still carries usefull information, even if the quotient  is such that $C_0(X/G) \cong \C$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Actions of groupoids}
@@ -256,7 +256,7 @@ The set of such $K$-cycles is denoted by $\mathbb E^G(A,B)$.
 \end{definition}
 
 \begin{rk} The $*$-homomorphism $\pi$ is $G$-equivariant in the following sense : \[(r^*\pi)(\alpha(s^*a)) = V \ (r^*\pi)(r^*a) \ V^*\] 
-for every $a\in A$. By convention, for every $G$-equivariant Hilbert module $E$ with action $V$, $\mathcal L_B(E)$ will be endowed with a $G$-algebra structure given by $Ad_V(T) = VTV^*$.  
+for every $a\in A$. By convention, for every $G$-equivariant Hilbert module $E$ with action $V$, $\mathfrak K_B(E)$ will be endowed with a $G$-algebra structure given by $Ad_V(T) = VTV^*$.  
 \end{rk}
 
 \begin{definition}
@@ -284,7 +284,7 @@ If $(E,\pi,T')$ is a compact pertubation of $(E,\pi,T)$ in $\mathbb E^G(A,B)$, i
 Moreover, if $A$ is separable and $B$ is $\sigma$-unital, then $\sim_{oh}$ coincides with homotopy equivalence of $K$-cycles.
 \end{prop}
 
-One of the properties that makes equivariant $KK$-theory so powerful is the existence of a product, called the Kasparov product. Its existence is highly non trivial, and it fails to exists in the non-separable case or the $KK$-theory for Banach algebras developed by V. Lafforgue \cite{Lafforgue} for example.
+One of the properties that makes equivariant $KK$-theory so powerful is the existence of a product, called the Kasparov product. Its existence is highly non trivial, and it fails to exists in the non-separable case or in the case of the $KK$-theory for Banach algebras developed by V. Lafforgue \cite{Lafforgue} for example.
 
 \begin{prop}\cite{LeGall} Let $A$, $B$ and $C$ be $G$-algebras such that $A$ is separable. There exists a map 
 \[\otimes_B :\left\{\begin{array}{ccc} KK^G(A,B)\times KK^G(B,C) & \rightarrow & KK^G(A,C) \\ (z,z') & \mapsto & z\otimes_B z' \end{array}\right. \]
@@ -378,7 +378,7 @@ Let $z\in KK^G_1(A,B)$ and choose any $K$-cycle $(H_B,\pi,T)$ representing $z$. 
 can be realized, up to Morita equivalence, as the boundary of the following semi-split $G$-equivariant extension of $G$-algebras
 \[\begin{tikzcd}[column sep = small] 
 0 \arrow{r}& \mathfrak K \otimes B \arrow{r} & E^{(\pi,T)} \arrow{r} & A \arrow{r} & 0\end{tikzcd}\]
-where $E^{\pi,T}=\{(a,P\pi(a)P +y) : a\in A , y\in \mathfrak K \otimes B\}$, the arrows are the obvious inclusion and projection, and the completely positive section is $a\mapsto (a, P \pi(a) P)$. The fact that the choice of the representent does not affect the boundary will be proven in the upcoming sections. 
+where $E^{\pi,T}=\{(a,P\pi(a)P +y) : a\in A , y\in \mathfrak K \otimes B\}$, the arrows are the obvious inclusion and projection, and the completely positive section is $a\mapsto (a, P \pi(a) P)$. The fact that the choice of the $K$-cycle does not affect the boundary will be proven in the upcoming sections. 
 \end{prop}
 
 The following result will be constantly used in the upcoming sections. In short, it explains how to construct the boundary map associated to any semi-split extension $0\rightarrow J\rightarrow A \rightarrow A/J \rightarrow 0$ as the Kasparov product of an element $[\partial_{J,A}]\in KK^G_1(A/J,J)$. For references, see \cite{blackadar}.\\
