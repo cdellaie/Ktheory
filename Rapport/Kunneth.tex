@@ -28,17 +28,8 @@ which induces $\alpha_{A,B}$ in $K$-theory. \\
 A filtered $C^*$-algebra $(A,\mathcal E)$ is said to satisfy the quantitative Künneth formula if, for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group, $\hat\alpha_{A,B}$ is a controlled isomorphism.
 \end{definition}
 
-The remainder of the section is devoted to prove the following theorem. We will define a class $\mathcal C$ of groupoids such that the following is true.
+The remainder of the section is devoted to prove the theorem \ref{Kunneth}. We first recall the induction and restriction machinery in the context of equivariant $KK$-theory. The important result is lemma \ref{Restriction}, which allows to restrict $KK^G$-elements to compact open subgroupoids under some suitable conditions. We then define a class $\mathcal C$ of groupoids which satifies these suitable conditions, and give instances of this class. The end of the section is devoted to the proof of the main theorem.
 
-\begin{thm}\label{Kunneth}
-Let $G$ be a $\sigma$-compact étale groupoid and $A$ a $G$-algebra. Suppose that 
-\begin{itemize}
-\item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients,
-\item[$\bullet$] $G$ is in class $\mathcal C$,
-\item[$\bullet$] for every compact open subgroupoid $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula.
-\end{itemize} 
-Then $A\rtimes_r G$ satisfies the quantitative Künneth formula.
-\end{thm}
 
 %The following corollary is obvious from the theorem.\cite{FinnSellFibred}
 
@@ -68,8 +59,12 @@ which respects inductive limits w.r.t. inclusions of $G$-proper spaces, so that 
 To prove theorem \ref{Kunneth}, we will need the following result.
 
 \begin{thm}\label{TopologicalKunneth}
-Let $G$ be an étale groupoid in the class $\mathcal C$, and let $E\in\mathcal E$ be a controlled subset of $G$ and $P_E(G)$ be the corresponding Rips complex. If for all compact open subgroupoids $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula, then $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism for all $C^*$-algebras $B$ such that $K_*(B)$ is a free abelian group.
+Let $G$ be an étale groupoid in the class $\mathcal C$, and let $E\in\mathcal E$ be a controlled subset of $G$ and $P_E(G)$ be the corresponding Rips complex. If, for all compact open subgroupoids $H$ of $G$ and every $H$-space $V$ such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective, $\alpha_{Res_H^G(A),B}^{H,V}$ is an isomorphism, then $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism for all $C^*$-algebras $B$ such that $K_*(B)$ is a free abelian group.
 \end{thm}
+
+%\begin{thm}\label{TopologicalKunneth}
+%Let $G$ be an étale groupoid in the class $\mathcal C$, and let $E\in\mathcal E$ be a controlled subset of $G$ and $P_E(G)$ be the corresponding Rips complex. If for all compact open subgroupoids $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula, then $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism for all $C^*$-algebras $B$ such that $K_*(B)$ is a free abelian group.
+%\end{thm}
 
 \begin{dem}
 Let $Z_0\subseteq Z_1\subseteq ... \subseteq Z_n $ be the skeleton decomposition of $P_E(G)$.\\
@@ -77,12 +72,18 @@ Let $Z_0\subseteq Z_1\subseteq ... \subseteq Z_n $ be the skeleton decomposition
 Let us prove by induction that $\alpha_j=\alpha^{G,Z_j}_{A,B}$ is an isomorphism. By a standard argument similar to the proof of theorem \ref{prod}, it is sufficient to prove the statement for $j=0$.\\
 
 Let $U\subseteq Z_0$ be a $G$-compact $G$-proper space. By strong properness, $U$ can be finitely covered by open subsets of the type $G \times_H V$. By a standard Mayer-Vietoris argument, we can suppose that there exists a compact open subgroupoid $H$ of $G$ and a compact $H$-space $V$ such that $U = G \times_H V$. The following diagram is commutative :
-\[\begin{tikzcd}[column sep = small] RK_*^G(U,A)\otimes K_*(B) \arrow{r}{\alpha_{A,B}^{G,U}} \arrow{d}{\text{Res}_H^G} & RK^G(U, A\otimes B) \arrow{d}{\text{Res}_H^G}\\
-RK_*^H(V, \text{Res}_H^G (A))\otimes K_*(B) \arrow{r}{\alpha_{\text{Res}_H^G A,B}^{H,V}} \arrow{d}{\mu_{H,\text{Res}_H^G A \otimes id}} & 
-	RK_*^H(V, \text{Res}_H^G (A)\otimes B)\arrow{d}{\mu_{H,\text{Res}_H^G A }} \\
-K_*(\text{Res}_H^G (A)\rtimes_r H)\otimes K_*(B)\arrow{r}{\alpha_{\text{Res}_H^G A,B}} & K_*\left((\text{Res}_H^G A\otimes B)\rtimes_r H\right) 
+\[\begin{tikzcd}[column sep = small] 
+RK_*^G(U,A)\otimes K_*(B) \arrow{r}{\alpha_{A,B}^{G,U}} \arrow{d}{\text{Res}_H^G} & RK^G(U, A\otimes B) \arrow{d}{\text{Res}_H^G}\\
+RK_*^H(V, \text{Res}_H^G (A))\otimes K_*(B) \arrow{r}{\alpha_{\text{Res}_H^G A,B}^{H,V}} & 
+	RK_*^H(V, \text{Res}_H^G (A)\otimes B)\\
 \end{tikzcd}\]
-The first vertical arrows are isomorphisms by Proposition \ref{Restriction}, the last horizontal one is by hypothesis. The last vertical ones are by compactness of $H$, hence $\alpha_{A,B}^{G,U}$ is an isomorphism. By taking the inductive limit on $G$-proper $G$-compact spaces $U\subseteq Z_0$, we get that $\alpha_{A,B}^{G,Z_0}$ is an isomorphism.
+
+%\[\begin{tikzcd}[column sep = small] RK_*^G(U,A)\otimes K_*(B) \arrow{r}{\alpha_{A,B}^{G,U}} \arrow{d}{\text{Res}_H^G} & RK^G(U, A\otimes B) \arrow{d}{\text{Res}_H^G}\\
+%RK_*^H(V, \text{Res}_H^G (A))\otimes K_*(B) \arrow{r}{\alpha_{\text{Res}_H^G A,B}^{H,V}} \arrow{d}{\mu_{H,\text{Res}_H^G A \otimes id}} & 
+%	RK_*^H(V, \text{Res}_H^G (A)\otimes B)\arrow{d}{\mu_{H,\text{Res}_H^G A }} \\
+%K_*(\text{Res}_H^G (A)\rtimes_r H)\otimes K_*(B)\arrow{r}{\alpha_{\text{Res}_H^G A,B}} & K_*\left((\text{Res}_H^G A\otimes B)\rtimes_r H\right) 
+%\end{tikzcd}\]
+The first vertical arrows are isomorphisms by Proposition \ref{Restriction}, the last horizontal one is by hypothesis. Hence $\alpha_{A,B}^{G,U}$ is an isomorphism. By taking the inductive limit on $G$-proper $G$-compact spaces $U\subseteq Z_0$, we get that $\alpha_{A,B}^{G,Z_0}$ is an isomorphism.
 \end{dem}
 
 \begin{lem}\label{KunnethLemma}
@@ -107,7 +108,19 @@ which is just the statement of the lemma.\\
 
 %\textbf{SHOW THAT $\hat J_G(z)\circ \hat\tau(y)=$}
 
-\begin{dem} \textit{of theorem \ref{Kunneth}}\\
+We can now prove the main theorem of the section.
+
+\begin{thm}\label{Kunneth}
+Let $G$ be a $\sigma$-compact étale groupoid and $A$ a $G$-algebra. Suppose that 
+\begin{itemize}
+\item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients,
+\item[$\bullet$] $G$ is in class $\mathcal C$,
+\item[$\bullet$] for every compact open subgroupoid $H$ of $G$ and every $H$-space $V$ such that the anchor map $p : V \rightarrow H^{(0)}$ is locally injective, $\alpha_{Res_H^G(A),B}^{H,V}$ is an isomorphism.
+\end{itemize} 
+Then $A\rtimes_r G$ satisfies the quantitative Künneth formula.
+\end{thm}
+
+\begin{dem} %\textit{of theorem \ref{Kunneth}}\\
 Let $\kappa>0$ and $c : (0,\frac{1}{\kappa})\times\mathcal E\rightarrow \mathcal E$ as in lemma \ref{KunnethLemma}.\\
 
 Let $A$ be a $G$-algebra and $B$ a $C^*$-algebra, seen as a $G$-algebra with trivial action. As $(A\otimes B)\rtimes_r G \simeq (A\rtimes_r G)\otimes B$, we will identify them in the remaining of the proof. Let us prove that $\hat \alpha_{A\rtimes_r G,B}$ is a controlled isomorphism.\\
@@ -122,6 +135,9 @@ Let $x\in K^{\varepsilon,F}_*(A\rtimes_r G)\otimes K_*(B)$ such that $\alpha_{A\
 \qed
 \end{dem}
 
+\begin{rk}
+For free groupoids, the third condition in theorem \ref{Kunneth}, "$\alpha_{Res_H^G(A),B}^{H,V}$ is an isomorphism", reduces to "$A$ satisfies the Kunneth formula". Indeed, the only non trivial subgroupoid is the trivial one.
+\end{rk}
 
 
 
