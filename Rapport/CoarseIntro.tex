@@ -56,7 +56,7 @@ A metric space $(X,d_X)$ coarsely embeds into Hilbert space if there exists two 
 where $H$ is the separable Hilbert space.\\
 \end{definition}
 
-Recall that a graph is a a couple $(V,E)$, $V$ being the set of vertices, and $E\subset V\times V$. Define, for $v\in V$, the set of neighbours of $v$ as $N_v=\{w\in V / (v,w)\in E\}$ and the degree of $x$ as $deg(x)=|N_x|$. The length of a path in a graph is defined as the number of edges it contains. A graph is naturally a metric space with the path distance. The Laplacian of the graph is the positive operator $\Delta \in\mathcal L(l^2(V))$ defined by :
+Recall that a graph is a a couple $(V,E)$, $V$ being the set of vertices, and $E\subseteq V\times V$. Define, for $v\in V$, the set of neighbours of $v$ as $N_v=\{w\in V / (v,w)\in E\}$ and the degree of $x$ as $deg(x)=|N_x|$. The length of a path in a graph is defined as the number of edges it contains. A graph is naturally a metric space with the path distance. The Laplacian of the graph is the positive operator $\Delta \in\mathcal L(l^2(V))$ defined by :
 \[(\Delta f) (x) = f(x) - \frac{1}{deg(x)}\sum_{y\in N_x} f(y) .\] 
 Let $X_j = (V_j,E_j)$ be a countable family of finite graphs. The Laplacian of the coarse disjoint union $X=\coprod X_j$ is defined as $\Delta_X = \bigoplus \Delta_j \in \mathcal L(l^2(X))$.
  
@@ -151,7 +151,7 @@ Let $X$ and $Y$ be two discrete proper metric spaces with bounded geometry, $H_X
 The following proposition says that there is actually one s.n.d. $X$-module, up to isomorphism. For $V\in\mathcal L(E,E')$, we denote $Ad_V : \mathcal L(E) \rightarrow \mathcal L(E') ; T\mapsto VTV^*$.
 
 \begin{prop}\label{SND}
-Let $H_X$ and $H'_X$ two s.n.d. $X$-module. Then, for any $\varepsilon>0$, there exists an unitary $V\in\mathcal L(H_X,H'_X)$ such that $\text{supp }V \subseteq \Delta_\varepsilon$.
+Let $H_X$ and $H'_X$ two s.n.d. $X$-modules. Then, for any $\varepsilon>0$, there exists an unitary $V\in\mathcal L(H_X,H'_X)$ such that $\text{supp }V \subseteq \Delta_\varepsilon$.
 \end{prop}
 
 \begin{dem}
@@ -171,7 +171,7 @@ We now define the Roe algebra $C^*(X, H_X)$ of $X$ when we have fixed a standard
 
 Define $C_R[X,H_X]$ as the following subspace of $\mathcal L(H_X)$ :
 \[C_R[X,H_X] = \{T\in \mathcal L(H_X) \text{ locally compact  s.t. supp }T\subseteq \Delta_R \},\]
-namely, $C_R[X,H_X]$ consists in locally compact operators with propagation less than $R$. It is a closed self-adjoint subspace of $\mathcal L(H_X)$ which satisfies $C_R[X,H_X].C_S[X,H_X]\subseteq C_{R+S}[X,H_X]$ for any positive numbers $R>0,S>0$.\\
+namely, $C_R[X,H_X]$ consists of locally compact operators with propagation less than $R$. It is a closed self-adjoint subspace of $\mathcal L(H_X)$ which satisfies $C_R[X,H_X].C_S[X,H_X]\subseteq C_{R+S}[X,H_X]$ for any positive numbers $R>0,S>0$.\\
 
 Let $C[X,H_X]$ be the subspace 
 \[\bigcup_{R>0} C_R[X,H_X]\subseteq \mathcal L(H_X).\] 
@@ -201,20 +201,21 @@ Let $X$ be a discrete metric space with bounded geometry and fix a s.n.d. $X$-mo
 \end{itemize}
 \end{definition}
 
-Let us show that the definition of $C^*(X)$ does not depent on the choice of the s.n.d. $X$-module. Before doing so, we denote $C^*(X,H_X)$ the completion of $C[X,H_X]$ in order to keep track of the s.n.d. $X$-module.
+Let us show that the definition of $C^*(X)$ does not depend on the choice of the s.n.d. $X$-module. Before doing so, we denote $C^*(X,H_X)$ the completion of $C[X,H_X]$ in order to keep track of the s.n.d. $X$-module.
 
 \begin{prop}
 Let $H_X$ and $H'_X$ be two s.n.d. $X$-modules. Then there exists an unnatural $*$-isomorphism $C^*(X,H_X)\cong C^*(X,H'_X)$ which is natural in $K$-theory.
 \end{prop}
 \begin{dem}
-Let $H_X$ and $H'_X$ be two s.n.d. $X$-modules and $\varepsilon>0$. By proposition \ref{SND}, there exists an isometry $V\in\mathcal L(H_X,H'_X)$ with propagation less than $\varepsilon$. Hence $Ad_V(T) = V T V^*$ defines a bounded linear map $C_R[X,H_X]\rightarrow C_{R+2\varepsilon}[X,H_X']$ which extends to an $*$-isomorphism $Ad_V : C^*(X,H_X)\rightarrow C^*(X,H'_X)$.\\
+Let $H_X$ and $H'_X$ be two s.n.d. $X$-modules and $\varepsilon>0$. By proposition \ref{SND}, there exists an isometry $V\in\mathcal L(H_X,H'_X)$ with propagation less than $\varepsilon$. Hence $Ad_V(T) = V T V^*$ defines a bounded linear map $C_R[X,H_X]\rightarrow C_{R+2\varepsilon}[X,H_X']$ which extends to a $*$-isomorphism $Ad_V : C^*(X,H_X)\rightarrow C^*(X,H'_X)$.\\
 
-Let $V_1$ and $V_2$ two isometries in $\mathcal L(H_X,H'_X)$ with propagation less than $\varepsilon$. Define $P : H_X\rightarrow H_X\oplus H'_X ; \xi \mapsto \xi \oplus 0$ and , for $t\in [0,\frac{\pi}{2}]$, $W_t : H_X \rightarrow H_X\oplus H'_X$ by 
+Let $V_1$ and $V_2$ two isometries in $\mathcal L(H_X,H'_X)$ with propagation less than $\varepsilon$. Define $P : H_X\rightarrow H_X\oplus H'_X ; \xi \mapsto \xi \oplus 0$ and, for $t\in [0,\frac{\pi}{2}]$, $W_t : H_X \rightarrow H_X\oplus H'_X$ by 
 \[W_t = 
 \begin{pmatrix} \cos(t) & \sin (t)\\ -\sin (t) & \cos (t)\end{pmatrix}
 \begin{pmatrix} V_1 & 0 \\ 0 & V_2 \end{pmatrix}
 \begin{pmatrix} \cos(t) & \sin (t)\\ -\sin (t) & \cos (t)\end{pmatrix}^* P.\] 
-Then $Ad_{W_t}$ is an homotpoy between $Ad_{V_1}$ and $Ad_{V_2}$, so that $(Ad_{V_1})_* = (Ad_{V_2})_* : K_*(C^*(X,H'_X))\rightarrow K_*(C^*(X,H'_X))$.\\
+Then $Ad_{W_t}$ is a homotopy between $Ad_{V_1}$ and $Ad_{V_2}$, so that 
+\[(Ad_{V_1})_* = (Ad_{V_2})_* : K_*(C^*(X,H'_X))\rightarrow K_*(C^*(X,H'_X)).\]
 \qed
 \end{dem}
 
@@ -238,7 +239,7 @@ In the next section, we will define the coarse groupoid $G(X)$, which is an éta
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Recall that $\beta X$ denotes the Stone-Cech compactification of $X$. Let us first define the coarse groupoid of $X$. It is defined as the smallest topological groupoid $G(X)$ with unit space $\beta X$ extending the pair groupoid $X\times X$ over $X$. It was defined by G. Skandalis, J.L. Tu and G. Yu in \cite{SkTuYU}. It allows to translate coarse properties of $X$ into topological or dynamical properties of $G(X)$. Moreover, it turns out that Roe algebras with coefficients of $X$ can be expressed as crossed products of $G(X)$, and, as we will see in another chapter, that the coarse Baum-Connes conjecture for $X$ coincides with the Baum-Connes conjecture for this crossed-product.  \\
+Recall that $\beta X$ denotes the Stone-Cech compactification of $X$. Let us first define the coarse groupoid of $X$. It is defined as the smallest topological groupoid $G(X)$ with unit space $\beta X$ extending the pair groupoid $X\times X$ over $X$. It was defined by G. Skandalis, J.L. Tu and G. Yu in \cite{SkTuYu}. It allows to translate coarse properties of $X$ into topological or dynamical properties of $G(X)$. Moreover, it turns out that Roe algebras with coefficients of $X$ can be expressed as crossed products of $G(X)$, and, as we will see in another chapter, that the coarse Baum-Connes conjecture for $X$ coincides with the Baum-Connes conjecture for this crossed-product.  \\
 
 For any entourage $E$, let $\overline E$ denotes the closure of $E$ in $\beta (X\times X)$. Define $G(X) = \cup_{E\in\mathcal E_X} \overline E$. By universal property of the Stone-Cech compactification, the first and second projections $X\times X\rightarrow X$ extend to continuous maps $G(X)\rightarrow \beta X$ denoted $s$ and $r$ respectively, as shown in this commutative diagramm :  
 \[\begin{tikzcd}
@@ -313,7 +314,7 @@ Moreover :
  %\ & \leq \sup \{ \sum_j |\lambda'_j| \times  ||f'_j||\text{ s.t. }\sum \lambda'_j \chi_{E'_j}\otimes f'_j  =h\}=||h||, \\ 
 %\ & \leq ||\sum_j \lambda_j \chi_{E_j}|| \times  ||f||, \\
 %\end{array}\]
-so $V$ extends by continuity to a bounded bilinar map $ C_0(G)\times\tilde B \rightarrow r^* \tilde B$. This map being $C(\beta X)$-linear, $V$ extends to a $C(\beta X)$-algebra morphism $V :s^*\tilde B \rightarrow r^* \tilde B$. The rule $\chi_E \otimes_r f\mapsto \chi_E \otimes_r (E^{-1}.f)$ defines similarly a $C(\beta X)$-algebra morphism between $r^*\tilde B \rightarrow s^*\tilde B$. It is the inverse of $V$, hence $V$ is a isomorphism of $C(\beta X)$-algebras.\\
+so $V$ extends by continuity to a continuous linear map $ C_0(G)\otimes\tilde B \rightarrow r^* \tilde B$. This map being $C(\beta X)$-linear, $V$ extends to a $C(\beta X)$-algebra morphism $V :s^*\tilde B \rightarrow r^* \tilde B$. The rule $\chi_E \otimes_r f\mapsto \chi_E \otimes_r (E^{-1}.f)$ defines similarly a $C(\beta X)$-algebra morphism between $r^*\tilde B \rightarrow s^*\tilde B$. It is the inverse of $V$, hence $V$ is a isomorphism of $C(\beta X)$-algebras.\\
 
 Let us show $V$ is an action. For $g\in G$, denote by $V_g : (\tilde B)_{s(g)}\rightarrow (\tilde B)_{r(g)}$ the induced map between the fibers of $s^*\tilde B$ and $r^*\tilde B$. Let $(g,g')\in G^{(2)}$, and choose partial translations $E, E'\subseteq X\times X$ such that $g\in \overline E$ and $g'\in \overline{E'}$. Then $g'\circ g\in \overline{E'\circ E}$ and $E'\circ E$ is a partial translation. Then if $f\in s^* \tilde B$, $V_g(f_{s(g)}) = (E.f)_{r(g)}$. Then :
 \[ \begin{array}{rl}
