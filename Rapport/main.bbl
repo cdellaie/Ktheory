@@ -29,6 +29,12 @@ J{\'e}r{\^o}me Chabert, Siegfried Echterhoff, and Ryszard Nest.
 \newblock {\em Publications Math{\'e}matiques de l'Institut des Hautes
   {\'E}tudes Scientifiques}, 97:239--278, 2003.
 
+\bibitem{ChabertEOY}
+J{\'e}r{\^o}me Chabert, Siegfried Echterhoff, and Herv{\'e} Oyono-Oyono.
+\newblock Going-down functors, the {K}{\"u}nneth formula, and the
+  {B}aum-{C}onnes conjecture.
+\newblock {\em Geometric \& Functional Analysis GAFA}, 14(3):491--528, 2004.
+
 \bibitem{ChenWangYu}
 Xiaoman Chen, Qin Wang, and Guoliang Yu.
 \newblock The maximal coarse {B}aum-{C}onnes conjecture for spaces which admit
@@ -246,11 +252,6 @@ John Roe and Conference~Board of~the Mathematical~Sciences.
 \newblock {\em Index theory, coarse geometry, and topology of manifolds},
   volume~90.
 \newblock American Mathematical Soc., 1996.
-
-\bibitem{SkandalisExtension}
-Georges Skandalis.
-\newblock Exact sequences for the {K}asparov groups of graded algebras.
-\newblock {\em Can. J. Math}, 37(2):193--216, 1985.
 
 \bibitem{SkTuYu}
 Georges Skandalis, Jean-Louis Tu, and Guoliang Yu.

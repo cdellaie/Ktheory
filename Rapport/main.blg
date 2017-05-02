@@ -4,11 +4,6 @@ The top-level auxiliary file: main.aux
 A level-1 auxiliary file: Remerciements.aux
 A level-1 auxiliary file: AbstractFrench.aux
 A level-1 auxiliary file: Motivation.aux
-Case mismatch error between cite keys SkTuYU and SkTuYu
----line 99 of file main.aux
- : \citation{SkTuYU
- :                 }
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: QuantumGroups.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
@@ -25,32 +20,32 @@ Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
 You've used 59 entries,
             2118 wiz_defined-function locations,
-            876 strings with 12288 characters,
-and the built_in function-call counts, 17263 in all, are:
-= -- 1754
-> -- 614
+            875 strings with 12373 characters,
+and the built_in function-call counts, 17330 in all, are:
+= -- 1759
+> -- 625
 < -- 13
-+ -- 261
-- -- 188
-* -- 1122
-:= -- 2897
++ -- 265
+- -- 192
+* -- 1131
+:= -- 2909
 add.period$ -- 178
 call.type$ -- 59
-change.case$ -- 255
+change.case$ -- 257
 chr.to.int$ -- 0
 cite$ -- 66
 duplicate$ -- 706
 empty$ -- 1454
-format.name$ -- 188
-if$ -- 3582
+format.name$ -- 192
+if$ -- 3594
 int.to.chr$ -- 0
 int.to.str$ -- 59
 missing$ -- 67
 newline$ -- 297
 num.names$ -- 118
-pop$ -- 262
+pop$ -- 264
 preamble$ -- 1
-purify$ -- 210
+purify$ -- 212
 quote$ -- 0
 skip$ -- 481
 stack$ -- 0
@@ -64,4 +59,4 @@ warning$ -- 7
 while$ -- 197
 width$ -- 61
 write$ -- 635
-(There were 2 error messages)
+(There was 1 error message)
