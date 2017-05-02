@@ -20,7 +20,7 @@ Par exemple, de larges classes de $C^*$-algèbres sont construites à partir :\\
 Or, dans la plupart des cas, ces $C^*$-algèbres possèdent une structure supplémentaire appelée filtration. La première étape de notre travail a consisté en une généralisation de la notion de filtration, ce qui permet d'appliquer les techniques développées dans \cite{OY2} et \cite{OY3} à de nouveaux exemples. Dans ces articles, les auteurs définissent une $C^*$-algèbre filtrée de la manière suivante.
 
 \begin{definition}
-Une $C^*$-algèbre $A$ est filtrée s'il existe une famille de sous-espace vectoriels fermés auto-adjoints $\{A_R\}_{R>0}$ de $A$ telle que :
+Une $C^*$-algèbre $A$ est filtrée s'il existe une famille de sous-espaces vectoriels fermés auto-adjoints $\{A_R\}_{R>0}$ de $A$ telle que :
 \begin{itemize}
 \item[$\bullet$] si $R\leq R'$, alors $A_R\subseteq A_{R'}$,
 \item[$\bullet$] pour tout $R,R'>0$, $A_R.A_{R'}\subseteq A_{R+R'}$,
@@ -88,7 +88,7 @@ où $\varepsilon'$ et $F'$ vérifient :
 \end{itemize}
 \end{definition}
 
-Nous définissons des applications analogues pour les groupoïdes étales. Plus précisément, soit $G$ un groupoïde étale localement compact et $\sigma$-compact. Nous montrons que les ensembles $E\subseteq G$ compacts symmétriques forment une structure coarse $\mathcal E$, et que les produits croisés réduits de $G$ sont filtrés par $\mathcal E$. La première étape est à nouveau de construire un analogue du foncteur de descente en $K$-théorie contrôlée. Les propositions \ref{Kasparov1} et \ref{Kasparov} peuvent être résumées dans la proposition suivante. 
+Nous définissons des applications analogues pour les groupoïdes étales. Plus précisément, soit $G$ un groupoïde étale $\sigma$-compact. Nous montrons que les ensembles $E\subseteq G$ compacts symmétriques forment une structure coarse $\mathcal E$, et que les produits croisés réduits de $G$ sont filtrés par $\mathcal E$. La première étape est à nouveau de construire un analogue du foncteur de descente en $K$-théorie contrôlée. Les propositions \ref{Kasparov1} et \ref{Kasparov} peuvent être résumées dans la proposition suivante. 
 
 \begin{prop}
 Soient $A$ et $B$ deux $G$-algèbres. Pour tout $z\in KK^G_*(A,B)$, il existe une paire de contrôle $(\alpha_J,k_J)$ et un morphisme $(\alpha_J,k_J)$-contrôlé
@@ -132,21 +132,21 @@ La deuxième étape du travail consiste à formuler une version controllée de l
 \item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : pour tout $y\in K^{\varepsilon,F}(B\rtimes G)$, il existe $x\in RK^G(P_E(G),B)$ tel que $\mu^{\varepsilon',E,F'}_{G,B}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
 \end{itemize} 
 
-Les énoncés quantitatifs forment le résultat central de la thèse. Ils prennent la forme suivante.
+Les énoncés quantitatifs forment le résultat central de la thèse. Ils prennent la forme suivante. Soit $G$ un groupoïde étale $\sigma$-compact à base compacte.
 
 \begin{thm}
-Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(\N,B\otimes\mathfrak K)$. Alors $\mu_{G,\tilde B}$ est injective ssi pour tout $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ et $F$ tel que $k_J(\varepsilon).E\subseteq F$, il existe $E' \in\mathcal E$ tel que $E\subseteq E'$ et $QI_{G,B}(E,E',\varepsilon,F)$. 
+Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(\N,B\otimes\mathfrak K)$. Alors $\mu_{G,\tilde B}$ est injective ssi pour tout $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ et $F$ tel que $k_J(\varepsilon).E\subseteq F$, il existe $E' \in\mathcal E$ tel que $E\subseteq E'$ et $QI_{G,B}(E,E',\varepsilon,F)$ soit vérifiée.
 \end{thm}
 
 \begin{thm}
-Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(\N,B\otimes\mathfrak K)$. Alors il existe $\lambda>1$ tel que $\mu_{G,\tilde B}$ est surjective ssi pour tout $0<\varepsilon<\frac{1}{4\lambda}$ et $F\in\mathcal E$ non-vide, il existe $E\in\mathcal E$ et $F'$ tel que $k_J .E \subseteq F$ tel que $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ soit vérifiée.
+Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(\N,B\otimes\mathfrak K)$. Alors il existe $\lambda \geq 1$ tel que $\mu_{G,\tilde B}$ est surjective ssi pour tout $0<\varepsilon<\frac{1}{4\lambda}$ et $F\in\mathcal E$, il existe $E\in\mathcal E$ et $F'$ tel que $k_J .E \subseteq F$ tel que $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ soit vérifiée.
 \end{thm}
 
 Ils admettent une version uniforme :
 \begin{thm} Soit $G$ un groupoïde étale avec une base compacte. \\
 \begin{itemize}
 \item[$\bullet$] Supposons que pour toute $G$-algèbre $B$, $\mu_{G,B}$ soit injective. Alors, pour tout $\varepsilon\in (0,\frac{1}{4})$ et tout $E,F\in\mathcal E$ tels que $k_J(\varepsilon). E\subseteq F$, il existe $E'\in\mathcal E$ tel que $E\subseteq E'$ et tel que $QI_{G,A}(E,E',\varepsilon,F)$ soit satisfait pout toute $G$-algèbre $B$.\\
-\item[$\bullet$] Supposons que pour toute $G$-algèbre $B$, $\mu_{G,B}$ soit surjective. Alors, pour un certain $\lambda>0$ et pour tout $\varepsilon\in (0,\frac{1}{4\lambda})$ et tout $F\in\mathcal E$, il existe $E,F'\in\mathcal E$ tels que $k_J(\varepsilon). E\subseteq F'$ et $F\subseteq F'$ tel que, pour toute $G$-algèbre $B$, $QS_{G,A}(E, F,F',\varepsilon,\lambda \varepsilon)$ soit satisfait.
+\item[$\bullet$] Supposons que pour toute $G$-algèbre $B$, $\mu_{G,B}$ soit surjective. Alors, pour un certain $\lambda \geq 1$ et pour tout $\varepsilon\in (0,\frac{1}{4\lambda})$ et tout $F\in\mathcal E$, il existe $E,F'\in\mathcal E$ tels que $k_J(\varepsilon). E\subseteq F'$ et $F\subseteq F'$ tel que, pour toute $G$-algèbre $B$, $QS_{G,A}(E, F,F',\varepsilon,\lambda \varepsilon)$ soit satisfait.
 \end{itemize}
 \end{thm}
 
@@ -157,17 +157,17 @@ Le reste du chapitre présente deux applications. La première concerne un résu
 \item[$\bullet$] Rappelons la définition de la propriété d'approximation persistante (PAP), donnée dans \cite{OY3}.\\
 
 \begin{definition}
-Soit $(B,\mathcal E)$ une $C^*$-algèbre filtrée, $\lambda>0$ et soient $\varepsilon,\varepsilon'$ des nombres positifs tels que $0<\varepsilon <\varepsilon' <\frac{1}{4}$ et $F,F'\in\mathcal E$ non-vides tels que $F\subseteq F'$. 
+Soit $(B,\mathcal E)$ une $C^*$-algèbre filtrée, $\lambda>0$ et soient $\varepsilon,\varepsilon'$ des nombres positifs tels que $0<\varepsilon <\varepsilon' <\frac{1}{4}$ et $F,F'\in\mathcal E$ tels que $F\subseteq F'$. 
 \begin{itemize}
 \item[$\bullet$] $PA_B(\varepsilon,\varepsilon',F,F')$ : pour tout $x\in K_*^{\varepsilon,F}(B)$ tel que $\iota_{\varepsilon,F}(x)=0$ dans $K_*(B)$, alors $\iota_{\varepsilon,F}^{\varepsilon',F'}(x)=0$ dans $K_*^{\varepsilon',F'}(B)$.
-\item[$\bullet$] $B$ satisfait la propriété d'approximation persistante $(PAP)_\lambda$ si pour tout $F$ non-vide et $\varepsilon\in (0,\frac{1}{4})$, il existe $F'$ non-vide tel que $PA(\varepsilon,\lambda\varepsilon,F,F')$ soit vérifiée.\\
+\item[$\bullet$] $B$ satisfait la propriété d'approximation persistante $(PAP)_\lambda$ si pour tout $F\in\mathcal E$ et $\varepsilon\in (0,\frac{1}{4})$, il existe $F'\in\mathcal E$ tel que $PA(\varepsilon,\lambda\varepsilon,F,F')$ soit vérifiée.\\
 \end{itemize}
 \end{definition}
 
 La propriété (PAP) est satisfaite lorsque la $K$-théorie est bien approximée, de manière uniforme, par la $K$-théorie controllée. Le théorème \ref{PAPG} permet de relier l'application d'assemblage et la propriété d'approximation persistante. \\
 
 \begin{thm} 
-Soit $G$ un groupoïde étale à base compacte qui admet un classifiant des actions propres cocompact, et $A$ une $G$-algèbre. Si $\mu_{G,l^\infty(\N, K_A)}$ est surjective et $\mu_{G,A}$ est injective, alors, pour une constante universelle $\lambda_{PA}$, pour tout $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ et $F\in\mathcal E$ non-vide, il existe $F'\in\mathcal E$ tel que $F\subseteq F'$ et tel que $PA_{A\rtimes G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ soit vérifiée.\\
+Soit $G$ un groupoïde étale à base compacte qui admet un classifiant des actions propres cocompact, et $A$ une $G$-algèbre. Si $\mu_{G,l^\infty(\N, K_A)}$ est surjective et $\mu_{G,A}$ est injective, alors, pour une constante universelle $\lambda_{PA}\geq 1$, pour tout $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ et $F\in\mathcal E$, il existe $F'\in\mathcal E$ tel que $F\subseteq F'$ et tel que $PA_{A\rtimes G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ soit vérifiée.\\
 \end{thm}
 
 \item[$\bullet$] En remarque, nous expliquons comment la tranformation de Kasparov contrôlée $J_G$ peut se définir pour les produits croisés réduits et maximaux de groupes quantiques discrets. Il suffit en effet de procéder de la même manière que dans le cas des groupoïdes étales. Pour ce faire, il suffit de remarquer que les propriétés importantes que vérifie le produit croisé, et qui permettent de contruire $J_G$, restent vraies dans le cas quantique. Les preuves écrites dans le cadre des groupoïdes étales se transposent alors sans modification.\\

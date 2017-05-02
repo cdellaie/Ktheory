@@ -58,7 +58,7 @@ The previous lemmas ensures that the analytic $K$-homology of $G$ can be compute
 \end{lem}
 
 \begin{dem}
-Let $Z$ and $Z'$ be two proper $G$-compact $G$-spaces such that $Z\subseteq Z'$. By lemma \ref{Gspace}, there exists compact subsets $K$ and $K'$ of $G$ and $G$-equivariant continuous maps $h : Z\rightarrow P_K(G)$ and $h : Z'\rightarrow P_{K'}(G)$. As $h'_{|Z} = h $, the following diagram commutes
+Let $Z$ and $Z'$ be two proper $G$-compact $G$-spaces such that $Z\subseteq Z'$. By lemma \ref{Gspace}, there exist compact subsets $K$ and $K'$ of $G$ and $G$-equivariant continuous maps $h : Z\rightarrow P_K(G)$ and $h : Z'\rightarrow P_{K'}(G)$. As $h'_{|Z} = h $, the following diagram commutes
 \[\begin{tikzcd}
 KK^G(C_0(Z),B)\arrow{r}\arrow{d}{h^*} & KK^G(C_0(Z'),B)\arrow{d}{(h')^*} \\
 RK^G(P_{K}(G),B)\arrow{r} & RK^G(P_{K'}(G),B) \\
@@ -83,7 +83,7 @@ satisfying $j_G(z\otimes_D z')=j_G(z)\otimes_{D\rtimes_r G} j_G(z')$ for any $z\
 
 \subsection{The assembly map}
 
-If $Z$ is a proper $G$-compact $G$-space, $Z\rtimes G$ is a proper groupoid by definition, hence there exists a cutoff function $c : Z\rightarrow [0,1]$ such that $\sum_{g\in G^{p(z)}} c(zg) = 1$. The function $g\mapsto c(r(g))^{\frac{1}{2}}c(s(g))^{\frac{1}{2}} $ defines a projection in $C_0(Z)\rtimes_r G$ which we denote by $\mathcal L_Z$. If $Z=P_K(G)$, then $\mathcal L_Z = \mathcal L_K$.
+If $Z$ is a proper $G$-compact $G$-space, $Z\rtimes G$ is a proper groupoid by definition, hence there exists a cutoff function $c : Z\rightarrow [0,1]$ such that $\sum_{g\in G^{p(z)}} c(zg) = 1$. The function $g\mapsto c(r(g))^{\frac{1}{2}}c(s(g))^{\frac{1}{2}} $ defines a projection in $C_0(Z)\rtimes_r G$ which we denote by $\mathcal L_Z$. If $Z=P_K(G)$, we will denote $\mathcal L_Z$ by $\mathcal L_K$. Notice that we will give a more explicit construction in this case in the following section. Indeed, for the action of $G$ on $P_K(G)$, the cutoff function can be described using well defined coordinate functions. 
 
 \begin{definition}
 The assembly map for $G$ with coefficients in $B$ is defined as the inductive limit of the maps $\mu_{G,B}^{(Z)} : KK^G(C_0(Z),B)\rightarrow K(B\rtimes_r B)$ given by
@@ -199,14 +199,14 @@ Let $E\in \mathcal E_X$. Any simplex $\eta\in P_E(X)$ can be written as a finite
  C_0(P_E(X)) & \rightarrow 	& l^2(X)\otimes C_0(P_E(X)) 		\\ 
  f           & \mapsto 		& (\lambda_x^{\frac{1}{2}}f)_{x\in X} 
 \end{array}\right.\] 
-is an isometry of $C_0(P_E(X))$-modules, and $V_0V_0^*\otimes id_H$ defines a projection in $l^2(X)\otimes H\otimes C_0(P_E(X))$ with finite propagation (less than $R= \sup_E d$, because $\text{supp }(V_0 V_0^*)\subseteq E$), so a class $[\mathcal L_E]\in K_0(C^*(X,C_0(P_E(X)))$.\\
+is an isometry of $C_0(P_E(X))$-modules, and $V_0V_0^*\otimes id_H$ defines a projection in $l^2(X)\otimes H\otimes C_0(P_E(X))$ with finite propagation (less than $R= \sup_E d$, because $\text{supp }(V_0 V_0^*)\subseteq E$), so a class $[\mathcal L_E]\in K_0(C^*(X,C_0(P_E(X)))$.
 
 \begin{definition}
 The coarse assembly map $\mu:KX_*(X,B)\rightarrow K_*(C^*(X,B))$ for $X$ with coefficients in $B$ is defined as 
 \[\forall z\in RK(P_E(X), B), \mu_{X,B}(z)=[\mathcal L_E]\otimes_{C^*(X,C_0(P_E(X)))} \sigma_X(z).\]
 \end{definition}
 
-The coarse Baum-Connes conjecture is the following claim.\\
+The coarse Baum-Connes conjecture is the following claim.
 
 \begin{conj}[Coarse Baum-Connes conjecture]
 For any coarse space $X$ with bounded geometry, the coarse assembly map $\mu_{X,\C}$ is an isomorphism.\\
