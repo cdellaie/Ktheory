@@ -1,14 +1,15 @@
 \section*{Background and historical perspective}
 
-After the pioneering work of Grothendieck on the Riemann-Roch theorem, $K$-theory was generalized to the topological setting by Atiyah and Hirzebruch. This construction was crucial for the proof of the index theorem by Atiyah and Singer. From another perspective, $C^*$-algebras define a natural extension of classical topology to the noncommutative setting. The Serre-Swan theorem allows to define $K$-theory for $C^*$-algebras, which generalizes the topological $K$-theory. This operator $K$-theory led to a huge amount of work and interest, based on the wide range of its applications. From classification of $C^*$-algebras to index theorems, even appearing in some areas of theoretical physics, $K$-theory has been the subject of increasing interest. Instead of detailing precisely all of these applications, which would be almost impossible, we propose to adopt the following axiom.\\   
- 
-\textbf{AXIOM 1} Computing the $K$-theory groups of a $C^*$-algebra is a difficult and interesting problem.\\ 
+After the pioneering work of Grothendieck on the Riemann-Roch theorem, $K$-theory was generalized to the topological setting by Atiyah and Hirzebruch. This construction was crucial for the proof of the index theorem by Atiyah and Singer. From another perspective, $C^*$-algebras define a natural extension of classical topology to the noncommutative setting. A $K$-theory for $C^*$-algebras exists, which generalizes the topological $K$-theory by the Serre-Swan theorem. This operator $K$-theory led to a huge amount of work and interest, based on the wide range of its applications. From classification of $C^*$-algebras to index theorems, even appearing in some areas of theoretical physics or representation theory, $K$-theory has been the subject of increasing interest. Describing the $K$-theory groups of a $C^*$-algebra is a difficult and interesting problem. It is thus crucial to develop a strategy for its computation.\\
+
+%Instead of detailing precisely all of these applications, which would be almost impossible, we propose to adopt the following axiom.\\   
+%\textbf{AXIOM 1} Computing the $K$-theory groups of a $C^*$-algebra is a difficult and interesting problem.\\ 
 
 During the eighties, Alain Connes and Paul Baum conjectured that one could describe the $K$-theory of the reduced $C^*$-algebra of a discrete group with a geometrical object, what is now called the analytical $K$-homology of the classifying space for proper action. They gave a relation between the two objects, embodied in the assembly map. Since then, the assembly map has been defined for locally compact group, for actions of groups by automorphisms on $C^*$-algebras, for topological groupoids, for coarse spaces and, in some cases, for quantum groups. The Baum-Connes conjecture, and its variants, state that the assembly map is an isomorphism, thus providing an algorithm to compute the $K$-theory of the $C^*$-algebra under consideration.\\
 
 More precisely, for any locally compact group $G$, there exists a homomorphism of $\Z_2$-graded abelian groups $\mu_G : K^{top}(G)\rightarrow K(C_r^*(G))$ where :\\
 \begin{itemize}
-\item[$\bullet$] $K^{top}(G)$ is the analytical $K$-homology group of $G$,
+\item[$\bullet$] $K^{top}(G)$ is the topological $K$-theory group of $G$,
 \item[$\bullet$] $C^*_r(G)$ is the reduced $C^*$-algebra of $G$ and $K(C_r^*(G))$ is its (operator) $K$-theory group.\\
 \end{itemize}
 %%%% BAUM CONNES
@@ -35,15 +36,17 @@ The coarse Baum-Connes conjecture admits version with coefficients as in the gro
 
 Great success was achieved in the study of the conjecture. It is known to hold :\\
 \begin{itemize}
-\item[$\bullet$] for groups with the Haagerup property, by work of N. Higson and G. Kasparov \cite{higsonkasparov},
-\item[$\bullet$] for some groups which may satisfy Kazhdan's property T, by work of V. Lafforgue \cite{Lafforgue}, 
+\item[$\bullet$] with coefficients for groups with the Haagerup property, by work of N. Higson and G. Kasparov \cite{higsonkasparov},
+\item[$\bullet$] for hyperbolic groups (which may satisfy Kazhdan's property T), by work of V. Lafforgue \cite{Lafforgue}, 
 \item[$\bullet$] for almost connected groups, by work of J. Chabert, S. Echterhoff and R. Nest \cite{chabertEN},
-\item[$\bullet$] for groupoids which admit a proper action by isometries on a field of Hilbert space, by work of J-L. Tu \cite{TuThese},
+\item[$\bullet$] with coefficients for groupoids which admit a proper action by isometries on a field of Hilbert space, by work of J-L. Tu \cite{TuThese},
 \item[$\bullet$] for coarse space which satisfy property A, by work of G. Yu \cite{Yu2}.\\
 \end{itemize}  
-Even if these classes of examples is very large, counterexamples have been exhibited by N. Higson, V. Lafforgue, and G. Skandalis in \cite{HigsonLaffSk}. One of the interest of the Baum-Connes conjectures is the way they relate to other conjectures. For instance, the injectivity of the Baum-Connes assembly map for a discrete group ensures that, by a principle descent, the group satisfies the Novikov conjecture for higher signatures. The different assembly maps also interelates between each other. In \cite{SkTuYu}, G. Skandalis, J-L. Tu and G. Yu proved that the coarse assembly map is equivalent to the assembly map associated to a topological groupoid canonically defined from the coarse space. We now give some details concerning these relations.\\
+Even if these classes of examples is very large, counterexamples have been exhibited by N. Higson, V. Lafforgue, and G. Skandalis in \cite{HigsonLaffSk}.\\
+% One of the interest of the Baum-Connes conjectures is the way they relate to other conjectures. For instance, the injectivity of the Baum-Connes assembly map for a discrete group ensures that, by a principle descent, the group satisfies the Novikov conjecture for higher signatures. %The different assembly maps also interelates between each other. In \cite{SkTuYu}, G. Skandalis, J-L. Tu and G. Yu proved that the coarse assembly map is equivalent to the assembly map associated to a topological groupoid canonically defined from the coarse space. We now give some details concerning these relations.\\
 
-Let us remind the reader of the statement of the Novikov conjecture. The reader is referred to \cite{kreckluck} for details. Let $\Gamma$ be a discrete group. Then there exists a unique, up to homotopy, connected CW-complex $B\Gamma$ such that $\pi_1(B \Gamma) \cong \Gamma$ and such that its universal covering $\tilde{B\Gamma}$ is contractible \cite{May}. This space $B\Gamma$ is called the classifying space. For any smooth oriented closed manifold $M$, denote by \[\mathcal L_M \in \bigoplus_{k\geq 0} H^{4k}(M,\mathbb Q).\] the $L$-class of $M$. Recall (see \cite{kreckluck} for precise definitions) that each components $(\mathcal L_M)_k\in H^{4k}(M,\mathbb Q) $ is a homogeneous polynomial of degree $k$ in the rational Pontrjagin classes. For any map $f: M\rightarrow B\Gamma$, define the higher signature 
+% NOVIKOV
+The main interest of the Baum-Connes conjecture lies in its connection with the Novikov conjecture. Let us remind the reader of the statement of the Novikov conjecture. The reader is referred to \cite{kreckluck} for details. Let $\Gamma$ be a discrete group. Then there exists a unique, up to homotopy, connected CW-complex $B\Gamma$ such that $\pi_1(B \Gamma) \cong \Gamma$ and such that its universal covering $\tilde{B\Gamma}$ is contractible \cite{May}. This space $B\Gamma$ is called the classifying space. For any smooth oriented closed manifold $M$, denote by \[\mathcal L_M \in \bigoplus_{k\geq 0} H^{4k}(M,\mathbb Q).\] the $L$-class of $M$. Recall (see \cite{kreckluck} for precise definitions) that each components $(\mathcal L_M)_k\in H^{4k}(M,\mathbb Q) $ is a homogeneous polynomial of degree $k$ in the rational Pontrjagin classes. For any map $f: M\rightarrow B\Gamma$, define the higher signature 
 \[\sigma_x(M,f) = \langle \mathcal L_M \cup f^*(x),[M] \rangle \quad \forall x\in H(B\Gamma,\mathbb Q).\]
 Here $[M]\in H_{\text{dim }M}(M,\mathbb Q)$ is the fundamental class of the closed oriented manifold $M$, and $\langle \ , \ \rangle $ is the pairing between cohomology and homology, given by Kronecker product. The Novikov conjecture claims that higher signatures are homotopy invariant.
 
@@ -56,29 +59,243 @@ The relation between the Novikov conjecture and the Baum-Connes conjecture is co
 \begin{thm}
 Let $\Gamma$ be a discrete group. Then the Baum-Connes conjecture for $\Gamma$, or more generally the rational injectivity of the Baum-Connes assembly map $\mu_\Gamma$, implies the Novikov conjecture for $\Gamma$.
 \end{thm}
+
+Any finitely generated group $\Gamma$ can be endowed with a left invariant metric, and let $|\Gamma|$ be the corresponding metric space. The coarse Baum-Connes conjecture for $\Gamma$ implies the rational injectivity of $\mu_\Gamma$. The previous theorem implies that one can prove the Novikov conjecture by proving that $\mu_{|\Gamma|}$ is an isomorphism. \\
+
+% Skandalis Tu Yu
 The study of the relations between the Novikov conjecture and operator algebras was initiated by Lusztig \cite{lusztig}. Another connection was revealed in the article of G. Skandalis, JL. Tu and G.Yu \cite{SkTuYu}. They built, out of every coarse space with bounded geometry $X$, an étale groupoid $G(X)$ such that :\\
 \begin{itemize}
 \item[$\bullet$] $l^\infty_B \rtimes_r G(X)$ and $C^*(X,B)$ are isomorphic as $C^*$-algebras,
 \item[$\bullet$] $\mu_{X,B}$ and $\mu_{G(X),l^\infty_B}$ are equivalent,\\
 \end{itemize}
-where $l^\infty_B$ is the $G$-algebra $l^\infty(X,B\otimes\mathfrak K)$.\\
+where $l^\infty_B$ is the $G$-algebra $l^\infty(X,B\otimes\mathfrak K)$. This result gives a general setting for the Dirac-Dual-Dirac argument. Indeed, $X$ satisfies property $A$ iff $G(X)$ is a-T-menable. The proof of the coarse Baum-Connes conjecture for property A spaces hence reduces to an instance of the Baum-Connes conjecture for a-T-menable groupoid. When $X=|\Gamma|$, one can show that $G(X) \cong \beta |\Gamma| \rtimes \Gamma$, hence the coarse assembly map for $|\Gamma|$ is equivalent to $\mu_{\Gamma,l^\infty(\Gamma, \mathfrak K)}$ \cite{SkTuYu} ($\beta X$ denotes the Stone-Cech compactification). These relations are surprising in that the coarse space $|\Gamma|$ forgets the algebraic structure of $\Gamma$, replacing it by metric properties of $|\Gamma|$. Our work focus on these relations at the level of controlled $K$-theory, which we now turn to.  \\
 
 %%%%%%%%%%%%%% Explication de la these : origine de la K theorie controllee
-We are interested by G. Yu's celebrated proof of the Baum-Connes conjecture for coarse spaces with finite asymptotic dimension \cite{Yu1}. It is worth noticing that any coarse space with finite asymptotic dimension satisfies property A, hence this proof is less general that the one in \cite{Yu2}. Nonetheless, the idea is very different. To simplify, we could see this proof as a "controlled cutting and pasting" : the finite asymtpotic-dimensional coarse space is cut into smaller pieces, which are shown to satisfy the coarse Baum-Connes conjecture. One need then to paste the different pieces in a way compatible with the assembly maps. It is in this part of the proof that appeared some modified $K$-theory groups that were essential for the "cutting and pasting". \\
+The first occurence of controlled $K$-theory appeared in G. Yu's celebrated proof of the Baum-Connes conjecture for coarse spaces with finite asymptotic dimension \cite{Yu1}. It is worth noticing that any coarse space with finite asymptotic dimension satisfies property A, hence this proof is less general that the one in \cite{Yu2}. Nonetheless, the idea is very different. To simplify, we could see this proof as a "controlled cutting and pasting" : the finite asymtpotic-dimensional coarse space is cut into smaller pieces, which satisfy the coarse Baum-Connes conjecture in a uniform way. One need then to paste the different pieces in a way compatible with the assembly maps.\\ % It is in this part of the proof that appeared some modified $K$-theory groups that were essential for the "cutting and pasting". \\
 
 In order to apply this strategy to more general situations, controlled $K$-theory was developed in \cite{OY2} by H. Oyono-Oyono and G. Yu. Controlled $K$-theory is defined in the setting of filtered $C^*$-algebras. Roe algebras of metric spaces, crossed products of $C^*$-algebras by discrete groups, or by groupoids endowed with a proper length, are examples of filtered $C^*$-algebras. The filtration encodes propagation of operators. An good analogy to understand propagation is the case of differential operators. A differential operator is said to be of bounded propagation if, applied to a function with bounded support, the output remains a function with bounded support.\\
 
-In \cite{OY2} and \cite{OY3}, a controlled $K$-theory was developed in this general setting. It is a refinement of operator $K$-theory, which keeps track of the filtration by replacing the $K$-groups $K_*(A)$ of a $C^*$-algebra $A$ by a family of groups $\hat K_*(A)= \{K_*^{\varepsilon,R}(A)\}_{\varepsilon\in (0\frac{1}{4}),R>0}$. These controlled groups are naturally related to the usual $K$-theory, and are compatible when one increases the propagation. A new parameter appears, $\varepsilon\in (0 , \frac{1}{4})$, which is a technical adjustment to make sure controlled $K$-theory are genuine groups. The bound $\frac{1}{4}$ is not crucial, it is the greater bound that allows one to get a $K$-theory element out of any controlled $K$-theory class. One could in principle take any lesser bound.\\ 
+In \cite{OY2} and \cite{OY3}, a controlled $K$-theory was developed in full generality in this setting. It is a refinement of operator $K$-theory, which keeps track of the filtration by replacing the $K$-groups $K_*(A)$ of a $C^*$-algebra $A$ by a family of groups $\hat K_*(A)= \{K_*^{\varepsilon,R}(A)\}_{\varepsilon\in (0\frac{1}{4}),R>0}$. These controlled groups are naturally related to the usual $K$-theory, and are compatible when one increases the propagation. They are defines using almost projections and almsot unitaries, and a new parameter appears, $\varepsilon\in (0 , \frac{1}{4})$, which is the defect in an almost projection (or unitary) to be a genuine projection (or unitary). %a technical adjustment to make sure controlled $K$-theory are genuine groups. 
+The bound $\frac{1}{4}$ is not crucial, it is the greater bound that allows one to get a $K$-theory element out of any controlled $K$-theory class. One could in principle take any lesser bound.\\ 
+
+%%%%% RESUME %%%%%
+
+The aim of this thesis is, first, to extend the setting of controlled $K$-theory to more general filtrations that naturally arise in geometry. Then we define controlled assembly maps with values in these controlled $K$-theory groups. We develop a formulation general enough to include the study of the Roe algebra of coarse spaces and crossed products of $C^*$-algebras by étale groupoids and discrete quantum groups. We also gain that the filtration comes directly from the geometry and does not depend on the choice of a particular metric in the case of coarse spaces. We treat mainly the case of étale groupoids and discrete coarse spaces with bounded geometry. Discrete quantum groups are mentionned, but the lack of geometric point of view does not allow such powerful results. \\
+
+We begin by the definition of a coarse structure. 
+
+\begin{definition}
+A coarse structure $\mathcal E$ is a lattice which is an abelian semi-group. %such that $\forall E,E'\in \mathcal E$, $E\leq E'E$. 
+Recall that a lattice is a poset for which every pair $(E,E')$ admits a supremum $E\vee E'$ and an infimum $E\wedge E'$.
+\end{definition}
+
+A coarse structure $\mathcal E$ allows to define the notion of a $\mathcal E$-filtered $C^*$-algebra. 
+
+\begin{definition}
+A $C^*$-algebra $A$ is said to be $\mathcal E$-filtered if there exists a coarse structure $\mathcal E$ and, for every $E\in \mathcal E$, linear subspaces $A_E$ of $A$ such that :\\
+\begin{itemize}
+\item[$\bullet$] if $E \leq E'$, then $A_E\subseteq A_{E'}$, and the inclusion $\phi_E^{E'}: A_E\hookrightarrow A_{E'}$ induces an inductive system of linear spaces,
+\item[$\bullet$] $A_E$ is stable by involution,
+\item[$\bullet$] for all $E,E'\in\mathcal E$, $A_E.A_{E'}\subseteq A_{EE'}$,
+\item[$\bullet$] the union of subspaces is dense in $A$, i.e. $\overline{\cup_{E\in\mathcal E}A_E} = \varinjlim A_E = A$.
+\item[$\bullet$] if $A$ is unital, we impose that $1\in A_E,\forall E\in\mathcal E$.
+\end{itemize}
+\end{definition} 
+
+New $C^*$-algebras can then be seen as filtered $C^*$-algebras. \\
+
+\begin{itemize} 
+\item[$\bullet$] Let $(X,d)$ a discrete metric space with bounded geometry. Then, the symmetric subsets $E\subseteq X$ such that $\sup d<\infty$, are naturally ordered by $\subseteq$ and we can define a composition law by :
+\[E\circ E = EE'\cup E'E,\]
+where $EE' = \{(x,y)\in X\times X \text{ t.q. }\exists z\in X / (x,z)\in E \text{ et }(z,y)\in E'\}$. This defines a coarse structure $\mathcal E_X$.
+\item[$\bullet$] Let $G$ be a $\sigma$-compact étale groupoid. Then the symmetric compact subsets $E\subseteq G$ are naturally ordered by $\subseteq$ and we can define a composition law by :
+\[E\circ E = EE'\cup E'E,\]
+where $EE' = \{gg' ; (g,g')\in G^{(2)}\}$. This defines a coarse structure $\mathcal E_G$.
+\item[$\bullet$] Let $\mathbb G$ a compact quantum group. Then the set of finite dimensional equivalence classes of symmetric unitary representations of $\mathbb G$ is ordered by : $\pi\leq \pi'$ iff $\pi$ is unitarly equivalent to a subrespresentation of $\pi$. Moreover, the symmetric tensor product defines a composition law
+\[\pi\circ \pi' = (\pi\otimes\pi' )\oplus (\pi'\otimes \pi) \quad \forall \pi,\pi'\] This defines a coarse structure $\mathcal E_{\mathbb G}$.\\
+\end{itemize} 
+
+It turns out that Roe algebras $C^*(X,B)$, crossed products by $G$, and crossed products by $\hat{\mathbb G}$ are filtered by $\mathcal E_X$, $\mathcal E_G$ and $\mathcal E_{\mathbb G}$ respectively.\\
+
+The second part of the thesis deals with constructions of controlled assembly maps with values in controlled $K$-theory in the case of discrete coarse spaces with bounded geometry and étale groupoids. A crucial property is that these applications facrorize the usual assembly maps. This allows to relate the Baum-Connes and the coarse Baum-Connes conjectures to the property of our controlled assembly maps. The definitions of these assembly maps contains two steps. The first is to define a descent functor. We then define the Rips complex of $X$ and $G$, and a canonical projection. The assembly map is the evaluation of the descent functor at this projection. \\
+
+More precisely, let $(X,d)$ be a countable discrete metric space with bounded geometry; i.e. $\forall R>0,\sup | \{ (x,y) \in X\times X \text{ t.q. }d(x,y)<R\} |<\infty$. We firse build the controlled Roe transformation $\hat\sigma_X(z)$ for every $z\in KK(A,B)$. Propositions \ref{Roe1} and \ref{Roe2}, which describe its properties, can be summarized in the following proposition :
+
+\begin{prop}
+Let $A$ and $B$ two $C^*$-algebras. For every $z\in KK_*(A,B)$, there exists a control pair $(\alpha_X,k_X)$ and a $(\alpha_X,k_X)$-controlled morphism
+\[\hat\sigma_X(z) : \hat K(C^*(X,A))\rightarrow \hat K(C^*(X,B))\]
+of the same degree as $z$, such that
+\begin{enumerate}
+\item[(i)] $\hat\sigma_X(z)$ induces right multiplication by $\sigma_X(z)$ in $K$-theory ;
+\item[(ii)] $\hat\sigma_X$ is additive, i.e.
+\[\hat\sigma_X(z+z')=\hat\sigma_X(z)+\hat\sigma_X(z').\]
+\item[(iii)] For every $*$-homomorphism $f : A_1\rightarrow A_2$,
+\[\hat\sigma_X(f^*(z))=\hat\sigma_X(z)\circ f_{X,*}\] for all $z\in KK_*(A_2,B)$.
+\item[(iv)] For every $*$-homomorphism $g : B_1\rightarrow B_2$,
+\[\hat\sigma_X(g_*(z))= g_{X,*}\circ \hat\sigma_X(z)\] for all $z\in KK_*(A,B_1)$.
+\item[(v)] Let $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ be a semi-split extension of $C^*$-algebras and $[\partial_J]\in KK_1(A/J,J)$ be its boundary element. Then 
+\[\hat\sigma_X([\partial_{J,A}])=D_{C^*(X,J),C^*(X,A)}.\] 
+\item[(vi)] $\hat\sigma_X([id_A]) \sim_{(\alpha_X,k_X)} id_{\hat K(C^*(X,A))}$
+\end{enumerate}
+\end{prop}
+
+The controlled Roe transformation is a descent functor, and the natural following step is the definition of the controlled assembly map $\hat\mu_{X,B}$, for any $C^*$-algebra $B$. For every entourage $E$, we define a canonical projection $P_E\in C^*(X,C_0(P_E(X)))$ with finite propagation. This defines a controlled $K$-theory class.         
+
+\begin{definition}
+Let $B$ a $C^*$-algebra, $\varepsilon\in (0,\frac{1}{4})$ and $E,F\in\mathcal E_X$ controlled subsets such that $k_X(\varepsilon).E\subseteq F$. The controlled coarse assembly map $\hat\mu_{X,B}=(\mu_{X,B}^{\varepsilon,E,F})_{\varepsilon,E}$ is defined as the family of maps
+\[\hat\mu_{X,B}^{\varepsilon, E,F} :\left\{\begin{array}{rcl} KK(C_0(P_E(X)),B) & \rightarrow & K^{\varepsilon, F}(C^*(X,B)) \\
+					z & \mapsto & \iota_{\alpha_X \varepsilon',k_X(\varepsilon').F'}^{\varepsilon,F}\circ\hat\sigma_X(z)[P_{E},0]_{\varepsilon', F'}\end{array}\right.\]
+where $\varepsilon'$ and $F'$ satisfy :
+\begin{itemize}
+\item[$\bullet$] $\varepsilon'\in (0,\frac{1}{4})$ such that $\alpha_X \varepsilon'\leq \varepsilon$,
+\item[$\bullet$] and $F'\in\mathcal E$ such that $E\subseteq F'$ and $k_X(\varepsilon').F'\subseteq F$.
+\end{itemize}
+%are chosen not to exceed $\varepsilon$ and $E$ when composed with the propagation of the controlled morphisms. 
+\end{definition}
+
+We then define corresponding assembly maps in the setting of étale groupoid. More precisely, let $G$ be a $\sigma$-compact étale groupoid. We prove that compact symmetric subsets $E\subseteq G$ define a coarse structure $\mathcal E$, and that reduced crossed products by $G$ are filtered by $\mathcal E$. The first step is again to build a controlled descent functor in controlled $K$-theory. Propositions \ref{Kasparov1} and \ref{Kasparov} can be summarized in the following proposition : 
+
+\begin{prop}
+Let $A$ and $B$ two $G$-$C^*$-algebras. For every $z\in KK^G_*(A,B)$, there exists a control pair $(\alpha_J,k_J)$ and a $(\alpha_J,k_J)$-controlled morphism
+\[J_{red,G}(z) : \hat K(A\rtimes_r G)\rightarrow \hat K(B\rtimes_r G)\]
+of the same degree as $z$, such that
+\begin{enumerate}
+\item[(i)] $J_{red,G}(z)$ induces right multiplication by $j_{red,G}(z)$ in $K$-theory ;
+\item[(ii)] $J_{red,G}$ is additive, i.e.
+\[J_{red,G}(z+z')=J_{red,G}(z)+J_{red,G}(z').\]
+\item[(iii)] For every $G$-morphism $f : A_1\rightarrow A_2$,
+\[J_{red,G}(f^*(z))=J_{red,G}(z)\circ f_{G,red,*}\] for all $z\in KK_*^G(A_2,B)$.
+\item[(iv)] For every $G$-morphism $g : B_1\rightarrow B_2$,
+\[J_{red,G}(g_*(z))= g_{G,red,*}\circ J_{red,G}(z)\] for all $z\in KK_*^G(A,B_1)$.
+\item[(v)] Let $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ be a semi-split equivariant extension of $G$-algebras and $[\partial_J]\in KK_1^G(A/J,J)$ be its boundary element. Then 
+\[J_G([\partial_J])=D_{J\rtimes_r G,A\rtimes_rG}.\] 
+\item[(vi)] $J_{red,G}([id_A]) \sim_{(\alpha_J,k_J)} id_{\hat K(A\rtimes G)}$
+\end{enumerate}
+\end{prop} 
+
+This transformation, that we call controlled Kasparov tranformation, allows to define the controlled assembly map $\hat\mu_{G,B}$ for any $G$-algebra $B$. For any controlled subset $E\subseteq G$, we also have a canonical projection $\mathcal L_E\in C_0(P_E(G))\rtimes_r G$ wih finite propagation. It defines a controlled $K$-theory class.
+
+\begin{definition}
+Let $B$ be a $G$-algebra, $\varepsilon\in (0,\frac{1}{4})$, and $E\in\mathcal E$. Let $F\in \mathcal E$ such that $k_J(\varepsilon).E \subseteq F$. The controlled assembly map for $G$ is defined as the family of maps :
+\[\mu_{G,B}^{\varepsilon,E,F}\left\{
+\begin{array}{rcl}
+RK^G(P_E(G), B) & \rightarrow & K_*^{\varepsilon, F}(B\rtimes_r G)\\
+z & \mapsto & \iota_{\alpha_J\varepsilon', k_J(\varepsilon').F'}^{\varepsilon,F} \circ J_G^{\varepsilon', F'}(z)([\mathcal L_E,0]_{\varepsilon' , F'})
+\end{array}\right.\]
+where $\varepsilon'$ and $F'$ satisfy :
+\begin{itemize}
+\item[$\bullet$] $\varepsilon'\in (0,\frac{1}{4})$ such that $\alpha_J \varepsilon'\leq \varepsilon$,
+\item[$\bullet$] and $F'\in\mathcal E$ such that $E\subseteq F'$ and $k_J(\varepsilon').F'\subseteq F$.
+\end{itemize}
+\end{definition}
+
+The assembly map also admits a maximal version with values in $\hat K(A\rtimes_{max} G) = \{K^{\varepsilon,E}(A\rtimes_{max} G)\}_{\varepsilon \in (0,\frac{1}{4}),E\in\mathcal E}$.\\
+
+The second step consists in the formulation of a controlled Baum-Connes conjecture. We then show how the controlled assembly maps relates to the usual assembly map in the theorems \ref{Quant1} et \ref{Quant2}, which we call quantitative statements. In order to state them, let us introduce the following properties :\\
+\begin{itemize}
+\item[$\bullet$] $QI_{G,B}(E,E',F,\varepsilon)$ : for any $x\in RK^G(P_E(G), B )$, then $\mu^{\varepsilon,E,F}_{G,B}(x) = 0$ implies $q_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),B)$.
+\item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : for any $y\in K^{\varepsilon,F}(B\rtimes_r G)$, there exists $x\in RK^G(P_E(G),B)$ such that $\mu^{\varepsilon',E,F'}_{G,B}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
+\end{itemize} 
+
+The quantitative statements are the main result of the thesis, and can be stated as follows.
+
+\begin{thm}
+Let $B$ a $G$-algebra, and $\tilde B = l^\infty(\N,B\otimes \mathfrak K)$. Then $\mu_{G,\tilde B}$ is injective if and only if for every $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ and $F$ such that $k_J(\varepsilon).E\subseteq F$, there exists $E' \in\mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(E,E',\varepsilon,F)$. 
+\end{thm}
+
+\begin{thm}
+Let $B$ a $G$-algebra, and $\tilde B = l^\infty(\N,B\otimes \mathfrak K)$. Then there exists $\lambda>1$ such that $\mu_{G,\tilde B}$ is onto if and only if for any $\varepsilon\in ( 0 ,\frac{1}{4\lambda})$ and every nonempty $F\in\mathcal E$, there exist $E,F'\in\mathcal E$ such that  $k_J(\varepsilon) .E \subseteq F$, $F\subseteq F'$ and such that $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ holds.
+\end{thm}
+
+We also give a uniform version :
+\begin{thm} Let $G$ be an étale groupoid with compact base space. 
+\begin{itemize}
+\item[$\bullet$] Assume that for any $G$-algebra $B$, $\mu_{G,B}$ is one-to-one. Then, for any $\varepsilon\in (0,\frac{1}{4})$ and every $E,F\in\mathcal E$ such that $k_J(\varepsilon). E\subseteq F$, there exists $E'\in\mathcal E$ such that $E\subseteq E'$ and such that $QI_{G,A}(E,E',\varepsilon,F)$ holds for any $G$-algebra $B$.
+\item[$\bullet$] Assume that for any $G$-algebra $B$, $\mu_{G,B}$ is onto. Then, for some $\lambda>0$ and for any $\varepsilon\in (0,\frac{1}{4\lambda})$ and every $F\in\mathcal E$, there exists $E,F'\in\mathcal E$ such that $k_J(\varepsilon). E\subseteq F'$ and $F\subseteq F'$ such that, for any $G$-algebra $B$, $QS_{G,A}(E, F,F',\varepsilon,\lambda \varepsilon)$ holds.
+\end{itemize}
+\end{thm}
+
+The remaining of the chapter  presets two applications. One deals with what is called Persistent Approximaion Property, and the second one gives a controlled version of a result on $K$-amenability of discrete quantum groups. \\
+
+\begin{itemize}
+
+\item[$\bullet$] Let us first recall the definition of the Persistent Appoximation Property (PAP), given in \cite{OY3}.\\
+
+\begin{definition}
+Let $B$ be a $\mathcal E$-filtered $C^*$-algebra, $\lambda>0$, $\varepsilon,\varepsilon'$ be positive numbers such that $0<\varepsilon <\varepsilon' <\frac{1}{4}$ and $F,F'\in\mathcal E$ be nonempty controlled subsets such that $F\subseteq F'$. The following property is called Persistance Approximation Property :
+\begin{itemize}
+\item[$\bullet$] $PA_B(\varepsilon,\varepsilon',F,F')$ : for every $x\in K_*^{\varepsilon,F}(B)$ such that $\iota_{\varepsilon,F}(x)=0$ in $K_*(B)$, then $\iota_{\varepsilon,F}^{\varepsilon',F'}(x)=0$ in $K_*^{\varepsilon',F'}(B)$.
+\item[$\bullet$] $B$ is said to satisfy the Persistance Approximation Property $(PAP)_\lambda$ if for every nonempty $F\in\mathcal E$ and every $\varepsilon\in (0,\frac{1}{4})$, there exists $F'\in\mathcal E$ nonempty such that $PA_B(\varepsilon,\lambda\varepsilon,F,F')$ holds.
+\end{itemize}
+\end{definition}
+
+The property (PAP) is satisfied when controlled $K$-theory approximates uniformly $K$-theory. Theorem \ref{PAPG} gives a relation between the assembly map and the Persitent Approximation Property. \\
+
+\begin{thm} 
+Let $G$ be an étale groupoid with compact base space. Assume that $G$ admits a cocompact universal space for proper actions. Then there exists a universal constant $\lambda_{PA}$ such that, for every $G$-algebra $A$, if $\mu_{G,l^\infty(\N, A\otimes\mathfrak K)}$ is onto and $\mu_{G,A}$ is one-to-one, then for every $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ and every nonempty $F\in\mathcal E$, there exists $F'\in\mathcal E$ such that $F\subseteq F'$ and $PA_{A\rtimes_r G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ holds.
+\end{thm}
+
+\item[$\bullet$] As a final remark, we explain how the controlled Kasparov tranformation $J_G$ can be defined for reduced and maximal crossed products of discrete quantum groups. The same method as in the groupoid setting is sufficient. It is indeed sufficient to notice that crucial properties of the crossed product are still valid for quantum groups, and the contruction of $J_G$ can be transposed without modification in the quantum case.\\
+
+We give an application to $K$-amenability of discrete quantum groups in the proposition \ref{QGK}. Let us denote by $\lambda_A$ the canonical map $A\rtimes_{max} \hat{\mathbb G} \rightarrow A \rtimes_r \hat{\mathbb G}$ for any $\hat{\mathbb G}$-algebra $A$.\\
+
+\begin{prop}
+Let $\hat{\mathbb G}$ be a $K$-amenable discrete quantum group. Then, there exists a control pair $\rho$ such that, for every $\hat{\mathbb G}$-algebra $A$,
+\[(\lambda_A)_* : \hat K(A\rtimes_{max} G) \rightarrow \hat K(A\rtimes_r G) \]
+is a $\rho$-controlled isomorphism.
+\end{prop}
+
+\end{itemize}
+
+The last part focuses on two applications. \\
+
+\begin{itemize}
+
+\item[$\bullet$] The first application deals with coarse geometry. We follow the route of \cite{SkTuYu} by using the coarse groupoid $G(X)$ of a coarse space $X$, which is étale. We prove that the controlled coarse assembly map for $X$ with values in $B$ is equivalent to the controlled assembly map for $G(X)$ with values in $l^\infty(X,B\otimes\mathfrak K)$. The theorem \ref{BCCeq} is the following.\\
+
+\begin{thm}
+Let $B$ a $C^*$-algebra, $R>0$ and $\Delta_R\subseteq X\times X$ the corresponding entourage. With the above notations, for all $z\in RK^G(P_{\overline \Delta_R}(G),l^\infty)$ and all $\varepsilon\in(0,\frac{1}{4})$, the following equality holds :
+\[(\Psi_B)_*\circ\mu^{\epsilon,\overline\Delta_R}_{G,\tilde B} (z) = \mu_{X,B}^{\epsilon,R}(\iota^*(z)).\]
+\end{thm}
+
+This theorem induces in $K$-theory a result of G. Skandalis, J-L. Tu and G. Yu \cite{SkTuYu}, which asserts the equivalence between the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ and the Baum-Connes conjecture for $G(X)$ with coefficients in $l^\infty(X,B\otimes \mathfrak K)$. This allows in particular to prove a controlled version of a result of M. Finn-Sell in \cite{FinnSellFibred}. \\
+
+\begin{cor}
+Let $X$ be a coarse space that admits a fibred coarse embedding into Hilbert space. Then $\hat \mu_{X}^{max}$ is a controlled isomorphism, i.e. $X$ satisfies the controlled Coarse Baum-Connes conjecture.
+\end{cor}
+
+
+\item[$\bullet$] The last application deals with a Künneth formula in controlled $K$-theory for groupoid $C^*$-algebras, in theorem \ref{Kunneth}. The case of discrete groups was covered in \cite{OY4} by H. Oyono-Oyono and G. Yu. To prove the Künneth formula, we show that a certain morphism $\alpha_{A\rtimes_r G,B}$ is an isomorphism. The strategy is a generalization of the "Going Down Principle" developed by J. Chabert, S. Echterhoff and H. Oyono-Oyono in \cite{ChabertEOY} to the setting of étale groupoids. We can summarize it as follows : first define a topological version $\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K_*(B)\rightarrow RK^G(Z,A\otimes B )$ of $\alpha_{A\rtimes_r G,B}$, then show that the assembly maps intertwines them. This needs the definition of a restriction functor $Res_H^G$ in equivariant $KK$-theory to any compact subgroupoid $H$ of $G$, and the definition of a property on groupoid actions, called strong properness (which is to be locally induced by a compact open subgroupoid). We then define the class $\mathcal C$ as the class of groupoids of which every proper actions are strongly proper. We porve that ample groupoids are in class $\mathcal C$, which gives a large class of examples. The following result describes the relation between class $\mathcal C$ and the Kûnneth formula. \\
+
+%La dernière application concerne une formule de Künneth en $K$-théorie quantitative pour les $C^*$-algèbres de groupoïdes, qui constitue le théorème \ref{Kunneth}. Le cas des groupes discrets a été couvert dans un article de H. Oyono-Oyono et G. Yu \cite{OY4}. Pour établir la formule de Künneth, nous montrons qu'un certain morphisme $\alpha_{A\rtimes_r G,B}$ est un isomorphisme. La stratégie consiste en une généralisation des techniques dites de "Going Down Principle" développées par J. Chabert, S. Echterhoff et H. Oyono-Oyono dans \cite{ChabertEOY}. Pour cela, nous avons besoin de définir le foncteur $Res_H^G$ de restriction à un sous-groupoïde compact $H$ de $G$ en $KK$-théorie équivariante, ainsi qu'une propriété sur les actions de groupoïdes, appelée propreté forte. Nous définissons ensuite une classe $\mathcal C$ de groupoïdes, dont toutes les actions propres sont fortement propres, i.e. localement induites par des sous-groupoïdes compacts ouverts. Nous prouvons que les groupoïdes amples sont dans la classe $\mathcal C$, ce qui donne une large classe d'exemples. Le principe de la preuve est le suivant : nous définissons une version topologique $\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K_*(B)\rightarrow RK^G(Z,A\otimes B )$ de $\alpha_{A\rtimes_r G,B}$, puis démontrons que l'application d'assemblage les entrelace. Le résultat suivant permet alors de relier la classe $\mathcal C$ à la formule de Künneth. \\
+
+\begin{thm}
+Let $G$ be an étale groupoid in the class $\mathcal C$, and let $E\in\mathcal E$ be a controlled subset of $G$ and $P_E(G)$ be the corresponding Rips complex. If, for all compact open subgroupoids $H$ of $G$ and every $H$-space $V$ such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective, $\alpha_{Res_H^G(A),B}^{H,V}$ is an isomorphism, then $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism for all $C^*$-algebras $B$ such that $K_*(B)$ is a free abelian group.
+\end{thm}
+
+The main theorem can then be stated as follows.\\
+
+\begin{thm}
+Let $G$ be a $\sigma$-compact étale groupoid and $A$ a $G$-algebra. Suppose that 
+\begin{itemize}
+\item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients,
+\item[$\bullet$] $G$ is in class $\mathcal C$,
+\item[$\bullet$] for every compact open subgroupoid $H$ of $G$ and every $H$-space $V$ such that the anchor map $p : V \rightarrow H^{(0)}$ is locally injective, $\alpha_{Res_H^G(A),B}^{H,V}$ is an isomorphism.
+\end{itemize} 
+Then $A\rtimes_r G$ satisfies the quantitative Künneth formula.
+\end{thm}
+
+\end{itemize}
+
 
 %%%%% PLAN DE LA THESE %%%%%
-
-The idea behind this thesis is, first, to extend the setting of controlled $K$-theory, and then to define controlled assembly maps. We develop a formulation general enough to include the study of the Roe algebra of coarse spaces and crossed products of $C^*$-algebras by étale groupoids and discrete quantum groups. Let us detail the plan.\\ 
+Let us detail the plan of the thesis.\\ 
 
 The first part is devoted to remind the reader of the definitions and results we will need. After a quick introduction to $C^*$-algebras and to Hilbert modules, the reader is guided through étale groupoids, coarse spaces and their relations. We give details on an important construction of \cite{SkTuYu}, the (étale) coarse groupoid $G(X)$ associated to a coarse space $X$. We also give a detailed proof of the $*$-isomorphism between the Roe algebra of $X$ with coefficients in a $C^*$-algebra $B$ and the reduced crossed product of $l^\infty (X,B\otimes\mathfrak K)$ with the natural action of $G(X)$. We end this section with a quick reminder of the construction of crossed products in the setting of discrete quantum groups.\\
  
 In the second part, the first chapter begins with a definition of a filtered $C^*$-algebra with respect to what we call a coarse structure. An exposition of the controlled $K$-theory in this setting follows. All the results obtained by H. Oyono-Oyono and G. Yu in \cite{OY2} and \cite{OY3} are true in this setting. The interesting part is the definition of a coarse structure and the examples which cannot fit into the former formalism adopted in \cite{OY2}. These examples are given by the coarse structure $\mathcal E_X$ generated by symmetric entourages of a coarse space $X$, the coarse structure $\mathcal E_G$ generated by symmetric compact subsets of an étale groupoid $G$, and the coarse structure $\mathcal E_{\mathbb G}$ generated by symmetric unitary finite dimensional representations of a discrete quantum group $\mathbb G$. We show that these structures define filtration on the Roe algebras of $X$, and crossed products of $C^*$-algebras endowed with an action of $G$ and $\hat{\mathbb G}$ respectively.\\
 
-The next chapter is divided into three parts. The first contains definitions of the usual assembly maps for étale groupoids and coarse spaces. It is followed by two very similar parts, so as to underline the similarity between the two situations, in which the controlled assembly maps are built. The steps are the following. First, define a descent transformation, called the controlled Roe transformation in the coarse setting, and the controlled Kasparov transformation in the groupoid setting. These are transformations that map $KK$-elements from $A$ to $B$ to controlled morphism from $\hat K(A)$ to $\hat K(B)$. We always begin with odd $KK$-elements, and realize them as boundaries of a well chosen semi-split extension of $C^*$-algebras. Taking the reduced crossed product (or the Roe algebra, depending on the setting) preserves these properties, and the controlled transformation is defined as the boundary of the resulting extension composed by some invertible controlled transformation. The odd case is obtained using Bott periodicity. We then study properties of the descent transformation, the most crucial being that it is natural and respects the Kasparov product. The controlled assembly maps are defined from canonical projections $P_E$ and $\mathcal L_E$. At the end of the third part, we states what we called quantitative statements, relating the behaviour of usual assembly maps to controlled assembly maps. Doing so requires some interesting results on the $K$-homology groups with respect to infinite products of stable $C^*$-algebras, i.e. the content of the lemma \ref{prod}. We end the chapter by stating that the descent transformation can be defined in a similar way for quantum groups and give an application to $K$-amenability for discrete quantum groups.\\
+The chapter $4$ is divided into four parts. The first contains definitions of the usual assembly maps for étale groupoids and coarse spaces. It is followed by two very similar parts, so as to underline the similarity between the two situations, in which the controlled assembly maps are built. The steps are the following. First, define a descent transformation, called the controlled Roe transformation in the coarse setting, and the controlled Kasparov transformation in the groupoid setting. These are transformations that map $KK$-elements from $A$ to $B$ to controlled morphism from $\hat K(A)$ to $\hat K(B)$. We always begin with odd $KK$-elements, and realize them as boundaries of a well chosen semi-split extension of $C^*$-algebras. Taking the reduced crossed product (or the Roe algebra, depending on the setting) preserves these properties, and the controlled transformation is defined as the boundary of the resulting extension composed by some invertible controlled transformation. The odd case is obtained using Bott periodicity. We then study properties of the descent transformation, the most crucial being that it is natural and respects the Kasparov product. The controlled assembly maps are defined from canonical projections $P_E$ and $\mathcal L_E$. At the end of the third part, we states what we called quantitative statements, relating the behaviour of usual assembly maps to controlled assembly maps. Doing so requires some interesting results on the $K$-homology groups with respect to infinite products of stable $C^*$-algebras, i.e. the content of the lemma \ref{prod}. We end the chapter by stating that the descent transformation can be defined in a similar way for quantum groups and give an application to $K$-amenability for discrete quantum groups.\\
 
 The following chapter gives two applications of the controlled assembly maps. The first application deals with a controlled version of the main result of \cite{SkTuYu} : the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ and the Baum-Connes conjecture for $G(X)$ with coefficients in $l^\infty (X, B\otimes\mathfrak K)$ are equivalent. We are able to prove in theorem \ref{BCCeq} that the two corresponding controlled assembly maps are equivalent. This result induces the classical one, and gives another proof. We apply the equivalence between the two controlled assembly maps to obtain some result about spaces which admit fibred coarse embedding into Hilbert space. The following application deals with a controlled Künneth formula for étale groupoids which satisfy a certain property. We call this class of groupoids the class $\mathcal C$, and prove that ample groupoids are in this class. This class seems worth studying. Notably, induction and restriction are interesting to study. \\  
 

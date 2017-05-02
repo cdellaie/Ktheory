@@ -9,7 +9,7 @@ Saad Baaj and Georges Skandalis.
 \bibitem{BaumConnes}
 Paul Baum and Alain Connes.
 \newblock Geometric {K}-theory for {L}ie groups and foliations.
-\newblock {\em ENSEIGNEMENT MATHEMATIQUE}, 46(1/2):3--42, 2000.
+\newblock {\em Enseignement Mathematique}, 46(1/2):3--42, 2000.
 
 \bibitem{BaumConnesHigson}
 Paul Baum, Alain Connes, and Nigel Higson.
@@ -89,10 +89,6 @@ Erik Guentner, Rufus Willett, and Guoliang Yu.
 \newblock Dynamic asymptotic dimension: relation to dynamics, topology, coarse
   geometry, and {C}*-algebras.
 \newblock {\em Mathematische Annalen}, pages 1--45, 2015.
-
-\bibitem{OY3}
-G.~Yu H.~Oyono-Oyono.
-\newblock Persitance {A}pproximation {P}roperty and controlled {K}-theory.
 
 \bibitem{higsonkasparov}
 Nigel Higson and Gennadi Kasparov.
@@ -212,6 +208,10 @@ H.~{Oyono-Oyono} and G.~{Yu}.
 \newblock {Quantitative K-theory and the {K}{\"u}nneth formula for operator
   algebras}.
 \newblock {\em ArXiv e-prints}, August 2016.
+
+\bibitem{OY3}
+Herv{\'e} Oyono-Oyono and Guoliang Yu.
+\newblock Persistance {A}pproximation {P}roperty and controlled {K}-theory.
 
 \bibitem{OY2}
 Herv{\'e} Oyono-Oyono and Guoliang Yu.
