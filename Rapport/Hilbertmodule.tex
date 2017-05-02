@@ -28,7 +28,7 @@ If $\{E_j\}_{j\in J}$ is a finite of countable family of $A$-Hilbert modules, de
 with the inner product $\langle x,y \rangle = \sum_{j\in J} \langle x_j, y_j\rangle_{E_j} $. It is a $A$-Hilbert module. As a particular case, we get a central example $H_A$ called the \textbf{standard $A$-Hilbert module}. It is obtained as the direct sum of the family $\{A\}_{j\in \N}$ where each $A$ is seen as a $A$-Hilbert module.
 \end{Expl}
 
-Let $E$ be a semi-pre-Hilbert $A$-module. If the sesquilinear function $\langle \cdot ,\cdot \rangle$ has isotropy, i.e. there exists a non-zero $x\in E$ such that $\langle x,x\rangle =0$, we can divide out the null vector. Indeed, $N= \{x\in E : \langle x,x\rangle = 0\}$ is a sub-$A$-module of $A$, and $\langle x+ N,y+N\rangle := \langle x,y\rangle $ defines an inner product on $E/N$. The separation-completion of $E$ will refer to the Hilbert $A$-module obtained as the closure of $E/N$ with respect to this inner product. 
+Let $E$ be a semi-pre-Hilbert $A$-module. If the sesquilinear function $\langle \cdot ,\cdot \rangle$ has isotropy, i.e. there exists a non-zero $x\in E$ such that $\langle x,x\rangle =0$, we can divide out the null vectors. Indeed, $N= \{x\in E : \langle x,x\rangle = 0\}$ is a sub-$A$-module of $A$, and $\langle x+ N,y+N\rangle := \langle x,y\rangle $ defines an inner product on $E/N$. The separation-completion of $E$ will refer to the Hilbert $A$-module obtained as the completion of $E/N$ with respect to this inner product. 
 
 \begin{definition}
 Let $E$ and $F$ be two $A$-Hilbert modules. The set of adjoinable operators $\mathcal L_A(E,F)$ is defined as the set of maps $T : E\rightarrow F $ such that there exists a map $T^* : F\rightarrow E$ satisfying 
@@ -51,8 +51,6 @@ Let $E$ and $F$ be two $A$-Hilbert modules. The set of compact operators $\mathf
 (b) If $E=H_A$, $\mathfrak K_A(H_A) \cong A\otimes \mathfrak K$.\\
 (c) For any Hilbert $A$-module, $\mathcal L_A(E) \cong \mathcal M(\mathfrak K_A(E))$.
 \end{Expl}
-
-% Stabilization lemma !
 
 The following result states that any countably generated Hilbert module can be embedded into the standard Hilbert module.
 
@@ -91,7 +89,7 @@ The condition $\phi_*(\mathfrak K_A(E))\subseteq \mathfrak K_B(E\otimes_\phi F)$
 \begin{rk}\label{isometry}
 When we look at a $*$-homomorphism $\phi : A\rightarrow B$, we always have an isometry $V\in \mathcal L_B ( H_A\otimes_\phi B , H_B)$ defined on simple tensors as $(x_j)_j\otimes b \mapsto (\phi(x_j)b)_j$. Indeed, this map extends linearly to $H_A \odot B$, and if $x = (x_j)$ and $x'=(x'_j)$ are in $H_A$ : 
 \[\langle V (x\otimes b) , V(x'\otimes b')\rangle = b^* \sum_j \phi(x_j)^* \phi(x'_j) \  b' = b^*\phi(\langle x, x' \rangle)b' = \langle x\otimes b , x'\otimes b' \rangle . \] % Determiner V^* 
-This isometry can be used to explicitely describe the projection and the isomorphism appearing in the stabilization theorem in this particular example. Indeed $p = VV^*\in\mathcal L_B(H_B)$ is a projection such that $p H_A \cong H_A\otimes_\phi B $.\\
+This isometry can be used to explicitely describe the projection and the isomorphism appearing in the stabilization theorem in this particular example. Indeed $p = VV^*\in\mathcal L_B(H_B)$ is a projection such that $p H_B \cong H_A\otimes_\phi B $.\\
 
 Moreover, for $T\in \mathcal L_B(H_A\otimes_\phi B)$, $Ad_V(T) = VTV^*$ defines a $*$-homomorphism $Ad_V : \mathcal L_B(H_A\otimes_\phi B)\rightarrow \mathcal L_B(H_B)$ such that $Ad_V(\mathfrak K_B(H_A\otimes_\phi B))\subseteq \mathfrak K_B(H_B)$. Indeed, notice that 
 \[V\theta_{\xi,\xi'}V^* = \theta_{V\xi,V\xi'}\]

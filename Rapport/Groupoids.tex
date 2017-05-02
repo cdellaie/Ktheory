@@ -21,7 +21,7 @@ If $G$ is étale, then any $g\in G$ has an open neighborhood $U$ such that $r$ a
 
 For $U,V\subseteq G^{(0)}$, we will use the notations $G_U=s^{-1}(U)$, $G^V=r^{-1}(V)$ and $G_U^V=s^{-1}(U)\cap r^{-1}(V)$. If one of the subsets is reduced to a single point, we will use $G_x=G_{\{x\}}$, etc. We will write $G_{|U}$ for $G_U^U$. It is a subgroupoid of $G$.\\
 
-A Haar system on $G$ is a family of borelian measures $(\lambda^x)_{x\in G^{(0)}}$ such that 
+A Haar system on $G$ is a family of borelian measures $(\lambda^x)_{x\in G^{(0)}}$ on $G$ such that 
 \begin{itemize}
 \item[$\bullet$] the support of $\lambda^x$ is $G^x$, 
 \item[$\bullet$] the map $G^{(0)} \rightarrow \C; x\mapsto \int_{G^x} f d\lambda^x$ is continuous for all $f\in C_c(G)$,
@@ -32,7 +32,7 @@ If the groupoid is étale, a natural Haar system is the counting measure on the 
 
 Here are classical examples of groupoids.
 
-\begin{Expl}[Groups and spaces] Any group $G$ is a groupoid over a point $G^{(0)}=*$. $G$ is étale as a groupoid if it is a discrete group. A topological space is also a groupoid over itself, the only arrows being the units over the points : $G^{(0)} = X = G$, $s=r=id_X$, it is always étale.
+\begin{Expl}[Groups and spaces] Any group $G$ is a groupoid over a point $G^{(0)}=*$. $G$ is étale as a groupoid iff it is a discrete group. A topological space is also a groupoid over itself, the only arrows being the units over the points : $G^{(0)} = X = G$, $s=r=id_X$, it is always étale.
 \end{Expl}
 
 \begin{Expl}[Pair groupoid] Let $X$ be a set, and consider $G=X\times X$ with base space $G^{(0)}=X$ and projection maps as target and source $s=pr_1, r=pr_2$. Composition is given by $(x,y)(y,z)= (x,z)$, and one can easily check that $e_x=(x,x)$ and $(x,y)^{-1} = (y,x)$. $X\times X$ is étale if $X$ is discrete.
@@ -144,10 +144,10 @@ This construction shows that, up to replacing a $G$-simplicial complex of dimens
 This paragraph describes what is an action of a topological groupoid on a $C^*$-algebra, and how to construct the reduced crossed-product out of the action.
 
 \begin{definition}
-Let $X$ be a topological space. A $C(X)$-algebra is a $C^*$-algebra together with a $*$-homomorphism $\theta : C_0(X)\rightarrow Z(\mathcal M(A))$ such that $\overline{\theta (C_0(X)) A} = A$. The couple $(A,\theta)$ is then called a $C(X)$-structure.
+Let $X$ be a topological space. A $C(X)$-algebra is a $C^*$-algebra $A$ together with a $*$-homomorphism $\theta : C_0(X)\rightarrow Z(\mathcal M(A))$ such that $\overline{\theta (C_0(X)) A} = A$. The couple $(A,\theta)$ is then called a $C(X)$-structure.
 \end{definition} 
 
-If $f : X\rightarrow Y$ is a continuous map between locally compact spaces, and $A$ a $C(Y)$-algebra, then $f$ induces a $C(X)$-structure on $A$ by $f^* : C(Y) \rightarrow C_b(X); g\mapsto g\circ f$. Define $f^* A = A \otimes_{f^*} C_0(X)$ the resulting $C(X)$-algebra. For details on tensor products of $C(X)$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $C(X)$-algebra : for $x\in X$, $A_x = ev_x^* \ A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$. It is convenient to see $A_x$ as $A/ (I_x .A)$ where $I_x$ is the ideal ker $(ev_x : C_0(X) \rightarrow \C)$. Moreover we can describe the fibers of $f^*A$ : $(f^*A)_x \cong A_{f(x)}$ for all $x\in X$.\\
+If $f : X\rightarrow Y$ is a continuous map between locally compact spaces, and $A$ a $C(Y)$-algebra, then $f$ induces a $C(X)$-structure on $A$ by $f^* : C(Y) \rightarrow C_b(X); g\mapsto g\circ f$. Define $f^* A = A \otimes_{f^*} C_0(X)$ the resulting $C(X)$-algebra. For details on tensor products of $C(X)$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $C(X)$-algebra : for $x\in X$, $A_x = ev_x^* \ A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$. It is convenient to see $A_x$ as $A/ (I_x .A)$ where $I_x$ is the ideal ker $(ev_x : C_0(X) \rightarrow \C)$. Moreover we can describe the fibers by a canonical isomorphism $f^*A$ : $(f^*A)_x \cong A_{f(x)}$ for all $x\in X$.\\
 
 A homomorphism between two $C(X)$-algebras $\alpha : A\rightarrow A'$ is a $*$-homomorphism which commutes with the action of $C_0(X)$, i.e. $\alpha(\theta(f)a)=\theta'(f)\alpha(a)$ for all $a\in A,f\in C_0(X)$. Its fibers are defined unambiguously by $\alpha_x = id_\C \otimes_{ev_x} \alpha$.\\
 
@@ -292,7 +292,7 @@ which is associative and distributive w.r.t. the addition of $K$-cycles. The Kas
 \end{prop}
 
 \begin{rk}
-By the equivariant stabilization lemma \ref{GStabilization}, any $B$-Hilbert module $E$ sits as a complemented $G$-submodule of the standard module $H_B$, and as $[E,\pi,T] = [E \oplus H_B,\pi\oplus 0,T\oplus 0]$, we can suppose $E = H_B$.
+By the equivariant stabilization lemma \ref{GStabilization}, any $B$-Hilbert module $E$ sits as a complemented $G$-submodule of the standard module $H_B$, and as $[E,\pi,T] = [E \oplus H_B,\pi\oplus 0,T\oplus 0]$, we can suppose $E = H_B$. Notice that the action can be different from the one given by the action on $B$. 
 \end{rk}
 
 Here are some examples of $K$-cycles. For detailed proofs of the various constructions, we send the reader to \cite{blackadar} and \cite{LeGall}.
@@ -315,7 +315,7 @@ This example allows one to think of $KK(A,B)$ as generalized morphisms between $
 
 More precisely, let us define decomposition property $(d)$.
 
-\begin{definition}
+\begin{definition}\label{DecompositionPropertyD}
 Let $d$ be a positive integer. An element $z\in KK^G(A,B)$ is said to satisfy decomposition property $(d)$ if
 \begin{itemize}
 \item[$\bullet$] there exist $G$-algebras $A_0$, $A_1$, ..., $A_d$ such that $A_0=A$ and $A_d=B$, 
@@ -327,7 +327,7 @@ such that $z = z_1 \otimes_{A_1}  ... \otimes_{A_{d-1}} z_{d-1} $ holds.
 Then, the following theorem is true for a universal constant $d$, which does not depend on the groupoid. It will be crucial to prove that the controlled Kasparov and Roe transforms, applications to be defined later, respect the Kasparov product. 
 
 \begin{thm}[\cite{LaffOY}]\label{propertyD}
-Let $G$ be a locally compact groupoid with Haar system. Then every element $z\in KK^G(A,B)$ has decomposition property $(d)$.
+Let $G$ be a locally compact groupoid with Haar system. Then, there exists a universal constant $d$ such that every element $z\in KK^G(A,B)$ has decomposition property $(d)$.
 \end{thm}
 
 We saw that $KK^G(A,B)$ is a bifunctor w.r.t. $*$-homomorphisms, contravariant in the $A$ variable and covariant in the $B$ variable. Let us describe how $KK^G$ transforms under morphisms of groupoids. See $\cite{LeGall}$ for a proof.
@@ -349,7 +349,7 @@ defines a homomorphism of $\Z_2$-graded abelian groups which respects the Kaspar
 \[\tau_D(x\otimes_B y) = \tau_D(x)\otimes_{B\otimes D} \tau_D(y)\quad \forall x\in KK^G(A,B),y\in KK^G(B,C).\]
 \end{prop}
 
-The next transformation is called the descent functor, or the Kasparov transform.
+The next transformation is called the descent functor, or the Kasparov transform. Let $(E,\pi,T)\in\mathbb E^G(A,B)$. Set $E_G = E\otimes_B (B\rtimes_r G)$, $T_G= T\otimes id_{B\rtimes_r G}\in \mathcal L_{B\rtimes_r G}(E_G)$, and $\pi_G: A\rtimes_r G \rightarrow \mathcal L_{B\rtimes_r G}(E_G)$. %Then, according to Le Gall \cite{LeGall}, $(H_{B\rtimes_r G}, \pi_G, T_G)$ represents the $K$-cycle $j_G(z)\in KK(A\rtimes_r G,B\rtimes_r G)$.
 
 \begin{prop}\cite{LeGall} Let $A$, $B$, $C$ and $D$ be $G$-algebras. Then 
 \[j_G : 
