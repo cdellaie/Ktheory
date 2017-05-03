@@ -8,7 +8,7 @@ Our presentation is strongly inspired by the article \cite{VerVaes}. We recall t
 A compact quantum group is a pair $\mathbb G = (C(\mathbb G),\Delta)$ where $C(\mathbb G)$ is a unital $C^*$-algebra and $\Delta : C(\mathbb G) \rightarrow C(\mathbb G)\otimes C(\mathbb G)$ is a unital $*$-homomorphism satisfying :
 \begin{itemize}
 \item[$\bullet$] the coassociativity condition, i.e. $(\Delta \otimes id)\Delta=(id\otimes \Delta )\Delta$ ;
-\item[$\bullet$] the left and right cancellation property, i.e. the linear spans of $\Delta(C(\mathbb G))(1\otimes C(\mathbb G))$ and $\Delta(C(\mathbb G))(C(\mathbb G)\otimes C(\mathbb G))$ are dense in $C(\mathbb G)\otimes C(\mathbb G)$.
+\item[$\bullet$] the left and right cancellation property, i.e. the linear spans of $\Delta(C(\mathbb G))(1\otimes C(\mathbb G))$ and $\Delta(C(\mathbb G))(C(\mathbb G)\otimes 1)$ are dense in $C(\mathbb G)\otimes C(\mathbb G)$.
 \end{itemize} 
 \end{definition}
 
@@ -53,7 +53,7 @@ Let us denote by $L^2(\mathbb G)$ the Hilbert space obtained as the GNS construc
 \[W^*(\xi\otimes \pi_h(a)\xi_h ) = (\pi_h\otimes\pi_h)\circ \Delta(a)(\xi\otimes \xi_h)\quad \forall \xi\in L^2(\mathbb G),a\in C(\mathbb G).\] 
 
 \begin{definition}
-The reduced form $C_r^*(\mathbb G)$ of $\mathbb G$ is defined as the $C^*$-algebra $\pi_h(C(\mathbb G))$. The unitary $W$ defines a unitary representation $W\in\mathcal M(C_r^*(\mathbb G)\otimes \mathfrak K(L^2(\mathbb G))$ called the regular representation of $\mathbb G$.
+The reduced form $C_r^*(\mathbb G)$ of $\mathbb G$ is defined as the $C^*$-algebra $\pi_h(C(\mathbb G))$. The unitary $W$ defines an element of $W\in\mathcal M(C_r^*(\mathbb G)\otimes \mathfrak K(L^2(\mathbb G))$ which is a unitary representation  called the regular representation of $\mathbb G$.
 \end{definition}
 
 According to \cite{Wo} (section $6$), for every $\pi\in Irrep(\mathbb G)$, there exists a unique $\pi^*\in Irrep(\mathbb G)$ such that $Hom(\pi\otimes \pi^*,\varepsilon)\neq 0 \neq Hom(\varepsilon,\pi\otimes \pi^*) $. For a representative $(H_\pi,U^\pi)$, $(H_{\pi^*},U^{\pi^*})$ is called the contragredient representation.\\
@@ -74,7 +74,7 @@ l^\infty(\hat{\mathbb G})= \prod_{\pi\in Irred(\mathbb G)} \mathcal L(H_\pi).
 \end{array}\]
 Up to our choice of representations $\{(H_\pi,U^\pi)\}_{\pi\in Irrep(\mathbb G)}$, we can define a unitary $U = \bigoplus_{\pi\in Irrep(\mathbb G)} U^\pi\in \mathcal M(c_0(\hat{\mathbb G}) \otimes C(\mathbb G))$ which is a unitary representation of $\mathbb G$. 
 
-\begin{prop}[\cite{PodlesWo}, Theorem $2.1$] There exists a unique $*$-homomorphism $\hat \Delta : c_0(\hat{\mathbb G}) \rightarrow \mathcal M(c_0(\hat{\mathbb G})\otimes c_0(\hat{\mathbb G}))$ such that \[(\hat\Delta\otimes id ) U = U_{12}U_{13}.\]
+\begin{prop}[\cite{PodlesWo}, Theorem $2.1$] There exists a unique $*$-homomorphism $\hat \Delta : c_0(\hat{\mathbb G}) \rightarrow \mathcal M(c_0(\hat{\mathbb G})\otimes c_0(\hat{\mathbb G}))$ such that \[(\hat\Delta\otimes id ) U = U_{13}U_{23}.\]
 Moreover, $\hat\Delta$ is coassociative, i.e. $(\hat\Delta \otimes id) \hat\Delta = (id\otimes \hat\Delta) \hat\Delta$.
 %for every $\pi\in Irrep(\mathbb G)$ and every $T\in\mathcal L(H_\pi)$,
 %\[\hat\Delta(T)\circ \phi = \phi \circ T \quad \forall y,z\in Irrep(\mathbb G), \forall \phi \in Hom(\pi,y\otimes z).\]
@@ -101,7 +101,7 @@ For every compact quantum group $\mathbb G$, there exists a unique state $h$ on 
 %a	& \mapsto & \hat\lambda (a) : \xi \mapsto \{(a_\pi\otimes 1)\xi_\pi\}_\pi\\
 %\end{array}\right.\]
 
-\begin{definition} An action of a discrete quantum group $\hat{\mathbb G}$ on a $C^*$-algebra $A$ is a nondegenerate $*$-homomorphism $A\rightarrow \mathcal M(A\otimes c_0(\hat{\mathbb G}))$ such that :
+\begin{definition} An action of a discrete quantum group $\hat{\mathbb G}$ on a $C^*$-algebra $A$ is a nondegenerate $*$-homomorphism $\alpha : A\rightarrow \mathcal M(A\otimes c_0(\hat{\mathbb G}))$ such that :
 \begin{itemize}
 \item[$\bullet$] $(\alpha \otimes id )\alpha = (id\otimes \hat\Delta) \alpha$
 \item[$\bullet$] for every $a\in A$, $(\hat\varepsilon \otimes id)\alpha(a) = a$.
@@ -127,7 +127,7 @@ There is also a notion of maximal (or full) crossed product for $\hat{\mathbb G}
 As in the classical case, the reduced and the maximal crossed products respect the semi-split exact sequences of $\hat{\mathbb G}$-algebras.
 \end{rk}
 
-Denote by $\mathcal E_{\mathbb G}$ the set of finite dimensional unitary representations $\pi$ of $\mathbb G$ such that $\pi$ and $\pi^*$ are unitarly equivalent. We endow $\mathcal E_{\mathbb G}$ with a semigroup structure with the following product 
+Denote by $\mathcal E_{\mathbb G}$ the set of finite dimensional unitary representations $\pi$ of $\mathbb G$ such that $\pi$ and $\pi^*$ are unitarily equivalent. We endow $\mathcal E_{\mathbb G}$ with a semigroup structure with the following product 
 \[\pi\circ \pi' = (\pi\otimes\pi')\oplus (\pi'\otimes \pi)\quad \forall \pi,\pi'\in \mathcal E_{\mathbb G}.\]
 For every $\pi\in \mathcal E_{\mathbb G}$, denote by $C_\pi(\hat{\mathbb G}, A)$ the closure of the linear spans of 
 \[\{\ \theta(a) W_{\xi,\eta}^\pi \ ,a\in A, \xi,\eta\in H_\pi\}.\]
@@ -167,7 +167,7 @@ compatible with Kasparov products, i.e.
 \[j_{\hat{\mathbb G}}(z\otimes_D z') = j_{\hat{\mathbb G}}(z)\otimes_{D\rtimes \hat{\mathbb G}} j_{\hat{\mathbb G}}(z')\quad \forall z\in KK^{\hat{\mathbb G}}(A,D),z'\in KK^{\hat{\mathbb G}}(D,B) \]
 \end{prop}
 
-Notice that every $KK^{\hat{\mathbb G}}$-element satisfies property $(d)$ for some universal $d>0$ independent of $\mathbb G$ as well. Indeed, the proof of \cite{LaffOY} works without modification in the setting of discrete quantum groups.
+Notice that every $KK^{\hat{\mathbb G}}$-element satisfies property $(d)$ for some universal $d>0$ independent of $\mathbb G$ as well (see the definition \ref{DecompositionPropertyD}). Indeed, the proof of \cite{LaffOY} can be carried out without modification in the setting of discrete quantum groups.
 
 
 

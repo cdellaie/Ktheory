@@ -57,13 +57,24 @@ The previous lemmas ensures that the analytic $K$-homology of $G$ can be compute
 \[RK^G(\underline E G,B) = \varinjlim_{K\subseteq G \text{ compact }} KK^G(C_0(P_K(G)),B).\]
 \end{lem}
 
-\begin{dem}
-Let $Z$ and $Z'$ be two proper $G$-compact $G$-spaces such that $Z\subseteq Z'$. By lemma \ref{Gspace}, there exist compact subsets $K$ and $K'$ of $G$ and $G$-equivariant continuous maps $h : Z\rightarrow P_K(G)$ and $h : Z'\rightarrow P_{K'}(G)$. As $h'_{|Z} = h $, the following diagram commutes
+\begin{dem} Let us denote by $\mathcal A$ the inductive limit 
+\[\varinjlim_{K\subseteq G } KK^G(C_0(P_K(G)),B).\] 
+By universal property of the inductive limit, there exists a unique homomorphism 
+\[\phi : \mathcal A \rightarrow RK^G(\underline E G,B).\] 
+Let $Z$ and $Z'$ be two proper $G$-compact $G$-spaces such that $Z\subseteq Z'$. By lemma \ref{Gspace}, there exist compact subsets $K$ and $K'$ of $G$ and $G$-equivariant continuous maps $h : Z\rightarrow P_K(G)$ and $h : Z'\rightarrow P_{K'}(G)$. Up to enlarge $K'$, we can suppose $h'_{|Z}$ and $ h $ are homotopic. The following diagram commutes
 \[\begin{tikzcd}
 KK^G(C_0(Z),B)\arrow{r}\arrow{d}{h^*} & KK^G(C_0(Z'),B)\arrow{d}{(h')^*} \\
 RK^G(P_{K}(G),B)\arrow{r} & RK^G(P_{K'}(G),B) \\
 \end{tikzcd},\]
-hence $\varinjlim_{K\subseteq G \text{ compact }} KK^G(C_0(P_K(G)),B)$ and $\varinjlim_{Z\subseteq Y} KK^G(C_0(Z),B)$ are equal.\\
+hence the following  diagram :
+\[\begin{tikzcd}
+KK^G(C_0(Z),B)\arrow{r}\arrow{d}{\subseteq} & \mathcal A  \\
+KK^G(C_0(Z'),B) \arrow{ur} &  \\
+\end{tikzcd}.\]
+is commutative. By universal property of the inductive limit, there exists a unique homomorphism 
+\[ \psi : RK^G(\underline E G,B)\rightarrow \mathcal A.\] 
+Then $\psi\circ\phi = id_A$ is obvious. As $\underline E G = \cup_K P_K(G)$, the maps $Z\rightarrow P_{K'}(G)$ and $Z\rightarrow P_{K'}(G)$ are homotopic to $Z\rightarrow \underline E G$ and $\phi\circ \psi = id$. Hence 
+\[RK^G(\underline E G,B) \cong A.\]
 \qed
 \end{dem}
 
@@ -171,8 +182,8 @@ This functoriality extends to $KK$-theory.
 \begin{thm}\label{sigma} There exists a natural transformation 
 \[\sigma_X : KK(A,B)\rightarrow KK(C^*(X,A),C^*(X,B))\]
 which transforms the Kasparov product into composition, i.e. 
-\[\sigma(z\otimes_D z')= \sigma_X(z')\circ \sigma_X(z) \quad \forall z\in KK(A,D),z'\in KK(D,B),\]
-where the $KK$-elements $\sigma(z\otimes_D z')$, $ \sigma_X(z)$ and $\sigma_X(z')$ are seen as the maps they induce in $K$-theory. 
+\[\sigma_X(z\otimes_D z')= \sigma_X(z')\circ \sigma_X(z) \quad \forall z\in KK(A,D),z'\in KK(D,B),\]
+where the $KK$-elements $\sigma_X(z\otimes_D z')$, $ \sigma_X(z)$ and $\sigma_X(z')$ are seen as the maps they induce in $K$-theory. 
 \end{thm}
 
 \begin{rk}
