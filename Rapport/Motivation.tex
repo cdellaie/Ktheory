@@ -259,7 +259,21 @@ Let $B$ be a $C^*$-algebra, $E$ be an entourage and $\overline{E}$ the correspon
 \[(\Psi_B)_*\circ\mu^{\epsilon,\overline E}_{G,\tilde B} (z) = \mu_{X,B}^{\epsilon,E}(\iota^*(z)).\]
 \end{thm}
 
-This theorem induces in $K$-theory a result of G. Skandalis, J-L. Tu and G. Yu \cite{SkTuYu}, which asserts the equivalence between the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ and the Baum-Connes conjecture for $G(X)$ with coefficients in $l^\infty(X,B\otimes \mathfrak K)$. This allows in particular to prove a controlled version of a result of M. Finn-Sell in \cite{FinnSellFibred}. \\
+This theorem induces in $K$-theory a result of G. Skandalis, J-L. Tu and G. Yu \cite{SkTuYu}, which asserts the equivalence between the coarse Baum-Connes conjecture for $X$ with coefficients in $B$ and the Baum-Connes conjecture for $G(X)$ with coefficients in $l^\infty(X,B\otimes \mathfrak K)$. This allows in particular to prove a controlled version of a result of M. Finn-Sell in \cite{FinnSellFibred}. In order to state the result, we define the controlled coarse Baum-Connes conjecture as follows. \\
+
+\begin{definition}
+Let $X$ be a discrete metric space with bounded geometry and $B$ a $C^*$-algebra. We introduce the following properties.\\
+\begin{itemize} 
+\item[$\bullet$] $QI_{X,B}(E,E',F,\varepsilon)$ : for any $x\in KK(C_0(P_E(X)), B )$, then $\mu^{\varepsilon,E,F}_{X,B}(x) = 0$ implies $q_E^{E'}(x)=0$ in $KK^G(C_0(P_{E'}(X)),B)$.
+\item[$\bullet$] $QS_{X,B}(E,F,F',\varepsilon,\varepsilon')$ : for any $y\in K^{\varepsilon,F}(C^*(X,B))$, there exists $x\in KK(C_0(P_E(G)),B)$ such that $\mu^{\varepsilon',E,F'}_{X,B}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
+\end{itemize} 
+Let $\lambda \geq 1$ be a positive number. We say that $X$ satisfies the controlled Baum-Connes conjecture with coefficients in $B$ with rescaling $\lambda$ if :
+\begin{itemize} 
+\item[$\bullet$] for every $\varepsilon \in (0,\frac{1}{4\lambda})$, every $E,F\in\mathcal E$ such that $k_X(\varepsilon).E\subseteq F$, there exists $E'\in \mathcal E$ such that $E \subseteq E'$ and $ QI_{X,B}(E,E',F,\varepsilon)$ holds; 
+\item[$\bullet$] for every $\varepsilon \in (0,\frac{1}{4\lambda})$, every $F\in\mathcal E$, there exists $E,F'\in\mathcal E$ such that $k_X(\varepsilon).E \subseteq F'$ and $F\subseteq F'$ and $QS_{X,B}(E,F,F',\varepsilon,\lambda\varepsilon)$ holds. 
+\end{itemize} 
+If $\hat\mu_{X}$, is replaced by $\hat\mu^{max}_{X}$, we will say that $X$ satisfies the maximal controlled Baum-Connes conjecture with rescaling $\lambda$.\\
+\end{definition}
 
 \begin{cor}
 Let $X$ be a coarse space that admits a fibred coarse embedding into Hilbert space. Then $X$ satisfies the controlled Coarse Baum-Connes conjecture.\\

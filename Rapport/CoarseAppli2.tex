@@ -1,5 +1,7 @@
 \section{Applications to Coarse Geometry}
 
+We present in this section a result on the equivalence between the controlled assembly map for a discrete metric space with bounded geometry $X$ with coefficients in a $C^*$-algebra $B$ and the controlled assembly map for the coarse groupoid $G(X)$ with coefficients in the $G(X)$-algebra $l^\infty(X,B\otimes \mathfrak K)$. This result is applied to show that any such space that admits a fibred coarse embedding into Hilbert space satisfies the maximal controlled Baum-Connes conjecture.
+
 \subsection{Equivalence between the controlled coarse assembly map for $X$ and the controlled assembly map for $G$ with coefficients in $l^\infty(X,\mathfrak K)$}
 
 In this section, we prove how the result of G. Skandalis, J.-L. Tu and G. Yu \cite{SkTuYu} extends to the setting of controlled $K$-theory. \\
@@ -106,57 +108,91 @@ By the previous lemma, we only need to check that $(\Psi_A)_*[\mathcal L_{\overl
 \qed
 \end{dem}
 
-This result induces the result of \cite{SkTuYu} in $K$-theory. It also implies interesting consequences for Coarse Geometry. Recall that if the groupoid $G$ satisfies the Baum-Connes conjecture with coefficients, it satisfies the quantitative Baum-Connes conjecture. Interesting examples follow from the result of J-L. Tu \cite{TuThese} that a-$T$-menable groupoids satisfy the Baum-Connes conjecture with coefficients. In particular, \\
+\begin{rk}
+This theorem remains true for the maximal version of the assembly map when $B=\C$. One then has to replace $\hat\mu_{G,\tilde \C}$ and $\hat\mu_{X}$ by $\hat\mu^{max}_{G,\tilde \C}$ and $\hat\mu^{max}_{X}$ respectively.
+\end{rk}
+
+This result induces the result of \cite{SkTuYu} in $K$-theory. It also implies interesting consequences for Coarse Geometry. Recall that if the groupoid $G$ satisfies the Baum-Connes conjecture with coefficients, it satisfies the controlled Baum-Connes conjecture. Interesting examples follow from the result of J-L. Tu \cite{TuThese} that a-$T$-menable groupoids satisfy the Baum-Connes conjecture with coefficients. In particular, \\
 
 \begin{itemize}
 \item[$\bullet$] amenable groupoids are a-$T$-menable.\\
-\item[$\bullet$] Let $X$ be a uniformly discrete metric space with bounded geometry. Then, if $X$ is coarsely embeddable into a separable Hilbert space, $G(X)$ is a-$T$-menable.\cite{SkTuYu} \\
+\item[$\bullet$] Let $X$ be a uniformly discrete metric space with bounded geometry. Then, if $X$ is coarsely embeddable into a separable Hilbert space, $G(X)$ is a-$T$-menable \cite{SkTuYu}. \\
 \end{itemize}
 
 \subsection{Fibred coarse embedding}
 
-We now present an application to fibred coarse embedding.\\
+We now present an application to fibred coarse embedding.
 
-Recall that if $X$ admits a fibred coarse embedding into Hilbert space, then $G(X)_{|\partial \beta X}$ is a-$t$-menable \cite{FinnSellFibred}. For interesting examples of this type, recall the definition of a box space. Let $\Gamma$ be a finitely generated group, and $\mathcal N$ a family of nested normal subgroups with trivial intersection, which have finite index in $\Gamma$. Take the coarse union of the quotients to construct a coarse space $X_{\mathcal N}(\Gamma)= \cup_{H\in \mathcal N } \Gamma/ H$. Then, $X_{\mathcal N}(\Gamma)$ admits a fibred coarse embedding if and only if $\Gamma$ is a-$T$-menable. But if $X_{\mathcal N}$ is an expander, it cannot be coarsely embedded into a Hilbert space, so just take an a-$T$-menable group which has a box space $X$ which is an expander to get a coarse space that is not coarsely embeddable into Hilbert space ($SL(2,\Z)$ works), but admits a fibred coarse embedding.\\
+\begin{definition}
+Let $X$ be a discrete metric space with bounded geometry and $B$ a $C^*$-algebra. We introduce the following properties.\\
+\begin{itemize} 
+\item[$\bullet$] $QI_{X,B}(E,E',F,\varepsilon)$ : for any $x\in KK(C_0(P_E(X)), B )$, then $\mu^{\varepsilon,E,F}_{X,B}(x) = 0$ implies $q_E^{E'}(x)=0$ in $KK^G(C_0(P_{E'}(X)),B)$.
+\item[$\bullet$] $QS_{X,B}(E,F,F',\varepsilon,\varepsilon')$ : for any $y\in K^{\varepsilon,F}(C^*(X,B))$, there exists $x\in KK(C_0(P_E(G)),B)$ such that $\mu^{\varepsilon',E,F'}_{X,B}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
+\end{itemize} 
+Let $\lambda \geq 1$ be a positive number. We say that $X$ satisfies the controlled Baum-Connes conjecture with coefficients in $B$ with rescaling $\lambda$ if :
+\begin{itemize} 
+\item[$\bullet$] for every $\varepsilon \in (0,\frac{1}{4\lambda})$, every $E,F\in\mathcal E$ such that $k_X(\varepsilon).E\subseteq F$, there exists $E'\in \mathcal E$ such that $E \subseteq E'$ and $ QI_{X,B}(E,E',F,\varepsilon)$ holds; 
+\item[$\bullet$] for every $\varepsilon \in (0,\frac{1}{4\lambda})$, every $F\in\mathcal E$, there exists $E,F'\in\mathcal E$ such that $k_X(\varepsilon).E \subseteq F'$ and $F\subseteq F'$ and $QS_{X,B}(E,F,F',\varepsilon,\lambda\varepsilon)$ holds. 
+\end{itemize} 
+If $\hat\mu_{X}$, is replaced by $\hat\mu^{max}_{X}$, we will say that $X$ satisfies the maximal controlled Baum-Connes conjecture with rescaling $\lambda$.\\
+\end{definition}
+
+Recall that if $X$ admits a fibred coarse embedding into Hilbert space, then $G(X)_{|\partial \beta X}$ is a-T-menable \cite{FinnSellFibred}. For interesting examples of this type, recall the definition of a box space. Let $\Gamma$ be a finitely generated group, and $\mathcal N$ a family of nested normal subgroups with trivial intersection, which have finite index in $\Gamma$. Take the coarse union of the quotients to construct a coarse space $X_{\mathcal N}(\Gamma)= \cup_{H\in \mathcal N } \Gamma/ H$. Then, $X_{\mathcal N}(\Gamma)$ admits a fibred coarse embedding if and only if $\Gamma$ is a-$T$-menable. But if $X_{\mathcal N}$ is an expander, it cannot be coarsely embedded into a Hilbert space, so just take an a-$T$-menable group which has a box space $X$ which is an expander to get a coarse space that is not coarsely embeddable into Hilbert space ($SL(2,\Z)$ for instance), but admits a fibred coarse embedding.\\
 
 The last example gives the following corollary.
 
 \begin{cor}
-Let $X$ be a coarse space that admits a fibred coarse embedding into Hilbert space. Then $\hat \mu_{X}^{max}$ is a controlled isomorphism, i.e. $X$ satisfies the controlled Coarse Baum-Connes conjecture.
+Let $X$ be a coarse space that admits a fibred coarse embedding into Hilbert space. Then $X$ satisfies the maximal controlled Coarse Baum-Connes conjecture. %$\hat \mu_{X}^{max}$ is a controlled isomorphism, i.e. $X$ satisfies the controlled Coarse Baum-Connes conjecture.
 \end{cor}
-
+%
 %\begin{dem}
 %The maximal crossed product turns restriction of a groupoid to invariant open subsets into exact sequences of $C^*$-algebras, with $F=\partial\beta X$ and $U= F^c$, hence the following diagram commutes
 %\[\begin{tikzcd}
 %RK^{G_{|U}}(P_F(G_{|U}),l^\infty)\arrow{r}\arrow{d}{\mu_{G_{|U}}^{\varepsilon,E,F}} & RK^G(P_F(G),l^\infty)\arrow{r}\arrow{d}{\mu_{G}^{\varepsilon,E,F}}  & RK^{G_{|F}}(P_F(G_{|F}),l^\infty)\arrow{d}{\mu_{G_{|F}}^{\varepsilon,E,F}}  \\
 %K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G_{|U}) \arrow{r} & K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G) \arrow{r} & K_*^{\varepsilon,E}(l^\infty \rtimes_{max} G_{|F}) \\
 %\end{tikzcd}.\]
-%Now, $G_{|F}$ being a-T-menable and $G_{|U}$ being proper, the two exterior vertical maps are isomorphisms, and the five lemma concludes the proof.\\
+%Now, $G_{|F}$ being a-T-menable and $G_{|U}$ being proper, the two exterior vertical maps are isomorphisms, and the five lemma concludes the proof.%\\
 %\qed
 %\end{dem}
-
 %%% NEW PROOF
 \begin{dem}
+By theorem \ref{BCCeq}, it is sufficient to show that $G(X)$ satisfies the maximal controlled Baum-Connes conjecture with coefficients in $l^\infty(X,\mathfrak K)$. We will denote $l^\infty(X,\mathfrak K)$ by $l^\infty$.\\
+  
 The maximal crossed product turns restriction of a groupoid to invariant open subsets into exact sequences of $C^*$-algebras, hence  
-\[0\rightarrow l^\infty \rtimes_{max} G_{|U} \rightarrow l^\infty \rtimes_{max} G \rightarrow l^\infty \rtimes_{max} G_{|F} \rightarrow 0\]
-is exact, with $F=\partial\beta X$ and $U= F^c$. Moreover 
+\[0\rightarrow l^\infty \rtimes_{max} G_{|U} \rightarrow l^\infty \rtimes_{max} G \rightarrow l^\infty \rtimes_{max} G_{|Y} \rightarrow 0\]
+is an exact sequence, with $Y=\partial\beta X$ and $U= Y^c$. Moreover 
 \[l^\infty \rtimes_{max} G_{|U}\cong l^\infty_{|U} \rtimes_{max} G
-\quad \text{ and } \quad l^\infty \rtimes_{max} G_{|F}\cong (l^\infty/l^\infty_{|U}) \rtimes_{max} G,\] 
+\quad \text{ and } \quad l^\infty \rtimes_{max} G_{|Y}\cong (l^\infty/l^\infty_{|U}) \rtimes_{max} G,\] 
 hence $[\partial_{l^\infty \rtimes G_{|U},l^\infty\rtimes_r G}]=j_G([\partial_{l^\infty_{|U},l^\infty}]) $. 
-Recall from Proposition \ref{Kasparov1} that $J_G([\partial_{l^\infty_{|U},l^\infty}])=D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G}$, hence for every $z\in RK^G(P_E(G),l^\infty / l^\infty_{|U} )$, 
+Recall from Proposition \ref{Kasparov1} that $J_G([\partial_{l^\infty_{|U},l^\infty}])=D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G}$, hence there exists a control pair $(\alpha,k)$ such that for every $z\in RK^G(P_E(G),l^\infty / l^\infty_{|U} )$, 
 \[\mu_{G}^{\varepsilon,E,F}(z\otimes [\partial_{l^\infty_{|U},l^\infty}] ) 
-\sim D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G} \circ \mu_{G}^{\varepsilon,E,F}(z )\]
+\sim_{\alpha,k} D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G} \circ \mu_{G}^{\varepsilon,E,F}(z )\]
 
 Hence the following diagram commutes :
 \[\begin{tikzcd}
-RK^G(P_E(G),l^\infty_{|F}) \arrow{d}{\otimes[\partial_{l^\infty_{|U},l^\infty}]} \arrow{r}{\mu_{G}^{\varepsilon,E,F}} & K_*^{\varepsilon,F}(l^\infty_{|F} \rtimes_{max} G) \arrow{d}{D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G}} \\
-RK^G(P_E(G),l^\infty_{|U} )\arrow{d}\arrow{r}{\mu_{G}^{\varepsilon,E,F}} & K_*^{\varepsilon,F}(l^\infty_{|U} \rtimes_{max} G) \arrow{d} \\
-RK^G(P_E(G),l^\infty)      \arrow{d}\arrow{r}{\mu_{G}^{\varepsilon,E,F}} & K_*^{\varepsilon,F}(l^\infty \rtimes_{max} G)      \arrow{d} \\
-RK^G(P_E(G),l^\infty_{|F}) \arrow{d}{\otimes[\partial_{l^\infty_{|U},l^\infty}]}\arrow{r}{\mu_{G}^{\varepsilon,E,F}} & K_*^{\varepsilon,F}(l^\infty_{|F} \rtimes_{max} G) \arrow{d}{D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G}} \\
-RK^G(P_E(G),l^\infty)               \arrow{r}{\mu_{G}^{\varepsilon,E,F}} & K_*^{\varepsilon,F}(l^\infty_{|U} \rtimes_{max} G) \\
+RK^G(P_E(G),l^\infty_{|Y}) \arrow{d}{\otimes[\partial_{l^\infty_{|U},l^\infty}]} \arrow{r}{\mu_{G}^{\varepsilon,E,F}} 
+			& K_*^{\varepsilon,F}(l^\infty_{|Y} \rtimes_{max} G) \arrow{d}{D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G}} \\
+RK^G(P_E(G),l^\infty_{|U} )\arrow{d}\arrow{r}{\mu_{G}^{\alpha\varepsilon,E,k(\varepsilon).F}} 
+			& K_*^{\alpha\varepsilon,k(\varepsilon).F}(l^\infty_{|U} \rtimes_{max} G) \arrow{d} \\
+RK^G(P_E(G),l^\infty)      \arrow{d}\arrow{r}{\mu_{G}^{\alpha\varepsilon,E,k(\varepsilon).F}} 
+			& K_*^{\alpha\varepsilon,k(\varepsilon).F}(l^\infty \rtimes_{max} G)      \arrow{d} \\
+RK^G(P_E(G),l^\infty_{|Y}) \arrow{d}{\otimes[\partial_{l^\infty_{|U},l^\infty}]}\arrow{r}{\mu_{G}^{\alpha\varepsilon,E,k(\varepsilon).F}} 
+			& K_*^{\alpha\varepsilon,k(\varepsilon).F}(l^\infty_{|Y} \rtimes_{max} G) \arrow{d}{D_{l^\infty_{|U}\rtimes_r G,l^\infty \rtimes_r G}} \\
+RK^G(P_E(G),l^\infty)               \arrow{r}{\mu_{G}^{\alpha\varepsilon,E,k(\varepsilon).F}} 
+			& K_*^{\alpha\varepsilon,k(\varepsilon).F}(l^\infty_{|U} \rtimes_{max} G) \\
 \end{tikzcd}.\]
-Now, $G_{|F}$ being a-T-menable and $G_{|U}$ being proper, the four exterior horizontal maps are isomorphisms, and the five lemma concludes the proof.\\
+Now, $G_{|Y}$ being a-T-menable and $G_{|U}$ being proper, $\mu_{G_{|Y},B}$ and $\mu_{G_{|U},B}$ are isomorphisms for any $G$-algebra $B$. By theorems \ref{Quant1} and \ref{Quant2}, the families of the four exterior horizontal maps satisfies the controlled Baum-Connes conjecture, and the five lemma concludes the proof.\\
 \qed
 \end{dem}
 
 %\subsection{Equivariant Novikov conjecture}
+
+
+
+
+
+
+
+
+
+
