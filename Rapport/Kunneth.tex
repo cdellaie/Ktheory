@@ -24,16 +24,17 @@ If $(A,\mathcal E)$ is now a $\mathcal E$-filtered $C^*$-algebra, $(A\otimes B,\
 \[\hat\alpha_{A,B} : \hat K_*(A)\otimes K_*(B)\rightarrow \hat K_*(A\otimes B) \quad ; \quad (x,y)\mapsto \hat\tau_A(y)(x),\]
 which induces $\alpha_{A,B}$ in $K$-theory. \\
 
-We will say that $\alpha_{A,B}$ is quantitatively injective if there exists $\lambda \geq 1$ such that, for every $\varepsilon\in (0,\frac{1}{4\alpha_\tau})$ and every $F\in\mathcal E$, there exists $F'\in\mathcal E$ such that $F\subseteq F'$ and the following holds : 
+We will say that $\alpha_{A,B}$ is quantitatively injective if there exists $\lambda \geq 1$ such that, for every $\varepsilon\in (0,\frac{1}{4\alpha_\tau \lambda})$ and every $F\in\mathcal E$, there exists $F'\in\mathcal E$, $F\subseteq F'$, such that : 
 \[\forall x\in K^{\varepsilon,F}(A)\otimes K(B)\text{ such that }\alpha_{A,B}^{\varepsilon,F}(x)=0 \text{ then }(\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}\otimes id) (x) = 0.\] 
 
-We will say that $\alpha_{A,B}$ is quantitatively surjective if there exists $\lambda \geq 1$ such that, for every $\varepsilon \in (0,\frac{1}{4\alpha_\tau})$, $F\in\mathcal E$, there exist $F'\in\mathcal E$ such that $F\subseteq F'$ and the following holds 
-\[ \forall y\in K^{\varepsilon,F}(A\otimes B), \exists x\in K^{\varepsilon, F'}(A)\otimes K(B) \text{ such that }
-\iota_{\alpha_\tau\varepsilon,h_{\tau,\varepsilon}. F}^{\lambda\varepsilon,F'}\circ\alpha^{\varepsilon,F'}_{A,B}(x)=\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}(y).\] 
+We will say that $\alpha_{A,B}$ is quantitatively surjective if there exists $\lambda \geq 1$ such that, for every $\varepsilon \in (0,\frac{1}{4\alpha_\tau})$ and every $F\in\mathcal E$, there exist $F'\in\mathcal E$, $F\subseteq h_{\tau,\lambda\varepsilon}.F'$, such that:
+\[ \forall y\in K^{\varepsilon,F}(A\otimes B), \exists x\in K^{\lambda\varepsilon, F'}(A)\otimes K(B) \text{ such that }
+%\iota_{\alpha_\tau\varepsilon,h_{\tau,\varepsilon}. F}^{\lambda\varepsilon,F'}\circ
+\alpha^{\lambda\varepsilon,F'}_{A,B}(x)=\iota_{\varepsilon,F}^{\alpha\lambda\varepsilon,h_{\tau, \lambda\varepsilon}.F'}(y).\] 
 
 
 \begin{definition}
-A filtered $C^*$-algebra $(A,\mathcal E)$ is said to satisfy the quantitative Künneth formula if, for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group, $\hat\alpha_{A,B}$ is quantitatively injective and quantitatively surjective. 
+A filtered $C^*$-algebra $(A,\mathcal E)$ is said to satisfy the quantitative Künneth formula if there exists $\lambda \geq 1$ such that, for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group, $\hat\alpha_{A,B}$ is quantitatively injective and quantitatively surjective. 
 \end{definition}
 
 The remainder of the section is devoted to prove the theorem \ref{Kunneth}. We first recall the induction and restriction machinery in the context of equivariant $KK$-theory. The important result is lemma \ref{Restriction}, which allows to restrict $KK^G$-elements to compact open subgroupoids under some suitable conditions. We then define a class $\mathcal C$ of groupoids which satifies these suitable conditions, and give instances of this class. The end of the section is devoted to the proof of the main theorem.
@@ -140,7 +141,8 @@ Let us show the controlled surjectivity. Let $F\in\mathcal E$ and $\varepsilon\i
 \[\mu_{G,A\otimes B}^{\lambda\varepsilon,E,F'}(z)=\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}(y).\] 
 Theorem \ref{TopologicalKunneth} entails that there exists $z_1 \in RK_*^G(P_E(G),A)\otimes K_*(B) $ such that $\alpha_{A,B}^{G,P_E(G)}(z_1)=z$. Let $F''\in \mathcal E$ such that $c(\varepsilon,E)\subseteq F''$ and $F'\subseteq F''$. By lemma \ref{KunnethLemma}, if we set $z_2=(\mu_{G,A}^{\varepsilon,E,F''} \otimes id_{ K_*(B)})(z_1)$, then 
 \[\alpha_{A\rtimes_r G,B}^{\varepsilon,F''} (z_2)= \mu_{G,A\otimes B}^{\alpha_\tau \varepsilon,E,h_\varepsilon . F''}(z).\]
-Set $m = \sup (\alpha_\tau,\lambda)$, hence $\iota_{\varepsilon,F}^{m\varepsilon,h_\varepsilon F''}(y)=\iota_{\alpha_\tau\varepsilon,h_\varepsilon F''}^{m\varepsilon,h_\varepsilon F''}\circ\alpha_{A\rtimes_r G,B}^{\varepsilon,F''} (z_2)$ and $\hat \alpha_{A\rtimes_r G,B} $ is quantitatively surjective.\\
+Hence \[\iota_{\varepsilon,F}^{\lambda \alpha \varepsilon,h_\varepsilon F''}(y)=\iota_{\alpha_\tau\varepsilon,h_\varepsilon F''}^{ \lambda \alpha \varepsilon,h_\varepsilon F''}\circ\alpha_{A\rtimes_r G,B}^{\varepsilon,F''} (z_2)=
+\alpha_{A\rtimes_r G,B}^{\lambda \varepsilon,F''} (z_2)\] and $\hat \alpha_{A\rtimes_r G,B} $ is quantitatively surjective.\\
 
 Let us show the controlled injectivity. Let $\varepsilon\in(0,\frac{1}{4\alpha_\tau})$ and $F\in\mathcal E$.\\ 
 

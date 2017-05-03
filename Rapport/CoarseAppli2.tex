@@ -42,7 +42,7 @@ is an isomorphism of $\Z_2$-graded abelian groups.
 
 The reader can find a proof in \cite{SkTuYu} (Lemma $4.7$). We recall the explicit construction of the inverse 
 \[j:KK(C_0(P_{E}(X),B) \rightarrow KK^G(C_0(P_{\overline E}(G),\tilde B)\] 
-of $\iota^*$. Let $(H_B,\pi,T)\in\mathbb E (C_0(P_{E}(X),B)$ be a standard $K$-cycle. Let $E= l^\infty(X,B\otimes\mathfrak K)$, $(\tilde \pi (a)\xi)(x) = \pi(a(x))\xi(x)$ and $(\tilde F\xi ) (x) = F\xi(x)$, for every $x\in X$ and $\xi\in E$. Then $j([H_B,\pi,T])=[E,\tilde \pi, \tilde F]$.
+of $\iota^*$. Let $(H_B,\pi,T)\in\mathbb E (C_0(P_{E}(X),B)$ be a standard $K$-cycle. Let $\tilde B= l^\infty(X,B\otimes\mathfrak K)$ seen as Hilbert module over itself, $(\tilde \pi (a)\xi)(x) = \pi(a(x))\xi(x)$ and $(\tilde T\xi ) (x) = T\xi(x)$, for every $x\in X$ and $\xi\in E$. Then $j([H_B,\pi,T])=[\tilde B,\tilde \pi, \tilde T]$.
 
 \begin{lem} Let $E\subseteq X\times X$ be controlled subset and $B$ be $C^*$-algebra. Denote $C_0(P_E(X))$ by $A$, $C_0(P_{\overline E}(G))$ by $\tilde A$ and $\tilde B = l^\infty(X,B\otimes \mathfrak K)$. Then, for every $z\in KK^G(\tilde A,\tilde B)$, the following equality of controlled morphisms holds :
 \[\hat\sigma_X(\iota^*(z))\circ (\Psi_A)_* = (\Psi_B)_*\circ \hat J_G(z).\]  
@@ -71,31 +71,60 @@ of $\iota^*$. Let $(H_B,\pi,T)\in\mathbb E (C_0(P_{E}(X),B)$ be a standard $K$-c
 %\[\hat\sigma_X(\iota^*(z)) \circ (\Psi_A)_* = (\Psi_B)_*\circ \hat J_G(z).\]\qed\end{dem}
 
 %%% NEW PROOF
+%\begin{dem}
+%Let $z\in KK_1^G(\tilde A,\tilde B)$. Let $\iota^*(z)$ be represented by the $K$-cycle $[H_{B},\pi,T]\in\mathbb E(A,B)$, and let $P=\frac{1+T}{2}$. Denote by $(\tilde B,\tilde \pi ,\tilde T)\in \mathbb E^G(\tilde A,\tilde B)$ the representative of $j(\iota^*(z))=z$ constructed as in lemma \ref{iota}. Recall that $E^{(\pi,T)} = \{(x,P\pi(x)P+y : x\in A,y\in B\otimes\mathfrak K\}$, and $E^{(\pi,T)}_X=C^*(X,E^{(\pi,T)})$. By \ref{Kasparov1}, $J_G(z)$ is given by the controlled boundary of $E_G^{(\tilde \pi,\tilde T)}$. We add in this proof a $G$ in subscript of $E^{(\tilde \pi,\tilde T)}$ for convenience of notation.\\
+
+%We shall define a $*$-homomorphism from $E^{(\pi,T)}_X$ to $E_G^{(\tilde \pi,\tilde T)}$ that intertwines the two extensions. Let $\Phi_B : %C^*(X,B)\rightarrow \tilde B\rtimes_r G$ be the inverse of $\Psi_B$, for every $C^*$-algebra $B$. Define 
+%\[\Phi_E : \left\{
+%\begin{array}{rcl}
+%E^{(\pi,T)}_X   & \rightarrow   & E_G^{(\tilde \pi,\tilde T)} \\
+%(a,y)		& \mapsto	& (\Phi_A(a),\mathcal M_{\tilde B\rtimes_r G}\circ\Phi_B(y))\\
+%\end{array}\right.\]
+
+%which sends $(x,P_X \pi_X(x)P_X + y)$ to $(\Phi_A(x), (\tilde P)_G(\tilde \pi)_G(\Phi_A(x))(\tilde P)_G+(\mathcal M_{\tilde B\rtimes_r G}\circ\Phi_B)_*(y))$. This map makes the following diagram commutes
+%\[\begin{tikzcd}[column sep = small]
+%0\arrow{r} & C^*(X,B) \arrow{r}\arrow{d}{\mathcal M_{\tilde B\rtimes_r G}\circ\Phi_B} & E^{(\pi,T)}_X  \arrow{r}\arrow{d}{\Phi_E} & 
+%	C^*(X,A)\arrow{r}\arrow{d}{\Phi_A} & 0 \\
+%0\arrow{r} & K_{\tilde B\rtimes G}\arrow{r} & E_G^{(\tilde \pi,\tilde T)} \arrow{r}& \tilde A\rtimes_r G\arrow{r} & 0
+%\end{tikzcd}.\]
+%By remark \ref{rk3.8}, we get 
+%\[D_{K_{\tilde B\rtimes G}, E_G^{(\tilde \pi,\tilde T)}} \circ (\Phi_A)_* =\mathcal M_{\tilde B\rtimes_r G} \circ (\phi_B)_* \circ D_{ C^*(X,B), E^{(\pi,T)}_X},\]
+%hence, composing with Morita equivalence, and $(\Psi_A)_*$ and $(\Psi_B)_*$,
+%\[ (\Psi_B)_*\circ \hat J_G(z) = \hat\sigma_X(\iota^*(z)) \circ (\Psi_A)_*.\]
+%\qed
+%\end{dem}
+%%%
+
+%%% NEW NEW PROOF
 \begin{dem}
-Let $z\in KK_1^G(\tilde A,\tilde B)$. Let $\iota^*(z)$ be represented by the $K$-cycle $[H_{B},\pi,T]\in\mathbb E(A,B)$, and let $P=\frac{1+T}{2}$. Denote by $(\tilde H,\tilde \pi ,\tilde T)\in \mathbb E^G(\tilde A,\tilde B)$ the representative of $j(\iota^*(z))=z$ constructed as in lemma \ref{iota}. Recall that $E^{(\pi,T)} = \{(x,P\pi(x)P+y : x\in A,y\in B\otimes\mathfrak K\}$, and $E^{(\pi,T)}_X=C^*(X,E^{(\pi,T)})$. By \ref{Kasparov1}, $J_G(z)$ is given by the controlled boundary of $E_G^{(\tilde \pi,\tilde T)}$. We add in this proof a $G$ in subscript of $E^{(\tilde \pi,\tilde T)}$ for convenience of notation.\\
+Let $z\in KK_1^G(\tilde A,\tilde B)$. Let $\iota^*(z)$ be represented by the $K$-cycle $[H_{B},\pi,T]\in\mathbb E(A,B)$, and let $P=\frac{1+T}{2}$. Denote by $(\tilde B,\tilde \pi ,\tilde T)\in \mathbb E^G(\tilde A,\tilde B)$ the representative of $j(\iota^*(z))=z$ constructed as in lemma \ref{iota} and $\tilde P=\frac{1+\tilde T}{2}$. Recall that 
+\[E^{(\pi,T)} = \{(x,P\pi(x)P+y : x\in A,y\in B\otimes\mathfrak K\},\] 
+and $E^{(\pi,T)}_X=C^*(X,E^{(\pi,T)})$. \\
 
-We shall define a $*$-homomorphism from $E^{(\pi,T)}_X$ to $E_G^{(\tilde \pi,\tilde T)}$ that intertwines the two extensions. Let $\Phi_B : C^*(X,B)\rightarrow \tilde B\rtimes_r G$ be the inverse of $\Psi_B$, for every $C^*$-algebra $B$. Define 
-\[\Phi_E : \left\{
-\begin{array}{rcl}
-E^{(\pi,T)}_X   & \rightarrow   & E_G^{(\tilde \pi,\tilde T)} \\
-(a,y)		& \mapsto	& (\Phi_A(a),\mathcal M_{\tilde B\rtimes_r G}\circ\Phi_B(y))\\
-\end{array}\right.\]
+First, notice that $z$ is the boundary element in $KK^G(\tilde A,\tilde B)$ of the following extension 
+\[0 \rightarrow \tilde B \rightarrow E'\rightarrow \tilde A \rightarrow 0\]
+where $E'$ is the $G$-algebra $\{ (a,\tilde P \tilde \pi(a) \tilde P+y) : a\in \tilde A, y \in \tilde B  \}\subseteq \tilde A\oplus \mathcal M(\tilde B) $, and the $*$-homomorphisms are the obvious ones. Set 
+\[E'_G=\{ (a,\tilde P_G \tilde \pi_G(a) \tilde P_G+y) : a\in \tilde A\rtimes_r G, y \in \tilde B\rtimes_r G    )\}.\] 
+We take the previous extension under the reduced crossed product to get the following extension
+\[0 \rightarrow \tilde B\rtimes_r G \rightarrow E_G'\rightarrow \tilde A\rtimes_r G \rightarrow 0.\]
+By \ref{Kasparov1}, $J_G(z)$ is given by the controlled boundary of $E'_G$. \\
 
-which sends $(x,P_X \pi_X(x)P_X + y)$ to $(\Phi_A(x), (\tilde P)_G(\tilde \pi)_G(\Phi_A(x))(\tilde P)_G+(\mathcal M_{\tilde B\rtimes_r G}\circ\Phi_B)_*(y))$. This map makes the following diagram commutes
+We shall define a $*$-homomorphism from $E'\rtimes G$ to $E^{(\pi,T)}_X$ that intertwines the two extensions. Extend the $*$-isomorphism $\Psi_B : \tilde B \rtimes_r G \rightarrow C^*(X,B)$ to $\tilde \Psi_B : \mathcal M(\tilde B \rtimes_r G) \rightarrow \mathcal M(C^*(X,B))$. Set $\Psi_{E'} (a,y) = (\Psi_A(a),\tilde \Psi_B(y)) $ for every $(a,y)\in E'_G$. This map makes the following diagram commutes
 \[
 \begin{tikzcd}[column sep = small]
-0\arrow{r} & C^*(X,B) \arrow{r}\arrow{d}{\mathcal M_{\tilde B\rtimes_r G}\circ\Phi_B} & E^{(\pi,T)}_X  \arrow{r}\arrow{d}{\Phi_E} & 
-	C^*(X,A)\arrow{r}\arrow{d}{\Phi_A} & 0 \\
-0\arrow{r} & K_{\tilde B\rtimes G}\arrow{r} & E_G^{(\tilde \pi,\tilde T)} \arrow{r}& \tilde A\rtimes_r G\arrow{r} & 0
+0\arrow{r} & \tilde B\rtimes_r G \arrow{r} \arrow{d}{\Psi_B} & E'_G \arrow{r}\arrow{d}{\Psi_{E'}} &
+			 \tilde A\rtimes_r G\arrow{r}\arrow{d}{\Psi_A} & 0 \\
+0\arrow{r} & C^*(X,B) \arrow{r} & E^{(\pi,T)}_X  \arrow{r} & C^*(X,A)\arrow{r} & 0 
 \end{tikzcd}.
 \]
 By remark \ref{rk3.8}, we get 
-\[D_{K_{\tilde B\rtimes G}, E_G^{(\tilde \pi,\tilde T)}} \circ (\Phi_A)_* =\mathcal M_{\tilde B\rtimes_r G} \circ (\phi_B)_* \circ D_{ C^*(X,B), E^{(\pi,T)}_X},\]
-hence, composing with Morita equivalence, and $(\Psi_A)_*$ and $(\Psi_B)_*$,
+\[  (\Psi_B)_* \circ D_{\tilde B\rtimes_r G, E'_G} = D_{ C^*(X,B), E^{(\pi,T)}_X} \circ (\Psi_A)_*,\]
+hence,
 \[ (\Psi_B)_*\circ \hat J_G(z) = \hat\sigma_X(\iota^*(z)) \circ (\Psi_A)_*.\]
 \qed
 \end{dem}
-%%%
+
+%%% END NEWPROOF
 
 \begin{thm}\label{BCCeq}
 Let $B$ be a $C^*$-algebra, $E\in \mathcal E_X$ an entourage and $\overline E \in \mathcal E_G$ the corresponding compact open subset of $G$. With the above notations, for all $z\in RK^G(P_{\overline E}(G),\tilde B)$ and all $\varepsilon\in(0,\frac{1}{4})$, the following equality holds :
