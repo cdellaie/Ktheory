@@ -13,6 +13,7 @@ In this section, for every $G$-algebra $B$, we use the notation $K_{B\rtimes_r G
 Let $A$ and $B$ be two $G$-$C^*$-algebras, with actions denoted by $\alpha : s^* A \rightarrow r^* A$ and $\beta : s^* B \rightarrow r^* B$. %is the action of $G$, notice that the canonical action on the standard Hilbert module $H_B$ is given by $V=id_H\otimes \beta : s^* H_B \cong H_{s^* B} \rightarrow r^* H_B \cong H_{r^* B}$. \\
 Recall that every $K$-cycle $z\in KK^G(A,B)$ can be represented as a triple $(H_B, \pi, T)$ where :
 \begin{itemize}
+\item[$\bullet$] $H_B$ is equipped with an action $V\in\mathcal L_{s^* B}(s^* H_B , r^* H_B)$ of $G$.
 \item[$\bullet$]$\pi : A\rightarrow \mathcal L_B(H_B)$ is a $G$-equivariant $*$-homomorphism.
 \item[$\bullet$]$T\in \mathcal L_B(H_B)$ is a self-adjoint operator.
 \item[$\bullet$] $T$ and $\pi$ satisfy the $K$-cycle conditions, i.e. $[T,\pi(a)]$, $\pi(a)(T^2-id_{H_B})$ are compact operators in $\mathfrak K_B(H_B)$ and $\pi(a)(r^*T-Vs^*T V^*)$ are compact operators in $\mathfrak K_{r^* B}(r^* H_B)\cong \mathfrak K_{r^* B}(H_{r^* B})$ for all $a\in A, g\in G$.\\
@@ -24,7 +25,7 @@ which induces right multiplication by $j_G(z)$ in $K$-theory.
 
 \subsubsection{Odd case}
 
-Let us first do the work for $z\in KK_1^G(A,B)$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_G=P\otimes id_{B\rtimes_r G}$. We define
+Let us start with an odd element $z\in KK_1^G(A,B)$. Let $(H_B,\pi,T)$ be a $K$-cycle representing $z$. Set $P=\frac{1+T}{2}$ and $P_G=P\otimes id_{B\rtimes_r G}$. We define
 \[E^{(\pi,T)}=\{(x,P_G\pi_G(x)P_G + y) : x\in A\rtimes_r G, y\in K_{B\rtimes_r G}\}\]
 a $C^*$-algebra which is filtered by
 \[E_U^{(\pi,T)}=\{(x,P_G\pi_G(x)P_G + y) : x\in (A\rtimes G)_U, y\in K\otimes (B\rtimes G)_U\}\]
@@ -85,14 +86,14 @@ such that
 
 \item[(i)]The $K$-cycle $[\partial_{K_{B\rtimes_r G},E^{(\pi,T)}}]\in KK_1(A\rtimes_r G, B\rtimes_r G)$ implementing the boundary of the extension $E^{(\pi,T)}$ induces the map $j_{red,G}$ by definition, and modulo Morita equivalence, which immediately gives the first point.
 
-\item[(ii)] If $z,z'$ are elements of $KK_1^G(A,B)$, represented by two $K$-cycles $(H_B,\pi_j,T_j)$, and if $(H_B,\pi,T)$ is a $K$-cycle representing the sum $z+z'$, then $E^{(\pi,T)}$ is naturally isomorphic to the extension sum of the $E_j:=E^{(\pi_j,T_j)}$, namely
+\item[(ii)] If $z,z'$ are elements of $KK_1^G(A,B)$, represented by two $K$-cycles $(H_B,\pi_j,T_j)$, let $(\tilde H_B,\pi,T)$ be $(H_B\oplus H_B,\pi_0\oplus \pi_1,T_0\oplus T_1)$ which is a $K$-cycle representing the sum $z+z'$. Then $E^{(\pi,T)}$ is naturally isomorphic to the extension sum of the $E_j:=E^{(\pi_j,T_j)}$, namely
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} & \mathfrak M_2(K_{B\rtimes_r G}) \arrow{r} & D \arrow{r} & A\rtimes_r G \arrow{r} & 0
 \end{tikzcd}\]
 where 
 \[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K_{B\rtimes_r G}\right\},\]
 with $p_j : E_j\rightarrow A\rtimes_r G$ the $*$-homomorphisms of the extensions.
-Naturality of the controlled boundary maps \cite{OY2} ensures that the boundary of the sum of two extensions is the sum of the boundary of each, thus the result.
+Naturality of the controlled boundary maps \cite{OY2} ensures that the boundary of the sum of two extensions is the sum of the boundary of each, thus the result holds.
 \item[(iii)] Let $z\in KK_1^G(A_2,B)$, represented by a cycle $(H_B,\pi,T)$. Representing $f^*(z)$ is $(H_B,f^*\pi,T)$ with $f^*\pi=\pi \circ f$. The map 
 \[\phi : \left\{\begin{array}{lll} E^{f^*(\pi,T)} & \rightarrow & E^{(\pi,T)} \\
 ( x, P_G(f^*\pi)(x)P_G+y) & \rightarrow & ( f_G(x), P_G(f^*\pi)(x)P_G+y) \end{array}\right. \]
@@ -149,14 +150,14 @@ and $\Psi$ intertwines the two filtered sections by the previous relation. Moreo
 \[ D_{K_{B_2\rtimes G},E^{(\pi',T')}}=\psi_*\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}},\]
 which we compose by the Morita equivalence on the left $M_{B_2\rtimes G}^{-1}$
 \[J_G(g_*(z)) = M_{B_2\rtimes G}^{-1}\circ g_{G,*}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}.\]
-The homomorphisms inducing the Morita equivalence make the following diagram commutes,
+Notice that $\psi$ is the $*$-homomorphism induced by $g_G$ on the compact operators, hence the homomorphisms inducing the Morita equivalence make the following diagram commutes,
 \[\begin{tikzcd}B_1\rtimes G\arrow{r}{g_G}\arrow{d} & B_2\rtimes G\arrow{d} \\ K_{B_1\rtimes G } \arrow{r}{\psi}& K_{B_2\rtimes G }\end{tikzcd},\]
 and $J_G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes G}^{-1}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}=g_{G,*}\circ J_G(z)$.\\
 
 %% NEW NEW PROOF
 \item[(v)] We can suppose $A$ unital. Let $0 \rightarrow J \rightarrow A \rightarrow A /J \rightarrow 0$ be a $G$-equivariant semi-split extension of $G$-algebras with $q:A\rightarrow A/J$ the quotient map.. Let us denote by $s : A/J \rightarrow A $ the $G$-equivariant completely positive cross section.   According to the equivariant Kasparov-Stinespring theorem \ref{GKasparovStinespring}, there exists an equivariant $A$-Hilbert module $E$ and a $G$-equivariant $*$-homomorphism $\pi : A/J \rightarrow \mathcal L_{A}(A\oplus E)$ such that $s(x) = P \pi(x) P$, where $P \in \mathcal L_{A}(A\oplus E)$ is the projection on the $A$ factor. Consider the $J$-Hilbert module $E' = (A\oplus E)\otimes_J J \cong J\oplus (E\otimes_J J)$, and the natural map $\tilde\pi =\pi\otimes_J 1: A/ J \rightarrow \mathcal L_{J}(E')$. Put $\tilde T= (2P-1)\otimes_J id_J$. By the stabilization theorem, we can suppose that $E'$ is a standard $G$-equivariant $J$-Hilbert module. 
 Put 
-\[\psi_0(x)(y \oplus \xi ) =  (xy) \oplus \xi\quad \forall \xi \in E\otimes J,\forall y\in J, \] 
+\[\psi_0(x)(y \oplus \xi ) =  (xy) \oplus 0 \quad \forall \xi \in E\otimes J,\forall y\in J, \] 
 for every $x\in A$. This defines a $G$-equivariant $*$-homomorphism $\psi_0 : A \rightarrow \mathcal L_J(E')$ such that $\psi_0(x)\in  \mathfrak K _J (E')$ when $x\in J$. Put $\psi ( a ) = (q(a), \psi_0 (a))$. As $P\tilde \pi (q(a))P -\psi_0(a) = \psi_0( s(q(a)) - a )\in \mathfrak K_J(E')$, $\psi(a)\in E^{(\tilde\pi,\tilde T)}$ holds, and the following diagram is commutative with exact rows:
 \[\begin{tikzcd}[column sep = small]
 0\arrow{r} &J\arrow{r}\arrow{d}{\psi_0} & A \arrow{r}\arrow{d}{\psi}& A/J\arrow{r}\arrow{d}{=} & 0\\
@@ -164,7 +165,7 @@ for every $x\in A$. This defines a $G$-equivariant $*$-homomorphism $\psi_0 : A 
 \end{tikzcd},\]
 Hence, by functoriality and semi-split exactness of the reduced cross product, the following diagram commutes
 \[\begin{tikzcd}[column sep = small]
-0\arrow{r} & J\rtimes_r G\arrow{r}\arrow{d}{(\psi_0)_X} & A\rtimes_r G \arrow{r}\arrow{d}{\psi_X}& A/J\rtimes_r G \arrow{r}\arrow{d}{=} & 0\\
+0\arrow{r} & J\rtimes_r G\arrow{r}\arrow{d}{(\psi_0)_G} & A\rtimes_r G \arrow{r}\arrow{d}{\psi_G}& A/J\rtimes_r G \arrow{r}\arrow{d}{=} & 0\\
 0\arrow{r} & \mathfrak K \otimes J\rtimes_r G\arrow{r} & E^{(\tilde \pi, \tilde T)} \arrow{r}& A/J\rtimes_r G \arrow{r} & 0
 \end{tikzcd},\]
 and remark \ref{rk3.8} ensures that $J_G([\partial_J]) = D_{J\rtimes_r G,A\rtimes_r G}$. 
@@ -250,7 +251,7 @@ holds.
 \end{prop}
 \begin{dem}
 %We will use the following fact : there exists a positive integer $d$ such that every cycle $z\in KK^G(A,B)$ has decomposition property $(d)$. For more details, we send to the appendice of the article of V. Lafforgue \cite{LaffOY} where H. Oyono-Oyono shows that claim. We just need to know that $z$ satisfies the decomposition property $(d)$ if there exist $d+1$ $G$-$C^*$-algebras $A_j$  and $d$ cycles $\alpha_j\in KK^G(A_{j-1},A_j), j=1,d$ such that $A_0=A$, $A_d=B$ and each $\alpha_j$ is either coming from a $*$-morphism $A_{j-1}\rightarrow A_j$, or there is a $*$-morphism $\theta_j: A_j\rightarrow A_{j-1}$ such that $\alpha_j \otimes_{A_j} [\theta_j]=1$ in $KK^G(A_{j-1},A_{j-1})$.\\
-Recall from \ref{propertyD} that every $\alpha\in KK_0^G(A,B)$ satisfies property $(d)$. By naturality, this property reduces the proof to the special case of $\alpha\in KK^G(A,B)$ being the inverse of a $*$-homomorphism $\theta : B\rightarrow A$ in $KK^G$-theory : $\alpha\otimes_B [\theta]=1_A$. Let $z\in KK^G(B,C)$ :
+Recall from \ref{propertyD} that every $\alpha\in KK_0^G(A,B)$ satisfies property $(d)$ for a universal $d$. By naturality, this property reduces the proof to the special case of $\alpha\in KK^G(A,B)$ being the inverse of a $*$-homomorphism $\theta : B\rightarrow A$ in $KK^G$-theory : $\alpha\otimes_B [\theta]=1_A$. Let $z\in KK^G(B,C)$ :
 \[\begin{array}{rcl}
 J_G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_G(\alpha\otimes z)\circ J_G(\alpha\otimes [\theta]) \\
 			& \sim & J_G(\alpha\otimes z)\circ J_G(\theta_*(\alpha))\\
@@ -294,11 +295,11 @@ Let $\{(g_j,\eta_j)\}_{j\in J}\subseteq G\times_{s,p}P_E(G)$ be a generalized se
 \end{dem}
 
 %Let $K\subseteq P_E(G)$ be a compact. Then $\{g\in G \text{ s.t. }\lambda(g,\eta)= 0\ \forall \eta \in K\}$ is compact. 
-Notice that $\lambda_{g'}(g.\eta) = \lambda_{g^{-1}g'}(\eta)$ for every $\eta\in P_E(G)$, $g\in G_{p(\eta)}$ and $g'\in G^{r(g)}$. Define $h$ as the restriction of $\lambda$ to $G^{(0)}\times_{s,p}P_E(G)$, i.e. $h(x,\eta) = \lambda_{e_x}(\eta)$, for every $x\in G^{(0)}$ and $\eta\in P_E(G)$ such that $p(\eta) = x$. Notice that $h(x,g^{-1}.\eta)= \lambda(g,\eta) = \lambda_g(\eta)$ for every $(g,\eta)\in G\times_{s,p} P_E(G)$. Let us put
+Notice that $\lambda_{g'}(g.\eta) = \lambda_{g^{-1}g'}(\eta)$ for every $\eta\in P_E(G)$, $g\in G_{p(\eta)}$ and $g'\in G^{r(g)}$. Define $h$ as the restriction of $\lambda$ to $G^{(0)}\times_{s,p}P_E(G)$, i.e. $h(x,\eta) = \lambda_{e_x}(\eta)$, for every $x\in G^{(0)}$ and $\eta\in P_E(G)$ such that $p(\eta) = x$. Notice that $h(x,g^{-1}.\eta)= \lambda(g,\eta) = \lambda_g(\eta)$ for every $(g,\eta)\in G\times_{s,p} P_E(G)$. Let us set
  
-\[\mathcal L_E(g,\eta) = h^{\frac{1}{2}}(x,\eta) h^{\frac{1}{2}}(x,g^{-1}.\eta)= \lambda_{e_x}^{\frac{1}{2}}(\eta)\lambda_g^{\frac{1}{2}}(\eta).\] 
+\[\mathcal L_E(g,\eta) = h^{\frac{1}{2}}(x,\eta) h^{\frac{1}{2}}(x,g^{-1}.\eta)= \lambda_{e_x}^{\frac{1}{2}}(\eta)\lambda_g^{\frac{1}{2}}(\eta),\] 
 
-Notice that $\text{supp }\mathcal L_E\subseteq E\times_{s,p} p^{-1}(r(E))$, which is compact. Hence $\mathcal L_E$ is an element of $C_c(G,C_0(P_E(G)))$. Because $\sum_{g\in G^{p(\eta)}}\lambda_g(\eta) = 1 ,\forall (g,\eta)\in G\times_{s,p} P_E(G)$, this defines a projection in $C_0(P_E(G))\rtimes_r G$ of propagation less than $E$. Moreover $\mathcal L_E$ defines a controlled $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$.\\ %Moreover, for such controlled subsets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.\\
+where $x= r(g)$. Notice that $\text{supp }\mathcal L_E\subseteq E\times_{s,p} p^{-1}(r(E))$, which is compact. Hence $\mathcal L_E$ is an element of $C_c(G,C_0(P_E(G)))$. Because $\sum_{g\in G^{p(\eta)}}\lambda_g(\eta) = 1 ,\forall (g,\eta)\in G\times_{s,p} P_E(G)$, this defines a projection in $C_0(P_E(G))\rtimes_r G$ of propagation less than $E$. Moreover $\mathcal L_E$ defines a controlled $K$-theory class $[\mathcal L_E,0]_{\varepsilon,F}$ for any $\varepsilon\in (0,\frac{1}{4})$ and any $F\in \mathcal E$ such that $E\subseteq F$.\\ %Moreover, for such controlled subsets, if $q_E^F : C_0(P_E(G))\rightarrow C_0(P_F(G))$, then $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$.\\
 
 %There exists continuous functions $\lambda_g : P_E(G)\rightarrow [0,1]$ for all $g\in G$ such that $\eta = \sum_{g\in G^x}\lambda_g(\eta) \delta_g$ for any $\eta\in P_E(G)$. Define $h(x)=\lambda_{e_x}$ and $\phi = \sqrt h$. Notice that $g.h = \lambda_g$ for all $g\in G$, and as $\sum_{g\in G^x}\lambda_g = 1 ,\forall x\in G^{(0)}$, 
 %\[\mathcal L_E =\sum_{g\in G^x} \phi(g.\phi)\]
@@ -333,12 +334,12 @@ The assembly map is defined for any reasonnable crossed-products by $G$. In part
 \end{rk}
 
 \begin{rk} 
-The family of assembly maps $\mu_{G,B}^{\varepsilon,E,F}$ induces the Baum-Connes assembly map for $G$ in $K$-theory : the following diagram commutes
+The family of assembly maps $\mu_{G,B}^{\varepsilon,E,F}$ induces the Baum-Connes assembly map for $G$ in $K$-theory. Notice that $h$ is a cutoff function for the action on $P_E(G)$, hence $\mathcal L_E$ coincides with $\mathcal L_{P_E(G)}$. Moreover, the following diagram commutes
 \[\begin{tikzcd}
 RK_*^G(P_E(G),B) \arrow{r}{\mu_{G,B}^{\varepsilon,E,F}}\arrow{dr}{\mu_{G,B}^E} & K_*^{\varepsilon, F}(B\rtimes_r G)\arrow{d}{\iota_{\varepsilon,F}}\\ 
 		&  K_*(B\rtimes_r G)
 \end{tikzcd}\]
-because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^E(z)=[\mathcal L_E]\otimes j_G(z)$. But, as $(q_E^F)_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_F,0]_{\varepsilon,F}$ as soon as $E\subseteq F$, this diagram commutes with inductive limit over $E$.\\
+because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^E(z)=[\mathcal L_E]\otimes j_G(z)$ by remark \ref{projection}. But, as $(q_E^{E'})_*[\mathcal L_E,0]_{\varepsilon,E} = [\mathcal L_{E'},0]_{\varepsilon,E'}$ as soon as $E\subseteq E'$, this diagram commutes with inductive limit over $E$.\\
 \end{rk}
 
 %In \cite{OY3}, H. Oyono-Oyono and G. Yu defined a bunch of local quantitative coarse assembly maps for a metric space $X$. For the sake of simplicity, we take $X$ to be discrete and uniformly bounded. Let $\mathcal C$ be its coarse structure, that is the set of all its controlled subsets. Then, for any $C^*$-algebras $A$ and $B$ and a $K$-cycle $z\in KK(A,B)$, they construct a controlled morphism
@@ -389,6 +390,8 @@ because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^E(
 \subsection{Quantitative statements}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+We generalize in this subsection to the setting of étale groupoids the results obtained by H. Oyono-Oyono and G. Yu in \cite{OY2}. We will define a controlled version of the Baum-Connes conjecture, and give conditions that ensure it is satisfied. In particular, when $G$ satisfies the Baum-Connes conjecture with coefficients, it satisfies the controlled Baum-Connes conjecture. To this end, we will have to compute the $K$-homology of a finite typed $G$-simplicial complex with coefficients in the infinite product of stable $G$-algebras.\\
+
 In this subsection, the groupoid $G$ must have a compact unit space $G^{(0)}$. Then, if $\{B_j\}$ is a countable family of $G$-algebras, the diagonal action of $G$ on the product provides $\prod_j B_j$ with the structure of a $G$-algebra. \\
 
 Let $A$ be a $G$-algebra. We will say that :\\
@@ -396,7 +399,7 @@ Let $A$ be a $G$-algebra. We will say that :\\
 $\bullet$(Quantitative Injectivity) $\mu_{G,A}$ is quantitatively injective if, for every $E\in \mathcal E$, there exists $\varepsilon\in (0,\frac{1}{4})$ such that, for every $F\in\mathcal E$ satisfying $k_J(\varepsilon). E \subseteq F$, there exists $E'\in\mathcal E$ such that $E\subseteq E'$ and 
 \[\forall z\in RK^G(P_E(G),A),\quad\mu_{G,A}^{\varepsilon,E,F}(z) = 0 \text{ implies } q_E^{E'}(z)=0.\]
 
-$\bullet$(Quantitative Surjectivity) $\mu_{G,A}$ is quantitatively surjective if there exists $\varepsilon$ such that for every $F\in \mathcal E$ such that, there exists $\varepsilon' \in (\varepsilon,\frac{1}{4})$ and $E,F'\in\mathcal E$ such that $F \subseteq F'$ and $k_J(\varepsilon'). E\subseteq F'$,  
+$\bullet$(Quantitative Surjectivity) $\mu_{G,A}$ is quantitatively surjective if there exists $\varepsilon$ such that, for every $F\in \mathcal E$ such that, there exists $\varepsilon' \in (\varepsilon,\frac{1}{4})$ and $E,F'\in\mathcal E$ such that $F \subseteq F'$ and $k_J(\varepsilon'). E\subseteq F'$,  
 \[\forall y\in K^{\varepsilon, F}(A\rtimes_r G),\exists z\in RK^G(P_E(G),A) \text{ such that } \mu_{G,A}^{\varepsilon', E, F'}(z)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y).\]
 
 \begin{prop} 
@@ -416,7 +419,7 @@ Let $E\in\mathcal E$ and $x\in RK(P_E(G)),A)$ such that $\mu_{G,A}^E(x)=0$. Then
 \end{array}\]
 But then the quantitative injectivity condition ensures that $q_E^{E'}(x)=0$ in $RK^G(P_{E'}(G),A)$ and $x=0$ in $K^{top}(G,A)$, which is an inductive limit over $E$.\\
 
-Let us prove the second point. Let $y\in K(B\rtimes_r G)$, and let $\varepsilon\in (0,\frac{1}{4})$, $F\in\mathcal E$ and $x\in K^{\varepsilon,F}(B\rtimes_r G)$ such that $\iota_{\varepsilon,F}(x) =y$. The quantitative surjectivity condition implies that there exist $\varepsilon'\in (0,\frac{1}{4})$, $E,F'\in\mathcal E$, and $z\in RK^G(P_E(G),B)$ satisfying $\varepsilon\leq \varepsilon'$, $k_J(\varepsilon').E\subseteq F'$, $F\subseteq F'$ and $\mu_{G,B}^{\varepsilon',E,F'}(z) = \iota_{\varepsilon,F}^{\varepsilon',F'} (x)$, hence $\mu_{G,B}(z) =y$.\\
+Let us prove the second point. Let $y\in K(B\rtimes_r G)$, and let $\varepsilon\in (0,\frac{1}{4})$, $F\in\mathcal E$ and $x\in K^{\varepsilon,F}(B\rtimes_r G)$ such that $\iota_{\varepsilon,F}(x) =y$. The quantitative surjectivity condition implies that there exist $\varepsilon'\in (0,\frac{1}{4})$, $E,F'\in\mathcal E$, and $z\in RK^G(P_E(G),B)$ satisfying $\varepsilon\leq \varepsilon'$, $k_J(\varepsilon').E\subseteq F'$, $F\subseteq F'$ and $\mu_{G,B}^{\varepsilon',E,F'}(z) = \iota_{\varepsilon,F}^{\varepsilon',F'} (x)$, hence $\mu^E_{G,B}(z) =y$.\\
 \qed
 \end{dem}
 
@@ -468,17 +471,19 @@ Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarr
 %%%%%%%%%%%%% NOUVELLE PREUVE
 \begin{dem}
 Let $(E,\pi,T)\in \mathbb E(C_0(X),B)$ be a $K$-cycle. Denote by $\alpha : s^* C_0(Z) \rightarrow r^*C_0(Z)$ the action of $G$. Let $K$ be a compact fundamental domain for the action of $G$ on $Z$. By local injectivity of $p$, let $(U_j)_j$ be a finite open cover of $K$ such that $p_{|U_j}$ is injective for every $U_j\in \mathcal U$. There exist compactly supported continuous functions $\phi_j : Z\rightarrow [0,1]$ such that  \[\text{supp }\phi_j \subseteq U_j \quad\text{ and }\quad K\subseteq \cup_{j} \phi_j^{-1}(0,+\infty).\]
-Up to replacing $\phi_j$ by the continuous function $\phi_j(z) / \sum_{k,g} \phi_k(z.g)$, we can assume $\sum_{j,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z$. The latter would indeed be continuous, as it can be expressed as $\frac{\phi_j} {(\sum_j\int \phi_j d\lambda ) }$. The condition $\sum_{j,g\in G^{p(z)}} \phi_j (z.g) = 1,\forall z\in Z$ implies that 
+Up to replacing $\phi_j$ by the continuous function $\phi_j(z) / \sum_{k,g} \phi_k(z.g)$, we can assume 
+\[\sum_{j,g\in G^{p(z)}} \phi_U (z.g) = 1,\forall z\in Z.\] 
+The latter is indeed continuous, as it can be expressed as $\frac{\phi_j} {(\sum_j\int \phi_j d\lambda ) }$. The condition $\sum_{j,g\in G^{p(z)}} \phi_j (z.g) = 1,\forall z\in Z$ implies that 
 \[\sum_j \int V(s^*\pi(\phi_j))V^*d\lambda = id_E ,\]
 in the sense of a weak integral, i.e. the equality holds when evaluated on elements of $E$.\\
   
 Indeed, $\pi$ is $G$-equivariant, and by invariance of the Haar system, $\sum_j\int \alpha(s^*\phi_j)d\lambda = 1_{C_0(Z)}$. Composing with $\pi$ gives the equality by continuity and linearity of $\pi$.\\  
 
-Define $F_j = \pi(\phi_j^\frac{1}{2}) F \pi(\phi_j^\frac{1}{2})\in\mathcal L_B(E)$. Then $s^* F_j\in C_c(G,\mathcal L_{s^* B}(s^* E))$ and put
+Define $F_j = \pi(\phi_j^\frac{1}{2}) F \pi(\phi_j^\frac{1}{2})\in\mathcal L_B(E)$. Then $s^* F_j\in C_c(G,\mathcal L_{s^* B}(s^* E))$ and set
 \[F'= \sum_{j} \int V (s^*F_j) V^* d\lambda.\] 
 By invariance of the Haar system, the operator $F'$ is  $G$-invariant. Moreover it commutes with the action of $C_0(Z)$. Indeed, we can compute its fibers : for every $x\in G^{(0)}$,
 \[F'_x = \sum_{j, g\in G^x} V_g\pi(\phi_j^{\frac{1}{2}}) F_{s(g)}\pi(\phi_j^{\frac{1}{2}})V_g^*.\] 
-Hence, by local injectivity, for all $g\in G$, there exists $z_g\in Z$ such that $Z_{s(g)}\cap U = \{z_g\}$, and for all $f\in C_0(Z_{s(g)})$, we have that $\phi_U^{\frac{1}{2}} f = f(z_g) \phi_U^{\frac{1}{2}}$, hence $[ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f ] = [ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f(z_g) \chi_{z_g} ]=0 $.\\
+Hence, by local injectivity, for all $g\in G$, there exists $z_g\in Z$ such that $Z_{s(g)}\cap U = \{z_g\}$, and for all $f\in C_0(Z_{s(g)})$, we have that $\phi_U^{\frac{1}{2}} f = f(z_g) \phi_U^{\frac{1}{2}}$, hence $[ \phi_U^{\frac{1}{2}} T_{s(g)} \phi_U^{\frac{1}{2}},f ] = 0 $.\\
 
 Moreover, $F'$ is a compact perturbation of $F$ as the following computation shows.\\
 \[\begin{array}{rl}
@@ -515,7 +520,7 @@ Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarr
 
 % NEW PROOF
 \begin{dem}
-Put $B_\infty = \prod_j B_j\otimes \mathfrak K $. Let us define a $Z_2$-graded homomorphism 
+Set $B_\infty = \prod_j B_j\otimes \mathfrak K $. Let us define a $Z_2$-graded homomorphism 
 \[\eta :  \prod_j RK^G(X,B_j\otimes \mathfrak K) \rightarrow RK^G(X,\prod_j B_j\otimes \mathfrak K).\] 
 Let $Z\subseteq X$ be a $G$-proper $G$-compact subspace, and, for all $j$, let $z_j\in KK^G(C_0(Z),B_j)$ be represented by a standard $K$-cycle $(H_{B_j},\pi_j ,T_j)$. By lemma \ref{JLTform}, we can suppose that $T_j$ is $G$-equivariant self-adjoint, commutes with the action of $C_0(Z)$ and $-1\leq T_j \leq 1$. \\
 
@@ -616,7 +621,7 @@ with vertical arrows being isomorphisms given by Bott periodicity. By lemma \ref
 \qed
 \end{dem}
 
-%%%%%%%%
+%%%%%%%% CONTROLLED K THEORY AND PRODUCTS
 
 We now turn our attention to the behaviour of controlled $K$-theory with respect to products. Let $\mathcal B = (B_j)_j$ a countable family of $\mathcal E$-filtered $C^*$-algebras. For every $E\in\mathcal E$, put 
 \[\mathcal B_E = \prod_{j} (B_j)_E\otimes \mathfrak K.\]
@@ -645,36 +650,36 @@ The two previous lemmas entail the following result.
 We can now prove the quantitative statements.\\
 
 \begin{thm}\label{Quant1}
-Let $B$ a $G$-algebra, and $\tilde B = l^\infty(\N,B\otimes \mathfrak K)$. Then $\mu_{G,\tilde B}$ is injective if and only if for every $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ and $F$ such that $k_J(\varepsilon).E\subseteq F$, there exists $E' \in\mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(E,E',\varepsilon,F)$. 
+Let $B$ a $G$-algebra, and $\tilde B = l^\infty(\N,B\otimes \mathfrak K)$. Then $\mu_{G,\tilde B}$ is injective if and only if for every $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ and $F$ such that $k_J(\varepsilon).E\subseteq F$, there exists $E' \in\mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(E,E',\varepsilon,F)$ holds. 
 \end{thm}
 
 \begin{dem}
-Let $x\in RK^G(P_E(G),\tilde B)$ such that $\mu_{G,\tilde B}^E(x)=0$. Then, as the quantitative assembly maps factorize $\mu_{G,\tilde B}$, there exist $\varepsilon>0$ and $F$ such that $k_J(\varepsilon). E \subseteq F$, satisfying $\mu_{G,\tilde B}^{\varepsilon,E,F}(x)=0$. Let us denote by $(x_j)_{j\in \N}$ the element of $\prod_j RK^G(P_E(G),A)$ corresponding to $x$ under the isomorphism of lemma \ref{prod}. Now let $F'$ such that $F\subseteq F'$ and such that $QI_{A}(E,E',\varepsilon,F)$ holds. That ensures that $q_E^{E'}(x_j)=0$ in $RK^G(P_{E'}(G),B)$, and $q_E^{E'}(x)=0$ hence $\mu_{G,\tilde B}$ is injective.\\
+Let $x\in RK^G(P_E(G),\tilde B)$ such that $\mu_{G,\tilde B}^E(x)=0$. Then, as the quantitative assembly maps factorize $\mu_{G,\tilde B}$, there exist $\varepsilon>0$ and $F$ such that $k_J(\varepsilon). E \subseteq F$, satisfying $\mu_{G,\tilde B}^{\varepsilon,E,F}(x)=0$. Let us denote by $(x_j)_{j\in \N}$ the element of $\prod_j RK^G(P_E(G),A)$ corresponding to $x$ under the isomorphism of lemma \ref{prod}. Now let $F'$ be in $\mathcal E$ such that $F\subseteq F'$ and such that $QI_{A}(E,E',\varepsilon,F)$ holds. That ensures that $q_E^{E'}(x_j)=0$ in $RK^G(P_{E'}(G),B)$, and $q_E^{E'}(x)=0$ hence $\mu_{G,\tilde B}$ is injective.\\
 
 % Using the isomorphism of lemma \ref{prod} and the Morita equivalence, we can identify $x$ with $(x_j)_j$ under $RK^G(P_E(G),\tilde A)\simeq\prod_j RK^G(P_E(G),A)$. Now let $F'$ such that $F\subseteq F'$ and $QI_{A}(E,E',\varepsilon,F)$ holds. That ensures that $x_j=0$ in $RK^G(P_{E'}(G),B)$, and $x=0$.\\
 
-For the converse, suppose one can find $E,\varepsilon,F$ such that $QI_{G,B}(E,E',\varepsilon,F)$ is NOT true for all $F'$ such that $F\subseteq F'$. Then, by $\sigma$-compactness, one can extract a increasing sequence $E_j\in \mathcal E$ such that $\cup E_j =G$, $E\subseteq E_j$ and $x_j\in RK^G(P_E(G),B)$ such that $\mu_{G,\tilde B}^{\varepsilon,E,F}(x_j)=0$ and $q_E^{E_j}(x_j)\neq 0$ in $RK^G(P_{E_j}(G),B)$. Let $x$ be the image of $(x_j)\in \prod RK^G(P_E(G),B)$ in $RK^G(P_E(G),\tilde B)$ under the isomorphism of lemma \ref{prod}. We have $\mu_{G,\tilde B}^E(x)=0$, and $q_E^{E'}(x)\neq 0$ in $RK^G(P_{E'}(G),\tilde A)$ for at least on $E'$ such that $E\subseteq E'$, so $\mu_{G,\tilde B}$ is not injective. \\
+For the converse, suppose one can find $E,\varepsilon,F$ such that $QI_{G,B}(E,E',\varepsilon,F)$ is NOT true for all $F'$ such that $F\subseteq F'$. Then, by $\sigma$-compactness, one can extract a increasing exhausting sequence $E_j\in \mathcal E$ such that $\cup E_j =G$, $E\subseteq E_j$ and $x_j\in RK^G(P_E(G),B)$ such that $\mu_{G,\tilde B}^{\varepsilon,E,F}(x_j)=0$ and $q_E^{E_j}(x_j)\neq 0$ in $RK^G(P_{E_j}(G),B)$. Let $x$ be the image of $(x_j)\in \prod RK^G(P_E(G),B)$ in $RK^G(P_E(G),\tilde B)$ under the isomorphism of lemma \ref{prod}. We have $\mu_{G,\tilde B}^E(x)=0$, and $q_E^{E'}(x)\neq 0$ in $RK^G(P_{E'}(G),\tilde A)$ for at least one $E'$ such that $E\subseteq E'$ by exhaustivity, so $\mu_{G,\tilde B}$ is not injective. \\
 \qed   
 \end{dem}
 
 We also have a theorem relating quantitative surjectivity for $\hat\mu_{G,B}$ and surjectivity of $\mu_{G,\tilde B}$.
 
 \begin{thm}\label{Quant2}
-Let $B$ a $G$-algebra, and $\tilde B = l^\infty(\N,B\otimes \mathfrak K)$. Then there exists $\lambda>1$ such that $\mu_{G,\tilde B}$ is onto if and only if for any $\varepsilon\in ( 0 ,\frac{1}{4\lambda})$ and every nonempty $F\in\mathcal E$, there exist $E,F'\in\mathcal E$ such that  $k_J(\varepsilon) .E \subseteq F$, $F\subseteq F'$ and such that $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ holds.
+Let $B$ a $G$-algebra, and $\tilde B = l^\infty(\N,B\otimes \mathfrak K)$. Then there exists $\lambda>1$ such that $\mu_{G,\tilde B}$ is onto if and only if for any $\varepsilon\in ( 0 ,\frac{1}{4\lambda})$ and every $F\in\mathcal E$, there exist $E,F'\in\mathcal E$ such that  $k_J(\varepsilon) .E \subseteq F$, $F\subseteq F'$ and such that $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ holds.
 \end{thm}
 
 \begin{dem}
-Let $\lambda>0$ the universal constant of remark \ref{approximation} : for any $C^*$-algebra and $x,y\in K^{\varepsilon, F}(A)$ such that $\iota_{\varepsilon,F} (x) =\iota_{\varepsilon,F}(y)$, there exists $F'$ such that $F\subseteq F'$ and $\iota_{\varepsilon,F}^{\lambda\varepsilon,F'} (x) =\iota_{\varepsilon,F}^{\lambda\varepsilon,F'} (y)$.\\
+Let $\lambda\geq 1$ the universal constant of remark \ref{approximation} : for any $C^*$-algebra and any $x\in K^{\varepsilon, F}(A)$ such that $\iota_{\varepsilon,F} (x) =0$, there exists $F'$ such that $F\subseteq F'$ and $\iota_{\varepsilon,F}^{\lambda\varepsilon,F'} (x) =0$.\\
 
 %Let $y\in K_*(\tilde B\rtimes_r G)$, and take $z\in K^{\varepsilon,F}(\tilde B\rtimes G)$, where $F$ is nonempty and $0<\varepsilon<\frac{1}{4\lambda}$, such that $\iota_{\varepsilon,F}(z) = y$. The projection on the $j^{th}$ component $\tilde B \rightarrow K_B $ used in $K$-theory then composed with Morita equivalence gives a map $K^{\varepsilon,F}(\tilde B\rtimes G)\rightarrow K^{\varepsilon ,F}(B\rtimes G)$, and $z_j$ denotes the image of $z$ under this map. We can pick $E$ and $F'$ such that $k_J.E\subseteq F$ and $QS(E,F,F',\varepsilon,\lambda\varepsilon)$ : for every $j$, there exists $x_j\in RK^G(P_E(G),B) $ such that $\mu_{G,B}^{\lambda\varepsilon,E,F'}(x_j)=\iota_{\varepsilon,RF}^{\lambda\varepsilon,F'}(z_j)$. 
 %Let $x$ be the element of $RK^G(P_E(G),\tilde B)$ corresponding to $(x_j)\in RK^G(P_E(G),\tilde B)\simeq \prod_j KK^G(P_E(G),B)$ under the isomorphism $RK^G(P_E(G),\tilde B)\simeq \prod_j KK^G(P_E(G),B)$. Naturality of the assembly maps, and compatibility of quantitative assembly maps with the usual one ensures that $\mu_{G,\tilde B}(x)=z$, whereby $\mu_{G,\tilde B}$ is onto.\\
 
-Let $y\in K_*(\tilde B\rtimes_r G)$. By remark \ref{approximation}, there exist $\varepsilon\in (0,\frac{1}{4})$, $F\in\mathcal E$ and $z\in K^{\varepsilon,F}(\tilde B\rtimes G)$ such that $\iota_{\varepsilon,F}(z) = y$. Let $(z_j)$ the element of $\prod_j K^{\varepsilon,F}(B\rtimes_r G)$ corresponding to $z$ under the isomorphism of corollary \ref{controlledprod}. Let $E$ and $F'$ such that $k_J(\varepsilon).E\subseteq F$ and $QS(E,F,F',\varepsilon,\lambda\varepsilon)$ : for every $j$, there exists $x_j\in RK^G(P_E(G),B) $ such that $\mu_{G,B}^{\lambda\varepsilon,E,F'}(x_j)=\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}(z_j)$. 
-Let $x\in RK^G(P_E(G),\tilde B)$ be the element of $RK^G(P_E(G),\tilde B)$ corresponding to $(x_j)\in \prod_j RK^G(P_E(G),B)$ under the isomorphism of lemma \ref{prod}. Naturality of the assembly maps, and compatibility of the controlled assembly maps with the usual one ensures that $\mu_{G,\tilde B}(x)=z$, whereby $\mu_{G,\tilde B}$ is onto.\\
+Let $y\in K_*(\tilde B\rtimes_r G)$. By remark \ref{approximation}, there exist $\varepsilon\in (0,\frac{1}{4})$, $F\in\mathcal E$ and $z\in K^{\varepsilon,F}(\tilde B\rtimes G)$ such that $\iota_{\varepsilon,F}(z) = y$. Up to a rescaling of the parameters, let $(z_j)$ the element of $\prod_j K^{\varepsilon,F}(B\rtimes_r G)$ corresponding to $z$ under the controlled isomorphism of corollary \ref{controlledprod}. Let $E$ and $F'$ such that $k_J(\varepsilon).E\subseteq F$ and $QS(E,F,F',\varepsilon,\lambda\varepsilon)$ : for every $j$, there exists $x_j\in RK^G(P_E(G),B) $ such that $\mu_{G,B}^{\lambda\varepsilon,E,F'}(x_j)=\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}(z_j)$. 
+Let $x\in RK^G(P_E(G),\tilde B)$ be the element of $RK^G(P_E(G),\tilde B)$ corresponding to $(x_j)\in \prod_j RK^G(P_E(G),B)$ under the isomorphism of lemma \ref{prod}. Naturality of the assembly maps, and compatibility of the controlled assembly maps with the usual one ensures that $\mu_{G,\tilde B}^E(x)=z$, whereby $\mu_{G,\tilde B}$ is onto.\\
 
-Suppose that there exist $\varepsilon \in (0,\frac{1}{4\lambda})$ and a nonempty controlled subset $F\in\mathcal E$ such that for every $E,F'\in\mathcal E$ such that $k_J(\varepsilon). E \subseteq F$, $QS_{G,B}(E,F,F',\varepsilon,\lambda\varepsilon)$ does not hold. Let $(E_j)$ and $(F_j)$ be unbounded increasing sequences of controlled subsets such that $F\subseteq F_j$ and $k_J(\varepsilon).E_j\subseteq F_j$. Let $y_j\in K^{\varepsilon,F}(B\rtimes_r G)$ such that $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)$ is not in the range of $\mu_{G,B}^{\lambda\varepsilon, E_j , F_j}$. Let $y\in K^{\varepsilon,F}(\tilde B\rtimes_r G)$ be the element of corresponding to $(y_j)_j$ under the isomorphism of corollary \ref{controlledprod}. If there exists $x\in RK^G(P_{E'}(G),\tilde B)$ for a $E'\in\mathcal E$ such that $E\subseteq E'$ and $\iota_{\varepsilon,F}( y) =\mu_{G,\tilde B}^{E'}(x)$ then there would exists a $F'\in\mathcal E$ such that $F\subseteq F'$ and
+Assume that there exist $\varepsilon \in (0,\frac{1}{4\lambda})$ and a nonempty controlled subset $F\in\mathcal E$ such that for every $E,F'\in\mathcal E$ such that $k_J(\varepsilon). E \subseteq F$, $QS_{G,B}(E,F,F',\varepsilon,\lambda\varepsilon)$ does not hold. Let $(E_j)$ and $(F_j)$ be unbounded increasing sequences of controlled subsets such that $(E_j)$ is an exhausting family, 	$F\subseteq F_j$ and $k_J(\varepsilon).E_j\subseteq F_j$. Let $y_j\in K^{\varepsilon,F}(B\rtimes_r G)$ such that $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)$ is not in the range of $\mu_{G,B}^{\lambda\varepsilon, E_j , F_j}$. Let $y\in K^{\varepsilon,F}(\tilde B\rtimes_r G)$ be the element of corresponding to $(y_j)_j$ under the isomorphism of corollary \ref{controlledprod}. If there exists $x\in RK^G(P_{E'}(G),\tilde B)$ for a $E'\in\mathcal E$ such that $E\subseteq E'$ and $\iota_{\varepsilon,F}( y) =\mu_{G,\tilde B}^{E'}(x)$ then there would exists a $F'\in\mathcal E$ such that $F\subseteq F'$ and
 \[\iota_{\varepsilon,F}^{\lambda\varepsilon, F'}( y) =\mu_{G,\tilde B}^{\lambda\varepsilon,E',F'}(x) = \iota_{\varepsilon,F}^{\lambda\varepsilon, F'}\circ\mu_{G,\tilde B}^{\varepsilon,E',F}(x).\]
-Now choose $j$ such that $E'\subseteq E_j $ and $F'\subseteq F_j$, and compose the previous equality with $\iota_{\lambda\varepsilon,F'}^{\lambda\varepsilon,F_j}$ and $q_{E'}^{E_j}$ to obtain $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)=\mu_{G,B}^{\lambda\varepsilon , E_j,F_j}(x)$ which contradicts our assumption. Hence $\mu_{G,\tilde B}$ is not onto. \\
+Now choose $j$ such that $E'\subseteq E_j $ and $F'\subseteq F_j$, and compose the previous equality with $\iota_{\lambda\varepsilon,F'}^{\lambda\varepsilon,F_j}$ and $q_{E'}^{E_j}$ to obtain $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)=\mu_{G,B}^{\lambda\varepsilon , E_j,F_j}(x_j)$ which contradicts our assumption. Hence $\mu_{G,\tilde B}$ is not onto. \\
 \qed
 \end{dem}
 
@@ -702,12 +707,12 @@ Now choose $j$ such that $E'\subseteq E_j $ and $F'\subseteq F_j$, and compose t
 %\qed
 %\end{dem}
 
-Using one way of the proofs of the quantitative statements, we can easily prove the following theorem by replacing $l^\infty(\N,B\otimes \mathfrak K)$ by $\prod (B_j \otimes \mathfrak K)$.
+Using the only if part of the proofs of the quantitative statements, we can easily prove the following theorem by replacing $l^\infty(\N,B\otimes \mathfrak K)$ by $\prod (B_j \otimes \mathfrak K)$.
 
-\begin{thm} Let $G$ be an étale groupoid with compact base space. 
+\begin{thm}\label{UniformQS} Let $G$ be an étale groupoid with compact base space. 
 \begin{itemize}
 \item[$\bullet$] Assume that for any $G$-algebra $B$, $\mu_{G,B}$ is one-to-one. Then, for any $\varepsilon\in (0,\frac{1}{4})$ and every $E,F\in\mathcal E$ such that $k_J(\varepsilon). E\subseteq F$, there exists $E'\in\mathcal E$ such that $E\subseteq E'$ and such that $QI_{G,A}(E,E',\varepsilon,F)$ holds for any $G$-algebra $B$.
-\item[$\bullet$] Assume that for any $G$-algebra $B$, $\mu_{G,B}$ is onto. Then, for some $\lambda>0$ and for any $\varepsilon\in (0,\frac{1}{4\lambda})$ and every $F\in\mathcal E$, there exists $E,F'\in\mathcal E$ such that $k_J(\varepsilon). E\subseteq F'$ and $F\subseteq F'$ such that, for any $G$-algebra $B$, $QS_{G,A}(E, F,F',\varepsilon,\lambda \varepsilon)$ holds.
+\item[$\bullet$] Assume that for any $G$-algebra $B$, $\mu_{G,B}$ is onto. Then, for some $\lambda\geq 1$ and for any $\varepsilon\in (0,\frac{1}{4\lambda})$ and every $F\in\mathcal E$, there exists $E,F'\in\mathcal E$ such that $k_J(\varepsilon). E\subseteq F'$ and $F\subseteq F'$ such that, for any $G$-algebra $B$, $QS_{G,A}(E, F,F',\varepsilon,\lambda \varepsilon)$ holds.
 \end{itemize}
 \end{thm}
 
@@ -719,7 +724,7 @@ We recall the following definition from \cite{OY3}.
 Let $B$ be a $\mathcal E$-filtered $C^*$-algebra, $\lambda>0$, $\varepsilon,\varepsilon'$ be positive numbers such that $0<\varepsilon <\varepsilon' <\frac{1}{4}$ and $F,F'\in\mathcal E$ be nonempty controlled subsets such that $F\subseteq F'$. The following property is called Persistance Approximation Property :
 \begin{itemize}
 \item[$\bullet$] $PA_B(\varepsilon,\varepsilon',F,F')$ : for every $x\in K_*^{\varepsilon,F}(B)$ such that $\iota_{\varepsilon,F}(x)=0$ in $K_*(B)$, then $\iota_{\varepsilon,F}^{\varepsilon',F'}(x)=0$ in $K_*^{\varepsilon',F'}(B)$.
-\item[$\bullet$] $B$ is said to satisfy the Persistance Approximation Property $(PAP)_\lambda$ if for every nonempty $F\in\mathcal E$ and every $\varepsilon\in (0,\frac{1}{4})$, there exists $F'\in\mathcal E$ nonempty such that $PA_B(\varepsilon,\lambda\varepsilon,F,F')$ holds.
+\item[$\bullet$] $B$ is said to satisfy the Persistance Approximation Property $(PAP)_\lambda$ if for every nonempty $F\in\mathcal E$ and every $\varepsilon\in (0,\frac{1}{4\lambda})$, there exists $F'\in\mathcal E$ nonempty such that $PA_B(\varepsilon,\lambda\varepsilon,F,F')$ holds.
 \end{itemize}
 \end{definition}
 
@@ -730,15 +735,20 @@ Let $B$ be a $\mathcal E$-filtered $C^*$-algebra, $\lambda>0$, $\varepsilon,\var
 The following result gives a sufficient condition for $(PAP)_\lambda$ to be satisfied for a large class of $C^*$-algebras.
 
 \begin{thm} \label{PAPG}
-Let $G$ be an étale groupoid with compact base space. Assume that $G$ admits a cocompact universal space for proper actions. Then there exists a universal constant $\lambda_{PA}$ such that, for every $G$-algebra $A$, if $\mu_{G,l^\infty(\N, A\otimes\mathfrak K)}$ is onto and $\mu_{G,A}$ is one-to-one, then for every $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ and every nonempty $F\in\mathcal E$, there exists $F'\in\mathcal E$ such that $F\subseteq F'$ and $PA_{A\rtimes_r G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ holds.
+Let $G$ be an étale groupoid such that :
+\begin{itemize}
+\item[$\bullet$] $G^{(0)}$ is compact, 
+\item[$\bullet$] $G$ admits a cocompact example for universal space for proper actions. 
+\end{itemize}
+Then there exists a universal constant $\lambda_{PA}\geq 1$ such that, for every $G$-algebra $A$, if $\mu_{G,l^\infty(\N, A\otimes\mathfrak K)}$ is onto and $\mu_{G,A}$ is one-to-one, then for every $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ and every nonempty $F\in\mathcal E$, there exists $F'\in\mathcal E$ such that $F\subseteq F'$ and $PA_{A\rtimes_r G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ holds.\\
 \end{thm}
 
 \begin{dem}
 Let us denote $l^\infty(\N,A\otimes\mathfrak K)$ by $\tilde A$.\\
 
-Assume the statement does not holds : there exists $\varepsilon$ and $F$ such that $PA_{A\rtimes_r G}(\varepsilon,\varepsilon',F,F')$ is not true for every $F'\in\mathcal E$ such that $F \subseteq F'$. Then we can extract an increasing unbounded sequence of nonempty controlled subsets $F_j$ and elements $x_j\in K^{\varepsilon,F}(A\rtimes_r G)$ such that $\iota_{\varepsilon,F}(x_j)=0$ and $\iota_{\varepsilon,F}^{\lambda_{PA},F_j}(x)\neq 0$. \\
+Assume the statement does not holds : there exists $\varepsilon$ and $F$ such that $PA_{A\rtimes_r G}(\varepsilon,\varepsilon',F,F')$ is not true for every $F'\in\mathcal E$ such that $F \subseteq F'$. Then we can extract an increasing unbounded sequence of nonempty controlled subsets $F_j$ and elements $x_j\in K^{\varepsilon,F}(A\rtimes_r G)$ such that $\iota_{\varepsilon,F}(x_j)=0$ and $\iota_{\varepsilon,F}^{\lambda_{PA},F_j}(x_j)\neq 0$. \\
 
-Let $x$ be the element of $K^{\varepsilon,F}(A\rtimes_r G)$ corresponding to $(x_j)\in\prod_j K^{\varepsilon,F}(A\rtimes_r G)$ under the isomorphism of corollary \ref{controlledprod}. By naturality of the quantitative assembly maps, the following diagram commutes
+Up to a rescaling, let $x$ be the element of $K^{\varepsilon,F}(A\rtimes_r G)$ corresponding to $(x_j)\in\prod_j K^{\varepsilon,F}(A\rtimes_r G)$ under the isomorphism of corollary \ref{controlledprod}. Recall that the following diagram commutes
 %According to the lemma \ref{LocalInjectivity}, there exists $x\in K_*^{\alpha\varepsilon,h_\varepsilon F}(\tilde A\rtimes G)$ such that $p_j(x)=x_j$ where $p_j$ is the composition of the projection on the $j^{th}$ factor $\tilde A \rtimes G \rightarrow K_A \rtimes G$ and the Morita equivalence in K-theory.
 \[\begin{tikzcd}
 RK^G(P_E(G),\tilde A) \arrow{r}{\mu_{G,\tilde A}^{\alpha\varepsilon,E, h_\varepsilon F}} \arrow{rd}{\mu_{G,\tilde A}^E} & K^{\alpha\varepsilon,h_\varepsilon F}(\tilde A\rtimes G) \arrow{d}{\iota_{\alpha\varepsilon, h_\varepsilon F}}\\
@@ -750,7 +760,7 @@ If $\iota_{\alpha\varepsilon,h_\varepsilon F}(x)$ is in the range of $\mu_{G,\ti
 \end{dem}
 
 \begin{rk}
-The theorems \ref{Quant1} and \ref{Quant2} provide examples that satisfy (PAP). Recall that every a-T-menable groupoid satisfies the Baum-Connes conjecture with coefficients, hence satisfies the hypothesis of the theorem \ref{PAPG}.
+The theorems \ref{Quant1} and \ref{Quant2} provide examples that satisfy (PAP). Recall that every a-T-menable groupoid satisfies the Baum-Connes conjecture with coefficients, hence, if $G^{(0)}$ is compact and $G$ admits a cocompact example for $\underline E G$, $G$ satisfies the hypothesis of the theorem \ref{PAPG}.
 \end{rk}
 
 \begin{rk}

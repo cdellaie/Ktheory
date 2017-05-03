@@ -4,10 +4,12 @@ In this section, all groupoids $G\rightrightarrows G^{(0)}$ are étale.
 
 \subsection{Proper groupoids and proper actions}
 
-\begin{definition}
-A topological groupoid $G\rightrightarrows G^{(0)}$ is proper if the map $G\times_s G^{(0)}\rightarrow G^{(0)}\times G^{(0)}$ defined by $(g,z)\mapsto (z,gz)$ is a proper map.\\
-A $G$-space $Z$ is said to be proper if the crossed-product groupoid $Z\rtimes G$ is proper. If the space of orbits $Z/G$ is compact, $Z$ is called $G$-compact.
-\end{definition}
+Recall that the introduction contains a survey on groupoid actions, in particular the definition of proper actions for groupoids.
+
+%\begin{definition}
+%A topological groupoid $G\rightrightarrows G^{(0)}$ is proper if the map $G\times_s G^{(0)}\rightarrow G^{(0)}\times G^{(0)}$ defined by $(g,z)\mapsto (z,gz)$ is a proper map.\\
+%A $G$-space $Z$ is said to be proper if the crossed-product groupoid $Z\rtimes G$ is proper. If the space of orbits $Z/G$ is compact, $Z$ is called $G$-compact.
+%\end{definition}
 
 \begin{definition}
 A $G$-space $\underline E G$ is called universal if, given any proper $G$-space $Z$, there exists a continuous $G$-equivariant map $Z\rightarrow \underline E G$.
@@ -17,7 +19,7 @@ We now construct a model for universal spaces of $G$, based on J.-L.Tu's work \c
 
 Every element $\eta$ is a finite probability measure on a fiber $G^x$, for some $x\in G^{(0)}$, hence can be written as a finite convex combination $\eta = \sum_{g\in G^{x}}\lambda_g(\eta)\delta_g$, where $\lambda_g(\eta)\in [0,1]$ for every $g$ and $\delta_g$ is the Dirac probability measure at $g\in G^x$.\\ 
 
-Let us define a left action of $G$ on $P_K(G)$. The momentum map $p : P_K(G)\rightarrow G^{(0)}$ is the map associating to $\nu$ the only $x$ such that $\text{supp }(\nu) \subseteq G^x$. Let us show that $p$ is continuous. Let $U\subseteq G^{(0)}$ be an open set. Let $x\in U$ and $\eta\in p^{-1}(x)$. There exists an element $g\in G^x$ such that $\lambda_g(\eta) \neq 0$. Let $S\subseteq G$ be an open bisection such that $g\in S$. Up to replacing $U$ by a smaller neighborhood, we can suppose $r(S) = U$. Let $\phi : G \rightarrow [0,1]$ be a continuous function with support in $S$ such that $\phi(g) = 1$. Then $\langle \eta,\phi\rangle \neq 0$. Then, $\{\eta'\in P_K(G) \text{ s.t. }\langle \eta',\phi\rangle \neq 0 \}$ is open for the weak-$*$ topology and its image through $p$ is contained in $U$. 
+Let us define a left action of $G$ on $P_K(G)$. The momentum map $p : P_K(G)\rightarrow G^{(0)}$ is the map associating to $\nu$ the only $x$ such that $\text{supp }(\nu) \subseteq G^x$. Let us show that $p$ is continuous. Let $U\subseteq G^{(0)}$ be an open set. Let $x\in U$ and $\eta\in p^{-1}(x)$. There exists an element $g\in G^x$ such that $\lambda_g(\eta) \neq 0$. Let $S\subseteq G$ be an open bisection such that $g\in S$. Up to replacing $U$ by a smaller neighborhood, we can suppose $r(S) = U$. Let $\phi : G \rightarrow [0,1]$ be a continuous function with support in $S$ such that $\phi(g) = 1$. Then $\langle \eta,\phi\rangle \neq 0$ holds. Then, $\{\eta'\in P_K(G) \text{ s.t. }\langle \eta',\phi\rangle \neq 0 \}$ is open for the weak-$*$ topology and its image through $p$ is contained in $U$. 
 %Then, 
 %\[p^{-1}(U) = \cup_{g\in G}\{\eta\in P_K(G) \text{ s.t. supp}( \eta ) \subseteq r^{-1}(U) \cap gK\}.\]
 %As for all $g\in G$, $r^{-1}(U)\cap gK$ is compact, it is covered by a finite number of open bisections $S_1$, ... , $S_r$. Put $W_j= r^{-1}(U)\cap gK\cap S_j$ and choose open subsets $V_j\subseteq W_j$. Let us take, for each $j\in\{1,...,r\}$, a continuous function $\phi_j : G\rightarrow [0,1]$ such that $\phi$ is equal to $1$ on $V_j$ and $0$ outside of $W_j$. Then $\cup_j \{\eta\in P_K(G)\text{ s.t. } |\langle \eta, \phi_j\rangle -1|<\frac{1}{4} \}\subseteq \{\eta\in P_K(G) \text{ s.t. supp}( \eta ) \subseteq r^{-1}(U) \cap gK\}$, hence $p^{-1}(U)$ is open for the weak-$*$ topology.\\
@@ -35,7 +37,7 @@ The action of $G$ on $P_K(G)$ is proper and cocompact.
 Let $Z$ be a proper $G$-compact $G$-space. Then there exists a compact subset $K\subseteq G$ and a $G$-equivariant continuous map $Z\rightarrow P_K(G)$.
 \end{lem}  
 
-\subsection{Equivariant $K$-homology}
+\subsection{Topological $K$-theory for groupoids}
 
 We will use the equivariant $KK$-theory developped by Le Gall in his thesis \cite{LeGall}, which is an extension of the usual equivariant $KK$-theory of Kasparov. Recall that, if $A$ and $B$ are two $G$-algebras, elements of $KK^G(A,B)$ are homotopy classes of triple $(E,\pi,T)$ where :\\
 
@@ -48,12 +50,12 @@ We will use the equivariant $KK$-theory developped by Le Gall in his thesis \cit
 \begin{definition}
 Let $Y$ be a proper $G$-space and $B$ a $G$-algebra. Then the analytic $K$-homology of $Y$ with coefficients in $B$ is defined by 
 \[RK^G(Y,B) = \varinjlim_{Z\subseteq Y} KK^G(C_0(Z),B), \]
-the inductive limit being taken on proper $G$-compact $G$-subspaces $Z$ of $Y$. The analytic $K$-homology of $G$ is defined as the analytic $K$-homology of $\underline E G$. In the litterature, the notation $K^{top}(G,B)$ is common to denote $RK^G(\underline E G,B)$.
+the inductive limit being taken on proper $G$-compact $G$-subspaces $Z$ of $Y$. The topological $K$-theory of $G$ is defined as the analytic $K$-homology of $\underline E G$. In the litterature, the notation $K^{top}(G,B)$ is common to denote $RK^G(\underline E G,B)$.
 \end{definition}
 
-The previous lemmas ensures that the analytic $K$-homology of $G$ can be computed as an inductive limit of the $K$-homology of the spaces $P_K(G)$ :
+The previous lemmas ensures that the topological $K$-theory of $G$ can be computed as an inductive limit of the $K$-homology of the spaces $P_K(G)$ :
 %somehow restricted when it comes to the analytic $K$-homology of any universal space $\underline E G$ :
-\begin{lem} Let $B$ be a $G$-algebra. Then :
+\begin{lem}\label{Khomology} Let $B$ be a $G$-algebra. Then :
 \[RK^G(\underline E G,B) = \varinjlim_{K\subseteq G \text{ compact }} KK^G(C_0(P_K(G)),B).\]
 \end{lem}
 
@@ -100,8 +102,11 @@ If $Z$ is a proper $G$-compact $G$-space, $Z\rtimes G$ is a proper groupoid by d
 The assembly map for $G$ with coefficients in $B$ is defined as the inductive limit of the maps $\mu_{G,B}^{(Z)} : KK^G(C_0(Z),B)\rightarrow K(B\rtimes_r B)$ given by
 \[\mu_{G,B}^{(Z)} (z)=[\mathcal L_Z]\otimes_{C_0(Z)\rtimes G} j_G(z),\]
 that is $\mu_{G,B} = \varinjlim \mu_{G,B}^{(Z)}$ (one has to check that theses maps respects the inductive systems, which they do).\\
-One can restrict to $Z$ of the form $P_E(G)$ for $E\subseteq G$ compact. We will denote by $\mu_{G,B}^E$ the assembly map $\mu_{G,B}^{P_E(G)}$, and $\mu_{G,B} = \varinjlim \mu_{G,B}^{E}$ still holds.
 \end{definition}
+
+\begin{rk}\label{projection}
+By lemma \ref{Khomology}, one can restrict to $Z$ of the form $P_E(G)$ for $E\subseteq G$ compact. We will denote by $\mu_{G,B}^E$ the assembly map $\mu_{G,B}^{P_E(G)}$, and $\mu_{G,B} = \varinjlim \mu_{G,B}^{E}$ still holds.
+\end{rk}
 
 %Another definition : with $Ad$...
 
@@ -140,7 +145,7 @@ A topological groupoid $G$ is said to be a-T-menable if it satisfies one of the 
 \end{itemize} 
 \end{definition}
 
-For nice topological groupoids, the conjecture is known to be false in full generality \cite{HigsonLaffSk}, but the following result was shown by J-L. Tu in \cite{TuThese}
+For groupoids, the conjecture is known to be false in full generality \cite{HigsonLaffSk}, but the following result was shown by J-L. Tu in \cite{TuThese}
 \begin{thm}\label{Tu}
 Let $G$ be a locally compact $\sigma$-compact Hausdorff groupoid. Then if $G$ is a-T-menable, the Baum-Connes conjecture with coefficients holds for $G$.
 \end{thm}
@@ -267,7 +272,7 @@ KX_*(X)\arrow{r}{\mu_X} & K_*(C^*(X))
 \end{tikzcd}\]  
 with vertical arrows being isomorphism. We will give another proof of this result, based on controlled $K$-theory. Indeed, we actually prove a stronger result in theorem \ref{BCCeq}, which induces the previous result. \\
 
-A key point is to use how analytical properties of $G$ translate coarse properties of $X$. In particular, the results of theorem \ref{propertiesXG}, combined with theorem \ref{Tu}, give examples of coarse spaces satisfying the coarse Baum-Connes conjecture and the boundary coarse Baum-Connes conjecture.
+A key point is to use the correspondence between analytical properties of $G$ and coarse properties of $X$. In particular, the results of theorem \ref{propertiesXG}, combined with theorem \ref{Tu}, give examples of coarse spaces satisfying the coarse Baum-Connes conjecture and the boundary coarse Baum-Connes conjecture.
 
 %\begin{itemize}
 %\item[$\bullet$] in \cite{SkTuYu} is proved that $X$ admits a coarse embedding into Hilbert space iff $G(X)$ is a-T-menable, 

@@ -73,10 +73,10 @@ Let $C>0$ and $A$ be a $C^*$-algebra. A map $h : [0,1]\rightarrow A $ is called 
 \end{definition}
 
 \begin{prop}\label{Lip}
-There exists a universal constant $L>0$ such that, for any unital filtered $C^*$-algebra $(A,\mathcal E)$, any $\varepsilon\in(0,\frac{1}{4})$ and  any $E\in \mathcal E$, if $u_0$ and $u_1$ are homotopic in $U_n^{\varepsilon, E}(A)$, then there exists a interger $k$ and a $L$-lipschitz homotopy in $U_{n+k}^{3\varepsilon,E\circ E}$ connecting $\begin{pmatrix} u_0 & 0 \\ 0 & 1_k\end{pmatrix}$ and $\begin{pmatrix} u_1 & 0 \\ 0 & 1_k\end{pmatrix}$. 
+There exists a universal constant $L>0$ such that, for any unital filtered $C^*$-algebra $(A,\mathcal E)$, any $\varepsilon\in(0,\frac{1}{4})$ and  any $E\in \mathcal E$, if $u_0$ and $u_1$ are homotopic in $U_n^{\varepsilon, E}(A)$, then there exists an integer $k$ and a $L$-lipschitz homotopy in $U_{n+k}^{3\varepsilon,E\circ E}$ connecting $\begin{pmatrix} u_0 & 0 \\ 0 & 1_k\end{pmatrix}$ and $\begin{pmatrix} u_1 & 0 \\ 0 & 1_k\end{pmatrix}$. 
 \end{prop}
 
-Denote $[(p,l)]_{\varepsilon,E}$ and $[u]_{\varepsilon,E}$ for the equivalence classes of almost-projections and almost-unitaries. Then, the same proof as \cite{OY2} shows that $[p,l]_{\varepsilon,E}+[q,l']_{\varepsilon,E}=[diag(p,q),l+l']_{\varepsilon,E}$ and $[u]_{\varepsilon,E}+[v]_{\varepsilon,E}=[diag(u,v)]_{\varepsilon,E}$ induces a group law on the equivalence classes, that we denote $K_0^{\varepsilon,E}(A) = P^{\varepsilon, E}_\infty(A)\times \N / \sim$ and $K_1^{\varepsilon,E}(A) = U^{\varepsilon, E}_\infty(A) / \sim$.\\
+Denote $[(p,l)]_{\varepsilon,E}$ and $[u]_{\varepsilon,E}$ for the equivalence classes of almost-projections and almost-unitaries. Then, the same proof as \cite{OY2} shows that $[p,l]_{\varepsilon,E}+[q,l']_{\varepsilon,E}=[diag(p,q),l+l']_{\varepsilon,E}$ and $[u]_{\varepsilon,E}+[v]_{\varepsilon,E}=[diag(u,v)]_{\varepsilon,E}$ induces a group structure on the equivalence classes, that we denote $K_0^{\varepsilon,E}(A) = P^{\varepsilon, E}_\infty(A)\times \N / \sim$ and $K_1^{\varepsilon,E}(A) = U^{\varepsilon, E}_\infty(A) / \sim$.\\
 
 If $A$ is not unital, $K_0^{\varepsilon,E}(A)$ is defined as
 \[\{[p,l]_{\varepsilon,E} : p\in P^{\varepsilon,E}_\infty (\tilde A), l\in \N \text{ s.t. rank}(\kappa_0(\rho_A(p)))=l \}\]
@@ -92,13 +92,13 @@ One has also forgetful morphisms $\iota_{\varepsilon,E} : K_*^{\varepsilon,E}(A)
 $\iota_{\varepsilon',E'}\circ\iota_{\varepsilon,E}^{\varepsilon',E'}=\iota_{\varepsilon, E}$ holds. The controlled $K$-theory groups approximate the usual $K$-groups in the sense of the following remarks. The reader is referred to \cite{OY2}, remark $1.17$, for a proof.
 
 \begin{rk}
-For every filtered $C^*$-algebra $(A,\mathcal E)$ and any $y\in K(A)$, there exist $\varepsilon\in (0,\frac{1}{4})$ and $x\in K^{\varepsilon,E}(A)$ such that $\iota_{\varepsilon,E}(x) = y$.
+For every filtered $C^*$-algebra $(A,\mathcal E)$, any $y\in K(A)$ and any $\varepsilon\in (0,\frac{1}{4})$, there exists $E\in\mathcal E$ and $x\in K^{\varepsilon,E}(A)$ such that $\iota_{\varepsilon,E}(x) = y$.
 \end{rk}
 
 \begin{rk}\label{approximation}
-There exists a universal constant $\lambda >0$ such that, for every filtered $C^*$-algebra $(A,\mathcal E)$, every $\varepsilon\in (0,\frac{1}{4\lambda})$ and every $E\in \mathcal E$, the following holds :
+There exists a universal constant $\lambda \geq 1$ such that, for every filtered $C^*$-algebra $(A,\mathcal E)$, every $\varepsilon\in (0,\frac{1}{4\lambda})$ and every $E\in \mathcal E$, the following holds :
 
-Let $x,x'\in K^{\varepsilon,E}(A)$ such that $ \iota_{\varepsilon,E}(x) = \iota_{\varepsilon,E}(x')$ in $K(A)$. Then, there exists $E'\in\mathcal E$ such that $E\leq E'$ and $\iota_{\varepsilon,E}^{\lambda\varepsilon,E'}(x)=\iota_{\varepsilon,E}^{\lambda\varepsilon,E'}(x')$ in $K^{\lambda\varepsilon,E'}(A)$.
+Let $x\in K^{\varepsilon,E}(A)$ such that $ \iota_{\varepsilon,E}(x) = 0 $ in $K(A)$. Then, there exists $E'\in\mathcal E$ such that $E\leq E'$ and $\iota_{\varepsilon,E}^{\lambda\varepsilon,E'}(x)=0$ in $K^{\lambda\varepsilon,E'}(A)$.
 \end{rk}
 
 %that $\varinjlim_{E} K_*^{\varepsilon,E}(A) = K_*(A)$ for any $\varepsilon\in (0,\frac{1}{4})$.\\
@@ -198,10 +198,12 @@ Let $\rho=(\lambda,h)$ and $\alpha$ be controlled pairs, and $F : \hat{\mathcal 
 \begin{itemize}
 \item[$\bullet$] $F$ is $\rho$-injective if, given any $\varepsilon \in (0,\frac{1}{4\lambda})$ and $E\in \mathcal E$, $\alpha\leq \rho$ and, for all $x\in \mathcal O_{\varepsilon, E}$ such that $F_{\varepsilon, E}(x)=0$, then $\iota_{\varepsilon, E}^{\lambda\varepsilon, h_\varepsilon E}(x)=0$,
 \item[$\bullet$] $F$ is $\rho$-surjective if, given any $\varepsilon \in (0,\frac{1}{4\lambda})$ and $E\in \mathcal E$, for any $y\in \mathcal O' _{\varepsilon, E}$, there exists $x\in \mathcal O_{\rho(\varepsilon,E)}$ such that $F_{\rho(\varepsilon,E)}(x)= \iota_{\varepsilon,E}^{\rho(\varepsilon,E)}$,
-\item[$\bullet$] $F$ is a $\rho$-isomorphism if $F$ is both $\rho$-injective and $\rho$-surjective.
 \end{itemize}
 \end{definition}
 
+\begin{rk}
+If $F$ is a $\rho$-isomorphism, then there exists a control pair $\rho'$ only depending on $\rho$ such that $F$ is both $\rho'$-injective and $\rho'$-surjective.
+\end{rk}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Controlled exact sequences}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -238,7 +240,9 @@ for every $\varepsilon\in(0,\frac{1}{4})$ and $E\in\mathcal E$. The family $\mat
 
 We will describe the $6$-term controlled exact sequence associated to a completely filtered extension of $C^*$-algebras. For any extension of $C^*$-algebras 
 \[\begin{tikzcd}[column sep = small]0\arrow{r} & J\arrow{r} & A\arrow{r} & A/J\arrow{r} & 0 \end{tikzcd},\]
-we denote $\partial_{J,A}$ the boundary map $K_*(A/J)\rightarrow K_{*+1}(J)$. The reader can find all the proofs and properties of the following results in \cite{OY2}.
+we denote $\partial_{J,A}$ the boundary map $K_*(A/J)\rightarrow K_{*+1}(J)$. The reader can find all the proofs and properties of the following results in \cite{OY2}.\\
+
+We fix a coarse structure $\mathcal E$, and we will consider $\mathcal E$-filtered $C^*$-algebras.
 
 \begin{definition}
 Let $A$ a filtered $C^*$-algebra and $J\subseteq A$ an ideal. If $J_E = A_E\cap J$, the extension
@@ -315,11 +319,11 @@ There exists a control pair $\lambda$ such that, for any separable $C^*$-algebra
 \[\hat\tau_B(z\otimes z')\sim_\lambda \hat\tau_B(z')\circ\hat\tau_B(z)\]
 \end{thm}
 
-This last proposition asserts that the controlled tensorisation map is natural with respect to morphism of filtered $C^*$-algebras. \cite{OY2}
+%This last proposition asserts that the controlled tensorisation map is natural with respect to morphism of filtered $C^*$-algebras. \cite{OY2}
 
-\begin{prop}
-Let $B_1$ and $B_2$ be $\mathcal E$-filtered $C^*$-algebras and $(\phi,\rho) :B_1\rightarrow B_2 $ a filtered morphism. Then $ (\phi_{A_2})_*\circ \hat \tau_{B_1}=\hat \tau_{B_2}(z)\circ(\phi_{A_1})_* $ for any $z\in KK(A_1,A_2)$.
-\end{prop}
+%\begin{prop}
+%Let $B_1$ and $B_2$ be $\mathcal E$-filtered $C^*$-algebras and $(\phi,\rho) :B_1\rightarrow B_2 $ a filtered morphism. Then $ (\phi_{A_2})_*\circ \hat \tau_{B_1}=\hat \tau_{B_2}(z)\circ(\phi_{A_1})_* $ for any $z\in KK(A_1,A_2)$.
+%\end{prop}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Controlled Bott periodicity}

@@ -1,12 +1,12 @@
 \section{Controlled Kasparov transform for discrete Quantum Groups}
 
-We would like to conclude this chapter by a remark. \\
+We end this chapter by the construction of the controlled Kasparov transform for discrete quantum groups, and an application to $K$-amenability.\\
 
 Let $\mathbb G$ be a compact quantum group, and $\mathcal E_{\mathbb G}$ be the coarse structure defined by its finite dimensional representations as defined in \ref{EQG}. Then, for every $\hat{\mathbb G}$-algebra $A$, the reduced cross product $A\rtimes_r \hat{\mathbb G}$ and the maximal cross product $A\rtimes_{max}\hat{\mathbb G}$ are filtered by the family of subspaces of coefficients of finite dimensional representations, namely the closure of the linear spans $C_{\pi}(\hat{\mathbb G},A)$ of
 \[\{ \ \theta(a)W^\pi_{\xi,\eta} \ , a\in A, \xi,\eta\in H_\pi\},\]
 for $\pi$ a finite dimensional unitary representation of $\mathbb G$.\\
 
-Everything we have done works for functors which preserve filtered semi-split extension of filtered $C^*$-algebras. In particular, the reduced and maximal cross products of a discrete quantum group do. We thus get the following proposition :
+The constructions we performed for coarse spaces and étale groupoids can be carried out for functors which preserve filtered semi-split extension of filtered $C^*$-algebras. In particular, the reduced and maximal cross products of a discrete quantum group do. We thus get the following proposition :
 
 \begin{prop}
 Let $A$ and $B$ two $\hat{\mathbb G}$-algebras. For every $z\in KK^{\hat{\mathbb G}}_*(A,B)$, there exists a control pair $(\alpha_J,k_J)$ and a $(\alpha_J,k_J)$-controlled morphism
@@ -26,14 +26,14 @@ of the same degree as $z$, such that
 \end{enumerate}
 \end{prop}
 
-As every $KK^{\hat{\mathbb G}}$-element satisfies property $(d)$, we also can prove, using the same proof as the groupoid case, that $J_{red,\hat{\mathbb G}}$ respects Kasparov products.
+As every $KK^{\hat{\mathbb G}}$-element satisfies decomposition property $(d)$ (see definition \ref{DecompositionPropertyD}), we can prove, using the same proof as the groupoid case, that $J_{red,\hat{\mathbb G}}$ respects Kasparov products.
 
 \begin{prop} There exists a control pair $(\alpha_K,k_K)$ such that for every $\hat{\mathbb G}$-algebras $A$, $B$ and $C$, and every $z\in KK^{\hat{\mathbb G}}(A,B),z'\in KK^{\hat{\mathbb G}}(B,C)$, the controlled equality
 \[J_{\hat{\mathbb G}}(z\otimes_B z') \sim_{\alpha_K,k_K} J_{\hat{\mathbb G}}(z')\circ J_{\hat{\mathbb G}}(z)\]
 holds.
 \end{prop}
 
-The problem to define a controlled assembly map for $\hat{\mathbb G}$ is that there does not exist at this time any construction similar to the Rips complex for discrete quantum groups. Worse, the universal space for proper action is not defined. The only contruction of assembly maps for quantum groups the author is aware of relies on the work of R. Meyer and R. Nest in \cite{MeyerNest}. It is based on localisation of functors in triangulated categories. In the case of locally compact group, they first define a triangulated categories $\mathcal {KK}^G$ based on $KK^G$-theory. Let $F$ be the functor $A\rightarrow K(A \rtimes_r G)$. It is triangulated on $\mathcal {KK}^G$ and the natural transformation $\mathbb L F(A)\rightarrow F(A)$ can be shown to be isomorphic to the assembly map. The natural path taken by the authors is to define the assembly map as $\mathbb L F(A)\rightarrow F(A)$ in the case of quantum groups.\\
+The problem to define a controlled assembly map for $\hat{\mathbb G}$ is that, so far, there does not exist any construction similar to the Rips complex nor to the universal space for proper action. The only contruction of assembly maps for quantum groups the author is aware of relies on the work of R. Meyer and R. Nest in \cite{MeyerNest}. It is based on localisation of functors in triangulated categories. In the case of locally compact group, they first define a triangulated categories $\mathcal {KK}^G$ based on $KK^G$-theory. Let $F$ be the functor $A\rightarrow K(A \rtimes_r G)$. It is triangulated on $\mathcal {KK}^G$ and the natural transformation $\mathbb L F(A)\rightarrow F(A)$ can be shown to be isomorphic to the assembly map. The natural path taken by the authors is to define the assembly map as $\mathbb L F(A)\rightarrow F(A)$ in the case of quantum groups.\\
 
 We give the following application of controlled $K$-theory to $K$-amenability of quantum groups. The following definition of $K$-amenability can be found in \cite{VergniouxKamenability} (section $1$). Recall that, by universal property, for every $\hat{\mathbb G}$-algebra $A$, there exists a $*$-homomorphism $\lambda_A : A\rtimes_{max} G \rightarrow A\rtimes_{r} G$, and it is onto and filtered.
 
