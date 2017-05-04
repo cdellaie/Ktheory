@@ -63,19 +63,21 @@ The previous lemmas ensures that the topological $K$-theory of $G$ can be comput
 \[\varinjlim_{K\subseteq G } KK^G(C_0(P_K(G)),B).\] 
 By universal property of the inductive limit, there exists a unique homomorphism 
 \[\phi : \mathcal A \rightarrow RK^G(\underline E G,B).\] 
-Let $Z$ and $Z'$ be two proper $G$-compact $G$-spaces such that $Z\subseteq Z'$. By lemma \ref{Gspace}, there exist compact subsets $K$ and $K'$ of $G$ and $G$-equivariant continuous maps $h : Z\rightarrow P_K(G)$ and $h : Z'\rightarrow P_{K'}(G)$. Up to enlarge $K'$, we can suppose $h'_{|Z}$ and $ h $ are homotopic. The following diagram commutes
-\[\begin{tikzcd}
-KK^G(C_0(Z),B)\arrow{r}\arrow{d}{h^*} & KK^G(C_0(Z'),B)\arrow{d}{(h')^*} \\
-RK^G(P_{K}(G),B)\arrow{r} & RK^G(P_{K'}(G),B) \\
-\end{tikzcd},\]
-hence the following  diagram :
-\[\begin{tikzcd}
-KK^G(C_0(Z),B)\arrow{r}\arrow{d}{\subseteq} & \mathcal A  \\
-KK^G(C_0(Z'),B) \arrow{ur} &  \\
-\end{tikzcd}.\]
-is commutative. By universal property of the inductive limit, there exists a unique homomorphism 
+Let $Z$ and $Z'$ be two proper $G$-compact $G$-spaces such that $Z\subseteq Z'$. By lemma \ref{Gspace}, there exist compact subsets $K$ and $K'$ of $G$ and $G$-equivariant continuous maps $h : Z\rightarrow P_K(G)$ and $h : Z'\rightarrow P_{K'}(G)$. Up to enlarge $K'$, we can suppose $h'_{|Z}$ and $ h $ are homotopic. 
+%The following diagram commutes
+%\[\begin{tikzcd}
+%KK^G(C_0(Z),B)\arrow{r}\arrow{d}{h^*} & KK^G(C_0(Z'),B)\arrow{d}{(h')^*} \\
+%RK^G(P_{K}(G),B)\arrow{r} & RK^G(P_{K'}(G),B) \\
+%\end{tikzcd},\]
+%hence the following  diagram :
+%\[\begin{tikzcd}
+%KK^G(C_0(Z),B)\arrow{r}\arrow{d}{\subseteq} & \mathcal A  \\
+%KK^G(C_0(Z'),B) \arrow{ur} &  \\
+%\end{tikzcd}.\]
+%is commutative. 
+By universal property of the inductive limit, there exists a unique homomorphism 
 \[ \psi : RK^G(\underline E G,B)\rightarrow \mathcal A.\] 
-Then $\psi\circ\phi = id_A$ is obvious. The universal property of $\underline E G $ ensures that there exist $G$-equivariant continuous maps, unique up to homotopy, $P_{K}(G) \rightarrow  \underline E G$ and $P_{K'}(G)\rightarrow  \underline E G$, hence $\phi\circ \psi = id$ and 
+Then $\psi\circ\phi = id_A$ is obvious. The universal property of $\underline E G $ ensures that there exist $G$-equivariant continuous maps, unique up to homotopy, $P_{K}(G) \rightarrow  \underline E G$ and $P_{K'}(G)\rightarrow  \underline E G$. The composition of $Z\rightarrow P_K(G)$ by $P_{K'}(G)$ is, up to enlarge $K'$, homotopic to the inclusion $Z\rightarrow \underline E G$.  Hence $\phi\circ \psi = id$ and 
 \[RK^G(\underline E G,B) \cong A.\]
 \qed
 \end{dem}
