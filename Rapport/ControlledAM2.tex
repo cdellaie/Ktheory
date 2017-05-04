@@ -661,7 +661,7 @@ Let $x\in RK^G(P_E(G),\tilde B)$ such that $\mu_{G,\tilde B}^E(x)=0$. Then, as t
 
 % Using the isomorphism of lemma \ref{prod} and the Morita equivalence, we can identify $x$ with $(x_j)_j$ under $RK^G(P_E(G),\tilde A)\simeq\prod_j RK^G(P_E(G),A)$. Now let $F'$ such that $F\subseteq F'$ and $QI_{A}(E,E',\varepsilon,F)$ holds. That ensures that $x_j=0$ in $RK^G(P_{E'}(G),B)$, and $x=0$.\\
 
-For the converse, suppose one can find $E,\varepsilon,F$ such that $QI_{G,B}(E,E',\varepsilon,F)$ is NOT true for all $F'$ such that $F\subseteq F'$. Then, by $\sigma$-compactness, one can extract a increasing exhausting sequence $E_j\in \mathcal E$ such that $\cup E_j =G$, $E\subseteq E_j$ and $x_j\in RK^G(P_E(G),B)$ such that $\mu_{G,\tilde B}^{\varepsilon,E,F}(x_j)=0$ and $q_E^{E_j}(x_j)\neq 0$ in $RK^G(P_{E_j}(G),B)$. Let $x$ be the image of $(x_j)\in \prod RK^G(P_E(G),B)$ in $RK^G(P_E(G),\tilde B)$ under the isomorphism of lemma \ref{prod}. We have $\mu_{G,\tilde B}^E(x)=0$, and $q_E^{E'}(x)\neq 0$ in $RK^G(P_{E'}(G),\tilde A)$ for at least one $E'$ such that $E\subseteq E'$ by exhaustivity, so $\mu_{G,\tilde B}$ is not injective. \\
+For the converse, suppose one can find $E,\varepsilon,F$ such that $QI_{G,B}(E,E',\varepsilon,F)$ is NOT true for all $F'$ such that $F\subseteq F'$. Then, by $\sigma$-compactness, one can extract a increasing exhausting sequence $E_j\in \mathcal E$ such that $\cup E_j =G$, $E\subseteq E_j$ and $x_j\in RK^G(P_E(G),B)$ such that $\mu_{G,\tilde B}^{\varepsilon,E,F}(x_j)=0$ and $q_E^{E_j}(x_j)\neq 0$ in $RK^G(P_{E_j}(G),B)$. Let $x$ be the image of $(x_j)\in \prod RK^G(P_E(G),B)$ in $RK^G(P_E(G),\tilde B)$ under the isomorphism of lemma \ref{prod}. By corollary \ref{controlledprod}, and up to a rescaling, we have $\mu_{G,\tilde B}^E(x)=0$, and $q_E^{E'}(x)\neq 0$ in $RK^G(P_{E'}(G),\tilde A)$ for at least one $E'$ such that $E\subseteq E'$ by exhaustivity, so $\mu_{G,\tilde B}$ is not injective. \\
 \qed   
 \end{dem}
 
@@ -680,7 +680,7 @@ Let $\lambda\geq 1$ the universal constant of remark \ref{approximation} : for a
 Let $y\in K_*(\tilde B\rtimes_r G)$. By remark \ref{approximation}, there exist $\varepsilon\in (0,\frac{1}{4})$, $F\in\mathcal E$ and $z\in K^{\varepsilon,F}(\tilde B\rtimes G)$ such that $\iota_{\varepsilon,F}(z) = y$. Up to a rescaling of the parameters, let $(z_j)$ the element of $\prod_j K^{\varepsilon,F}(B\rtimes_r G)$ corresponding to $z$ under the controlled isomorphism of corollary \ref{controlledprod}. Let $E$ and $F'$ such that $k_J(\varepsilon).E\subseteq F$ and $QS(E,F,F',\varepsilon,\lambda\varepsilon)$ : for every $j$, there exists $x_j\in RK^G(P_E(G),B) $ such that $\mu_{G,B}^{\lambda\varepsilon,E,F'}(x_j)=\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}(z_j)$. 
 Let $x\in RK^G(P_E(G),\tilde B)$ be the element of $RK^G(P_E(G),\tilde B)$ corresponding to $(x_j)\in \prod_j RK^G(P_E(G),B)$ under the isomorphism of lemma \ref{prod}. Naturality of the assembly maps, and compatibility of the controlled assembly maps with the usual one ensures that $\mu_{G,\tilde B}^E(x)=z$, whereby $\mu_{G,\tilde B}$ is onto.\\
 
-Assume that there exist $\varepsilon \in (0,\frac{1}{4\lambda})$ and a nonempty controlled subset $F\in\mathcal E$ such that for every $E,F'\in\mathcal E$ such that $k_J(\varepsilon). E \subseteq F$, $QS_{G,B}(E,F,F',\varepsilon,\lambda\varepsilon)$ does not hold. Let $(E_j)$ and $(F_j)$ be unbounded increasing sequences of controlled subsets such that $(E_j)$ is an exhausting family, 	$F\subseteq F_j$ and $k_J(\varepsilon).E_j\subseteq F_j$. Let $y_j\in K^{\varepsilon,F}(B\rtimes_r G)$ such that $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)$ is not in the range of $\mu_{G,B}^{\lambda\varepsilon, E_j , F_j}$. Let $y\in K^{\varepsilon,F}(\tilde B\rtimes_r G)$ be the element of corresponding to $(y_j)_j$ under the isomorphism of corollary \ref{controlledprod}. If there exists $x\in RK^G(P_{E'}(G),\tilde B)$ for a $E'\in\mathcal E$ such that $E\subseteq E'$ and $\iota_{\varepsilon,F}( y) =\mu_{G,\tilde B}^{E'}(x)$ then there would exists a $F'\in\mathcal E$ such that $F\subseteq F'$ and
+Assume that there exist $\varepsilon \in (0,\frac{1}{4\lambda})$ and a nonempty controlled subset $F\in\mathcal E$ such that for every $E,F'\in\mathcal E$ such that $k_J(\varepsilon). E \subseteq F$, $QS_{G,B}(E,F,F',\varepsilon,\lambda\varepsilon)$ does not hold. Let $(E_j)$ and $(F_j)$ be unbounded increasing sequences of controlled subsets such that $(E_j)$ is an exhausting family, $F\subseteq F_j$ and $k_J(\varepsilon).E_j\subseteq F_j$. Let $y_j\in K^{\varepsilon,F}(B\rtimes_r G)$ such that $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)$ is not in the range of $\mu_{G,B}^{\lambda\varepsilon, E_j , F_j}$. Let $y\in K^{\varepsilon,F}(\tilde B\rtimes_r G)$ be the element of corresponding to $(y_j)_j$ under the isomorphism of corollary \ref{controlledprod}, up to a rescaling of the parameters. If there exists $x\in RK^G(P_{E'}(G),\tilde B)$ for a $E'\in\mathcal E$ such that $E\subseteq E'$ and $\iota_{\varepsilon,F}( y) =\mu_{G,\tilde B}^{E'}(x)$ then there would exists a $F'\in\mathcal E$ such that $F\subseteq F'$ and
 \[\iota_{\varepsilon,F}^{\lambda\varepsilon, F'}( y) =\mu_{G,\tilde B}^{\lambda\varepsilon,E',F'}(x) = \iota_{\varepsilon,F}^{\lambda\varepsilon, F'}\circ\mu_{G,\tilde B}^{\varepsilon,E',F}(x).\]
 Now choose $j$ such that $E'\subseteq E_j $ and $F'\subseteq F_j$, and compose the previous equality with $\iota_{\lambda\varepsilon,F'}^{\lambda\varepsilon,F_j}$ and $q_{E'}^{E_j}$ to obtain $\iota_{\varepsilon,F}^{\lambda\varepsilon,F_j}(y_j)=\mu_{G,B}^{\lambda\varepsilon , E_j,F_j}(x_j)$ which contradicts our assumption. Hence $\mu_{G,\tilde B}$ is not onto. \\
 \qed
@@ -719,7 +719,9 @@ Using the only if part of the proofs of the quantitative statements, we can easi
 \end{itemize}
 \end{thm}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Persistence approximation property}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We recall the following definition from \cite{OY3}.
 
@@ -747,18 +749,22 @@ Then there exists a universal constant $\lambda_{PA}\geq 1$ such that, for every
 \end{thm}
 
 \begin{dem}
-Let us denote $l^\infty(\N,A\otimes\mathfrak K)$ by $\tilde A$.\\
+Let us denote $l^\infty(\N,A\otimes\mathfrak K)$ by $\tilde A$. Let $(\alpha,h)$ be the control pair of the controlled isomorphism of corollary \ref{controlledprod}, and $\lambda\geq 1$ be the constant of remark \ref{approximation}. Set $\lambda_{PA} = \lambda\alpha$. \\
 
-Assume the statement does not holds : there exists $\varepsilon$ and $F$ such that $PA_{A\rtimes_r G}(\varepsilon,\varepsilon',F,F')$ is not true for every $F'\in\mathcal E$ such that $F \subseteq F'$. Then we can extract an increasing unbounded sequence of nonempty controlled subsets $F_j$ and elements $x_j\in K^{\varepsilon,F}(A\rtimes_r G)$ such that $\iota_{\varepsilon,F}(x_j)=0$ and $\iota_{\varepsilon,F}^{\lambda_{PA},F_j}(x_j)\neq 0$. \\
+Assume the statement does not holds : there exists $\varepsilon$ and $F$ such that $PA_{A\rtimes_r G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ is not true for every $F'\in\mathcal E$ such that $F \subseteq F'$. Then we can extract an increasing exhausting sequence of controlled subsets $F_j$ such that $F\subseteq F_j$ and elements $x_j\in K^{\varepsilon,F}(A\rtimes_r G)$ such that $\iota_{\varepsilon,F}(x_j)=0$ and $\iota_{\varepsilon,F}^{\lambda_{PA}\varepsilon,F_j}(x_j)\neq 0$. \\
 
-Up to a rescaling, let $x$ be the element of $K^{\varepsilon,F}(A\rtimes_r G)$ corresponding to $(x_j)\in\prod_j K^{\varepsilon,F}(A\rtimes_r G)$ under the isomorphism of corollary \ref{controlledprod}. Recall that the following diagram commutes
+Let $x$ be the element of $K^{\alpha\varepsilon,h_\varepsilon  F}(\tilde A\rtimes_r G)$ corresponding to \[(x_j)\in\prod_j K^{\varepsilon,F}(A\rtimes_r G)\] under the controlled isomorphism of corollary \ref{controlledprod}. Recall that the following diagram commutes
 %According to the lemma \ref{LocalInjectivity}, there exists $x\in K_*^{\alpha\varepsilon,h_\varepsilon F}(\tilde A\rtimes G)$ such that $p_j(x)=x_j$ where $p_j$ is the composition of the projection on the $j^{th}$ factor $\tilde A \rtimes G \rightarrow K_A \rtimes G$ and the Morita equivalence in K-theory.
 \[\begin{tikzcd}
 RK^G(P_E(G),\tilde A) \arrow{r}{\mu_{G,\tilde A}^{\alpha\varepsilon,E, h_\varepsilon F}} \arrow{rd}{\mu_{G,\tilde A}^E} & K^{\alpha\varepsilon,h_\varepsilon F}(\tilde A\rtimes G) \arrow{d}{\iota_{\alpha\varepsilon, h_\varepsilon F}}\\
                                                       \                          & K(\tilde A\rtimes G)
 \end{tikzcd}\]
 
-If $\iota_{\alpha\varepsilon,h_\varepsilon F}(x)$ is in the range of $\mu_{G,\tilde A}$, there exists a nonempty $E\in\mathcal E$ and $z\in RK^G(P_E(G),\tilde A)$ such that $\mu_{G,\tilde A}(z)=\iota_{\alpha\varepsilon,h_\varepsilon F}(x)$. Denote by $(z_j)$ the element of $\prod_j RK^G(P_E(G),A)$ corresponding to $z$ under the isomorphism $RK^G(P_E(G),\tilde A) \cong \prod_j RK^G(P_E(G),A)$ of lemma \ref{prod}. By naturality, $\mu_{G,\tilde A}^E(z_j)=\iota_{\alpha\varepsilon,h_\varepsilon F}^{\lambda\varepsilon,F_j}(x_j)\neq 0$ and $\mu_{G,A}(z)=0$ so that $\mu_{G,A}$ is not injective. Hence either $\mu_{G,\tilde A}$ is not onto, either $\mu_{G,A}$ is not one to one. \\
+If $\iota_{\alpha\varepsilon,h_\varepsilon F}(x)$ is in the range of $\mu_{G,\tilde A}$, there exists $E\in\mathcal E$ and $z\in RK^G(P_E(G),\tilde A)$ such that $\mu_{G,\tilde A}^E(z)=\iota_{\alpha\varepsilon,h_\varepsilon F}(x)$. Denote by $(z_j)$ the element of $\prod_j RK^G(P_E(G),A)$ corresponding to $z$ under the isomorphism $RK^G(P_E(G),\tilde A) \cong \prod_j RK^G(P_E(G),A)$ of lemma \ref{prod}. By remark \ref{approximation}, there exists $F''\in\mathcal E$ such that $h_\varepsilon F\subseteq F''$ and such that $\mu_{G,\tilde A}^{\lambda \alpha \varepsilon, E,F''}(z)=\iota_{\alpha\varepsilon,h_\varepsilon F}^{\lambda\alpha\varepsilon,F''}(x)$. \\
+
+By naturality, $\mu_{G, A}^E(z_j)=0$. As $G$ admits a cocompact example for $\underline E G$, there exists $E'\in \mathcal E$ such that $E\subseteq E'$ and $q_E^{E'}(z)=0$. Since \[\mu_{G,\tilde A}^{\lambda\alpha\varepsilon, E,F''}(z)= \mu_{G,\tilde A}^{\lambda\alpha\varepsilon, E',F''}\circ q_E^{E'}(z),\]
+we have that $\iota_{\alpha\varepsilon,h_\varepsilon F}^{\lambda\alpha\varepsilon,F''}(x)=0$ in $K^{\lambda\alpha\varepsilon,F''}(\tilde A\rtimes_r G)$. By naturality, for any $i$ such that $F''\subseteq F_i$, $\iota_{\varepsilon, F}^{\lambda\alpha\varepsilon,F_i}(x_i)=0$ is satisfied, which contradicts our assumption.\\  
+%\iota_{\alpha\varepsilon,h_\varepsilon F}^{\lambda\varepsilon,F_j}(x_j)\neq 0$ and $\mu_{G,A}(z)=0$ so that $\mu_{G,A}$ is not injective. Hence either $\mu_{G,\tilde A}$ is not onto, either $\mu_{G,A}$ is not one to one. \\
 \qed
 \end{dem}
 

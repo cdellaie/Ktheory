@@ -75,7 +75,7 @@ KK^G(C_0(Z'),B) \arrow{ur} &  \\
 \end{tikzcd}.\]
 is commutative. By universal property of the inductive limit, there exists a unique homomorphism 
 \[ \psi : RK^G(\underline E G,B)\rightarrow \mathcal A.\] 
-Then $\psi\circ\phi = id_A$ is obvious. As $\underline E G = \cup_K P_K(G)$, the maps $Z\rightarrow P_{K'}(G)$ and $Z\rightarrow P_{K'}(G)$ are homotopic to $Z\rightarrow \underline E G$ and $\phi\circ \psi = id$. Hence 
+Then $\psi\circ\phi = id_A$ is obvious. The universal property of $\underline E G $ ensures that there exist $G$-equivariant continuous maps, unique up to homotopy, $P_{K}(G) \rightarrow  \underline E G$ and $P_{K'}(G)\rightarrow  \underline E G$, hence $\phi\circ \psi = id$ and 
 \[RK^G(\underline E G,B) \cong A.\]
 \qed
 \end{dem}
@@ -216,7 +216,7 @@ Let $E\in \mathcal E_X$. Any simplex $\eta\in P_E(X)$ can be written as a finite
  C_0(P_E(X)) & \rightarrow 	& l^2(X)\otimes C_0(P_E(X)) 		\\ 
  f           & \mapsto 		& (\lambda_x^{\frac{1}{2}}f)_{x\in X} 
 \end{array}\right.\] 
-is an isometry of $C_0(P_E(X))$-modules, and $V_0V_0^*\otimes id_H$ defines a projection in $l^2(X)\otimes H\otimes C_0(P_E(X))$ with finite propagation (less than $R= \sup_E d$, because $\text{supp }(V_0 V_0^*)\subseteq E$), so a class $[\mathcal L_E]\in K_0(C^*(X,C_0(P_E(X)))$.
+is an isometry of $C_0(P_E(X))$-modules. Let $e$ be a rank one projection in $\mathfrak K$ and set $\mathcal L_E = V_0V_0^*\otimes e$. This defines a locally compact projection in $l^2(X)\otimes H\otimes C_0(P_E(X))$ with finite propagation (less than $R= \sup_E d$, because $\text{supp }(V_0 V_0^*)\subseteq E$), so a class $[\mathcal L_E]\in K_0(C^*(X,C_0(P_E(X)))$.
 
 \begin{definition}
 The coarse assembly map $\mu:KX_*(X,B)\rightarrow K_*(C^*(X,B))$ for $X$ with coefficients in $B$ is defined as 
@@ -231,7 +231,7 @@ For any coarse space $X$ with bounded geometry, the coarse assembly map $\mu_{X,
 
 %%% Descent principle
 
-One of the interesting properties of the coarse Baum-Connes conjecture is the following application to topology, which is called the descent principle. The reader is referred to J. Roe's book \cite{RoeIndex} for details. Recall that if $\Gamma$ is a finitely generated group, $|\Gamma|$ denotes the metric space obtained by choosing a set of generators and endowing $\Gamma$ with the  associated word-length metric. Also, $B\Gamma$ denotes the classifying space of $\Gamma$, which is defined in any standard textbook on algebraic topology, see \cite{May} for instance. Definitions ans statements of the Novikov conjectures can be found in \cite{ferrynovikov}. A quick reminder can be found in the introduction at \ref{Novikov}.
+One of the interesting properties of the coarse Baum-Connes conjecture is the following application to topology, which is called the descent principle. The reader is referred to J. Roe's book \cite{RoeIndex} for details. Recall that if $\Gamma$ is a finitely generated group, $|\Gamma|$ denotes the metric space obtained by choosing a set of generators and endowing $\Gamma$ with the  associated word-length metric. Also, $B\Gamma$ denotes the classifying space of $\Gamma$, which is defined in any standard textbook on algebraic topology, see \cite{May} for instance. Definitions ans statements of the Novikov conjectures can be found in \cite{ferrynovikov}. A short survey can be found in the introduction at \ref{Novikov}.
 
 \begin{thm}[Descent principle]
 Let $\Gamma$ be a finitely generated group such that the classifying space $B\Gamma$ has the homotopy type of a finite CW-complex. Then, the coarse Baum-Connes conjecture for $|\Gamma |$ implies the strong Novikov conjecture for $\Gamma$. 

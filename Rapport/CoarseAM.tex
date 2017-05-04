@@ -42,17 +42,21 @@ Then there exists a control pair $(\lambda,h)$, independent of $X$ and $A$, such
 \end{prop}
 
 \begin{dem}
-Recall that $0\rightarrow \mathfrak K(l^2(\N)) \rightarrow \mathcal T_0\rightarrow S\rightarrow 0 $ is the Toeplitz extension. The following diagram has exact rows and commutes
+Recall that $0\rightarrow \mathfrak K(l^2(\N)) \rightarrow \mathcal T_0\rightarrow S\rightarrow 0 $ is the Toeplitz extension. Let $\Psi$ be the obvious $*$-homomorphism $SC^*(X,A)\rightarrow C^*(X,SA) $. The following diagram has exact rows and commutes
 \[\begin{tikzcd} 
 SC^*(X,A) \arrow{d}{\Psi}\arrow{r} & CC^*(X,A) \arrow{d}\arrow{r} & C^*(X,A) \arrow{d} \\ 
 C^*(X,SA) \arrow{r}          & C^*(X,CA) \arrow{r}          & C^*(X,A)
 \end{tikzcd}\]
-so that remark \ref{rk3.8} implies that $D_{X,A} = \Psi_*\circ D_{C^*(X,A)}$. The following diagram also has exact rows and commutes
+where vertical arrows are obvious inclusions. Remark \ref{rk3.8} implies that 
+\[D_{X,A} = \Psi_*\circ D_{C^*(X,A)}.\] 
+The following diagram also has exact rows and commutes
 \[\begin{tikzcd} 
 \mathfrak K(l^2(\N))\otimes C^*(X,A) \arrow{d}\arrow{r} & \mathcal T_0 \otimes C^*(X,A) \arrow{d}\arrow{r} & SC^*(X,A) \arrow{d}{\Psi} \\ 
 C^*(X,\mathfrak K(l^2(\N))\otimes A) \arrow{r}          & C^*(X,\mathcal T_0 \otimes A) \arrow{r}          & C^*(X,SA)
 \end{tikzcd}\]
-so that remark \ref{rk3.8} implies that $D_{\mathfrak K(l^2(\N))\otimes C^*(X,A),\mathcal T_0\otimes C^*(X,A)} = D_{C^*(X,A),C^*(X,\mathcal T_0\otimes A)}\circ\Psi_*$. A simple computation shows that 
+where vertical arrows are obvious inclusions. Remark \ref{rk3.8} implies that 
+\[D_{\mathfrak K(l^2(\N))\otimes C^*(X,A),\mathcal T_0\otimes C^*(X,A)} = D_{C^*(X,A),C^*(X,\mathcal T_0\otimes A)}\circ\Psi_*.\] 
+A simple computation shows that 
 \[D_{C^*(X,A),C^*(X,\mathcal T_0\otimes A)}\circ D_{X,A} \sim D_{\mathfrak K(l^2(\N))\otimes C^*(X,A),\mathcal T_0\otimes C^*(X,A)}\circ D_{C^*(X,A)} \sim \mathcal M_{C^*(X,A)}\]
 \qed
 \end{dem}
