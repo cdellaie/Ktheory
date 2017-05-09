@@ -536,13 +536,16 @@ Indeed, each $F_j = T_j^2-1\in \mathfrak K \otimes B_j$ can be approximated by a
 %Indeed, these elements are uniformly bounded elements of $\prod \mathfrak K_{B_j\otimes\mathfrak K}$, which are in $\mathfrak K_{B_\infty}(H_{B_\infty})$. 
 This ensures that $[E_\infty,\pi,T]\in KK^G(C_0(Z),B_\infty)$. Let $\eta((z_j)_j) = [H_{B_\infty},\pi,T] $. It is clear that $\Theta\circ \eta = id_{\prod_j RK^G(X,B_j\otimes K) }$, and $\Theta $ is onto.\\
 
-Let $z\in KK^G(C_0(Z),B_\infty)$ such that $\Theta(z) = 0$. Let us denote $\Theta(z) = (z_j)_j$ where each $z_j\in KK^G(C_0(Z),B_j)$ is represented by $K$-cycles $(H_{B_j}, \pi_j,T_j)$ homotopic to a degenerate $K$-cycle by an operator homotopy 
+Let us prove that $\Theta $ is one to one. Let $z\in KK^G(C_0(Z),B_\infty)$ such that $\Theta(z) = 0$. Let us denote $\Theta(z) = (z_j)_j$ where each $z_j\in KK^G(C_0(Z),B_j)$ is represented by $K$-cycles $(H_{B_j}, \pi_j,T_j)$ homotopic to a degenerate $K$-cycle by an operator homotopy 
 \[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (H_{B_j}, \pi_j,T_j(s))\end{array}\right.\] 
 such that $T_j(s)$ is $G$-equivariant self-adjoint, commutes with the action of $C_0(Z)$ and $-1\leq T_j \leq 1$ for every $s\in [0,1]$.\\
 
 %%%
-Set $\mathcal{\tilde C}_j = \{T \in\mathcal L_{B_j}(H_{B_j}) \text{ s.t. } [\pi(a),T]=0 \ \forall a\in C_0(Z)\}$, and let $\mathcal C_j$ be the closed ideal $\{ T \in \mathcal {\tilde C}_j \text{ s.t. } \pi(a)T\in {\mathfrak K}_{B_j}(H_{B_j})  \ \forall a\in C_0(Z)\}\}$.
-Denote by $\overline T_j$ the class of $T_j$ in $\mathcal{\tilde C}_j / \mathcal C_j $. For every $j$, let $t_0=0< t_1 < ... < t_l=1$ be a partition of $[0,1]$ such that $||\overline{T}_j(t_{k+1})-\overline{T}_j(t_k)||< 1$ for every $k\in\{0,..,l-1\}$. Put $T_j(t_k) = T_{j,k}$. Then 
+Set 
+\[\mathcal{\tilde C}_j = \{T \in\mathcal L_{B_j}(H_{B_j}) \text{ s.t. } [\pi(a),T]=0 \ \forall a\in C_0(Z)\},\] 
+and let $\mathcal C_j$ be the closed ideal $\{ T \in \mathcal {\tilde C}_j \text{ s.t. } \pi(a)T\in {\mathfrak K}_{B_j}(H_{B_j})  \ \forall a\in C_0(Z)\}$. Similarly for $\mathcal L_{B_\infty}(E_\infty)$ and $\mathfrak K_{B_\infty}(E_\infty)$, define $\mathcal{\tilde C}$ and the closed ideal $\mathcal{C}$. Our goal is to show that the family of operator homotopies can be lifted to a global one.\\
+
+Denote by $\overline T_j$ the class of $T_j$ in $\mathcal{\tilde C}_j / \mathcal C_j $. For every $j$, let $t_0=0< t_1 < ... < t_{l_j}=1$ be a partition of $[0,1]$ such that $||\overline{T}_j(t_{k+1})-\overline{T}_j(t_k)||< 1$ for every $k\in\{0,..,l_j-1\}$. Put $T_j(t_k) = T_{j,k}$. Then 
 %Denote by $\overline T_j$ the class of $T_j$ in $\mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j}) $. For every $j$, let $t_0=0< t_1 < ... < t_l=1$ be a partition of $[0,1]$ such that $||\overline{T}_j(t_{k+1})-\overline{T}_j(t_k)||< 1$ for every $k\in\{0,..,l-1\}$. Put $T_j(t_k) = T_{j,k}$. Then 
 \[diag(\overline{T}_{j,0},1,1,1,1,...)= diag(1,\overline{T}_{j,1}^*,...,\overline{T}_{j,l}^*,1,1,1,...) \ diag(\overline{T}_{j,0},\overline{T}_{j,1},...,\overline{T}_{j,l},1,1,1,...)\]
 is $2$-Lipschitz homotopic to 
@@ -564,7 +567,7 @@ Define
 \[\tilde T_j(s) = \begin{pmatrix} \overline{T}_{j,l} & 0 \\ 0 & \exp ( s \ diag(a_j^{(1)},..., a_j^{(l)},0,0,0,...))\end{pmatrix}.\]
 %\[\tilde T_j(s) = diag(e^{\phi_j(s) a_j^{(1)}},..., e^{\phi_j(s) a_j^{(l)}},\overline{T}_{j,l},1,1,1,...).\] 
 Then $s\mapsto \tilde T_j(s)$ composed with the first homotopy by rotation and permutation is $L$-Lipschitz for every $j$ for some constant $L$ independent of $j$, and it provides an %homotopy between $diag(\overline{T}_j,1,1,..)$ and a degenerate operator. Hence we get a $L$-Lipschitz 
-element of $C([0,1],\mathcal L_{B_\infty}(E_\infty)/\mathfrak K_{B_\infty}(E_\infty))$. We can lift it to $T\in C([0,1],\mathcal L_{B_\infty}(E_\infty))$, which gives a homotopy 
+element of $C([0,1],\mathcal{\tilde C}/\mathcal{C})$. We can lift it to $T\in C([0,1],\mathcal{\tilde C})$, which gives a homotopy 
 \[\left\{\begin{array}{rcl} [0,1] & \rightarrow & \mathbb E^G(C_0(Z),B_\infty)\\ s & \mapsto & (E_\infty, \pi,T(s))\end{array}\right.\]
 %defines a $L$-Lipschitz operator homotopy 
 between $0$ and $z$.\\
