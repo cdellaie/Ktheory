@@ -541,14 +541,17 @@ Let $z\in KK^G(C_0(Z),B_\infty)$ such that $\Theta(z) = 0$. Let us denote $\Thet
 such that $T_j(s)$ is $G$-equivariant self-adjoint, commutes with the action of $C_0(Z)$ and $-1\leq T_j \leq 1$ for every $s\in [0,1]$.\\
 
 %%%
-Denote by $\overline T_j$ the class of $T_j$ in $\mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$. For every $j$, let $t_0=0< t_1 < ... < t_l=1$ be a partition of $[0,1]$ such that $||\overline{T}_j(t_{k+1})-\overline{T}_j(t_k)||< 1$ for every $k\in\{0,..,l-1\}$. Put $T_j(t_k) = T_{j,k}$. Then 
+Set $\mathcal{\tilde C}_j = \{T \in\mathcal L_{B_j}(H_{B_j}) \text{ s.t. } [\pi(a),T]=0 \ \forall a\in C_0(Z)\}$, and let $\mathcal C_j$ be the closed ideal $\{ T \in \mathcal {\tilde C}_j \text{ s.t. } \pi(a)T\in {\mathfrak K}_{B_j}(H_{B_j})  \ \forall a\in C_0(Z)\}\}$.
+Denote by $\overline T_j$ the class of $T_j$ in $\mathcal{\tilde C}_j / \mathcal C_j $. For every $j$, let $t_0=0< t_1 < ... < t_l=1$ be a partition of $[0,1]$ such that $||\overline{T}_j(t_{k+1})-\overline{T}_j(t_k)||< 1$ for every $k\in\{0,..,l-1\}$. Put $T_j(t_k) = T_{j,k}$. Then 
+%Denote by $\overline T_j$ the class of $T_j$ in $\mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j}) $. For every $j$, let $t_0=0< t_1 < ... < t_l=1$ be a partition of $[0,1]$ such that $||\overline{T}_j(t_{k+1})-\overline{T}_j(t_k)||< 1$ for every $k\in\{0,..,l-1\}$. Put $T_j(t_k) = T_{j,k}$. Then 
 \[diag(\overline{T}_{j,0},1,1,1,1,...)= diag(1,\overline{T}_{j,1}^*,...,\overline{T}_{j,l}^*,1,1,1,...) \ diag(\overline{T}_{j,0},\overline{T}_{j,1},...,\overline{T}_{j,l},1,1,1,...)\]
 is $2$-Lipschitz homotopic to 
 \[diag(\overline{T}_{j,1}^*,...,\overline{T}_{j,l}^*,1,1,1,1,...) \ diag(\overline{T}_{j,0},\overline{T}_{j,1},...,\overline{T}_{j,l},1,1,1,...)\]\[=diag(\overline{T}_{j,1}^*\overline{T}_{j,0} ,..., \overline{T}_{j,l}^*\overline{T}_{j,l-1},\overline{T}_{j,l},1,1,1,...) \] %diag(e^{ a_j^{(1)}} ,..., e^{ a_j^{(l)}},1,1,1,...)
 by rotations. We obtained that \[diag(\overline{T}_{j,0},1,1,1,1,...)\] 
 is $2$-Lipschitz homotopic to $diag(\overline{T}_{j,l},\overline{T}_{j,1}^*\overline{T}_{j,0} ,..., \overline{T}_{j,l}^*\overline{T}_{j,l-1},1,1,1,...)$.\\
 
-By (\cite{WeggeOlsen}, Proposition $4.2.4$) for every $j$ and $k$, there exists $a_j^{(k)}\in \mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$ such that :
+By (\cite{WeggeOlsen}, Proposition $4.2.4$) for every $j$ and $k$, there exists $a_j^{(k)}\in \mathcal{\tilde C}_j / \mathcal C_j$ such that : 
+%$a_j^{(k)}\in \mathcal L_{B_j}(H_{B_j})/ {\mathfrak K}_{B_j}(H_{B_j})$ such that :
 \[\overline{T}_{j,k+1}^*\overline{T}_{j,k}=e^{ a_j^{(k)}} \text{ and such that } ||a_j^{(k)}||<1.\] 
 %Then (\cite{WeggeOlsen}, Lemma $17.3.3$) we can find a lift $x_j^{(k)}\in  \mathcal L_{B_j}(H_{B_j})$ of $a_j^{(k)}$ such that $||a_j^{(k)}||= ||x_j^{(k)}||$ for every $j$ and $k$.
 %For each $k$, choose a continuous function $\phi_k : [0,1]\rightarrow [0,1]$ such that :\\
