@@ -41,6 +41,17 @@ Xiaoman Chen, Qin Wang, and Guoliang Yu.
   a fibred coarse embedding into {H}ilbert space.
 \newblock {\em Advances in Mathematics}, 249:88--130, 2013.
 
+\bibitem{Chung1}
+Y.~C. {Chung}.
+\newblock {Dynamic asymptotic dimension and {K}-theory of {B}anach crossed
+  product algebras}.
+\newblock {\em ArXiv e-prints}, November 2016.
+
+\bibitem{Chung2}
+Y.~C. {Chung}.
+\newblock {Quantitative {K}-theory for {B}anach algebras}.
+\newblock {\em ArXiv e-prints}, November 2016.
+
 \bibitem{connesfoliations}
 Alain Connes.
 \newblock A survey of foliations and operator algebras.
@@ -55,11 +66,6 @@ Alain Connes.
 Joachim Cuntz and Georges Skandalis.
 \newblock Mapping cones and exact sequences in {KK}-theory.
 \newblock {\em J. Operator theory}, 15(1):163--180, 1986.
-
-\bibitem{DrutuNowak}
-Cornelia Dru{\c{t}}u and Piotr~W Nowak.
-\newblock Kazhdan projections, random walks and ergodic theorems.
-\newblock {\em arXiv preprint arXiv:1501.03473}, 2015.
 
 \bibitem{ferrynovikov}
 S~Ferry, AA~Ranicki, and J~Rosenberg.
@@ -305,11 +311,6 @@ Roland Vergnioux.
 NE~Wegge-Olsen.
 \newblock K-theory and {C}*-algebras: A friendly approach.
 \newblock 1993.
-
-\bibitem{WillettYu}
-Rufus Willett and Guoliang Yu.
-\newblock Geometric property ({T}).
-\newblock {\em Chinese Annals of Mathematics, Series B}, 35(5):761--800, 2014.
 
 \bibitem{Wo}
 Stanis{\l}aw~L Woronowicz.

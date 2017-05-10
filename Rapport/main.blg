@@ -1,11 +1,13 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
 A level-1 auxiliary file: Remerciements.aux
 A level-1 auxiliary file: AbstractFrench.aux
 A level-1 auxiliary file: Motivation.aux
 A level-1 auxiliary file: QuantumGroups.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
-Repeated entry---line 236 of file biblio2.bib
+Repeated entry---line 276 of file biblio2.bib
  : @article{higsonkasparov
  :                        ,
 I'm skipping whatever remains of this entry
@@ -16,4 +18,45 @@ Warning--empty journal in OY3
 Warning--empty year in OY3
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
+You've used 59 entries,
+            2118 wiz_defined-function locations,
+            869 strings with 12253 characters,
+and the built_in function-call counts, 17205 in all, are:
+= -- 1744
+> -- 619
+< -- 13
++ -- 263
+- -- 190
+* -- 1117
+:= -- 2893
+add.period$ -- 178
+call.type$ -- 59
+change.case$ -- 256
+chr.to.int$ -- 0
+cite$ -- 66
+duplicate$ -- 705
+empty$ -- 1444
+format.name$ -- 190
+if$ -- 3567
+int.to.chr$ -- 0
+int.to.str$ -- 59
+missing$ -- 67
+newline$ -- 297
+num.names$ -- 118
+pop$ -- 265
+preamble$ -- 1
+purify$ -- 211
+quote$ -- 0
+skip$ -- 480
+stack$ -- 0
+substring$ -- 1165
+swap$ -- 114
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 214
+warning$ -- 7
+while$ -- 195
+width$ -- 61
+write$ -- 634
 (There was 1 error message)
