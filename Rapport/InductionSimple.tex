@@ -166,14 +166,34 @@ Every ample groupoid is in class $\mathcal C$.
 %\qed
 %\end{dem}
 
-\begin{dem} The following argument was explained to me by Christian Bönicke.\\ 
-Let $G$ be an étale ample groupoid and $Z$ a $G$-space with proper action of $G$. Let $z\in Z$ and $V$ a compact neighborhood of $z$. Then, by properness, $L = \{(g,y)\in G\times_{s,p} Z \text{ s.t. } g.z\in V \}$ is compact, and its projection $K = \{g\in G \text{ s.t. } \exists  y\in Z_{s(g)} / (g,y)\in L\}$ is also compact. Set $x=p(z)$ and let $W\subseteq G^{(0)}$ be a compact open subset such that $x\in W$. Up to taking a smaller neighborhood, we can suppose that $s^{-1}(W)\cap K$ is a finite reunion of bisections $G_1$, ... , $G_n$. For each $i$, let $g_i^x$ be the unique element of $G_i$ such that $s(g_i^x)=x$ and set
-\[I = \{i\in [|1;n|] \text{ s.t. } g_i^x . z \neq z\}.\]
-Up to taking smaller subsets, we can suppose that $i\in I$ implies $G_i. V \cap V = \emptyset$. Put 
-\[H = \{g\in G_{|W} \text{ s.t. } \exists i\notin I, g\in G_i \}\]
-and $V_0 = \cap_{i\notin I} G_i.V$. Then $H$ is a compact open subgroupoid of $G$, and $V_0$ is a $H$-invariant subset. 
+%\begin{dem} The following argument was explained to me by Christian Bönicke.\\ 
+%Let $G$ be an étale ample groupoid and $Z$ a $G$-space with proper action of $G$. Let $z\in Z$ and $V$ a compact neighborhood of $z$. Then, by properness, $L = \{(g,y)\in G\times_{s,p} Z \text{ s.t. } g.z\in V \}$ is compact, and its projection $K = \{g\in G \text{ s.t. } \exists  y\in Z_{s(g)} / (g,y)\in L\}$ is also compact. Set $x=p(z)$ and let $W\subseteq G^{(0)}$ be a compact open subset such that $x\in W$. Up to taking a smaller neighborhood, we can suppose that $s^{-1}(W)\cap K$ is a finite reunion of bisections $G_1$, ... , $G_n$. For each $i$, let $g_i^x$ be the unique element of $G_i$ such that $s(g_i^x)=x$ and set
+%\[I = \{i\in [|1;n|] \text{ s.t. } g_i^x . z \neq z\}.\]
+%Up to taking smaller subsets, we can suppose that $i\in I$ implies $G_i. V \cap V = \emptyset$. Put 
+%\[H = \{g\in G_{|W} \text{ s.t. } \exists i\notin I, g\in G_i \}\]
+%and $V_0 = \cap_{i\notin I} G_i.V$. Then $H$ is a compact open subgroupoid of $G$, and $V_0$ is a $H$-invariant subset. 
 %Indeed, let $g,g'\in H$ such that$r(g)=s(g')$. Then there exist $i$ and $j$ such that $g\in G_i$, $g'\in G_j$, $G_i.V\cap V \neq \emptyset$ and $G_j.V\cap V \neq \emptyset$. \\
-Moreover, let $(g,v)$ and $(g',v')$ be in $G\times_{s,p} V_0$ such that $g.v=g'.v'$. Then $g^{-1}g'$ sends $v'\in V$ to $v\in V$, hence is in $H$. The map $G\times_{s,p} V_0\rightarrow G.V$ passes to the quotient and induces a $G$-equivariant topological embedding $G\times_H V_0 \rightarrow G.V$ such that $z$ is in the image. Hence, $z$ admits a neighborhood locally induced from a $H$-action, and $G$ is in the class $\mathcal C$.\\   
+%Moreover, let $(g,v)$ and $(g',v')$ be in $G\times_{s,p} V_0$ such that $g.v=g'.v'$. Then $g^{-1}g'$ sends $v'\in V$ to $v\in V$, hence is in $H$. The map $G\times_{s,p} V_0\rightarrow G.V$ passes to the quotient and induces a $G$-equivariant topological embedding $G\times_H V_0 \rightarrow G.V$ such that $z$ is in the image. Hence, $z$ admits a neighborhood locally induced from a $H$-action, and $G$ is in the class $\mathcal C$.\\   
+%\qed
+%\end{dem}
+
+\begin{dem} The following argument is an adaptation of the lemmas $2.41$ and $2.42$ of \cite{TuNonHaus}. I owe to Christian Bönicke the knowledge of these results.\\ 
+
+Let $G$ be an étale ample groupoid and $Z$ a $G$-space with proper action of $G$. Let $z_0\in Z$ and let $W$ be a compact open neighborhood of $x_0=p(z_0)\in G^{(0)}$. Let $F$ be the stabilizer of $z_0$. By properness, it is a finite group. We can suppose $W$ small enough to satisfy that, for any $g\in F$, there exist bisections $U_g \subseteq G$ such that $W \subseteq s(U_g)$. Denote by $\rho_g : W\rightarrow$ corresponding local sections of $s$ such that $\rho_g(x_0)=g$. We denote by $\alpha_g =r\circ \rho_g$ the corresponding partial homeomorphisms. By continuity of the product, we can suppose $W$ small enough to satisfy 
+\[\rho_{g'}(\alpha_g(x))\rho_g(x) = \rho_{g'g}(x) \quad\forall x\in W\]
+for all $g$ and $g'$ composable in $F$. Set $W_0 = \cap_{g\in F}\alpha_g(W)$, which is a $F$-invariant neighborhood of $x_0$. It is edowed with an action of $F$ by $g.w=\alpha_g(w)$, and 
+
+\[\phi : \left\{ \begin{array}{rcl}
+W_0\rtimes F & \rightarrow & G_{|W_0} \\ 
+(w,g) & \mapsto & \alpha_g(w) \end{array}\right.\] 
+
+defines a morphism of groupoids. Then $H= \phi(W_0\rtimes F)$ is a compact open subgroupoid of $G$.\\
+
+There exists a neighborhood of $z_0$ such that $V\cap \alpha_g(V) \neq \emptyset \Rightarrow g\in H$. Let $K\subseteq V$ be a compact $H$-invariant neighborhood of $z_0$. Then   
+\[\Psi : \left\{ \begin{array}{rcl}
+G\times_H Y & \rightarrow & GY \\ 
+(g,y) & \mapsto & g.y \end{array}\right.\]
+is well defined, continuous and $G$-equivariant. If $gy =g'y' $, then $g^{-1}g'\in H$, hence $\Psi$ is bijective. It is closed, hence a $G$-equivariant homeomorphism. \\
 \qed
 \end{dem}
 
