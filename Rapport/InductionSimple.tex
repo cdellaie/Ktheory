@@ -177,11 +177,11 @@ Every ample groupoid is in class $\mathcal C$.
 %\qed
 %\end{dem}
 
-\begin{dem} The following argument is an adaptation of the lemmas $2.41$ and $2.42$ of \cite{TuNonHaus}. I owe to Christian Bönicke the knowledge of these results.\\ 
+\begin{dem} The following argument is an adaptation of the lemmas $2.41$ and $2.42$ of \cite{TuNonHaus}.\\% I owe to Christian Bönicke the knowledge of these results.\\ 
 
 Let $G$ be an étale ample groupoid and $Z$ a $G$-space with proper action of $G$. Let $z_0\in Z$ and let $W$ be a compact open neighborhood of $x_0=p(z_0)\in G^{(0)}$. Let $F$ be the stabilizer of $z_0$. By properness, it is a finite group. We can suppose $W$ small enough to satisfy that, for any $g\in F$, there exist bisections $U_g \subseteq G$ such that $W \subseteq s(U_g)$. Denote by $\rho_g : W\rightarrow$ corresponding local sections of $s$ such that $\rho_g(x_0)=g$. We denote by $\alpha_g =r\circ \rho_g$ the corresponding partial homeomorphisms. By continuity of the product, we can suppose $W$ small enough to satisfy 
 \[\rho_{g'}(\alpha_g(x))\rho_g(x) = \rho_{g'g}(x) \quad\forall x\in W\]
-for all $g$ and $g'$ composable in $F$. Set $W_0 = \cap_{g\in F}\alpha_g(W)$, which is a $F$-invariant neighborhood of $x_0$. It is edowed with an action of $F$ by $g.w=\alpha_g(w)$, and 
+for all $g$ and $g'$ composable in $F$. Set $W_0 = \cap_{g\in F}\alpha_g(W)$, which is a $F$-invariant neighborhood of $x_0$. It is endowed with an action of $F$ by $g.w=\alpha_g(w)$, and 
 
 \[\phi : \left\{ \begin{array}{rcl}
 W_0\rtimes F & \rightarrow & G_{|W_0} \\ 
@@ -189,16 +189,18 @@ W_0\rtimes F & \rightarrow & G_{|W_0} \\
 
 defines a morphism of groupoids. Then $H= \phi(W_0\rtimes F)$ is a compact open subgroupoid of $G$.\\
 
-There exists a neighborhood of $z_0$ such that $V\cap \alpha_g(V) \neq \emptyset \Rightarrow g\in H$. Let $K\subseteq V$ be a compact $H$-invariant neighborhood of $z_0$. Then   
+There exists a neighborhood of $z_0$ such that $V\cap \alpha_g(V) \neq \emptyset \Rightarrow g\in H$. Indeed, denote by $\alpha : G\times_{s,p} Z\rightarrow Z$ the action and let $C$ be  $(G\times U) \setminus (H\times U)$. Hence $(z_0,z_0)\notin \alpha(C)$, hence there exists a neighborhood $V$ of $z_0$ such that $V\times V \subseteq \alpha(C)$. This $V$ satisfies the previous condition. \\
+
+Let $K\subseteq V$ be a compact $H$-invariant neighborhood of $z_0$. Then   
 \[\Psi : \left\{ \begin{array}{rcl}
-G\times_H Y & \rightarrow & GY \\ 
+G\times_H K & \rightarrow & G.K \\ 
 (g,y) & \mapsto & g.y \end{array}\right.\]
-is well defined, continuous and $G$-equivariant. If $gy =g'y' $, then $g^{-1}g'\in H$, hence $\Psi$ is bijective. It is closed, hence a $G$-equivariant homeomorphism. \\
+is well defined, continuous and $G$-equivariant. If $gy =g'y' $, then $g^{-1}g'\in H$, hence $\Psi$ is bijective. As the action on $K$ being proper, $G\times_{s,p} K \rightarrow K\times GK$ is closed. Moreover, $K$ being compact, $pr_2 : K\times GK \rightarrow GK$ is closed. Hence $\Psi$ is closed by composition, hence a $G$-equivariant homeomorphism. \\
 \qed
 \end{dem}
 
 \begin{rk}
-Let $\Gamma$ be a discrete group. Then every proper action of $\Gamma$ on a space $Z$ is strongly proper by definition.
+Let $\Gamma$ be a discrete group. Then every proper action of $\Gamma$ on a space $Z$ is strongly proper by definition.% hence $\Gamma$ is in $\mathcal C$.
 \end{rk}
 
 
