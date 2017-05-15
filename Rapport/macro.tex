@@ -1,4 +1,4 @@
-\usepackage[frenchb]{babel}
+\usepackage[frenchb,british]{babel}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -57,11 +57,13 @@
 %\pagestyle{headings}
 
 \usepackage{fancyhdr}
-\pagestyle{fancy}
+%\pagestyle{fancy}
 
 \renewcommand{\headrulewidth}{1pt}
-\fancyhead[LE]{Chapter \thechapter}
-\fancyhead[RO]{ \thesection }
+\fancyhead[LE]{\nouppercase{\leftmark}}
+\fancyhead[RO]{\nouppercase{\rightmark}}
+%\fancyhead[LE]{Chapter \thechapter \leftmark}
+%\fancyhead[RO]{ \thesection \rightmark}
 \fancyhead[RE,LO]{}
 
 %\fancyhead[R]{\thepage}
