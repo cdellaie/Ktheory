@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Induction and Restriction functors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We develop a restriction principle in order to apply the "Going Down" technique developed in \cite{ChabertEOY}. A restriction principle for groupoids has been studied in great details by Christian Bönicke in his PhD thesis (unpublished so far).
+
+\begin{definition} A subset $H\subseteq G$ is called a subgroupoid if :
+\begin{itemize}
+\item[$\bullet$] for every $x\in H^{(0)}$, $e_x\in H$,
+\item[$\bullet$] for all $h,h'\in H $ such that $s(h') = r(h)$, $h'h \in H$,
+\item[$\bullet$] if $h\in H$, $h^{-1}\in H$.
+\end{itemize}
+Then, the restriction of the multiplication, inverse, unit, target and source maps on $H$ defines a structure of groupoid on $H$ over $H^{(0)} = s(H)$. If $G$ is étale, $H$ is also étale. We will write $H< G$ to indicate that $H$ is a subgroupoid of $G$.
+\end{definition}
+
+In this section, we define for all compact subgroupoids $H < G$ induction and restriction transformations. Let $G$ be an étale groupoid and $H<G$. The action of $G$ on $C_0(G)$ given by 
+\[\left\{ \begin{array}{rcl}
+C_0(G) & \rightarrow & C_0(G) \\
+f & \mapsto  & [x\in G^{s(g)}\mapsto f(gx) ]
+\end{array}\right.\] 
+is called left translation.\\
+
+Let $A$ be a $H$-algebra, with action given by $\alpha : s^*A \rightarrow r^* A$. Consider the tensor product of $C(H^{(0)})$-algebras $C_0(G)\otimes_{C(H^{(0)})} A$. Left translation provides a structure of $G$-algebra on $C_0(G)\otimes_{C(H^{(0)})} A$. Define the induced $C(G^{(0)})$-algebra by :
+\[\text{Ind}_H^G (A) = \{f \in C_0(G)\otimes_{C(H^{(0)})} A \text{ s.t. } \alpha_{h^{-1}}(f_{hg}) = f_g,\forall h\in H,g\in G^{s(h)}\}. \]
+Notice that $\text{Ind}_H^G A$ can be identified with the $G$-algebra of $H$-invariant element of $C_0(G)\otimes_{C(H^{(0)})} A$, which we will denote by $(C_0(G)\otimes A )^H$ for the remainder of the section.\\
+
+Let $E$ be a Hilbert $A$-module, endowed with an action $V\in\mathcal L_A(s^*E,r^*E)$ of $H$. Define the induced Hilbert module as follows. The space $C_c(G)\otimes_s E$ is endowed with an action of $H$ by left translation on the $C_c(G)$ factor.  Let $E_0$ be the space of $H$-invariant elements of $C_c(G)\otimes E$. Define on $E_0$ the following inner product :
+\[\langle\langle \xi, \eta\rangle\rangle = \int \alpha(s^*\langle \xi,\eta\rangle)d\lambda \quad \forall \xi,\eta\in E_0, \]
+which gives fiberwise that 
+\[\langle\langle \xi, \eta\rangle\rangle_x = \frac{1}{|H^x|}\int_{G^x} \alpha_g(\langle \xi (g),\eta (g)\rangle_{s(g)})d\lambda^x(g)\quad \forall x\in G^{(0)}.\]
+Then, there exists a unique action of $A$ on $E_0$ such that 
+\[(\xi .b)_{s(g)} = \xi_{s(g)}.\alpha_{g^-1}(b_{r(g)}) \quad \forall \xi \in E_0, b\in B,g\in G.\]
+Indeed, up to taking a particion of unity relative to an open cover of $G$ by compact bisections, it is sufficient to define the action on $C_0(U)\otimes_s E $ for $U$ a compact bisection. Then, if $f\otimes \xi \in C_0(U)\otimes_s E $, the action of $a\in A$ is given by 
+\[(f\otimes \xi ) . a = f\otimes (\xi.b ).  \]
+This extends to the completion of $E_0$ with respect to the previous inner product $\langle\langle \ , \ \rangle\rangle$, hence the completion is a $A$-Hilbert module. It is endowed with a $G$-action given by left translation on the $G$ factor. Hence this completion is a $G$-equivariant Hilbert $A$-module, called the induced module and denoted by $\text{Ind}_H^G (E)$.\\  
+
+Let $Z$ be a right $H$-space. Define on $Z\times_{p,r} G$ the following equivalence relation :
+\[(z,g)\sim_H (z.h, h^{-1}g)\quad \forall z\in Z, h\in H^{p(z)},g\in G^{p(z)}.\]
+
+Let $Z$ be a left $H$-space. Define on $G \times_{s,p} Z $ the following equivalence relation :
+\[(g,z)\sim_H (gh^{-1}, h.z)\quad \forall z\in Z, h\in H_{p(z)},g\in G_{p(z)}.\]
+
+\begin{definition}
+The induced $G$-space of a left $H$-space $Z$ is defined as $ G\times_H Z = (G \times_{s,p} Z) / \sim_H$. 
+\end{definition}
+
+Notice that we have a natural identification between $\text{Ind}_H^G C_0(Z)$ and $C_0(G \times_H Z)$.\\
+
+Let $Z$ be a $H$-space and $B$ a $H$-algebra. For all $(E,\pi,T)\in \mathbb E^H(C_0(Z),B)$, define $\tilde\pi = id\otimes \pi$ and $\tilde T$ as $1\otimes T$. Then $(Ind_H^G (E), \tilde \pi, \tilde T)\in \mathbb E^G(C_0(G\times_H V),B)$.\\
+
+Set
+\[Ind_H^G :
+\left\{\begin{array}{rcl} 
+RK^H(Z,B) & \rightarrow & RK^G(G\times_H Z,B) \\
+\ [E,\pi,T ] & \mapsto & [ Ind_H^G (E), \tilde \pi, \tilde T ] \end{array} \right.\]
+
+\begin{lem} \label{Restriction} Let $H$ be a compact open subgroupoid of $G$, and $V$ a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective. Then, for every $H$-algebra $A$ and every $G$-algebra $B$, we have an isomorphism of $\Z_2$-graded abelian groups :
+\[RK^G( G\times_H V, B) \cong RK^H(V, Res_H^G B).\]
+\end{lem}
+
+\begin{dem} It is clear that induction followed by restriction is the identity.\\ 
+
+For the converse, let $(E,\pi,T)\in \mathbb E^G(C_0(G\times_H V),B)$. The moment map is locally injective, hence, by lemma \ref{JLTform}, we can suppose that $T$ is self-adjoint $G$-equivariant and commutes with the action of $C_0(G\times_H V)$. As $H$ is open in $G$, $x\mapsto (e_{p(x)},x)$ is a topological embedding and $V$ can be seen as a $H$-invariant open subset in $G\times_H V$. Denote by $E_V$ the Hilbert $H$-invariant $B$-submodule of $E$ generated by 
+\[\{\pi(f)\xi \ ,f\in C_0(V), \xi\in E\}.\]
+
+Then $E_{V}$ is a $H$-equivariant Hilbert $Res_H^G(B)$-module, such that $E\cong Ind_H^G (E_V)$. Indeed, let $\{G_i\}_i$ be a cover of $G_{|H^{(0)}}$ by compact open bisections. For each $i$, let $\{H_{ij}\}_j$ be an open cover of $r^{-1}( s(G_i))\cap H$ by compact open bisections $H_{ij} \subseteq H$. Up to taking a subcover, we can suppose $s(G_i) = r(H_{ij})$, for every $i$ and $j$. Put $\tilde G_i = \coprod G_i \circ H_{ij}$, which is a $H$-invariant open subset of $G$, when taking right-translation of $H$ on $G$. Let $\{\phi_i\}_i$ be continuous functions $\phi_i : G^{(0)}\rightarrow [0,1]$ such that 
+\[\sum_{i} \phi_i(x) = 1\quad \forall x\in r(G_{|H^{(0)}}) \quad \text{ and } \quad supp \ \phi_i\subseteq r(G_i) .\]
+$C_0(\tilde G_i)$ is stable by the action of $H$ by left translation, hence $f\mapsto (\phi_i\circ r) . f$ induces a homomorphism 
+\[\Big(C_0(G)\otimes_s E_V\Big)^H \rightarrow \left( C_0(\tilde G_i)\otimes_s E_V\right)^H .\] 
+Moreover $C_0(\tilde G_i) = \bigoplus_j C_0(G_i\circ H_{ij})$, and the action $V\in \mathcal L_{s^*B}(s^* E, r^* E)$ induces an isomorphism
+\[ E_{s(H_{ij})}=C_0(G_i\circ H_{ij})\otimes_s E \rightarrow C_0(G_i\circ H_{ij})\otimes_r E = E_{r(G_{i})}. \]
+Combining these, we get an application 
+\[ \Big(C_0(\tilde G_i)\otimes_s E_V\Big)^H \rightarrow (C_0(\tilde G_i)\otimes_r E)^H \cong C_0(\tilde G_i/H)\otimes_r E \]
+for every $i$. Composing with the map $f\otimes \xi \mapsto f\xi$ induces
+\[\Psi_i : \Big(C_0(\tilde G_i)\otimes_s E_V\Big)^H \rightarrow E_{r(G_i)}\]
+for every $i$. 
+Let us show that $\Psi_i$ is an isomorphism. For every $x\in r(\tilde G_i)$, there exists $g_x\in \tilde G_i$ such that $r(g_x)=x$. Hence the evaluation map induces an isomorphism 
+\[\left( C_0(\tilde G_j / H) \otimes_r E \right)_x \cong_{ev_{g_i^x}} E_x.\] 
+Let $x\in H^{(0)}$, and let $g_x \in \tilde G_i$ such that $r(g_x) = x$ as before. We identify elements of $(C_0(\tilde G_i)\otimes_s E_V)^H$ with continuous functions $f : \tilde G_i \rightarrow E_V$ such that $V_h(f(gh)_{s(h)})= f(g)_{r(g)}$ for any $g\in \tilde G_i$ and any $h\in H^{s(g)}$. Then 
+\[ (\Psi_i)_x(f_x) = V_{g_x}\left( f(g_{x})_{s(g_x)} \right)\quad \forall f\in \left( C_0(\tilde G_i)\otimes_s E_V\right)^H, \]
+which is an isomorphism. Notice that, by the $H$-equivariance of $f$, this last identity does not depend on the $g_x$ chosen, because they all differ by a right translation by an element in $H$. \\
+
+Define $\Psi : Ind_H^G (E_V)\rightarrow E$ by $\sum_{i,g\in G_x}(\phi_i\circ r) \Psi_i$. Then 
+\[(\Psi)_x(f_x) =  \sum_{i}\phi_i(x)V_{g_x}(f(g_x)_{s(g_x)}) = V_{g_x}(f(g_x)_{s(g_x)})  \]
+\[\begin{array}{rl}
+(\Psi)_x(f_x) & = \sum_{i,g}\phi_i(g)V_g(f(g)_{s(g)}) \\
+		& = \sum_{i}\phi_i(g_x)V_{g_x}(f(g_x)_{s(g_x)}) \\
+		& = \sum_{i, h\in G^x}\phi_i(g_x h)V_{g_x}(f(g_x)_{s(g_x)}) \\
+		& = V_{g_x h}((f(g_x)_{s(g_x)})
+\end{array}\]
+for every $f\in \left( C_0( G)\otimes_{C_0(H^{(0)})} E_V\right)^H$ and any $x\in H^{(0)}$.  Hence $\Psi$ is an isomorphism.\\ %The passage from the second line to the third uses the equivariance condition on $f$. Hence $\Psi$ is an isomorphism.\\ 
+
+%isomorphism $Ind_H^G (E_V) \cong \bigoplus_i E_{r(G_i)} \cong E $.\\
+%Then, $E = \oplus_{g\in G/H} E_{gV}$. Notice that $E_{V}$ is a $H$-equivariant Hilbert $Res_H^G(B)$-module, such that $E\cong Ind_H^G (E_V)$.
+%Moreover, $\pi$ is $G$-equivariant, hence $\pi(a) = Ind_H^G (\pi(a)_{|E_V} )$. As $[T,\pi(a)]=0$ for every $a\in C_0(G\times_H V)$, $T(E_V)\subseteq E_V$, and by $G$-equivariance, $T_{|E_V}$ determines $T$. Hence $T= Ind_H^G (T_{|E_V})$. Hence, if $z=[E,\pi,T]$ and $z_H =[E_V,\pi(a)_{|E_V},T_{|E_V}]$, we proved that $z = Ind_H^G( z_H)$, hence $Ind_H^G \circ Res_H^G (z)= z$.\\
+\qed  
+\end{dem}
+
+\subsection{Strongly proper groupoids}
+
+We now introduce a property on groupoids that will entail a nice result on induction and restriction transformations at the level of $K$-homology.
+
+\begin{definition}\label{StronglyProper}
+A groupoid $G$ is said to be strongly proper if there exists an open cover $\mathcal U$ of $G^{(0)}$ such that, for all $U\in\mathcal U$, there exists a compact open subgroupoid $H_U$ of $G$ and a $H_U$-space $Z_U$ together with a $G$-equivariant homeomorphism
+\[\psi_U : U \rightarrow G\times_{H_U} Z_U.\] 
+An action of $G$ on a space $Z$ is said to be strongly proper if the groupoid $Z\rtimes G$ is strongly proper. A groupoid is said to be in the class $\mathcal C$ if every proper action of $G$ is strongly proper.
+\end{definition}
+
+\begin{rk}
+For any strongly proper action of $G$ on a space $Z$, there exists an open cover of $Z$ by subsets of the type $V=G\times_H U$, where $H$ is a compact open subgroupoid and $U$ is a $H$-space. Then, by the previous section, we have an isomorphism
+\[RK^G(V,B)\cong RK^H(U, Res_H^G (B))\]
+for every $G$-algebra $B$. 
+\end{rk}
+
+Let us give examples of groupoids in class $\mathcal C$. Recall the following definition from \cite{Renault} (page $20$).
+
+\begin{definition}
+A topological groupoid is said to be ample if it has a basis $G^a$ of neighborhoods consisting of compact open subsets.
+\end{definition}
+
+In \cite{paterson} (page $17$) is stated the following property. An étale groupoid $G$ is ample iff $G^{(0)}$ is totally disconnected. Hence the coarse groupoid of every coarse space $X$ is ample, its basis being $\beta X$.
+
+\begin{prop}
+Every ample groupoid is in class $\mathcal C$.
+\end{prop}
+
+\begin{dem} The following argument is an adaptation of the lemmas $2.41$ and $2.42$ of \cite{TuNonHaus}.\\% I owe to Christian Bönicke the knowledge of these results.\\ 
+
+Let $G$ be an étale ample groupoid and $Z$ a $G$-space with proper action of $G$. Let $z_0\in Z$ and let $W$ be a compact open neighborhood of $x_0=p(z_0)\in G^{(0)}$. Let $F$ be the stabilizer of $z_0$. By properness, it is a finite group. We can suppose $W$ small enough to satisfy that, for any $g\in F$, there exist bisections $U_g \subseteq G$ such that $W \subseteq s(U_g)$. Denote by $\rho_g : W\rightarrow$ corresponding local sections of $s$ such that $\rho_g(x_0)=g$. We denote by $\alpha_g =r\circ \rho_g$ the corresponding partial homeomorphisms. By continuity of the product, we can suppose $W$ small enough to satisfy 
+\[\rho_{g'}(\alpha_g(x))\rho_g(x) = \rho_{g'g}(x) \quad\forall x\in W\]
+for all $g$ and $g'$ composable in $F$. Set $W_0 = \cap_{g\in F}\alpha_g(W)$, which is a $F$-invariant neighborhood of $x_0$. It is endowed with an action of $F$ by $g.w=\alpha_g(w)$, and 
+
+\[\phi : \left\{ \begin{array}{rcl}
+W_0\rtimes F & \rightarrow & G_{|W_0} \\ 
+(w,g) & \mapsto & \alpha_g(w) \end{array}\right.\] 
+
+defines a morphism of groupoids. Then $H= \phi(W_0\rtimes F)$ is a compact open subgroupoid of $G$.\\
+
+There exists a neighborhood of $z_0$ such that $V\cap \alpha_g(V) \neq \emptyset \Rightarrow g\in H$. Indeed, denote by $\alpha : G\times_{s,p} Z\rightarrow Z$ the action and let $C$ be  $(G\times U) \setminus (H\times U)$. Hence $(z_0,z_0)\notin \alpha(C)$, hence there exists a neighborhood $V$ of $z_0$ such that $V\times V \subseteq \alpha(C)$. This $V$ satisfies the previous condition. \\
+
+Let $K\subseteq V$ be a compact $H$-invariant neighborhood of $z_0$. Then   
+\[\Psi : \left\{ \begin{array}{rcl}
+G\times_H K & \rightarrow & G.K \\ 
+(g,y) & \mapsto & g.y \end{array}\right.\]
+is well defined, continuous and $G$-equivariant. If $gy =g'y' $, then $g^{-1}g'\in H$, hence $\Psi$ is bijective. As the action on $K$ being proper, $G\times_{s,p} K \rightarrow K\times GK$ is closed. Moreover, $K$ being compact, $pr_2 : K\times GK \rightarrow GK$ is closed. Hence $\Psi$ is closed by composition, hence a $G$-equivariant homeomorphism. \\
+\qed
+\end{dem}
+
+%\begin{rk}
+%Let $\Gamma$ be a discrete group. Then every proper action of $\Gamma$ on a space $Z$ is strongly proper by definition.% hence $\Gamma$ is in $\mathcal C$.
+%\end{rk}
