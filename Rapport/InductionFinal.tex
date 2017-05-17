@@ -20,18 +20,18 @@ f & \mapsto  & [x\in G^{s(g)}\mapsto f(gx) ]
 \end{array}\right.\] 
 is called left translation.\\
 
-Let $A$ be a $H$-algebra, with action given by $\alpha : s^*A \rightarrow r^* A$. Consider the tensor product of $C(H^{(0)})$-algebras $C_0(G)\otimes_{C(H^{(0)})} A$. Left translation provides a structure of $G$-algebra on $C_0(G)\otimes_{C(H^{(0)})} A$. Define the induced $C(G^{(0)})$-algebra by :
-\[\text{Ind}_H^G (A) = \{f \in C_0(G)\otimes_{C(H^{(0)})} A \text{ s.t. } \alpha_{h^{-1}}(f_{hg}) = f_g,\forall h\in H,g\in G^{s(h)}\}. \]
-Notice that $\text{Ind}_H^G A$ can be identified with the $G$-algebra of $H$-invariant element of $C_0(G)\otimes_{C(H^{(0)})} A$, which we will denote by $(C_0(G)\otimes A )^H$ for the remainder of the section.\\
+%Let $A$ be a $H$-algebra, with action given by $\alpha : s^*A \rightarrow r^* A$. Consider the tensor product of $C(H^{(0)})$-algebras $C_0(G)\otimes_{C(H^{(0)})} A$. Left translation provides a structure of $G$-algebra on $C_0(G)\otimes_{C(H^{(0)})} A$. Define the induced $C(G^{(0)})$-algebra by :
+%\[\text{Ind}_H^G (A) = \{f \in C_0(G)\otimes_{C(H^{(0)})} A \text{ s.t. } \alpha_{h^{-1}}(f_{hg}) = f_g,\forall h\in H,g\in G^{s(h)}\}. \]
+%Notice that $\text{Ind}_H^G A$ can be identified with the $G$-algebra of $H$-invariant element of $C_0(G)\otimes_{C(H^{(0)})} A$, which we will denote by $(C_0(G)\otimes A )^H$ for the remainder of the section.\\
 
-Let $E$ be a Hilbert $A$-module, endowed with an action $V\in\mathcal L_A(s^*E,r^*E)$ of $H$. Define the induced Hilbert module as follows. The space $C_c(G)\otimes_s E$ is endowed with an action of $H$ by left translation on the $C_c(G)$ factor.  Let $E_0$ be the space of $H$-invariant elements of $C_c(G)\otimes E$. Define on $E_0$ the following inner product :
+Let $E$ be a Hilbert $A$-module, endowed with an action $V\in\mathcal L_A(s^*E,r^*E)$ of $H$. Define the induced Hilbert module as follows. The space $C_c(G)\otimes_s E$ is endowed with an action of $H$ by left translation on the $C_c(G)$ factor.  Let $E_0$ be the space of $H$-invariant elements of $C_c(G)\otimes E$. Define on $E_0$ the following $A$-valued inner product :
 \[\langle\langle \xi, \eta\rangle\rangle = \int \alpha(s^*\langle \xi,\eta\rangle)d\lambda \quad \forall \xi,\eta\in E_0, \]
 which gives fiberwise that 
 \[\langle\langle \xi, \eta\rangle\rangle_x = \frac{1}{|H^x|}\int_{G^x} \alpha_g(\langle \xi (g),\eta (g)\rangle_{s(g)})d\lambda^x(g)\quad \forall x\in G^{(0)}.\]
 Then, there exists a unique action of $A$ on $E_0$ such that 
-\[(\xi .b)_{s(g)} = \xi_{s(g)}.\alpha_{g^-1}(b_{r(g)}) \quad \forall \xi \in E_0, b\in B,g\in G.\]
-Indeed, up to taking a particion of unity relative to an open cover of $G$ by compact bisections, it is sufficient to define the action on $C_0(U)\otimes_s E $ for $U$ a compact bisection. Then, if $f\otimes \xi \in C_0(U)\otimes_s E $, the action of $a\in A$ is given by 
-\[(f\otimes \xi ) . a = f\otimes (\xi.b ).  \]
+\[(\xi .a)_{s(g)} = \xi_{s(g)}.\alpha_{g^-1}(a_{r(g)}) \quad \forall \xi \in E_0, a\in A,g\in G.\]
+Indeed, up to taking a partition of unity relative to an open cover of $G$ by compact bisections, it is sufficient to define the action on $C_0(U)\otimes_s E $ for $U$ a compact bisection. Then, if $f\otimes \xi \in C_0(U)\otimes_s E $, the action of $a\in A$ is given by 
+\[(f\otimes \xi ) . a = f\otimes (\xi.a ).  \]
 This extends to the completion of $E_0$ with respect to the previous inner product $\langle\langle \ , \ \rangle\rangle$, hence the completion is a $A$-Hilbert module. It is endowed with a $G$-action given by left translation on the $G$ factor. Hence this completion is a $G$-equivariant Hilbert $A$-module, called the induced module and denoted by $\text{Ind}_H^G (E)$.\\  
 
 Let $Z$ be a right $H$-space. Define on $Z\times_{p,r} G$ the following equivalence relation :
@@ -44,9 +44,9 @@ Let $Z$ be a left $H$-space. Define on $G \times_{s,p} Z $ the following equival
 The induced $G$-space of a left $H$-space $Z$ is defined as $ G\times_H Z = (G \times_{s,p} Z) / \sim_H$. 
 \end{definition}
 
-Notice that we have a natural identification between $\text{Ind}_H^G C_0(Z)$ and $C_0(G \times_H Z)$.\\
+%Notice that we have a natural identification between $\text{Ind}_H^G C_0(Z)$ and $C_0(G \times_H Z)$.\\
 
-Let $Z$ be a $H$-space and $B$ a $H$-algebra. For all $(E,\pi,T)\in \mathbb E^H(C_0(Z),B)$, define $\tilde\pi = id\otimes \pi$ and $\tilde T$ as $1\otimes T$. Then $(Ind_H^G (E), \tilde \pi, \tilde T)\in \mathbb E^G(C_0(G\times_H V),B)$.\\
+Let $Z$ be a $H$-space and $B$ a $G$-algebra. Let $(E,\pi,T)\in \mathbb E^H(C_0(Z),B)$ such that $T$ is $H$-equivariant and commutes with the action of $C_0(Z)$. Define $\tilde\pi = id\otimes \pi$ and $\tilde T$ as $1\otimes T$. Then $(Ind_H^G (E), \tilde \pi, \tilde T)\in \mathbb E^G(C_0(G\times_H V),B)$. Indeed, \\
 
 Set
 \[Ind_H^G :
@@ -54,45 +54,45 @@ Set
 RK^H(Z,B) & \rightarrow & RK^G(G\times_H Z,B) \\
 \ [E,\pi,T ] & \mapsto & [ Ind_H^G (E), \tilde \pi, \tilde T ] \end{array} \right.\]
 
-\begin{lem} \label{Restriction} Let $H$ be a compact open subgroupoid of $G$, and $V$ a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective. Then, for every $H$-algebra $A$ and every $G$-algebra $B$, we have an isomorphism of $\Z_2$-graded abelian groups :
-\[RK^G( G\times_H V, B) \cong RK^H(V, Res_H^G B).\]
+Let $V$ be a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective. Let $(E,\pi,T)\in \mathbb E^G(C_0(G\times_H V),B)$ such that $T$ is $G$-equivariant and commutes with the action of $C_0(G\times_H V)$. By lemma \ref{JLTform}, every $KK$-element of $KK^G(C_0(G\times_H Z),B)$ is represented by a $K$-cycle of this type.  As $H$ is open in $G$, $x\mapsto (e_{p(x)},x)$ is a topological embedding and $V$ can be seen as a $H$-invariant open subset in $G\times_H V$. Denote by $E_V$ the Hilbert $H$-invariant $B$-submodule of $E$ generated by 
+\[\{\pi(f)\xi \ ,f\in C_0(V), \xi\in E\}.\]
+Then $E_{V}$ is a $H$-equivariant Hilbert $B$-module. Moreover, $\pi$ is $G$-equivariant, and \[[T,\pi(a)]=0\] for every $a\in C_0(G\times_H V)$. This ensures that $(E_V,\pi_{|C_0(V)}, T_{|E_V}) \in \mathbb E^H(C_0(V),B)$. We set:
+
+\[Res_H^G :
+\left\{\begin{array}{rcl} 
+ RK^G(G\times_H V,B) & \rightarrow & RK^H(V,B) \\
+\ [E,\pi,T ] & \mapsto & [ E_V,\pi_{|C_0(V)}, T_{|E_V} ] \end{array} \right.\]
+
+\begin{lem} \label{Restriction} Let $H$ be a compact open subgroupoid of $G$, and $V$ a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective. Then, for every $G$-algebra $B$, we have an isomorphism of $\Z_2$-graded abelian groups :
+\[RK^G( G\times_H V, B) \cong RK^H(V, B).\]
 \end{lem}
 
 \begin{dem} It is clear that induction followed by restriction is the identity.\\ 
 
-For the converse, let $(E,\pi,T)\in \mathbb E^G(C_0(G\times_H V),B)$. The moment map is locally injective, hence, by lemma \ref{JLTform}, we can suppose that $T$ is self-adjoint $G$-equivariant and commutes with the action of $C_0(G\times_H V)$. As $H$ is open in $G$, $x\mapsto (e_{p(x)},x)$ is a topological embedding and $V$ can be seen as a $H$-invariant open subset in $G\times_H V$. Denote by $E_V$ the Hilbert $H$-invariant $B$-submodule of $E$ generated by 
-\[\{\pi(f)\xi \ ,f\in C_0(V), \xi\in E\}.\]
+For the converse, let $(E,\pi,T)\in \mathbb E^G(C_0(G\times_H V),B)$. The moment map is locally injective, hence, by lemma \ref{JLTform}, we can suppose that $T$ is self-adjoint $G$-equivariant and commutes with the action of $C_0(G\times_H V)$.\\
 
-Then $E_{V}$ is a $H$-equivariant Hilbert $Res_H^G(B)$-module, such that $E\cong Ind_H^G (E_V)$. Indeed, let $\{G_i\}_i$ be a cover of $G_{|H^{(0)}}$ by compact open bisections. For each $i$, let $\{H_{ij}\}_j$ be an open cover of $r^{-1}( s(G_i))\cap H$ by compact open bisections $H_{ij} \subseteq H$. Up to taking a subcover, we can suppose $s(G_i) = r(H_{ij})$, for every $i$ and $j$. Put $\tilde G_i = \coprod G_i \circ H_{ij}$, which is a $H$-invariant open subset of $G$, when taking right-translation of $H$ on $G$. Let $\{\phi_i\}_i$ be continuous functions $\phi_i : G^{(0)}\rightarrow [0,1]$ such that 
+Let $E_V$ be the $H$-equivariant Hilbert $B$-module previously defined. Let us show that $E_{V}$ satisfies $E\cong Ind_H^G (E_V)$. Indeed, let $\{G_i\}_i$ be a cover of $G_{|H^{(0)}}$ by compact open bisections. For each $i$, let $\{H_{ij}\}_j$ be an open cover of $r^{-1}( s(G_i))\cap H$ by compact open bisections $H_{ij} \subseteq H$. Up to taking a subcover, we can suppose $s(G_i) = r(H_{ij})$, for every $i$ and $j$. Put $\tilde G_i = \coprod G_i \circ H_{ij}$, which is a $H$-invariant open subset of $G$, when taking right-translation of $H$ on $G$. Let $\{\phi_i\}_i$ be continuous functions $\phi_i : G^{(0)}\rightarrow [0,1]$ such that 
 \[\sum_{i} \phi_i(x) = 1\quad \forall x\in r(G_{|H^{(0)}}) \quad \text{ and } \quad supp \ \phi_i\subseteq r(G_i) .\]
 $C_0(\tilde G_i)$ is stable by the action of $H$ by left translation, hence $f\mapsto (\phi_i\circ r) . f$ induces a homomorphism 
-\[\Big(C_0(G)\otimes_s E_V\Big)^H \rightarrow \left( C_0(\tilde G_i)\otimes_s E_V\right)^H .\] 
+\[Ind_H^G(E_V) \rightarrow Ind_H^G(E_V)_{|s(\tilde G_i)} .\] 
 Moreover $C_0(\tilde G_i) = \bigoplus_j C_0(G_i\circ H_{ij})$, and the action $V\in \mathcal L_{s^*B}(s^* E, r^* E)$ induces an isomorphism
 \[ E_{s(H_{ij})}=C_0(G_i\circ H_{ij})\otimes_s E \rightarrow C_0(G_i\circ H_{ij})\otimes_r E = E_{r(G_{i})}. \]
 Combining these, we get an application 
-\[ \Big(C_0(\tilde G_i)\otimes_s E_V\Big)^H \rightarrow (C_0(\tilde G_i)\otimes_r E)^H \cong C_0(\tilde G_i/H)\otimes_r E \]
+\[ Ind_H^G(E_V)_{|s(\tilde G_i)} \rightarrow (C_0(\tilde G_i)\otimes_r E)^H \cong C_0(\tilde G_i/H)\otimes_r E \]
 for every $i$. Composing with the map $f\otimes \xi \mapsto f\xi$ induces
-\[\Psi_i : \Big(C_0(\tilde G_i)\otimes_s E_V\Big)^H \rightarrow E_{r(G_i)}\]
+\[\Psi_i : Ind_H^G(E_V)_{|s(\tilde G_i)} \rightarrow E_{r(G_i)}\]
 for every $i$. 
-Let us show that $\Psi_i$ is an isomorphism. For every $x\in r(\tilde G_i)$, there exists $g_x\in \tilde G_i$ such that $r(g_x)=x$. Hence the evaluation map induces an isomorphism 
+Let us compute $\Psi_i$ fiberwise. For every $x\in r(\tilde G_i)$, there exists $g_x\in \tilde G_i$ such that $r(g_x)=x$. Hence the evaluation map induces an isomorphism 
 \[\left( C_0(\tilde G_j / H) \otimes_r E \right)_x \cong_{ev_{g_i^x}} E_x.\] 
-Let $x\in H^{(0)}$, and let $g_x \in \tilde G_i$ such that $r(g_x) = x$ as before. We identify elements of $(C_0(\tilde G_i)\otimes_s E_V)^H$ with continuous functions $f : \tilde G_i \rightarrow E_V$ such that $V_h(f(gh)_{s(h)})= f(g)_{r(g)}$ for any $g\in \tilde G_i$ and any $h\in H^{s(g)}$. Then 
-\[ (\Psi_i)_x(f_x) = V_{g_x}\left( f(g_{x})_{s(g_x)} \right)\quad \forall f\in \left( C_0(\tilde G_i)\otimes_s E_V\right)^H, \]
+Let $x\in H^{(0)}$, and let $g_x \in \tilde G_i$ such that $r(g_x) = x$ as before. We identify elements of $Ind_H^G(E_V)_{|s(\tilde G_i)}$ with sections $f : \tilde G_i \rightarrow E_V$ such that $V_h(f(gh)_{s(h)})= f(g)_{r(g)}$ for any $g\in \tilde G_i$ and any $h\in H^{s(g)}$. Then 
+\[ (\Psi_i)_x(f_x) = V_{g_x}\left( f(g_{x})_{s(g_x)} \right)\quad \forall f\in Ind_H^G(E_V)_{|s(\tilde G_i)}, \]
 which is an isomorphism. Notice that, by the $H$-equivariance of $f$, this last identity does not depend on the $g_x$ chosen, because they all differ by a right translation by an element in $H$. \\
 
 Define $\Psi : Ind_H^G (E_V)\rightarrow E$ by $\sum_{i,g\in G_x}(\phi_i\circ r) \Psi_i$. Then 
 \[(\Psi)_x(f_x) =  \sum_{i}\phi_i(x)V_{g_x}(f(g_x)_{s(g_x)}) = V_{g_x}(f(g_x)_{s(g_x)})  \]
-\[\begin{array}{rl}
-(\Psi)_x(f_x) & = \sum_{i,g}\phi_i(g)V_g(f(g)_{s(g)}) \\
-		& = \sum_{i}\phi_i(g_x)V_{g_x}(f(g_x)_{s(g_x)}) \\
-		& = \sum_{i, h\in G^x}\phi_i(g_x h)V_{g_x}(f(g_x)_{s(g_x)}) \\
-		& = V_{g_x h}((f(g_x)_{s(g_x)})
-\end{array}\]
-for every $f\in \left( C_0( G)\otimes_{C_0(H^{(0)})} E_V\right)^H$ and any $x\in H^{(0)}$.  Hence $\Psi$ is an isomorphism.\\ %The passage from the second line to the third uses the equivariance condition on $f$. Hence $\Psi$ is an isomorphism.\\ 
+for every $f\in \left( C_0( G)\otimes_{C_0(H^{(0)})} E_V\right)^H$ and any $x\in H^{(0)}$.  Hence $\Psi$ is an isomorphism.\\ 
 
-%isomorphism $Ind_H^G (E_V) \cong \bigoplus_i E_{r(G_i)} \cong E $.\\
-%Then, $E = \oplus_{g\in G/H} E_{gV}$. Notice that $E_{V}$ is a $H$-equivariant Hilbert $Res_H^G(B)$-module, such that $E\cong Ind_H^G (E_V)$.
-%Moreover, $\pi$ is $G$-equivariant, hence $\pi(a) = Ind_H^G (\pi(a)_{|E_V} )$. As $[T,\pi(a)]=0$ for every $a\in C_0(G\times_H V)$, $T(E_V)\subseteq E_V$, and by $G$-equivariance, $T_{|E_V}$ determines $T$. Hence $T= Ind_H^G (T_{|E_V})$. Hence, if $z=[E,\pi,T]$ and $z_H =[E_V,\pi(a)_{|E_V},T_{|E_V}]$, we proved that $z = Ind_H^G( z_H)$, hence $Ind_H^G \circ Res_H^G (z)= z$.\\
+Moreover, $\pi$ is $G$-equivariant, hence $\pi(a) = Ind_H^G (\pi(a)_{|E_V} )$. As $[T,\pi(a)]=0$ for every $a\in C_0(G\times_H V)$, $T(E_V)\subseteq E_V$, and by $G$-equivariance, $T_{|E_V}$ determines $T$. Hence $T= Ind_H^G (T_{|E_V})$. Hence, if $z=[E,\pi,T]$ and $z_H =[E_V,\pi(a)_{|E_V},T_{|E_V}]$, we proved that $z = Ind_H^G( z_H)$, hence $Ind_H^G \circ Res_H^G (z)= z$.\\
 \qed  
 \end{dem}
 
