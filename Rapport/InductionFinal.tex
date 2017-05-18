@@ -13,26 +13,28 @@ We develop a restriction principle in order to apply the "Going Down" technique 
 Then, the restriction of the multiplication, inverse, unit, target and source maps on $H$ defines a structure of groupoid on $H$ over $H^{(0)} = s(H)$. If $G$ is étale, $H$ is also étale. We will write $H< G$ to indicate that $H$ is a subgroupoid of $G$.
 \end{definition}
 
-In this section, we define for all compact subgroupoids $H < G$ induction and restriction transformations. Let $G$ be an étale groupoid and $H<G$. The action of $G$ on $C_0(G)$ given by 
+In this section, we define for all compact open subgroupoids $H < G$ induction and restriction transformations. Let $G$ be an étale groupoid and $H<G$. The action of $G$ on $C_0(G)$ given by 
 \[\left\{ \begin{array}{rcl}
 C_0(G) & \rightarrow & C_0(G) \\
 f & \mapsto  & [x\in G^{s(g)}\mapsto f(gx) ]
 \end{array}\right.\] 
 is called left translation.\\
 
+Let $H < G$ be a compact open subgroupoid.\\
+
 %Let $A$ be a $H$-algebra, with action given by $\alpha : s^*A \rightarrow r^* A$. Consider the tensor product of $C(H^{(0)})$-algebras $C_0(G)\otimes_{C(H^{(0)})} A$. Left translation provides a structure of $G$-algebra on $C_0(G)\otimes_{C(H^{(0)})} A$. Define the induced $C(G^{(0)})$-algebra by :
 %\[\text{Ind}_H^G (A) = \{f \in C_0(G)\otimes_{C(H^{(0)})} A \text{ s.t. } \alpha_{h^{-1}}(f_{hg}) = f_g,\forall h\in H,g\in G^{s(h)}\}. \]
 %Notice that $\text{Ind}_H^G A$ can be identified with the $G$-algebra of $H$-invariant element of $C_0(G)\otimes_{C(H^{(0)})} A$, which we will denote by $(C_0(G)\otimes A )^H$ for the remainder of the section.\\
 
-Let $E$ be a Hilbert $A$-module, endowed with an action $V\in\mathcal L_A(s^*E,r^*E)$ of $H$. Define the induced Hilbert module as follows. The space $C_c(G)\otimes_s E$ is endowed with an action of $H$ by left translation on the $C_c(G)$ factor.  Let $E_0$ be the space of $H$-invariant elements of $C_c(G)\otimes E$. Define on $E_0$ the following $A$-valued inner product :
-\[\langle\langle \xi, \eta\rangle\rangle = \int \alpha(s^*\langle \xi,\eta\rangle)d\lambda \quad \forall \xi,\eta\in E_0, \]
+Let $E$ be a Hilbert $A$-module, endowed with an action $V\in\mathcal L_A(s^*E,r^*E)$ of $H$. Define the induced Hilbert module as follows. The space $C_0(G)\otimes_s E$ is endowed with an action of $H$ by left translation on the $C_0(G)$ factor.  Let $E_0$ be the space of compactly supported $H$-invariant elements of $C_0(G)\otimes E$, and $h\in C_0(G^{(0)})$ be the function $x\mapsto \frac{1}{\sup (|H^x|,1)}$. Define on $E_0$ the following $A$-valued inner product :
+\[\langle\langle \xi, \eta\rangle\rangle = h\ \int \alpha(s^*\langle \xi,\eta\rangle)d\lambda \quad \forall \xi,\eta\in E_0, \]
 which gives fiberwise that 
-\[\langle\langle \xi, \eta\rangle\rangle_x = \frac{1}{|H^x|}\int_{G^x} \alpha_g(\langle \xi (g),\eta (g)\rangle_{s(g)})d\lambda^x(g)\quad \forall x\in G^{(0)}.\]
+\[\langle\langle \xi, \eta\rangle\rangle_x = \frac{1}{|H^x|}\sum_{g\in G^x} \alpha_g(\langle \xi (g),\eta (g)\rangle_{s(g)})\quad \forall x\in G^{(0)}.\]
 Then, there exists a unique action of $A$ on $E_0$ such that 
 \[(\xi .a)_{s(g)} = \xi_{s(g)}.\alpha_{g^-1}(a_{r(g)}) \quad \forall \xi \in E_0, a\in A,g\in G.\]
-Indeed, up to taking a partition of unity relative to an open cover of $G$ by compact bisections, it is sufficient to define the action on $C_0(U)\otimes_s E $ for $U$ a compact bisection. Then, if $f\otimes \xi \in C_0(U)\otimes_s E $, the action of $a\in A$ is given by 
+Indeed, up to taking a partition of unity relative to an open cover of $G$ by compact bisections, it is sufficient to define the action on $C_0(U)\otimes_s E $ for $U$ a relatively compact subset. Then, if $f\otimes \xi \in C_0(U)\otimes_s E $, the action of $a\in A$ is given by 
 \[(f\otimes \xi ) . a = f\otimes (\xi.a ).  \]
-This extends to the completion of $E_0$ with respect to the previous inner product $\langle\langle \ , \ \rangle\rangle$, hence the completion is a $A$-Hilbert module. It is endowed with a $G$-action given by left translation on the $G$ factor. Hence this completion is a $G$-equivariant Hilbert $A$-module, called the induced module and denoted by $\text{Ind}_H^G (E)$.\\  
+It is easy to check that if $\xi,\eta\in E_0$ and $a\in A$, then $\xi.a\in E_0$, $\langle\langle \xi,\eta.a \rangle\rangle= \langle\langle \xi,\eta \rangle\rangle . a$ and that left translation, denoted by $V\in\mathcal L_{s^* B}(s^* E, r^* E)$, is unitary. Hence this defines a structure of $G$-equivariant pre-Hilbert $A$-module. The action of $A$ extends to the completion of $E_0$ with respect to the previous inner product $\langle\langle \ , \ \rangle\rangle$, hence the completion is a $G$-equivariant Hilbert $A$-module, called the induced module and denoted by $\text{Ind}_H^G (E)$.\\  
 
 Let $Z$ be a right $H$-space. Define on $Z\times_{p,r} G$ the following equivalence relation :
 \[(z,g)\sim_H (z.h, h^{-1}g)\quad \forall z\in Z, h\in H^{p(z)},g\in G^{p(z)}.\]
@@ -46,10 +48,12 @@ The induced $G$-space of a left $H$-space $Z$ is defined as $ G\times_H Z = (G \
 
 %Notice that we have a natural identification between $\text{Ind}_H^G C_0(Z)$ and $C_0(G \times_H Z)$.\\
 
-Let $Z$ be a $H$-space and $B$ a $G$-algebra. Let $(E,\pi,T)\in \mathbb E^H(C_0(Z),B)$ such that $T$ is $H$-equivariant and commutes with the action of $C_0(Z)$. Define $\tilde\pi = id\otimes \pi$ and $\tilde T$ as $1\otimes T$. We have that 
+Let $V$ be a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective and $B$ a $G$-algebra. \\
+
+Let $(E,\pi,T)\in \mathbb E^H(C_0(V),B)$ such that $T$ is $H$-equivariant and commutes with the action of $C_0(V)$. Define $\tilde\pi = id\otimes \pi$ and $\tilde T$ as $1\otimes T$. We have that 
 \[(\tilde T\xi)_{s(g)} = T(\xi(g)_{s(g)})\quad \forall \xi \in Ind_H^G(E),  \]
-hence $\tilde T\in\mathcal L_B(Ind_H (E))$. 
-Then $(Ind_H^G (E), \tilde \pi, \tilde T)\in \mathbb E^G(C_0(G\times_H V),B)$. Indeed, \\
+hence $H$-equivariance of $T$ implies $\tilde T\in\mathcal L_B(Ind_H (E))$. Then 
+\[(Ind_H^G (E), \tilde \pi, \tilde T)\in \mathbb E^G(C_0(G\times_H V),B).\] Indeed, \\ %%% A FAIRE
 
 Set
 \[Ind_H^G :
@@ -57,7 +61,7 @@ Set
 RK^H(Z,B) & \rightarrow & RK^G(G\times_H Z,B) \\
 \ [E,\pi,T ] & \mapsto & [ Ind_H^G (E), \tilde \pi, \tilde T ] \end{array} \right.\]
 
-Let $V$ be a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective. Let $(E,\pi,T)\in \mathbb E^G(C_0(G\times_H V),B)$ such that $T$ is $G$-equivariant and commutes with the action of $C_0(G\times_H V)$. By lemma \ref{JLTform}, every $KK$-element of $KK^G(C_0(G\times_H Z),B)$ is represented by a $K$-cycle of this type.  As $H$ is open in $G$, $x\mapsto (e_{p(x)},x)$ is a topological embedding and $V$ can be seen as a $H$-invariant open subset in $G\times_H V$. Denote by $E_V$ the Hilbert $H$-invariant $B$-submodule of $E$ generated by 
+Let $(E,\pi,T)\in \mathbb E^G(C_0(G\times_H V),B)$ such that $T$ is $G$-equivariant and commutes with the action of $C_0(G\times_H V)$. By lemma \ref{JLTform}, every $KK$-element of $KK^G(C_0(G\times_H Z),B)$ is represented by a $K$-cycle of this type.  As $H$ is open in $G$, $x\mapsto (e_{p(x)},x)$ is a topological embedding and $V$ can be seen as a $H$-invariant open subset in $G\times_H V$. Denote by $E_V$ the Hilbert $H$-invariant $B$-submodule of $E$ generated by 
 \[\{\pi(f)\xi \ ,f\in C_0(V), \xi\in E\}.\]
 Then $E_{V}$ is a $H$-equivariant Hilbert $B$-module. Moreover, $\pi$ is $G$-equivariant, and \[[T,\pi(a)]=0\] for every $a\in C_0(G\times_H V)$. This ensures that $(E_V,\pi_{|C_0(V)}, T_{|E_V}) \in \mathbb E^H(C_0(V),B)$. We set:
 
