@@ -53,7 +53,7 @@ Let $V$ be a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is lo
 Let $(E,\pi,T)\in \mathbb E^H(C_0(V),B)$ such that $T$ is $H$-equivariant and commutes with the action of $C_0(V)$. Define $\tilde\pi = id\otimes \pi$ and $\tilde T$ as $1\otimes T$. We have that 
 \[(\tilde T\xi)_{s(g)} = T(\xi(g)_{s(g)})\quad \forall \xi \in Ind_H^G(E),  \]
 hence $H$-equivariance of $T$ implies $\tilde T\in\mathcal L_B(Ind_H (E))$. Then 
-\[(Ind_H^G (E), \tilde \pi, \tilde T)\in \mathbb E^G(C_0(G\times_H V),B).\] Indeed, \\ %%% A FAIRE
+\[(Ind_H^G (E), \tilde \pi, \tilde T)\in \mathbb E^G(C_0(G\times_H V),B).\] %Indeed, \\ %%% A FAIRE
 
 Set
 \[Ind_H^G :
@@ -70,7 +70,9 @@ Then $E_{V}$ is a $H$-equivariant Hilbert $B$-module. Moreover, $\pi$ is $G$-equ
  RK^G(G\times_H V,B) & \rightarrow & RK^H(V,B) \\
 \ [E,\pi,T ] & \mapsto & [ E_V,\pi_{|C_0(V)}, T_{|E_V} ] \end{array} \right.\]
 
-\begin{lem} \label{Restriction} Let $H$ be a compact open subgroupoid of $G$, and $V$ a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective. Then, for every $G$-algebra $B$, we have an isomorphism of $\Z_2$-graded abelian groups :
+We will use the notation $\left( C_0(G)\otimes_s E \right)^H$ for the $H$-invariant elements of $C_0(G)\otimes_s E$.
+
+\begin{lem} \label{Restriction} Let $H$ be a compact open subgroupoid of $G$, and $V$ a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective. Then, for every $G$-algebra $B$, we have an isomorphism of $\Z_2$-graded abelian groups:
 \[RK^G( G\times_H V, B) \cong RK^H(V, B).\]
 \end{lem}
 
@@ -81,11 +83,11 @@ For the converse, let $(E,\pi,T)\in \mathbb E^G(C_0(G\times_H V),B)$. The moment
 Let $E_V$ be the $H$-equivariant Hilbert $B$-module previously defined. Let us show that $E_{V}$ satisfies $E\cong Ind_H^G (E_V)$. Indeed, let $\{G_i\}_i$ be a cover of $G_{|H^{(0)}}$ by compact open bisections. For each $i$, let $\{H_{ij}\}_j$ be an open cover of $r^{-1}( s(G_i))\cap H$ by compact open bisections $H_{ij} \subseteq H$. Up to taking a subcover, we can suppose $s(G_i) = r(H_{ij})$, for every $i$ and $j$. Put $\tilde G_i = \coprod G_i \circ H_{ij}$, which is a $H$-invariant open subset of $G$, when taking right-translation of $H$ on $G$. Let $\{\phi_i\}_i$ be continuous functions $\phi_i : G^{(0)}\rightarrow [0,1]$ such that 
 \[\sum_{i} \phi_i(x) = 1\quad \forall x\in r(G_{|H^{(0)}}) \quad \text{ and } \quad supp \ \phi_i\subseteq r(G_i) .\]
 $C_0(\tilde G_i)$ is stable by the action of $H$ by left translation, hence $f\mapsto (\phi_i\circ r) . f$ induces a homomorphism 
-\[Ind_H^G(E_V) \rightarrow Ind_H^G(E_V)_{|s(\tilde G_i)} .\] 
+\[\Big(C_0(G)\otimes_s E_V\Big)^H \rightarrow \left( C_0(\tilde G_i)\otimes_s E_V\right)^H .\]  
 Moreover $C_0(\tilde G_i) = \bigoplus_j C_0(G_i\circ H_{ij})$, and the action $V\in \mathcal L_{s^*B}(s^* E, r^* E)$ induces an isomorphism
 \[ E_{s(H_{ij})}=C_0(G_i\circ H_{ij})\otimes_s E \rightarrow C_0(G_i\circ H_{ij})\otimes_r E = E_{r(G_{i})}. \]
 Combining these, we get an application 
-\[ Ind_H^G(E_V)_{|s(\tilde G_i)} \rightarrow (C_0(\tilde G_i)\otimes_r E)^H \cong C_0(\tilde G_i/H)\otimes_r E \]
+\[ \Big(C_0(\tilde G_i)\otimes_s E_V\Big)^H \rightarrow (C_0(\tilde G_i)\otimes_r E)^H \cong C_0(\tilde G_i/H)\otimes_r E \]
 for every $i$. Composing with the map $f\otimes \xi \mapsto f\xi$ induces
 \[\Psi_i : Ind_H^G(E_V)_{|s(\tilde G_i)} \rightarrow E_{r(G_i)}\]
 for every $i$. 
