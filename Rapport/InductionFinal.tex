@@ -1,8 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Induction and Restriction functors}
+\subsection{Induction and Restriction transformations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We develop a restriction principle in order to apply the "Going Down" technique developed in \cite{ChabertEOY}. A restriction principle for groupoids has been studied in great details by Christian Bönicke in his PhD thesis (unpublished so far).
+We develop a restriction principle in order to apply the "Going Down" technique developed in \cite{ChabertEOY}. A restriction principle for groupoids has been studied in great details by Christian Bönicke in his PhD thesis (unpublished so far). I would like to thank him for useful discussions and comments.
 
 \begin{definition} A subset $H\subseteq G$ is called a subgroupoid if :
 \begin{itemize}
@@ -13,12 +13,11 @@ We develop a restriction principle in order to apply the "Going Down" technique 
 Then, the restriction of the multiplication, inverse, unit, target and source maps on $H$ defines a structure of groupoid on $H$ over $H^{(0)} = s(H)$. If $G$ is étale, $H$ is also étale. We will write $H< G$ to indicate that $H$ is a subgroupoid of $G$.
 \end{definition}
 
-In this section, we define for all compact open subgroupoids $H < G$ induction and restriction transformations. Let $G$ be an étale groupoid and $H<G$. The action of $G$ on $C_0(G)$ given by 
+In this section, we define for all compact open subgroupoids $H < G$ induction and restriction transformations. Let $G$ be an étale groupoid and $H<G$. The action of $G$ by left translation on the $G$-algebra $C_0(G)$ is the action $C_0(G)\otimes_{s,r} C_0(G) \rightarrow C_0(G)\otimes_{r,r} C_0(G)$ induced by 
 \[\left\{ \begin{array}{rcl}
-C_0(G) & \rightarrow & C_0(G) \\
-f & \mapsto  & [x\in G^{s(g)}\mapsto f(gx) ]
+G\times_{r,r} G & \rightarrow & G\times_{s,r} G \\
+(g,g') & \mapsto  & (g,g^{-1}g')  
 \end{array}\right.\] 
-is called left translation.\\
 
 Let $H < G$ be a compact open subgroupoid.\\
 
@@ -26,14 +25,19 @@ Let $H < G$ be a compact open subgroupoid.\\
 %\[\text{Ind}_H^G (A) = \{f \in C_0(G)\otimes_{C(H^{(0)})} A \text{ s.t. } \alpha_{h^{-1}}(f_{hg}) = f_g,\forall h\in H,g\in G^{s(h)}\}. \]
 %Notice that $\text{Ind}_H^G A$ can be identified with the $G$-algebra of $H$-invariant element of $C_0(G)\otimes_{C(H^{(0)})} A$, which we will denote by $(C_0(G)\otimes A )^H$ for the remainder of the section.\\
 
-Let $E$ be a Hilbert $A$-module, endowed with an action $V\in\mathcal L_A(s^*E,r^*E)$ of $H$. Define the induced Hilbert module as follows. The space $C_0(G)\otimes_s E$ is endowed with an action of $H$ by left translation on the $C_0(G)$ factor.  Let $E_0$ be the space of compactly supported $H$-invariant elements of $C_0(G)\otimes E$, and $h\in C_0(G^{(0)})$ be the function $x\mapsto \frac{1}{\sup (|H^x|,1)}$. Define on $E_0$ the following $A$-valued inner product :
+Let $A$ be a $H$-algebra, with action given by $\alpha : s^*A \rightarrow r^* A$. Let $E$ be a Hilbert $A$-module, endowed with an action $V\in\mathcal L_A(s^*E,r^*E)$ of $H$. Define the induced Hilbert module as follows. The space $C_0(G_{|H^{(0)}} )\otimes_s E$ is endowed with an action of $H$ by left translation on the $C_0(G_{|H^{(0)}})$ factor.  Let $E_0$ be the space of compactly supported $H$-invariant elements of $C_0(G_{|H^{(0)}})\otimes E$, and $h\in C_0(H^{(0)})$ be the function $x\mapsto \frac{1}{|H^x|}$. Define on $E_0$ the following $A$-valued inner product :
 \[\langle\langle \xi, \eta\rangle\rangle = h\ \int \alpha(s^*\langle \xi,\eta\rangle)d\lambda \quad \forall \xi,\eta\in E_0, \]
 which gives fiberwise that 
-\[\langle\langle \xi, \eta\rangle\rangle_x = \frac{1}{|H^x|}\sum_{g\in G^x} \alpha_g(\langle \xi (g),\eta (g)\rangle_{s(g)})\quad \forall x\in G^{(0)}.\]
+\[\langle\langle \xi, \eta\rangle\rangle_x = \frac{1}{|H^x|}\sum_{g\in G^x} \alpha_g(\langle \xi (g),\eta (g)\rangle_{s(g)})\quad \forall x\in H^{(0)}.\]
 Then, there exists a unique action of $A$ on $E_0$ such that 
-\[(\xi .a)_{s(g)} = \xi_{s(g)}.\alpha_{g^-1}(a_{r(g)}) \quad \forall \xi \in E_0, a\in A,g\in G.\]
-Indeed, up to taking a partition of unity relative to an open cover of $G$ by compact bisections, it is sufficient to define the action on $C_0(U)\otimes_s E $ for $U$ a relatively compact subset. Then, if $f\otimes \xi \in C_0(U)\otimes_s E $, the action of $a\in A$ is given by 
-\[(f\otimes \xi ) . a = f\otimes (\xi.a ).  \]
+\[(\xi .a)(g)_{s(g)} = \xi (g)_{s(g)}.\alpha_{g^{-1}}(a_{r(g)}) \quad \forall \xi \in E_0, a\in A,g\in G.\]
+%Indeed,up to taking a partition of unity relative to an open cover of $G$ by compact bisections, it is sufficient to 
+Indeed, let $U$ be a relatively compact bisection. The target map $r$ being a homeomorphism when restricted to $U$, we have an isomorphism 
+\[\Psi_U : A_{r(U)}\cong C_0(U)\otimes_r A\rightarrow_{\alpha^{-1}} C_0(U)\otimes_s A.\] 
+Then, if $f\otimes \xi \in C_0(U)\otimes_s E $, $\Psi_U(a)$ acts naturally on $f\otimes \xi $. Let $\mathcal U$ be an open cover of $G_{|H^ {(0)}}$ by relatively compact bisections, and let $\{\phi_U\}$ be a corresponding partition of unity. Then, if $f\otimes \xi \in E_0$ and $a\in A$, $(f\otimes \xi ) . a $ is defined as the $H$-invariant element obtained by averaging 
+\[\sum_U (\phi_U.f\otimes \xi) \Psi_U(a) ).  \]
+over the $H$-action.\\
+
 It is easy to check that if $\xi,\eta\in E_0$ and $a\in A$, then $\xi.a\in E_0$, $\langle\langle \xi,\eta.a \rangle\rangle= \langle\langle \xi,\eta \rangle\rangle . a$ and that left translation, denoted by $V\in\mathcal L_{s^* B}(s^* E, r^* E)$, is unitary. Hence this defines a structure of $G$-equivariant pre-Hilbert $A$-module. The action of $A$ extends to the completion of $E_0$ with respect to the previous inner product $\langle\langle \ , \ \rangle\rangle$, hence the completion is a $G$-equivariant Hilbert $A$-module, called the induced module and denoted by $\text{Ind}_H^G (E)$.\\  
 
 Let $Z$ be a right $H$-space. Define on $Z\times_{p,r} G$ the following equivalence relation :
@@ -50,9 +54,11 @@ The induced $G$-space of a left $H$-space $Z$ is defined as $ G\times_H Z = (G \
 
 Let $V$ be a $H$-space such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective and $B$ a $G$-algebra. \\
 
-Let $(E,\pi,T)\in \mathbb E^H(C_0(V),B)$ such that $T$ is $H$-equivariant and commutes with the action of $C_0(V)$. Define $\tilde\pi = id\otimes \pi$ and $\tilde T$ as $1\otimes T$. We have that 
+Let $(E,\pi,T)\in \mathbb E^H(C_0(V),B)$ such that $T$ is $H$-equivariant self-adjoint and commutes with the action of $C_0(V)$. Define $\tilde\pi$ and $\tilde T$ as the map and the operator induced by $id\otimes \pi$ and $1\otimes T$ on $Ind_H^G (E)$. We have that 
 \[(\tilde T\xi)_{s(g)} = T(\xi(g)_{s(g)})\quad \forall \xi \in Ind_H^G(E),  \]
-hence $H$-equivariance of $T$ implies $\tilde T\in\mathcal L_B(Ind_H (E))$. Then 
+hence $H$-equivariance of $T$ implies $\tilde T\in\mathcal L_B(Ind_H (E))$. Also, remark that 
+\[(\tilde \pi(a)\xi)(g) =\pi_{s(g)} (a(g,.)_{|V_{s(g)}} ) \xi (g)_{s(g)}\]
+holds for every $a\in C_0(G\times_H V),\xi \in Ind_H^G(E), g\in G$. Then $\tilde T$ is $G$-equivariant self-adjoint, and $[\tilde \pi(a),\tilde T]=0$ for every $a\in C_0(G\times_H V)$.
 
 \begin{lem}
 With the previous notations, if $\tilde E= Ind_H^G (E)$, then 
@@ -60,19 +66,21 @@ With the previous notations, if $\tilde E= Ind_H^G (E)$, then
 \end{lem}
 
 \begin{dem}
-Let us show that $\tilde\pi(a). (\tilde T^2-1)$ and $\tilde\pi(a). (\tilde T^2-1)$ are compact operators, for any $a\in C_0(G\times_H V)$. Recall that, for every Hilbert $B$-module $E$ and any $\xi,\eta\in E$, $\theta_{\xi,\eta}\in\mathfrak K_B(E)$ denotes the rank-one operator $x\mapsto \xi \langle \eta,x\rangle$. For $\theta_{\xi,\eta}$, we will denote by $T_{\xi,\eta}$ the $H$-invariant operator obtained by averaging over the compact subgroupoid $H$. The operators $\tilde\pi(a). (\tilde T^2-1)$ and $\tilde\pi(a). (\tilde T^2-1)$ are in the closure of the algebra generated by the $T_{\xi, \eta}$. Hence, it is sufficient to prove that, for any $a\in C_0(G\times_H V)$, $\tilde \pi(a) T_{\xi,\eta} \in \mathfrak K_B(\tilde E)$.\\ 
+Let us show that $\tilde\pi(a). (\tilde T^2-1)$ are compact operators, for any $a\in C_0(G\times_H V)$. Recall that, for every Hilbert $B$-module $E$ and any $\xi,\eta\in E$, $\theta_{\xi,\eta}\in\mathfrak K_B(E)$ denotes the rank-one operator $s\mapsto \xi \langle \eta,s\rangle$.\\ 
 
-Let $\{G_i\}_i$ be a cover of $G_{|H^{(0)}}$ by compact open bisections. For each $i$, let $\{H_{ij}\}_j$ be an open cover of $r^{-1}( s(G_i))\cap H$ by compact open bisections $H_{ij} \subseteq H$. Up to taking a subcover, we can suppose $s(G_i) = r(H_{ij})$, for every $i$ and $j$. Put $\tilde G_i = \coprod G_i \circ H_{ij}$, which is a $H$-invariant open subset of $G$, when taking right-translation of $H$ on $G$. Let $\{\phi_i\}_i$ be continuous functions $\phi_i : G^{(0)}\rightarrow [0,1]$ such that 
+Let $\{G_i\}_i$ be a cover of $G_{|H^{(0)}}$ by relatively compact open bisections. For each $i$, let $\{H_{ij}\}_j$ be an open cover of $r^{-1}( s(G_i))\cap H$ by relatively compact open bisections $H_{ij} \subseteq H$. Up to taking a subcover, we can suppose $s(G_i) = r(H_{ij})$, for every $i$ and $j$. Put $\tilde G_i = \coprod G_i \circ H_{ij}$, which is a $H$-invariant open subset of $G$, when taking right-translation of $H$ on $G$. Let $\{\phi_i\}_i$ be continuous functions $\phi_i : G^{(0)}\rightarrow [0,1]$ such that 
 \[\sum_{i} \phi_i(x) = 1\quad \forall x\in r(G_{|H^{(0)}}) \quad \text{ and } \quad supp \ \phi_i\subseteq r(G_i) .\] 
-It is sufficient to prove that $\tilde \pi(\phi_i) T_{\xi,\eta} \in \mathfrak K_B(\tilde E)$.\\
+For $\theta_{\xi,\eta}$, we will denote by $T_{\xi,\eta}$ the $H$-invariant operator obtained by averaging $\theta_{\xi,\eta}$ over the compact subgroupoid $H$. The operator $\pi(a)(T^2-1)$ is in the closure of the algebra generated by the $T_{\xi, \eta}$.\\% Hence, it is sufficient to prove that, for any $a\in C_0(G\times_H V)$, $\tilde \pi(a) \tilde T_{\xi,\eta} \in \mathfrak K_B(\tilde E)$, where $\tilde T_{\xi,\eta} = (\phi_i\circ r) \otimes T_{\xi,\eta}$.\\ 
 
-For $x$ in $H^{(0)}$, let $g_x$ the only element of $G_i$ such that $s(g_x)= x$. If $\xi \in E$, define $\tilde \xi\in \tilde E$ the $H$-invariant element obtained from $\phi \otimes_s \xi \in C_0(\tilde G_i)\otimes_s E$. Then, if $x\in \tilde E$: 
+It is sufficient to prove that $\tilde T_{\xi,\eta} \in \mathfrak K_B(\tilde E)$ for every $i$.\\
+
+For $x$ in $H^{(0)}$, let $g_x$ the only element of $G_i$ such that $r(g_x)= x$. If $\xi \in E$, define $\tilde \xi\in \tilde E$ the $H$-invariant element obtained from $\phi_i \circ r \otimes_s \xi \in C_0(\tilde G_i)\otimes_s E$. Then, if $s\in \tilde E$: 
 \[\begin{array}{rcl}
-\theta_{\tilde \xi,\tilde \eta}(x) 	& = & \tilde \xi \frac{1}{|H^x|} \sum_{g\in G^x} \alpha_g (\langle \tilde\eta (g), x(g) \rangle) \\
-					& = & \tilde \xi \frac{1}{|H^x|} \sum_{h\in G_i^{s(g_x)} } \alpha_{g_x h} (\langle \tilde\eta (g_x h), x(g_x h) \rangle) \\
-					& = & \tilde \xi  \alpha_{g_x} (\langle \eta, x(g_x) \rangle)  
+\theta_{\tilde \xi,\tilde \eta}(s) 	& = & \tilde \xi .\ \frac{1}{|H^x|} \sum_{g\in G^x} \alpha_g (\langle \tilde\eta (g), s(g) \rangle) \\
+					& = & \tilde \xi .\ \frac{1}{|H^x|} \sum_{h\in G_i^{s(g_x)} } \alpha_{g_x h} (\langle \tilde\eta (g_x h), s(g_x h) \rangle) \\
+					& = & \tilde \xi .\  \alpha_{g_x} (\langle \eta, s(g_x) \rangle)  \quad \text{ by $H$-invariance.	}
 \end{array}\]
-Hence, $\theta_{\tilde \xi,\tilde \eta}(x)(g) = 0$ if $g\notin \tilde G_i$ et $\tilde \pi (\phi_i) \tilde T_{\xi,\eta} = \theta_{\tilde\xi,\tilde\eta}$, and the proof is complete.\\
+Hence, $\theta_{\tilde \xi,\tilde \eta}(s)(g) = 0$ if $g\notin \tilde G_i$ and $\tilde T_{\xi,\eta} $ is equal to the $H$-invariant operator obtained by averaging (by a finite sum) $ \theta_{\tilde\xi,\tilde\eta}$ over the action of $H$ by left translation. The proof is thus complete.\\
 \qed 
 \end{dem}
 
@@ -101,10 +109,10 @@ We will use the notation $\left( C_0(G)\otimes_s E \right)^H$ for the $H$-invari
 
 For the converse, let $(E,\pi,T)\in \mathbb E^G(C_0(G\times_H V),B)$. The moment map is locally injective, hence, by lemma \ref{JLTform}, we can suppose that $T$ is self-adjoint $G$-equivariant and commutes with the action of $C_0(G\times_H V)$.\\
 
-Let $E_V$ be the $H$-equivariant Hilbert $B$-module previously defined. Let us show that $E_{V}$ satisfies $E\cong Ind_H^G (E_V)$. Indeed, let $\{G_i\}_i$ be a cover of $G_{|H^{(0)}}$ by compact open bisections. For each $i$, let $\{H_{ij}\}_j$ be an open cover of $r^{-1}( s(G_i))\cap H$ by compact open bisections $H_{ij} \subseteq H$. Up to taking a subcover, we can suppose $s(G_i) = r(H_{ij})$, for every $i$ and $j$. Put $\tilde G_i = \coprod G_i \circ H_{ij}$, which is a $H$-invariant open subset of $G$, when taking right-translation of $H$ on $G$. Let $\{\phi_i\}_i$ be continuous functions $\phi_i : G^{(0)}\rightarrow [0,1]$ such that 
+Let $E_V$ be the $H$-equivariant Hilbert $B$-module previously defined. Let us show that $E_{V}$ satisfies $E\cong Ind_H^G (E_V)$. Indeed, let $\{G_i\}_i$ be a cover of $G_{|H^{(0)}}$ by relatively compact open bisections. For each $i$, let $\{H_{ij}\}_j$ be a disjoint open cover of $r^{-1}( s(G_i))\cap H$ by relatively compact open bisections $H_{ij} \subseteq H$. Up to taking a subcover, we can suppose $s(G_i) = r(H_{ij})$, for every $i$ and $j$. Put $\tilde G_i = \coprod G_i \circ H_{ij}$, which is a $H$-invariant open subset of $G$, when taking right-translation of $H$ on $G$. Let $\{\phi_i\}_i$ be continuous functions $\phi_i : G^{(0)}\rightarrow [0,1]$ such that 
 \[\sum_{i} \phi_i(x) = 1\quad \forall x\in r(G_{|H^{(0)}}) \quad \text{ and } \quad supp \ \phi_i\subseteq r(G_i) .\]
 $C_0(\tilde G_i)$ is stable by the action of $H$ by left translation, hence $f\mapsto (\phi_i\circ r) . f$ induces a homomorphism 
-\[\Big(C_0(G)\otimes_s E_V\Big)^H \rightarrow \left( C_0(\tilde G_i)\otimes_s E_V\right)^H .\]  
+\[Ind_H^G(E_V) \rightarrow \left( C_0(\tilde G_i)\otimes_s E_V\right)^H .\]  
 Moreover $C_0(\tilde G_i) = \bigoplus_j C_0(G_i\circ H_{ij})$, and the action $V\in \mathcal L_{s^*B}(s^* E, r^* E)$ induces an isomorphism
 \[ E_{s(H_{ij})}=C_0(G_i\circ H_{ij})\otimes_s E \rightarrow C_0(G_i\circ H_{ij})\otimes_r E = E_{r(G_{i})}. \]
 Combining these, we get an application 
@@ -122,7 +130,7 @@ Define $\Psi : Ind_H^G (E_V)\rightarrow E$ by $\sum_{i,g\in G_x}(\phi_i\circ r) 
 \[(\Psi)_x(f_x) =  \sum_{i}\phi_i(x)V_{g_x}(f(g_x)_{s(g_x)}) = V_{g_x}(f(g_x)_{s(g_x)})  \]
 for every $f\in \left( C_0( G)\otimes_{C_0(H^{(0)})} E_V\right)^H$ and any $x\in H^{(0)}$.  Hence $\Psi$ is an isomorphism.\\ 
 
-Moreover, $\pi$ is $G$-equivariant, hence $\pi(a) = Ind_H^G (\pi(a)_{|E_V} )$. As $[T,\pi(a)]=0$ for every $a\in C_0(G\times_H V)$, $T(E_V)\subseteq E_V$, and by $G$-equivariance, $T_{|E_V}$ determines $T$. Hence $T= Ind_H^G (T_{|E_V})$. Hence, if $z=[E,\pi,T]$ and $z_H =[E_V,\pi(a)_{|E_V},T_{|E_V}]$, we proved that $z = Ind_H^G( z_H)$, hence $Ind_H^G \circ Res_H^G (z)= z$.\\
+Moreover, $\pi$ is $G$-equivariant, hence $\pi(a) = \tilde\pi(a)_{|E_V}$. As $[T,\pi(a)]=0$ for every $a\in C_0(G\times_H V)$, $T(E_V)\subseteq E_V$, and by $G$-equivariance, $T_{|E_V}$ determines $T$. Hence $T= \tilde T_{|E_V}$. Hence, if $z=[E,\pi,T]$ and $z_H =[E_V,\pi(a)_{|E_V},T_{|E_V}]$, we proved that $z = Ind_H^G( z_H)$, hence $Ind_H^G \circ Res_H^G (z)= z$.\\
 \qed  
 \end{dem}
 
@@ -138,7 +146,7 @@ An action of $G$ on a space $Z$ is said to be strongly proper if the groupoid $Z
 
 \begin{rk}
 For any strongly proper action of $G$ on a space $Z$, there exists an open cover of $Z$ by subsets of the type $V=G\times_H U$, where $H$ is a compact open subgroupoid and $U$ is a $H$-space. Then, by the previous section, we have an isomorphism
-\[RK^G(V,B)\cong RK^H(U, Res_H^G (B))\]
+\[RK^G(V,B)\cong RK^H(U,B))\]
 for every $G$-algebra $B$. 
 \end{rk}
 
