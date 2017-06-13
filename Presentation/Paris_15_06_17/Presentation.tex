@@ -1,0 +1,42 @@
+%% Beamer Template of Sabine Hauert and R.~Eddie Wilson
+%% Available on https://www.overleaf.com/latex/templates/eddies-minimum-beamer-style/qhcyjdqkbbgx#.V-vfg1SLS1I
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Head matter - can we try to be consistent on
+% included packages
+
+\documentclass{beamer}
+\mode<presentation>
+{\usetheme{default}
+ \usecolortheme{default}
+ \usefonttheme{default}
+ \setbeamertemplate{navigation symbols}{}
+ \setbeamertemplate{caption}[numbered]} 
+
+
+% Block colors
+\setbeamercolor{block body}{bg=blue!10,fg=black}
+\setbeamercolor{block title}{bg=blue!30,fg=black}
+
+\include{macro}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting for title page
+\title[First Steps with SCRATCH]{Principe de restriction pour les groupoïdes étales}
+\author{Clément Dell'Aiera}
+\institute{IECL}
+\date{15 Juin 2017}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%% TITRE
+\begin{frame}
+  \titlepage
+\begin{center}\includegraphics[width=5cm]{IECL.png}\end{center}
+\end{frame}
+
+\section{$K$-théorie contrôllée}
+\include{Groupoids}
+
+\end{document}
