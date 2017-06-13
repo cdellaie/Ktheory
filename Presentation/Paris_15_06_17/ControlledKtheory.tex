@@ -1,0 +1,138 @@
+
+\begin{frame}{$K$-théorie contrôllée}
+
+\begin{definitionfr}
+Une structure coarse $\mathcal E$ est un semi-groupe abélien qui est aussi un treillis. \\
+\end{definitionfr}
+
+Rappelons qu'un treillis est un ensemble partiellement ordonné tel que toute paire $(E,E')$ admette un supremum $E\vee E'$ et un infimum $E\wedge E'$.\\
+
+On note $(E,E')\mapsto E\circ E'$ la loi de composition de $\mathcal E$.
+\end{frame}
+
+\begin{frame}{$K$-théorie contrôllée}
+\begin{definitionfr}
+Une $C^*$-algèbre $A$ est $\mathcal E$-filtrée s'il existe une famille de sous-espaces vectoriels fermés auto-adjoints $\{A_E\}_{E\in\mathcal E}$ de $A$ telle que :
+\begin{itemize}
+\item[$\bullet$] si $E\leq E'$, alors $A_E\subseteq A_{E'}$,
+\item[$\bullet$] pour tout $E,E'\in\mathcal E$, $A_E.A_{E'}\subseteq A_{E\circ E'}$,
+\item[$\bullet$] $A$ est l'adhérence de l'union des sous-espaces $A_E$, i.e. $\overline{\cup_{E\in\mathcal E}A_E} = A$.
+\item[$\bullet$] si $A$ est unitale, on a de plus $1\in A_E,\forall E\in\mathcal E$.
+\end{itemize}
+\end{definitionfr}
+
+Si $\mathcal E = \R_+^*$ muni de la somme, on retrouve la définition de Oyono-Oyono et Yu. 
+\end{frame}
+
+\begin{frame}{$K$-théorie contrôllée}
+
+Plus de $C^*$-algèbres peuvent être vues commes des $C^*$-algèbres filtrées.
+
+\begin{exple}
+Les $C^*$-algèbres de Roe sont filtrées.
+\end{exple}
+
+\begin{exple}
+Les produits croisés de $C^*$-algèbres par des actions de groupoïdes étales sont filtrées.
+\end{exple}
+
+\begin{exple}
+Les produits croisés de $C^*$-algèbres par des actions de groupes quantiques discrets sont filtrées.
+\end{exple}
+
+\end{frame}
+
+\begin{frame}{$K$-théorie contrôllée}
+Soit $\mathcal E$ une structure coarse et $A$ une $C^*$-algèbre $\mathcal E$ filtrée. On définit les $\varepsilon$-$E$-unitaires
+\[U^{\varepsilon, E}(A)= \{u\in A_E \text{ s.t. } ||u^*u-1||<\varepsilon\text{ and }||uu^*-1||<\varepsilon \}\]
+et les $\varepsilon$-$E$-projections 
+\[P^{\varepsilon, E}(A)= \{p\in A_E \text{ s.t. } p=p^*\text{ and }||p^2-p||<\varepsilon \}.\]
+\end{frame}
+
+\begin{frame}{$K$-théorie contrôllée}
+Comme en $K$-théorie, 
+\begin{itemize}
+\item[$\bullet$] $P_\infty^{\varepsilon, E}(A)$ est la limite inductive algébrique des $P_n^{\varepsilon, E}(A)$ par rapports aux inclusions
+\[\left\{\begin{array}{rcl}
+	P^{\varepsilon,E}_n(A) 		& \rightarrow	& P^{\varepsilon,E}_{n+1}(A)\\ 
+	p 		& \mapsto 	& \begin{pmatrix}p& 0 \\ 0&0 \end{pmatrix}
+\end{array}\right.\]
+\item[$\bullet$] $U_\infty^{\varepsilon, E}(A)$ est la limite inductive algébrique des $U_n^{\varepsilon, E}(A)$ par rapports à
+\[\left\{\begin{array}{rcl}
+	U^{\varepsilon,E}_n(A) 		& \rightarrow	& U^{\varepsilon,E}_{n+1}(A)\\ 
+	u 		& \mapsto 	& \begin{pmatrix}u & 0 \\ 0& 1 \end{pmatrix}
+\end{array}\right. .\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{$K$-théorie contrôllée}
+On munit $P_\infty^{\varepsilon, E}(A)$ et $U_\infty^{\varepsilon, E}(A)$ des relations d'équivalence suivantes:
+\begin{itemize}
+\item[$\bullet$] $(p,l) \sim (q,l')$ s'il existe une homotopie de quasi-projections $h\in P^{\varepsilon, E}_\infty(A[0,1])$ et un entier $k$ tel que 
+\[h(0)=\begin{pmatrix} p & 0 \\ 0 & 1_{k+l'} \end{pmatrix} \text{ and }
+h(1)=\begin{pmatrix} q & 0 \\ 0 & 1_{k+l} \end{pmatrix}\]
+\item[$\bullet$] $u \sim v$ s'il existe une homotopie de quasi-unitaires $h\in U^{3\varepsilon, E\circ E}_\infty(A[0,1])$ tel que $h(0)= u \text{ and }h(1)=v$.\\
+\end{itemize}
+\end{frame}
+
+\begin{frame}{$K$-théorie contrôllée}
+Si $A$ est unitale,
+\begin{itemize}
+\item[$\bullet$] $K_0^{\varepsilon,E}(A) = P^{\varepsilon, E}_\infty(A)\times \N / \sim_{\varepsilon,E}$ 
+\item[$\bullet$] $K_1^{\varepsilon,E}(A) = U^{\varepsilon, E}_\infty(A) / \sim_{\varepsilon,E}$.
+\end{itemize}
+
+Si $A$ n'est pas unitale,  
+\[K_0^{\varepsilon,E}(A) = \{[p,l]_{\varepsilon,E} : p\in P^{\varepsilon,E}_\infty (\tilde A), l\in \N \text{ s.t. rank}(\kappa_0(\rho_A(p)))=l \}\]
+et $K_1^{\varepsilon,E}(A)$ is defined as $U_\infty^{\varepsilon,E}(\tilde A)/ \sim_{\varepsilon,E}$.\\
+
+\begin{definition}
+La $K$-théorie contrôllée d'une $C^*$-algèbre filtrée $(A,\mathcal E)$ est la famille de groupes abéliens 
+\[\hat K_0(A) = (K_0^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E} \text{ et } \hat K_1(A) = (K_1^{\varepsilon,E}(A))_{\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E}.\]
+\end{definition}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
