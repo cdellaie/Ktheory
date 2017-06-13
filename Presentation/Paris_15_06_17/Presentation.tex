@@ -18,6 +18,10 @@
 \setbeamercolor{block body}{bg=blue!10,fg=black}
 \setbeamercolor{block title}{bg=blue!30,fg=black}
 
+% Pour que tikzcd fonctionne
+%\[\begin{tikzcd}[ampersand replacement=\&, column sep=small]\end{tikzcd}\]
+
+
 \include{macro}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,12 +41,15 @@
 \end{frame}
 
 \section{Motivations}
-\include{Groupoids}
+\include{Motivations}
 
 \section{$K$-théorie contrôllée}
 \include{ControlledKtheory}
 
 \section{Formule de Künneth}
 \include{Kunneth}
+
+\section{Groupoïdes}
+\include{Groupoids}
 
 \end{document}

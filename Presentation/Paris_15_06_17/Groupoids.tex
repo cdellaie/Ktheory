@@ -1,48 +1,61 @@
-\begin{frame}{Motivations}
-
-Soit $X$ un espace métrique dénombrable discret à géométrie bornée, i.e. $\sup_{x\in X} |B(x,R)|<\infty$ pour tout $R>0$. On note $H_X = l^2(X)\otimes H$ et 
-
-\[C_R[X] = \{T\in \mathcal L(H_X) \text{ t.q. } T_{xy} \in \mathfrak K(H) \text{ et } prop(T) < R \}\]
-
-\begin{definitionfr}[Algèbre de Roe]
-\[C^*(X) = \overline{\cup_{R>0} C_R[X]} \subseteq \mathcal L(H_X).\]
+\begin{frame}{Groupoïdes}
+Soit $G \rightrightarrows G^{(0)} $ un groupoïde localement compact.\\
+\vspace{0.3 cm}
+On note $r,s:G \rightrightarrows G^{(0)}$ les applications source et but, $e : G^{(0)} \rightarrow G$ l'application unité, et 
+\[G^{(2)} = \{(g,g') \in G\times G \text{ t.q. } s(g)=r(g')\}\]
+les paires composables.\\
+\vspace{0.3 cm}
+\begin{definitionfr}
+Le groupoïde $G$ est dit étale si l'application but $r : G \rightarrow G^{(0)} $ est un homéomorphisme local.
 \end{definitionfr}
+
 \end{frame}
 
-\begin{frame}{Motivations}
-\begin{conj}[Baum-Connes coarse]
-Soit $X$ un espace métrique dénombrable discret à géométrie bornée. Alors l'application d'assemblage
-\[\mu_X : \varinjlim KK_*(C_0(P_d(X),\C) \rightarrow K_*(C^*(X))\]
-est un isomorphisme.
-\end{conj}
+\begin{frame}{Groupoïdes}
 
-Soit $\Gamma$ un groupe finiment engendré par une partie symmétrique $S$. On note $|\Gamma|$ l'espace métrique obtenu en munissant $\Gamma$ de la métrique de la longueur des mots. \\
+Une $C(G^{(0)}$-algèbre $A$ est la donnée d'une $C^*$-algèbre $A$ muni d'un $*$-morphisme non-dégénéré $\theta : C(G^{(0)}) \rightarrow Z(\mathcal M(A))$.\\ 
 
-La conjecture de Baum-Connes coarse pour $|\Gamma |$ implique la conjecture de Novikov sur les hautes signatures associées à $\Gamma$. 
+\begin{definitionfr}
+L'espace $C_c(G,A)$ des sections à support compact est défini comme
+\[C_c(G,A) = \bigcup_U C_0(U)\otimes_s A\]
+où $U$ parcourt les ouvert $U\subseteq G$ relativement compacts.
+\end{definitionfr}
+
 \end{frame}
 
-\begin{frame}{Motivations}
+\begin{frame}{Groupoïdes}
 
-\begin{thmfr}[Yu, 2010]
-Soit $X$ de dimension asymptotique finie. Alors l'application d'assemblage
-\[\mu_X : \varinjlim KK(C_0(P_d(X),\C) \rightarrow K(C^*(X))\]
-est un isomorphisme.
+Une action de $G$ sur une $C(G^{(0)})$-algèbre $A$ est la donnée d'un isomorphisme de $C(G)$-algèbres 
+\[\alpha : s^* A \rightarrow r^* A\]
+tel que $\alpha_{e_x} = id$ et $\alpha_g \circ \alpha_{g'}  = \alpha_{gg'}$ pour tout $x\in G^{(0)}$ et toute paire composable $(g,g') \in G^{(2)}$. 
+
+\begin{definitionfr}
+Le produit croisé
+\end{definitionfr}
+
+\end{frame}
+
+
+\begin{frame}{Groupoïdes}
+\begin{thmfr}
+Soit $G$ un groupoïde étale de la classe $\mathcal C$, et soient $E\in\mathcal E$ un ensemble contrôlé de $G$ et $P_E(G)$ le complexe de Rips associé. Si, pour tout sous-groupoïde compact ouvert $H$ de $G$ et tout $H$-espace $V$ tel que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective, $\alpha_{Res_H^G(A),B}^{H,V}$ est un isomorphisme, alors $\alpha_{A,B}^{G,P_E(G)}$ est un isomorphisme pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ est un groupe abélien libre.\\
 \end{thmfr}
-
-Dans la preuve : des groupes notés $QP_{\delta, r ,s, k}(X)$ et $QU_{\delta, r ,s, k}(X)$ qui approximent $K_0(C^*(X))$ et $K_1(C^*(X))$.
-
 \end{frame}
 
-\begin{frame}{Motivations}
-
-Un cadre plus général : la $K$-théorie quantitative (Oyono-Oyono \& Yu, 2015) pour les $C^*$-algèbres filtrées.\\
-
-Une preuve plus générale :
-
-\begin{thmfr}[Oyono-Oyono Yu, 2017]
-Soit $X$ de décomposition géométrique finie. Alors l'application d'assemblage
-\[\mu_X : \varinjlim KK(C_0(P_d(X),\C) \rightarrow K(C^*(X))\]
-est un isomorphisme.
+\begin{frame}{Groupoïdes}
+\begin{thmfr}
+Soit $G$ un groupoïde $\sigma$-compact étale et $A$ une $G$-algèbre. Si 
+\begin{itemize}
+\item[$\bullet$] $G$ vérifie la conjecture de Baum-Connes à coefficients,
+\item[$\bullet$] $G$ est un groupoïde fortement propre,
+\item[$\bullet$] pour tout sous-groupoïde compact $H$ de $G$ et tout $H$-espace $V$ telle que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective, $\alpha_{Res_H^G(A),B}^{G,V}$ est un isomorphisme.
+\end{itemize} 
+Alors $A\rtimes_r G$ vérifie la formule de Künneth contrôlée.
 \end{thmfr}
+\end{frame}
 
+\begin{frame}{Groupoïdes}
+\end{frame}
+
+\begin{frame}{Groupoïdes}
 \end{frame}
