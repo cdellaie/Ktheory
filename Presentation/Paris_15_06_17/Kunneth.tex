@@ -1,0 +1,63 @@
+\begin{frame}{Künneth}
+Pour toutes $C^*$-algèbres $A$ et $B$, on définit
+\[\alpha_{A,B} : K_*(A)\otimes K_*(B)\rightarrow K_*(A\otimes B) \quad ; \quad (x,y)\mapsto x\otimes   \tau_A(y).\]
+
+\begin{definitionfr}
+Une $C^*$-algèbre $A$ satisfait la formule de Künneth si, pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ soit libre, $\alpha_{A,B}$ est un isomorphisme.
+\end{definitionfr}
+
+Si $A$ satisfait la formule de Künneth, alors, pour toute $C^*$-algèbre $B$, la suite suivante
+\[0  \rightarrow K_*(A)\otimes K_*(B) \rightarrow K_*(A\otimes B)  \rightarrow Tor(K_*(A),K_*(B)) \rightarrow 0\]
+est exacte.
+
+\end{frame}
+
+\begin{frame}{Künneth}
+Si $A$ est $\mathcal E$-filtrée, $A\otimes B$ est $\mathcal E$-filtrée par $\{A_E\otimes B\}_E$. On définit le morphisme contrôllé  
+\[\hat\alpha_{A,B} : \hat K_*(A)\otimes K_*(B)\rightarrow \hat K_*(A\otimes B) \quad ; \quad (x,y)\mapsto \hat\tau_A(y)(x),\]
+qui induit $\alpha_{A,B}$ en $K$-théorie.\\
+\end{frame}
+
+\begin{frame}{Künneth}
+Le morphisme contrôllé $\alpha_{A,B}$ est dit :
+\begin{itemize}
+ 
+\item[$\bullet$] quasi-injectif s'il existe $\lambda \geq 1$ tel que, pour tout $\varepsilon\in (0,\frac{1}{4\alpha_\tau \lambda})$ et $F\in\mathcal E$, il existe $F'\in\mathcal E$, et $F\subseteq F'$, tels que: 
+\[\forall x\in K^{\varepsilon,F}(A)\otimes K(B)\text{ such that }\alpha_{A,B}^{\varepsilon,F}(x)=0 \text{ then }(\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}\otimes id) (x) = 0.\] 
+
+\item[$\bullet$] quasi-surjectif s'il existe $\lambda \geq 1$ tel que, pour tout $\varepsilon \in (0,\frac{1}{4\alpha_\tau})$ et $F\in\mathcal E$, il existe $F'\in\mathcal E$, $F\subseteq h_{\tau,\lambda\varepsilon}.F'$, tels que:
+\[ \forall y\in K^{\varepsilon,F}(A\otimes B), \exists x\in K^{\lambda\varepsilon, F'}(A)\otimes K(B) \text{ such that }
+\alpha^{\lambda\varepsilon,F'}_{A,B}(x)=\iota_{\varepsilon,F}^{\alpha\lambda\varepsilon,h_{\tau, \lambda\varepsilon}.F'}(y).\] 
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Künneth}
+\begin{definitionfr}
+Une $C^*$-algèbre $\mathcal E$-filtrée $A$ satisfait la formule de Künneth quantitative s'il existe $\lambda \geq 1$ tel que, pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ soit libre, $\hat\alpha_{A,B}$ est quasi-injective et quasi-surjectif. 
+\end{definitionfr}
+\end{frame}
+
+\begin{frame}{Künneth}
+\begin{thmfr}
+Soit $G$ un groupoïde étale de la classe $\mathcal C$, et soient $E\in\mathcal E$ un ensemble contrôlé de $G$ et $P_E(G)$ le complexe de Rips associé. Si, pour tout sous-groupoïde compact ouvert $H$ de $G$ et tout $H$-espace $V$ tel que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective, $\alpha_{Res_H^G(A),B}^{H,V}$ est un isomorphisme, alors $\alpha_{A,B}^{G,P_E(G)}$ est un isomorphisme pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ est un groupe abélien libre.\\
+\end{thmfr}
+\end{frame}
+
+\begin{frame}{Künneth}
+\begin{thmfr}
+Soit $G$ un groupoïde $\sigma$-compact étale et $A$ une $G$-algèbre. Si 
+\begin{itemize}
+\item[$\bullet$] $G$ vérifie la conjecture de Baum-Connes à coefficients,
+\item[$\bullet$] $G$ est un groupoïde fortement propre,
+\item[$\bullet$] pour tout sous-groupoïde compact $H$ de $G$ et tout $H$-espace $V$ telle que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective, $\alpha_{Res_H^G(A),B}^{G,V}$ est un isomorphisme.
+\end{itemize} 
+Alors $A\rtimes_r G$ vérifie la formule de Künneth contrôlée.
+\end{thmfr}
+\end{frame}
+
+\begin{frame}{Künneth}
+\end{frame}
+
+\begin{frame}{Künneth}
+\end{frame}
