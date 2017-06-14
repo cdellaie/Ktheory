@@ -1,5 +1,5 @@
 \begin{frame}{Groupoïdes}
-Soit $G \rightrightarrows G^{(0)} $ un groupoïde localement compact.\\
+Soit $G \rightrightarrows G^{(0)}) $ un groupoïde localement compact.\\
 \vspace{0.3 cm}
 On note $r,s:G \rightrightarrows G^{(0)}$ les applications source et but, $e : G^{(0)} \rightarrow G$ l'application unité, et 
 \[G^{(2)} = \{(g,g') \in G\times G \text{ t.q. } s(g)=r(g')\}\]
@@ -30,34 +30,85 @@ Une action de $G$ sur une $C(G^{(0)})$-algèbre $A$ est la donnée d'un isomorph
 tel que $\alpha_{e_x} = id$ et $\alpha_g \circ \alpha_{g'}  = \alpha_{gg'}$ pour tout $x\in G^{(0)}$ et toute paire composable $(g,g') \in G^{(2)}$.\\ 
 \vspace{0.3 cm}
 On munit $C_c(G,A)$ du produit de convolution 
-\[(f_1\circ f_2)(g) = \sum_{h\in G^{}} f_1() f_2()\]
+\[(f_1\ast f_2)(g) = \sum_{h\in G^{r(g)}} f_1(h) \alpha_h(f_2(h^{-1}g)).\]
+et de l'involution $\overline f(g)=\alpha_g(f(g^{-1})^*)$.\\
+
+\end{frame}
+
+\begin{frame}{Groupoïdes}
+Le $A$-module hilbertien $L^2(G,A)$ est la complétion de $C_c(G,A)$ pour le produit scalaire 
+\[\langle \xi ,\eta \rangle_x  = \sum_{g\in G^x} \xi(g)\overline \eta(g) \quad x\in G^{(0)} \]
+sur lequel $C_c(G,A)$ est représenté par $\lambda(f) \xi = f\ast \xi$, pour tout $ f\in C_c(G,A)$ et $\xi\in L^2(G,A)$.\\
+\vspace{0.3 cm}
 \begin{definitionfr}
-Le produit croisé
+Le produit croisé $A\rtimes_r G$ est la $C^*$-algèbre obtenue en complétant $C_c(G,A)$ pour la norme $||f||_r=||\lambda(f)||$.
 \end{definitionfr}
 
 \end{frame}
 
-
 \begin{frame}{Groupoïdes}
-\begin{thmfr}
-Soit $G$ un groupoïde étale de la classe $\mathcal C$, et soient $E\in\mathcal E$ un ensemble contrôlé de $G$ et $P_E(G)$ le complexe de Rips associé. Si, pour tout sous-groupoïde compact ouvert $H$ de $G$ et tout $H$-espace $V$ tel que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective, $\alpha_{Res_H^G(A),B}^{H,V}$ est un isomorphisme, alors $\alpha_{A,B}^{G,P_E(G)}$ est un isomorphisme pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ est un groupe abélien libre.\\
-\end{thmfr}
+La classe $\mathcal C$ définit une classe de groupoïdes dont toutes les actions propres sont localement induites par des sous-groupoïdes compacts ouverts. 
+\vspace{0.3 cm}
+\begin{definitionfr}
+Un groupoïde étale $G$ est dans la classe $\mathcal C$ si, pour toute action propre $G$ sur un espace $Z$, il existe un recouvrement ouvert $\mathcal U$ de $Z$ tel que, pour tout $U\in\mathcal U$, il existe un sous-groupoïde compact ouvert $H_U$ de $G$ et un $H_U$-espace $Z_U$ et un homéomorphisme $G$-equivariant
+\[\psi_U : U \rightarrow G\times_{H_U} Z_U.\] 
+\end{definitionfr}
+\vspace{0.3 cm}
+\textbf{Exemples:} les groupes discret, les groupoïdes amples.
+
 \end{frame}
 
 \begin{frame}{Groupoïdes}
+Pour calculer la $K$-théorie de $A\rtimes_r G$, on dispose de l'application d'assemblage de Baum-Connes
+\[\mu_{G,A} : K^{top}(G,A) \rightarrow K(A \rtimes_r G)\]
+définie pour toute $G$-algèbre $A$. Le membre de gauche est calculable par des méthodes de topologie algébrique classique.
+\vspace{0.3 cm}
+\begin{conj}[Baum-Connes]
+Le groupoïde $G$ vérifie la conjecture de Baum-Connes à coefficients si $\mu_{G,A}$ est un ismomorphisme pour toute $G$-algèbre $A$.
+\end{conj}
+
+\end{frame}
+
+\begin{frame}{Formule de Künneth}
+On veut démontrer que, sous de bonnes conditions,  
+\[\alpha_{A\rtimes_r G,B} : K(A\rtimes_r G)\otimes K(B) \rightarrow K((A\rtimes_r G)\otimes B)\]
+est un isomorphisme pour toute $C^*$-algèbre $B$ telle que $K(B)$ soit libre.\\
+\vspace{0.3 cm}
+\textbf{Stratégie:}
+\begin{itemize}
+\item[$\bullet$] définir une version topologique 
+\[\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K(B) \rightarrow RK^G(Z,A\otimes B)\]
+de $\alpha_{A\rtimes_r,B}$, pour toute $G$-algèbre $A$ et $G$-espace $Z$.
+\item[$\bullet$] montrer que l'application d'assemblage les entrelace.
+\item[$\bullet$] se ramener au cas de certains sous-groupoïdes de $G$ par restriction.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Formule de Künneth}
 \begin{thmfr}
 Soit $G$ un groupoïde $\sigma$-compact étale et $A$ une $G$-algèbre. Si 
 \begin{itemize}
 \item[$\bullet$] $G$ vérifie la conjecture de Baum-Connes à coefficients,
-\item[$\bullet$] $G$ est un groupoïde fortement propre,
-\item[$\bullet$] pour tout sous-groupoïde compact $H$ de $G$ et tout $H$-espace $V$ telle que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective, $\alpha_{Res_H^G(A),B}^{G,V}$ est un isomorphisme.
+\item[$\bullet$] $G$ est dans la classe $\mathcal C$,
+\item[$\bullet$] pour tout sous-groupoïde compact ouvert $H$ de $G$ et tout $H$-espace $V$ telle que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective, $\alpha_{A,B}^{H,V}$ est un isomorphisme.
 \end{itemize} 
 Alors $A\rtimes_r G$ vérifie la formule de Künneth contrôlée.
 \end{thmfr}
 \end{frame}
 
-\begin{frame}{Groupoïdes}
+\begin{frame}{Idée de la preuve}
+\begin{itemize}
+\item[$\bullet$] définir une version topologique 
+\[\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K(B) \rightarrow RK^G(Z,A\otimes B)\]
+de $\alpha_{A\rtimes_r,B}$, pour toute $G$-algèbre $A$ et $G$-espace $Z$.
+\item[$\bullet$] montrer que l'application d'assemblage les entrelace.
+
+\end{itemize}
 \end{frame}
 
-\begin{frame}{Groupoïdes}
+\begin{frame}{Formule de Künneth}
+\begin{thmfr}
+Soit $G$ un groupoïde étale de la classe $\mathcal C$, et soient $E\in\mathcal E$ un ensemble contrôlé de $G$ et $P_E(G)$ le complexe de Rips associé. Si, pour tout sous-groupoïde compact ouvert $H$ de $G$ et tout $H$-espace $V$ tel que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective, $\alpha_{Res_H^G(A),B}^{H,V}$ est un isomorphisme, alors $\alpha_{A,B}^{G,P_E(G)}$ est un isomorphisme pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ est un groupe abélien libre.\\
+\end{thmfr}
 \end{frame}
+
