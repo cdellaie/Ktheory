@@ -39,11 +39,14 @@ et de l'involution $\overline f(g)=\alpha_g(f(g^{-1})^*)$.\\
 Le $A$-module hilbertien $L^2(G,A)$ est la complétion de $C_c(G,A)$ pour le produit scalaire 
 \[\langle \xi ,\eta \rangle_x  = \sum_{g\in G^x} \xi(g)\overline \eta(g) \quad x\in G^{(0)} \]
 sur lequel $C_c(G,A)$ est représenté par $\lambda(f) \xi = f\ast \xi$, pour tout $ f\in C_c(G,A)$ et $\xi\in L^2(G,A)$.\\
-\vspace{0.3 cm}
+\end{frame}
+
+\begin{frame}{Groupoïdes}
 \begin{definitionfr}
 Le produit croisé $A\rtimes_r G$ est la $C^*$-algèbre obtenue en complétant $C_c(G,A)$ pour la norme $||f||_r=||\lambda(f)||$.
 \end{definitionfr}
-
+\vspace{0.3 cm}
+On pose $\mathcal E$ l'ensemble des compacts symmétriques non vides de $G$, muni de la loi de compostion $E\circ E' = EE' \cup E'E$. Alors $\mathcal E$ est une structure coarse et $A\rtimes_r G$ est $\mathcal E$-filtrée avec $A_E = \cup_{U\subseteq E	} C_0(U)\otimes_s A$. 
 \end{frame}
 
 \begin{frame}{Groupoïdes}
@@ -66,7 +69,9 @@ définie pour toute $G$-algèbre $A$. Le membre de gauche est calculable par des
 \begin{conj}[Baum-Connes]
 Le groupoïde $G$ vérifie la conjecture de Baum-Connes à coefficients si $\mu_{G,A}$ est un ismomorphisme pour toute $G$-algèbre $A$.
 \end{conj}
-
+\vspace{0.3 cm}
+\textbf{Rappel:} $K^{top}(G,A)=\varinjlim_{E\in \mathcal E} RK^G(P_E,A)$ où $P_E$ est le complexe de Rips associé à $G$ :
+\[P_E = \{\eta\in Prob(G) \text{ s.t. } \exists x\in G^{(0)},g\in G^x / \ supp (\eta) \subseteq G^x \cap gE  \}\]
 \end{frame}
 
 \begin{frame}{Formule de Künneth}
@@ -77,8 +82,8 @@ est un isomorphisme pour toute $C^*$-algèbre $B$ telle que $K(B)$ soit libre.\\
 \textbf{Stratégie:}
 \begin{itemize}
 \item[$\bullet$] définir une version topologique 
-\[\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K(B) \rightarrow RK^G(Z,A\otimes B)\]
-de $\alpha_{A\rtimes_r,B}$, pour toute $G$-algèbre $A$ et $G$-espace $Z$.
+\[\alpha_{A,B}^{G} : K^{top}(G,A)\otimes K(B) \rightarrow K^{top}(G,A\otimes B)\]
+de $\alpha_{A\rtimes_r G,B}$.
 \item[$\bullet$] montrer que l'application d'assemblage les entrelace.
 \item[$\bullet$] se ramener au cas de certains sous-groupoïdes de $G$ par restriction.
 \end{itemize}
@@ -97,18 +102,37 @@ Alors $A\rtimes_r G$ vérifie la formule de Künneth contrôlée.
 \end{frame}
 
 \begin{frame}{Idée de la preuve}
-\begin{itemize}
-\item[$\bullet$] définir une version topologique 
+On définit  
 \[\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K(B) \rightarrow RK^G(Z,A\otimes B)\]
-de $\alpha_{A\rtimes_r,B}$, pour toute $G$-algèbre $A$ et $G$-espace $Z$.
-\item[$\bullet$] montrer que l'application d'assemblage les entrelace.
-
-\end{itemize}
+pour toute $G$-algèbre $A$, $C^*$-algèbre $B$ et $G$-espace $Z$.
+Le diagramme suivant commute :
+\[\begin{tikzcd}[ampersand replacement=\&, column sep=small] 
+\alpha_{A,B}^{G,P_E}: RK^G(P_E,A)\otimes K(B)\arrow{r}\arrow{d}{\mu_{G,A}\otimes id}    \& RK^G(P_E,A\otimes B)\arrow{d}{\mu_{G,A\otimes B}} \\
+\alpha_{A\rtimes_r G,B}: K(A\rtimes_r G) \otimes K(B) \arrow{r} \& K((A\rtimes_r G)\otimes B)
+\end{tikzcd}\]
 \end{frame}
 
-\begin{frame}{Formule de Künneth}
+\begin{frame}{Idée de la preuve}
 \begin{thmfr}
-Soit $G$ un groupoïde étale de la classe $\mathcal C$, et soient $E\in\mathcal E$ un ensemble contrôlé de $G$ et $P_E(G)$ le complexe de Rips associé. Si, pour tout sous-groupoïde compact ouvert $H$ de $G$ et tout $H$-espace $V$ tel que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective, $\alpha_{Res_H^G(A),B}^{H,V}$ est un isomorphisme, alors $\alpha_{A,B}^{G,P_E(G)}$ est un isomorphisme pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ est un groupe abélien libre.\\
+Soit $G$ un groupoïde de la classe $\mathcal C$, et soit $E\in\mathcal E$. Si, pour tout 
+\begin{itemize}
+\item[$\bullet$] sous-groupoïde compact ouvert $H$ de $G$
+\item[$\bullet$] tout $H$-espace $V$ tel que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective,
+\end{itemize} 
+$\alpha_{Res_H^G(A),B}^{H,V}$ est un isomorphisme, alors 
+\[\alpha_{A,B}^{G,P_E}: RK^G(P_E,A)\otimes K(B)\rightarrow RK^G(P_E,A\otimes B) \] 
+est un isomorphisme pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ est un groupe abélien libre.\\
 \end{thmfr}
 \end{frame}
 
+\begin{frame}{Idée de la preuve}
+Soit $Z_0 \subseteq ...\subseteq Z_n$ la décompostion en squelette de $P_E$. Par un argument de type Mayer-Vietoris, il suffit de le démontrer pour $Z_0 = G$. Mais $p =r : Z_0 \rightarrow G^{(0)} $ est localement injective. \\
+\vspace{0.3 cm}
+On peut ensuite refaire la preuve avec l'application d'assemblage contrôlée
+\[\mu_{G,A}^{\varepsilon, E,E'} : RK^G(P_E,A)\rightarrow K^{\varepsilon,E'}(A\rtimes_r G)\]
+pour obtenir la version contrôlée du résultat.
+\end{frame}
+
+\begin{frame}{}
+Merci de votre attention !
+\end{frame}
