@@ -1,0 +1,33 @@
+\section{Introduction}
+
+Let $X$ be a countable discrete metric space with bounded geometry, i.e. such that, for every $R>0$, 
+\[\sup_{x\in X} |B(x,R)|<\infty.\] 
+Let $H$ be the separable Hilbert space and 
+\[C_R[X] = \{T\in \mathcal L(H\otimes l^2(X)) \text{ s.t. } T_{xy} \in \mathfrak K(H) \text{ et } prop(T) < R \}\]
+where $prop(T) = \sup\{d(x,y) \text{ s.t. } T_{xy} \neq 0\}$. Recall that the Roe algebra of $X$ is defined as
+\[C^*(X) = \overline{\cup_{R>0} C_R[X]}.\] 
+The coarse Baum-Connes conjecture asserts that
+\[\mu_X : \varinjlim KK(C_0(P_d(X),\C) \rightarrow K(C^*(X))\]
+is an isomorphism, where:
+\begin{itemize}
+\item[$\bullet$] $KK(A,B)$ denotes the operator $KK$-theory of G. Kasparov,
+\item[$\bullet$] $K(B)$ denotes the operator $K$-theory of the $C^*$-algebra $B$.
+\end{itemize}
+
+The main application of the coarse Baum-Connes conjecture is the Novikov conjecture on the homotopy invariance of the higher signatures. More precisely, let $\Gamma$ be a countable discrete group endowed with any left-invariant metric. Such a metric is unique up to quasi-isometry, and let us denote by $|\Gamma|$ the coarse class of the underlying metric space. 
+
+\begin{thm}[Descent principle]
+If $\mu_{|\Gamma|}$ is an isomorphism, then the Novikov conjecture holds for $\Gamma$, i.e. for any $x\in H^*(B\Gamma,\mathbb Q)$, any map $f:M\rightarrow B  \Gamma $,
+\[ \sigma(M,f) = \langle f^*(x)\cup \mathcal L_M,[M]\rangle\]
+defines an homotopy invariant.
+\end{thm}  
+
+In \cite{Yu1}, G. Yu proved that if $X$ was of finite asymptotic dimension, then the coarse Baum-Connes conjecture holds for $X$. More generally, G. Yu proved the following theorem.
+
+\begin{thm}[\cite{Yu2}]
+If $X$ has property $A$, then the coarse Baum-Connes conjecture holds for $X$.
+\end{thm}
+
+As property $A$ is implied by finite asymptotic dimension, the last theorem is more powerful. Still, the two results are quite different in their proofs. Whereas property $A$ entails the existence of so called Dirac and Dual-Dirac elements in $KK$-theory, yielding the result, the proof in the setting of finite asymptotic dimension relies on a analog of Mayer-Vietoris decompositions on the Roe algebras. Quantitative $K$-theory was introduced in \cite{OY2} by H. Oyono-Oyono and G. Yu in order to broaden the domain of validity of these arguments.\\ 
+
+In the author's thesis was introduced controlled $K$-theory. This slight generalization relies on a new definiton of filtered $C^*$-algebras, which allows to treat more examples of $C^*$-algebras with the controlled $K$-theory. The second section present an overview of controlled $K$-theory in this sense. In the third and fourth sections, we build assembly maps with values in these controlled $K$-groups, which factorizes the usual assembly maps, in the case of coarse spaces and étale groupoids respectively. The last section is devoted to applications of these results in Coarse Geometry.%We also quickly show how controlled $K$-theory can be used for $K$-amenability of crossed products by discrete quantum groups.  

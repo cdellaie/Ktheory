@@ -1,0 +1,56 @@
+\begin{thebibliography}{10}
+
+\bibitem{ChabertEOY}
+J{\'e}r{\^o}me Chabert, Siegfried Echterhoff, and Herv{\'e} Oyono-Oyono.
+\newblock Going-down functors, the {K}{\"u}nneth formula, and the
+  {B}aum-{C}onnes conjecture.
+\newblock {\em Geometric \& Functional Analysis GAFA}, 14(3):491--528, 2004.
+
+\bibitem{kasparovKKNovikov}
+Gennadi~G Kasparov.
+\newblock Equivariant {KK}-theory and the {N}ovikov conjecture.
+\newblock {\em Inventiones mathematicae}, 91(1):147--201, 1988.
+
+\bibitem{OY4}
+H.~{Oyono-Oyono} and G.~{Yu}.
+\newblock {Quantitative K-theory and the {K}{\"u}nneth formula for operator
+  algebras}.
+\newblock {\em ArXiv e-prints}, August 2016.
+
+\bibitem{OY3}
+Herv{\'e} Oyono-Oyono and Guoliang Yu.
+\newblock Persistance {A}pproximation {P}roperty and controlled {K}-theory.
+
+\bibitem{OY2}
+Herv{\'e} Oyono-Oyono and Guoliang Yu.
+\newblock On quantitative operator {K}--theory.
+\newblock {\em Ann. Inst. Fourier (Grenoble). Available at www. math.
+  univ-metz. fr/\~{} oyono/pub. html}, 2011.
+
+\bibitem{paterson}
+Alan Paterson.
+\newblock {\em Groupoids, inverse semigroups, and their operator algebras},
+  volume 170.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{Renault}
+Jean Renault.
+\newblock {\em A groupoid approach to {C}*-algebras}.
+\newblock Berlin; New York: Springer-Verlag, 1980.
+
+\bibitem{SkTuYu}
+Georges Skandalis, Jean-Louis Tu, and Guoliang Yu.
+\newblock The coarse {B}aum-{C}onnes conjecture and groupoids.
+\newblock {\em Topology}, 41(4):807--834, 2002.
+
+\bibitem{TuNonHaus}
+Jean-Louis Tu.
+\newblock Non-{H}ausdorff groupoids, proper actions and {K}-theory.
+\newblock {\em Doc. Math}, 9:565--597, 2004.
+
+\bibitem{Wo}
+Stanis{\l}aw~L Woronowicz.
+\newblock Compact quantum groups.
+\newblock {\em Sym{\'e}tries quantiques (Les Houches, 1995)}, 845:884, 1998.
+
+\end{thebibliography}

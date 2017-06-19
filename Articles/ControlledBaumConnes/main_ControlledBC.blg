@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main_ControlledBC.aux
+The style file: plain.bst
+Database file #1: biblio2.bib
+Warning--empty school in LeGall
+Warning--empty journal in OY3
+Warning--empty year in OY3
+Warning--empty journal in WeggeOlsen
+You've used 15 entries,
+            2118 wiz_defined-function locations,
+            601 strings with 5921 characters,
+and the built_in function-call counts, 4196 in all, are:
+= -- 431
+> -- 140
+< -- 0
++ -- 62
+- -- 42
+* -- 287
+:= -- 727
+add.period$ -- 44
+call.type$ -- 15
+change.case$ -- 65
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 160
+empty$ -- 350
+format.name$ -- 42
+if$ -- 843
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 14
+newline$ -- 77
+num.names$ -- 30
+pop$ -- 50
+preamble$ -- 1
+purify$ -- 51
+quote$ -- 0
+skip$ -- 106
+stack$ -- 0
+substring$ -- 321
+swap$ -- 13
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 60
+warning$ -- 4
+while$ -- 51
+width$ -- 17
+write$ -- 159
+(There were 4 warnings)

@@ -1,0 +1,81 @@
+\begin{thebibliography}{10}
+
+\bibitem{FimaGraphs}
+Pierre Fima and Amaury Freslon.
+\newblock Graphs of quantum groups and {K}-amenability.
+\newblock {\em Advances in Mathematics}, 260:233--280, 2014.
+
+\bibitem{kasparovKKNovikov}
+Gennadi~G Kasparov.
+\newblock Equivariant {KK}-theory and the {N}ovikov conjecture.
+\newblock {\em Inventiones mathematicae}, 91(1):147--201, 1988.
+
+\bibitem{lafforgue2002k}
+Vincent Lafforgue.
+\newblock K-th{\'e}orie bivariante pour les alg{\`e}bres de {B}anach et
+  conjecture de {B}aum-{C}onnes.
+\newblock {\em Inventiones Mathematicae}, 149(1):1--95, 2002.
+
+\bibitem{LeGall}
+Pierre-Yves Le~Gall.
+\newblock {\em Th{\'e}orie de {K}asparov {\'e}quivariante et groupo{\"\i}des}.
+\newblock PhD thesis, 1994.
+
+\bibitem{MeyerNest}
+Ralf Meyer and Ryszard Nest.
+\newblock The {B}aum--{C}onnes conjecture via localisation of categories.
+\newblock {\em Topology}, 45(2):209--259, 2006.
+
+\bibitem{OY3}
+Herv{\'e} Oyono-Oyono and Guoliang Yu.
+\newblock Persistance {A}pproximation {P}roperty and controlled {K}-theory.
+
+\bibitem{OY2}
+Herv{\'e} Oyono-Oyono and Guoliang Yu.
+\newblock On quantitative operator {K}--theory.
+\newblock {\em Ann. Inst. Fourier (Grenoble). Available at www. math.
+  univ-metz. fr/\~{} oyono/pub. html}, 2011.
+
+\bibitem{SkTuYu}
+Georges Skandalis, Jean-Louis Tu, and Guoliang Yu.
+\newblock The coarse {B}aum-{C}onnes conjecture and groupoids.
+\newblock {\em Topology}, 41(4):807--834, 2002.
+
+\bibitem{TuThese}
+Jean-Louis Tu.
+\newblock La conjecture de {B}aum-{C}onnes pour les feuilletages moyennables.
+\newblock {\em K-theory}, 17(3):215--264, 1999.
+
+\bibitem{TuBC2}
+Jean-Louis Tu.
+\newblock The coarse {B}aum-{C}onnes conjecture and groupoids. ii.
+\newblock {\em New York J. Math}, 18:1--27, 2012.
+
+\bibitem{VergniouxKamenability}
+Roland Vergnioux.
+\newblock K-amenability for amalgamated free products of amenable discrete
+  quantum groups.
+\newblock {\em Journal of Functional Analysis}, 212(1):206--221, 2004.
+
+\bibitem{WeggeOlsen}
+NE~Wegge-Olsen.
+\newblock K-theory and {C}*-algebras: A friendly approach.
+\newblock 1993.
+
+\bibitem{Wo}
+Stanis{\l}aw~L Woronowicz.
+\newblock Compact quantum groups.
+\newblock {\em Sym{\'e}tries quantiques (Les Houches, 1995)}, 845:884, 1998.
+
+\bibitem{Yu1}
+Guoliang Yu.
+\newblock The {N}ovikov conjecture for groups with finite asymptotic dimension.
+\newblock {\em Annals of Mathematics}, 147(2):325--355, 1998.
+
+\bibitem{Yu2}
+Guoliang Yu.
+\newblock The coarse {B}aum-{C}onnes conjecture for spaces which admit a
+  uniform embedding into {H}ilbert space.
+\newblock {\em Inventiones Mathematicae}, 139(1):201--240, 2000.
+
+\end{thebibliography}
