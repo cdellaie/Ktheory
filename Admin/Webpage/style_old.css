@@ -1,0 +1,120 @@
+html {
+    background: transparent;
+    overflow-y: scroll;
+    height: 100%;
+    /*font: 1em Lato, 1em sans-serif;*/
+}
+
+body
+{
+	background-repeat : no-repeat;
+	background-attachment : scroll ;
+	background-color : rgb(204,204,255);
+    	/*background-position : bottom right;*/
+	/*background-image: url("Hofstadter.png") ;*/
+}
+
+header
+{
+	position: fixed;
+	top: 0px;
+	height: 150px;
+	width :25%;
+	padding: 1em;
+	margin-top: 0;
+	background-color : transparent;
+	background-repeat : no-repeat;
+	color: white;
+	background-position: 100% 50%; 
+	
+	font-family: 'Arial-BoldMT', 'Arial',sans-serif;   
+	color: rgb(94,81,81);	
+	/*background-image: url("Hofstadter.png") ;*/
+}
+
+section
+{
+	position: fixed; 
+	top : 5%;   	
+	margin-left: 23%;
+	/*margin-bottom: 20px;*/
+	height: 80%;
+	width:75%;
+	
+    	/*border: 1px solid black;*/
+	padding: 15px;
+	color: white;
+
+	font-family: 'Arial-BoldMT', 'Arial',sans-serif;  
+	color: rgb(94,81,81);
+	background-color: white;
+	overflow-y : scroll;
+	
+}
+
+nav
+{
+	position: fixed;    	
+	color: white;
+	float: left;
+    	width: 20%;
+	margin-top: 10%;
+	font-family: 'Arial-BoldMT', 'Arial',sans-serif;   
+	color: rgb(94,81,81);
+	/*border: 1px solid black;*/
+}
+
+nav ul {
+    margin: 0;
+    padding-left: 1em;
+    list-style: none;
+}
+
+nav ul li{
+    padding-top: 5px;
+	font-size: 150%;
+    /*text-shadow: 0px 1px 0px #fff;*/
+}
+
+nav a:hover {
+    color: black;
+}
+
+
+nav a {
+    color: inherit;
+    font: inherit;
+    text-decoration: inherit;
+}
+
+
+
+footer
+{
+	position : fixed;
+	top: 90%;	
+	margin-left:310px;
+	/*border: 1px solid black;*/
+	color: white;
+	font: .8em monospace;
+	height: 2em;
+
+	font-family: 'Arial-BoldMT', 'Arial',sans-serif;   
+}
+
+p
+{
+	/*background-color : rgba(255,255,255,0.5);*/
+}
+
+ul
+{
+	/*background-color : rgba(255,255,255,0.5);	*/
+}
+
+
+.title
+{
+	text-align: center;
+	font-style:italic;
+}
