@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{blanchard}
+{\'E}tienne Blanchard.
+\newblock D{\'e}formations de ${C}^*$-alg{\`e}bres de {H}opf.
+\newblock {\em Bulletin de la Soci{\'e}t{\'e} Math{\'e}matique de France},
+  124(1):141--215, 1996.
+
 \bibitem{FimaGraphs}
 Pierre Fima and Amaury Freslon.
 \newblock Graphs of quantum groups and {K}-amenability.

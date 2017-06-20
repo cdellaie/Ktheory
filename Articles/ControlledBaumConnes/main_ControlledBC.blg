@@ -7,45 +7,45 @@ Warning--empty school in LeGall
 Warning--empty journal in OY3
 Warning--empty year in OY3
 Warning--empty journal in WeggeOlsen
-You've used 16 entries,
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            608 strings with 6075 characters,
-and the built_in function-call counts, 4511 in all, are:
-= -- 465
-> -- 147
+            615 strings with 6228 characters,
+and the built_in function-call counts, 4808 in all, are:
+= -- 497
+> -- 154
 < -- 0
-+ -- 65
-- -- 44
-* -- 311
-:= -- 778
-add.period$ -- 47
-call.type$ -- 16
-change.case$ -- 69
++ -- 68
+- -- 46
+* -- 333
+:= -- 827
+add.period$ -- 50
+call.type$ -- 17
+change.case$ -- 73
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 171
-empty$ -- 379
-format.name$ -- 44
-if$ -- 908
+cite$ -- 21
+duplicate$ -- 182
+empty$ -- 406
+format.name$ -- 46
+if$ -- 969
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 15
-newline$ -- 82
-num.names$ -- 32
-pop$ -- 52
+int.to.str$ -- 17
+missing$ -- 16
+newline$ -- 87
+num.names$ -- 34
+pop$ -- 54
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 57
 quote$ -- 0
-skip$ -- 113
+skip$ -- 120
 stack$ -- 0
-substring$ -- 357
-swap$ -- 14
+substring$ -- 387
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
+type$ -- 68
 warning$ -- 4
-while$ -- 55
-width$ -- 18
-write$ -- 170
+while$ -- 59
+width$ -- 19
+write$ -- 181
 (There were 4 warnings)

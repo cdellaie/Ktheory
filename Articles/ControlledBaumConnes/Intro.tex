@@ -50,10 +50,45 @@ These results are implied by their analog in controlled $K$-theory that we prove
 The article follows the following plan. The second section present an overview of controlled $K$-theory in the setting of $C^*$-algebras filtered by what we call a coarse structure. In the third and fourth sections, we build assembly maps with values in these controlled $K$-groups, which factorizes the usual assembly maps, in the case of étale groupoids and coarse spaces respectively. The last section is devoted to applications of these results in Coarse Geometry.
 %We also quickly show how controlled $K$-theory can be used for $K$-amenability of crossed products by discrete quantum groups.  
 
+\subsection{Preliminaries}
 
+We give a short review of the crossed product construction for étale groupoids. If $p : Y_0\rightarrow X$ and $q : Y_1\rightarrow X$ are two fibrations, we denote by $Y_0\times_{p,q} Y_1 = \{(y,y')\in Y_0\times Y_1 \text{ s.t. } p(y)=q(y')\}$ their fibred product. The non-commutative anologue of fibration are given by $C(X)$-algebras. 
 
+\begin{definition}
+A $C(X)$-algebra is given by a $C^*$-algebra $A$ and a non-degenerate $*$-homomorphism $\theta : C_0(X) \rightarrow Z(\mathcal M(A))$, where $\mathcal M(A)$ is the $C^*$-algebra of multipliers of $A$.
+\end{definition}
 
+If $(A,\theta)$ is a $C(X)$-algebra and $x\in X$, then the fiber over $X$ is defined as $A_x : = A/ \text{ker }(ev_x)A$. Two $C(X)$-algebras have a balanced tensor product $A\otimes_{C(X)} A'$, such that $(A\otimes_{C(X)} A')_x \cong A_x\otimes A'_x$. Notice that in the case of fibration, we get $C_0(Y_0\times_{p,q}Y_1) \cong C_0(Y_0)\times_{C(X)}C_0(Y_1)$. If $f:X_0 \rightarrow X_1$ is a continuous map, and $A$ is a $C(X_1)$-algebra, $f^* A :=C(X_0)\otimes_{C(X_1)} A$ is naturally a $C(X_0)$-algebra, called the pull-back of $A$ along $f$. For details in $C(X)$-algebras, the reader can consult \cite{blanchard} for instance. 
+\\
 
+Recall the following definition.
+
+\begin{definition}
+An étale groupoid is given by two topological spaces, the space of arrows $G$ and the space of units $G^{(0)}$ endowed with:
+\begin{itemize}
+\item[$\bullet$] continuous maps $s,r : G \rightrightarrows G^{(0)}$ which are local homeomorphisms,
+\item[$\bullet$] a topological embedding $e: G^{(0)}\rightarrow G$ called the unit map, and a continuous involution $inv : G\rightarrow G; g\mapsto g^{-1}$ called the inverse map,
+\item[$\bullet$] a multiplication map $G\times_{s,r}G\rightarrow G; (g,g')\mapsto gg'$ such that $(gg')g'' = g(g'g'')$, $gg^{-1}= e_{r(g)}$, $g^{-1}g= e_{s(g)}$
+\end{itemize}
+\end{definition}
+
+If $A$ is a $C(G^{(0)})$-algebra, an action of the groupoid $G$ is a isomorphism of $C(G)$-algebras $\alpha : s^* A \rightarrow r^* A$ such that $\alpha_g \circ \alpha_{g'} = \alpha_{gg'}$ for every $(g,g')\in G\times_{s,r} G$. Then, define the space of continuous sections with compact support 
+\[C_c(G,A) = \bigcup_{U} C_0(U)\otimes_s A\]
+where $U$ runs along all open relatively compact subsets of $G$. Here $C_0(U)\otimes_s A$ denotes $C_0(U)\otimes_{C(G^{(0)})} A$, where $s$ in subscript implies that the $C(G^{(0)})$-algebra structure on $C_0(U)$ is given by $s$.\\
+
+Endowing compact sections with convolution
+\[(f_0\ast f_1)(g) = \sum_{h\in G^{r(g)}} f_0(h) \alpha_h(f_1(h^{-1}g)).\]
+and involution $\overline f(g)=\alpha_g(f(g^{-1})^*)$ for every $f_0,f_1\in C_c(G,A)$, we get a $*$-algebra. 
+
+The $A$-Hilbert module $L^2(G,A)$ is the completion of $C_c(G,A)$ under the scalar product 
+\[\langle \xi ,\eta \rangle_x  = \sum_{g\in G^x} \xi(g)\overline \eta(g) \quad x\in G^{(0)} \]
+and $C_c(G,A)$ is represented on $L^2(G,A)$ by $\lambda(f) \xi = f\ast \xi$, for every $ f\in C_c(G,A)$ and $\xi\in L^2(G,A)$.\\
+
+\begin{definition}
+The reduced crossed product $A\rtimes_r G$ is the $C^*$-algebra obtined by completion of $C_c(G,A)$ under the norm $||f||_r=||\lambda(f)||$.
+\end{definition}
+
+In the following section is presented the setting of controlled $K$-theory. The main example is that the set $\mathcal E$ of compact subsets of $G$ defines a coarse structure, and that $A\rtimes_r G$ is $\mathcal E$-filtered, thus allowing to apply the controlled machinery to crossed product of groupoids. 
 
 
 
