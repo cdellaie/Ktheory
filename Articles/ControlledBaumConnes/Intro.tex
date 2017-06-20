@@ -3,31 +3,58 @@
 Let $X$ be a countable discrete metric space with bounded geometry, i.e. such that, for every $R>0$, 
 \[\sup_{x\in X} |B(x,R)|<\infty.\] 
 Let $H$ be the separable Hilbert space and 
-\[C_R[X] = \{T\in \mathcal L(H\otimes l^2(X)) \text{ s.t. } T_{xy} \in \mathfrak K(H) \text{ et } prop(T) < R \}\]
-where $prop(T) = \sup\{d(x,y) \text{ s.t. } T_{xy} \neq 0\}$. Recall that the Roe algebra of $X$ is defined as
-\[C^*(X) = \overline{\cup_{R>0} C_R[X]}.\] 
-The coarse Baum-Connes conjecture asserts that
+\[C_R[X] = \{T\in \mathcal L(H\otimes l^2(X)) \text{ s.t. } T_{xy} \in \mathfrak K(H) \text{ and } prop(T) < R \}\]
+where $prop(T) = \sup\{d(x,y) \text{ s.t. } T_{xy} \neq 0\}$. Recall that the Roe algebra of $X$ is the $C^*$-algebra defined by
+\[C^*(X) = \overline{\cup_{R>0} C_R[X]}\quad ,\] 
+where the closure is taken under the operator norm. The coarse Baum-Connes conjecture asserts that
 \[\mu_X : \varinjlim KK(C_0(P_d(X),\C) \rightarrow K(C^*(X))\]
 is an isomorphism, where:
 \begin{itemize}
 \item[$\bullet$] $KK(A,B)$ denotes the operator $KK$-theory of G. Kasparov,
-\item[$\bullet$] $K(B)$ denotes the operator $K$-theory of the $C^*$-algebra $B$.
+\item[$\bullet$] $K(B)$ denotes the operator $K$-theory of the $C^*$-algebra $B$,
+\item[$\bullet$] $P_d(X)$ is the Rips complex of $X$.
 \end{itemize}
 
-The main application of the coarse Baum-Connes conjecture is the Novikov conjecture on the homotopy invariance of the higher signatures. More precisely, let $\Gamma$ be a countable discrete group endowed with any left-invariant metric. Such a metric is unique up to quasi-isometry, and let us denote by $|\Gamma|$ the coarse class of the underlying metric space. 
+The main application of the coarse Baum-Connes conjecture is the Novikov conjecture on the homotopy invariance of the higher signatures. More precisely, let $\Gamma$ be a countable discrete group endowed with any left-invariant metric. Such a metric is unique up to quasi-isometry, and let us denote by $|\Gamma|$ the coarse class of the underlying metric space. Denote by $B \Gamma$ the classifying space of $\Gamma$, by $[M]\in H_{dim(M)}(M,\mathbb Q)$ the fundamental class of $M$ and by $\mathcal L_M$ the $L$-class of $M$.
 
 \begin{thm}[Descent principle]
-If $\mu_{|\Gamma|}$ is an isomorphism, then the Novikov conjecture holds for $\Gamma$, i.e. for any $x\in H^*(B\Gamma,\mathbb Q)$, any map $f:M\rightarrow B  \Gamma $,
-\[ \sigma(M,f) = \langle f^*(x)\cup \mathcal L_M,[M]\rangle\]
-defines an homotopy invariant.
+If $\mu_{|\Gamma|}$ is an isomorphism, then the Novikov conjecture holds for $\Gamma$, i.e. for any $x\in H^*(B\Gamma,\mathbb Q)$, any map $f:M\rightarrow B  \Gamma $, the higher signature
+\[ \sigma(M,f) = \langle \mathcal L_M\cup f^*(x) ,[M]\rangle\]
+is homotopy invariant.
 \end{thm}  
 
-In \cite{Yu1}, G. Yu proved that if $X$ was of finite asymptotic dimension, then the coarse Baum-Connes conjecture holds for $X$. More generally, G. Yu proved the following theorem.
+In \cite{Yu1}, G. Yu proved that if $X$ is of finite asymptotic dimension, then the coarse Baum-Connes conjecture holds for $X$. More generally, G. Yu proved the following theorem.
 
-\begin{thm}[\cite{Yu2}]
+\begin{thm}[G. Yu \cite{Yu2}]
 If $X$ has property $A$, then the coarse Baum-Connes conjecture holds for $X$.
 \end{thm}
 
-As property $A$ is implied by finite asymptotic dimension, the last theorem is more powerful. Still, the two results are quite different in their proofs. Whereas property $A$ entails the existence of so called Dirac and Dual-Dirac elements in $KK$-theory, yielding the result, the proof in the setting of finite asymptotic dimension relies on a analog of Mayer-Vietoris decompositions on the Roe algebras. Quantitative $K$-theory was introduced in \cite{OY2} by H. Oyono-Oyono and G. Yu in order to broaden the domain of validity of these arguments.\\ 
+As property $A$ is implied by finite asymptotic dimension, the last theorem is more powerful. Still, the two results are quite different in their proofs. Whereas property $A$ entails the existence of so called Dirac and Dual-Dirac elements in $KK$-theory, yielding the result, the proof in the setting of finite asymptotic dimension relies on a analog of Mayer-Vietoris decompositions on the Roe algebras. This proof is more geometric in nature, and more elementary. Quantitative $K$-theory was introduced in \cite{OY2} by H. Oyono-Oyono and G. Yu in order to broaden the domain of validity of this strategy.\\ 
 
-In the author's thesis was introduced controlled $K$-theory. This slight generalization relies on a new definiton of filtered $C^*$-algebras, which allows to treat more examples of $C^*$-algebras with the controlled $K$-theory. The second section present an overview of controlled $K$-theory in this sense. In the third and fourth sections, we build assembly maps with values in these controlled $K$-groups, which factorizes the usual assembly maps, in the case of coarse spaces and étale groupoids respectively. The last section is devoted to applications of these results in Coarse Geometry.%We also quickly show how controlled $K$-theory can be used for $K$-amenability of crossed products by discrete quantum groups.  
+In the author's thesis was introduced controlled $K$-theory. This slight generalization relies on a new definition of filtered $C^*$-algebras, which allows to treat more examples of $C^*$-algebras with the controlled $K$-theory. We define controlled assembly maps in the setting of Roe algebras and of crossed products of $C^*$-algebras by étale groupoids. These assembly maps take values in the controlled $K$-theory, and should enjoy more stability properties than the usual assembly maps. The latter is the object of future work. \\
+
+The controlled assembly maps induces the assembly maps in $K$-theory. We study in more details this phenomenon, which gives what we call quantiative statements (theorems \ref{Quant1},\ref{Quant2} \& \ref{UniformQS}). These theorems relate the classical Baum-Connes conjecture for an étale groupoid to its controlled analog. As a byproduct, we prove in lemma \ref{prod} an interesting result on the $K$-homology of a finite $G$-simplicial complex with values in an infinite product of stable $C^*$-algebras.\\
+
+Following the route of \cite{SkTuYu}, we show that these controlled assembly maps are related by the coarse groupoid defined by G. Skandalis, J-L. Tu and G. Yu. More precisely, out of any coarse space $X$, one can construct an étale groupoid $G(X) \rightrightarrows \beta X$, such that the coarse assembly map $\mu_{X,B}$ is equivalent to the assembly map
+
+\[\mu_{G(X),l^\infty_B} : \varinjlim KK(C_0(P_E(G),B) \rightarrow K(l^\infty_B\rtimes_r G(X))\]
+where :
+\begin{itemize}
+\item[$\bullet$] $\beta X$ is the Stone-\v{C}ech compactification of $X$,
+\item[$\bullet$] the inductive limit is taken over the compact subsets $E\subseteq G$,
+\item[$\bullet$] $l^\infty_B$ is the $G(X)$-algebra $l^\infty (X,B\otimes \mathfrak K)$ and $l^\infty_B\rtimes_r G(X)$ is the associated reduced crossed product,
+\item[$\bullet$] $P_E(G)$ is the Rips complex of $G$.
+\end{itemize}
+These results are implied by their analog in controlled $K$-theory that we prove (theorem \ref{BCCeq}). As a corollary, we prove that any coarse space which admits a fibred coarse embedding into Hilbert space satisfies the controlled maximal coarse Baum-Connes conjecture (theorem \ref{fibred}). This is a stronger version of a result of M. Finn-Sell \cite{FinnSellFibred}. Recall that the notion of fibred embedding into Hilbert space is weaker than embedding into Hilbert space. For instance, some box spaces of $SL(2,\Z)$ are expanders, hence cannot embed into Hilbert space, but admits a fibred embedding.\\ 
+
+The article follows the following plan. The second section present an overview of controlled $K$-theory in the setting of $C^*$-algebras filtered by what we call a coarse structure. In the third and fourth sections, we build assembly maps with values in these controlled $K$-groups, which factorizes the usual assembly maps, in the case of étale groupoids and coarse spaces respectively. The last section is devoted to applications of these results in Coarse Geometry.
+%We also quickly show how controlled $K$-theory can be used for $K$-amenability of crossed products by discrete quantum groups.  
+
+
+
+
+
+
+
+
+
