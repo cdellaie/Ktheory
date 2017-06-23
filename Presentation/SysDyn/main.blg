@@ -1,0 +1,32 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+A level-1 auxiliary file: Symplectic.aux
+A level-1 auxiliary file: Heisenberg.aux
+A level-1 auxiliary file: PhysicsWhy.aux
+The style file: plain.bst
+Database file #1: biblio.bib
+You're missing a field part---line 100 of file biblio.bib
+ :     volume  = 
+ :               ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 129 of file biblio.bib
+ : 
+ : month = "10"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 139 of file biblio.bib
+ : 
+ : month = ""
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 149 of file biblio.bib
+ : 
+ : month = ""
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 159 of file biblio.bib
+ : 
+ : month = "Summer"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Heisenberg"
+(There were 5 error messages)

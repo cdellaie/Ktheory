@@ -1,12 +1,17 @@
-\select@language {french}
-\contentsline {section}{\numberline {1}Le principe de Maxwell}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}Un exemple}{4}{subsection.1.1}
-\contentsline {section}{\numberline {2}Expos\IeC {\'e} : Heisenberg selon Alain Connes}{6}{section.2}
-\contentsline {subsection}{\numberline {2.1}M\IeC {\'e}canique classique}{6}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}M\IeC {\'e}canique Lagrangienne}{6}{subsubsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.2}M\IeC {\'e}canique Hamiltonienne}{6}{subsubsection.2.1.2}
-\contentsline {subsubsection}{\numberline {2.1.3}M\IeC {\'e}canique symplectique}{7}{subsubsection.2.1.3}
-\contentsline {subsection}{\numberline {2.2}M\IeC {\'e}canique quantique}{7}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Historique}{7}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Heisenberg}{8}{subsubsection.2.2.2}
-\contentsline {subsection}{\numberline {2.3}Introduction \IeC {\`a} la m\IeC {\'e}canique quantique}{8}{subsection.2.3}
+\select@language {british}
+\contentsline {section}{\numberline {0.1}Le principe de Maxwell}{2}{section.0.1}
+\contentsline {subsection}{\numberline {0.1.1}Un exemple}{3}{subsection.0.1.1}
+\contentsline {section}{\numberline {0.2}Expos\IeC {\'e} : Heisenberg selon Alain Connes}{4}{section.0.2}
+\contentsline {subsection}{\numberline {0.2.1}M\IeC {\'e}canique classique}{4}{subsection.0.2.1}
+\contentsline {subsubsection}{M\IeC {\'e}canique Lagrangienne}{4}{section*.2}
+\contentsline {subsubsection}{M\IeC {\'e}canique Hamiltonienne}{4}{section*.3}
+\contentsline {subsubsection}{M\IeC {\'e}canique symplectique}{4}{section*.4}
+\contentsline {subsection}{\numberline {0.2.2}M\IeC {\'e}canique quantique}{5}{subsection.0.2.2}
+\contentsline {subsubsection}{Historique}{5}{section*.5}
+\contentsline {subsubsection}{Heisenberg}{5}{section*.6}
+\contentsline {subsection}{\numberline {0.2.3}Introduction \IeC {\`a} la m\IeC {\'e}canique quantique}{5}{subsection.0.2.3}
+\contentsline {chapter}{\numberline {1}Physics : why ?}{6}{chapter.1}
+\contentsline {section}{\numberline {1.1}}{6}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Quantum physics and probability theory}{6}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Quantification of the harmonic oscillator}{7}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}The imprimitivity theorem of Mackey}{7}{subsection.1.1.3}

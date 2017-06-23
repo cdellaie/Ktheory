@@ -1,0 +1,66 @@
+\chapter{Physics : why ?}
+This note are based on a seminar given by PhD students in Mathematics at the University of Lorraine during spring 2017. \\
+
+\textbf{Notations :} \\
+If $H$ is a complex Hilbert space, $\mathcal L(H)$ denotes the bounded linear operators on $H$. If $T\in\mathcal L(H)$, $T^*$ denotes its adjoint. 
+
+\section{}
+
+The following section 
+\subsection{Quantum physics and probability theory}
+
+In his article \cite{Heisenberg}, W. Heisenberg built a model of the atom using what he called q-numbers. It is, to the knowledge of the author, the first time a physicist proposes the use of non-commutative variables to describe a measurable phenomenon. The aim of this section is to explain how physicists compute measurable quantities out of a self-adjoint operator. The key notion is that of Projection Valued Measure.
+
+\begin{definition}
+Let $(\Omega,\mathcal B)$ be a measurable space, and $H$ a complex Hilbert space. A Projection Valued Measure (POVM) on $\Omega$ is a map
+\[P :\mathcal B \rightarrow \mathcal L(H) \]
+such that :
+\begin{itemize}
+\item[$\bullet$] $P(\emptyset) = 0$ and $P(\Omega)= id_H$,
+\item[$\bullet$] for each measurable subset $B\in \mathcal B$, $ P(B)$ is a self-adjoint projection, i.e. \[ P(B)=P(B)^*=P(B)^2,\] 
+\item[$\bullet$] for every $B,B'\in \mathcal B$, \[P(B\cap B') = P(B)P(B'),\]
+\item[$\bullet$] for every $B,B'\in \mathcal B$ such that $B\cap B' = \emptyset$, \[P(B\cup B') = P(B)+P(B'),\]
+\item[$\bullet$] for every $\xi,\eta\in H$, $B\mapsto P_{\xi,\eta}(B) = \langle \xi, P(B)\eta\rangle$ defines a complex measure $\mathcal B \rightarrow \mathbb C$.
+\end{itemize}
+\end{definition}
+
+A POVM allows to define bounded functional calculus. Let $f\in L^\infty(\Omega)$ be a essentially bounded function on $\Omega$. Then 
+\[P_{\xi,\eta}(f) = \int f(x) dP_{\xi,\eta}(dx)\]
+defines a bounded operator on $H$, which we will denote by $\int_\Omega f dP$.
+
+\begin{prop}[Functional Calculus]
+The map 
+\[P : \left\{\begin{array}{rcl}
+L^\infty(\Omega) & \rightarrow & \mathcal L(H) \\
+f & \mapsto & \int_\Omega f dP
+\end{array}\right.\]
+defines a $*$-homomorphism, continuous for the $*$-weak topology. Moreover, an operator $T\in\mathcal L(H)$ commutes with $P(f)$ iff $T$ commutes with $P(B)$ for every $B\in\mathcal B$.
+\end{prop}
+
+The functional calculus allows to give a nice setting for the spectral theorem.
+
+\begin{thm}[Spectral theorem] Let $T\in \mathcal L(H)$ be a normal operator, i.e. such that $T$ and $T^*$ commutes. Then there exists a unique POVM $P$ on $\Omega = Sp(T)$ such that 
+\[T = \int_\Omega x P(dx) (=P(id)),\]
+$\hat T$ being the Gelfand transform of $T$. Moreover, for every $A\in \mathcal L(H)$ which commutes with $T$, there exists $f\in L^\infty (\Omega)$ such that $A= P(f)$.
+\end{thm}
+
+\begin{rk} A good setting for that theorem is that of Von Neumann algebras. Indeed, the spectral theorem exactly says that if $M$ is any unital commutative Von Neumann algebra of $\mathcal L(H)$, there exists a unique POVM $P$ such that, for every $T\in A$,
+\[T = \int_\Omega \hat T(x) P(dx).\]
+Moreover,  $A' = \cap_{B\in\mathcal B} E(B)'$.
+\end{rk}
+
+It is this theorem that allows physicists to understand self-adjoint operators as generalized observables. Indeed, given a self-adjoint operator $A\in\mathcal L(H)$ supposed to describe an observable, what is measured during the experiment if the system is prepared in the state $\xi\in H$ ( $||\xi||= 1$ ) is a random variable $X$ which follows the probability law $P_{\xi,\xi}$. This theory entirely recovers the classical probability theory. What is gained is the existence of incompatible variable. Indeed, if two variables commute, they are function one of another. But if they don't, no POVM diagonlize them, which physically means they cannot be simultaneously measured.  
+
+\subsection{Quantification of the harmonic oscillator}
+
+One of the simplest system to describe is the harmonic oscillator. Classically, it is defined as ...\\
+
+In QM, a family of harnmonic oscillator is described by operators $\{p_i , q_i\}_i$ which satisfies the Canonical Commutation Relations (CCR) :
+\[[p_i,q_j ] = i\hbar \delta_i^j \quad [p_i,p_j]=[q_i,q_j]=0.\]
+Such operators cannot be bounded. Indeed, let $A$ be a unital $\C$-algebra with a multiplicative norm, and two elements $x,y\in A$ such that
+\[xy-yx = 1_A.\]
+Then by induction $x^ny-yx^n = nx^{n-1}$ for every $n>1$. Hence $n \leq 2 || x || || y||$, which is absurd. This proof is of Wielandt, and can be found in \cite{Rudin}.
+
+
+
+\subsection{The imprimitivity theorem of Mackey}
