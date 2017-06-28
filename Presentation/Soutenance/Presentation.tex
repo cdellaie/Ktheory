@@ -1,0 +1,71 @@
+%% Beamer Template of Sabine Hauert and R.~Eddie Wilson
+%% Available on https://www.overleaf.com/latex/templates/eddies-minimum-beamer-style/qhcyjdqkbbgx#.V-vfg1SLS1I
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Head matter - can we try to be consistent on
+% included packages
+
+\documentclass{beamer}
+\mode<presentation>
+{\usetheme{default}
+ \usecolortheme{default}
+ \usefonttheme{default}
+ \setbeamertemplate{navigation symbols}{}
+ \setbeamertemplate{caption}[numbered]} 
+
+
+% Block colors
+\setbeamercolor{block body}{bg=blue!10,fg=black}
+\setbeamercolor{block title}{bg=blue!30,fg=black}
+
+% Pour que tikzcd fonctionne
+%\[\begin{tikzcd}[ampersand replacement=\&, column sep=small]\end{tikzcd}\]
+
+
+\include{macro}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting for title page
+\title[First Steps with SCRATCH]{$K$-théorie contrôllée pour les groupoïdes\\ et applications}
+\author{Clément Dell'Aiera}
+\institute{IECL}
+\date{12 Juillet 2017}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%% TITRE
+\begin{frame}
+  \titlepage
+\begin{center}\includegraphics[width=5cm]{IECL.png}\end{center}
+\end{frame}
+
+\begin{frame}
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\include{Introduction}
+
+\section{Motivations}
+\include{Motivations}
+
+\section{$K$-théorie contrôllée}
+\include{ControlledKtheory}
+
+\section{Formule de Künneth}
+\include{Kunneth}
+
+\section{Groupoïdes}
+\include{Groupoids}
+
+\begin{frame}{Références}
+\bibliographystyle{plain}
+\bibliography{biblio2}
+\end{frame} 
+
+\begin{frame}{}
+Merci de votre attention !
+\end{frame}
+
+\end{document}

@@ -1,0 +1,135 @@
+\begin{frame}{Groupoïdes}
+Soit $G \rightrightarrows G^{(0)}) $ un groupoïde localement compact.\\
+\vspace{0.3 cm}
+On note $r,s:G \rightrightarrows G^{(0)}$ les applications source et but, $e : G^{(0)} \rightarrow G$ l'application unité, et 
+\[G^{(2)} = \{(g,g') \in G\times G \text{ t.q. } s(g)=r(g')\}\]
+les paires composables.\\
+\vspace{0.3 cm}
+\begin{definitionfr}
+Le groupoïde $G$ est dit étale si l'application but $r : G \rightarrow G^{(0)} $ est un homéomorphisme local.
+\end{definitionfr}
+
+\end{frame}
+
+\begin{frame}{Groupoïdes}
+
+Une $C(G^{(0)}$-algèbre $A$ est la donnée d'une $C^*$-algèbre $A$ muni d'un $*$-morphisme non-dégénéré $\theta : C(G^{(0)}) \rightarrow Z(\mathcal M(A))$.\\ 
+
+\begin{definitionfr}
+L'espace $C_c(G,A)$ des sections à support compact est défini comme
+\[C_c(G,A) = \bigcup_U C_0(U)\otimes_s A\]
+où $U$ parcourt les ouvert $U\subseteq G$ relativement compacts.
+\end{definitionfr}
+
+\end{frame}
+
+\begin{frame}{Groupoïdes}
+
+Une action de $G$ sur une $C(G^{(0)})$-algèbre $A$ est la donnée d'un isomorphisme de $C(G)$-algèbres 
+\[\alpha : s^* A \rightarrow r^* A\]
+tel que $\alpha_{e_x} = id$ et $\alpha_g \circ \alpha_{g'}  = \alpha_{gg'}$ pour tout $x\in G^{(0)}$ et toute paire composable $(g,g') \in G^{(2)}$.\\ 
+\vspace{0.3 cm}
+On munit $C_c(G,A)$ du produit de convolution 
+\[(f_1\ast f_2)(g) = \sum_{h\in G^{r(g)}} f_1(h) \alpha_h(f_2(h^{-1}g)).\]
+et de l'involution $\overline f(g)=\alpha_g(f(g^{-1})^*)$.\\
+
+\end{frame}
+
+\begin{frame}{Groupoïdes}
+Le $A$-module hilbertien $L^2(G,A)$ est la complétion de $C_c(G,A)$ pour le produit scalaire 
+\[\langle \xi ,\eta \rangle_x  = \sum_{g\in G^x} \xi(g)\overline \eta(g) \quad x\in G^{(0)} \]
+sur lequel $C_c(G,A)$ est représenté par $\lambda(f) \xi = f\ast \xi$, pour tout $ f\in C_c(G,A)$ et $\xi\in L^2(G,A)$.\\
+\end{frame}
+
+\begin{frame}{Groupoïdes}
+\begin{definitionfr}
+Le produit croisé $A\rtimes_r G$ est la $C^*$-algèbre obtenue en complétant $C_c(G,A)$ pour la norme $||f||_r=||\lambda(f)||$.
+\end{definitionfr}
+\vspace{0.3 cm}
+On pose $\mathcal E$ l'ensemble des compacts symmétriques non vides de $G$, muni de la loi de compostion $E\circ E' = EE' \cup E'E$. Alors $\mathcal E$ est une structure coarse et $A\rtimes_r G$ est $\mathcal E$-filtrée avec $A_E = \cup_{U\subseteq E	} C_0(U)\otimes_s A$. 
+\end{frame}
+
+\begin{frame}{Groupoïdes}
+La classe $\mathcal C$ définit une classe de groupoïdes dont toutes les actions propres sont localement induites par des sous-groupoïdes compacts ouverts. 
+\vspace{0.3 cm}
+\begin{definitionfr}
+Un groupoïde étale $G$ est dans la classe $\mathcal C$ si, pour toute action propre $G$ sur un espace $Z$, il existe un recouvrement ouvert $\mathcal U$ de $Z$ tel que, pour tout $U\in\mathcal U$, il existe un sous-groupoïde compact ouvert $H_U$ de $G$ et un $H_U$-espace $Z_U$ et un homéomorphisme $G$-equivariant
+\[\psi_U : U \rightarrow G\times_{H_U} Z_U.\] 
+\end{definitionfr}
+\vspace{0.3 cm}
+\textbf{Exemples:} les groupes discret, les groupoïdes amples.
+
+\end{frame}
+
+\begin{frame}{Groupoïdes}
+Pour calculer la $K$-théorie de $A\rtimes_r G$, on dispose de l'application d'assemblage de Baum-Connes
+\[\mu_{G,A} : K^{top}(G,A) \rightarrow K(A \rtimes_r G)\]
+définie pour toute $G$-algèbre $A$. Le membre de gauche est calculable par des méthodes de topologie algébrique classique.
+\vspace{0.3 cm}
+\begin{conj}[Baum-Connes]
+Le groupoïde $G$ vérifie la conjecture de Baum-Connes à coefficients si $\mu_{G,A}$ est un ismomorphisme pour toute $G$-algèbre $A$.
+\end{conj}
+\vspace{0.3 cm}
+\textbf{Rappel:} $K^{top}(G,A)=\varinjlim_{E\in \mathcal E} RK^G(P_E,A)$ où $P_E$ est le complexe de Rips associé à $G$ :
+\[P_E = \{\eta\in Prob(G) \text{ s.t. } \exists x\in G^{(0)},g\in G^x / \ supp (\eta) \subseteq G^x \cap gE  \}\]
+\end{frame}
+
+\begin{frame}{Formule de Künneth}
+On veut démontrer que, sous de bonnes conditions,  
+\[\alpha_{A\rtimes_r G,B} : K(A\rtimes_r G)\otimes K(B) \rightarrow K((A\rtimes_r G)\otimes B)\]
+est un isomorphisme pour toute $C^*$-algèbre $B$ telle que $K(B)$ soit libre.\\
+\vspace{0.3 cm}
+\textbf{Stratégie:}
+\begin{itemize}
+\item[$\bullet$] définir une version topologique 
+\[\alpha_{A,B}^{G} : K^{top}(G,A)\otimes K(B) \rightarrow K^{top}(G,A\otimes B)\]
+de $\alpha_{A\rtimes_r G,B}$.
+\item[$\bullet$] montrer que l'application d'assemblage les entrelace.
+\item[$\bullet$] se ramener au cas de certains sous-groupoïdes de $G$ par restriction.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Formule de Künneth}
+\begin{thmfr}
+Soit $G$ un groupoïde $\sigma$-compact étale et $A$ une $G$-algèbre. Si 
+\begin{itemize}
+\item[$\bullet$] $G$ vérifie la conjecture de Baum-Connes à coefficients,
+\item[$\bullet$] $G$ est dans la classe $\mathcal C$,
+\item[$\bullet$] pour tout sous-groupoïde compact ouvert $H$ de $G$ et tout $H$-espace $V$ telle que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective, $\alpha_{A,B}^{H,V}$ est un isomorphisme.
+\end{itemize} 
+Alors $A\rtimes_r G$ vérifie la formule de Künneth contrôlée.
+\end{thmfr}
+\end{frame}
+
+\begin{frame}{Idée de la preuve}
+On définit  
+\[\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K(B) \rightarrow RK^G(Z,A\otimes B)\]
+pour toute $G$-algèbre $A$, $C^*$-algèbre $B$ et $G$-espace $Z$.
+Le diagramme suivant commute :
+\[\begin{tikzcd}[ampersand replacement=\&, column sep=small] 
+\alpha_{A,B}^{G,P_E}: RK^G(P_E,A)\otimes K(B)\arrow{r}\arrow{d}{\mu_{G,A}\otimes id}    \& RK^G(P_E,A\otimes B)\arrow{d}{\mu_{G,A\otimes B}} \\
+\alpha_{A\rtimes_r G,B}: K(A\rtimes_r G) \otimes K(B) \arrow{r} \& K((A\rtimes_r G)\otimes B)
+\end{tikzcd}\]
+\end{frame}
+
+\begin{frame}{Idée de la preuve}
+\begin{thmfr}
+Soit $G$ un groupoïde de la classe $\mathcal C$, et soit $E\in\mathcal E$. Si, pour tout 
+\begin{itemize}
+\item[$\bullet$] sous-groupoïde compact ouvert $H$ de $G$
+\item[$\bullet$] tout $H$-espace $V$ tel que l'application moment $p : V\rightarrow H^{(0)}$ soit localement injective,
+\end{itemize} 
+$\alpha_{Res_H^G(A),B}^{H,V}$ est un isomorphisme, alors 
+\[\alpha_{A,B}^{G,P_E}: RK^G(P_E,A)\otimes K(B)\rightarrow RK^G(P_E,A\otimes B) \] 
+est un isomorphisme pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ est un groupe abélien libre.\\
+\end{thmfr}
+\end{frame}
+
+\begin{frame}{Idée de la preuve}
+Soit $Z_0 \subseteq ...\subseteq Z_n$ la décompostion en squelette de $P_E$. Par un argument de type Mayer-Vietoris, il suffit de le démontrer pour $Z_0 = G$. Mais $p =r : Z_0 \rightarrow G^{(0)} $ est localement injective. \\
+\vspace{0.3 cm}
+On peut ensuite refaire la preuve avec l'application d'assemblage contrôlée
+\[\mu_{G,A}^{\varepsilon, E,E'} : RK^G(P_E,A)\rightarrow K^{\varepsilon,E'}(A\rtimes_r G)\]
+pour obtenir la version contrôlée du résultat.
+\end{frame}
+

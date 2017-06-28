@@ -1,0 +1,48 @@
+\begin{frame}{Künneth}
+Pour toutes $C^*$-algèbres $A$ et $B$, on définit
+\[\alpha_{A,B} : K_*(A)\otimes K_*(B)\rightarrow K_*(A\otimes B) \quad ; \quad (x,y)\mapsto x\otimes   \tau_A(y).\]
+
+\begin{definitionfr}
+Une $C^*$-algèbre $A$ satisfait la formule de Künneth si, pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ soit libre, $\alpha_{A,B}$ est un isomorphisme.
+\end{definitionfr}
+
+Si $A$ satisfait la formule de Künneth, alors, pour toute $C^*$-algèbre $B$, la suite suivante
+\[0  \rightarrow K_*(A)\otimes K_*(B) \rightarrow K_*(A\otimes B)  \rightarrow Tor(K_*(A),K_*(B)) \rightarrow 0\]
+est exacte.
+
+\end{frame}
+
+\begin{frame}{Künneth}
+Si $A$ est $\mathcal E$-filtrée, $A\otimes B$ est $\mathcal E$-filtrée par $\{A_E\otimes B\}_E$. Pour tout $z \in KK(B_1,B_2)$, on dispose d'un morphisme contrôlé 
+\[\hat \tau_A (z): K^{\varepsilon,E}(A\otimes B_1 ) \rightarrow K^{\alpha_\tau\varepsilon,k_\tau(\varepsilon).E}(A\otimes B_2)\]
+qui induit $-\otimes \tau_A(z) $ en $K$-théorie \cite{OY2}.\\
+\vspace{0.3 cm}
+On définit le morphisme contrôllé  
+\[\hat\alpha_{A,B} : \hat K_*(A)\otimes K_*(B)\rightarrow \hat K_*(A\otimes B) \quad ; \quad (x,y)\mapsto \hat\tau_A(y)(x),\]
+qui induit donc $\alpha_{A,B}$ en $K$-théorie.\\
+\end{frame}
+
+\begin{frame}{Künneth}
+Le morphisme contrôllé $\alpha_{A,B}$ est dit :
+\begin{itemize}
+ 
+\item[$\bullet$] quasi-injectif s'il existe $\lambda \geq 1$ tel que, pour tout $\varepsilon\in (0,\frac{1}{4\alpha_\tau \lambda})$ et $F\in\mathcal E$, il existe $F'\in\mathcal E$, et $F\subseteq F'$, tels que: 
+\[\forall x\in K^{\varepsilon,F}(A)\otimes K(B)\text{ t.q. }\alpha_{A,B}^{\varepsilon,F}(x)=0 \text{ alors }(\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}\otimes id) (x) = 0.\] 
+
+\item[$\bullet$] quasi-surjectif s'il existe $\lambda \geq 1$ tel que, pour tout $\varepsilon \in (0,\frac{1}{4\alpha_\tau})$ et $F\in\mathcal E$, il existe $F'\in\mathcal E$, $F\subseteq h_{\tau,\lambda\varepsilon}.F'$, tels que:
+\[ \forall y\in K^{\varepsilon,F}(A\otimes B), \exists x\in K^{\lambda\varepsilon, F'}(A)\otimes K(B) \text{ t.q. }\]
+\[\alpha^{\lambda\varepsilon,F'}_{A,B}(x)=\iota_{\varepsilon,F}^{\alpha\lambda\varepsilon,h_{\tau, \lambda\varepsilon}.F'}(y).\] 
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Künneth}
+\begin{definitionfr}
+Une $C^*$-algèbre $\mathcal E$-filtrée $A$ satisfait la formule de Künneth quantitative s'il existe $\lambda \geq 1$ tel que, pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ soit libre, $\hat\alpha_{A,B}$ est quasi-injectif et quasi-surjectif. 
+\end{definitionfr}
+
+Si $A$ satisfait la formule de Künneth quantitative, alors elle satisfait la formule de Künneth usuelle.\\
+\vspace{0.3 cm}
+\textbf{Remarque :} l'intêret de la formule de Künneth quantitative est qu'elle est stable par des décompositions plus faibles que la formule usuelle. (Oyono-Oyono \& Yu, 2016 \cite{OY4}).
+\end{frame}
+
