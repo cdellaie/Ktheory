@@ -1,5 +1,5 @@
 \chapter{Physics : why ?}
-This note are based on a seminar given by PhD students in Mathematics at the University of Lorraine during spring 2017. \\
+These notes are based on a seminar given by PhD students in Mathematics at the University of Lorraine during spring 2017. \\
 
 \textbf{Notations :} \\
 If $H$ is a complex Hilbert space, $\mathcal L(H)$ denotes the bounded linear operators on $H$. If $T\in\mathcal L(H)$, $T^*$ denotes its adjoint. 
@@ -24,7 +24,7 @@ such that :
 \end{itemize}
 \end{definition}
 
-A POVM allows to define bounded functional calculus. Let $f\in L^\infty(\Omega)$ be a essentially bounded function on $\Omega$. Then 
+A POVM allows to define bounded functional calculus. Let $f\in L^\infty(\Omega)$ be an essentially bounded function on $\Omega$. Then 
 \[P_{\xi,\eta}(f) = \int f(x) dP_{\xi,\eta}(dx)\]
 defines a bounded operator on $H$, which we will denote by $\int_\Omega f dP$.
 
@@ -59,8 +59,56 @@ In QM, a family of harnmonic oscillator is described by operators $\{p_i , q_i\}
 \[[p_i,q_j ] = i\hbar \delta_i^j \quad [p_i,p_j]=[q_i,q_j]=0.\]
 Such operators cannot be bounded. Indeed, let $A$ be a unital $\C$-algebra with a multiplicative norm, and two elements $x,y\in A$ such that
 \[xy-yx = 1_A.\]
-Then by induction $x^ny-yx^n = nx^{n-1}$ for every $n>1$. Hence $n \leq 2 || x || || y||$, which is absurd. This proof is of Wielandt, and can be found in \cite{Rudin}.
+Then by induction $x^ny-yx^n = nx^{n-1}$ for every $n>1$. Hence $n \leq 2 || x || || y||$, which is absurd. This proof is of Wielandt, and can be found in \cite{Rudin}.\\
 
-
+The theorem of Stone-Von Neumann asserts that there is only one irreducible unitary representation of the CCR, and that one representative is given by $p_i=\frac{\partial }{\partial x_i}$ and $q_j= x_j$ on $L^2(\R^n)$.
 
 \subsection{The imprimitivity theorem of Mackey}
+
+In this section, we explain a result of Mackey which generalizes the Stone-Von Neumann theorem.
+
+\begin{definition}
+Let $G$ be a Lie group and $X$ a differentiable manifold. A system of imprimitivity for $(G,X)$ is given by :
+\begin{itemize}
+\item[$\bullet$] a complex Hilbert space $H$,
+\item[$\bullet$] a POVM $P: \mathcal B(X)\rightarrow \mathcal L(H)$ on $X$,
+\item[$\bullet$] a unitary representation $V:G\rightarrow U(H)$ of $G$ on $H$,
+\item[$\bullet$] an action of $G$ by diffeomorphisms on $X$.
+\end{itemize}
+such that \[V_g P(B)V_g^* = P( g B)\quad \forall B \in\mathcal B(X),g\in G. \]
+\end{definition}
+
+\begin{rk} Such a system is supposed to describe a particle evolving on the spacetime $X$ with internal symmetries $G$.
+\end{rk}
+
+\begin{rk} The POVM $P$ can be replaced by a $*$-representation $\pi : C_0(X)\rightarrow \mathcal L(H)$ such that 
+\[V_g \pi(f) V_g^* = \pi(\alpha_g(f))\]
+where $\alpha_g (f) (x) = f(g^{-1}x)$.
+\end{rk}
+
+Let $K$ be a closed subgroup of $G$ and $X=G/K$. $X$ is called a homogeneous space, and 
+\[g.(g'K) = (gg')K,\] 
+defines a differentiable action of $G$ on $X$.
+
+\begin{thm}[Mackey]
+Let $K$ be a compact subgroup of $G$. System of imprimitivity of $(G,G/K)$ are in bijective correspondence with unitary representations of $K$.
+\end{thm}
+
+\begin{rk}
+This result is actually contained in the $*$-isomorphism 
+\[C_0(G/K)\rtimes_r G \cong C^*_r (K) \otimes \mathfrak K(L^2(G)),\]
+which is convenient to prove using the fact that the groupoids $G/K\rtimes G$ and $K$ are Morita equivalent via $G/K$.
+\end{rk}
+
+\begin{rk}
+One can recover Stone-Von Neumann theorem by taking $G= \R^n$, and $K=1$.
+\end{rk}
+
+\begin{rk}
+If $G= Isom(\R^n)= \R^n \rtimes SO(n)$, and $K=SO(n)$, one gets that particles evolving on Euclidean spaces with isometries as symmetries are govern by unitary representations of $SO(n)$.
+\end{rk}
+
+\begin{rk}
+If $G= SO(n+1)$, and $K=SO(n)$, one gets that particles evolving on n dimensionnal spheres with rotations as symmetries are govern by unitary representations of $SO(n)$.
+\end{rk}
+
