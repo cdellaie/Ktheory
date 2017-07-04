@@ -17,7 +17,7 @@ For $x\in E$, we define $||x|| = ||\langle x,x\rangle ||^{\frac{1}{2}}$. It is a
 A $A$-Hilbert module $(E,\langle \cdot,\cdot \rangle)$ is a pre-Hilbert module which is complete for the norm $||\cdot ||$ defined above. $E$ is called a full Hilbert module if the linear span of $\{ <x,y> : x,y\in E\}$ is dense in $A$.
 \end{definition}
 
-The same definition exists for left-Hilbert modules. Usually, we will omit to precise right or left, as most of our modules will be right modules. Through misuse of language, we will call the sesquilinear function $\langle \cdot,\cdot \rangle$ an inner product. If the inner product satisfies all the conditions for $E$ to be a pre-Hilbert module but the last (if $\langle x,x\rangle = 0$, then $x=0$, for all $x\in E$), we call $E$ a semi-pre-Hilbert module.
+The same definition exists for left-Hilbert modules. Usually, we will omit to specify right or left, as most of our modules will be right modules. Through misuse of language, we will call the sesquilinear function $\langle \cdot,\cdot \rangle$ an inner product. If the inner product satisfies all the conditions for $E$ to be a pre-Hilbert module but the last (if $\langle x,x\rangle = 0$, then $x=0$, for all $x\in E$), we call $E$ a semi-pre-Hilbert module.
 
 \begin{Expl} If $J$ is any closed right ideal in $A$, $J$ is naturally a $A$-Hilbert module with respect to the inner product $\langle a, b \rangle = a^* b$. In particular, $A$ is a $A$-Hilbert module.
 \end{Expl}
@@ -67,7 +67,7 @@ Let $E$ a Hilbert $A$-module, $F$ a Hilbert $B$-module and $\phi : A \rightarrow
 We can provide $F$ with the structure of a left $A$-module via $\phi$ : $a\cdot \eta := \phi(a)\eta$ for $a\in A,\eta\in F$. Consider the algebraic tensor product of $A$-modules $E\odot F$, with the structure of right $B$ module given by $x\otimes y \cdot b = x\otimes (yb)$. Define on $E\odot F$ the following sesquilinear function : $\langle x \otimes y , x'\otimes y'\rangle := \langle y, \phi(\langle x, x'\rangle)y'\rangle_F $. It satisfies the condition for $(E\odot F,\langle \cdot , \cdot \rangle )$ to be a semi-pre-Hilbert $B$-module.
 
 \begin{definition}
-The Hilbert $B$-module $E\otimes_\phi F$ is defined as the competion-separation of the semi-pre-Hilbert $B$-module $E\odot F$ with respect to $\langle \cdot , \cdot \rangle$. It is called the interior tensor product of $E$ and $F$. When $F=B$, it can be called the push forward of $E$ along $\phi$.
+The Hilbert $B$-module $E\otimes_\phi F$ is defined as the completion-separation of the semi-pre-Hilbert $B$-module $E\odot F$ with respect to $\langle \cdot , \cdot \rangle$. It is called the interior tensor product of $E$ and $F$. When $F=B$, it can be called the push forward of $E$ along $\phi$.
 \end{definition} 
 
 \begin{Expl}
@@ -89,7 +89,7 @@ The condition $\phi_*(\mathfrak K_A(E))\subseteq \mathfrak K_B(E\otimes_\phi F)$
 \begin{rk}\label{isometry}
 When we look at a $*$-homomorphism $\phi : A\rightarrow B$, we always have an isometry $V\in \mathcal L_B ( H_A\otimes_\phi B , H_B)$ defined on simple tensors as $(x_j)_j\otimes b \mapsto (\phi(x_j)b)_j$. Indeed, this map extends linearly to $H_A \odot B$, and if $x = (x_j)$ and $x'=(x'_j)$ are in $H_A$ : 
 \[\langle V (x\otimes b) , V(x'\otimes b')\rangle = b^* \sum_j \phi(x_j)^* \phi(x'_j) \  b' = b^*\phi(\langle x, x' \rangle)b' = \langle x\otimes b , x'\otimes b' \rangle . \] % Determiner V^* 
-This isometry can be used to explicitely describe the projection and the isomorphism appearing in the stabilization theorem in this particular example. Indeed $p = VV^*\in\mathcal L_B(H_B)$ is a projection such that $p H_B \cong H_A\otimes_\phi B $.\\
+This isometry can be used to explicitly describe the projection and the isomorphism appearing in the stabilization theorem in this particular example. Indeed $p = VV^*\in\mathcal L_B(H_B)$ is a projection such that $p H_B \cong H_A\otimes_\phi B $.\\
 
 Moreover, for $T\in \mathcal L_B(H_A\otimes_\phi B)$, $Ad_V(T) = VTV^*$ defines a $*$-homomorphism $Ad_V : \mathcal L_B(H_A\otimes_\phi B)\rightarrow \mathcal L_B(H_B)$ such that $Ad_V(\mathfrak K_B(H_A\otimes_\phi B))\subseteq \mathfrak K_B(H_B)$. Indeed, notice that 
 \[V\theta_{\xi,\xi'}V^* = \theta_{V\xi,V\xi'}\]

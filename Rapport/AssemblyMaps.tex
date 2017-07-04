@@ -50,10 +50,10 @@ We will use the equivariant $KK$-theory developped by Le Gall in his thesis \cit
 \begin{definition}
 Let $Y$ be a proper $G$-space and $B$ a $G$-algebra. Then the analytic $K$-homology of $Y$ with coefficients in $B$ is defined by 
 \[RK^G(Y,B) = \varinjlim_{Z\subseteq Y} KK^G(C_0(Z),B), \]
-the inductive limit being taken on proper $G$-compact $G$-subspaces $Z$ of $Y$. The topological $K$-theory of $G$ is defined as the analytic $K$-homology of $\underline E G$. In the litterature, the notation $K^{top}(G,B)$ is common to denote $RK^G(\underline E G,B)$.
+the inductive limit being taken on proper $G$-compact $G$-subspaces $Z$ of $Y$. The topological $K$-theory of $G$ is defined as the analytic $K$-homology of $\underline E G$. In the literature, the notation $K^{top}(G,B)$ is common to denote $RK^G(\underline E G,B)$.
 \end{definition}
 
-The previous lemmas ensures that the topological $K$-theory of $G$ can be computed as an inductive limit of the $K$-homology of the spaces $P_K(G)$ :
+The previous lemmas ensure that the topological $K$-theory of $G$ can be computed as an inductive limit of the $K$-homology of the spaces $P_K(G)$:
 %somehow restricted when it comes to the analytic $K$-homology of any universal space $\underline E G$ :
 \begin{lem}\label{Khomology} Let $B$ be a $G$-algebra. Then :
 \[RK^G(\underline E G,B) = \varinjlim_{K\subseteq G \text{ compact }} KK^G(C_0(P_K(G)),B).\]
@@ -61,7 +61,7 @@ The previous lemmas ensures that the topological $K$-theory of $G$ can be comput
 
 \begin{dem} Let us denote by $\mathcal A$ the inductive limit 
 \[\varinjlim_{K\subseteq G } KK^G(C_0(P_K(G)),B).\] 
-By universal property of the inductive limit, there exists a unique homomorphism 
+By the universal property of the inductive limit, there exists a unique homomorphism 
 \[\phi : \mathcal A \rightarrow RK^G(\underline E G,B).\] 
 Let $Z$ and $Z'$ be two proper $G$-compact $G$-spaces such that $Z\subseteq Z'$. By lemma \ref{Gspace}, there exist compact subsets $K$ and $K'$ of $G$ and $G$-equivariant continuous maps $h : Z\rightarrow P_K(G)$ and $h : Z'\rightarrow P_{K'}(G)$. Up to enlarge $K'$, we can suppose $h'_{|Z}$ and $ h $ are homotopic. 
 %The following diagram commutes
@@ -75,7 +75,7 @@ Let $Z$ and $Z'$ be two proper $G$-compact $G$-spaces such that $Z\subseteq Z'$.
 %KK^G(C_0(Z'),B) \arrow{ur} &  \\
 %\end{tikzcd}.\]
 %is commutative. 
-By universal property of the inductive limit, there exists a unique homomorphism 
+By the universal property of the inductive limit, there exists a unique homomorphism 
 \[ \psi : RK^G(\underline E G,B)\rightarrow \mathcal A.\] 
 Then $\psi\circ\phi = id_A$ is obvious. The universal property of $\underline E G $ ensures that there exist $G$-equivariant continuous maps, unique up to homotopy, $P_{K}(G) \rightarrow  \underline E G$ and $P_{K'}(G)\rightarrow  \underline E G$. The composition of $Z\rightarrow P_K(G)$ by $P_{K'}(G)$ is, up to enlarge $K'$, homotopic to the inclusion $Z\rightarrow \underline E G$.  Hence $\phi\circ \psi = id$ and 
 \[RK^G(\underline E G,B) \cong A.\]
@@ -140,7 +140,7 @@ Recall that a function $h : G\rightarrow \R$ is said to be of negative type if :
 The function $h$ is said to be locally proper if, for every compact $K \subseteq G^{(0)}$, $h_{|G_K^K}$ is proper.\\
 
 \begin{definition}
-A topological groupoid $G$ is said to be a-T-menable if it satisfies one of the following equivalent property :
+A topological groupoid $G$ is said to be a-T-menable if it satisfies one of the following equivalent properties :
 \begin{itemize}
 \item[$\bullet$] there exists a continuous field of Hilbert spaces over $G^{(0)}$ with a proper affine action of $G$,
 \item[$\bullet$] there exists a locally proper negative type function on $G$.
@@ -207,7 +207,7 @@ A proof of the compatibility with Kasparov products can be found in \cite{OY3}. 
 
 Let $X$ be a coarse space with bounded geometry. The Rips complex is the inductive system of finite dimensional simplicial complexes
 \[P_E(X)=\{\eta\in \text{Prob}(X)\text{ s.t. supp }\eta\subseteq E\}\quad,\forall E\in \mathcal E_X,\]
-endowed with the $*$-weak topology. It is an inductive system with respect to inclusion of entourages.\\
+endowed with the weak-$*$ topology. It is an inductive system with respect to inclusion of entourages.\\
  
 Let us recall the definition of the left-hand side of the coarse assembly map. The coarse homology group of $X$ with coefficients in an arbitrary $C^*$-algebra $B$ is defined as 
 \[KX_*(X,B)=\varinjlim_{E\in \mathcal E_X} KK(C_0(P_E(X)),B)\]

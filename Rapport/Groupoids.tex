@@ -6,7 +6,7 @@ A topological groupoid is the data of
 \item[$\bullet$] two topological spaces $G$ and $G^{(0)}$, called respectively the space of arrows, and the unit space,
 \item[$\bullet$] a topological embedding $e: G^{(0)}\rightarrow G; x\mapsto e_x$ called the unit map,
 \item[$\bullet$] source and range maps $r,s : G\rightarrow G^{(0)}$ which are continuous, surjective, and satisfy $r\circ e = s\circ e = Id_{G^{(0)}}$,
-\item[$\bullet$] a continuous multiplication map $m : G^{(2)}=G\times_{s,r}G\rightarrow G; (g,g')\mapsto gg'$ such that $(gg')g''=g(g'g'')$ for all triple $g,g',g''$ that are composable, and $g e_{s(g)} = e_{r(g)} g =g$,
+\item[$\bullet$] a continuous multiplication map $m : G^{(2)}=G\times_{s,r}G\rightarrow G; (g,g')\mapsto gg'$ such that $(gg')g''=g(g'g'')$ for all triples $g,g',g''$ that are composable, and $g e_{s(g)} = e_{r(g)} g =g$,
 \item[$\bullet$] an involutive map $\text{inv} : G\rightarrow G: g\mapsto g^{-1}$ which is continuous and such that $s\circ \text{inv} = r$, $r\circ \text{inv} = s$ and $\forall g\in G, gg^{-1}=e_{s(g)} \text{ and }g^{-1}g=e_{r(g)}$. This map is called the inverse map.
 \end{itemize} 
 \end{definition}
@@ -51,7 +51,7 @@ Let $X$ be a topological space and $f : X\rightarrow G^{(0)} $ a continuous map.
 
 These examples show how the notion of topological groupoid interpolates between a group and a space. However, other examples of interesting groupoids abound in analysis and geometry. For example, we will define later a so called Coarse Groupoid associated to any Coarse Space, after \cite{SkTuYu}, whose importance cannot be emphasized enough to our approach to the Coarse Baum-Connes conjecture.\\
 
-Other examples includes the holonomy groupoid of a foliation \cite{connesfoliations}, Lie groupoids \cite{paterson}, etc. One of the reasons groupoids are such famous objects in noncommutative geometry is that we can still do analysis on it. According to the general philosophy of Connes \cite{Connes94}, groupoids encode geometric situations and remain available to analysis, even when the situation is so pathological that classical tools become trivial. For example, when confronted to a group action, considering the convolution algebra of the principal action groupoid can be a substitute to the studying the quotient space. It turns out that, when the action is free and proper, the envelopping $C^*$-algebra is Morita equivalent to $C_0(X/G)$, which represent the quotient space by Gelfand duality. However, when the quotient is %badly behaved
+Other examples include the holonomy groupoid of a foliation \cite{connesfoliations}, Lie groupoids \cite{paterson}, etc. One of the reasons groupoids are such famous objects in noncommutative geometry is that we can still do analysis on it. According to the general philosophy of Connes \cite{Connes94}, groupoids encode geometric situations and remain available to analysis, even when the situation is so pathological that classical tools become trivial. For example, when confronted with a group action, considering the convolution algebra of the principal action groupoid can be a substitute to the studying the quotient space. It turns out that, when the action is free and proper, the envelopping $C^*$-algebra is Morita equivalent to $C_0(X/G)$, which represents the quotient space by Gelfand duality. However, when the quotient is %badly behaved
 singular, the envelopping $C^*$-algebra still carries usefull information, even if the quotient  is such that $C_0(X/G) \cong \C$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -147,7 +147,8 @@ This paragraph describes what is an action of a topological groupoid on a $C^*$-
 Let $X$ be a topological space. A $C(X)$-algebra is a $C^*$-algebra $A$ together with a $*$-homomorphism $\theta : C_0(X)\rightarrow Z(\mathcal M(A))$ such that $\overline{\theta (C_0(X)) A} = A$. The couple $(A,\theta)$ is then called a $C(X)$-structure.
 \end{definition} 
 
-If $f : X\rightarrow Y$ is a continuous map between locally compact spaces, and $A$ a $C(Y)$-algebra, then $f$ induces a $C(X)$-structure on $A$ by $f^* : C(Y) \rightarrow C_b(X); g\mapsto g\circ f$. Define $f^* A = A \otimes_{f^*} C_0(X)$ the resulting $C(X)$-algebra. For details on tensor products of $C(X)$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $C(X)$-algebra : for $x\in X$, $A_x = ev_x^* \ A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$. It is convenient to see $A_x$ as $A/ (I_x .A)$ where $I_x$ is the ideal ker $(ev_x : C_0(X) \rightarrow \C)$. Moreover we can describe the fibers by a canonical isomorphism $f^*A$ : $(f^*A)_x \cong A_{f(x)}$ for all $x\in X$.\\
+If $f : X\rightarrow Y$ is a continuous map between locally compact spaces, and $A$ a $C(Y)$-algebra, then $f$ induces a $C(X)$-structure on $A$ by $f^* : C(Y) \rightarrow C_b(X); g\mapsto g\circ f$. Define $f^* A = A \otimes_{f^*} C_0(X)$ the resulting $C(X)$-algebra. For details on tensor products of $C(X)$-algebras, see \cite{LeGall} for instance. As a particular case, one gets the notion of a fiber of a $C(X)$-algebra : for $x\in X$, $A_x = ev_x^* \ A$ is called the fiber over $x$, where $ev_x$ is the inclusion of $x$ in $X$. It is convenient to see $A_x$ as $A/ (I_x .A)$ where $I_x$ is the ideal ker $(ev_x : C_0(X) \rightarrow \C)$. Moreover we can describe the fibers of $f^*A$ by a canonical isomorphism: 
+\[(f^*A)_x \cong A_{f(x)}\] for all $x\in X$.\\
 
 A homomorphism between two $C(X)$-algebras $\alpha : A\rightarrow A'$ is a $*$-homomorphism which commutes with the action of $C_0(X)$, i.e. $\alpha(\theta(f)a)=\theta'(f)\alpha(a)$ for all $a\in A,f\in C_0(X)$. Its fibers are defined unambiguously by $\alpha_x = id_\C \otimes_{ev_x} \alpha$.\\
 
@@ -271,7 +272,7 @@ Doing computations, we will often use different equivalence relations which turn
 \begin{definition} Unitary and operator homotopy equivalences.
 \begin{itemize}
 \item[$\bullet$]  Unitary equivalence is defined as $(E,\pi,T)\sim_{u} (E',\pi',T')$ if there exists a unitary $u\in\mathcal L_B(E,E')$ such that $T = u^* T' u$ and $\pi(a) = u^* \pi'(a) u , \forall a\in A$.
-\item[$\bullet$] Let $\mathbb D^G(A,B) = \{(E,\pi,T) \in\mathbb E^G(A,B) \text{ s.t. } \pi(a)(F^2-1) = 0, [\pi(a),F]=0 \text{ and }V(s^*T)V^* = r^*T,\forall a\in A \}$. It is called the set of degenerate $K$-cycles.   
+\item[$\bullet$] Let $\mathbb D^G(A,B)$ be the set of $(E,\pi,T) \in\mathbb E^G(A,B)$ s.t. $\pi(a)(F^2-1) = 0$, $[\pi(a),F]=0$ and $V(s^*T)V^* = r^*T,\forall a\in A$. It is called the set of degenerate $K$-cycles.   
 \item[$\bullet$] An operator homotopy of $K$-cycles is a family $[0,1]\rightarrow \mathbb E^G(A,B) ; s\mapsto (E,\pi,T_s)$, where $s\mapsto T_s$ is norm-continuous. 
 \item[$\bullet$] $\sim_{oh}$ is the equivalence relation on $\mathbb E^G(A,B)$ generated by operator homotopy and addition of degenerate elements, i.e. $(E,\pi,T)\sim_{oh} (E',\pi',T')$ if there exists $(E'',\pi'',T'')\in\mathbb E^{G}(A,B)$ such that $(E,\pi,T)\oplus (E'',\pi'',T'')$ and $(E',\pi',T')\oplus (E'',\pi'',T'')$ are operator homotopic, up to unitary equivalence.
 \end{itemize}
@@ -319,7 +320,7 @@ More precisely, let us define decomposition property $(d)$.
 Let $d$ be a positive integer. An element $z\in KK^G(A,B)$ is said to satisfy decomposition property $(d)$ if
 \begin{itemize}
 \item[$\bullet$] there exist $G$-algebras $A_0$, $A_1$, ..., $A_d$ such that $A_0=A$ and $A_d=B$, 
-\item[$\bullet$] there exist elements $z_j \in KK^G(A_{j},A_{j+1})$ for $j\in\{0,..,d-1\}$ such that, either $z_j$ is induced by a $G$-morphism $A_j \rightarrow A_{j+1}$, either there exists a $G$-morphism $\phi_j : A_{j+1}\rightarrow A_j$ such that $z_j \otimes_{A_{j+1}} [\phi_j] = 1_{A_j}$ and $ [\phi_j] \otimes_{A_{j}} z_j  = 1_{A_{j+1}}$,
+\item[$\bullet$] there exist elements $z_j \in KK^G(A_{j},A_{j+1})$ for $j\in\{0,..,d-1\}$ such that, either $z_j$ is induced by a $G$-morphism $A_j \rightarrow A_{j+1}$, or there exists a $G$-morphism $\phi_j : A_{j+1}\rightarrow A_j$ such that $z_j \otimes_{A_{j+1}} [\phi_j] = 1_{A_j}$ and $ [\phi_j] \otimes_{A_{j}} z_j  = 1_{A_{j+1}}$,
 \end{itemize}
 such that $z = z_1 \otimes_{A_1}  ... \otimes_{A_{d-1}} z_{d-1} $ holds.
 \end{definition}

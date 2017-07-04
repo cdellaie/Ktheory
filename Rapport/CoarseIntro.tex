@@ -25,7 +25,7 @@ A set $E\subseteq X\times X$ is called an entourage if there exists $R>0$ such t
 
 \begin{Expl} Let $\Gamma$ be a finitely generated group, and $S$ be a symmetric (i.e. $S=S^{-1}$) generating subset. Define the word length associated to $S$ as 
 \[l(g) = \inf\{ k\in \N : \exists s_1,\cdots,s_k\in S \text{ s.t. } g= s_1 \cdots s_k\}.\]
-This defines a proper length on $\Gamma$ which does depend on $S$, but the coarse structure associated to the left invariant metric $d(\gamma_1,\gamma_2)= l(\gamma_1^{-1}\gamma_2)$ does not. It is common in the litterature to denote $|\Gamma|$ the  associated coarse space.
+This defines a proper length on $\Gamma$ which does depend on $S$, but the coarse structure associated to the left invariant metric $d(\gamma_1,\gamma_2)= l(\gamma_1^{-1}\gamma_2)$ does not. It is common in the literature to denote $|\Gamma|$ the  associated coarse space.
 \end{Expl}
 
 %--------------
@@ -175,7 +175,7 @@ namely, $C_R[X,H_X]$ consists of locally compact operators with propagation less
 
 Let $C[X,H_X]$ be the subspace 
 \[\bigcup_{R>0} C_R[X,H_X]\subseteq \mathcal L(H_X).\] 
-It is actually an involutive algebra naturally represented in a Hilbert space. Completion with respect to operator norm will naturally give $C^*$-algebras, which are called Roe algebras of $X$. They are the object of the following definition. Let us first define another norm in order to define the maximal Roe algebra of $X$.\\
+It is actually an involutive algebra naturally represented in a Hilbert space. Completion with respect to the operator norm will naturally give rise to a $C^*$-algebra called the Roe algebra of $X$. They are the object of the following definition. Let us first define another norm in order to define the maximal Roe algebra of $X$.\\
 
 \begin{lem}
 Let $(\pi, E_\pi)$ be a $*$-representation $\pi : C[X,H_X]\rightarrow \mathcal L(E_\pi)$ where $E_\pi$ is a Hilbert space. Let $T\in C_R[H_X]$, and define $N_R =\sup_{x\in X} |B(x,R)|<\infty$ and $T_{xy} = \chi_y T \chi_x$. Then $M=\sup_{x,y\in X} |T_{xy}|$ is finite and the following inequality holds :
@@ -201,10 +201,10 @@ Let $X$ be a discrete metric space with bounded geometry and fix a s.n.d. $X$-mo
 \end{itemize}
 \end{definition}
 
-Let us show that the definition of $C^*(X)$ does not depend, up to uncanonical $*$-isomorphism, on the choice of the s.n.d. $X$-module. Before doing so, we denote $C^*(X,H_X)$ the completion of $C[X,H_X]$ in order to keep track of the s.n.d. $X$-module.
+Let us show that the definition of $C^*(X)$ does not depend, up to non canonical $*$-isomorphism, on the choice of the s.n.d. $X$-module. Before doing so, we denote $C^*(X,H_X)$ the completion of $C[X,H_X]$ in order to keep track of the s.n.d. $X$-module.
 
 \begin{prop}
-Let $H_X$ and $H'_X$ be two s.n.d. $X$-modules. Then there exists an unnatural $*$-isomorphism $C^*(X,H_X)\cong C^*(X,H'_X)$ which is natural in $K$-theory.
+Let $H_X$ and $H'_X$ be two s.n.d. $X$-modules. Then there exists a non canonical $*$-isomorphism $C^*(X,H_X)\cong C^*(X,H'_X)$ which is natural in $K$-theory.
 \end{prop}
 \begin{dem}
 Let $H_X$ and $H'_X$ be two s.n.d. $X$-modules and $\varepsilon>0$. By proposition \ref{SND}, there exists an isometry $V\in\mathcal L(H_X,H'_X)$ with propagation less than $\varepsilon$. Hence $Ad_V(T) = V T V^*$ defines a bounded linear map $C_R[X,H_X]\rightarrow C_{R+2\varepsilon}[X,H_X']$ which extends to a $*$-isomorphism $Ad_V : C^*(X,H_X)\rightarrow C^*(X,H'_X)$.\\
