@@ -1,0 +1,61 @@
+\begin{frame}{Assemblage contrôlé}
+On construit une application 
+\[\mu_{G,A}^{\varepsilon, E,F} : K^G(P_E,A) \rightarrow K^{\varepsilon, F}(A \rtimes_r G)\]
+définie pour toute $G$-algèbre $A$, qui factorise $\mu_{G,A}$. %, et pour tout $E,F\mathcal E$
+\end{frame}
+
+\begin{frame}{Assemblage contrôlé}
+\begin{propfr}
+Soient $A$ et $B$ deux $G$-algèbres. Pour tout $z\in KK^G_*(A,B)$, il existe une paire de contrôle $(\alpha_J,k_J)$ et un morphisme $(\alpha_J,k_J)$-contrôlé
+\[J_{red,G}(z) : \hat K(A\rtimes_r G)\rightarrow \hat K(B\rtimes_r G)\]
+de même degré que $z$, tels que
+\begin{enumerate}
+\item[(i)] $J_{red,G}(z)$ induit la multiplication à droite par $j_{red,G}(z)$ en $K$-théorie ;
+\item[(ii)] $J_{red,G}$ est additif, i.e.
+\[J_{red,G}(z+z')=J_{red,G}(z)+J_{red,G}(z').\]
+\end{enumerate}
+\end{propfr}
+\end{frame}
+
+\begin{frame}{Assemblage contrôlé}
+\begin{propfr}
+\begin{enumerate}
+\item[(iii)] Pour tout $G$-morphisme $f : A_1\rightarrow A_2$,
+\[J_{red,G}(f^*(z))=J_{red,G}(z)\circ f_{G,red,*}\] pour tout $z\in KK_*^G(A_2,B)$.
+\item[(iv)] Pour tout $G$-morphisme $g : B_1\rightarrow B_2$,
+\[J_{red,G}(g_*(z))= g_{G,red,*}\circ J_{red,G}(z)\] pour tout $z\in KK_*^G(A,B_1)$.
+\end{enumerate}
+\end{propfr}
+\end{frame}
+
+\begin{frame}{Assemblage contrôlé}
+\begin{propfr}[]
+\begin{enumerate}
+\item[(v)] Soient $0\rightarrow J\rightarrow A\rightarrow A/J\rightarrow 0$ une extension semi-scindée $G$-équivariante de $G$-algèbres et  $[\partial_J]\in KK_1^G(A/J,J)$ son bord en $KK^G$-théorie. Alors 
+\[J_G([\partial_J])=D_{J\rtimes_r G,A\rtimes_rG}.\] 
+\item[(vi)] $J_{red,G}([id_A]) \sim_{(\alpha_J,k_J)} id_{\hat K(A\rtimes G)}$
+\end{enumerate}
+\end{propfr}
+\end{frame}
+
+\begin{frame}{Assemblage contrôlé}
+Pour tout ensemble contrôlé $E\subseteq G$, on dispose d'un projecteur $\mathcal L_E\in C_0(P_E(G))\rtimes_r G$ qui est de propagation finie. Il définit donc une classe de $K$-théorie contrôlée.
+\end{frame}
+
+\begin{frame}{Assemblage contrôlé}
+Soient $B$ une $G$-algèbre, $\varepsilon\in (0,\frac{1}{4})$, et $E\in\mathcal E$. Soit $F\in \mathcal E$ tel que $k_J(\varepsilon).E \subseteq F$. 
+\begin{definitionfr}
+L'application d'assemblage contrôlée pour $G$ est définie comme la famille d'applications :
+\[\mu_{G,B}^{\varepsilon,E,F}\left\{
+\begin{array}{rcl}
+RK^G(P_E(G), B) & \rightarrow & K_*^{\varepsilon, F}(B\rtimes_r G)\\
+z & \mapsto & \iota_{\alpha_J\varepsilon', k_J(\varepsilon').F'}^{\varepsilon,F} \circ J_G^{\varepsilon', F'}(z)([\mathcal L_E,0]_{\varepsilon' , F'})
+\end{array}\right.\]
+où $\varepsilon'$ et $F'$ vérifient :
+\begin{itemize}
+\item[$\bullet$] $\varepsilon'\in (0,\frac{1}{4})$ tel que $\alpha_J \varepsilon'\leq \varepsilon$,
+\item[$\bullet$] et $F'\in\mathcal E$ tel que $E\subseteq F'$ et $k_J(\varepsilon').F'\subseteq F$.
+\end{itemize}
+\end{definitionfr}
+\end{frame}
+

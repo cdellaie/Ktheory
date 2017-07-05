@@ -44,6 +44,9 @@
 \headcommand {\sectionentry {3}{$K$-th\IeC {\'e}orie contr\IeC {\^o}ll\IeC {\'e}e}{11}{$K$-th\IeC {\'e}orie contr\IeC {\^o}ll\IeC {\'e}e}{0}}
 \headcommand {\beamer@sectionpages {7}{10}}
 \headcommand {\beamer@subsectionpages {7}{10}}
+\headcommand {\sectionentry {4}{Groupo\IeC {\"\i }des}{19}{Groupo\IeC {\"\i }des}{0}}
+\headcommand {\beamer@sectionpages {11}{18}}
+\headcommand {\beamer@subsectionpages {11}{18}}
 \headcommand {\slideentry {4}{0}{1}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
 \headcommand {\slideentry {4}{0}{2}{20/20}{}{0}}
@@ -52,42 +55,53 @@
 \headcommand {\beamer@framepages {21}{21}}
 \headcommand {\slideentry {4}{0}{4}{22/22}{}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\sectionentry {4}{Formule de K\IeC {\"u}nneth}{19}{Formule de K\IeC {\"u}nneth}{0}}
-\headcommand {\beamer@sectionpages {11}{18}}
-\headcommand {\beamer@subsectionpages {11}{18}}
-\headcommand {\slideentry {5}{0}{1}{23/23}{}{0}}
+\headcommand {\slideentry {4}{0}{5}{23/23}{}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {5}{0}{2}{24/24}{}{0}}
+\headcommand {\slideentry {4}{0}{6}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {5}{0}{3}{25/25}{}{0}}
+\headcommand {\slideentry {4}{0}{7}{25/25}{}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\slideentry {5}{0}{4}{26/26}{}{0}}
+\headcommand {\slideentry {4}{0}{8}{26/26}{}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {5}{0}{5}{27/27}{}{0}}
+\headcommand {\slideentry {4}{0}{9}{27/27}{}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\slideentry {5}{0}{6}{28/28}{}{0}}
+\headcommand {\slideentry {4}{0}{10}{28/28}{}{0}}
 \headcommand {\beamer@framepages {28}{28}}
-\headcommand {\slideentry {5}{0}{7}{29/29}{}{0}}
+\headcommand {\slideentry {4}{0}{11}{29/29}{}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\slideentry {5}{0}{8}{30/30}{}{0}}
+\headcommand {\slideentry {4}{0}{12}{30/30}{}{0}}
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\slideentry {5}{0}{9}{31/31}{}{0}}
+\headcommand {\slideentry {4}{0}{13}{31/31}{}{0}}
 \headcommand {\beamer@framepages {31}{31}}
-\headcommand {\slideentry {5}{0}{10}{32/32}{}{0}}
+\headcommand {\slideentry {4}{0}{14}{32/32}{}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\slideentry {5}{0}{11}{33/33}{}{0}}
+\headcommand {\slideentry {5}{0}{1}{33/33}{}{0}}
 \headcommand {\beamer@framepages {33}{33}}
-\headcommand {\slideentry {5}{0}{12}{34/34}{}{0}}
+\headcommand {\slideentry {5}{0}{2}{34/34}{}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\sectionentry {5}{Groupo\IeC {\"\i }des}{23}{Groupo\IeC {\"\i }des}{0}}
-\headcommand {\beamer@sectionpages {19}{22}}
-\headcommand {\beamer@subsectionpages {19}{22}}
-\headcommand {\slideentry {5}{0}{13}{35/35}{}{0}}
+\headcommand {\slideentry {5}{0}{3}{35/35}{}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\slideentry {5}{0}{14}{36/36}{}{0}}
+\headcommand {\slideentry {5}{0}{4}{36/36}{}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\beamer@partpages {1}{36}}
-\headcommand {\beamer@subsectionpages {23}{36}}
-\headcommand {\beamer@sectionpages {23}{36}}
-\headcommand {\beamer@documentpages {36}}
-\headcommand {\def \inserttotalframenumber {36}}
+\headcommand {\slideentry {5}{0}{5}{37/37}{}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\slideentry {5}{0}{6}{38/38}{}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {5}{0}{7}{39/39}{}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {5}{0}{8}{40/40}{}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {5}{0}{9}{41/41}{}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\sectionentry {5}{Formule de K\IeC {\"u}nneth}{33}{Formule de K\IeC {\"u}nneth}{0}}
+\headcommand {\beamer@sectionpages {19}{32}}
+\headcommand {\beamer@subsectionpages {19}{32}}
+\headcommand {\slideentry {5}{0}{10}{42/42}{}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\slideentry {5}{0}{11}{43/43}{}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\beamer@partpages {1}{43}}
+\headcommand {\beamer@subsectionpages {33}{43}}
+\headcommand {\beamer@sectionpages {33}{43}}
+\headcommand {\beamer@documentpages {43}}
+\headcommand {\def \inserttotalframenumber {43}}
