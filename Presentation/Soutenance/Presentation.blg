@@ -5,47 +5,50 @@ A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: Motivations.aux
 A level-1 auxiliary file: ControlledKtheory.aux
 A level-1 auxiliary file: Groupoids.aux
+A level-1 auxiliary file: AssemblyMaps.aux
+A level-1 auxiliary file: QuantitativeStatements.aux
+A level-1 auxiliary file: CoarseGeometry.aux
 A level-1 auxiliary file: Kunneth.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
-You've used 3 entries,
+You've used 5 entries,
             2118 wiz_defined-function locations,
-            523 strings with 4510 characters,
-and the built_in function-call counts, 801 in all, are:
-= -- 78
-> -- 33
+            544 strings with 4905 characters,
+and the built_in function-call counts, 1482 in all, are:
+= -- 149
+> -- 58
 < -- 0
-+ -- 14
-- -- 10
-* -- 50
-:= -- 148
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 14
++ -- 25
+- -- 18
+* -- 105
+:= -- 260
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 24
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 31
-empty$ -- 62
-format.name$ -- 10
-if$ -- 158
+cite$ -- 5
+duplicate$ -- 53
+empty$ -- 118
+format.name$ -- 18
+if$ -- 296
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 3
-newline$ -- 18
-num.names$ -- 6
-pop$ -- 12
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 18
 preamble$ -- 1
-purify$ -- 11
+purify$ -- 19
 quote$ -- 0
-skip$ -- 23
+skip$ -- 37
 stack$ -- 0
-substring$ -- 41
-swap$ -- 3
+substring$ -- 108
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 20
 warning$ -- 0
-while$ -- 8
-width$ -- 4
-write$ -- 33
+while$ -- 16
+width$ -- 6
+write$ -- 55

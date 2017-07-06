@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{FinnSellFibred}
+Martin Finn-Sell.
+\newblock Fibred coarse embeddings, a-{T}-menability and the coarse analogue of
+  the {N}ovikov conjecture.
+\newblock {\em Journal of Functional Analysis}, 267(10):3758--3782, 2014.
+
 \bibitem{OY4}
 H.~{Oyono-Oyono} and G.~{Yu}.
 \newblock {Quantitative K-theory and the {K}{\"u}nneth formula for operator
@@ -11,6 +17,11 @@ Herv{\'e} Oyono-Oyono and Guoliang Yu.
 \newblock On quantitative operator {K}--theory.
 \newblock {\em Ann. Inst. Fourier (Grenoble). Available at www. math.
   univ-metz. fr/\~{} oyono/pub. html}, 2011.
+
+\bibitem{SkTuYu}
+Georges Skandalis, Jean-Louis Tu, and Guoliang Yu.
+\newblock The coarse {B}aum-{C}onnes conjecture and groupoids.
+\newblock {\em Topology}, 41(4):807--834, 2002.
 
 \bibitem{Yu1}
 Guoliang Yu.
