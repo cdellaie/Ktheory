@@ -1,0 +1,10 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {british}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Motivations}{8}{0}{2}
+\beamer@sectionintoc {3}{$K$-th\IeC {\'e}orie contr\IeC {\^o}l\IeC {\'e}e}{13}{0}{3}
+\beamer@sectionintoc {4}{Groupo\IeC {\"\i }des}{22}{0}{4}
+\beamer@sectionintoc {5}{Applications d'assemblage}{29}{0}{5}
+\beamer@sectionintoc {6}{Enonc\IeC {\'e}s quantitatifs}{37}{0}{6}
+\beamer@sectionintoc {7}{G\IeC {\'e}om\IeC {\'e}trie Coarse}{42}{0}{7}
+\beamer@sectionintoc {8}{Formule de K\IeC {\"u}nneth}{47}{0}{8}
