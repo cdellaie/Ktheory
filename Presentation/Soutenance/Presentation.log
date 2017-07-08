@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  7 JUL 2017 15:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  8 JUL 2017 16:59
 entering extended mode
 **C:/Users/Clément/Documents/GitHub/Ktheory/Presentation/Soutenance/Presentati
 on.tex
@@ -1516,7 +1516,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
 Here is how much of TeX's memory you used:
  19433 strings out of 493921
  373750 string characters out of 3147330
- 446955 words of memory out of 3000000
+ 446952 words of memory out of 3000000
  22050 multiletter control sequences out of 15000+200000
  16867 words of font info for 62 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1537,7 +1537,7 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/symbols/msbm10.pfb>
-Output written on Presentation.pdf (59 pages, 302513 bytes).
+Output written on Presentation.pdf (59 pages, 302565 bytes).
 PDF statistics:
  538 PDF objects out of 1000 (max. 8388607)
  132 named destinations out of 1000 (max. 500000)
