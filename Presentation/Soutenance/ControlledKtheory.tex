@@ -97,12 +97,33 @@ $\bullet$ Pour tout $\varepsilon <\varepsilon'$ et $E\subseteq E'$, on dispose d
 \[\iota_{\varepsilon,E}^{\varepsilon',E'} : K^{\varepsilon,E}(A)\rightarrow K^{\varepsilon',E'}(A) \]
 tels que $\iota_{\varepsilon',E'}^{\varepsilon'',E''}\circ \iota_{\varepsilon,E}^{\varepsilon',E'} = \iota_{\varepsilon,E}^{\varepsilon'',E''}$ et $\iota_{\varepsilon,E}^{\varepsilon,E}= id_{K^{\varepsilon,E}(A)}$.\\
 \vspace{0.3 cm}
+$\bullet$ Pour tout $\varepsilon $ et $E\in\mathcal E$, on dispose de morphismes 
+\[\iota_{\varepsilon,E} : K^{\varepsilon,E}(A)\rightarrow K(A) \]
+tels que $\iota_{\varepsilon',E'}\circ \iota_{\varepsilon,E}^{\varepsilon',E'} = \iota_{\varepsilon,E}$.\\
+\vspace{0.3 cm}
+$\bullet$ Pour tout élément $x\in K(A)$, il existe $\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E$, et $y\in K^{\varepsilon,E}(A)$ tel que $x=\iota_{\varepsilon,E}(y)$.
+\end{frame}
+
+\begin{frame}{$K$-théorie contrôlée}
 $\bullet$ Une paire de contrôle $(\alpha,\rho)$ est donnée par $\alpha\in (0,\frac{1}{4})$ et $k : (0,\frac{1}{4\alpha})\rightarrow \N $ croissante.
 \begin{definitionfr}
-Un morphisme $(\alpha,k)$-contrôlé $F : \hat K(A) \rightarrow \hat K(B)$ est une famille de morphismes 
+Un morphisme $(\alpha,k)$-contrôlé $\hat F : \hat K(A) \rightarrow \hat K(B)$ est une famille de morphismes 
 \[F^{\varepsilon,E}: K^{\varepsilon,E}(A) \rightarrow K^{\alpha\varepsilon,k_\varepsilon. E}(B)\] 
 compatible avec les $\iota_{\varepsilon,E}^{\varepsilon',E'}$.
 \end{definitionfr}
+\vspace{0.3 cm}
+On dit que $\hat F$ induit $F : K(A)\rightarrow K(B)$ en $K$-théorie si 
+\[\iota_{\alpha \varepsilon,k_\varepsilon E}\circ F^{\varepsilon,E}=F.\]
+\end{frame}
+
+\begin{frame}{$K$-théorie contrôlée}
+$\bullet$ Tout $*$-homomorphisme filtré $\phi; A\rightarrow B$, i.e. $\phi(A_E)\subseteq B_E$, induit un morphisme contrôlé 
+\[\phi_* : \hat K(A)\rightarrow \hat K(B).\]
+$\bullet$ Morita équivalence : $A \rightarrow A\otimes\mathfrak K ; a\mapsto a\otimes e$ induit un isomorphisme
+\[K^{\varepsilon,E}(A)\rightarrow K^{\varepsilon,E}(A\otimes\mathfrak K).\]
+$\bullet$ Périodicité de Bott contrôlée : il existe une paire de contrôle $(\alpha_\beta,k_\beta)$ et un morphisme $(\alpha_\beta,k_\beta)$-contrôlé
+\[\beta_A : K^{\varepsilon, E}(SA)\rightarrow K^{\alpha_\beta\varepsilon, k_\beta(\varepsilon) . E}(A)\]
+qui admet un inverse contrôlé $D_A$.
 \end{frame}
 
 
