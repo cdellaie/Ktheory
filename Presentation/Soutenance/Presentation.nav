@@ -80,11 +80,11 @@
 \headcommand {\beamer@framepages {36}{36}}
 \headcommand {\slideentry {3}{0}{36}{37/37}{}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\sectionentry {4}{Groupo\IeC {\"\i }des}{38}{Groupo\IeC {\"\i }des}{0}}
-\headcommand {\beamer@sectionpages {27}{37}}
-\headcommand {\beamer@subsectionpages {27}{37}}
-\headcommand {\slideentry {4}{0}{37}{38/38}{}{0}}
+\headcommand {\slideentry {3}{0}{37}{38/38}{}{0}}
 \headcommand {\beamer@framepages {38}{38}}
+\headcommand {\sectionentry {4}{Groupo\IeC {\"\i }des}{39}{Groupo\IeC {\"\i }des}{0}}
+\headcommand {\beamer@sectionpages {27}{38}}
+\headcommand {\beamer@subsectionpages {27}{38}}
 \headcommand {\slideentry {4}{0}{38}{39/39}{}{0}}
 \headcommand {\beamer@framepages {39}{39}}
 \headcommand {\slideentry {4}{0}{39}{40/40}{}{0}}
@@ -97,11 +97,11 @@
 \headcommand {\beamer@framepages {43}{43}}
 \headcommand {\slideentry {4}{0}{43}{44/44}{}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\sectionentry {5}{Applications d'assemblage}{45}{Applications d'assemblage}{0}}
-\headcommand {\beamer@sectionpages {38}{44}}
-\headcommand {\beamer@subsectionpages {38}{44}}
-\headcommand {\slideentry {5}{0}{44}{45/45}{}{0}}
+\headcommand {\slideentry {4}{0}{44}{45/45}{}{0}}
 \headcommand {\beamer@framepages {45}{45}}
+\headcommand {\sectionentry {5}{Applications d'assemblage}{46}{Applications d'assemblage}{0}}
+\headcommand {\beamer@sectionpages {39}{45}}
+\headcommand {\beamer@subsectionpages {39}{45}}
 \headcommand {\slideentry {5}{0}{45}{46/46}{}{0}}
 \headcommand {\beamer@framepages {46}{46}}
 \headcommand {\slideentry {5}{0}{46}{47/47}{}{0}}
@@ -116,11 +116,11 @@
 \headcommand {\beamer@framepages {51}{51}}
 \headcommand {\slideentry {5}{0}{51}{52/52}{}{0}}
 \headcommand {\beamer@framepages {52}{52}}
-\headcommand {\sectionentry {6}{Enonc\IeC {\'e}s quantitatifs}{53}{Enonc\IeC {\'e}s quantitatifs}{0}}
-\headcommand {\beamer@sectionpages {45}{52}}
-\headcommand {\beamer@subsectionpages {45}{52}}
-\headcommand {\slideentry {6}{0}{52}{53/53}{}{0}}
+\headcommand {\slideentry {5}{0}{52}{53/53}{}{0}}
 \headcommand {\beamer@framepages {53}{53}}
+\headcommand {\sectionentry {6}{Enonc\IeC {\'e}s quantitatifs}{54}{Enonc\IeC {\'e}s quantitatifs}{0}}
+\headcommand {\beamer@sectionpages {46}{53}}
+\headcommand {\beamer@subsectionpages {46}{53}}
 \headcommand {\slideentry {6}{0}{53}{54/54}{}{0}}
 \headcommand {\beamer@framepages {54}{54}}
 \headcommand {\slideentry {6}{0}{54}{55/55}{}{0}}
@@ -129,11 +129,11 @@
 \headcommand {\beamer@framepages {56}{56}}
 \headcommand {\slideentry {6}{0}{56}{57/57}{}{0}}
 \headcommand {\beamer@framepages {57}{57}}
-\headcommand {\sectionentry {7}{G\IeC {\'e}om\IeC {\'e}trie Coarse}{58}{G\IeC {\'e}om\IeC {\'e}trie Coarse}{0}}
-\headcommand {\beamer@sectionpages {53}{57}}
-\headcommand {\beamer@subsectionpages {53}{57}}
-\headcommand {\slideentry {7}{0}{57}{58/58}{}{0}}
+\headcommand {\slideentry {6}{0}{57}{58/58}{}{0}}
 \headcommand {\beamer@framepages {58}{58}}
+\headcommand {\sectionentry {7}{G\IeC {\'e}om\IeC {\'e}trie Coarse}{59}{G\IeC {\'e}om\IeC {\'e}trie Coarse}{0}}
+\headcommand {\beamer@sectionpages {54}{58}}
+\headcommand {\beamer@subsectionpages {54}{58}}
 \headcommand {\slideentry {7}{0}{58}{59/59}{}{0}}
 \headcommand {\beamer@framepages {59}{59}}
 \headcommand {\slideentry {7}{0}{59}{60/60}{}{0}}
@@ -142,11 +142,11 @@
 \headcommand {\beamer@framepages {61}{61}}
 \headcommand {\slideentry {7}{0}{61}{62/62}{}{0}}
 \headcommand {\beamer@framepages {62}{62}}
-\headcommand {\sectionentry {8}{Formule de K\IeC {\"u}nneth}{63}{Formule de K\IeC {\"u}nneth}{0}}
-\headcommand {\beamer@sectionpages {58}{62}}
-\headcommand {\beamer@subsectionpages {58}{62}}
-\headcommand {\slideentry {8}{0}{62}{63/63}{}{0}}
+\headcommand {\slideentry {7}{0}{62}{63/63}{}{0}}
 \headcommand {\beamer@framepages {63}{63}}
+\headcommand {\sectionentry {8}{Formule de K\IeC {\"u}nneth}{64}{Formule de K\IeC {\"u}nneth}{0}}
+\headcommand {\beamer@sectionpages {59}{63}}
+\headcommand {\beamer@subsectionpages {59}{63}}
 \headcommand {\slideentry {8}{0}{63}{64/64}{}{0}}
 \headcommand {\beamer@framepages {64}{64}}
 \headcommand {\slideentry {8}{0}{64}{65/65}{}{0}}
@@ -171,8 +171,10 @@
 \headcommand {\beamer@framepages {74}{74}}
 \headcommand {\slideentry {8}{0}{74}{75/75}{}{0}}
 \headcommand {\beamer@framepages {75}{75}}
-\headcommand {\beamer@partpages {1}{75}}
-\headcommand {\beamer@subsectionpages {63}{75}}
-\headcommand {\beamer@sectionpages {63}{75}}
-\headcommand {\beamer@documentpages {75}}
-\headcommand {\def \inserttotalframenumber {74}}
+\headcommand {\slideentry {8}{0}{75}{76/76}{}{0}}
+\headcommand {\beamer@framepages {76}{76}}
+\headcommand {\beamer@partpages {1}{76}}
+\headcommand {\beamer@subsectionpages {64}{76}}
+\headcommand {\beamer@sectionpages {64}{76}}
+\headcommand {\beamer@documentpages {76}}
+\headcommand {\def \inserttotalframenumber {75}}
