@@ -17,13 +17,14 @@ Si $A$ est $\mathcal E$-filtrée, $A\otimes B$ est $\mathcal E$-filtrée par $\{
 \[\hat \tau_A (z): K^{\varepsilon,E}(A\otimes B_1 ) \rightarrow K^{\alpha_\tau\varepsilon,k_\tau(\varepsilon).E}(A\otimes B_2)\]
 qui induit $-\otimes \tau_A(z) $ en $K$-théorie \cite{OY2}.\\
 \vspace{0.3 cm}
-On définit le morphisme contrôllé  
+On définit le morphisme contrôlé  
 \[\hat\alpha_{A,B} : \hat K_*(A)\otimes K_*(B)\rightarrow \hat K_*(A\otimes B) \quad ; \quad (x,y)\mapsto \hat\tau_A(y)(x),\]
 qui induit donc $\alpha_{A,B}$ en $K$-théorie.\\
 \end{frame}
 
 \begin{frame}{Formule de Künneth}
-Le morphisme contrôlé $\alpha_{A,B}$ est dit :
+Le morphisme contrôlé $\hat\alpha_{A,B}$ est dit :
+\vspace{0.3 cm}
 \begin{itemize}
  
 \item[$\bullet$] quasi-injectif s'il existe $\lambda \geq 1$ tel que, pour tout $\varepsilon\in (0,\frac{1}{4\alpha_\tau \lambda})$ et $F\in\mathcal E$, il existe $F'\in\mathcal E$, et $F\subseteq F'$, tels que: 
@@ -70,7 +71,7 @@ Un groupoïde étale $G$ est dans la classe $\mathcal C$ si, pour toute action p
 \[\psi_U : U \rightarrow G\times_{H_U} Z_U.\] 
 \end{definitionfr}
 \vspace{0.3 cm}
-\textbf{Exemples:} les groupes discret, les groupoïdes amples.
+\textbf{Exemples:} les groupes discrets, les groupoïdes amples (J. Renault).
 
 \end{frame}
 
@@ -112,7 +113,20 @@ est un isomorphisme pour toute $C^*$-algèbre $B$ telle que $K_*(B)$ est un grou
 \end{frame}
 
 \begin{frame}{Idée de la preuve}
-Soit $Z_0 \subseteq ...\subseteq Z_n$ la décompostion en squelette de $P_E$. Par un argument de type Mayer-Vietoris, il suffit de le démontrer pour $Z_0 = G$. Mais $p =r : Z_0 \rightarrow G^{(0)} $ est localement injective. \\
+$P_E$ possède une strucuture de $G$-complexe simplicial fini. (J-L. Tu).\\
+\vspace{0.3 cm}
+Soit $Z_0 \subseteq ...\subseteq Z_n$ la décomposition en squelette de $P_E$. Par un argument de type Mayer-Vietoris, il suffit de le démontrer pour $Z_0 = G$. Mais $p =r : Z_0 \rightarrow G^{(0)} $ est localement injective. \\
+\vspace{0.3 cm}
+\begin{lemfr}
+Soit $H$ un sous-groupoïde compact ouvert de $G$, et $V$ un $H$-espace tel que l'application moment 
+\[p: V\rightarrow H^{(0)}\] 
+soit localement injective. Alors, pour tout $G$-algèbre $B$, on a un isomorphisme de groupes abéliens $\Z_2$-gradués
+\[RK^G(G\times_H V,B)\cong RK^H(V,B).\]
+\end{lemfr}
+\end{frame}
+
+\begin{frame}{Idée de la preuve}
+Le lemme précédent se montre en définissant l'induction sur les groupoïdes étales.\\
 \vspace{0.3 cm}
 On peut ensuite refaire la preuve avec l'application d'assemblage contrôlée
 \[\mu_{G,A}^{\varepsilon, E,E'} : RK^G(P_E,A)\rightarrow K^{\varepsilon,E'}(A\rtimes_r G)\]

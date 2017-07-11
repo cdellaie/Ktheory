@@ -8,13 +8,13 @@ Pour donner un modèle de l'atome d'hydrogène en accord avec l'expérience, Hei
 \end{frame}
 
 \begin{frame}{Introduction}
-Les "nombres" utilisés en physique quantique forment une algèbre d'opérateurs. Ces algèbres sont encodées d'un point de vue abstrait par la notion de $C^*$-algèbre. 
+Les "nombres" utilisés en physique quantique sont des opérateurs sur un espace de Hilbert. Les algèbres d'opérateurs sont encodées d'un point de vue abstrait par la notion de $C^*$-algèbre. 
 \vspace{0.3 cm}
 \begin{definitionfr}
 Une $C^*$-algèbre est une $\C$-algèbre $A$ munie d'un antihomomorphisme involutif $*$ et d'une norme multiplicative $||.||$ telle que :
 \begin{itemize}
 \item[$\bullet$] $(A,||.||)$ est une algèbre de Banach,
-\item[$\bullet$] $||a^*a||^2 = ||a||^2$ pour tout $a\in A$.
+\item[$\bullet$] $||a^*a|| = ||a||^2$ pour tout $a\in A$.
 \end{itemize}
 \end{definitionfr}
 
@@ -76,7 +76,7 @@ Deux cas :
  \[C_0(\mathbb S^1 / \Z) \cong \C.\]
 \end{itemize}
 \vspace{0.3 cm}
-Une solution : construire un groupoïde qui encode la situation géométrique. On sait associer des $C^*$-algèbres aux groupoïdes.\\
+Une solution : construire un groupoïde qui encode la situation géométrique. On sait associer des $C^*$-algèbres aux groupoïdes. (approche développée par J. Renault)\\
 \end{frame}
 
 \begin{frame}{Introduction}
@@ -190,12 +190,14 @@ Quelques $C^*$-algèbres associées :
 \vspace{0.3 cm}
 \item[$\bullet$] $C^*_r(X\rtimes \Gamma) \cong C_0(X)\rtimes_r \Gamma$.
 \end{itemize}
+\vspace{0.3 cm}
+Les $3$ derniers cas sont des complétions d'algèbres de convolution. 
 \end{frame}
 
 \begin{frame}{Introduction}
 Dans le cas de la topologie classique, un des objets à déterminer est ce qu'on appelle l'homologie et la cohomologie d'un espace.\\
 \vspace{0.3 cm}
-Dans le cadre de la géométrie non-commutative, on voudra déterminer la $K$-théorie des certaines $C^*$-algèbres, qui est l'analogue des théories homologiques classiques. 
+Dans le cadre de la géométrie non-commutative, on voudra déterminer la $K$-théorie de certaines $C^*$-algèbres, qui est l'analogue des théories homologiques classiques. 
 \vspace{0.3 cm}
 \begin{block}{Objectif de la thèse}
 Déterminer les groupes de $K$-théorie de certaines familles de $C^*$-algèbres.
@@ -206,7 +208,7 @@ Déterminer les groupes de $K$-théorie de certaines familles de $C^*$-algèbres
 Pour cela, voici notre stratégie :\\
 \vspace{0.3 cm}
 \begin{itemize}
-\item[$\bullet$] détecter la filtration naturelle des produits croisés de $C^*$-algèbres par des groupoîdes étales et des groupes quantiques discrets,
+\item[$\bullet$] détecter la filtration naturelle des produits croisés de $C^*$-algèbres par des groupoïdes étales et des groupes quantiques discrets,
 \vspace{0.3 cm}
 \item[$\bullet$] approximer la $K$-théorie par la $K$-théorie contrôlée,
 \vspace{0.3 cm}
@@ -214,4 +216,30 @@ Pour cela, voici notre stratégie :\\
 \vspace{0.3 cm}
 \item[$\bullet$] prouver une version contrôlée de la conjecture de Baum-Connes.
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Introduction}
+\[\begin{tikzpicture}
+\draw  (0,5) node {Situation};
+\draw  (0,4.5) node {géométrique};
+
+\pause
+
+\draw  (5,5) node {Groupoïdes};
+\draw [>=stealth, ->,ultra thick, blue] (1,5) -- (3.9,5) ; %->
+
+\pause
+
+\draw  (5,0) node {$C^*$-algèbres};
+\draw [>=stealth, ->,ultra thick,blue] (5,4.5) -- (5,1) ; % |
+
+\pause 
+
+\draw  (0,0) node {$K$-théorie};
+\draw [>=stealth, ->,ultra thick, blue] (3.9,0) -- (1,0) ;
+
+\pause
+\draw [>=stealth, ->,ultra thick, blue, dotted] (0,4) -- (0,1) ;
+\draw[blue] (1.2,2.5) node {Assemblage};
+\end{tikzpicture}\]
 \end{frame}

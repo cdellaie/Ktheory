@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  11 JUL 2017 12:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  11 JUL 2017 21:32
 entering extended mode
 **C:/Users/Clément/Documents/GitHub/Ktheory/Presentation/Soutenance/Presentati
 on.tex
@@ -1297,7 +1297,7 @@ n.tex [3
 ] [12
 
 ]
-LaTeX Font Info:    Try loading font information for U+euf on input line 193.
+LaTeX Font Info:    Try loading font information for U+euf on input line 195.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1307,15 +1307,10 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 ] [15
 
-])
-(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
-n.toc) [16
-
-
 ]
-(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Motivations
-.tex [17
+[16
 
+] [17
 
 ] [18
 
@@ -1323,9 +1318,15 @@ n.toc) [16
 
 ] [20
 
-] [21
+])
+(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
+n.toc) [21
 
-] [22
+
+]
+(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Motivations
+.tex [22
+
 
 ] [23
 
@@ -1335,6 +1336,16 @@ n.toc) [16
 
 ] [26
 
+] [27
+
+] [28
+
+] [29
+
+] [30
+
+] [31
+
 ])
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1346,23 +1357,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
-n.toc) [27
+n.toc) [32
 
 
 ]
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\ControlledK
-theory.tex [28
+theory.tex [33
 
-
-] [29
-
-] [30
-
-] [31
-
-] [32
-
-] [33
 
 ] [34
 
@@ -1374,15 +1375,9 @@ theory.tex [28
 
 ] [38
 
-])
-(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
-n.toc) [39
+] [39
 
-
-]
-(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Groupoids.t
-ex [40
-
+] [40
 
 ] [41
 
@@ -1394,69 +1389,64 @@ ex [40
 
 ] [45
 
+]
+[46
+
+] [47
+
+] [48
+
 ])
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
-n.toc) [46
+n.toc) [49
+
+
+]
+(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Groupoids.t
+ex [50
+
+
+] [51
+
+] [52
+
+] [53
+
+] [54
+
+] [55
+
+])
+(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
+n.toc) [56
 
 
 ]
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\AssemblyMap
-s.tex [47
+s.tex [57
 
-
-] [48
-
-] [49
-
-] [50
-
-] [51
-
-]
-Overfull \hbox (9.84517pt too wide) detected at line 70
-\OML/cmm/m/it/10.95 [] []
- []
-
-[52
-
-]
-Overfull \hbox (14.35226pt too wide) detected at line 85
-[] \OT1/cmss/m/n/10.95 : []
- []
-
-[53
-
-])
-(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
-n.toc) [54
-
-
-]
-(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Quantitativ
-eStatements.tex [55
-
-
-] [56
-
-] [57
 
 ] [58
 
-])
-(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
-n.toc) [59
+] [59
 
-
-]
-(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\CoarseGeome
-try.tex [60
-
+] [60
 
 ] [61
 
-] [62
+]
+Overfull \hbox (9.84517pt too wide) detected at line 72
+\OML/cmm/m/it/10.95 [] []
+ []
 
-] [63
+[62
+
+]
+Overfull \hbox (14.35226pt too wide) detected at line 87
+[] \OT1/cmss/m/n/10.95 : []
+ []
+
+[63
 
 ])
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
@@ -1464,14 +1454,46 @@ n.toc) [64
 
 
 ]
-(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Kunneth.tex
-[65
+(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Quantitativ
+eStatements.tex [65
 
 
 ] [66
 
+] [67
+
+] [68
+
+])
+(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
+n.toc) [69
+
+
 ]
-Overfull \hbox (8.994pt too wide) detected at line 37
+(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\CoarseGeome
+try.tex [70
+
+
+] [71
+
+] [72
+
+] [73
+
+])
+(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
+n.toc) [74
+
+
+]
+(C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Kunneth.tex
+[75
+
+
+] [76
+
+]
+Overfull \hbox (8.994pt too wide) detected at line 38
 \OMS/cmsy/m/n/10.95 8\OT1/mathkerncmss/m/sl/10.95 x \OMS/cmsy/m/n/10.95 2 \OT1/
 mathkerncmss/m/sl/10.95 K[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 A\
 OT1/cmss/m/n/10.95 ) \OMS/cmsy/m/n/10.95 
@@ -1483,40 +1505,38 @@ msy/m/n/10.95
 .95 x\OT1/cmss/m/n/10.95 ) = 0\OML/cmm/m/it/10.95 :
  []
 
-[67
+[77
 
-] [68
+] [78
 
-] [69
+] [79
 
-] [70
+] [80
 
-] [71
+] [81
 
-] [72
+] [82
 
-] [73
+] [83
 
-] [74
+] [84
+
+] [85
 
 ])
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
-n.bbl)
-Overfull \vbox (44.33125pt too high) detected at line 99
- []
-
-[75
+n.bbl) [86
 
 
  <C:/Program Files/MiKTeX 2.9/tex/latex/beamer/base/art/beamericonarticle.pdf>]
- [76
+ [87
 
 ]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
 
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
 n.aux
@@ -1536,8 +1556,8 @@ eStatements.aux)
 try.aux)
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Kunneth.aux
 ))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
 Package rerunfilecheck Info: File `Presentation.out' has not changed.
 (rerunfilecheck)             Checksum: 2D8D5C061D7597220B1722518CC369D8;443.
 
@@ -1545,14 +1565,14 @@ Package rerunfilecheck Info: File `Presentation.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  ) 
 Here is how much of TeX's memory you used:
- 19624 strings out of 493921
- 377397 string characters out of 3147330
- 464435 words of memory out of 3000000
- 22207 multiletter control sequences out of 15000+200000
- 18753 words of font info for 69 fonts, out of 3000000 for 9000
+ 19664 strings out of 493921
+ 377900 string characters out of 3147330
+ 464588 words of memory out of 3000000
+ 22224 multiletter control sequences out of 15000+200000
+ 19060 words of font info for 70 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  57i,17n,78p,525b,944s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pr
@@ -1562,18 +1582,20 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-si10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb>
-Output written on Presentation.pdf (76 pages, 340326 bytes).
+cm/cmss9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi9.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb>
+Output written on Presentation.pdf (87 pages, 384563 bytes).
 PDF statistics:
- 634 PDF objects out of 1000 (max. 8388607)
- 166 named destinations out of 1000 (max. 500000)
+ 702 PDF objects out of 1000 (max. 8388607)
+ 188 named destinations out of 1000 (max. 500000)
  112 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -11,6 +11,36 @@ Associer une filtration à une structure géométrique.
 \end{frame}
 
 \begin{frame}{$K$-théorie contrôlée}
+\[\begin{tikzpicture}
+\draw  (0,5) node {Situation};
+\draw  (0,4.5) node {géométrique};
+
+\pause
+
+\draw  (5,5) node {Groupoïdes};
+\draw [>=stealth, ->,ultra thick, blue] (1,5) -- (3.9,5) ; %->
+
+\pause
+
+\draw  (5,0.25) node {$C^*$-algèbres};
+\draw  (5,-0.25) node {$\mathcal E$-filtrées};
+\draw [>=stealth, ->,ultra thick,blue] (5,4.5) -- (5,1) ; % |
+\draw[blue]  (6.2,2.5) node {Convolution};
+
+\pause 
+
+\draw  (0,0.25) node {$K$-théorie};
+\draw  (0,-0.25) node {contrôlée};
+\draw [>=stealth, ->,ultra thick, blue] (3.9,0) -- (1,0) ;
+
+\pause
+\draw [>=stealth, ->,ultra thick, blue, dotted] (0,4) -- (0,1) ;
+\draw[blue] (1.2,2.75) node {Assemblage};
+\draw[blue] (1.2,2.25) node {contrôlée};
+\end{tikzpicture}\]
+\end{frame}
+
+\begin{frame}{$K$-théorie contrôlée}
 \begin{definitionfr}
 Une structure coarse $\mathcal E$ est un semi-groupe abélien qui est aussi un treillis. \\
 \end{definitionfr}
@@ -54,9 +84,9 @@ Les produits croisés de $C^*$-algèbres par des actions de groupes quantiques d
 
 \begin{frame}{$K$-théorie contrôlée}
 Soit $\mathcal E$ une structure coarse et $A$ une $C^*$-algèbre $\mathcal E$ filtrée. On définit les $\varepsilon$-$E$-unitaires
-\[U^{\varepsilon, E}(A)= \{u\in A_E \text{ s.t. } ||u^*u-1||<\varepsilon\text{ and }||uu^*-1||<\varepsilon \}\]
+\[U^{\varepsilon, E}(A)= \{u\in A_E \text{ t.q. } ||u^*u-1||<\varepsilon\text{ et }||uu^*-1||<\varepsilon \}\]
 et les $\varepsilon$-$E$-projections 
-\[P^{\varepsilon, E}(A)= \{p\in A_E \text{ s.t. } p=p^*\text{ and }||p^2-p||<\varepsilon \}.\]
+\[P^{\varepsilon, E}(A)= \{p\in A_E \text{ t.q. } p=p^*\text{ et }||p^2-p||<\varepsilon \}.\]
 \end{frame}
 
 \begin{frame}{$K$-théorie contrôlée}
@@ -111,12 +141,12 @@ $\bullet$ Pour tout $\varepsilon $ et $E\in\mathcal E$, on dispose de morphismes
 \[\iota_{\varepsilon,E} : K^{\varepsilon,E}(A)\rightarrow K(A) \]
 tels que $\iota_{\varepsilon',E'}\circ \iota_{\varepsilon,E}^{\varepsilon',E'} = \iota_{\varepsilon,E}$.\\
 \vspace{0.3 cm}
-$\bullet$ Pour tout élément $x\in K(A)$, il existe $\varepsilon\in (0,\frac{1}{4}),E\in\mathcal E$, et $y\in K^{\varepsilon,E}(A)$ tel que $x=\iota_{\varepsilon,E}(y)$.
+$\bullet$ Pour tout élément $x\in K(A)$ et tout $\varepsilon\in (0,\frac{1}{4})$, il existe $E\in\mathcal E$ et $y\in K^{\varepsilon,E}(A)$ tel que $x=\iota_{\varepsilon,E}(y)$.
 \end{frame}
 
 \begin{frame}{$K$-théorie contrôlée}
 $\bullet$ Une paire de contrôle $(\alpha,\rho)$ est donnée par $\alpha\in (0,\frac{1}{4})$ et $k : (0,\frac{1}{4\alpha})\rightarrow \N $ croissante.
-\begin{definitionfr}
+\begin{definitionfr}[Morphisme contrôlé]
 Un morphisme $(\alpha,k)$-contrôlé $\hat F : \hat K(A) \rightarrow \hat K(B)$ est une famille de morphismes 
 \[F^{\varepsilon,E}: K^{\varepsilon,E}(A) \rightarrow K^{\alpha\varepsilon,k_\varepsilon. E}(B)\] 
 compatible avec les $\iota_{\varepsilon,E}^{\varepsilon',E'}$.
@@ -124,6 +154,7 @@ compatible avec les $\iota_{\varepsilon,E}^{\varepsilon',E'}$.
 \vspace{0.3 cm}
 On dit que $\hat F$ induit $F : K(A)\rightarrow K(B)$ en $K$-théorie si 
 \[\iota_{\alpha \varepsilon,k_\varepsilon E}\circ F^{\varepsilon,E}=F.\]
+\textbf{Remarque :} Notion d'isomorphisme contrôlé et de suite exacte contrôlée.
 \end{frame}
 
 \begin{frame}{$K$-théorie contrôlée}
@@ -131,9 +162,14 @@ $\bullet$ Tout $*$-homomorphisme filtré $\phi; A\rightarrow B$, i.e. $\phi(A_E)
 \[\phi_* : \hat K(A)\rightarrow \hat K(B).\]
 $\bullet$ Morita équivalence : $A \rightarrow A\otimes\mathfrak K ; a\mapsto a\otimes e$ induit un isomorphisme
 \[K^{\varepsilon,E}(A)\rightarrow K^{\varepsilon,E}(A\otimes\mathfrak K).\]
-$\bullet$ Périodicité de Bott contrôlée : il existe une paire de contrôle $(\alpha_\beta,k_\beta)$ et un morphisme $(\alpha_\beta,k_\beta)$-contrôlé
-\[\beta_A : K^{\varepsilon, E}(SA)\rightarrow K^{\alpha_\beta\varepsilon, k_\beta(\varepsilon) . E}(A)\]
-qui admet un inverse contrôlé $D_A$.
+$\bullet$ Pour toute suite exacte complètement filtrée, il existe une suite exacte contrôlée à $6$ termes, ainsi qu'un bord contrôlé.\\
+\vspace{0.3 cm}
+$\bullet$ Périodicité de Bott contrôlée : $p\mapsto 1+(e^{2i\pi }-1)p$ induit un isomorphisme contrôlé
+\[\beta_A :\hat K_0(A) \rightarrow  \hat K_1(SA).\]
+
+%il existe une paire de contrôle $(\alpha_\beta,k_\beta)$ et un morphisme $(\alpha_\beta,k_\beta)$-contrôlé
+%\[\beta_A : K^{\varepsilon, E}(SA)\rightarrow K^{\alpha_\beta\varepsilon, k_\beta(\varepsilon) . E}(A)\]
+%qui admet un inverse contrôlé $D_A$.
 \end{frame}
 
 
