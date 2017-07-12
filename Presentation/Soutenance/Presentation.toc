@@ -5,6 +5,6 @@
 \beamer@sectionintoc {3}{$K$-th\IeC {\'e}orie contr\IeC {\^o}l\IeC {\'e}e}{32}{0}{3}
 \beamer@sectionintoc {4}{Groupo\IeC {\"\i }des}{49}{0}{4}
 \beamer@sectionintoc {5}{Applications d'assemblage}{56}{0}{5}
-\beamer@sectionintoc {6}{Enonc\IeC {\'e}s quantitatifs}{64}{0}{6}
-\beamer@sectionintoc {7}{G\IeC {\'e}om\IeC {\'e}trie Coarse}{73}{0}{7}
-\beamer@sectionintoc {8}{Formule de K\IeC {\"u}nneth}{78}{0}{8}
+\beamer@sectionintoc {6}{Enonc\IeC {\'e}s quantitatifs}{63}{0}{6}
+\beamer@sectionintoc {7}{G\IeC {\'e}om\IeC {\'e}trie Coarse}{72}{0}{7}
+\beamer@sectionintoc {8}{Formule de K\IeC {\"u}nneth}{77}{0}{8}

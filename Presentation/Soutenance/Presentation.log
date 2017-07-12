@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  11 JUL 2017 23:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.28)  12 JUL 2017 12:36
 entering extended mode
 **C:/Users/Clément/Documents/GitHub/Ktheory/Presentation/Soutenance/Presentati
 on.tex
@@ -1432,37 +1432,42 @@ s.tex [57
 
 ] [60
 
-] [61
+]
+Overfull \hbox (9.84517pt too wide) detected at line 77
+\OML/cmm/m/it/10.95 [] []
+ []
+
+[61
 
 ]
-Overfull \hbox (9.84517pt too wide) detected at line 72
-\OML/cmm/m/it/10.95 [] []
+Overfull \hbox (14.35226pt too wide) detected at line 92
+[] \OT1/cmss/m/n/10.95 : []
  []
 
 [62
 
-]
-Overfull \hbox (14.35226pt too wide) detected at line 87
-[] \OT1/cmss/m/n/10.95 : []
- []
-
-[63
-
 ])
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
-n.toc) [64
+n.toc) [63
 
 
 ]
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Quantitativ
-eStatements.tex [65
+eStatements.tex [64
 
+
+] [65
 
 ] [66
 
 ] [67
 
-] [68
+]
+Overfull \hbox (16.60214pt too wide) detected at line 68
+[]
+ []
+
+[68
 
 ]
 Overfull \hbox (16.60214pt too wide) detected at line 68
@@ -1485,40 +1490,33 @@ Overfull \hbox (16.60214pt too wide) detected at line 68
 
 [71
 
-]
-Overfull \hbox (16.60214pt too wide) detected at line 68
-[]
- []
-
-[72
-
 ])
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
-n.toc) [73
+n.toc) [72
 
 
 ]
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\CoarseGeome
-try.tex [74
+try.tex [73
 
+
+] [74
 
 ] [75
 
 ] [76
 
-] [77
-
 ])
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
-n.toc) [78
+n.toc) [77
 
 
 ]
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Kunneth.tex
-[79
+[78
 
 
-] [80
+] [79
 
 ]
 Overfull \hbox (8.994pt too wide) detected at line 38
@@ -1533,9 +1531,16 @@ msy/m/n/10.95
 .95 x\OT1/cmss/m/n/10.95 ) = 0\OML/cmm/m/it/10.95 :
  []
 
-[81
+[80
 
-] [82
+] [81
+
+]
+Overfull \hbox (23.89412pt too wide) detected at line 74
+[]
+ []
+
+[82
 
 ]
 Overfull \hbox (23.89412pt too wide) detected at line 74
@@ -1558,12 +1563,7 @@ Overfull \hbox (23.89412pt too wide) detected at line 74
 
 [85
 
-]
-Overfull \hbox (23.89412pt too wide) detected at line 74
-[]
- []
-
-[86
+] [86
 
 ] [87
 
@@ -1577,15 +1577,13 @@ Overfull \hbox (23.89412pt too wide) detected at line 74
 
 ] [92
 
-] [93
-
 ])
 (C:\Users\Clément\Documents\GitHub\Ktheory\Presentation\Soutenance\Presentatio
-n.bbl) [94
+n.bbl) [93
 
 
  <C:/Program Files/MiKTeX 2.9/tex/latex/beamer/base/art/beamericonarticle.pdf>]
- [95
+ [94
 
 ]
 \tf@nav=\write6
@@ -1624,10 +1622,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  ) 
 Here is how much of TeX's memory you used:
- 19695 strings out of 493921
- 378302 string characters out of 3147330
- 464660 words of memory out of 3000000
- 22239 multiletter control sequences out of 15000+200000
+ 19691 strings out of 493921
+ 378265 string characters out of 3147330
+ 464624 words of memory out of 3000000
+ 22237 multiletter control sequences out of 15000+200000
  19060 words of font info for 70 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  57i,17n,78p,525b,944s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1649,9 +1647,9 @@ nts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 msfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb>
-Output written on Presentation.pdf (95 pages, 399983 bytes).
+Output written on Presentation.pdf (94 pages, 397734 bytes).
 PDF statistics:
- 745 PDF objects out of 1000 (max. 8388607)
- 204 named destinations out of 1000 (max. 500000)
+ 740 PDF objects out of 1000 (max. 8388607)
+ 202 named destinations out of 1000 (max. 500000)
  112 words of extra memory for PDF output out of 10000 (max. 10000000)
 
