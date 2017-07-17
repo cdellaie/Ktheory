@@ -40,13 +40,13 @@ Si une structure coarse $\mathcal E$ est donnée, une $C^*$-algèbre $\mathcal E
 
 De nouvelles $C^*$-algèbres peuvent alors être vues comme des $C^*$-algèbres filtrées. Voici des exemples qui sont détaillés par la suite.
 \begin{itemize} 
-\item[$\bullet$] Soit $(X,d)$ un espace métrique discret à géométrie bornée. Alors les ensembles $E\subseteq X$ symmétriques tels que $\sup d<\infty$, sont munis d'un ordre partiel $\subseteq$ et d'une loi de composition donnée par 
+\item[$\bullet$] Soit $(X,d)$ un espace métrique discret à géométrie bornée. Alors les ensembles $E\subseteq X\times X$ symmétriques tels que $\sup d_{|E}<\infty$, sont munis d'un ordre partiel $\subseteq$ et d'une loi de composition donnée par 
 \[E\circ E = EE'\cup E'E,\]
 où $EE' = \{(x,y)\in X\times X \text{ t.q. }\exists z\in X / (x,z)\in E \text{ et }(z,y)\in E'\}$. Cela définit une structure coarse $\mathcal E_X$.
 \item[$\bullet$] Soit $G$ un groupoïde étale $\sigma$-compact. Alors les ensembles $E\subseteq G$ symmétriques compacts, sont munis d'un ordre partiel $\subseteq$ et d'une loi de composition donnée par 
 \[E\circ E = EE'\cup E'E,\]
 où $EE' = \{gg' ; (g,g')\in G^{(2)}\}$. Cela définit une structure coarse $\mathcal E_G$.
-\item[$\bullet$] Soit $\mathbb G$ un groupe quantique compact. Alors l'ensemble des classes d'équivalence des représentations unitaires symétriques de dimension finie de $\mathbb G$ est muni de l'ordre suivant : $\pi\leq \pi'$ ssi $\pi$ est unitairement équivalente à une sous-représentation de $\pi$. De plus, le produit tensoriel symétrisé fournit une loi de composition, et cela définit une structure coarse $\mathcal E_{\mathbb G}$.\\
+\item[$\bullet$] Soit $\mathbb G$ un groupe quantique compact. Alors l'ensemble des classes d'équivalence de représentations unitaires symétriques de dimension finie de $\mathbb G$ est muni de l'ordre suivant : $\pi\leq \pi'$ ssi $\pi$ est unitairement équivalente à une sous-représentation de $\pi$. De plus, le produit tensoriel symétrisé fournit une loi de composition, et cela définit une structure coarse $\mathcal E_{\mathbb G}$.\\
 \end{itemize} 
 
 Il s'avère que les algèbres de Roe $C^*(X,B)$, les produits croisés par $G$, et les produits croisés par $\hat{\mathbb G}$ sont filtrés par $\mathcal E_X$, $\mathcal E_G$ et $\mathcal E_{\mathbb G}$ respectivement.\\
@@ -78,7 +78,7 @@ de même degré que $z$, tels que :
 Une fois la transformation de Roe contrôlée construite, l'étape suivante naturelle est la construction de l'application d'assemblage contrôlée $\hat\mu_{X,B}$ , pour toute $C^*$-algèbre $B$. Pour cela, pour tout entourage $E$, on définit une projection canonique $P_E\in C^*(X,C_0(P_E(X)))$ de propagation finie. Elle définit alors une classe paire de $K$-théorie contrôlée.
 
 \begin{definitionfr}
-Soient $B$ une $C^*$-algèbre, $\varepsilon\in (0,\frac{1}{4})$ et $E,F\in\mathcal E_X$ des entourages tels que $k_X(\varepsilon).E\subseteq F$. L'application d'assemblage contrôllée $\hat\mu_{X,B}=(\mu_{X,B}^{\varepsilon,E,F})_{\varepsilon,E}$ est définie comme la famille d'applications
+Soient $B$ une $C^*$-algèbre, $\varepsilon\in (0,\frac{1}{4})$ et $E,F\in\mathcal E_X$ des entourages tels que $k_X(\varepsilon).E\subseteq F$. L'application d'assemblage contrôlée $\hat\mu_{X,B}=(\mu_{X,B}^{\varepsilon,E,F})_{\varepsilon,E}$ est définie comme la famille d'applications
 \[\hat\mu_{X,B}^{\varepsilon, E,F} :\left\{\begin{array}{rcl} KK(C_0(P_E(X)),B) & \rightarrow & K^{\varepsilon, F}(C^*(X,B)) \\
 					z & \mapsto & \iota_{\alpha_X \varepsilon',k_X(\varepsilon').F'}^{\varepsilon,F}\circ\hat\sigma_X(z)[P_{E},0]_{\varepsilon', F'}\end{array}\right.\]
 où $\varepsilon'$ et $F'$ vérifient :
@@ -126,7 +126,7 @@ où $\varepsilon'$ et $F'$ vérifient :
 
 L'application d'assemblage admet aussi une version maximale à valeurs dans $\hat K(A\rtimes_{max} G) = \{K^{\varepsilon,E}(A\rtimes_{max} G)\}_{\varepsilon \in (0,\frac{1}{4}),E\in\mathcal E}$.\\
 
-La deuxième étape du travail consiste à formuler une version controllée de la conjecture de Baum-Connes. Nous montrons ensuite comment relier l'application d'assemblage contrôlée à l'application d'assemblage classique. Les théorèmes qui réalisent ce programme sont les théorèmes \ref{Quant1} et \ref{Quant2}, que nous appelons énoncés quantitatifs. Pour cela, il nous faut d'abord introduire les propriétés suivantes :\\
+La deuxième étape du travail consiste à formuler une version controlée de la conjecture de Baum-Connes. Nous montrons ensuite comment relier l'application d'assemblage contrôlée à l'application d'assemblage classique. Les théorèmes qui réalisent ce programme sont les théorèmes \ref{Quant1} et \ref{Quant2}, que nous appelons énoncés quantitatifs. Pour cela, il nous faut d'abord introduire les propriétés suivantes :\\
 \begin{itemize}
 \item[$\bullet$] $QI_{G,B}(E,E',F,\varepsilon)$ : pour tout $x\in RK^G(P_E(G), B )$, alors $\mu^{\varepsilon,E,F}_{G,B}(x) = 0$ implique que $q_E^{E'}(x)=0$ dans $RK^G(P_{E'}(G),B)$.
 \item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : pour tout $y\in K^{\varepsilon,F}(B\rtimes G)$, il existe $x\in RK^G(P_E(G),B)$ tel que $\mu^{\varepsilon',E,F'}_{G,B}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
@@ -139,18 +139,18 @@ Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(\N,B\otimes\mathfrak K)$. A
 \end{thmfr}
 
 \begin{thmfr}
-Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(\N,B\otimes\mathfrak K)$. Alors il existe $\lambda \geq 1$ tel que $\mu_{G,\tilde B}$ est surjective ssi pour tout $0<\varepsilon<\frac{1}{4\lambda}$ et $F\in\mathcal E$, il existe $E\in\mathcal E$ et $F'$ tel que $k_J .E \subseteq F$ tel que $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ soit vérifiée.
+Soient $B$ une $G$-algèbre, et $\tilde B = l^\infty(\N,B\otimes\mathfrak K)$. Alors il existe $\lambda \geq 1$ tel que $\mu_{G,\tilde B}$ est surjective ssi pour tout $0<\varepsilon<\frac{1}{4\lambda}$ et $F\in\mathcal E$, il existe $E\in\mathcal E$ et $F'$ tel que $k_J .E \subseteq F$ tel que $QS_{G,B}(E,F,F',\varepsilon,\lambda\varepsilon)$ soit vérifiée.
 \end{thmfr}
 
 Ils admettent une version uniforme :
 \begin{thmfr} Soit $G$ un groupoïde étale $\sigma$-compact avec une base compacte. \\
 \begin{itemize}
-\item[$\bullet$] Supposons que pour toute $G$-algèbre $B$, $\mu_{G,B}$ soit injective. Alors, pour tout $\varepsilon\in (0,\frac{1}{4})$ et tout $E,F\in\mathcal E$ tels que $k_J(\varepsilon). E\subseteq F$, il existe $E'\in\mathcal E$ tel que $E\subseteq E'$ et tel que $QI_{G,A}(E,E',\varepsilon,F)$ soit satisfait pout toute $G$-algèbre $B$.\\
-\item[$\bullet$] Supposons que pour toute $G$-algèbre $B$, $\mu_{G,B}$ soit surjective. Alors, pour un certain $\lambda \geq 1$ et pour tout $\varepsilon\in (0,\frac{1}{4\lambda})$ et tout $F\in\mathcal E$, il existe $E,F'\in\mathcal E$ tels que $k_J(\varepsilon). E\subseteq F'$ et $F\subseteq F'$ tel que, pour toute $G$-algèbre $B$, $QS_{G,A}(E, F,F',\varepsilon,\lambda \varepsilon)$ soit satisfait.
+\item[$\bullet$] Supposons que pour toute $G$-algèbre $B$, $\mu_{G,B}$ soit injective. Alors, pour tout $\varepsilon\in (0,\frac{1}{4})$ et tout $E,F\in\mathcal E$ tels que $k_J(\varepsilon). E\subseteq F$, il existe $E'\in\mathcal E$ tel que $E\subseteq E'$ et tel que $QI_{G,B}(E,E',\varepsilon,F)$ soit satisfait pout toute $G$-algèbre $B$.\\
+\item[$\bullet$] Supposons que pour toute $G$-algèbre $B$, $\mu_{G,B}$ soit surjective. Alors, pour un certain $\lambda \geq 1$ et pour tout $\varepsilon\in (0,\frac{1}{4\lambda})$ et tout $F\in\mathcal E$, il existe $E,F'\in\mathcal E$ tels que $k_J(\varepsilon). E\subseteq F'$ et $F\subseteq F'$ tel que, pour toute $G$-algèbre $B$, $QS_{G,B}(E, F,F',\varepsilon,\lambda \varepsilon)$ soit satisfait.
 \end{itemize}
 \end{thmfr}
 
-Le reste du chapitre présente deux applications. La première concerne un résultat dit d'Approximation Persistante, et le second donne une version controllée d'un résultat de $K$-moyennabilité de groupes quantiques discrets. \\
+Le reste du chapitre présente deux applications. La première concerne un résultat dit d'Approximation Persistante, et le second donne une version controlée d'un résultat de $K$-moyennabilité de groupes quantiques discrets. \\
 
 \begin{itemize}
 
@@ -160,11 +160,11 @@ Le reste du chapitre présente deux applications. La première concerne un résu
 Soit $(B,\mathcal E)$ une $C^*$-algèbre filtrée, $\lambda>0$ et soient $\varepsilon,\varepsilon'$ des nombres positifs tels que $0<\varepsilon <\varepsilon' <\frac{1}{4}$ et $F,F'\in\mathcal E$ tels que $F\subseteq F'$. 
 \begin{itemize}
 \item[$\bullet$] $PA_B(\varepsilon,\varepsilon',F,F')$ : pour tout $x\in K_*^{\varepsilon,F}(B)$ tel que $\iota_{\varepsilon,F}(x)=0$ dans $K_*(B)$, alors $\iota_{\varepsilon,F}^{\varepsilon',F'}(x)=0$ dans $K_*^{\varepsilon',F'}(B)$.
-\item[$\bullet$] $B$ satisfait la propriété d'approximation persistante $(PAP)_\lambda$ si pour tout $F\in\mathcal E$ et $\varepsilon\in (0,\frac{1}{4})$, il existe $F'\in\mathcal E$ tel que $PA(\varepsilon,\lambda\varepsilon,F,F')$ soit vérifiée.\\
+\item[$\bullet$] $B$ satisfait la propriété d'approximation persistante $(PAP)_\lambda$ si pour tout $F\in\mathcal E$ et $\varepsilon\in (0,\frac{1}{4})$, il existe $F'\in\mathcal E$ tel que $PA_B(\varepsilon,\lambda\varepsilon,F,F')$ soit vérifiée.\\
 \end{itemize}
 \end{definitionfr}
 
-La propriété (PAP) est satisfaite lorsque la $K$-théorie est bien approximée, de manière uniforme, par la $K$-théorie controllée. Le théorème \ref{PAPG} permet de relier l'application d'assemblage et la propriété d'approximation persistante. \\
+La propriété (PAP) est satisfaite lorsque la $K$-théorie est bien approximée, de manière uniforme, par la $K$-théorie controlée. Le théorème \ref{PAPG} permet de relier l'application d'assemblage et la propriété d'approximation persistante. \\
 
 \begin{thmfr} 
 Soit $G$ un groupoïde étale à base compacte qui admet un classifiant des actions propres cocompact, et $A$ une $G$-algèbre. Si $\mu_{G,l^\infty(\N, K_A)}$ est surjective et $\mu_{G,A}$ est injective, alors, pour une constante universelle $\lambda_{PA}\geq 1$, pour tout $\varepsilon \in(0,\frac{1}{4\lambda_{PA}})$ et $F\in\mathcal E$, il existe $F'\in\mathcal E$ tel que $F\subseteq F'$ et tel que $PA_{A\rtimes G}(\varepsilon,\lambda_{PA}\varepsilon,F,F')$ soit vérifiée.\\
