@@ -1,1 +1,9 @@
 Rapport/Assemblymaps.aux
+*.toc
+Articles/QuantumGroups/main_QG.synctex.gz
+*.pdf
+Articles/QuantumGroups/main_QG.out
+*.log
+Articles/QuantumGroups/main_QG.blg
+*.bbl
+Articles/QuantumGroups/main_QG.aux
