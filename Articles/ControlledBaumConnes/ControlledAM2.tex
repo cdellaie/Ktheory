@@ -429,6 +429,25 @@ This kind of statement leads us to define the following properties, following \c
 \item[$\bullet$] $QS_{G,B}(E,F,F',\varepsilon,\varepsilon')$ : for any $y\in K^{\varepsilon,F}(B\rtimes_r G)$, there exists $x\in RK^G(P_E(G),B)$ such that $\mu^{\varepsilon',E,F'}_{G,B}(x)=\iota_{\varepsilon,F}^{\varepsilon',F'}(y)$.\\
 \end{itemize} 
 
+Controlled injectivity and surjectivity being defined, we can now state a controlled version of the Baum-Connes conjecture.
+
+\begin{definition} 
+Let $\lambda \geq 1$. The groupoid $G$ is said to satisfy the controlled Baum-Connes conjecture, with coefficients in the $G$-algebra $B$, at scale $\lambda$ if:
+\begin{itemize}
+\item[$\bullet$] for every $\varepsilon \in (0,\frac{1}{4\lambda})$ and $E,F\in \mathcal E$ such that $k_J(\varepsilon).E \subseteq F$, there exists $E'\in \mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(\varepsilon, E,E',F)$ holds;
+\item[$\bullet$] for every $\varepsilon \in (0,\frac{1}{4\lambda})$ and $F\in \mathcal E$, there exist $E,F'\in \mathcal E$ such that $F \subseteq F'$, $k_J(\varepsilon).E \subseteq F'$ and $QS_{G,B}(\varepsilon,\lambda \varepsilon , E,F,F')$ holds. 
+\end{itemize}
+\end{definition}
+
+The main result of this section is the following theorem.
+
+\begin{thm} There exists a universal $\lambda \geq 1$ such that for every etale groupoid with compact base space $G$, and every $B$ $G$-algebra, the following statements are equivalent:
+\begin{itemize} 
+\item[$\bullet$] $G$ satisfies the controlled Baum-Connes conjecture with coefficients in $B$ at scale $\lambda$, 
+\item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients in $l^\infty (\N,B\otimes \mathfrak K)$.
+\end{itemize}
+\end{thm}
+
 %%%%%%%%
 
 To prove the main theorems of this section, what we called quantitative statements, we will need a serie of lemmas. The first part is devoted to a study of the behaviour of $K$-homology under product of the coefficients. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}. \\

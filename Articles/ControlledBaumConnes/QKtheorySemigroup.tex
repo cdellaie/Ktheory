@@ -1,6 +1,6 @@
 \section{$K$-theory controlled by a coarse structure}
 
-In this section, we define controlled $K$-theory in more generality than the functor defined in \cite{OY2} and in the previous section. The goal is to develop controlled $K$-theory to a broader setting that what is used until now. Notably, we give a definition that allows to state that the controlled $K$-theory is a genuine functor between appropriately chosen categories. The price to pay is a little more generality, and functorial definitions, but the reward is a larger range of applications of the theory. We will show how it is possible to apply controlled-lingo to compact quantum groups in the sense of Woronowicz, foliations groupoids and twisted representations of locally compact groups.\\
+In this section, we define controlled $K$-theory in more generality than the functor defined in \cite{OY2} and in the previous section. The goal is to develop controlled $K$-theory to a broader setting that what is used until now. Notably, we give a definition that allows to state that the controlled $K$-theory is a genuine functor between appropriately chosen categories. The price to pay is a little more generality, and functorial definitions, but the reward is a larger range of applications of the theory. We will show how it is possible to apply controlled-lingo to compact quantum groups in the sense of Woronowicz, foliations groupoids and twisted representations of locally compact groups.
 
 \begin{definition}
 A coarse structure $\mathcal E$ is a lattice which is an abelian semi-group. %such that $\forall E,E'\in \mathcal E$, $E\leq E'E$. 
@@ -8,7 +8,7 @@ Recall that a lattice is a poset for which every pair $(E,E')$ admits a supremum
 \end{definition}
 
 \begin{definition}
-A $C^*$-algebra $A$ is said to be $\mathcal E$-filtered if there exists a coarse structure $\mathcal E$ and, for every $E\in \mathcal E$, linear subspaces $A_E$ of $A$ such that :\\
+A $C^*$-algebra $A$ is said to be $\mathcal E$-filtered if there exists a coarse structure $\mathcal E$ and, for every $E\in \mathcal E$, linear subspaces $A_E$ of $A$ such that :
 \begin{itemize}
 \item[$\bullet$] if $E \leq E'$, then $A_E\subseteq A_{E'}$, and the inclusion $\phi_E^{E'}: A_E\hookrightarrow A_{E'}$ induces an inductive system of linear spaces,
 \item[$\bullet$] $A_E$ is stable by involution,
@@ -18,7 +18,7 @@ A $C^*$-algebra $A$ is said to be $\mathcal E$-filtered if there exists a coarse
 \end{itemize}
 \end{definition}
 
-If $A$ is a non-unital filtered $C^*$-algebra, we will by default endowed its unitalization $\tilde A$ with the filtration $\tilde A_E = A_E + \C$. A $*$-homomorphism $\phi : A \rightarrow B$ is said to be filtered if $\phi(A_E)\subseteq B_E$ for all $E\in\mathcal E$.\\
+%If $A$ is a non-unital filtered $C^*$-algebra, we will by default endowed its unitalization $\tilde A$ with the filtration $\tilde A_E = A_E + \C$. A $*$-homomorphism $\phi : A \rightarrow B$ is said to be filtered if $\phi(A_E)\subseteq B_E$ for all $E\in\mathcal E$.\\
 
 If $(A,\mathcal E)$ and $(B,\mathcal E')$ are two filtered $C^*$-algebras, a filtered morphism $(\phi,\rho): (A,\mathcal E)\rightarrow (B,\mathcal E')$ is :
 \begin{itemize}
@@ -26,7 +26,7 @@ If $(A,\mathcal E)$ and $(B,\mathcal E')$ are two filtered $C^*$-algebras, a fil
 \item[$\bullet$] a $*$-homomorphism $\phi: A\rightarrow B$ such that $\phi (A_E)\subseteq B_{\rho(E)}$ for all $E\in\mathcal E$.
 \end{itemize}
 
-The crucial example for us will be crossed products of $G$-algebras by an étale groupoid $G$. Note that this definition generalizes that of \cite{OY2}. Indeed, as will be recalled later, the Roe algebras can be expressed as a crossed product by the so-called coarse groupoid, which is étale \cite{SkTuYu}, and the definition given here, applied to this groupoid, gives back the filtration in the sense of \cite{OY2}. The second example will be that of crossed products by compact quantum groups of Woronowicz.\cite{Wo}
+The crucial example for us will be crossed products of $G$-algebras by an étale groupoid $G$. Note that this definition generalizes that of \cite{OY2}. Indeed, as will be recalled later, the Roe algebras can be expressed as a crossed product by the so-called coarse groupoid, which is étale \cite{SkTuYu}, and the definition given here, applied to this groupoid, gives back a filtration equivalent to that of \cite{OY2}. Our filtration however does not depend on any choice of metric, but rather on the coarse class of the space> The second example will be that of crossed products by discrete quantum groups in the sense of Woronowicz.\cite{Wo}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Almost unitaries and almost projections}
@@ -145,7 +145,7 @@ Let $\mathbb G$ be a compact quantum group in the sense of Woronowicz. By Propos
 \subsection{Quantitative objects}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In order to study functorial properties of controlled $K$-theory, we will adapt and study the notion of quantitative object defined in \cite{OY2}.\\
+In order to study functorial properties of controlled $K$-theory, we will adapt and study the notion of quantitative object defined in \cite{OY2}.
 
 \begin{definition}
 A quantitative object is a family of abelian groups $\hat{\mathcal{O}}=\{\mathcal{O}_{\varepsilon, E}\}_{\varepsilon\in (0,\frac{1}{4}, E\in\mathcal{E}}$ endowed with a family of group homorphisms $\phi_{\varepsilon, E}^{\varepsilon', E'} : \mathcal{O}_E\rightarrow \mathcal{O}_{E'}$ for any $E,E'\in\mathcal E$ and $0<\varepsilon\leq \varepsilon'<\frac{1}{4}$ such that $E\subseteq E'$, satisfying $\phi_{\varepsilon, E}^{\varepsilon, E}= id_{\mathcal{O}_E}$ and $\phi_{\varepsilon', E'}^{\varepsilon'', E''}\circ \phi_{\varepsilon, E}^{\varepsilon', E'} =\phi_{\varepsilon'', E''}^{\varepsilon, E}$ whenever $E\subseteq E' \subseteq E''$ and $\varepsilon<\varepsilon'<\varepsilon''$.

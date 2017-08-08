@@ -85,11 +85,63 @@ The $A$-Hilbert module $L^2(G,A)$ is the completion of $C_c(G,A)$ under the scal
 and $C_c(G,A)$ is represented on $L^2(G,A)$ by $\lambda(f) \xi = f\ast \xi$, for every $ f\in C_c(G,A)$ and $\xi\in L^2(G,A)$.\\
 
 \begin{definition}
-The reduced crossed product $A\rtimes_r G$ is the $C^*$-algebra obtined by completion of $C_c(G,A)$ under the norm $||f||_r=||\lambda(f)||$.
+The reduced crossed product $A\rtimes_r G$ is the $C^*$-algebra obtained by completion of $C_c(G,A)$ under the norm $||f||_r=||\lambda(f)||$.
 \end{definition}
 
 In the following section is presented the setting of controlled $K$-theory. The main example is that the set $\mathcal E$ of compact subsets of $G$ defines a coarse structure, and that $A\rtimes_r G$ is $\mathcal E$-filtered, thus allowing to apply the controlled machinery to crossed product of groupoids. 
 
+%%%%%%%%%%%%%%%%%
+%% A ordonner   %
+%%%%%%%%%%%%%%%%%
 
+\subsection{To insert into the main corpus}
+
+\begin{rk}\label{isometry}
+When we look at a $*$-homomorphism $\phi : A\rightarrow B$, we always have an isometry $V\in \mathcal L_B ( H_A\otimes_\phi B , H_B)$ defined on simple tensors as $(x_j)_j\otimes b \mapsto (\phi(x_j)b)_j$. Indeed, this map extends linearly to $H_A \odot B$, and if $x = (x_j)$ and $x'=(x'_j)$ are in $H_A$ : 
+\[\langle V (x\otimes b) , V(x'\otimes b')\rangle = b^* \sum_j \phi(x_j)^* \phi(x'_j) \  b' = b^*\phi(\langle x, x' \rangle)b' = \langle x\otimes b , x'\otimes b' \rangle . \] % Determiner V^* 
+This isometry can be used to explicitly describe the projection and the isomorphism appearing in the stabilization theorem in this particular example. Indeed $p = VV^*\in\mathcal L_B(H_B)$ is a projection such that $p H_B \cong H_A\otimes_\phi B $.\\
+
+Moreover, for $T\in \mathcal L_B(H_A\otimes_\phi B)$, $Ad_V(T) = VTV^*$ defines a $*$-homomorphism $Ad_V : \mathcal L_B(H_A\otimes_\phi B)\rightarrow \mathcal L_B(H_B)$ such that $Ad_V(\mathfrak K_B(H_A\otimes_\phi B))\subseteq \mathfrak K_B(H_B)$. Indeed, notice that 
+\[V\theta_{\xi,\xi'}V^* = \theta_{V\xi,V\xi'}\]
+for every $\xi,\xi'\in H_A\otimes_\phi B$.\\
+
+Composing with $\phi_*$, we get a $*$-homomorphism $\mathcal L_A(H_A)\rightarrow \mathcal L_B(H_B); T\mapsto V(T\otimes_\phi 1)V^*$ respecting compact operators in a natural way : if $\theta = (a_{ij})\in A\otimes\mathfrak K$, then $V(T\otimes_\phi 1)V^* = (\phi(a_{ij}))\in B\otimes\mathfrak K$.  
+\end{rk}
+
+\begin{lem}\label{isometryKK}
+Let $\phi : B\rightarrow B'$ be a $G$-equivariant homomorphism, and $z=[H_B,\pi, T]\in KK^G(A,B)$. Let $V\in\mathcal L_{B'}(H_B\otimes B', H_{B'})$ be the isometry of the remark \ref{isometry} and $p = VV^*\in\mathcal L_{B'}(H_{B'})$. Define $\pi' : A\rightarrow \mathcal L_{B'}(H_{B'})$ as $\pi'(a) = V\pi(a)V^*$ and $T'= V(T\otimes_\phi 1)V^* + 1-p \in \mathcal L_{B'}(H_B')$. Then $(H_{B'},\pi',T')$ is a $K$-cycle and 
+\[g^*(z) = [H_B\otimes B',\pi\otimes_\phi 1,\phi_*(T)]=[H_B', \pi', T']\text{ in } KK^G(A,B').\]
+\end{lem} 
+
+More precisely, let us define decomposition property $(d)$.
+
+\begin{definition}\label{DecompositionPropertyD}
+Let $d$ be a positive integer. An element $z\in KK^G(A,B)$ is said to satisfy decomposition property $(d)$ if
+\begin{itemize}
+\item[$\bullet$] there exist $G$-algebras $A_0$, $A_1$, ..., $A_d$ such that $A_0=A$ and $A_d=B$, 
+\item[$\bullet$] there exist elements $z_j \in KK^G(A_{j},A_{j+1})$ for $j\in\{0,..,d-1\}$ such that, either $z_j$ is induced by a $G$-morphism $A_j \rightarrow A_{j+1}$, or there exists a $G$-morphism $\phi_j : A_{j+1}\rightarrow A_j$ such that $z_j \otimes_{A_{j+1}} [\phi_j] = 1_{A_j}$ and $ [\phi_j] \otimes_{A_{j}} z_j  = 1_{A_{j+1}}$,
+\end{itemize}
+such that $z = z_1 \otimes_{A_1}  ... \otimes_{A_{d-1}} z_{d-1} $ holds.
+\end{definition}
+
+Then, the following theorem is true for a universal constant $d$, which does not depend on the groupoid. It will be crucial to prove that the controlled Kasparov and Roe transforms, applications to be defined later, respect the Kasparov product. 
+
+\begin{thm}[\cite{LaffOY}]\label{propertyD}
+Let $G$ be a locally compact groupoid with Haar system. Then, there exists a universal constant $d$ such that every element $z\in KK^G(A,B)$ has decomposition property $(d)$.
+\end{thm}
+
+\begin{definition}
+The assembly map for $G$ with coefficients in $B$ is defined as the inductive limit of the maps $\mu_{G,B}^{(Z)} : KK^G(C_0(Z),B)\rightarrow K(B\rtimes_r B)$ given by
+\[\mu_{G,B}^{(Z)} (z)=[\mathcal L_Z]\otimes_{C_0(Z)\rtimes G} j_G(z),\]
+that is $\mu_{G,B} = \varinjlim \mu_{G,B}^{(Z)}$ (one has to check that theses maps respects the inductive systems, which they do).\\
+\end{definition}
+
+\begin{rk}\label{projection}
+By lemma \ref{Khomology}, one can restrict to $Z$ of the form $P_E(G)$ for $E\subseteq G$ compact. We will denote by $\mu_{G,B}^E$ the assembly map $\mu_{G,B}^{P_E(G)}$, and $\mu_{G,B} = \varinjlim \mu_{G,B}^{E}$ still holds.
+\end{rk}
+
+\begin{thm}\label{Xfunctor}
+Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarrow B$ a $*$-homomorphism. Then there exists a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ extending $\phi$. Moreover, $\phi\mapsto \phi_X$ respects composition of $*$-homomorphisms.
+\end{thm}
 
 
