@@ -1,0 +1,384 @@
+\documentclass{article}
+
+\bibliographystyle{abbrv}
+
+%\usepackage{showkeys}
+
+\usepackage{verbatim}
+
+\usepackage{amsfonts}
+
+\usepackage{amsthm}
+
+\usepackage{amssymb}
+
+\usepackage{amsmath}
+
+\usepackage{mathabx}
+
+\usepackage{enumerate}
+
+\usepackage[all]{xy}
+
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\T}{\mathbb{T}}
+
+\newcommand{\h}{\mathcal{H}}
+
+\newcommand{\Manoa}{M\=anoa}
+
+\newcommand{\Hawaii}{Hawai\kern.05em`\kern.05em\relax i}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition-theorem}[theorem]{Definition / Theorem}
+
+% without a number
+
+\newtheorem*{conjecture*}{Conjecture}
+\newtheorem*{theorem*}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{convention}[theorem]{Convention}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+
+% without a number
+
+\newtheorem*{example*}{Example}  
+\newtheorem*{remark*}{Remark}
+
+
+\begin{document}
+
+
+\section{Definitions}
+
+For the sake of maintaining consistency, we record the following conventions for a locally compact groupoid $G$.  They match those of Renault \cite[Chapter 1]{Renault:1980fk}, Anantharaman-Delaroche and Renault \cite[Introduction]{Anantharaman-Delaroche:2000mw} and Brown and Ozawa \cite[Section 5.6]{Brown:2008qy} (the last only treats the \'{e}tale case) up to minor notational issues.
+
+\begin{itemize}
+\item The unit space is denoted $G^{(0)}$.  General elements of $G$ are generally denoted $g,h$ and elements of $G^{(0)}$ are denoted $x,y$.  
+\item The source and range maps $r:G\to G^{(0)}$ and $s:G\to G^{(0)}$ are continuous and open\footnote{Sometimes openness is not included in the definition; however, it is a necessary condition if $G$ is to admit a Haar measure \cite[Proposition I.2.4]{Renault:1980fk}, so we include it explicitly.}.
+\item An ordered pair of elements $(g,h)\in G\times G$ is composable if $s(g)=r(h)$; in this case their composition is denoted $gh$ and satisfies $s(gh)=s(h)$ and $r(gh)=r(g)$ (thus our convention is set up so that composition of groupoid elements mimics composition of functions; some authors use the opposite convention).
+\item If $A$ is a subset of $G^{(0)}$, then $G^A:=r^{-1}(A)$ and $G_A:=s^{-1}(A)$.  For $A,B\subseteq X$, $G_A^B:=G^B\cap G_A$.  For $x\in G^{(0)}$, $G^x$ is shorthand for $G^{\{x\}}$ and similarly for $G_x$.
+\item  \cite[pages 14-15]{Anantharaman-Delaroche:2000mw}, \cite[Definition 2.2]{Renault:1980fk} $G$ is equipped with a fixed \emph{(left) Haar-system}: a collection of measures $\{\mu^x~|~x\in G^{(0)}\}$ on $G$ such that the support of each $\mu^x$ is exactly $G^x$ (concretely, this means that for any open subset $U$ of $G$, $\mu^x(U)>0$ if and only if $U\cap G^x$ is non-empty); for each $f\in C_c(G)$, the function
+$$
+G^{(0)}\to \C,~~~x\mapsto \int_G f(h)d\mu^x(h)
+$$
+is continuous; for any $g\in G$ and $f\in C_c(G)$, 
+$$
+\int_G f(gh)d\mu^{s(g)}(h)=\int_G f(h)d\mu^{r(g)}(h).
+$$
+\item $G$ is \'{e}tale if $r$ is a local homeomorphism.  This forces each $G^x$ to be discrete, and Haar measure on an \'{e}tale groupoid will always be taken to be counting measure on each $G^x$.
+\item The vector space $C_c(G)$ is given the structure of a $*$-algebra via the convolution product
+$$
+(f_1*f_2)(g):=\int_G f_1(gh)f_2(h^{-1})d\mu^{s(g)}(h)
+$$
+and involution
+$$
+f^*(g):=\overline{f(g^{-1})}
+$$
+(\cite[Proposition II.1.1]{Renault:1980fk} shows that these operations make $C_c(G)$ a topological $*$-algebra).
+\item  \cite[page 22]{Renault:1980fk} Let $I:G\to G$ be the homeomorphism sending elements to their inverses, and for each $x\in G^{(0)}$, define $\mu_x:=I_*\mu^x$.
+\item \cite[page 141]{Anantharaman-Delaroche:2000mw}, \cite[page 50]{Renault:1980fk} Given $f\in C_c(G)$, there are range and source \emph{$I$-norms} defined by
+$$
+\|f\|_{I,r}:=\sup_{x\in G^{(0)}}\int_G|f(g)|d\mu^x(g)
+$$
+and 
+$$
+\|f\|_{I,s}:=\sup_{x\in G^{(0)}}\int_G|f(g)|d\mu_x(g)=\sup_{x\in G^{(0)}}\int_G|f(g^{-1})|d\mu^x(g).
+$$
+The \emph{$I$-norm} of $f$ is 
+$$
+\|f\|_I:=\max\{\|f\|_{I,r},~\|f\|_{I,s}\}.
+$$
+\end{itemize}
+
+\begin{definition}\label{rep}
+A \emph{representation} of $C_c(G)$ is a non-degenerate $*$-homomorphism
+$$
+\pi:C_c(G)\to \mathcal{B}(\h)
+$$
+from $C_c(G)$ to the $C^*$-algebra of bounded operators on a Hilbert space $\h$, which is moreover bounded for the $I$-norm:
+$$
+\|\pi(f)\|_{\mathcal{B}(\h)}\leq \|f\|_I
+$$
+for all $f\in C_c(G)$.
+\end{definition}
+
+We will often leave the $*$-homomorphism $\pi$ implicit in our notation, and just say things like `$\h$ is a representation of $C_c(G)$'.
+
+\begin{comment}
+\begin{remark}\label{group}
+If $G$ is a locally compact \emph{unimodular} group (equipped with a fixed Haar measure), then $C_c(G)$ as above is the same as the usual group convolution algebra, and boundedness for the $I$-norm is the same as boundedness for the usual $L^1$ norm.  If not, one easily checks that the vector space isomorphism defined by
+$$
+\phi:C_c(G)\to C_c(G),~~~\phi(f)(g)=(f(g)\Delta(g))^{-1/2}
+$$
+intertwines the $*$-algebra structure above and the more usual $*$-algebra structure for a group that has the same convolution as above, but involution defined by 
+$$
+f^*(g):=\overline{f(g^{-1})}\Delta(g^{-1}).
+$$
+Using this, one sees using standard arguments that $I$-bounded non-degenerate $*$-representations of $C_c(G)$ (with our $*$-algebra structure) are in one-to-one correspondence with unitary representations of $G$.
+\end{remark}
+\end{comment}
+
+\begin{remark}\label{brem}
+Let $\pi:C_c(G)\to \mathcal{B}(\h)$ be a nondegenerate $*$-homomorphism.  If $G$ is \'{e}tale, it is not difficult to see that $\pi$ is automatically bounded for the $I$-norm, and thus a representation.  The discussion in \cite[Appendix A]{Sims:2012fk} shows that if $G$ is second countable and $\pi$ is assumed continuous for the standard inductive limit topology on $C_c(G)$, then $\pi$ is also automatically continuous for the $I$-norm, and thus a representation.
+
+We do not know if this is true in general (it seems unlikely, even if $G$ is a group, without assuming at least some form of continuity).  
+\end{remark}
+
+Let $G$ be a locally compact groupoid  equipped with a Haar system.  
+
+\begin{definition}\label{constant}
+Define a linear map
+$$
+\Phi:C_c(G)\to C_c(G^{(0)})
+$$
+by 
+$$
+\Phi(f)(x)=\int_{G} f(g) d\mu^x(g).
+$$
+
+Let $\h$ be a representation of $C_c(G)$.  An element $\xi$ of $\h$ is said to be \emph{constant} or \emph{invariant} if
+$$
+f\xi=\Phi(f)\xi
+$$
+for all $f\in C_c(G)$.  Write $\h_c$ for the closed subspace\footnote{It is not in general a subrepresentation.} of constant elements.
+\end{definition}  
+
+\begin{definition}\label{kaz}
+An open subset $K$ of $G$ is a \emph{Kazhdan set} if there exists $c>0$ such that for any $*$-representation $\h$ of $C_c(G)$ and $\xi\in \h_c^\perp$ there exists $f\in C_c(G)$ supported in $K$ with $\|f\|_I\leq 1$ and such that 
+$$
+\|f\xi-\Phi(f)\xi\|\geq c\|\xi\|.
+$$
+The groupoid $G$ has \emph{property (T)} if it admits a Kazhdan set with compact closure.
+\end{definition}
+
+The following lemma shows that property (T) as above does not have much content in the absence of an invariant probability measure on $C_0(G^{(0)})$.
+
+\begin{lemma}\label{inv meas}
+There is a representation $\h$ of $G$ with $C_c(G)$ with non-trivial $\h_c$ non-trivial if and only if there is an invariant probability measure on $G^{(0)}$.  
+\end{lemma}
+
+\begin{proof}
+Here, maybe.
+\end{proof}
+
+
+
+
+
+
+\section{Examples}
+
+In this section, we look at some examples.
+
+\subsection*{Groups}
+
+The basic example is that of groups.  Here we show that our version of property (T) reduces to the usual one.  The following definition is \cite[Definition 1.1.3]{Bekka:2000kx}.
+
+\begin{definition}\label{gpt}
+Let $G$ be a locally compact group.  Let 
+$$
+u:G\to \mathcal{U}(\h)
+$$
+be a strongly continuous unitary representation of $G$.  Say that a vector $\xi\in \h$ is \emph{invariant} or \emph{constant} if $u_g\xi=\xi$ for all $g\in G$.
+
+A subset $K$ of $G$ is a \emph{Kazhdan set} if there exists $c>0$ such that for any strongly continuous unitary representation 
+$$
+u:G\to \mathcal{U}(\h)
+$$
+of $G$ with no non-zero invariant vectors and all $\xi\in \h$ there exists $g\in K$ such that 
+$$
+\|u_g\xi-\xi\|\geq c\|\xi\|.
+$$
+The group $G$ has property (T) if it admits a compact Kazhdan set.
+\end{definition}
+
+We now have two definitions of `Kazhdan set' for groups: Definition \ref{gpt} and the specialisation of Definition \ref{kaz}!  Temporarily, if $G$ is a locally compact group let us say a \emph{group Kazhdan set} a Kazhdan set in the sense of Definition \ref{gpt} and a \emph{groupoid Kazhdan set} a Kazhdan set in the sense of Definition \ref{kaz}, and similarly for the notions of invariant vector.  However, the notions are closely related.  
+
+For simplicity, we restrict to the case of unimodular groups (I did not yet check the details in the non-unimodular case).  First, we have a lemma relating the two notions of constant vector.
+
+\begin{lemma}\label{cons lem}
+Let $G$ be a unimodular locally compact group.  If $\pi:C_c(G)\to \mathcal{B}$ is a representation of $C_c(G)$ in the sense of Definition \ref{rep} then there is a unique unitary representation $u:G\to \mathcal{U}(\h)$ such that
+$$
+\pi(f)=\int_G f(g)u_g d\mu(g)\quad  \text{for all }f\in C_c(G).
+$$
+Conversely, if $u:G\to \mathcal{U}(\h)$ is a strongly continuous unitary representation of $G$, then the formula in the displayed line defines a representation of $C_c(G)$ in the sense of Definition \ref{rep}.  
+
+Moreover, if $\pi$ and $u$ are related as above, then the constant vectors defined with respect to $\pi$ are the same as those defined with respect to $u$.
+\end{lemma}
+
+\begin{proof}
+Note first that as $G$ is unimodular, the $I$-norm on $C_c(G)$ is just the $L^1$-norm, and thus representations of $C_c(G)$ in the sense of Definition \ref{rep} extend uniquely to nondegenerate $*$-representations of $L^1(G)$.  The claimed correspondence between $\pi$s and $u$s now follows from \cite[Section 6.2]{Echterhoff:2009qd}, for example.
+
+To compare constant vectors, note first that $\Phi:C_c(G)\to C_c(G^{(0)})=\C$ as in Definition \ref{constant} is just integration with respect to the Haar measure in this case.  Say $\xi$ is constant for $u$.  Then for any $f\in C_c(G)$,
+$$
+\pi(f)\xi=\int_G f(g)  u_g\xi d\mu(g)=\int_G f(g)\xi d\mu(g)=\Big(\int_G f(g)d\mu(g)\Big)\xi=\Phi(f)\xi,
+$$
+so $\xi$ is constant for $\pi$.  Conversely, say $\xi$ is constant for $\pi$.   Let $(f_i)_{i\in I}$ be a \emph{Dirac net} in the sense of \cite[page 28]{Echterhoff:2009qd}, so in particular, $\int f_i=1$ for all $i$.  Then \cite[Lemma 6.2.2]{Echterhoff:2009qd} implies that for any $g\in G$, 
+$$
+\lim_{i\in I}u_gu(f_i) \xi=u_g\xi.
+$$
+On the other hand, $u_gu(f_i)=u(h_i)$, where $h_i$ is the left shift of $f_i$ by $g$ (and in particular still has integral one) and therefore 
+$$
+u_g\xi=\lim_{i\in I}u(h_i)\xi=\lim_{i\in I} \Phi(h_i)\xi=\lim_{i\in I} \Big(\int h_i\Big)\xi=\xi.
+$$
+Hence $\xi$ is invariant for $u$.
+\end{proof}
+
+\begin{proposition}\label{2kaz}
+Let $G$ be a unimodular locally compact group.  
+\begin{enumerate}
+\item If $K$ is a groupoid Kazhdan set, then it is also a group Kazhdan set.
+\item If $K$ is a group Kazhdan set then there is a neighbourhood $U$ of the identity in $G$ such that if $V\subseteq U$ is open and contains the identity, then $V\cdot K$ is a groupoid Kazhdan set. 
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Assume first that $K$ is a groupoid Kazhdan set with associated constant $c>0$, and let $u:G\to \mathcal{U}(\h)$ be a unitary representation of $G$ with no non-zero invariant vectors.  Using Lemma \ref{cons lem}, we may integrate $u$ to a representation $\pi$ which also has no non-zero invariant vectors.  Hence with notation as in Definition \ref{rep}, we have that $\h=\h_c^\perp$.  Let $\xi$ be an element of $\h$.  As $K$ is a groupoid Kazhdan set with respect to $c>0$, there exists $f\in C_c(G)$ with $\|f\|_I\leq 1$ and support in $K$ such that
+\begin{equation}\label{geninq}
+\|f\xi-\Phi(f)\xi\|\geq c\|\xi\|.
+\end{equation}
+Writing out the left-hand-side more fully gives
+\begin{align*}
+\Big\|\int_G f(g)u_g\xi d\mu(g)-\Big(\int_G f(g)d\mu(g)\Big)\xi\Big\| & \leq \int_G |f(g)|\|u_g\xi-\xi\|d\mu(g) \\ & \leq \|f\|_I\sup_{g\in K}\|u_g\xi-\xi\| \\ & \leq \sup_{g\in K}\|u_g\xi-\xi\|.
+\end{align*}
+Combining this with line \eqref{geninq} gives
+$$
+\sup_{g\in K}\|u_g\xi-\xi\|\geq c\|\xi\|,
+$$
+and so there exists $g\in K$ with 
+$$
+\|u_g\xi-\xi\|\geq \frac{c}{2}\|\xi\|.
+$$
+Hence $K$ is also a group Kazhdan set.\\
+
+Conversely, say $K$ is a group Kazhdan set with associated constant $c>0$.  Let $\pi:C_c(G)\to \mathcal{B}(\h)$ be a representation of $C_c(G)$, and as in Lemma \ref{cons lem}, let $u:G\to \mathcal{U}(\h)$ be the associated representation of $G$, with the same constant vectors.  Let $\xi$ be a vector in $\h_c^\perp$, and note that as $u$ is a unitary representation of a group, it restricts to a representation on $\h_c^\perp$.  Hence there exists $g\in K$ with $\|u_g\xi-\xi\|\geq c\|\xi\|$.  Let $(f_U)$ be a Dirac net in $C_c(G)$ as on \cite[page 22]{Echterhoff:2009qd}, indexed by the collection of all open subsets of $G$ containing the identity, ordered by reverse inclusion.  Then 
+$$
+\lim_U \pi(f_U)u_g\xi=u_g\xi,
+$$
+and therefore there is open $U\owns e$ such that for all open $V\owns e$ contained in $U$, we have that 
+$$
+\|\pi(f_V)u_g\xi-\xi\|\geq \frac{c}{2}\|\xi\|.
+$$ 
+Let $h_V$ be the right shift of $f_V$ by $g$, and note that $\int h_V=1$ whence $\Phi(h_V)\xi=\xi$ for all $V$.  Hence the previous displayed line gives
+$$
+\|\pi(h_V)\xi-\xi\|\geq \frac{c}{2}\|\xi\|.
+$$
+As $\|h_V\|_{L^1(G)}=\|h_V\|_I=1$ for all $V$, and as $h_V$ is supported in $V\cdot K$, this completes the proof.
+\end{proof}
+
+\begin{corollary}\label{gpgpd}
+Let $G$ be a locally compact group.  Then it has property (T) in the sense of Definition \ref{kaz} if and only if it has it in the sense of Definition \ref{gpt}. 
+\end{corollary}
+
+\begin{proof}
+Say $G$ has groupoid property (T) with $K$ an open Kazhdan set with compact closure.  Then Proposition \ref{2kaz} $K$ is a group Kazhdan set.  As a superset of a group Kazhdan set is a group Kazhdan set, $\overline{K}$ is thus a compact group Kazhdan set, so $G$ has group property (T).  
+
+Conversely, say $G$ has group property (T), and let $K$ be a compact groupoid Kazhdan set.  Note that $K\cdot U$ has compact closure whenever $U\subseteq G$ is an open set with compact closure.  Proposition \ref{2kaz} implies that $K\cdot V$ is a groupoid Kazhdan set for some open $V\owns e$ with $V$ having compact closure (use that $G$ is locally compact), and so $G\cdot V$ is a groupoid Kazhdan set with compact closure.
+\end{proof}
+
+
+
+
+
+
+\subsection*{Coarse spaces}
+
+\begin{proposition}\label{coarse t}
+Let $X$ be a bounded geometry metric space.  Then the associated coarse groupoid has property (T) if and only if $X$ has geometric property (T) in the sense of \cite[Definition 3.3]{Willett:2013cr}.
+\end{proposition}
+
+\begin{proof}
+Here.
+\end{proof}
+
+
+
+
+\subsection*{Transformation groups}
+
+\begin{proposition}\label{trans t}
+Let $G$ be a unimodular locally compact group acting on a locally compact space $X$, and fixing a probability measure.  Then the transformation groupoid $X\rtimes G$ has property (T) if and only if $G$ does.  Probably the general statement says something like: property (T) if and only if the family of representations of $G$ arising from restriciting representations of $G$ in the sense of Renault does not weakly contain the trivial representation without actually containing it.
+\end{proposition} 
+
+\begin{proof}
+Here.
+\end{proof}
+
+
+
+
+
+
+
+%\section{Kazhdan projections}
+
+%Let $G$ be a locally compact groupoid, which we assume throughout has property (T).
+
+%\begin{proposition}\label{cons}
+%Let $K$ be a compact generating set for $G$, and let $f:G\to \R_+$ be a compactly supported continuous function, strictly positive on $K$.  Define
+%$$
+%\Delta_f:=f^*f-\Phi(f^*f).  ???
+%$$  
+%Then there exists $c>0$ such that in any representation $\h$ of $C_c(G)$, the spectrum of $\Delta_f$ as an operator on $\h$ is contained in a set of the form 
+%$$
+%\{0\}\cup [c,\infty)
+%$$
+%Moreover, if $0$ appears as a spectral value of $\Delta_f$ in some representation $\h$, then it is an eigenvalue, and the corresponding eigenspace consists precisely of the constant vectors $\h_c$.
+%\end{proposition}
+
+
+
+\section{The rest}
+
+The following topics might be good to include.  Some might be quite technically demanding, and I'm not completely sure what's possible.
+
+\begin{itemize}
+\item Property (T) gives rise to Kazhdan projections in the presence of an invariant probability measure.
+\item Property (T) is probably a Morita invariant.  
+\item In the presence of an invariant probability measure on $G^{(0)}$, property (T) is probably incompatible with the Haagerup property.
+\item Relationship with `Anantharaman-Delaroche property (T)'.  I do not know what the answer is here, but it might be interesting to try to work this out.
+\item Relationship with `Cohomological property (T)'.  This was introduced by Mimura, Ozawa, Sako, and Suzuki in the context of coarse spaces \cite[Section 6]{Mimura:2014uq}.  It should generalize (I think...) to other groupoids.  It should imply our property (T), but not the other way around.  
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+\bibliography{Generalbib}
+
+
+\end{document}

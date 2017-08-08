@@ -1,0 +1,24 @@
+\section{Definitions}
+
+Let $G$ be a locally compact groupoid endowed with a Haar system. 
+
+\begin{definition}
+Define the following map
+\[ E : \left\{ \begin{array}{rcl} 
+C_c(G) & \rightarrow & C_c(G^{(0)}) \\
+f & \mapsto & x\mapsto \int_{G^{x}} f(g) d\lambda^x(g)
+\end{array}\right. .\]
+\end{definition}
+
+If $(\pi,H)$ is a representation of $C_c(G)$, define $H^\pi$ to be the subspace of the vectors $\xi \in H$ such that 
+\[ f\xi = E(f)\xi \quad \forall f \in C_c(G).\]
+These are called the invariant vectors. The subspace $H^\pi$ is naturally complemented, and we denote by $H_\pi$ its complementary so that $H = H^\pi \oplus H_\pi$.\\
+
+
+Let $\mathcal F$ be a family of representation of $C_c(G)$.
+
+\begin{definition}
+Let $K$ be an open subset of $G$ and $c > 0$. The couple $(K,c)$ is called a Kazdhan pair for $\mathcal F$ if, in every representation $\pi $ of $\mathcal F$ and every $\xi \in H_\pi$, there exists $f\in C_c(G)$ with $||f||_I\leq 1$ supported in $K$ such that
+\[ ||f\xi - E(f)\xi|| \geq c || \xi || .\]
+The groupoid $G$ is said to have property $(T)_{\mathcal F}$ if there exists an open subset $K\subseteq G$ with compact closure and a positive number $c$ such that $(K,c)$ is a Kazdhan pair.  
+\end{definition}
