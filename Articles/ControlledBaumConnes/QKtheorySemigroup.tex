@@ -1,6 +1,8 @@
 \section{$K$-theory controlled by a coarse structure}
 
-In this section, we define controlled $K$-theory in more generality than the functor defined in \cite{OY2} and in the previous section. The goal is to develop controlled $K$-theory to a broader setting that what is used until now. Notably, we give a definition that allows to state that the controlled $K$-theory is a genuine functor between appropriately chosen categories. The price to pay is a little more generality, and functorial definitions, but the reward is a larger range of applications of the theory. We will show how it is possible to apply controlled-lingo to compact quantum groups in the sense of Woronowicz, foliations groupoids and twisted representations of locally compact groups.
+In this section, we define controlled $K$-theory in more generality than in \cite{OY2}. The goal is to develop controlled $K$-theory to a broader setting that what is used until now. We start by the definition of a coarse structure, which will be the index set of the filtration of filtered $C^*$-algebras in our sense.
+ 
+%Notably, we give a definition that allows to state that the controlled $K$-theory is a genuine functor between appropriately chosen categories. The price to pay is a little more generality, and functorial definitions, but the reward is a larger range of applications of the theory. We will show how it is possible to apply controlled-lingo to compact quantum groups in the sense of Woronowicz, foliations groupoids and twisted representations of locally compact groups.
 
 \begin{definition}
 A coarse structure $\mathcal E$ is a lattice which is an abelian semi-group. %such that $\forall E,E'\in \mathcal E$, $E\leq E'E$. 
@@ -18,15 +20,15 @@ A $C^*$-algebra $A$ is said to be $\mathcal E$-filtered if there exists a coarse
 \end{itemize}
 \end{definition}
 
-%If $A$ is a non-unital filtered $C^*$-algebra, we will by default endowed its unitalization $\tilde A$ with the filtration $\tilde A_E = A_E + \C$. A $*$-homomorphism $\phi : A \rightarrow B$ is said to be filtered if $\phi(A_E)\subseteq B_E$ for all $E\in\mathcal E$.\\
+If $A$ is a non-unital filtered $C^*$-algebra, we will by default endowed its unitalization $\tilde A$ with the filtration $\tilde A_E = A_E + \C$. A $*$-homomorphism $\phi : A \rightarrow B$ is said to be filtered if $\phi(A_E)\subseteq B_E$ for all $E\in\mathcal E$.\\
 
-If $(A,\mathcal E)$ and $(B,\mathcal E')$ are two filtered $C^*$-algebras, a filtered morphism $(\phi,\rho): (A,\mathcal E)\rightarrow (B,\mathcal E')$ is :
-\begin{itemize}
-\item[$\bullet$] a non-decreasing map $\rho : \mathcal E\rightarrow \mathcal E'$,
-\item[$\bullet$] a $*$-homomorphism $\phi: A\rightarrow B$ such that $\phi (A_E)\subseteq B_{\rho(E)}$ for all $E\in\mathcal E$.
-\end{itemize}
+%If $(A,\mathcal E)$ and $(B,\mathcal E')$ are two filtered $C^*$-algebras, a filtered morphism $(\phi,\rho): (A,\mathcal E)\rightarrow (B,\mathcal E')$ is :
+%\begin{itemize}
+%\item[$\bullet$] a non-decreasing map $\rho : \mathcal E\rightarrow \mathcal E'$,
+%\item[$\bullet$] a $*$-homomorphism $\phi: A\rightarrow B$ such that $\phi (A_E)\subseteq B_{\rho(E)}$ for all $E\in\mathcal E$.
+%\end{itemize}
 
-The crucial example for us will be crossed products of $G$-algebras by an étale groupoid $G$. Note that this definition generalizes that of \cite{OY2}. Indeed, as will be recalled later, the Roe algebras can be expressed as a crossed product by the so-called coarse groupoid, which is étale \cite{SkTuYu}, and the definition given here, applied to this groupoid, gives back a filtration equivalent to that of \cite{OY2}. Our filtration however does not depend on any choice of metric, but rather on the coarse class of the space> The second example will be that of crossed products by discrete quantum groups in the sense of Woronowicz.\cite{Wo}
+The crucial example for us will be crossed products of $G$-algebras by an étale groupoid $G$. Note that this definition generalizes that of \cite{OY2}. Indeed, as will be recalled later, the Roe algebras can be expressed as a crossed product by the so-called coarse groupoid, which is étale \cite{SkTuYu}, and the definition given here, applied to this groupoid, gives back a filtration equivalent to that of \cite{OY2}. Our filtration however does not depend on any choice of metric, but rather on the coarse class of the space. The second example will be that of crossed products by discrete quantum groups in the sense of Woronowicz.\cite{Wo}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Almost unitaries and almost projections}

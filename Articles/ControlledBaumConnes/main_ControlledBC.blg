@@ -6,46 +6,47 @@ Database file #1: biblio2.bib
 Warning--empty school in LeGall
 Warning--empty journal in OY3
 Warning--empty year in OY3
+Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 17 entries,
+You've used 19 entries,
             2118 wiz_defined-function locations,
-            615 strings with 6228 characters,
-and the built_in function-call counts, 4808 in all, are:
-= -- 497
-> -- 154
-< -- 0
-+ -- 68
-- -- 46
-* -- 333
-:= -- 827
-add.period$ -- 50
-call.type$ -- 17
-change.case$ -- 73
+            629 strings with 6558 characters,
+and the built_in function-call counts, 5494 in all, are:
+= -- 572
+> -- 168
+< -- 1
++ -- 75
+- -- 50
+* -- 374
+:= -- 930
+add.period$ -- 56
+call.type$ -- 19
+change.case$ -- 81
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 182
-empty$ -- 406
-format.name$ -- 46
-if$ -- 969
+cite$ -- 24
+duplicate$ -- 213
+empty$ -- 465
+format.name$ -- 50
+if$ -- 1119
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 16
-newline$ -- 87
-num.names$ -- 34
-pop$ -- 54
+int.to.str$ -- 19
+missing$ -- 18
+newline$ -- 97
+num.names$ -- 38
+pop$ -- 62
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 63
 quote$ -- 0
-skip$ -- 120
+skip$ -- 146
 stack$ -- 0
-substring$ -- 387
-swap$ -- 15
-text.length$ -- 0
+substring$ -- 455
+swap$ -- 25
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
-warning$ -- 4
-while$ -- 59
-width$ -- 19
-write$ -- 181
-(There were 4 warnings)
+type$ -- 76
+warning$ -- 5
+while$ -- 68
+width$ -- 21
+write$ -- 202
+(There were 5 warnings)

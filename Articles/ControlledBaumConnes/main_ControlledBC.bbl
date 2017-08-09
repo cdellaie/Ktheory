@@ -28,6 +28,14 @@ Vincent Lafforgue.
   conjecture de {B}aum-{C}onnes.
 \newblock {\em Inventiones Mathematicae}, 149(1):1--95, 2002.
 
+\bibitem{LaffOY}
+Vincent Lafforgue.
+\newblock K-th{\'e}orie bivariante pour les alg{\`e}bres de {B}anach,
+  groupo{\"\i}des et conjecture de {B}aum--{C}onnes. {A}vec un appendice
+  d’{H}erv{\'e} {O}yono-{O}yono.
+\newblock {\em Journal of the Institute of Mathematics of Jussieu},
+  6(03):415--451, 2007.
+
 \bibitem{LeGall}
 Pierre-Yves Le~Gall.
 \newblock {\em Th{\'e}orie de {K}asparov {\'e}quivariante et groupo{\"\i}des}.
@@ -57,6 +65,11 @@ Georges Skandalis, Jean-Louis Tu, and Guoliang Yu.
 Jean-Louis Tu.
 \newblock La conjecture de {B}aum-{C}onnes pour les feuilletages moyennables.
 \newblock {\em K-theory}, 17(3):215--264, 1999.
+
+\bibitem{TuBC}
+Jean-Louis Tu.
+\newblock The {B}aum-{C}onnes conjecture for groupoids.
+\newblock pages 227--242, 2000.
 
 \bibitem{TuBC2}
 Jean-Louis Tu.

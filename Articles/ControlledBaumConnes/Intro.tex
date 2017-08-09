@@ -31,7 +31,7 @@ If $X$ has property $A$, then the coarse Baum-Connes conjecture holds for $X$.
 
 As property $A$ is implied by finite asymptotic dimension, the last theorem is more powerful. Still, the two results are quite different in their proofs. Whereas property $A$ entails the existence of so called Dirac and Dual-Dirac elements in $KK$-theory, yielding the result, the proof in the setting of finite asymptotic dimension relies on a analog of Mayer-Vietoris decompositions on the Roe algebras. This proof is more geometric in nature, and more elementary. Quantitative $K$-theory was introduced in \cite{OY2} by H. Oyono-Oyono and G. Yu in order to broaden the domain of validity of this strategy.\\ 
 
-In the author's thesis was introduced controlled $K$-theory. This slight generalization relies on a new definition of filtered $C^*$-algebras, which allows to treat more examples of $C^*$-algebras with the controlled $K$-theory. We define controlled assembly maps in the setting of Roe algebras and of crossed products of $C^*$-algebras by étale groupoids. These assembly maps take values in the controlled $K$-theory, and should enjoy more stability properties than the usual assembly maps. The latter is the object of future work. \\
+In the author's thesis was introduced controlled $K$-theory. This slight generalization of quantitative $K$-theory relies on a new definition of filtered $C^*$-algebras, which allows to treat more examples of $C^*$-algebras with the controlled $K$-theory groups. We define controlled assembly maps in the setting of Roe algebras and of crossed products of $C^*$-algebras by étale groupoids. These assembly maps take values in the controlled $K$-theory, and should enjoy more stability properties than the usual assembly maps. The latter is the object of future work. \\
 
 The controlled assembly maps induces the assembly maps in $K$-theory. We study in more details this phenomenon, which gives what we call quantiative statements (theorems \ref{Quant1},\ref{Quant2} \& \ref{UniformQS}). These theorems relate the classical Baum-Connes conjecture for an étale groupoid to its controlled analog. As a byproduct, we prove in lemma \ref{prod} an interesting result on the $K$-homology of a finite $G$-simplicial complex with values in an infinite product of stable $C^*$-algebras.\\
 
@@ -50,7 +50,7 @@ These results are implied by their analog in controlled $K$-theory that we prove
 The article follows the following plan. The second section present an overview of controlled $K$-theory in the setting of $C^*$-algebras filtered by what we call a coarse structure. In the third and fourth sections, we build assembly maps with values in these controlled $K$-groups, which factorizes the usual assembly maps, in the case of étale groupoids and coarse spaces respectively. The last section is devoted to applications of these results in Coarse Geometry.
 %We also quickly show how controlled $K$-theory can be used for $K$-amenability of crossed products by discrete quantum groups.  
 
-\subsection{Preliminaries}
+\subsection{Preliminaries on groupoids}
 
 We give a short review of the crossed product construction for étale groupoids. If $p : Y_0\rightarrow X$ and $q : Y_1\rightarrow X$ are two fibrations, we denote by $Y_0\times_{p,q} Y_1 = \{(y,y')\in Y_0\times Y_1 \text{ s.t. } p(y)=q(y')\}$ their fibred product. The non-commutative anologue of fibration are given by $C(X)$-algebras. 
 
@@ -72,6 +72,48 @@ An étale groupoid is given by two topological spaces, the space of arrows $G$ a
 \end{itemize}
 \end{definition}
 
+\subsubsection{Actions of groupoids}
+
+\begin{definition}
+A right action of $G$ on a topological space $Z$ is given by a continuous map $p : Z \rightarrow G^{(0)}$, again called the anchor map, and a map $\alpha : Z\times_{p,r} G \rightarrow Z $ such that :
+\begin{itemize}
+\item[$\bullet$] $\alpha(\alpha(z,g),g') = \alpha(z, gg')$ whenever $(g,g')\in G^{(2)}$ and $p(z)=r(g)$,
+\item[$\bullet$] $p(\alpha(z,g))= s(g)$
+\item[$\bullet$] $\alpha(z,e_{p(z)})=z$
+\end{itemize} We will use the notation $\alpha(g,z) = z.g$ when the action is clear from the context.\\ 
+\end{definition}
+
+Let $Z$ be a right $G$-space. Define :
+\begin{itemize}
+\item[$\bullet$] $(Z\rtimes G)^{(0)} = Z$, $Z\rtimes G = Z\times_{r,p} G$ as a topological space,
+\item[$\bullet$] $u_{z}= (z,e_{p(z)})$, $ s(z,g) = z$ and $r(z,g)=z.g$, 
+\item[$\bullet$] if $y = x.g$, $(x,g)(y,g')= (x,gg') $ and $(x,g)^{-1} = (x.g,g^{-1})$.
+\end{itemize}
+
+These maps define a structure of toplogical groupoid on $Z\rtimes G$. It is called the crossed product groupoid of $Z$ by $G$. It is étale if $G$ is.\\
+
+We present now an important class of $G$-spaces called $G$-simplicial complexes. The reader is referred to \cite{TuBC2} for details. 
+
+\begin{definition}
+A map between two topological spaces $f : X\rightarrow Y$ is said to be locally injective if there exists an open cover $\mathcal U$ of $X$ such that, for all $U\in \mathcal U$, $f_{|U}$ is injective.
+\end{definition}
+
+\begin{definition} \label{Gcomplex}
+Let $n\in\N$. A $G$-simplicial complex of dimension $\leq n$ is a pair $(X,\Delta)$ where :
+\begin{itemize}
+\item[$\bullet$] $X$ is a locally compact proper $G$-space, called the space of vertices, such that the anchor map $p : X\rightarrow G^{(0)}$ is locally injective;
+\item[$\bullet$] $\Delta$ is a closed $G$-invariant subset of the space of measures on $X$, denoted $M_X$, endowed with the weak $*$-topology. Moreover, $\Delta$ contains only probability measures and satisfies :
+\begin{itemize}
+\item[$\bullet$] for all $\eta\in\Delta$, there exists $x\in G^ {(0)}$ such that $\text{supp }\eta \subseteq p^{-1}(x)$ and $|\text{supp }\eta|\leq n+1$,
+\item[$\bullet$] if $\eta' \in \Delta$ and $\eta\in M_X$ such that $\text{supp }\eta \subseteq \text{supp }\eta'$, then $\eta\in \Delta$.
+\end{itemize}
+For $\eta\in \Delta$, $\text{supp }\eta$ is called a simplex, or a $j$-simplex when $|\text{supp }\eta | = j$.
+\end{itemize}
+The complex is said to be typed if there exists a finite space $T$ and a $G$-invariant continuous map $\tau : X\rightarrow T$ such that, for every simplex $S$, $\tau_{|S}$ is injective.  
+\end{definition}
+
+\subsubsection{Crossed products for groupoids}
+
 If $A$ is a $C(G^{(0)})$-algebra, an action of the groupoid $G$ is a isomorphism of $C(G)$-algebras $\alpha : s^* A \rightarrow r^* A$ such that $\alpha_g \circ \alpha_{g'} = \alpha_{gg'}$ for every $(g,g')\in G\times_{s,r} G$. Then, define the space of continuous sections with compact support 
 \[C_c(G,A) = \bigcup_{U} C_0(U)\otimes_s A\]
 where $U$ runs along all open relatively compact subsets of $G$. Here $C_0(U)\otimes_s A$ denotes $C_0(U)\otimes_{C(G^{(0)})} A$, where $s$ in subscript implies that the $C(G^{(0)})$-algebra structure on $C_0(U)$ is given by $s$.\\
@@ -90,11 +132,7 @@ The reduced crossed product $A\rtimes_r G$ is the $C^*$-algebra obtained by comp
 
 In the following section is presented the setting of controlled $K$-theory. The main example is that the set $\mathcal E$ of compact subsets of $G$ defines a coarse structure, and that $A\rtimes_r G$ is $\mathcal E$-filtered, thus allowing to apply the controlled machinery to crossed product of groupoids. 
 
-%%%%%%%%%%%%%%%%%
-%% A ordonner   %
-%%%%%%%%%%%%%%%%%
-
-\subsection{To insert into the main corpus}
+We will use intensively a version of the bivariant Kasparov theory developed by P-Y. Le Gall in his thesis \cite{LeGall}, which is an equivariant $KK$-theory in the setting of groupoids, denoted by $KK^G$. We will need the following lemma, in order to put some $K$-cycles in some standard form.\\
 
 \begin{rk}\label{isometry}
 When we look at a $*$-homomorphism $\phi : A\rightarrow B$, we always have an isometry $V\in \mathcal L_B ( H_A\otimes_\phi B , H_B)$ defined on simple tensors as $(x_j)_j\otimes b \mapsto (\phi(x_j)b)_j$. Indeed, this map extends linearly to $H_A \odot B$, and if $x = (x_j)$ and $x'=(x'_j)$ are in $H_A$ : 
@@ -113,7 +151,7 @@ Let $\phi : B\rightarrow B'$ be a $G$-equivariant homomorphism, and $z=[H_B,\pi,
 \[g^*(z) = [H_B\otimes B',\pi\otimes_\phi 1,\phi_*(T)]=[H_B', \pi', T']\text{ in } KK^G(A,B').\]
 \end{lem} 
 
-More precisely, let us define decomposition property $(d)$.
+The last property we need to recall is decomposition property $(d)$. H. Oyono-Oyono has shown in the appendice of \cite{LaffOY} that every element of $KK^G(A,B)$ can be written as the Kasparov product of at most $d$ elements, each one coming either from a $*$-homormorphism or from a $KK$-inverse of a $*$-homomorphism.\\
 
 \begin{definition}\label{DecompositionPropertyD}
 Let $d$ be a positive integer. An element $z\in KK^G(A,B)$ is said to satisfy decomposition property $(d)$ if
@@ -130,18 +168,27 @@ Then, the following theorem is true for a universal constant $d$, which does not
 Let $G$ be a locally compact groupoid with Haar system. Then, there exists a universal constant $d$ such that every element $z\in KK^G(A,B)$ has decomposition property $(d)$.
 \end{thm}
 
-\begin{definition}
-The assembly map for $G$ with coefficients in $B$ is defined as the inductive limit of the maps $\mu_{G,B}^{(Z)} : KK^G(C_0(Z),B)\rightarrow K(B\rtimes_r B)$ given by
-\[\mu_{G,B}^{(Z)} (z)=[\mathcal L_Z]\otimes_{C_0(Z)\rtimes G} j_G(z),\]
-that is $\mu_{G,B} = \varinjlim \mu_{G,B}^{(Z)}$ (one has to check that theses maps respects the inductive systems, which they do).\\
+Finally, let us briefly recall from \cite{TuBC} the construction of the assembly map for groupoids. \\
+
+For any compact subset $E\subseteq G$, define $P_E(G)$ to be the space of probability measures $\nu $ with support contained in one and only one fiber $G^x$ for some $x\in G^{(0)}$, and such that if $g,g'\in \text{supp }(\nu)$, then $g'g^{-1}\in E$. We endow $P_E(G)$ with the weak-$*$ topology. It is a proper and cocompact $G$-space for left translation.\\
+
+Every element $\eta$ is a finite probability measure on a fiber $G^x$, for some $x\in G^{(0)}$, hence can be written as a finite convex combination $\eta = \sum_{g\in G^{x}}\lambda_g(\eta)\delta_g$, where $\lambda_g(\eta)\in [0,1]$ for every $g$ and $\delta_g$ is the Dirac probability measure at $g\in G^x$. Then 
+\[\mathcal L_E(g,\eta) = \lambda_{e_x}^{\frac{1}{2}}(\eta)\lambda_g^{\frac{1}{2}}(\eta)\]  
+ defines a projection in $C_0(P_E(G))\rtimes_r G$ with support in $E$.
+
+\begin{definition}\label{projection}
+The assembly map for $G$ with coefficients in $B$ is defined as the inductive limit of the maps $\mu_{G,B}^{E} : KK^G(C_0(P_E(G)),B)\rightarrow K(B\rtimes_r G)$ given by
+\[\mu_{G,B}^{E} (z)=[\mathcal L_E]\otimes_{C_0(Z)\rtimes G} j_G(z),\]
+that is $\mu_{G,B} = \varinjlim \mu_{G,B}^{E}$ (one has to check that theses maps respects the inductive systems, which they do).\\
 \end{definition}
 
-\begin{rk}\label{projection}
-By lemma \ref{Khomology}, one can restrict to $Z$ of the form $P_E(G)$ for $E\subseteq G$ compact. We will denote by $\mu_{G,B}^E$ the assembly map $\mu_{G,B}^{P_E(G)}$, and $\mu_{G,B} = \varinjlim \mu_{G,B}^{E}$ still holds.
-\end{rk}
+\subsection{Coarse geometry}
+
+We recall in this paragraph the construction of the Roe algebra with coefficients.
 
 \begin{thm}\label{Xfunctor}
 Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarrow B$ a $*$-homomorphism. Then there exists a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ extending $\phi$. Moreover, $\phi\mapsto \phi_X$ respects composition of $*$-homomorphisms.
 \end{thm}
+
 
 
