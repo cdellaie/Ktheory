@@ -1,6 +1,6 @@
-\section{A quantitative Künneth formula}
+\section{The Künneth formula in operator $K$-theory}
 
-In this section, we present an application of the previous results to a Künneth formula for crossed products by an étale groupoid. Controlled Künneth formulas are more stable than Künneth formulas in $K$-theory. In \cite{OY4}, it was proved that they are stable by controlled Mayer-Vietoris decomposition. The reader is referred to the conclusion for details (in particular Definition \ref{MVpair}). \\ 
+In this section, we present a proof of a Künneth formula for crossed products by an étale groupoid. \\ 
 
 Recall that for $A$ and $B$ two $C^*$-algebras, one can define a homomorphism
 \[\alpha_{A,B} : K_*(A)\otimes K_*(B)\rightarrow K_*(A\otimes B) \quad ; \quad (x,y)\mapsto x\otimes   \tau_A(y),\]
@@ -20,22 +20,6 @@ A $C^*$-algebra $A$ is said to satisfy the Künneth formula if, for every $C^*$-
 If $A$ satisfies the Künneth formula, then, for any $C^*$-algebra $B$, one has the following exact sequence
 \[\begin{tikzcd}[column sep = small] 0 \arrow{r} & K_*(A)\otimes K_*(B)\arrow{r} & K_*(A\otimes B) \arrow{r} & Tor(K_*(A),K_*(B))\arrow{r} & 0 \end{tikzcd}\]
 
-If $(A,\mathcal E)$ is now a $\mathcal E$-filtered $C^*$-algebra, $(A\otimes B,\mathcal E)$ is also filtered, and one can define a controlled morphism
-\[\hat\alpha_{A,B} : \hat K_*(A)\otimes K_*(B)\rightarrow \hat K_*(A\otimes B) \quad ; \quad (x,y)\mapsto \hat\tau_A(y)(x),\]
-which induces $\alpha_{A,B}$ in $K$-theory. \\
-
-We will say that $\alpha_{A,B}$ is quantitatively injective if there exists $\lambda \geq 1$ such that, for every $\varepsilon\in (0,\frac{1}{4\alpha_\tau \lambda})$ and every $F\in\mathcal E$, there exists $F'\in\mathcal E$, $F\subseteq F'$, such that : 
-\[\forall x\in K^{\varepsilon,F}(A)\otimes K(B)\text{ such that }\alpha_{A,B}^{\varepsilon,F}(x)=0 \text{ then }(\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}\otimes id) (x) = 0.\] 
-
-We will say that $\alpha_{A,B}$ is quantitatively surjective if there exists $\lambda \geq 1$ such that, for every $\varepsilon \in (0,\frac{1}{4\alpha_\tau})$ and every $F\in\mathcal E$, there exist $F'\in\mathcal E$, $F\subseteq h_{\tau,\lambda\varepsilon}.F'$, such that:
-\[ \forall y\in K^{\varepsilon,F}(A\otimes B), \exists x\in K^{\lambda\varepsilon, F'}(A)\otimes K(B) \text{ such that }
-%\iota_{\alpha_\tau\varepsilon,h_{\tau,\varepsilon}. F}^{\lambda\varepsilon,F'}\circ
-\alpha^{\lambda\varepsilon,F'}_{A,B}(x)=\iota_{\varepsilon,F}^{\alpha\lambda\varepsilon,h_{\tau, \lambda\varepsilon}.F'}(y).\] 
-
-
-\begin{definition}
-A filtered $C^*$-algebra $(A,\mathcal E)$ is said to satisfy the quantitative Künneth formula if there exists $\lambda \geq 1$ such that, for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group, $\hat\alpha_{A,B}$ is quantitatively injective and quantitatively surjective. 
-\end{definition}
 
 The remainder of the section is devoted to prove the theorem \ref{Kunneth}. We first recall the induction and restriction machinery in the context of equivariant $KK$-theory. The important result is lemma \ref{Restriction}, which allows to restrict $KK^G$-elements to compact open subgroupoids under some suitable conditions. We then define a class $\mathcal C$ of groupoids which satisfies these suitable conditions, and give instances of this class. The end of the section is devoted to the proof of the main theorem.
 
@@ -48,7 +32,7 @@ The remainder of the section is devoted to prove the theorem \ref{Kunneth}. We f
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Baum-Connes and the Künneth formula}
+\section{Baum-Connes and the Künneth formula}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The first step in proving theorem \ref{Kunneth} is to define a analytical version of $\alpha_{A,B}$ when an étale groupoid $G$ is given. More precisely, we first construct a homomorphism $\alpha_{A,B}^G : K_*^{top}(G,A)\otimes K_*(B)\rightarrow K_*^{top}(G,A\otimes B )$, inductive limit of $\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K_*(B)\rightarrow RK^G(Z,A\otimes B )$ where $Z$ runs through $G$-proper $G$-compact spaces. Then we show that the controlled assembly map intertwines $\alpha^{G,P_E(G)}_{A,B}$ and $\alpha_{A\rtimes_r G,B}$ uniformly.\\
 
@@ -120,7 +104,7 @@ Let $G$ be a $\sigma$-compact étale groupoid and $A$ a $G$-algebra. Suppose tha
 \item[$\bullet$] $G$ is in class $\mathcal C$,
 \item[$\bullet$] for every compact open subgroupoid $H$ of $G$ and every $H$-space $V$ such that the anchor map $p : V \rightarrow H^{(0)}$ is locally injective, $\alpha_{A,B}^{H,V}$ is an isomorphism.
 \end{itemize} 
-Then $A\rtimes_r G$ satisfies the Künneth formula.
+Then $A\rtimes_r G$ satisfies the quantitative Künneth formula.
 \end{thm}
 
 \begin{dem} %\textit{of theorem \ref{Kunneth}}\\

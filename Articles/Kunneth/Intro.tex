@@ -1,0 +1,23 @@
+\section{Introduction}
+
+This article presents a proof of a Künneth formula for crossed products of $C^*$-algebras by action of \'etale groupoids. Recall that a $C^*$-algebra $A$ satisfies the Künneth formula if, for every $C^*$-algebra $B$, the following sequence 
+\[\begin{tikzcd}[column sep = small] 
+0 \arrow{r} & K_*(A)\otimes K_*(B)\arrow{r} & K_*(A\otimes B) \arrow{r} & Tor(K_*(A),K_*(B))\arrow{r} & 0 
+\end{tikzcd}\]
+is exact. \\
+
+We are interested in $C^*$-algebras coming from a crossed product of a $C^*$-algebra by an action of an \'etale groupoid. Recall the following definition.
+
+\begin{definition}
+An étale groupoid is given by two topological spaces, the space of arrows $G$ and the space of units $G^{(0)}$ endowed with:
+\begin{itemize}
+\item[$\bullet$] continuous maps $s,r : G \rightrightarrows G^{(0)}$ which are local homeomorphisms,
+\item[$\bullet$] a topological embedding $e: G^{(0)}\rightarrow G$ called the unit map, and a continuous involution $inv : G\rightarrow G; g\mapsto g^{-1}$ called the inverse map,
+\item[$\bullet$] a multiplication map $G\times_{s,r}G\rightarrow G; (g,g')\mapsto gg'$ such that $(gg')g'' = g(g'g'')$, $gg^{-1}= e_{r(g)}$, $g^{-1}g= e_{s(g)}$
+\end{itemize}
+\end{definition}
+
+$C^*$-algebras can be fibred over a base space $X$, which gives the notion of a $C(X)$-algebra. A $C(X)$-algebra $A$ has fibers $A_x$ for every $x\in X$. A groupoid can act on a $C(G^{(0)})$-algebra by an automorphism $\alpha : s^* A \rightarrow r^* A $ of $C(G)$-algebras. Here $s^* A$ denotes the pull back of along $s$, which is a $C(G)$-algebra with fibers $(s^* A)_g \cong A_{s(g)}$. Then one can construct the $*$-algebra of sections with compact support $C_c(G,A)$, which can be seen as compactly supported sections $f : G \rightarrow A$ such that $f(g)\in A_{r(g)}$. Then, the crossed product $A\rtimes_r G$ is defined as the completion of $C_c(G,A)$ with respect to the norm $||f||_r =\sup \{f \ast \xi : \xi \in C_c(G_x,A)||\xi||_2\leq 1,x\in G^{(0)}\}$, where $||.||_2$ is the norm on the Hilbert $A_x$-module $l^2(G_x,A)$.\\
+ 
+
+To prove the main theorem, we will need to define 
