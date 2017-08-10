@@ -441,16 +441,16 @@ Let $\lambda \geq 1$. The groupoid $G$ is said to satisfy the controlled Baum-Co
 
 The main result of this section is the following theorem.
 
-\begin{thm} \label{ControlledBC} There exists a universal $\lambda \geq 1$ such that for every etale groupoid with compact base space $G$, and every $B$ $G$-algebra, the following statements are equivalent:
+\begin{thm} \label{ControlledBC} There exists a universal $\lambda \geq 1$ such that for every étale groupoid with compact base space $G$, and every $B$ $G$-algebra, the following statements are equivalent:
 \begin{itemize} 
 \item[$\bullet$] $G$ satisfies the controlled Baum-Connes conjecture with coefficients in $B$ at scale $\lambda$, 
 \item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients in $l^\infty (\N,B\otimes \mathfrak K)$.
 \end{itemize}
 \end{thm}
 
-%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Products in topological $K$-theory and in controlled $K$-theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 To prove the main theorems of this section, what we called quantitative statements, we will need a serie of lemmas. The first part is devoted to a study of the behaviour of $K$-homology under product of the coefficients. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}. \\
 
@@ -636,11 +636,11 @@ By naturality of the boundary element, the extension of $G$-algebras $0\rightarr
 %\prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z_j,B_j \otimes K)\arrow{r} & \prod_j KK_*(\tilde Z^j_{j-1},B_j \otimes K)\arrow{r}{\delta} & \prod_j KK_*(\tilde Z_{j-1},B_j \otimes K)\\
 %\end{tikzcd}\]
 \[\begin{tikzcd}
-KK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\partial}\arrow{r}{\Theta^j_{j-1}} & \prod_j KK^G_*( Z^j_{j-1},B_j \otimes K)\arrow{d}{\partial}  \\
-KK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_{j-1}}  & \prod_j KK^G_*( Z_{j-1},B_j \otimes K)\arrow{d} \\
-KK^G_*(Z_j,\prod_j B_j\otimes K)\arrow{d}\arrow{r}{\Theta_j} & \prod_j KK^G_*( Z_j,B_j \otimes K)\arrow{d} \\
-KK^G_*(Z^j_{j-1},\prod_j B_j\otimes K)\arrow{d}{\partial}\arrow{r}{\Theta^j_{j-1}} & \prod_j KK^G_*( Z^j_{j-1},B_j \otimes K)\arrow{d}{\partial}\\
-KK^G_*(Z_{j-1},\prod_j B_j\otimes K)\arrow{r}{\Theta_{j-1}} & \prod_j KK^G_*( Z_{j-1},B_j \otimes K)
+KK^G_*(Z^j_{j-1},\prod_j B_j\otimes \mathfrak K)\arrow{d}{\partial}\arrow{r}{\Theta^j_{j-1}} & \prod_j KK^G_*( Z^j_{j-1},B_j \otimes \mathfrak K)\arrow{d}{\partial}  \\
+KK^G_*(Z_{j-1},\prod_j B_j\otimes \mathfrak K)\arrow{d}\arrow{r}{\Theta_{j-1}}  & \prod_j KK^G_*( Z_{j-1},B_j \otimes \mathfrak K)\arrow{d} \\
+KK^G_*(Z_j,\prod_j B_j\otimes \mathfrak K)\arrow{d}\arrow{r}{\Theta_j} & \prod_j KK^G_*( Z_j,B_j \otimes \mathfrak K)\arrow{d} \\
+KK^G_*(Z^j_{j-1},\prod_j B_j\otimes \mathfrak K)\arrow{d}{\partial}\arrow{r}{\Theta^j_{j-1}} & \prod_j KK^G_*( Z^j_{j-1},B_j \otimes \mathfrak K)\arrow{d}{\partial}\\
+KK^G_*(Z_{j-1},\prod_j B_j\otimes \mathfrak K)\arrow{r}{\Theta_{j-1}} & \prod_j KK^G_*( Z_{j-1},B_j \otimes \mathfrak K)
 \end{tikzcd}\]
 
 The five lemma ensures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, because $\Delta$ is a typed $G$-simplicial complex (see \ref{Gcomplex}), $X_j\setminus X_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _j $ denotes the interior of the standard simplex, $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$, and where $G$ acts trivially on $\mathring \sigma _j$. Bott periodicity ensures then that the following diagram commutes :
@@ -677,9 +677,10 @@ The two previous lemmas entail the following result.
 \begin{cor} \label{controlledprod} Let $G$ be an étale groupoid with compact base space $G^{(0)}$. Let $(B_j)_j$ be a countable family of $G$-algebras, and $\mathfrak K$ the $G$-algebra of compact operators on a separable Hilbert space with trivial $G$-action. Then, there exists a control pair $(\alpha, h)$ and a $(\alpha, h)$-controlled isomorphism
 \[ \hat K(\mathcal B^G_\infty) \rightarrow \prod \hat K(B_j\rtimes_r G). \]
 \end{cor}
-%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Quantitative statements}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We can now prove the quantitative statements.
 

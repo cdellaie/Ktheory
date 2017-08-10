@@ -52,15 +52,6 @@ The article follows the following plan. The second section present an overview o
 
 \subsection{Preliminaries on groupoids}
 
-We give a short review of the crossed product construction for étale groupoids. If $p : Y_0\rightarrow X$ and $q : Y_1\rightarrow X$ are two fibrations, we denote by $Y_0\times_{p,q} Y_1 = \{(y,y')\in Y_0\times Y_1 \text{ s.t. } p(y)=q(y')\}$ their fibred product. The non-commutative anologue of fibration are given by $C(X)$-algebras. 
-
-\begin{definition}
-A $C(X)$-algebra is given by a $C^*$-algebra $A$ and a non-degenerate $*$-homomorphism $\theta : C_0(X) \rightarrow Z(\mathcal M(A))$, where $\mathcal M(A)$ is the $C^*$-algebra of multipliers of $A$.
-\end{definition}
-
-If $(A,\theta)$ is a $C(X)$-algebra and $x\in X$, then the fiber over $X$ is defined as $A_x : = A/ \text{ker }(ev_x)A$. Two $C(X)$-algebras have a balanced tensor product $A\otimes_{C(X)} A'$, such that $(A\otimes_{C(X)} A')_x \cong A_x\otimes A'_x$. Notice that in the case of fibration, we get $C_0(Y_0\times_{p,q}Y_1) \cong C_0(Y_0)\times_{C(X)}C_0(Y_1)$. If $f:X_0 \rightarrow X_1$ is a continuous map, and $A$ is a $C(X_1)$-algebra, $f^* A :=C(X_0)\otimes_{C(X_1)} A$ is naturally a $C(X_0)$-algebra, called the pull-back of $A$ along $f$. For details in $C(X)$-algebras, the reader can consult \cite{blanchard} for instance. 
-\\
-
 Recall the following definition.
 
 \begin{definition}
@@ -75,7 +66,7 @@ An étale groupoid is given by two topological spaces, the space of arrows $G$ a
 \subsubsection{Actions of groupoids}
 
 \begin{definition}
-A right action of $G$ on a topological space $Z$ is given by a continuous map $p : Z \rightarrow G^{(0)}$, again called the anchor map, and a map $\alpha : Z\times_{p,r} G \rightarrow Z $ such that :
+A right action of $G$ on a topological space $Z$ is given by a continuous map $p : Z \rightarrow G^{(0)}$, called the anchor map or the moment map, and a map $\alpha : Z\times_{p,r} G \rightarrow Z $ such that :
 \begin{itemize}
 \item[$\bullet$] $\alpha(\alpha(z,g),g') = \alpha(z, gg')$ whenever $(g,g')\in G^{(2)}$ and $p(z)=r(g)$,
 \item[$\bullet$] $p(\alpha(z,g))= s(g)$
@@ -114,6 +105,15 @@ The complex is said to be typed if there exists a finite space $T$ and a $G$-inv
 
 \subsubsection{Crossed products for groupoids}
 
+We give a short review of the crossed product construction for étale groupoids. If $p : Y_0\rightarrow X$ and $q : Y_1\rightarrow X$ are two fibrations, we denote by $Y_0\times_{p,q} Y_1 = \{(y,y')\in Y_0\times Y_1 \text{ s.t. } p(y)=q(y')\}$ their fibred product. The non-commutative anologue of fibration are given by $C(X)$-algebras. 
+
+\begin{definition}
+A $C(X)$-algebra is given by a $C^*$-algebra $A$ and a non-degenerate $*$-homomorphism $\theta : C_0(X) \rightarrow Z(\mathcal M(A))$, where $\mathcal M(A)$ is the $C^*$-algebra of multipliers of $A$.
+\end{definition}
+
+If $(A,\theta)$ is a $C(X)$-algebra and $x\in X$, then the fiber over $X$ is defined as $A_x : = A/ \text{ker }(ev_x)A$. Two $C(X)$-algebras have a balanced tensor product $A\otimes_{C(X)} A'$, such that $(A\otimes_{C(X)} A')_x \cong A_x\otimes A'_x$. Notice that in the case of fibration, we get $C_0(Y_0\times_{p,q}Y_1) \cong C_0(Y_0)\times_{C(X)}C_0(Y_1)$. If $f:X_0 \rightarrow X_1$ is a continuous map, and $A$ is a $C(X_1)$-algebra, $f^* A :=C(X_0)\otimes_{C(X_1)} A$ is naturally a $C(X_0)$-algebra, called the pull-back of $A$ along $f$. For details in $C(X)$-algebras, the reader can consult \cite{blanchard} for instance. 
+\\
+
 If $A$ is a $C(G^{(0)})$-algebra, an action of the groupoid $G$ is a isomorphism of $C(G)$-algebras $\alpha : s^* A \rightarrow r^* A$ such that $\alpha_g \circ \alpha_{g'} = \alpha_{gg'}$ for every $(g,g')\in G\times_{s,r} G$. Then, define the space of continuous sections with compact support 
 \[C_c(G,A) = \bigcup_{U} C_0(U)\otimes_s A\]
 where $U$ runs along all open relatively compact subsets of $G$. Here $C_0(U)\otimes_s A$ denotes $C_0(U)\otimes_{C(G^{(0)})} A$, where $s$ in subscript implies that the $C(G^{(0)})$-algebra structure on $C_0(U)$ is given by $s$.\\
@@ -130,7 +130,9 @@ and $C_c(G,A)$ is represented on $L^2(G,A)$ by $\lambda(f) \xi = f\ast \xi$, for
 The reduced crossed product $A\rtimes_r G$ is the $C^*$-algebra obtained by completion of $C_c(G,A)$ under the norm $||f||_r=||\lambda(f)||$.
 \end{definition}
 
-In the following section is presented the setting of controlled $K$-theory. The main example is that the set $\mathcal E$ of compact subsets of $G$ defines a coarse structure, and that $A\rtimes_r G$ is $\mathcal E$-filtered, thus allowing to apply the controlled machinery to crossed product of groupoids. 
+In the following section is presented the setting of controlled $K$-theory. The main example is that the set $\mathcal E$ of compact subsets of $G$ defines a coarse structure, and that $A\rtimes_r G$ is $\mathcal E$-filtered, thus allowing to apply the controlled machinery to crossed product of groupoids. \\
+
+\subsubsection{Equivariant $KK$-theory}
 
 We will use intensively a version of the bivariant Kasparov theory developed by P-Y. Le Gall in his thesis \cite{LeGall}, which is an equivariant $KK$-theory in the setting of groupoids, denoted by $KK^G$. We will need the following lemma, in order to put some $K$-cycles in some standard form.\\
 
@@ -164,7 +166,7 @@ such that $z = z_1 \otimes_{A_1}  ... \otimes_{A_{d-1}} z_{d-1} $ holds.
 
 Then, the following theorem is true for a universal constant $d$, which does not depend on the groupoid. It will be crucial to prove that the controlled Kasparov and Roe transforms, applications to be defined later, respect the Kasparov product. 
 
-\begin{thm}[\cite{LaffOY}]\label{propertyD}
+\begin{thm}[Theorem $2.2$ \cite{LaffOY}]\label{propertyD}
 Let $G$ be a locally compact groupoid with Haar system. Then, there exists a universal constant $d$ such that every element $z\in KK^G(A,B)$ has decomposition property $(d)$.
 \end{thm}
 
@@ -184,7 +186,7 @@ that is $\mu_{G,B} = \varinjlim \mu_{G,B}^{E}$ (one has to check that theses map
 
 \subsection{Coarse geometry}
 
-Let $X$ be a countable discrete metric space with bounded geometry. We recall in this paragraph the construction of the Roe algebra of $X$ with coefficients in a $C^*$-algebra $B$. For every symmetric entourage $E\subseteq X\times X$, define $C_E[X,B]$ as the following subspace of $\mathcal L_B(H\otimes l^2(X)\otimes B)$ :
+Let $X$ be a countable discrete metric space with bounded geometry. The set of entourages is the set of subsets $E \subseteq X\times X$ such that $\sup d_{|E}<\infty$. We recall in this paragraph the construction of the Roe algebra of $X$ with coefficients in a $C^*$-algebra $B$. For every symmetric entourage $E\subseteq X\times X$, define $C_E[X,B]$ as the following subspace of $\mathcal L_B(H\otimes l^2(X)\otimes B)$ :
 \[C_E[X,B] = \{T\in \mathcal L_B(H\otimes l^2(X)\otimes B) \text{ locally compact  s.t. supp }T\subseteq E \}.\]
 It is a subspace of $\mathcal L_B(H\otimes l^2(X)\otimes B)$ which satisfies $C_E[X,B].C_{E'}[X,B]\subseteq C_{E\circ E'}[X,B]$, where $E\circ E' = EE'\cup E'E$. It is easy to see that 
 \[C[X,B] = \bigcup_{E} C_E[X,B]\] 
