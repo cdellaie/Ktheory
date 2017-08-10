@@ -184,7 +184,17 @@ that is $\mu_{G,B} = \varinjlim \mu_{G,B}^{E}$ (one has to check that theses map
 
 \subsection{Coarse geometry}
 
-We recall in this paragraph the construction of the Roe algebra with coefficients.
+Let $X$ be a countable discrete metric space with bounded geometry. We recall in this paragraph the construction of the Roe algebra of $X$ with coefficients in a $C^*$-algebra $B$. For every symmetric entourage $E\subseteq X\times X$, define $C_E[X,B]$ as the following subspace of $\mathcal L_B(H\otimes l^2(X)\otimes B)$ :
+\[C_E[X,B] = \{T\in \mathcal L_B(H\otimes l^2(X)\otimes B) \text{ locally compact  s.t. supp }T\subseteq E \}.\]
+It is a subspace of $\mathcal L_B(H\otimes l^2(X)\otimes B)$ which satisfies $C_E[X,B].C_{E'}[X,B]\subseteq C_{E\circ E'}[X,B]$, where $E\circ E' = EE'\cup E'E$. It is easy to see that 
+\[C[X,B] = \bigcup_{E} C_E[X,B]\] 
+is an involutive sub-algebra of $\mathcal L_B(H\otimes l^2(X)\otimes B)$.
+
+\begin{definition}
+Let $B$ be a $C^*$-algebra. The Roe algebra of $X$ with coefficients in $B$, denoted by $C^*(X,B)$, is the completion of $C[X,B]$ under the operator norm of $\mathcal L_B(H\otimes l^2(X)\otimes B)$. 
+\end{definition} 
+
+The following property will be useful.
 
 \begin{thm}\label{Xfunctor}
 Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarrow B$ a $*$-homomorphism. Then there exists a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ extending $\phi$. Moreover, $\phi\mapsto \phi_X$ respects composition of $*$-homomorphisms.

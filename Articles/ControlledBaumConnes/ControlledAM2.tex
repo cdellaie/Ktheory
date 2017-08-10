@@ -274,7 +274,7 @@ where we used the previous case for the second line, Lemma \ref{Kasparov1} for t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Quantitative assembly maps}
+\subsection{Controlled assembly maps}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -387,7 +387,7 @@ because $J_G(z)$ induces the right multiplication by $j_G(z)$ and also $\mu_G^E(
 %This, passing to $K$-theory, implies the result of \cite{SkTuYu}.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Quantitative statements}
+\subsection{Controlled Baum-Connes conjecture}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We generalize in this subsection to the setting of étale groupoids the results obtained by H. Oyono-Oyono and G. Yu in \cite{OY2}. We will define a controlled version of the Baum-Connes conjecture, and give conditions that ensure it is satisfied. In particular, when $G$ satisfies the Baum-Connes conjecture with coefficients, it satisfies the controlled Baum-Connes conjecture. To this end, we will have to compute the $K$-homology of a finite typed $G$-simplicial complex with coefficients in the infinite product of stable $G$-algebras.\\
@@ -441,7 +441,7 @@ Let $\lambda \geq 1$. The groupoid $G$ is said to satisfy the controlled Baum-Co
 
 The main result of this section is the following theorem.
 
-\begin{thm} There exists a universal $\lambda \geq 1$ such that for every etale groupoid with compact base space $G$, and every $B$ $G$-algebra, the following statements are equivalent:
+\begin{thm} \label{ControlledBC} There exists a universal $\lambda \geq 1$ such that for every etale groupoid with compact base space $G$, and every $B$ $G$-algebra, the following statements are equivalent:
 \begin{itemize} 
 \item[$\bullet$] $G$ satisfies the controlled Baum-Connes conjecture with coefficients in $B$ at scale $\lambda$, 
 \item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients in $l^\infty (\N,B\otimes \mathfrak K)$.
@@ -449,6 +449,8 @@ The main result of this section is the following theorem.
 \end{thm}
 
 %%%%%%%%
+
+\subsection{Products in topological $K$-theory and in controlled $K$-theory}
 
 To prove the main theorems of this section, what we called quantitative statements, we will need a serie of lemmas. The first part is devoted to a study of the behaviour of $K$-homology under product of the coefficients. The strategy is very similar to the proofs of the part $3$ of \cite{TuBC2}. \\
 
@@ -676,7 +678,10 @@ The two previous lemmas entail the following result.
 \[ \hat K(\mathcal B^G_\infty) \rightarrow \prod \hat K(B_j\rtimes_r G). \]
 \end{cor}
 %%%%%%%%%%
-We can now prove the quantitative statements.\\
+
+\subsection{Quantitative statements}
+
+We can now prove the quantitative statements.
 
 \begin{thm}\label{Quant1}
 Let $B$ a $G$-algebra, and $\tilde B = l^\infty(\N,B\otimes \mathfrak K)$. Then $\mu_{G,\tilde B}$ is injective if and only if for every $E\in\mathcal E,\varepsilon\in(0,\frac{1}{4})$ and $F$ such that $k_J(\varepsilon).E\subseteq F$, there exists $E' \in\mathcal E$ such that $E\subseteq E'$ and $QI_{G,B}(E,E',\varepsilon,F)$ holds. 
@@ -694,7 +699,7 @@ For the converse, suppose one can find $E,\varepsilon,F$ such that $QI_{G,B}(E,E
 We also have a theorem relating quantitative surjectivity for $\hat\mu_{G,B}$ and surjectivity of $\mu_{G,\tilde B}$.
 
 \begin{thm}\label{Quant2}
-Let $B$ a $G$-algebra, and $\tilde B = l^\infty(\N,B\otimes \mathfrak K)$. Then there exists $\lambda>1$ such that $\mu_{G,\tilde B}$ is onto if and only if for any $\varepsilon\in ( 0 ,\frac{1}{4\lambda})$ and every $F\in\mathcal E$, there exist $E,F'\in\mathcal E$ such that  $k_J(\varepsilon) .E \subseteq F$, $F\subseteq F'$ and such that $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ holds.
+Let $B$ a $G$-algebra, and $\tilde B = l^\infty(\N,B\otimes \mathfrak K)$. Then there exists $\lambda \geq 1$ such that $\mu_{G,\tilde B}$ is onto if and only if for any $\varepsilon\in ( 0 ,\frac{1}{4\lambda})$ and every $F\in\mathcal E$, there exist $E,F'\in\mathcal E$ such that  $k_J(\varepsilon) .E \subseteq F$, $F\subseteq F'$ and such that $QS_{B,G}(E,F,F',\varepsilon,\lambda\varepsilon)$ holds.
 \end{thm}
 
 \begin{dem}
@@ -744,6 +749,8 @@ Using the only if part of the proofs of the quantitative statements, we can easi
 \item[$\bullet$] Assume that for any $G$-algebra $B$, $\mu_{G,B}$ is onto. Then, for some $\lambda\geq 1$ and for any $\varepsilon\in (0,\frac{1}{4\lambda})$ and every $F\in\mathcal E$, there exists $E,F'\in\mathcal E$ such that $k_J(\varepsilon). E\subseteq F'$ and $F\subseteq F'$ such that, for any $G$-algebra $B$, $QS_{G,A}(E, F,F',\varepsilon,\lambda \varepsilon)$ holds.
 \end{itemize}
 \end{thm}
+
+The Theorems \ref{Quant1} and \ref{Quant2} imply together Theorem \ref{ControlledBC}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Persistence approximation property}
