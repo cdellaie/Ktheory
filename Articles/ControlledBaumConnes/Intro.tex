@@ -15,10 +15,12 @@ is an isomorphism, where:
 \item[$\bullet$] $P_d(X)$ is the Rips complex of $X$.
 \end{itemize}
 
-The main application of the coarse Baum-Connes conjecture is the Novikov conjecture on the homotopy invariance of the higher signatures. More precisely, let $\Gamma$ be a countable discrete group endowed with any left-invariant metric. Such a metric is unique up to quasi-isometry, and let us denote by $|\Gamma|$ the coarse class of the underlying metric space. Denote by $B \Gamma$ the classifying space of $\Gamma$, by $[M]\in H_{dim(M)}(M,\mathbb Q)$ the fundamental class of $M$ and by $\mathcal L_M$ the $L$-class of $M$.
+The main application of the coarse Baum-Connes conjecture is the Novikov conjecture on the homotopy invariance of the higher signatures. More precisely, let $\Gamma$ be a finitely generated 
+%countable discrete 
+group endowed with any left-invariant metric. Such a metric is unique up to quasi-isometry, and let us denote by $|\Gamma|$ the coarse class of the underlying metric space. Denote by $B \Gamma$ the classifying space of $\Gamma$, by $[M]\in H_{dim(M)}(M,\mathbb Q)$ the fundamental class of $M$ and by $\mathcal L_M$ the $L$-class of $M$.
 
 \begin{thm}[Descent principle]
-If $\mu_{|\Gamma|}$ is an isomorphism, then the Novikov conjecture holds for $\Gamma$, i.e. for any $x\in H^*(B\Gamma,\mathbb Q)$, any map $f:M\rightarrow B  \Gamma $, the higher signature
+If $B\Gamma$ has the homotopy type of a finite CW-complex and $\mu_{|\Gamma|}$ is an isomorphism, then the Novikov conjecture holds for $\Gamma$, i.e. for any $x\in H^*(B\Gamma,\mathbb Q)$, any map $f:M\rightarrow B  \Gamma $, the higher signature
 \[ \sigma(M,f) = \langle \mathcal L_M\cup f^*(x) ,[M]\rangle\]
 is homotopy invariant.
 \end{thm}  
@@ -134,7 +136,13 @@ In the following section is presented the setting of controlled $K$-theory. The 
 
 \subsubsection{Equivariant $KK$-theory}
 
-We will use intensively a version of the bivariant Kasparov theory developed by P-Y. Le Gall in his thesis \cite{LeGall}, which is an equivariant $KK$-theory in the setting of groupoids, denoted by $KK^G$. We will need the following lemma, in order to put some $K$-cycles in some standard form.\\
+We will use intensively a version of the bivariant Kasparov theory developed by P-Y. Le Gall in his thesis \cite{LeGall}, which is an equivariant $KK$-theory in the setting of groupoids, denoted by $KK^G$. Recall the following lemma.
+
+\begin{lem}[Stabilization lemma]
+Let $A$ be a $C^*$-algebra and $E$ a countably generated $A$-Hilbert module. Then, there exists an isomorphism of $A$-Hilbert modules $H_A \cong E\oplus H_A$, hence there exists a projection $p\in \mathcal L_A(H_A)$ such that $E\cong p H_A$. 
+\end{lem}
+
+We will need the following lemma, in order to put some $K$-cycles in some standard form.\\
 
 \begin{rk}\label{isometry}
 When we look at a $*$-homomorphism $\phi : A\rightarrow B$, we always have an isometry $V\in \mathcal L_B ( H_A\otimes_\phi B , H_B)$ defined on simple tensors as $(x_j)_j\otimes b \mapsto (\phi(x_j)b)_j$. Indeed, this map extends linearly to $H_A \odot B$, and if $x = (x_j)$ and $x'=(x'_j)$ are in $H_A$ : 
@@ -202,5 +210,15 @@ The following property will be useful.
 Let $X$ be a discrete metric space with bounded geometry and $\phi : A\rightarrow B$ a $*$-homomorphism. Then there exists a $*$-homomorphism $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ extending $\phi$. Moreover, $\phi\mapsto \phi_X$ respects composition of $*$-homomorphisms.
 \end{thm}
 
+\begin{dem}
+Recall that any $*$-morphism $\phi : A\rightarrow B$ induces, for any $A$-Hilbert module $E$, a $*$-morphism $\phi_* : \mathcal L_A(E)\rightarrow \mathcal L_B(E\otimes_A B)$. Now take $E$ to be $l^2(X)\otimes A$. Then, according to remark \ref{isometry}, $\eta\otimes a\otimes b\mapsto \eta \otimes\phi(a) b $ extends to an isometry $V\in \mathcal L_B(E\otimes_A B,l^2(X)\otimes B)$ which respects compact operators. The composition $Ad_V\circ\phi_*$ sends a compact operator $(T_{xy})_{x,y}$ to $(\phi(T_{xy}))_{x,y}$.\\
+
+Hence, the linear map $T \mapsto V\phi_*(T)V^*$ maps $C_R[X,A]$ into $C_R[X,B]$, and so extends to a $*$-morphism $C^*(X,A)\rightarrow C^*(X,B)$. The composition property is clear from the construction.\\
+\qed
+\end{dem}
+
+\begin{rk}
+Notice that $\phi\rightarrow \phi_X$ can be defined in the same way for completely positive maps : for every completely positive map $\phi: A \rightarrow B$, there exists a completely positive map $\phi_X : C^*(X,A)\rightarrow C^*(X,B)$ extending $\phi$.
+\end{rk}
 
 

@@ -53,8 +53,8 @@ and $U_\infty^{\varepsilon, E}(A)$ is the algebraic inductive limit of the $U_n^
 
 \begin{rk}Let $\varepsilon\in (0,\frac{1}{4})$ and $E\in\mathcal E$.\\
 \begin{itemize}
-\item[$\bullet$] If $p\in P^{\varepsilon,E}(A)$, then $p$ has a spectral gap around $\frac{1}{2}$, and functional calculus allows to define a genuine projection $\kappa_0(p)$, as in \cite{OY2}, by taking $\kappa_0$ to be a continuous function that vanishes inside the spectral gap and that is respectively $0$ and $1$ on the left and right part of the spectrum of $p$. As this projection does not depend on $\kappa_0$, we will always denote it the same, even if the function depends on $p$.\\
-\item[$\bullet$] If $u\in U^{\varepsilon,E}(A)$, then $u^* u$ is invertible, and $u(u^* u)^{-1}$ defines a unitary, that we will denote $\kappa_1(u)$.
+\item[$\bullet$] If $p\in P^{\varepsilon,E}(A)$, then $p$ has a spectral gap around $\frac{1}{2}$, and functional calculus allows to define a genuine projection $\kappa_0(p)$, as in \cite{OY2}, by taking $\kappa_0$ to be a continuous function that vanishes inside the spectral gap and that is respectively $0$ and $1$ on the left and right part of the spectrum of $p$. For example, $\kappa_0=\chi_{(\frac{1}{2};\infty)}$ works. %As this projection does not depend on $\kappa_0$, we will always denote it the same, even if the function depends on $p$.\\
+\item[$\bullet$] If $u\in U^{\varepsilon,E}(A)$, then $u^* u$ is invertible, and $u(u^* u)^{-\frac{1}{2}}$ defines a unitary, that we will denote $\kappa_1(u)$.
 \end{itemize}
 \end{rk}
 
@@ -80,7 +80,7 @@ There exists a universal constant $L>0$ such that, for any unital filtered $C^*$
 
 Denote $[(p,l)]_{\varepsilon,E}$ and $[u]_{\varepsilon,E}$ for the equivalence classes of almost-projections and almost-unitaries. Then, the same proof as \cite{OY2} shows that $[p,l]_{\varepsilon,E}+[q,l']_{\varepsilon,E}=[diag(p,q),l+l']_{\varepsilon,E}$ and $[u]_{\varepsilon,E}+[v]_{\varepsilon,E}=[diag(u,v)]_{\varepsilon,E}$ induces a group structure on the equivalence classes, that we denote $K_0^{\varepsilon,E}(A) = P^{\varepsilon, E}_\infty(A)\times \N / \sim$ and $K_1^{\varepsilon,E}(A) = U^{\varepsilon, E}_\infty(A) / \sim$.\\
 
-If $A$ is not unital, $K_0^{\varepsilon,E}(A)$ is defined as
+If $A$ is not unital, let $\tilde A$ be the smallest unitalization of $A$, and $\rho_A: \tilde A \rightarrow \C; (a,\lambda)\mapsto \lambda$ the augmantation map. Then $K_0^{\varepsilon,E}(A)$ is defined as
 \[\{[p,l]_{\varepsilon,E} : p\in P^{\varepsilon,E}_\infty (\tilde A), l\in \N \text{ s.t. rank}(\kappa_0(\rho_A(p)))=l \}\]
 and $K_1^{\varepsilon,E}(A)$ is defined as $U_\infty^{\varepsilon,E}(\tilde A)/ \sim_{\varepsilon,E}$.\\
 
@@ -122,7 +122,7 @@ Let $(X,\mathcal E)$ be a coarse space. The set of symmetric controlled subsets 
 
 \begin{Expl}
 Let $G$ be a $\sigma$-compact étale groupoid. Then the set of symmetric compact subsets $\mathcal E_G$ of $G$ is a coarse structure. It is the set of compact subsets $E\subseteq G$ such that $E=E^{-1}$, where $E^{-1} = \{g^{-1} : g\in E\}$. For $E$ and $E'$ in $\mathcal E_G$, their composition is given by :
-\[E\circ E' = EE' \cup E'E \text{ where }EE' = \{gg' : (g,g')\in G^{(2)}\}.\] 
+\[E\circ E' = EE' \cup E'E \text{ where }EE' = \{gg' : (g,g')\in G^{(2)}, g\in E\text{ and } g'\in E'\}.\] 
 If $G$ is $\sigma$-compact, and $A$ is a $G$-algebra, $A\rtimes_r G$ is naturally filtered by $\mathcal E_G$ : if $E\subseteq G$ is a compact subset, define $(A\rtimes_r G)_E = \{f\in C_c(G,A) : \text{ supp}(f)\subseteq E\}$. This situation has important particular cases :
 \begin{itemize}
 \item[$\bullet$] Let $G$ be the coarse groupoid of a coarse space $(X,\mathcal E)$, which is étale. Then $\mathcal E_G$ is given by \[\{\overline{E} : E\in\mathcal E_X\} \cong \mathcal E_X.\] 
@@ -150,7 +150,7 @@ Let $\mathbb G$ be a compact quantum group in the sense of Woronowicz. Denote by
 In order to study functorial properties of controlled $K$-theory, we will adapt and study the notion of quantitative object defined in \cite{OY2}.
 
 \begin{definition}
-A quantitative object is a family of abelian groups $\hat{\mathcal{O}}=\{\mathcal{O}_{\varepsilon, E}\}_{\varepsilon\in (0,\frac{1}{4}, E\in\mathcal{E}}$ endowed with a family of group homorphisms $\phi_{\varepsilon, E}^{\varepsilon', E'} : \mathcal{O}_E\rightarrow \mathcal{O}_{E'}$ for any $E,E'\in\mathcal E$ and $0<\varepsilon\leq \varepsilon'<\frac{1}{4}$ such that $E\subseteq E'$, satisfying $\phi_{\varepsilon, E}^{\varepsilon, E}= id_{\mathcal{O}_E}$ and $\phi_{\varepsilon', E'}^{\varepsilon'', E''}\circ \phi_{\varepsilon, E}^{\varepsilon', E'} =\phi^{\varepsilon'', E''}_{\varepsilon, E}$ whenever $E\leq E' \leq E''$ and $\varepsilon<\varepsilon'<\varepsilon''$.
+A quantitative object is a family of abelian groups $\hat{\mathcal{O}}=\{\mathcal{O}_{\varepsilon, E}\}_{\varepsilon\in (0,\frac{1}{4}), E\in\mathcal{E}}$ endowed with a family of group homomorphisms $\phi_{\varepsilon, E}^{\varepsilon', E'} : \mathcal{O}_E\rightarrow \mathcal{O}_{E'}$ for any $E,E'\in\mathcal E$ and $0<\varepsilon\leq \varepsilon'<\frac{1}{4}$ such that $E\subseteq E'$, satisfying $\phi_{\varepsilon, E}^{\varepsilon, E}= id_{\mathcal{O}_E}$ and $\phi_{\varepsilon', E'}^{\varepsilon'', E''}\circ \phi_{\varepsilon, E}^{\varepsilon', E'} =\phi^{\varepsilon'', E''}_{\varepsilon, E}$ whenever $E\leq E' \leq E''$ and $\varepsilon<\varepsilon'<\varepsilon''$.
 \end{definition}
 
 We need to define controlled morphisms between quantitative objects. We first define control pairs, which are essentially what ensures that the controlled morphisms do not distort too much the propagation.\\
@@ -292,7 +292,7 @@ then $D_{J,B}\circ \tilde\phi_* = \phi_* \circ D_{I,A}$.
 \subsection{Tensorisation in $KK$-theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-If $B$ is a filtered $C^*$-algebra and $A$ any $C^*$-algebra, and if $A\otimes B$ is the spatial tensor product, define, for all $E\in \mathcal E$, $A\otimes B_E)$ as the closure of the algebraic tensor product in $A\otimes B$. Then $(A\otimes B_E)_{E\in\mathcal E}$ defines a filtration of $A\otimes B$. If $\phi : A_1 \rightarrow A_2$ is a $*$-homomorphism, we use the notation $\phi_B$ for the induced $*$-homomorphism $A_1\otimes B\rightarrow A_2\otimes B$. \\
+If $B$ is a filtered $C^*$-algebra and $A$ any $C^*$-algebra, and if $A\otimes B$ is the spatial tensor product, define, for all $E\in \mathcal E$, $(A\otimes B)_E$ as the closure of the algebraic tensor product $A\otimes B_E$ in $A\otimes B$. Then $(A\otimes B_E)_{E\in\mathcal E}$ defines a filtration of $A\otimes B$. If $\phi : A_1 \rightarrow A_2$ is a $*$-homomorphism, we use the notation $\phi_B$ for the induced $*$-homomorphism $A_1\otimes B\rightarrow A_2\otimes B$. \\
 
 In \cite{kasparovKKNovikov}, G. Kasparov defined a map
 \[\tau_B : KK(A_1,A_2)\rightarrow KK(A_1\otimes B, A_2\otimes B)\]
