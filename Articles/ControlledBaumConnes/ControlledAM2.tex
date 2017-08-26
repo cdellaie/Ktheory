@@ -93,7 +93,7 @@ such that
 where 
 \[D=\left\{\begin{pmatrix}x_1 & k_{12}\\ k_{21} & x_2\end{pmatrix} : x_j\in E_j , p_1(x_1)=p_2(x_2), k_{ij}\in K_{B\rtimes_r G}\right\},\]
 with $p_j : E_j\rightarrow A\rtimes_r G$ the $*$-homomorphisms of the extensions.
-Naturality of the controlled boundary maps \cite{OY2} ensures that the boundary of the sum of two extensions is the sum of the boundary of each, thus the result holds.
+Naturality of the controlled boundary maps (\cite{OY2}, remark $3.5.(i)$) ensures that the boundary of the sum of two extensions is the sum of the boundary of each, thus the result holds.
 \item[(iii)] Let $z\in KK_1^G(A_2,B)$, represented by a cycle $(H_B,\pi,T)$. Representing $f^*(z)$ is $(H_B,f^*\pi,T)$ with $f^*\pi=\pi \circ f$. The map 
 \[\phi : \left\{\begin{array}{lll} E^{f^*(\pi,T)} & \rightarrow & E^{(\pi,T)} \\
 ( x, P_G(f^*\pi)(x)P_G+y) & \rightarrow & ( f_G(x), P_G(f^*\pi)(x)P_G+y) \end{array}\right. \]
@@ -207,7 +207,7 @@ and remark \ref{rk3.8} ensures that $J_G([\partial_J]) = D_{J\rtimes_r G,A\rtime
 We can now define $J_G$ for even $K$-cycles. Let $A$ and $B$ be two $G$-algebras. Let $[\partial_{SB}]\in KK_1(B,SB)$ be the $K$-cycle implementing the boundary of the extension $0\rightarrow SB\rightarrow CB\rightarrow B\rightarrow 0$, and $[\partial]\in KK_1(\C,S)$ be the Bott generator. As $z\otimes_B [\partial_{SB}]$ is an odd $K$-cycle, we can define
 \[J_G(z):= \hat\tau_{B\rtimes G}([\partial]^{-1})\circ J_G(z\otimes[\partial_{SB}]).\] 
 
-Here $\hat\tau_D$ refers, for any $C^*$-algebras $D,A_1,A_2$ and $z\in KK_*(A_1,A_2)$, to the $(\alpha_\tau,k_\tau)$-controlled map $\hat K (A_1\otimes D )\rightarrow \hat K(A_2\otimes D)$ of theorem \ref{tensorization}. We can see that, if we set $\alpha_J=\alpha_\tau \alpha_D$ and $k_J=k_\tau * k_D$, $J_G(z)$ is $(\alpha_J,k_J)$-controlled.\\
+Here $\hat\tau_D(z)$ refers, for any $C^*$-algebras $D,A_1,A_2$ and $z\in KK_*(A_1,A_2)$, to the $(\alpha_\tau,k_\tau)$-controlled map $\hat K (A_1\otimes D )\rightarrow \hat K(A_2\otimes D)$ of theorem \ref{tensorization}. We can see that, if we set $\alpha_J=\alpha_\tau \alpha_D$ and $k_J=k_\tau * k_D$, $J_G(z)$ is $(\alpha_J,k_J)$-controlled.\\
 
 \begin{prop}\label{Kasparov}
 Let $A$ and $B$ two $G$-$C^*$-algebras. For every $z\in KK^G_*(A,B)$, there exists a control pair $(\alpha_J,k_J)$ and a $(\alpha_J,k_J)$-controlled morphism
@@ -261,7 +261,7 @@ J_G (\alpha\otimes z) & \sim_{\alpha_J^2,k_J*k_J} &  J_G(\alpha\otimes z)\circ J
 \end{array}\] 
 because $\theta^*(\alpha\otimes z)=\theta^*(\alpha)\otimes z=1\otimes z =z$. The control on the propagation of the first line follows from remark $2.5$ of \cite{OY2} and point $(v)$, the other lines are equal by points $(iii)$ and $(iv)$. As $d$ is uniform for all locally compact groupoids with Haar systems, a simple induction concludes, and $(\alpha_K,k_K)$ can be taken to be $( \alpha_J^{2d},( k_J)^{*2d})$. The same argument works if $z'$ is an even $KK$-element.\\
 
-Let $z$ and $z'$ be odd $KK$-elements. Then, as for $\hat\sigma_X$, we have :
+Let $z$ and $z'$ be odd $KK$-elements. Then we have :
 \[\begin{array}{rcl}
 J_G (z\otimes z') & = &  J_G (z\otimes_B [\partial_{B}]\otimes_{SB} [\partial_B]^{-1}\otimes_B z') \\
 			& \sim & J_G ( [\partial_B]^{-1}\otimes_B z')\circ J_G (z\otimes_B [\partial_{B}])\\
@@ -290,7 +290,7 @@ The function $\lambda : G\times_{s,p} P_E(G) \rightarrow [0,1]$ is continuous.
 \end{lem}
 
 \begin{dem}
-Let $\{(g_j,\eta_j)\}_{j\in J}\subseteq G\times_{s,p}P_E(G)$ be a generalized sequence converging to $(g,\eta)\in G\times_{s,p}P_E(G)$. Let $x=p(\eta) = s(g)$ and $x_j=p(\eta_j) = s(g_j)$. There exists an open neighborhood $U\subseteq G^{(0)}$ of $x$ such that $s$ is injective on $s^{-1}(U)$ and such that $x_j$ belongs ultimately to $U$. We can suppose $x_j\in U$ for every $j$. Then we can decompose $s^{-1}(U) = \coprod_{g\in G^x} S_g$ with, for each $g\in G^x$, an open bisection $S_g\subseteq G$. Let, for every $g\in G^x$, $\phi_g : G\rightarrow [0,1]$ be a continuous function equal to $1$ on $S_g$ and vanishing outside a small neighborhood of $S_g$. Then $\lambda_g(\eta) =\langle \eta,\phi_g\rangle$ and $\lambda_{g_j}(\eta_j) = \langle \eta_j,\phi_g\rangle$ for every $j\in J$. It is now clear, by definition of the weak-$*$ topology, that $\lambda_{g_j}(\eta_j)$ converges to $\lambda_{g}(\eta)$.  \\
+Let $\{(g_j,\eta_j)\}_{j\in J}\subseteq G\times_{s,p}P_E(G)$ be a generalized sequence converging to $(g,\eta)\in G\times_{s,p}P_E(G)$. Let $x=p(\eta) = s(g)$ and $x_j=p(\eta_j) = s(g_j)$. There exists an open neighborhood $U\subseteq G^{(0)}$ of $x$ such that we can decompose $s^{-1}(U) = \coprod_{g\in G^x} S_g$ with, for each $g\in G^x$, an open bisection $S_g\subseteq G$ and such that $x_j$ belongs ultimately to $U$. Notice that $s$ is injective on each $S_g$. We can suppose $x_j\in U$ for every $j$. Let, for every $g\in G^x$, $\phi_g : G\rightarrow [0,1]$ be a continuous function equal to $1$ on $S_g$ and vanishing outside a small neighborhood of $S_g$. Then $\lambda_g(\eta) =\langle \eta,\phi_g\rangle$ and $\lambda_{g_j}(\eta_j) = \langle \eta_j,\phi_g\rangle$ for every $j\in J$. It is now clear, by definition of the weak-$*$ topology, that $\lambda_{g_j}(\eta_j)$ converges to $\lambda_{g}(\eta)$.  \\
 \qed %$\langle \eta,\phi_g\rangle / \sum_{h\in G^x}\langle \eta,\phi_h\rangle$ / \sum_{h\in G^x}\langle \eta_j,\phi_h\rangle
 \end{dem}
 
@@ -460,14 +460,14 @@ To prove the main theorems of this section, what we called quantitative statemen
 %Let $\{B_j\}_{j\in\N}$ be a family of $G$-algebras and let $T_j \in \mathfrak K (H_{B_j})\cong B_j \otimes\mathfrak K$ such that $\sup_j ||T_j||<\infty$. Then we can define  
 %\end{rk}
 
-Recall first that the Haar system $(\lambda^x)_{x\in G^{(0)}}$ on $G$ defines, for every $f\in C_c(G)$, a continuous function $x\mapsto \int_{g\in G^x}f(g)d\lambda^x(g)$. We denote by $\int f d\lambda$ the element of $C_0(X)$ obtained when integrating a compactly supported function $f$ w.r.t. the Haar system. If $A$ is a $G$-algebra and $E$ is a $A$-Hilbert module, $f\mapsto \int f d\lambda$ extends by linearity and continuity to $C_c(G,A)\subseteq r^*A $ and $C_c(G,E)\subseteq r^*E$. We will still denote by $\int fd\lambda$ the element in $A$ or $E$ if $f$ is in $r^* A$ or $r^* E$ respectively. %Notice that the invariance of the Haar system implies that, if $V\in\mathcal L_{s^*B}(s^*E,r^*E)$ denotes the action of $G$ on $E$, then $\int V F V^* d\lambda = \int F d\lambda$ in $\mathcal L_B(E)$ , for every $F\in\mathcal L_B(E)$. 
+Recall first that the Haar system $(\lambda^x)_{x\in G^{(0)}}$ on $G$ defines, for every $f\in C_c(G)$, a continuous function on the base space $x\mapsto \int_{g\in G^x}f(g)d\lambda^x(g)$. We denote by $\int f d\lambda$ the element of $C_0(G^{(0)})$ obtained when integrating a compactly supported function $f$ w.r.t. the Haar system. If $A$ is a $G$-algebra and $E$ is a $A$-Hilbert module, $f\mapsto \int f d\lambda$ extends by linearity and continuity to $C_c(G,A)\subseteq r^*A $ and $C_c(G,E)\subseteq r^*E$. We will still denote by $\int fd\lambda$ the element in $A$ or $E$ if $f$ is in $r^* A$ or $r^* E$ respectively. %Notice that the invariance of the Haar system implies that, if $V\in\mathcal L_{s^*B}(s^*E,r^*E)$ denotes the action of $G$ on $E$, then $\int V F V^* d\lambda = \int F d\lambda$ in $\mathcal L_B(E)$ , for every $F\in\mathcal L_B(E)$. 
 
 \begin{lem}[lemma $3.6$,\cite{TuBC2}]\label{JLTform}
-Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarrow G^{(0)}$ is locally injective, and let $B$ be a $G$-algebra. Then for every $z\in RK^G(X,B)$ there exists a $G$-proper $G$-compact space $Z$ and a $K$-cycle $(H_B, \pi, T)\in \mathbb E^G(C_0(Z),B)$ representing $z$ such that :
+Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarrow G^{(0)}$ is locally injective, and let $B$ be a $G$-algebra. Then for every $z\in RK^G(X,B)$ there exists a $G$-proper $G$-compact space $Z\subseteq X$ and a $K$-cycle $(H_B, \pi, T)\in \mathbb E^G(C_0(Z),B)$ representing $z$ such that :
 \begin{itemize}
 \item[$\bullet$] $T$ is self-adjoint and $-1 \leq T\leq 1$,
 \item[$\bullet$] $T$ is $G$-equivariant, i.e. $r^* T = V s^*T V^*$ ,
-\item[$\bullet$] $T$ commutes with the action of $X$, i.e. $[\pi(a),T]= 0$ for all $a\in C_0(Z)$.
+\item[$\bullet$] $T$ commutes with the action of $Z$, i.e. $[\pi(a),T]= 0$ for all $a\in C_0(Z)$.
 \end{itemize}
 \end{lem}
 
