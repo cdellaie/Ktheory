@@ -84,7 +84,7 @@ such that
 \begin{dem}
 \begin{enumerate}
 
-\item[(i)]The $K$-cycle $[\partial_{K_{B\rtimes_r G},E^{(\pi,T)}}]\in KK_1(A\rtimes_r G, B\rtimes_r G)$ implementing the boundary of the extension $E^{(\pi,T)}$ induces the map $j_{red,G}$ by definition, and modulo Morita equivalence, which immediately gives the first point.
+\item[(i)]The $K$-cycle $[\partial_{K_{B\rtimes_r G},E^{(\pi,T)}}]\in KK_1(A\rtimes_r G, B\rtimes_r G)$ implementing the boundary of the extension $E^{(\pi,T)}$ induces the map $-\otimes_{A\rtimes_r G} j_{red,G}(z)$ by definition, and modulo Morita equivalence, which immediately gives the first point.
 
 \item[(ii)] If $z,z'$ are elements of $KK_1^G(A,B)$, represented by two $K$-cycles $(H_B,\pi_j,T_j)$, let $(\tilde H_B,\pi,T)$ be $(H_B\oplus H_B,\pi_0\oplus \pi_1,T_0\oplus T_1)$ which is a $K$-cycle representing the sum $z+z'$. Then $E^{(\pi,T)}$ is naturally isomorphic to the extension sum of the $E_j:=E^{(\pi_j,T_j)}$, namely
 \[\begin{tikzcd}[column sep = small]
@@ -155,7 +155,8 @@ Notice that $\psi$ is the $*$-homomorphism induced by $g_G$ on the compact opera
 and $J_G(g_*(z))= g_{G,*}\circ M_{B_1\rtimes G}^{-1}\circ D_{K_{B_1\rtimes G},E^{(\pi,T)}}=g_{G,*}\circ J_G(z)$.\\
 
 %% NEW NEW PROOF
-\item[(v)] We can suppose $A$ unital. Let $0 \rightarrow J \rightarrow A \rightarrow A /J \rightarrow 0$ be a $G$-equivariant semi-split extension of $G$-algebras with $q:A\rightarrow A/J$ the quotient map.. Let us denote by $s : A/J \rightarrow A $ the $G$-equivariant completely positive cross section.   According to the equivariant Kasparov-Stinespring theorem \ref{GKasparovStinespring}, there exists an equivariant $A$-Hilbert module $E$ and a $G$-equivariant $*$-homomorphism $\pi : A/J \rightarrow \mathcal L_{A}(A\oplus E)$ such that $s(x) = P \pi(x) P$, where $P \in \mathcal L_{A}(A\oplus E)$ is the projection on the $A$ factor. Consider the $J$-Hilbert module $E' = (A\oplus E)\otimes_J J \cong J\oplus (E\otimes_J J)$, and the natural map $\tilde\pi =\pi\otimes_J 1: A/ J \rightarrow \mathcal L_{J}(E')$. Put $\tilde T= (2P-1)\otimes_J id_J$. By the stabilization theorem, we can suppose that $E'$ is a standard $G$-equivariant $J$-Hilbert module. 
+\item[(v)] We can suppose $A$ unital. Let $0 \rightarrow J \rightarrow A \rightarrow A /J \rightarrow 0$ be a $G$-equivariant semi-split extension of $G$-algebras with $q:A\rightarrow A/J$ the quotient map.. Let us denote by $s : A/J \rightarrow A $ the $G$-equivariant completely positive cross section.   According to the equivariant Kasparov-Stinespring theorem, %\ref{GKasparovStinespring}
+there exists an equivariant $A$-Hilbert module $E$ and a $G$-equivariant $*$-homomorphism $\pi : A/J \rightarrow \mathcal L_{A}(A\oplus E)$ such that $s(x) = P \pi(x) P$, where $P \in \mathcal L_{A}(A\oplus E)$ is the projection on the $A$ factor. Consider the $J$-Hilbert module $E' = (A\oplus E)\otimes_J J \cong J\oplus (E\otimes_J J)$, and the natural map $\tilde\pi =\pi\otimes_J 1: A/ J \rightarrow \mathcal L_{J}(E')$. Put $\tilde T= (2P-1)\otimes_J id_J$. By the stabilization theorem, we can suppose that $E'$ is a standard $G$-equivariant $J$-Hilbert module. 
 Put 
 \[\psi_0(x)(y \oplus \xi ) =  (xy) \oplus 0 \quad \forall \xi \in E\otimes J,\forall y\in J, \] 
 for every $x\in A$. This defines a $G$-equivariant $*$-homomorphism $\psi_0 : A \rightarrow \mathcal L_J(E')$ such that $\psi_0(x)\in  \mathfrak K _J (E')$ when $x\in J$. Put $\psi ( a ) = (q(a), \psi_0 (a))$. As $P\tilde \pi (q(a))P -\psi_0(a) = \psi_0( s(q(a)) - a )\in \mathfrak K_J(E')$, $\psi(a)\in E^{(\tilde\pi,\tilde T)}$ holds, and the following diagram is commutative with exact rows:
@@ -521,7 +522,7 @@ Each of the summand is compact, hence $[H_B, \pi,T]=[H_B,\pi,T']$.\\
 %%%%%%%%%%%%%%%%%%%%
 
 \begin{lem}
-Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarrow G^{(0)}$ is locally injective, and let $(B_j)_j$ be a countable family of $G$-algebras. Then the projection $\prod_j B_j \otimes K \rightarrow B_j\otimes K$ induces an isomorphism
+Let $X$ be a $G$-compact proper $G$-space such that the anchor map $p:X\rightarrow G^{(0)}$ is locally injective, and let $(B_j)_j$ be a countable family of $G$-algebras. Then the projection $\prod_j B_j \otimes \mathfrak K \rightarrow B_j\otimes \mathfrak K$ induces an isomorphism
 \[\Theta : RK^G(X,\prod_j B_j\otimes \mathfrak K)\rightarrow \prod_j RK^G(X,B_j\otimes \mathfrak K)\cong \prod_j RK^G(X,B_j).\]
 \label{LocalInjectivity}
 \end{lem}
@@ -624,8 +625,8 @@ Let $G$ be a locally compact, $\sigma$-compact étale groupoid, $\{B_j\}_{j\geq 
 \end{lem}
 
 \begin{dem}
-For all $j$ and any locally compact $G$-space $X$, the projection $\prod_j B_j\otimes K\rightarrow B_j \otimes K$ induces a morphism
-\[\Theta^X : KK^G(C_0(X),\prod_j B_j\otimes K )\rightarrow \prod_j  KK^G(C_0(X),B_j\otimes K ).\]
+For all $j$ and any locally compact $G$-space $X$, the projection $\prod_j B_j\otimes \mathfrak K\rightarrow B_j \otimes \mathfrak K$ induces a morphism
+\[\Theta^X : KK^G(C_0(X),\prod_j B_j\otimes \mathfrak K )\rightarrow \prod_j  KK^G(C_0(X),B_j\otimes \mathfrak K ).\]
 Let $X_0\subseteq X_1 \subseteq...\subseteq X_n$ be the $n$-skeleton decomposition associated to the simplicial structure of typed $G$-simplicial complex $\Delta$ and let $Z_j = C_0(X_j)$, $Z^j_{j-1} = C_0(X_j \setminus X_{j-1})$ and $\Theta_j = \Theta^{X_j}$.
 We will show the claim by induction on the dimension of $\Delta$.\\
 
@@ -645,8 +646,8 @@ KK^G_*(Z_{j-1},\prod_j B_j\otimes \mathfrak K)\arrow{r}{\Theta_{j-1}} & \prod_j 
 
 The five lemma ensures that if $\Theta_{j-1}$ and $\Theta^j_{j-1}$ are isomorphisms, then so is $\Theta_j$. Moreover, because $\Delta$ is a typed $G$-simplicial complex (see \ref{Gcomplex}), $X_j\setminus X_{j-1}$ is $G$-equivariantly homeomorphic to $\mathring \sigma_j \times \Sigma_j$, where  $\mathring \sigma _j $ denotes the interior of the standard simplex, $\Sigma_j$ is the set of centers of $j$-simplices of $X_j$, and where $G$ acts trivially on $\mathring \sigma _j$. Bott periodicity ensures then that the following diagram commutes :
 \[\begin{tikzcd}
-KK^G(Z_{j-1}^j,\prod_k B_k\otimes K) \arrow{r}{\Theta_{j-1}^j}\arrow{d}{\cong} & \prod_k KK^G(Z_{j-1}^j,B_k) \arrow{d}{\cong}\\
-KK^G(\Sigma_j,\prod_k B_k\otimes K) \arrow{r}{\Theta^{\Sigma_j}} & \prod_k KK^G(\Sigma_j ,B_k)\\ 
+KK^G(Z_{j-1}^j,\prod_k B_k\otimes \mathfrak K) \arrow{r}{\Theta_{j-1}^j}\arrow{d}{\cong} & \prod_k KK^G(Z_{j-1}^j,B_k) \arrow{d}{\cong}\\
+KK^G(\Sigma_j,\prod_k B_k\otimes \mathfrak K) \arrow{r}{\Theta^{\Sigma_j}} & \prod_k KK^G(\Sigma_j ,B_k)\\ 
 \end{tikzcd}\]
 with vertical arrows being isomorphisms given by Bott periodicity. By lemma \ref{LocalInjectivity}, $\Theta^{\Sigma_j}$ is an isomorphism, hence $\Theta_{j-1}^j$ is an isomorphism. We proved that if $\Theta_{j-1}$ is an isomorphism, then so is $\Theta_j$. By induction, proving that $\Theta_0$ is an isomorphism concludes the proof, which is essentially the content of lemma \ref{LocalInjectivity} : $X_0$ is a $G$-compact proper $G$-space, and its anchor map is just the target map $r:G\rightarrow G^{(0)}$, which is supposed to be étale, so locally injective.\\
 \qed
