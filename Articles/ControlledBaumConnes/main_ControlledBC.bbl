@@ -6,10 +6,10 @@
 \newblock {\em Bulletin de la Soci{\'e}t{\'e} Math{\'e}matique de France},
   124(1):141--215, 1996.
 
-\bibitem{FimaGraphs}
-Pierre Fima and Amaury Freslon.
-\newblock Graphs of quantum groups and {K}-amenability.
-\newblock {\em Advances in Mathematics}, 260:233--280, 2014.
+\bibitem{DellAieraThesis}
+Cl\'ement Dell'Aiera.
+\newblock {\em Controlled K-theory for groupoids and applications}.
+\newblock PhD thesis, IAEM Lorraine, Universit\'e de Lorraine, 7 2017.
 
 \bibitem{FinnSellFibred}
 Martin Finn-Sell.
@@ -41,11 +41,6 @@ Pierre-Yves Le~Gall.
 \newblock {\em Th{\'e}orie de {K}asparov {\'e}quivariante et groupo{\"\i}des}.
 \newblock PhD thesis, 1994.
 
-\bibitem{MeyerNest}
-Ralf Meyer and Ryszard Nest.
-\newblock The {B}aum--{C}onnes conjecture via localisation of categories.
-\newblock {\em Topology}, 45(2):209--259, 2006.
-
 \bibitem{OY3}
 Herv{\'e} Oyono-Oyono and Guoliang Yu.
 \newblock Persistance {A}pproximation {P}roperty and controlled {K}-theory.
@@ -75,12 +70,6 @@ Jean-Louis Tu.
 Jean-Louis Tu.
 \newblock The coarse {B}aum-{C}onnes conjecture and groupoids. ii.
 \newblock {\em New York J. Math}, 18:1--27, 2012.
-
-\bibitem{VergniouxKamenability}
-Roland Vergnioux.
-\newblock K-amenability for amalgamated free products of amenable discrete
-  quantum groups.
-\newblock {\em Journal of Functional Analysis}, 212(1):206--221, 2004.
 
 \bibitem{WeggeOlsen}
 NE~Wegge-Olsen.

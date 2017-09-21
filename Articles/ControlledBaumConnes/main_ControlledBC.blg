@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2014)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main_ControlledBC.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
@@ -8,45 +8,45 @@ Warning--empty journal in OY3
 Warning--empty year in OY3
 Warning--empty journal in TuBC
 Warning--empty journal in WeggeOlsen
-You've used 19 entries,
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            629 strings with 6558 characters,
-and the built_in function-call counts, 5494 in all, are:
-= -- 572
-> -- 168
+            615 strings with 6296 characters,
+and the built_in function-call counts, 4733 in all, are:
+= -- 491
+> -- 142
 < -- 1
-+ -- 75
-- -- 50
-* -- 374
-:= -- 930
-add.period$ -- 56
-call.type$ -- 19
-change.case$ -- 81
++ -- 64
+- -- 42
+* -- 314
+:= -- 811
+add.period$ -- 50
+call.type$ -- 17
+change.case$ -- 70
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 213
-empty$ -- 465
-format.name$ -- 50
-if$ -- 1119
+cite$ -- 22
+duplicate$ -- 189
+empty$ -- 399
+format.name$ -- 42
+if$ -- 961
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 18
-newline$ -- 97
-num.names$ -- 38
-pop$ -- 62
+int.to.str$ -- 17
+missing$ -- 15
+newline$ -- 87
+num.names$ -- 34
+pop$ -- 57
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 55
 quote$ -- 0
-skip$ -- 146
+skip$ -- 129
 stack$ -- 0
-substring$ -- 455
-swap$ -- 25
+substring$ -- 369
+swap$ -- 23
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
+type$ -- 68
 warning$ -- 5
-while$ -- 68
-width$ -- 21
-write$ -- 202
+while$ -- 58
+width$ -- 19
+write$ -- 180
 (There were 5 warnings)
