@@ -13,3 +13,12 @@
 \contentsline {subsubsection}{\numberline {4.1.1}Plan of the talk}{9}{subsubsection.4.1.1}
 \contentsline {subsubsection}{\numberline {4.1.2}Questions}{9}{subsubsection.4.1.2}
 \contentsline {subsection}{\numberline {4.2}Ideas of funky talks}{9}{subsection.4.2}
+\contentsline {section}{\numberline {5}A list of books}{10}{section.5}
+\contentsline {section}{\numberline {6}Seminar}{10}{section.6}
+\contentsline {subsection}{\numberline {6.1}Cartan subalgebras}{10}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Classification and the UCT}{10}{subsection.6.2}
+\contentsline {section}{\numberline {7}Groups}{10}{section.7}
+\contentsline {section}{\numberline {8}$C^*$-algebras}{10}{section.8}
+\contentsline {section}{\numberline {9}Noncommutative geometry}{10}{section.9}
+\contentsline {subsection}{\numberline {9.1}Why $SU_q(2)$?}{10}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}TQFT}{12}{subsection.9.2}
