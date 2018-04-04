@@ -17,8 +17,9 @@
 \contentsline {section}{\numberline {6}Seminar}{10}{section.6}
 \contentsline {subsection}{\numberline {6.1}Cartan subalgebras}{10}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Classification and the UCT}{10}{subsection.6.2}
-\contentsline {section}{\numberline {7}Groups}{10}{section.7}
-\contentsline {section}{\numberline {8}$C^*$-algebras}{10}{section.8}
-\contentsline {section}{\numberline {9}Noncommutative geometry}{10}{section.9}
-\contentsline {subsection}{\numberline {9.1}Why $SU_q(2)$?}{10}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}TQFT}{12}{subsection.9.2}
+\contentsline {section}{\numberline {7}Groups}{11}{section.7}
+\contentsline {section}{\numberline {8}$C^*$-algebras}{11}{section.8}
+\contentsline {section}{\numberline {9}Noncommutative geometry}{11}{section.9}
+\contentsline {subsection}{\numberline {9.1}Why $SU_q(2)$?}{11}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}TQFT}{13}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Reminder}{13}{subsection.9.3}
