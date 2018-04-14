@@ -1,0 +1,182 @@
+\section{A quantitative Künneth formula}
+
+In this section, we present an application of the previous results to a Künneth formula for crossed products by an étale groupoid. Controlled Künneth formulas are more stable than Künneth formulas in $K$-theory. In \cite{OY4}, it was proved that they are stable by controlled Mayer-Vietoris decomposition. The reader is referred to the conclusion for details (in particular Definition \ref{MVpair}). \\ 
+
+Recall that for $A$ and $B$ two $C^*$-algebras, one can define a homomorphism
+\[\alpha_{A,B} : K_*(A)\otimes K_*(B)\rightarrow K_*(A\otimes B) \quad ; \quad (x,y)\mapsto x\otimes   \tau_A(y),\]
+where $\tau_A$ is the external Kasparov product.\\
+
+Recall that, when $A$ and $B$ are unital $C^*$-algebras, if $p$ and $q$ are projections in $\mathfrak M_r(A)$ and $\mathfrak M_s(B)$ and $u$ and $v$ are unitaries in $\mathfrak M_r(A)$ and $\mathfrak M_s(B)$, then :
+\[\begin{array}{rl}
+\alpha_{A,B}([p]\otimes [q]) & = [p\otimes q], \\
+\alpha_{A,B}([u]\otimes [q]) & = [u \otimes q +1\otimes (1-q)], \\
+\alpha_{A,B}([p]\otimes [v]) & = [p\otimes v +(1-p)\otimes v] .\\
+\end{array}\]
+
+\begin{definition}
+A $C^*$-algebra $A$ is said to satisfy the Künneth formula if, for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group, $\alpha_{A,B}$ is an isomorphism.
+\end{definition}
+
+If $A$ satisfies the Künneth formula, then, for any $C^*$-algebra $B$, one has the following exact sequence
+\[\begin{tikzcd}[column sep = small] 0 \arrow{r} & K_*(A)\otimes K_*(B)\arrow{r} & K_*(A\otimes B) \arrow{r} & Tor(K_*(A),K_*(B))\arrow{r} & 0 \end{tikzcd}\]
+
+If $(A,\mathcal E)$ is now a $\mathcal E$-filtered $C^*$-algebra, $(A\otimes B,\mathcal E)$ is also filtered, and one can define a controlled morphism
+\[\hat\alpha_{A,B} : \hat K_*(A)\otimes K_*(B)\rightarrow \hat K_*(A\otimes B) \quad ; \quad (x,y)\mapsto \hat\tau_A(y)(x),\]
+which induces $\alpha_{A,B}$ in $K$-theory. \\
+
+We will say that $\alpha_{A,B}$ is quantitatively injective if there exists $\lambda \geq 1$ such that, for every $\varepsilon\in (0,\frac{1}{4\alpha_\tau \lambda})$ and every $F\in\mathcal E$, there exists $F'\in\mathcal E$, $F\subseteq F'$, such that : 
+\[\forall x\in K^{\varepsilon,F}(A)\otimes K(B)\text{ such that }\alpha_{A,B}^{\varepsilon,F}(x)=0 \text{ then }(\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}\otimes id) (x) = 0.\] 
+
+We will say that $\alpha_{A,B}$ is quantitatively surjective if there exists $\lambda \geq 1$ such that, for every $\varepsilon \in (0,\frac{1}{4\alpha_\tau})$ and every $F\in\mathcal E$, there exist $F'\in\mathcal E$, $F\subseteq h_{\tau,\lambda\varepsilon}.F'$, such that:
+\[ \forall y\in K^{\varepsilon,F}(A\otimes B), \exists x\in K^{\lambda\varepsilon, F'}(A)\otimes K(B) \text{ such that }
+%\iota_{\alpha_\tau\varepsilon,h_{\tau,\varepsilon}. F}^{\lambda\varepsilon,F'}\circ
+\alpha^{\lambda\varepsilon,F'}_{A,B}(x)=\iota_{\varepsilon,F}^{\alpha\lambda\varepsilon,h_{\tau, \lambda\varepsilon}.F'}(y).\] 
+
+
+\begin{definition}
+A filtered $C^*$-algebra $(A,\mathcal E)$ is said to satisfy the quantitative Künneth formula if there exists $\lambda \geq 1$ such that, for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group, $\hat\alpha_{A,B}$ is quantitatively injective and quantitatively surjective. 
+\end{definition}
+
+The remainder of the section is devoted to prove the theorem \ref{Kunneth}. We first recall the induction and restriction machinery in the context of equivariant $KK$-theory. The important result is lemma \ref{Restriction}, which allows to restrict $KK^G$-elements to compact open subgroupoids under some suitable conditions. We then define a class $\mathcal C$ of groupoids which satisfies these suitable conditions, and give instances of this class. The end of the section is devoted to the proof of the main theorem.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	INDUCTION	%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \input{Induction}	%
+%\input{InductionSimple} %
+\input{InductionFinal}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Baum-Connes and the Künneth formula}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The first step in proving theorem \ref{Kunneth} is to define a analytical version of $\alpha_{A,B}$ when an étale groupoid $G$ is given. More precisely, we first construct a homomorphism $\alpha_{A,B}^G : K_*^{top}(G,A)\otimes K_*(B)\rightarrow K_*^{top}(G,A\otimes B )$, inductive limit of $\alpha_{A,B}^{G,Z} : RK^G(Z,A)\otimes K_*(B)\rightarrow RK^G(Z,A\otimes B )$ where $Z$ runs through $G$-proper $G$-compact spaces. Then we show that the controlled assembly map intertwines $\alpha^{G,P_E(G)}_{A,B}$ and $\alpha_{A\rtimes_r G,B}$ uniformly.\\
+
+If $A$ is a $G$-algebra, and $B$ a $C^*$-algebra, $A\otimes B$ naturally inherits a $G$-algebra structure with trivial action of $G$ on the $B$ factor. Then $(A\rtimes_r G)\otimes B \cong (A\otimes B)\rtimes_r G$.\\
+
+Let $Z$ be a $G$-proper space. Define the homomorphism :
+\[\alpha_{A,B}^{G,Z} : RK^G_*(Z,A)\otimes K_*(B)\rightarrow RK_*^G(Z,A\otimes B) \quad ; \quad (x,y)\mapsto x\otimes_{}   \tau_A(y),\]
+which respects inductive limits w.r.t. inclusions of $G$-proper spaces, so that it induces
+\[\alpha_{A,B}^G : K_*^{top}(G,A)\otimes K_*(B)\rightarrow K_*^{top}(G,A\otimes B ).\]
+
+To prove theorem \ref{Kunneth}, we will need the following result.
+
+\begin{thm}\label{TopologicalKunneth}
+Let $G$ be an étale groupoid in the class $\mathcal C$, and let $E\in\mathcal E$ be a controlled subset of $G$ and $P_E(G)$ be the corresponding Rips complex. If, for all compact open subgroupoids $H$ of $G$ and every $H$-space $V$ such that the anchor map $p : V\rightarrow H^{(0)}$ is locally injective, $\alpha_{A,B}^{H,V}$ is an isomorphism, then $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism for all $C^*$-algebras $B$ such that $K_*(B)$ is a free abelian group.
+\end{thm}
+
+%\begin{thm}\label{TopologicalKunneth}
+%Let $G$ be an étale groupoid in the class $\mathcal C$, and let $E\in\mathcal E$ be a controlled subset of $G$ and $P_E(G)$ be the corresponding Rips complex. If for all compact open subgroupoids $H$ of $G$, $A\rtimes_r H$ satisfies the Künneth formula, then $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism for all $C^*$-algebras $B$ such that $K_*(B)$ is a free abelian group.
+%\end{thm}
+
+\begin{dem}
+Let $Z_0\subseteq Z_1\subseteq ... \subseteq Z_n $ be the skeleton decomposition of $P_E(G)$.\\
+
+Let us prove by induction that $\alpha_j=\alpha^{G,Z_j}_{A,B}$ is an isomorphism. By a standard argument similar to the proof of theorem \ref{prod}, it is sufficient to prove the statement for $j=0$.\\
+
+Let $U\subseteq Z_0$ be a $G$-compact $G$-proper space. By strong properness, $U$ can be finitely covered by open subsets of the type $G \times_H V$. By a standard Mayer-Vietoris argument, we can suppose that there exists a compact open subgroupoid $H$ of $G$ and a compact $H$-space $V$ such that $U = G \times_H V$. The following diagram is commutative :
+\[\begin{tikzcd}[column sep = small] 
+RK_*^G(U,A)\otimes K_*(B) \arrow{r}{\alpha_{A,B}^{G,U}} \arrow{d}{\text{Res}_H^G} & RK^G(U, A\otimes B) \arrow{d}{\text{Res}_H^G}\\
+RK_*^H(V, A)\otimes K_*(B) \arrow{r}{\alpha_{ A,B}^{H,V}} & 
+	RK_*^H(V,  A\otimes B)\\
+\end{tikzcd}\]
+
+%\[\begin{tikzcd}[column sep = small] RK_*^G(U,A)\otimes K_*(B) \arrow{r}{\alpha_{A,B}^{G,U}} \arrow{d}{\text{Res}_H^G} & RK^G(U, A\otimes B) \arrow{d}{\text{Res}_H^G}\\
+%RK_*^H(V, \text{Res}_H^G (A))\otimes K_*(B) \arrow{r}{\alpha_{\text{Res}_H^G A,B}^{H,V}} \arrow{d}{\mu_{H,\text{Res}_H^G A \otimes id}} & 
+%	RK_*^H(V, \text{Res}_H^G (A)\otimes B)\arrow{d}{\mu_{H,\text{Res}_H^G A }} \\
+%K_*(\text{Res}_H^G (A)\rtimes_r H)\otimes K_*(B)\arrow{r}{\alpha_{\text{Res}_H^G A,B}} & K_*\left((\text{Res}_H^G A\otimes B)\rtimes_r H\right) 
+%\end{tikzcd}\] \text{Res}_H^G
+The first vertical arrows are isomorphisms by Proposition \ref{Restriction}, the last horizontal one is by hypothesis. Hence $\alpha_{A,B}^{G,U}$ is an isomorphism. By taking the inductive limit on $G$-proper $G$-compact spaces $U\subseteq Z_0$, we get that $\alpha_{A,B}^{G,Z_0}$ is an isomorphism.
+\end{dem}
+
+\begin{lem}\label{KunnethLemma}
+There exists a positive number $\kappa\geq 1$ and a function $c : (0,\frac{1}{4\kappa})\times\mathcal E\rightarrow \mathcal E$, decreasing in $E$ and non increasing in $\varepsilon$ such that, for any étale groupoid $G$, any filtered $G$-algebra $(A,\mathcal E)$, and any $C^*$-algebra $B$, the following diagram commutes :
+\[\begin{tikzcd}
+RK_*^G(P_E(G),A)\otimes K_*(B) \arrow{r}{\alpha^{G,P_E(G)}_{A,B}}\arrow{d}{\mu_{G,A}^{\varepsilon,E,F}\otimes \text{id}_{K_*(B)}} & 
+RK_*^G(P_E(G),A\otimes B) \arrow{d}{\mu_{G,A}^{\alpha_ \tau\varepsilon,E,h_\varepsilon F}} \\
+K_*^{\varepsilon,F}(A\rtimes_r G)\otimes K_*(B) \arrow{r}{\alpha_{A\rtimes_r G,B}^{\varepsilon,F}} & 
+K_*^{\alpha_\tau\varepsilon,h_{\varepsilon}F}((A\otimes B)\rtimes_r G)\\
+\end{tikzcd}\] 
+for all $\varepsilon\in(0,\frac{1}{4\kappa})$ and $E,F\in\mathcal E$ such that $ c(\varepsilon,E)\subseteq F$. \\
+\qed
+\end{lem}
+
+\begin{dem}
+Let $z\in RK_*^G(P_E(G),A)$ and $y\in K_*(B)$. As the action of $G$ on $B$ is trivial, $(A\rtimes_r G)\otimes B\simeq (A\otimes B)\rtimes_r G$ so that $\hat\tau_A(y)\circ \hat J_{G}(z) \sim \hat J_{G}(z)\circ \hat\tau_A(y) $ holds. This entails
+\[\hat J_G^{\alpha_\tau\varepsilon, h_{\tau,\varepsilon}E}(z)\left([\mathcal L_E,0]_{\varepsilon, E} \right)\otimes \tau_{A\rtimes_r G}(y) = 
+\left( \hat\tau(y)\circ \hat J_G(z) \right)^{\varepsilon, E}\left([\mathcal L_E,0]_{\varepsilon, E}\right),\]
+which is just the statement of the lemma.\\
+\qed
+\end{dem}
+
+%\textbf{SHOW THAT $\hat J_G(z)\circ \hat\tau(y)=$}
+
+We can now prove the main theorem of the section.
+
+\begin{thm}\label{Kunneth}
+Let $G$ be a $\sigma$-compact étale groupoid and $A$ a $G$-algebra. Suppose that 
+\begin{itemize}
+\item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients,
+\item[$\bullet$] $G$ is in class $\mathcal C$,
+\item[$\bullet$] for every compact open subgroupoid $H$ of $G$ and every $H$-space $V$ such that the anchor map $p : V \rightarrow H^{(0)}$ is locally injective, $\alpha_{A,B}^{H,V}$ is an isomorphism.
+\end{itemize} 
+Then $A\rtimes_r G$ satisfies the Künneth formula.
+\end{thm}
+
+\begin{dem} %\textit{of theorem \ref{Kunneth}}\\
+Let $\kappa\geq 1$ and $c : (0,\frac{1}{\kappa})\times\mathcal E\rightarrow \mathcal E$ as in lemma \ref{KunnethLemma}. Let $\lambda \geq 1$ the universal constant of theorem \ref{UniformQS}.\\
+
+Let $A$ be a $G$-algebra and $B$ a $C^*$-algebra, seen as a $G$-algebra with trivial action. As $(A\otimes B)\rtimes_r G \cong (A\rtimes_r G)\otimes B$, we will identify them in the remaining of the proof. Let us prove that $\hat \alpha_{A\rtimes_r G,B}$ is a controlled isomorphism.\\
+
+%Let $F\in\mathcal E$ and $\varepsilon\in (0,\frac{1}{4 \kappa})$. 
+%Choose $E \in\mathcal E$ such that $k_J(\varepsilon).E\subseteq F$. By controlled surjectivity, there exists $F'\in \mathcal E$ such that $QS_{G,A\otimes B}(\varepsilon,\lambda\varepsilon, F,F',E)$ holds.\\
+
+Let us show the controlled surjectivity. Let $F\in\mathcal E$ and $\varepsilon\in (0,\frac{1}{4 \kappa})$, and let \[y\in K^{\varepsilon,F}_*((A\otimes B)\rtimes_r G).\] By controlled surjectivity of $\hat\mu_{G,A\otimes B}$, there exist $E,F'\in\mathcal E$ and $z\in RK_*^G(P_E(G), A\otimes B) $ such that $k_J(\varepsilon).E\subseteq F'$, $F\subseteq F'$ and 
+\[\mu_{G,A\otimes B}^{\lambda\varepsilon,E,F'}(z)=\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}(y).\] 
+Theorem \ref{TopologicalKunneth} entails that there exists $z_1 \in RK_*^G(P_E(G),A)\otimes K_*(B) $ such that $\alpha_{A,B}^{G,P_E(G)}(z_1)=z$. Let $F''\in \mathcal E$ such that $c(\varepsilon,E)\subseteq F''$ and $F'\subseteq F''$. By lemma \ref{KunnethLemma}, if we set $z_2=(\mu_{G,A}^{\varepsilon,E,F''} \otimes id_{ K_*(B)})(z_1)$, then 
+\[\alpha_{A\rtimes_r G,B}^{\varepsilon,F''} (z_2)= \mu_{G,A\otimes B}^{\alpha_\tau \varepsilon,E,h_\varepsilon . F''}(z).\]
+Hence \[\iota_{\varepsilon,F}^{\lambda \alpha \varepsilon,h_\varepsilon F''}(y)=\iota_{\alpha_\tau\varepsilon,h_\varepsilon F''}^{ \lambda \alpha \varepsilon,h_\varepsilon F''}\circ\alpha_{A\rtimes_r G,B}^{\varepsilon,F''} (z_2)=
+\alpha_{A\rtimes_r G,B}^{\lambda \varepsilon,F''} (z_2)\] and $\hat \alpha_{A\rtimes_r G,B} $ is quantitatively surjective.\\
+
+Let us show the controlled injectivity. Let $\varepsilon\in(0,\frac{1}{4\alpha_\tau})$ and $F\in\mathcal E$.\\ 
+
+Let $x\in K^{\varepsilon,F}_*(A\rtimes_r G)\otimes K_*(B)$ such that $\alpha_{A\rtimes_r G,B}^{\varepsilon,F}(x)=0$ in $K^{\alpha_\tau\varepsilon,h_{\tau,\varepsilon} F}((A\otimes B)\rtimes_r G)$. By controlled surjectivity of $\hat\mu_{G,A}$, there exist $E,F'\in\mathcal E$ such that $F\subseteq F'$, $k_J(\varepsilon).E\subseteq F'$ and $z\in RK(P_E(G),A)\otimes K_*(B)$ such that 
+\[(\mu_{G,A}^{\lambda\varepsilon,E, F'}\otimes id_{K_*(B)})(z)=(\iota_{\varepsilon,F}^{\lambda\varepsilon,F'}\otimes id) (x).\] If $z' = \alpha_{A,B}^{G,P_E(G)}(z)$, pick any $F''\in\mathcal E$ such that $c(\lambda\varepsilon,E)\subseteq F''$ and $F'\subseteq F''$. By lemma \ref{KunnethLemma}, \[\mu^{\alpha_\tau \lambda\varepsilon,E,F''}_{G,A\otimes B}(z')=
+\alpha^{\lambda\varepsilon,F''}_{A\rtimes_r G,B} \circ( \mu_{G,A}^{\lambda\varepsilon, E,F''}\otimes id_{K(B)})(z) = 
+\alpha^{\lambda\varepsilon,F''}_{A\rtimes_r G,B}\circ (\iota_{\varepsilon,F}^{\lambda\varepsilon,F''}\otimes id) (x)=0.\] 
+By controlled injectivity, there exists $E'\in\mathcal E$ such that $E\subseteq E'$ and $q_E^{E'}(z')=0$ in $RK^G(P_{E'}(G),A\otimes B)$. As $\alpha_{A,B}^{G,P_E(G)}$ is an isomorphism and is compatible with inclusion, $(q_E^{E'}\otimes id_{K(B)})(z)=0$ in $RK^G(P_{E'}(G),A)\otimes K(B)$ and
+\[(\iota^{\lambda\varepsilon,F''}_{\varepsilon,F}\otimes id )(x) = (\mu_{G,A}^{\lambda\varepsilon,E', F''}\otimes id_{K_*(B)})\circ(q_E^{E'}\otimes id_{K(B)})(z) = 0,\]
+hence $\hat \alpha_{A\rtimes_r G,B} $ is quantitatively injective.\\
+\qed
+\end{dem}
+
+\begin{rk}
+For principal groupoids, the third condition in theorem \ref{Kunneth}, "$\alpha_{Res_H^G(A),B}^{H,V}$ is an isomorphism", reduces to "$A$ satisfies the Kunneth formula". Indeed, the only non trivial subgroupoid is the trivial one.
+\end{rk}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
