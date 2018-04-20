@@ -14,6 +14,27 @@ Let $G$ be a $\sigma$-compact étale groupoid and $A$ a $G$-algebra. Suppose tha
 Then $A\rtimes_r G$ satisfies the quantitative Künneth formula.
 \end{thm}
 
-Quantitative $K$-theory was developed by H. Oyono-Oyono and G. Yu in \cite{OY2}, and its application to the Künneth formula in \cite{OY4}. The main topic of the author's thesis \cite{DellAieraThesis} was a generalization of operator quantitative $K$-theory, called controlled $K$-theory, which allows to state that crossed products $A\rtimes_r G$ are $C^*$-algebras which are filtered by the set of symmetric compact subsets $K\subseteq G$. One can then study the controlled $K$-theory group $\hat K(A\rtimes_r G)$, which approximate $K(A\rtimes_r G)$ in a precise sense. We refer the reader to \cite{DellAieraThesis} for more details. The proof of the quantitative Künneth formula is essentially the same as the classical one. One just has to use the controlled version of every morphism involved, and has to keep track of the propagation at every steps. 
+Quantitative $K$-theory was developed by H. Oyono-Oyono and G. Yu in \cite{OY2}, and its application to the Künneth formula in \cite{OY4}. The main topic of the author's thesis \cite{DellAieraThesis} was a generalization of operator quantitative $K$-theory, called controlled $K$-theory, which allows to state that crossed products $A\rtimes_r G$ are $C^*$-algebras which are filtered by the set of symmetric compact subsets $K\subseteq G$. One can then study the controlled $K$-theory group $\hat K(A\rtimes_r G)$, which approximate $K(A\rtimes_r G)$ in a precise sense. We refer the reader to \cite{DellAieraThesis} for more details. The proof of the quantitative Künneth formula is essentially the same as the classical one. One just has to use the controlled version of every morphism involved, and has to keep track of the propagation at every steps. \\
+
+We shall end this article with an account of what controlled $K$-theory can achieve concerning the Künneth formula. In \cite{OY4}, H. Oyono-Oyono and G. Yu introduced the class $C_{fand}$ of finite asymptotic nuclear dimensional $C^*$-algebras, and show (\cite{OY4}, Proposition $5.6$ ) that every member of this class satisfies the Künneth formula. To define this class, we first need to recall what is a filtered $C^*$-algebra, and a controlled Mayer-Vietoris pair.\\
+
+\begin{definition}
+A coarse structure is a poset $\mathcal E$ equipped with an abelian semi group structure such that, for any two elements $E,E'\in \mathcal E$, there exists an element $F\in \mathcal E$ such that $E\leq F$ and $E'\leq F$. A $C^*$-algebra $A$ is said to be $\mathcal E$-filtered if there exists a family $\{A_E \}_{E\in \mathcal E}$ of closed self-adjoint subspaces of $A$ such that:
+\begin{itemize}
+\item[$\bullet$] $A_E \subseteq A_{E'}$ if $E\leq E'$,
+\item[$\bullet$] $A_E . A_{E'} \subseteq A_{EE'}$,
+\item[$\bullet$] $\cup_{E\in \mathcal E} A_E$ is dense in $A$.
+\end{itemize} 
+If $A$ is unital, we impose that $1\in A_E$ for every $E\in \mathcal E$.
+\end{definition} 
+
+Examples of filtered $C^*$-algebras include Roe algebras associated to proper metric spaces with bounded geometry, crossed-products of $C^*$-algebras by action by automorphisms of \'etale groupoids or discrete quantum groups. See \cite{DellAieraThesis}, chapter $3$ for details.\\
+
+Let $\mathcal E$ be a coarse structure. A $\mathcal E$-filtered $C^*$-algebra $A$ is said to be locally bootstrap if, for every $E\in \mathcal E$, there exists $F\in \mathcal E$ and a sub-$C^*$-algebra $A^{(F)}$ of $A$, which is in the bootstrap class $\mathcal B$ and satisfies
+\[A_E \subseteq A^{(F)}\subseteq A_F. \]
+Denote by $C_{fand}^{(0)}$ the class of locally bootstrap $C^*$-algebras. Then, a $C^*$-algebra $A$ belongs to the class $C^{(n+1)}_{fand}$ if \\
+
+The asymptotic nuclear dimension of $A$ is the smaller $n$ such that $A$ belongs to $C^{(n)}_{fand}$, and we denote by $C_{fand}$ the class of $C^*$-algebras with finite asymptotic nuclear dimension.
+
 
 
