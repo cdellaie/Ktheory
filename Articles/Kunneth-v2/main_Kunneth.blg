@@ -1,53 +1,48 @@
 This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main_Kunneth.aux
-Case mismatch error between cite keys DellaieraThesis and DellAieraThesis
----line 81 of file main_Kunneth.aux
- : \citation{DellaieraThesis
- :                          }
-I'm skipping whatever remains of this command
 The style file: plain.bst
 Database file #1: biblio2.bib
 Warning--empty school in LeGall
-You've used 22 entries,
+You've used 23 entries,
             2118 wiz_defined-function locations,
-            635 strings with 6830 characters,
-and the built_in function-call counts, 6114 in all, are:
-= -- 617
-> -- 216
+            644 strings with 7089 characters,
+and the built_in function-call counts, 6477 in all, are:
+= -- 654
+> -- 234
 < -- 5
-+ -- 91
-- -- 66
-* -- 381
-:= -- 1052
-add.period$ -- 67
-call.type$ -- 22
-change.case$ -- 92
++ -- 99
+- -- 72
+* -- 411
+:= -- 1113
+add.period$ -- 70
+call.type$ -- 23
+change.case$ -- 97
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 257
-empty$ -- 513
-format.name$ -- 66
-if$ -- 1262
+cite$ -- 24
+duplicate$ -- 268
+empty$ -- 540
+format.name$ -- 72
+if$ -- 1335
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 25
-newline$ -- 113
-num.names$ -- 44
-pop$ -- 100
+int.to.str$ -- 23
+missing$ -- 26
+newline$ -- 118
+num.names$ -- 46
+pop$ -- 103
 preamble$ -- 1
-purify$ -- 77
+purify$ -- 81
 quote$ -- 0
-skip$ -- 169
+skip$ -- 177
 stack$ -- 0
-substring$ -- 380
-swap$ -- 39
+substring$ -- 411
+swap$ -- 40
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 78
+type$ -- 82
 warning$ -- 1
-while$ -- 68
-width$ -- 24
-write$ -- 238
-(There was 1 error message)
+while$ -- 72
+width$ -- 25
+write$ -- 249
+(There was 1 warning)
