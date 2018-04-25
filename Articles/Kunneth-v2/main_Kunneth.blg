@@ -4,45 +4,45 @@ The top-level auxiliary file: main_Kunneth.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
 Warning--empty school in LeGall
-You've used 23 entries,
+You've used 24 entries,
             2118 wiz_defined-function locations,
-            644 strings with 7089 characters,
-and the built_in function-call counts, 6477 in all, are:
-= -- 654
-> -- 234
+            652 strings with 7347 characters,
+and the built_in function-call counts, 6774 in all, are:
+= -- 686
+> -- 241
 < -- 5
-+ -- 99
-- -- 72
-* -- 411
-:= -- 1113
-add.period$ -- 70
-call.type$ -- 23
-change.case$ -- 97
++ -- 102
+- -- 74
+* -- 433
+:= -- 1162
+add.period$ -- 73
+call.type$ -- 24
+change.case$ -- 101
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 268
-empty$ -- 540
-format.name$ -- 72
-if$ -- 1335
+cite$ -- 25
+duplicate$ -- 279
+empty$ -- 567
+format.name$ -- 74
+if$ -- 1396
 int.to.chr$ -- 0
-int.to.str$ -- 23
-missing$ -- 26
-newline$ -- 118
-num.names$ -- 46
-pop$ -- 103
+int.to.str$ -- 24
+missing$ -- 27
+newline$ -- 123
+num.names$ -- 48
+pop$ -- 105
 preamble$ -- 1
-purify$ -- 81
+purify$ -- 84
 quote$ -- 0
-skip$ -- 177
+skip$ -- 184
 stack$ -- 0
-substring$ -- 411
-swap$ -- 40
+substring$ -- 441
+swap$ -- 41
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 82
+type$ -- 86
 warning$ -- 1
-while$ -- 72
-width$ -- 25
-write$ -- 249
+while$ -- 76
+width$ -- 26
+write$ -- 260
 (There was 1 warning)

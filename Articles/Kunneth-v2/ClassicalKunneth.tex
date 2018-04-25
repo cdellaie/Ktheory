@@ -121,10 +121,61 @@ In the case of a group, a locally injective anchor map impose for $V$ to be a di
 We can have a similar statement in the groupoid setting if we suppose that there exists an $H$-equivariant open covering of $V$ such that $p_{|U}$ is injective. The Mayer-Vietoris exact sequence associated to any finite such covering, and then taking the inductive limit, shows that the condition reduces to $A\rtimes_r H$ satisfies the Künneth formula.  
 \end{rk}
 
-A natural question is to find an example of $C^*$-algebra for which theorem \ref{Kunneth} ensures that it satisfies the Künneth formula, without this being a consequence of previous known results \cite{RosenbergKunneth},\cite{ChabertEOY},\cite{OY4}.
+A natural question is to find an example of $C^*$-algebra for which theorem \ref{Kunneth} ensures that it satisfies the Künneth formula, without this being a consequence of previous known results \cite{RosenbergKunneth},\cite{ChabertEOY},\cite{OY4}.\\
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%  HYPEBOLIC  %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsection{Hyperbolic groupoids}
+Recall the following definition from \cite{LaffOY}.
 
+\begin{definition}\label{hyperbolicLaff}
+Let $G$ be a Hausdorff \'etale groupoid. $G$ is said to be:
+\begin{itemize}
+\item[$\bullet$] \textit{hyperbolic} if there exists a positive number $\delta$ and a right invariant length $l$ on $G$ such that $(G_x, l_x)$ is a $\delta$-hyperbolic $\delta$-geodesic space for every $x\in G^{(0)}$,
+\item[$\bullet$] \textit{with controlled growth} if there exist positive constants $\alpha $ and $\beta$ such that the balls 
+\[B(g,R) = \{ g' \in G_x : d_x(g,g'))\}\] 
+for $s(g)=x$ satisfy \[|B(g,R)| \leq \alpha e^{\beta l(g)}.\]
+\end{itemize}
+\end{definition}
+
+The main result of \cite{LaffOY} is the following theorem:
+
+\begin{thm}[Thm. $4.0.1$, \cite{LaffOY}]
+Let $G$ be a Hausdorff \'etale hyperbolic groupoid with controlled growth. If there exists a proper $G$-algebra $A$ and elements 
+\[\alpha \in KK^G(C_0(G^{(0)}) , A) \quad \text{and} \quad \beta\in KK^G(A, C_0(G^{(0)}))\]
+such that $\gamma = \alpha \otimes_A \beta\in KK^G(C_0(G^{(0)}),C_0(G^{(0)}))$ satisfies:
+\begin{itemize}
+\item[$\bullet$] there exists a sequence of right invariant length $(l_i)_i$ converging uniformly to zero on every compact subset of $G$ such that 
+\[\iota(\gamma) = 1 \in KK^{G,l_i}_{ban}C_0(G^{(0)}),C_0(G^{(0)}))\] 
+\item[$\bullet$] for every $G$-compact subset $Z \subseteq \underline E G$ with anchor map $q: Z \rightarrow G^{(0)}$, 
+\[q^*(\gamma) = 1 \in KK^{Z\rtimes G}(C_0(Z),C_0(Z)),\]
+\end{itemize}
+then the assembly map
+\[\mu_{G,r} : K^{top}(G)\rightarrow K(C_r^*(G))\]
+is an isomorphism.
+\end{thm}
+
+In \cite{nekrashevych} is given the definition of a hyperbolic pseudogroup. $S$ is compactly generated if there exists an open relatively compact transversal $T$ of $G(S)$ and a symmetric finite set $F$ such that
+\begin{itemize}
+\item[$\bullet$] any $[x,\phi]$ such that $x, \phi(x)\in T$ decomposes as a product of elements of $F$,
+\item[$\bullet$] every element $\gamma \in F$ is the restriction of some $[x,\phi]$ with the domain and the range of $\gamma $ are relatively compacts whose closure sits inside the domain and the range of $\phi$ respectively. 
+\end{itemize}
+
+\begin{definition}
+A compactly generated pseudo group is hyperbolic if there exists a open relatively compact transversal $T$ and ...
+\end{definition}
+
+If $S$ is hyperbolic in this sense, then $G(S)$ is hyperbolic in the sense of definition \ref{hyperbolicLaff}. Moreover, the space $X$ being the base space of the groupoid, $G(S)$ is ample as soon as $X$ is totally disconnected. Any reduced $C^*$-algebra of a compact groupoid satisfies the Kunneth formula, because it is of type I. The only condition that remains to be proved is that $G(S)$ satifies the Baum-Connes conjecture for any coefficient $B$ a trivial $G$-algebra.  
+
+\subsection{HLS groupoids}
+
+Problem: $\Gamma$ is amenable iff $G_{\mathcal N}$ is. What about a-T-menabilty?
+
+If $\Gamma $ has $T$, then if $\mu_\Gamma$ is injective, $\mu_G  $ is not surjective. So if $\Gamma$ hyperbolic, the HLS groupoid will not satisfy the Baum-Connes conjecture.
 
 
 
