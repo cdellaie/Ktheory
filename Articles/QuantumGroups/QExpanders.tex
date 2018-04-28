@@ -1,0 +1,31 @@
+\section{Expanders}
+
+Let $\mathbb G$ be a compact quantum group and $C$ its category of represententation. Recall the Tannaka-Krein-Woronovic reconstruction theorem:
+
+\begin{thm} Let $\mathcal C$ be a rigid $C^*$-tensor category. For every fiber functor $F : \mathcal C \rightarrow Hilb_f$, there exists a compact quantum group $\mathbb G_\mathcal C$ such that
+\[C \cong Rep(\mathbb G_C)  . \]
+Moreover, if $\mathcal C$ is the represntation category of finite dimensional representations of a compact quantum group $\mathbb G$, then  
+\[(\mathbb G)_{Rep(\mathbb G)}\cong \mathbb G . \]
+\end{thm}
+
+\begin{definition}
+A compact quantum subgroup of $\mathbb G$ is any compact quantum group $\mathbb H$ obtained as the automorphism of the fiber functor restricted to a full subcategory $\mathcal D$ of $Rep(\mathbb G)$ such that:
+\begin{itemize}
+\item[$\bullet$] $1_{Rep(\mathbb G)} \in \mathcal D $,
+\item[$\bullet$] $ \mathcal D \otimes \mathcal D \subset \mathcal D $,
+\item[$\bullet$] $\overline {\mathcal D} \subset \mathcal D$.
+\end{itemize} 
+Then $Irr(\mathbb H) \subset Irr(\mathbb G)$.
+\end{definition}
+
+An approximating sequence for $\mathbb G$ is a sequence of quantum subgroups $\mathbb H_n = \mathbb G(\mathcal D_n)$ such that:
+\begin{itemize}
+\item[$\bullet$] $\mathcal D_{n+1} \subset \mathcal D_n $,
+\item[$\bullet$] $\cap \mathcal D_n = 1_{\mathcal C} $,
+\item[$\bullet$] $Irr(\mathbb G)/ Irr(\mathbb H_n)$ is a finite set.
+\end{itemize} 
+
+An approximating sequence $(\mathbb G, \{\mathcal D_n\}_n)$ is an expanser if \[Spec(\Delta_{\mathbb G/ \mathbb H_n}) \subset \{0\}\cup [\varepsilon, 1] \quad \forall n.\]
+
+Show that if $(\mathbb G, \{\mathcal D_n\}_n)$ is an expander and $\mathbb G$ has T, then $\prod A_n$ is not $K$-exact. In particular it doesn't satisfy the Kunneth coefficient theorem.
+
