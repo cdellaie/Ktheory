@@ -15,6 +15,20 @@ A list of books I like about general knowledge in science:
 \item[$\bullet$] Manjit Kumar:
 \item[$\bullet$] Amir Alexander, Infinitesimal: How a Dangerous Mathematical Theory Shaped the Modern World
 \item[$\bullet$] Ian Stewart, Does God play dice?
+\item[$\bullet$] History of Statistics, Stielger\\
+\end{itemize}
+
+Overview and more specialized books:
+\begin{itemize}
+\item[$\bullet$] Moonshine beyond the Monster, Terry Gannon
+\item[$\bullet$] Le theoreme d'uniformisation, Saint-Gervais
+\item[$\bullet$] Invitation aux mathematiques de Fermat, Hellgouarch
+\item[$\bullet$] Rached Mneime, tous ses livres!
+\item[$\bullet$] Hubbard West pour les equa diff
+\item[$\bullet$] Noether's theorem, Yvette K
+\item[$\bullet$] Nother's wonderful theorem
+\item[$\bullet$] The annus mirabellus of Einstein
+\item[$\bullet$] The Road to Reality, Sir Roger Penrose 
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,8 +71,9 @@ a unital order isomorphism, i.e. \[\alpha(K_0(A)_+) \subseteq K_0(B)_+ \quad \te
 Then there exists a unital $*$-isomorphism $\phi; A\rightarrow B$ such that $\phi_*=\alpha$.
 \end{thm}
 
-
+%%%%%%%%%%%%%%%%%%%%%
 \section{Groups}
+%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
 \item[$\bullet$] Amenable, a-T-menable, property T, with a diagram
@@ -78,7 +93,10 @@ And groupoids:
 \item[$\bullet$] action groupoids $X\rtimes \Gamma$, principal bundles groupoids $P\times_G P$, where $P \rightarrow X$ is a $G$-bundle
 \item[$\bullet$] equivalence relation groupoids
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{$C^*$-algebras}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}
 \item[$\bullet$] CAR algebra $C^*\langle a_i , a_i a_j +a_j a_i = \delta_{ij} \rangle $ or $\bigotimes M_2(\C)$ or 
@@ -88,8 +106,20 @@ M_{2^n}(\C) & \rightarrow & M_{2^{n+1}}(\C) \\
 a           & \mapsto     & \begin{pmatrix} a & 0 \\ 0 & a\end{pmatrix}\end{array}\right.\]
 \end{itemize}
 
+Class of $C^*$-algebras.\\
 
+\begin{itemize}
+\item[$\bullet$] The bootstrap class $\mathcal B$
+\item[$\bullet$] The class $\mathcal N$ of $C^*$-algebras $A$ such that the map 
+\[\alpha_{A,B}: K_*(A)\otimes K_*(B) \rightarrow K_*(A \otimes B)\]
+is an isomorphism for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group. In \cite{schochetRosenberg}, it is shown that $\mathcal N$ contains all of the bootstrap class.
+\item[$\bullet$] Non exact $C^*$-algebra: to my knowledge only one example is known: the reduced $C^*$-algebra $C_r^*(\Gamma) $ of a finitely generated group whose Cayley graph contains expander. Using Ozawa's resulte \cite{Ozawa}, one can construct finite dimensional $C^*$-algebras $M_{X_n}$ such that 
+\[ 0 \rightarrow C_r^*(\Gamma) \otimes \bigoplus M_{X_n} \rightarrow C_r^*(\Gamma) \otimes \prod M_{X_n} \rightarrow C_r^*(\Gamma) \otimes \left(\prod M_{X_n} /  \bigoplus M_{X_n} \right) \rightarrow 0\] is not exact in the middle.\\ The problem of the existence of such a group is an interesting question, which was stated by Gromov and proved rigorously by several people in the wake of this.	
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Noncommutative geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Why $SU_q(2)$?}
 
@@ -165,6 +195,26 @@ Then the handle element is $h=2t$ and
 0 & \text{if }g\text{ is even.}
 \end{array}\right.\]  
 
+The second talk was directed towards extended field theories. First recall some higher category theory: $n$-categories, etc... And an extented TFT is a symmetric monoidal functor between symmetric monoidal $n$-categories
+\[Z : Cob_n \rightarrow \mathcal C.\]
+
+Then the following theorem was proved in \cite{Lurie}.
+
+\begin{thm}
+The evaluation functor \[ Z \mapsto Z(*)\] establishes a bijective correspondance between extended $n$-dimensional TFT and fully dualizable objects of $\mathcal C$. 
+\end{thm}
+
+We now give an application of this result to the Jones polynomial. In \cite{WittenJones}, Witten gives an interpretation of the Jones polynomial, an isotopy invariant of links, as induced from a $3$-dimensional TFT. The drawback of this article (for us) is that Witten uses Physical TFT's, i.e. gauge theories. The Jones polynmial is then shown to be the value of the partition function of a gauge field theory on $\mathbb S^3$ with gauge group $SU(2)$. I propose to rewrite this result in our setting as an exercise. \\  
+
+A link is a disjoint union of embedding of the circle into $\mathbb S^3$
+\[\mathcal L = \{ \text{embeddings }\coprod_{i=1}^k \mathbb S^1 \hookrightarrow \mathbb S^3 \}.\]
+we will often make no distinction between the embedding and its image in the $3$-sphere, which we will denote by $L$. The Jones polynomial of a link $L$ is defined as an isotopy invariant polynomial $V : \mathcal L \rightarrow \Z [t^{\frac{1}{2}},t^{-\frac{1}{2}}]$ satisfying the Skein relations
+\[-t^{\frac{1}{2}} V_+ + (t^{\frac{1}{2}} - t^{-\frac{1}{2}})V_0 + t^{-\frac{1}{2}}V_- = 0.\]
+To a link $L$ one can associated the $3$-manifold $M_L= \mathbb S^3 - L$. Consider the extended TFT 
+\[ Z^{(n)} : Cob_{3} \rightarrow \mathcal C\] given by $Z()=V_n$ where is the fundamental representation of $\mathfrak{su}(n)$. By the cobordism theorem, it is enough to define the TFT on all of $Cob_3$. Then
+\[ \phi(V_L) = Z^{(2)}(M_L),\]
+where $\phi : \Z [t^{\frac{1}{2}},t^{-\frac{1}{2}}] \rightarrow \C$ is the evaluation at a root of unity $q\in \C^\times$. This can be proved by showing that $Z^{(n)}(M_L)$ satisfies the skein relation \[-q^{\frac{n}{2}} V_+ + (q^{\frac{1}{2}} - q^{-\frac{1}{2}})V_0 + q^{-\frac{n}{2}}V_- = 0\]
+
 \subsection{Reminder}
 
 A locally ringed space is a topological space $X$ together with a sheaf or ring $\mathcal O_X$ over $X$ such that all stalks are local rings, ie have a unique maximal ideal.\\
@@ -198,7 +248,13 @@ Is the right part $G(\mathbb A_f)/ G(K)$ is isomorphic to the inductive limit $G
 
 Yes if $G= GL_1$: \[ \varinjlim \Z / p^k \Z = \mathbb Q_p / \Z_p.\]
 
+\section{Haagerup property, cocycles and the mapping class group}
 
+If $\Sigma$ is a closed oriented connected surface (with marked points), we denote by $Mod(\Sigma)$ its so-called mapping class group.\\
+
+In \cite{CostantinoMartelli} are used bounded representations of the mapping class group parametrized by a complex number $z\in \mathbb D$:
+\[\pi_z : \Gamma \rightarrow \mathcal L(H).\]
+Here, $H$ is the Hilbert space obtained as the free Hilbert space generated by multicurves having a finite number of intersections with a fixed triangulation $\tau$ of $\Sigma$. 
 
 
 

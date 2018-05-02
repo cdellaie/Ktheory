@@ -16,11 +16,12 @@
 \contentsline {section}{\numberline {5}A list of books}{10}{section.5}
 \contentsline {section}{\numberline {6}Seminar}{10}{section.6}
 \contentsline {subsection}{\numberline {6.1}Cartan subalgebras}{10}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Classification and the UCT}{10}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.2}Classification and the UCT}{11}{subsection.6.2}
 \contentsline {section}{\numberline {7}Groups}{11}{section.7}
-\contentsline {section}{\numberline {8}$C^*$-algebras}{11}{section.8}
-\contentsline {section}{\numberline {9}Noncommutative geometry}{11}{section.9}
-\contentsline {subsection}{\numberline {9.1}Why $SU_q(2)$?}{11}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}TQFT}{13}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Reminder}{14}{subsection.9.3}
-\contentsline {section}{\numberline {10}Langlands}{14}{section.10}
+\contentsline {section}{\numberline {8}$C^*$-algebras}{12}{section.8}
+\contentsline {section}{\numberline {9}Noncommutative geometry}{12}{section.9}
+\contentsline {subsection}{\numberline {9.1}Why $SU_q(2)$?}{12}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}TQFT}{14}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Reminder}{15}{subsection.9.3}
+\contentsline {section}{\numberline {10}Langlands}{16}{section.10}
+\contentsline {section}{\numberline {11}Haagerup property, cocycles and the mapping class group}{16}{section.11}

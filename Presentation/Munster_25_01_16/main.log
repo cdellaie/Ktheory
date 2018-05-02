@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  26 APR 2018 16:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  1 MAY 2018 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1046,18 +1046,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 
-LaTeX Warning: Citation `TuBC2' on page 3 undefined on input line 9.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
-
-
-LaTeX Warning: Citation `TuBC2' on page 3 undefined on input line 18.
-
-
-LaTeX Warning: Citation `TuBC2' on page 3 undefined on input line 18.
 
 
 Overfull \hbox (35.61566pt too wide) in paragraph at lines 17--20
@@ -1200,12 +1191,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 \openout2 = `zoology.aux'.
 
  (./zoology.tex
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
  []
 
@@ -1213,90 +1204,128 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 81.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 81.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 81.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 94.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 94.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 94.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
 
  []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 98.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 98.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 98.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 123--125
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
+LaTeX Warning: Citation `schochetRosenberg' on page 12 undefined on input line 
+115.
+
+
+LaTeX Warning: Citation `Ozawa' on page 12 undefined on input line 116.
+
+
+Overfull \hbox (27.72696pt too wide) detected at line 117
+\OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (^^@) 
+\OMS/cmsy/m/n/10 
+ [] \OML/cmm/m/it/10 M[] \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10
+ (^^@) \OMS/cmsy/m/n/10 
+ [] \OML/cmm/m/it/10 M[] \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10
+ (^^@) \OMS/cmsy/m/n/10 
+ [] ! \OT1/cmr/m/n/10 0
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 124.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 124.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 134--136
+Underfull \hbox (badness 10000) in paragraph at lines 153--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--158
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 164--166
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 178--180
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--196
+Underfull \hbox (badness 10000) in paragraph at lines 186--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
  []
 
-) [14]
-No file main.bbl.
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 244--246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+
+ []
+
+) [16] (./main.bbl) [17
+
+]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
-(./main.aux (./Groupoids.aux) (./HarishChandra.aux) (./UCT.aux)
-(./FunkyQuestions.aux) (./zoology.aux))
+ (./main.aux (./Groupoids.aux) (./HarishChandra.aux)
+(./UCT.aux) (./FunkyQuestions.aux) (./zoology.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 520B1813ED7538A4EA059CC6A1E8D47F;1568.
+(rerunfilecheck)             Checksum: CD7BD151A961208C26EE15542845ED9B;1660.
 
 
 LaTeX Warning: There were undefined references.
@@ -1304,11 +1333,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 35.
  ) 
 Here is how much of TeX's memory you used:
- 18646 strings out of 492990
- 354726 string characters out of 6132636
- 422041 words of memory out of 5000000
- 21793 multiletter control sequences out of 15000+600000
- 14703 words of font info for 58 fonts, out of 8000000 for 9000
+ 18670 strings out of 492990
+ 354998 string characters out of 6132636
+ 422168 words of memory out of 5000000
+ 21804 multiletter control sequences out of 15000+600000
+ 15049 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,16n,84p,655b,1000s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1329,13 +1358,14 @@ live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2
 017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (14 pages, 272058 bytes).
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (17 pages, 295971 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
- 264 compressed objects within 3 object streams
- 50 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 338 PDF objects out of 1000 (max. 8388607)
+ 294 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
