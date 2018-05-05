@@ -3,46 +3,47 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main_Kunneth.aux
 The style file: plain.bst
 Database file #1: biblio2.bib
+Warning--I didn't find a database entry for "Kunneth"
 Warning--empty school in LeGall
-You've used 24 entries,
+You've used 25 entries,
             2118 wiz_defined-function locations,
-            652 strings with 7347 characters,
-and the built_in function-call counts, 6774 in all, are:
-= -- 686
-> -- 241
+            658 strings with 7462 characters,
+and the built_in function-call counts, 6978 in all, are:
+= -- 706
+> -- 248
 < -- 5
-+ -- 102
-- -- 74
-* -- 433
-:= -- 1162
-add.period$ -- 73
-call.type$ -- 24
-change.case$ -- 101
++ -- 105
+- -- 76
+* -- 441
+:= -- 1201
+add.period$ -- 76
+call.type$ -- 25
+change.case$ -- 105
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 279
-empty$ -- 567
-format.name$ -- 74
-if$ -- 1396
+cite$ -- 26
+duplicate$ -- 289
+empty$ -- 584
+format.name$ -- 76
+if$ -- 1437
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 27
-newline$ -- 123
-num.names$ -- 48
-pop$ -- 105
+int.to.str$ -- 25
+missing$ -- 28
+newline$ -- 128
+num.names$ -- 50
+pop$ -- 109
 preamble$ -- 1
-purify$ -- 84
+purify$ -- 87
 quote$ -- 0
-skip$ -- 184
+skip$ -- 191
 stack$ -- 0
-substring$ -- 441
-swap$ -- 41
+substring$ -- 446
+swap$ -- 42
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 86
+type$ -- 90
 warning$ -- 1
-while$ -- 76
-width$ -- 26
-write$ -- 260
-(There was 1 warning)
+while$ -- 78
+width$ -- 27
+write$ -- 270
+(There were 2 warnings)
