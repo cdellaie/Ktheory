@@ -25,3 +25,10 @@
 \contentsline {subsection}{\numberline {9.3}Reminder}{15}{subsection.9.3}
 \contentsline {section}{\numberline {10}Langlands}{16}{section.10}
 \contentsline {section}{\numberline {11}Haagerup property, cocycles and the mapping class group}{16}{section.11}
+\contentsline {section}{\numberline {12}Hawaii}{16}{section.12}
+\contentsline {subsection}{\numberline {12.1}HLS groupoids}{16}{subsection.12.1}
+\contentsline {section}{\numberline {13}Mayer-Vietoris}{18}{section.13}
+\contentsline {section}{\numberline {14}Quantum groups}{18}{section.14}
+\contentsline {section}{\numberline {15}Property T}{18}{section.15}
+\contentsline {section}{\numberline {16}Number theory}{18}{section.16}
+\contentsline {section}{\numberline {17}Fock spaces, CuntzKrieger algebras, and second quantization}{18}{section.17}
