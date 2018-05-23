@@ -1,0 +1,31 @@
+\begin{frame}{Mayer-Vietoris}
+Two ideals $I_1$ and $I_2$ in a unital $C^*$-algebra $A$ such that 
+\[A= I_1 + I_2\]
+and there are two positive elements $a_k  \in I_k$ such that $a_1^2+a_2^2 = 1$.\\
+\end{frame}
+
+\begin{frame}{Mayer-Vietoris}
+$\bullet$ $u \in U_n(A)$ representing a class in $K_1(A)$. Then
+\[v = a_1 u +a_2 1_A\]
+defines a unitary modulo $M_n(I_1\cap I_2)$, and
+\begin{itemize}
+\item[$\bullet$] $v \sim u \  \text{mod } M_n(I_2)$,
+\item[$\bullet$] $v \sim 1 \  \text{mod } M_n(I_1)$.
+\end{itemize}
+$\bullet$ $p \in U_n(A)$ representing a class in $K_0(A)$. Suppose $a_i$ are projections. Then
+\[q = a_1 p +a_2 1_A\]
+defines a projection modulo $M_n(I_1\cap I_2)$, and
+\begin{itemize}
+\item[$\bullet$] $q \sim p \  \text{mod } M_n(I_2)$,
+\item[$\bullet$] $q \sim 1 \  \text{mod } M_n(I_1)$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mayer-Vietoris}
+\begin{propfr}
+The Mayer-Vietoris boundary map \[\partial_{MV} : K_*(A) \rightarrow K_{*+1}(I_1\cap I_2)\]
+satisfies \[\partial_{MV}[u]=  \partial [v] \quad \partial_{MV}[p]=  \partial [q]\]
+where $\partial$ is the boundary of the exact sequence
+\[0 \rightarrow I_1\cap I_2 \rightarrow  A \rightarrow  A/(I_1\cap I_2) \rightarrow  0.\]
+\end{propfr}
+\end{frame} 
