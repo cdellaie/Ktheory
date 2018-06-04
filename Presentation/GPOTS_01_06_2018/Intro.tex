@@ -1,0 +1,63 @@
+\begin{frame}{Geometric $C^*$-algebras}
+Following Guoliang Yu:
+\begin{definition}[Geometric $C^*$-algebra]
+$C^*$-algebra $A$ with a length function $l: A \rightarrow [0,\infty]$ such that
+\begin{itemize}
+\item $l(a+b)\leq \max (l(a), l(b))$
+\item $l(ab)\leq l(a)+ l(b)$
+\item $l(\lambda a )= l (a)$
+\item $\{a\in A : l(a)< \infty\}$ is dense in $A$
+\item if $A$ unital, $l(1)=0$
+\end{itemize}
+\end{definition}
+\end{frame}
+
+\begin{frame}{Examples}
+$\bullet$ For a discrete group with a left invariant length $l: \Gamma \rightarrow [0,\infty)$, 
+\[l(\sum a_g \lambda_g) = \sup \{ l(g) : a_g \neq 0 \} \quad \forall \sum a_g \lambda_g \in \C [\Gamma]  \]
+defines a length on $C_r^*(\Gamma)$, $C_{max}^*(\Gamma)$, or any $C^*$-completion of $\C [\Gamma]  $.\\
+
+\vspace{0.5in}
+ 
+$\bullet$ For a discrete countable metric space  $(X,d)$ with bounded geometry, i.e. 
+\[\sup_{x \in X} |B(x,R)| < \infty \quad \forall R>0 , \]
+define
+\[l(T) = \sup \{ d(x,y) : T_{xy}\neq 0 \} \quad \forall T\in \C [X] \subseteq \mathcal L(l^2(X)\otimes H).  \]
+This is a length on the Roe algebra $C^*(X)$, the uniform Roe algebra $C_{u}^*(X)$, or any $C^*$-completion of $\C [X]  $.\\
+\end{frame}
+
+%\begin{frame}{Coarse structure}
+%\begin{definitionfr}
+%A coarse structure $\mathcal E$ is an abelian semigroup with a lattice structure. \\
+%\end{definitionfr}
+%\vspace{0.3 cm}
+%Lattice a partially ordered set such that ever pair $(E,E')$ has a supremum $E\vee E'$ and an infimum $E\wedge E'$.\\
+%\vspace{0.3 cm}
+%Denote by $(E,E')\mapsto E\circ E'$ the composition in $\mathcal E$.
+%\end{frame}
+
+%\begin{frame}{Filtered $C^*$-algebras}
+%\begin{definitionfr}
+%A $C^*$-algebra $A$ is $\mathcal E$-filtered if there exists a family of closed self-adjoint subspaces $\{A_E\}_{E\in\mathcal E}$ of $A$ such that:
+%\begin{itemize}
+%\item[$\bullet$] if $E\leq E'$, then $A_E\subseteq A_{E'}$,
+%\item[$\bullet$] for every $E,E'\in\mathcal E$, $A_E.A_{E'}\subseteq A_{E\circ E'}$,
+%\item[$\bullet$] $A$ is the closure of the union of all the $A_E$, i.e. $\overline{\cup_{E\in\mathcal E}A_E} = A$.
+%\item[$\bullet$] if $A$ is unital, we impose $1\in A_E,\forall E\in\mathcal E$.
+%\end{itemize}
+%\end{definitionfr}
+%\end{frame}
+
+\begin{frame}{Filtered $C^*$-algebras}	
+A \textit{coarse structure} \cite{DellAieraThesis} is a poset $\mathcal E$ equipped with an abelian semi group structure such that, for any two elements $E,E'\in \mathcal E$, there exists an element $F\in \mathcal E$ such that $E\leq F$ and $E'\leq F$. \\
+
+\begin{definition}
+A $C^*$-algebra $A$ is said to be $\mathcal E$-filtered if there exists a family $\{A_E \}_{E\in \mathcal E}$ of closed self-adjoint subspaces of $A$ such that:
+\begin{itemize}
+\item[$\bullet$] $A_E \subseteq A_{E'}$ if $E\leq E'$,
+\item[$\bullet$] $A_E . A_{E'} \subseteq A_{EE'}$,
+\item[$\bullet$] $\cup_{E\in \mathcal E} A_E$ is dense in $A$.
+\end{itemize} 
+If $A$ is unital, we impose that $1\in A_E$ for every $E\in \mathcal E$.
+\end{definition}
+\end{frame}
