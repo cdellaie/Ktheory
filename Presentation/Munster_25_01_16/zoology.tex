@@ -137,7 +137,7 @@ One always has the following exact sequence of $*$-algebras
 \[ 0 \rightarrow \oplus \C[\Gamma_n] \rightarrow C_c(G) \rightarrow \C [\Gamma]  \rightarrow 0\]      
 which induces the following exact sequence of $C^*$-algebras
 \[ 0 \rightarrow \oplus \C[\Gamma_n] \rightarrow C_r^*(G) \rightarrow C^*_{\mathcal N} (\Gamma)  \rightarrow 0\]   
-where $C^*_{\matcal N}(\Gamma)$ is the completion of $\C[\Gamma]$ w.r.t. to the norm
+where $C^*_{\mathcal N}(\Gamma)$ is the completion of $\C[\Gamma]$ w.r.t. to the norm
 \[||x||_{\mathcal N} = \sup_{N\in \mathcal N} ||\lambda_{N} (x)||\quad x\in \C[\Gamma] \]
 induced by the quasi-regular representations $\lambda_{N} : C_{max}^*(\Gamma) \rightarrow \mathcal L(l^2(\Gamma/ N))$.  \\ 
 
@@ -152,6 +152,16 @@ for $\phi$ running accross all group homomorphisms from $\Gamma$ to a finite gro
 The restriction principle applies for the groupoid $G_{\mathcal N}(\Gamma)\times\Lambda$, and induces that its reduced $C^*$-algebra satisfies the Künneth formula. But then again, one can deduce this from a previous result, namely the restriction principle for groups. Indeed, apply it to $\Lambda$ with coefficient on the trivial bootstrap $\Lambda$-algebra $C_r^*(G)$.	\\ 
 \item[$\bullet$] Bekka shows that ??
 \end{itemize}
+
+%%%%%%%%%%%%%
+\section{Baum-Connes}
+%%%%%%%%%%%%%%
+
+Compact groups, or better: proper groupoids: Green-Julg. \\
+Connes-Kasparov: proof by representation theory (Wasserman, etc)\\
+Kasparov's Conspectus: towards Higson-Kasparov paper and the proof for Haagerup (J-L. Tu's general version in $KK$-theory, plus the beautiful result that aTmenability implies bootstrap)\\
+Ideas from Coarse geometry, and Yu and Roe's work, SkandalisTuYu etc.\\
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{GPOTS \& NCGOA 2018}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -172,6 +182,31 @@ The restriction principle applies for the groupoid $G_{\mathcal N}(\Gamma)\times
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Noncommutative geometry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Basic objects and constructions}
+
+Mainly, I'm interested in $*$-algebras $A$ (and their completions) which are $k$-algebras equipped with an involution $*$. Usually, $k=\C$ is the field of complex numbers. A very famous example of $*$-algebra is the algebra of the quantum harmonic oscillator,
+\[\mathcal H = k\langle x, y\rangle / (xy -yx = 1).\]
+When $k=\C$, one often represent $A$ as a sub-$*$-algebra of the bounded operators on aHilbert space $\mathcal L(H)$,and complete w.r.t. to the norm. Note that not all complex $*$-algebras admit such a representation. \\
+
+For instance, for$\mathcal H$, one easily get that 
+\[[x,P(y)] = P'(y) \quad \forall P\in \C[t]\]
+Then if $||\ ||$ is a multiplicative norm on$\mathcal H$, it satisfies
+\[ 2 ||x|| \ ||y|| \geq n \quad \forall n>0.\]   
+
+Basic construction:
+\begin{itemize}
+\item[$\bullet$] separation-completion: in our sense, a norm can be degenerate. Being multiplicative, the annhiliator of any norm is a closed ideal in $A$, so that there is an induced (classical/ nondegenerate) norm on the quotient algebra. The separation-completion is defined to be the completion of the quotient w.r.t. the induced norm. Let us say that if $\alpha$ is such a norm, wedenote by $A_\alpha$ the associated separation-completion. Any inequality 
+\[\alpha(x) \leq \beta (x) \quad \forall x\in A\]
+induces an inclusion of annilihator $N_\beta \subset N_\alpha$, and gives a canonical quotient map
+\[A_\beta \rightarrow A_\alpha.\]
+
+The basic class of examples comes from completion of the complex group ring $\C[\Gamma]$. For any family of unitary representations $\mathcal F$, one can define the $*$-norm
+\[||x||_{\mathcal F} = \sup \{||\pi(x)|| : \pi\in \mathcal F\}\]
+on $\C[\Gamma]$. The separation-completion is a $C^*$-algebra denoted $C^*_{\mathcal F}(\Gamma)$. For instance, if $\mathcal F$ consists of all unitary representations of $\Gamma$, then one gets the maximal $C^*$-algebra $C_{max}^*(\Gamma)$, while if the family is reduced to the left regular representation $\lambda_\Gamma$, one gets the reduced $C^*$-algebra $C^*_r(\Gamma)$. By inclusion, one gets the canonical quotient map
+\[\lambda_\Gamma : C^*_{max}(\Gamma) \rightarrow C_r^*(\Gamma).\]  
+ 
+\end{itemize}
 
 \subsection{Why $SU_q(2)$?}
 
@@ -286,7 +321,9 @@ Note: the functor $Spec$ gives an antiequivalence of categories between the cate
 A scheme is a locally ringed space locally isomorphic to an affine variety.
 \end{definition}
 
+%%%%%%%%%%%%
 \section{Langlands}
+%%%%%%%%%%%%
 
 A modular form of weight $k$ is a section of 
 \[\Lambda^{k+2}T^*M.\]

@@ -4,6 +4,7 @@ A level-1 auxiliary file: HarishChandra.aux
 A level-1 auxiliary file: UCT.aux
 A level-1 auxiliary file: FunkyQuestions.aux
 A level-1 auxiliary file: zoology.aux
+A level-1 auxiliary file: Grothendieck.aux
 The style file: plain.bst
 Database file #1: biblio.bib
 You're missing a field part---line 112 of file biblio.bib
@@ -33,4 +34,5 @@ I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "schochetRosenberg"
 Warning--I didn't find a database entry for "Ozawa"
 Warning--I didn't find a database entry for "SkandalisNotion"
+Warning--I didn't find a database entry for "HLS"
 (There were 5 error messages)
