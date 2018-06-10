@@ -109,13 +109,64 @@ a           & \mapsto     & \begin{pmatrix} a & 0 \\ 0 & a\end{pmatrix}\end{arra
 Class of $C^*$-algebras.\\
 
 \begin{itemize}
-\item[$\bullet$] The bootstrap class $\mathcal B$
+\item[$\bullet$] The bootstrap class $\mathcal B$ \\
 \item[$\bullet$] The class $\mathcal N$ of $C^*$-algebras $A$ such that the map 
 \[\alpha_{A,B}: K_*(A)\otimes K_*(B) \rightarrow K_*(A \otimes B)\]
-is an isomorphism for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group. In \cite{schochetRosenberg}, it is shown that $\mathcal N$ contains all of the bootstrap class.
-\item[$\bullet$] Non exact $C^*$-algebra: to my knowledge only one example is known: the reduced $C^*$-algebra $C_r^*(\Gamma) $ of a finitely generated group whose Cayley graph contains expander. Using Ozawa's resulte \cite{Ozawa}, one can construct finite dimensional $C^*$-algebras $M_{X_n}$ such that 
-\[ 0 \rightarrow C_r^*(\Gamma) \otimes \bigoplus M_{X_n} \rightarrow C_r^*(\Gamma) \otimes \prod M_{X_n} \rightarrow C_r^*(\Gamma) \otimes \left(\prod M_{X_n} /  \bigoplus M_{X_n} \right) \rightarrow 0\] is not exact in the middle.\\ The problem of the existence of such a group is an interesting question, which was stated by Gromov and proved rigorously by several people in the wake of this.	
+is an isomorphism for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group. In \cite{schochetRosenberg}, it is shown that $\mathcal N$ contains all of the bootstrap class.\\
+\item[$\bullet$] Non exact $C^*$-algebra: to my knowledge only one example is known: the reduced $C^*$-algebra $C_r^*(\Gamma) $ of a finitely generated group whose Cayley graph contains expander. Using Ozawa's result \cite{Ozawa}, one can construct finite dimensional $C^*$-algebras $M_{X_n}$ such that 
+\[ 0 \rightarrow C_r^*(\Gamma) \otimes \bigoplus M_{X_n} \rightarrow C_r^*(\Gamma) \otimes \prod M_{X_n} \rightarrow C_r^*(\Gamma) \otimes \left(\prod M_{X_n} /  \bigoplus M_{X_n} \right) \rightarrow 0\] is not exact in the middle.\\ The problem of the existence of such a group is an interesting question, which was stated by Gromov and proved rigorously by several people in the wake of this.\\	
 \end{itemize}
+
+One can define analog of approximation properties in the setting of $K$-theory. \\
+
+\begin{itemize}
+\item[$\bullet$] $A$ is $K$-nuclear if the class of the natural map
+\[ p_{A,B} : A\otimes_{max} B \rightarrow A\otimes_{min} B \]
+is invertible as an element of $KK(A\otimes_{max} B,A\otimes_{min} B)$.\\
+\item[$\bullet$] $G$ is $K$-amenable if the class of the regular representation
+\[ \lambda_{G} : C_{max}^*(G) \rightarrow C_{r}^*(G) \]
+is invertible as an element of $KK(C_{max}^*(G),C_{r}^*(G))$.\\
+\end{itemize}
+
+For instance, Skandalis proves in \cite{SkandalisNotion} that, if $\Lambda$ is an infinite hyperbolic property T group, then $C_r^*(\Lambda)$ is not $K$-nuclear. In particular, it is not $KK$-equivalent to a nuclear $C^*$-algebra, and cannot be Bootstrap. This completely renders proving the Baum-Connes conjecture by mean of Dirac-Dual-Dirac method hopeless. An example of such a group is given by any lattice in $Sp(n,1)$ for instance. (higher rank algebraic semisimple groups?) \\
+
+After developing a restriction principle for groupoids, a natural question was to find a $C^*$-algebra coming from a groupoid crossed-product that we were able to prove that it satisfied the Künneth formula, while still not being a consequence of previous results. One could have started with the so called HLS groupoid $G_{\mathcal N}(\Gamma)$ associated to a residually finite finitely generated group $\Gamma$ and a nested sequence of decreasing  normal sugroups of finite index $\mathcal N$.\\
+
+One always has the following exact sequence of $*$-algebras
+\[ 0 \rightarrow \oplus \C[\Gamma_n] \rightarrow C_c(G) \rightarrow \C [\Gamma]  \rightarrow 0\]      
+which induces the following exact sequence of $C^*$-algebras
+\[ 0 \rightarrow \oplus \C[\Gamma_n] \rightarrow C_r^*(G) \rightarrow C^*_{\mathcal N} (\Gamma)  \rightarrow 0\]   
+where $C^*_{\matcal N}(\Gamma)$ is the completion of $\C[\Gamma]$ w.r.t. to the norm
+\[||x||_{\mathcal N} = \sup_{N\in \mathcal N} ||\lambda_{N} (x)||\quad x\in \C[\Gamma] \]
+induced by the quasi-regular representations $\lambda_{N} : C_{max}^*(\Gamma) \rightarrow \mathcal L(l^2(\Gamma/ N))$.  \\ 
+
+Now this exact sequence intertwines the Baum-Connes assembly maps, and the Baum-Connes conjecture for $G_{\mathcal N}(\Gamma)$ is equivalent to $\mu_{\Gamma,\mathcal N}$ being an isomorphism. \\
+
+\begin{itemize}
+\item[$\bullet$] If $\Gamma= \mathbb F_2$ and 
+\[N_n = \cap ker \phi \]
+for $\phi$ running accross all group homomorphisms from $\Gamma$ to a finite group of cardinality less than $n$, then $C_{\mathcal N}^*(\Gamma) \cong C_{max}^*(\Gamma)$ and $G$ satifies the Baum-Connes conjecture, is ample and satisfies the restriction condition. So we get that $C_r^*(G)$ satisfies the Künneth formula. It is still a result that one can get using the fact that $\Gamma$ being a-T-menable, it is $K$-amenable. Hence $C^*_{max}(\Gamma)$ and $C_r^*(\Gamma)$ are $KK$-equivalent and bootstrap, so that $C_r^*(G)$ also is by extension stability of bootstrapness. A remark of R. Willett is woth mentioning: $\mathbb F_2$ being the fundamental group of the wedge of two circles, it is $KK$-equivalent to $C(\mathbb S^1 \wedge \mathbb S^1)$.\\
+\item[$\bullet$] One can artificially try to get rid of bootstrapiness by spatially tensoring this exact sequence by $C_r^*(\Lambda)$ for a infinite hyperbolic property T group. One then get the extension
+\[ 0 \rightarrow \oplus \C[\Gamma_n] \otimes_{min} C_r^*(\Lambda) \rightarrow C_r^*(G\times \Lambda) \rightarrow C^*_{\mathcal N} (\Gamma)\otimes_{min} C_r^*(\Lambda)   \rightarrow 0.\]
+The restriction principle applies for the groupoid $G_{\mathcal N}(\Gamma)\times\Lambda$, and induces that its reduced $C^*$-algebra satisfies the Künneth formula. But then again, one can deduce this from a previous result, namely the restriction principle for groups. Indeed, apply it to $\Lambda$ with coefficient on the trivial bootstrap $\Lambda$-algebra $C_r^*(G)$.	\\ 
+\item[$\bullet$] Bekka shows that ??
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{GPOTS \& NCGOA 2018}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Arnaud Brothier: some representations of the Thompson group}
+
+\subsection{Piotr Nowak: Property T for $Out(\mathbb F_n)$}
+
+\subsection{Wilhem Winter: Relative nuclear dimension}
+
+\subsection{Rufus Willett: Exactness and exotic crossed-product}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Coarse geometry \& dynamics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Noncommutative geometry}
