@@ -18,6 +18,7 @@
 \BOOKMARK [2][-]{subsection.6.2}{Classification and the UCT}{section.6}% 18
 \BOOKMARK [1][-]{section.7}{Groups}{}% 19
 \BOOKMARK [1][-]{section.8}{C*-algebras}{}% 20
+<<<<<<< HEAD
 \BOOKMARK [1][-]{section.9}{GPOTS \046 NCGOA 2018}{}% 21
 \BOOKMARK [2][-]{subsection.9.1}{Arnaud Brothier: some representations of the Thompson group}{section.9}% 22
 \BOOKMARK [2][-]{subsection.9.2}{Piotr Nowak: Property T for Out\(Fn\)}{section.9}% 23
@@ -30,3 +31,18 @@
 \BOOKMARK [2][-]{subsection.11.3}{Reminder}{section.11}% 30
 \BOOKMARK [1][-]{section.12}{Langlands}{}% 31
 \BOOKMARK [1][-]{section.13}{Haagerup property, cocycles and the mapping class group}{}% 32
+=======
+\BOOKMARK [1][-]{section.9}{Noncommutative geometry}{}% 21
+\BOOKMARK [2][-]{subsection.9.1}{Why SUq\(2\)?}{section.9}% 22
+\BOOKMARK [2][-]{subsection.9.2}{TQFT}{section.9}% 23
+\BOOKMARK [2][-]{subsection.9.3}{Reminder}{section.9}% 24
+\BOOKMARK [1][-]{section.10}{Langlands}{}% 25
+\BOOKMARK [1][-]{section.11}{Haagerup property, cocycles and the mapping class group}{}% 26
+\BOOKMARK [1][-]{section.12}{Hawaii}{}% 27
+\BOOKMARK [2][-]{subsection.12.1}{HLS groupoids}{section.12}% 28
+\BOOKMARK [1][-]{section.13}{Mayer-Vietoris}{}% 29
+\BOOKMARK [1][-]{section.14}{Quantum groups}{}% 30
+\BOOKMARK [1][-]{section.15}{Property T}{}% 31
+\BOOKMARK [1][-]{section.16}{Number theory}{}% 32
+\BOOKMARK [1][-]{section.17}{Fock spaces, CuntzKrieger algebras, and second quantization}{}% 33
+>>>>>>> origin/master

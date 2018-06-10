@@ -1,0 +1,61 @@
+\begin{frame}{Roe algebras}
+Let $X$ be a discrete metric space with bounded geometry
+\[\mathcal E_X = \{F\subseteq X\times X \text{ s.t. } F= F^{-1} \ \& \ \sup_{F} d(x,y) < \infty	\},\]
+ordered by inclusion and $F\circ F' = FF' \cup F'F$.\\
+ \vspace{0.4in}
+Then $C^*(X)$ is $\mathcal E_{X}$-filtered by  
+\[\C_F [X] = \{ T\in \mathcal L(l^2(X)\otimes H) \text{ s.t. } supp(T)\subseteq F\}	.\]
+This times, the filtration is more natural: it depends only on the (coarse) class of the metric.
+\end{frame}
+
+\begin{frame}{Discrete groups}
+Let $\Gamma$ be a discrete group and
+\[\mathcal E_\Gamma = \{F\subset \Gamma \text{ finite} , F= F^{-1}\},\]
+ordered by inclusion and $F\circ F' = FF' \cup F'F$.\\
+ \vspace{0.4in}
+Then $C_r^*(\Gamma)$ is $\mathcal E_{\Gamma}$-filtered by  
+\[\C_F [\Gamma] = \text{Span} \{ \lambda_\gamma\}_{\gamma \in F}.\]
+More generally, any crossed product $A\rtimes \Gamma$ is $\mathcal E_{\Gamma}$-filtered by
+\[A_F[\Gamma]= \text{Span} \{ a\lambda_\gamma\}_{a \in A ,\gamma \in F}.\]
+\end{frame}
+
+\begin{frame}{Compact groups}
+Let $G$ be a compact group. For every unitary representation 
+\[\pi : G \rightarrow U(H), \] 
+denote by $\pi_{\xi,\eta}(g) =\langle \pi(g)\xi ,\eta\rangle$ its coefficient. Then, if 
+\[ \mathcal E_G = \text{set of symmetric finite dimensional unitary representations} \]
+$C(G)$ is $\mathcal E_G$-filtered by  
+\[C_\pi (G) = \text{Span} \{ \pi_{\xi ,\eta}\}_{\xi,\eta\in H}.\]
+\end{frame}
+
+\begin{frame}{Compact quantum groups}
+This example carries on to compact quantum groups \[\mathbb G = (C(\mathbb G),\Delta).\] 
+
+For every unitary representation $U \in \mathcal M (C(\mathbb G)\otimes \mathfrak K(H))$, denote by $\pi_{\xi,\eta}=\omega_{\xi,\eta} (U)$ its coefficient. Then, if 
+\[ \mathcal E_{\mathbb G} = \text{set of symmetric finite dimensional unitary representations} \]
+$C(\mathbb G)$ is $\mathcal E_{\mathbb G}$-filtered by  
+\[C_\pi (\mathbb G) = \text{Span} \{ \pi_{\xi ,\eta}\} \quad \pi \in \mathcal E_{\mathcal G}.\]
+
+More generally, any crossed product $A\rtimes \hat {\mathbb G}$ is $\mathcal E_{\mathbb G}$-filtered by
+\[C_\pi (G,A) = \text{Span} \{ a \pi_{\xi ,\eta}\}_{\xi,\eta\in H}.\]
+\end{frame}
+
+\begin{frame}{Etale groupoids}Let $G$ be an étale groupoid and
+\[\mathcal E_G = \{K\subseteq G \text{ compact}, K= K^{-1}\},\]
+ordered by inclusion and $K\circ K' = KK' \cup K'K$.\\
+ \vspace{0.4in}
+Then $C_r^*(G)$ is $\mathcal E_{G}$-filtered by  
+\[C_K (G)= \{ f\in C_c(G) \text{ s.t. supp}f\subseteq K \}.\]
+More generally, any crossed product $A\rtimes \Gamma$ is $\mathcal E_{\Gamma}$-filtered by
+\[A_K(G)= \{ f\in C_c(G,A) \text{ s.t. supp}f\subseteq K \}.\]
+\end{frame}
+
+\begin{frame}{Coherence}
+$\bullet$ In the case where $G=\Gamma = \hat{\mathbb G}$ is a discrete group, one finds  
+\[\mathcal E_G = \mathcal E_\Gamma = \mathcal E_{\mathbb G}.\]
+$\bullet$ If $G$ is the coarse groupoid $G(X)$ associated to a discrete bounded geometry space $X$, then one finds $\mathcal E_{G(X)} = \mathcal E_X$. A result of Skandalis, Tu \& Yu states 
+\[C^*(X) \cong l^\infty (X,\mathfrak K) \rtimes_r G(X),\]
+and can be strenghten to an isomorphism of filtered $C^*$-algebras
+\[C_{\overline E}(G(X), l^\infty ) \cong \C_{E}[X].\] 
+
+\end{frame}
