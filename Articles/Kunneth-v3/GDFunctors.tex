@@ -1,0 +1,57 @@
+	Theorem \ref{MainTheorem} can be applied directly in many situations (see sections \ref{Section:AmenabilityAtInfinity} and \ref{Section:TwistedGroupoidAlgebras}) but oftentimes it is not directly a map on $\K_*^{\mathrm{top}}(G;A)$ one is interested in, but a map on a construction involving this group, which still shares the same basic functorial properties.
+	Moreover, the map in question must not necessarily be given by taking the Kasparov product. A closer inspection of the proof of Theorem \ref{MainTheorem} reveals, that we only used the naturality of the Kasparov product. Hence, following \cite{CEO} we can use the language of category theory to obtain a more general result.
+	To begin with, given a second countable ample groupoid $G$, we denote by $\mathcal{C}(G)$ the category of separable commutative proper $G$-algebras, i.e. algebras of the form $C_0(X)$, where $X$ is a second countable proper $G$-space. Also let $\mathcal{S}(G)$ be the set containing $G$ and all of its compact open subgroupoids.
+	\begin{defi}\label{Def:GDfunctor} Let $G$ be an ample groupoid.
+		A \textit{Going-Down functor} for $G$ is a collection of $\ZZ$-graded functors $\mathcal{F}=(\mathcal{F}^n_H)_{H\in \mathcal{S}(G)}$, where $\mathcal{F}^n_{H}$ is a covariant additive functor from the category of second countable, proper, locally compact $G$-spaces (with morphisms being the proper, continuous $G$-maps) to the category of abelian groups, such that the following axioms are satisfied:
+		\begin{enumerate}
+			\item Cohomology axioms: For every $H\in \mathcal{S}(G)$
+			\begin{enumerate}
+				\item the functor $\mathcal{F}_H^n$ is homotopy invariant;
+				\item the functor $\mathcal{F}_H^n$ is half-exact, i.e. for every short exact sequence $$0\longrightarrow I\longrightarrow A\longrightarrow A/I\longrightarrow 0$$
+				in $\mathcal{C}(H)$, the sequence
+				$$\mathcal{F}_H^n (A/I)\longrightarrow \mathcal{F}_H^n(A)\longrightarrow\mathcal{F}_H^n$$
+				is exact in the middle; and 
+				\item for each $n\in\ZZ$ there is a natural equivalence between $\mathcal{F}_H^{n+1}$ and the functor $A\mapsto \mathcal{F}_H^n(A\otimes C_0(\RR))$, where $H$ acts trivially on the second tensor factor.
+			\end{enumerate}
+			\item Induction axiom: For every compact open subgroupoid $H$ of $G$, there are natural equivalences $I_H^G(n)$ between the functors $\mathcal{F}_H^n$ and $\mathcal{F}_G^n\circ Ind_H^G$, compatible with suspension,
+			where $Ind_H^G:\mathcal{C}(H)\rightarrow \mathcal{C}(G)$, $A\mapsto Ind_H^{G_{\mid H^{(0)}}} A$ denotes induction from $H$-algebras to $G$-algebras.
+		\end{enumerate}
+		If $\mathcal{F}$ is a Going-Down functor for $G$, we define $$\mathcal{F}^n(G):=\lim\limits_{X\subseteq \mathcal{E}(G)}\mathcal{F}^n_G(C_0(X)),$$
+		where $X$ runs through the $G$-compact subsets of $\mathcal{E}(G)$.
+	\end{defi}
+	Our main examples of Going-Down functors arise from the topological $\K$-theory of ample groupoids:
+	\begin{ex}\label{Example:Going-Down functor}
+		Let $G$ be a second countable ample groupoid and $A$ be a fixed $G$-algebra. Define $\mathcal{F}_H^*(C_0(X)):=\mathrm{KK}^H_*(C_0(X),A_{\mid H})$ for $H\in\mathcal{S}(G)$ and $C_0(X)\in\mathcal{C}(H)$. Then $\mathcal{F}$ is a $\ZZ/2\ZZ$-graded Going-Down functor:
+		\begin{enumerate}
+			\item Cohomology axioms:
+			\begin{enumerate}
+				\item Homotopy invariance is clear, since groupoid equivariant $\mathrm{KK}$-theory is invariant with respect to equivariant homotopies in the first variable.
+				\item Half-exactness follows from \cite[Proposition~7.2 and Lemma~7.7]{Tu99}.
+				\item The suspension axiom is clear from the definition of the higher equivariant $\mathrm{KK}$-groups.
+			\end{enumerate}
+			\item The natural equivalence required in the induction axiom is provided by the compression homomorphism defined prior to Theorem \ref{CompressionIsomorphism} (or rather its inverse, the inflation map). From the definition of the compression homomorphism it is easy to see, that it indeed provides a natural transformation with respect to equivariant $\ast$-homomorphisms.
+		\end{enumerate}
+	\end{ex}
+	
+	The following lemma can be proved using standard homotopy techniques (see for example \cite[§21.4]{MR1656031})
+	\begin{lemma} Let $\mathcal{F}$ be a Going-Down functor.
+		For every short exact sequence $$0\longrightarrow I\longrightarrow A\longrightarrow A/I\longrightarrow 0$$ in $\mathcal{C}(H)$ there are natural maps $\partial_n:\mathcal{F}_H^n(I)\rightarrow\mathcal{F}_H^{n+1}(A/I)$ providing a long exact sequence
+		$$\cdots\longrightarrow \mathcal{F}_H^n(A/I)\longrightarrow \mathcal{F}_H^{n}(A)\longrightarrow\mathcal{F}_H^n(I)\stackrel{\partial_n}{\longrightarrow}\mathcal{F}_H^{n+1}(A/I)\longrightarrow\cdots$$
+	\end{lemma}
+	\begin{defi}
+		Let $\mathcal{F}$ and $\mathcal{G}$ be Going-Down functors for the ample groupoid $G$. A \textit{Going-Down transformation} is a collection $\Lambda=(\Lambda_H^n)_{H\in \mathcal{S}(G)}$ of natural transformations between $\mathcal{F}_H^n$ and $\mathcal{G}_H^n$ compatible with suspension, such that
+		$I_H^G(n)\circ \Lambda_H^n=\Lambda_G^n\circ I_H^G(n)$.
+	\end{defi}
+	\begin{ex}
+		Let $G$ be a second countable ample groupoid and $A$ and $B$ be separable $G$-algebras. Let $\mathcal{F}$ be the Going-Down functor defined by $\mathcal{F}_H^*(C_0(X))=\mathrm{KK}^H_*(C_0(X),A_{\mid H})$ and let $\mathcal{G}$ be the Going-Down functor defined by $\mathcal{G}_H^*(C_0(X))=\mathrm{KK}^H_*(C_0(X),B_{\mid H})$ as in Example \ref{Example:Going-Down functor}. Suppose that $x\in \mathrm{KK}^G(A,B)$. Then we can define a Going-Down transformation
+		$\Lambda$ from $\mathcal{F}$ to $\mathcal{G}$ by letting $\Lambda_H^*(C_0(X))$ be the map $$\mathcal{F}_H^*(C_0(X))=\mathrm{KK}^H_*(C_0(X),A_{\mid H})\stackrel{\cdot \otimes x}{\rightarrow} \mathrm{KK}^H_*(C_0(X),B_{\mid H})=\mathcal{G}_H^*(C_0(X)).$$
+		By associativity of the Kasparov product, $\Lambda_H^*$ is a natural transformation, which is clearly compatible with suspension. Compatibility with $I_H^G$ follows from Lemma \ref{Lemma:Compression and Kasparov Product}.	
+	\end{ex}
+	Using the naturality, a Going-Down transformation $\Lambda$ between two Going-Down functors $\mathcal{F}$ and $\mathcal{G}$ induces morphisms $\Lambda^n(G):\mathcal{F}^n(G)\rightarrow\mathcal{G}^n(G)$ in the limit.
+	
+	\begin{satz}\label{Theorem:Going-Down Theorem}
+		Let $\mathcal{F}$ and $\mathcal{G}$ be two Going-Down functors for an ample groupoid $G$ and let $\Lambda$ be a Going-Down transformation between $\mathcal{F}$ and $\mathcal{G}$. Suppose that $\Lambda_H^n(C(H^{(0)})):\mathcal{F}_H^n(C(H^{(0)}))\rightarrow\mathcal{G}_H^n(C(H^{(0)}))$ is an isomorphism for all compact open subgroupoids $H$ of $G$. Then $\Lambda^n(G):\mathcal{F}^n(G)\rightarrow\mathcal{G}^n(G)$ is an isomorphism.
+	\end{satz}
+	\begin{proof} The proof is essentially the same as that of Theorem \ref{MainTheorem}, replacing $\mathrm{KK}^H_*(C_0(X),A_{\mid H})$ by $\mathcal{F}^*_H(C_0(X))$ and $\mathrm{KK}^H_*(C_0(X),B_{\mid H})$ by $\mathcal{G}^*_H(C_0(X))$, and the map $\cdot \otimes res_H^G(x)$ by $\Lambda_H^*$, once we note, that all we used in that proof are precisely the properties we ask for in the definition of Going-Down functors and transformations.
+	\end{proof}
+	

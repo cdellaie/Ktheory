@@ -1,0 +1,75 @@
+In this section we will show that an inductive limit of $G$-algebras with $G$-equivariant connecting morphisms is again a $G$-algebra in a canonical fashion. These results should be known to the experts but since we could not find a suitable reference and in order to keep the exposition self-contained we elaborate on the details. We start of by considering $C_0(X)$-algebras:
+	Let $(A_n,\varphi_n)_{n\in\NN}$ be an inductive sequence of $\mathrm{C}^*$-al\-gebras, where each $A_n$ is a $C_0(X)$-algebra, such that the connecting homomorphisms $\varphi_n$ are $C_0(X)$-linear.
+	If $A=\lim_{n\rightarrow\infty}A_n$, then $A$ is a $C_0(X)$-algebra in a canonical way. This is surely well-known to the experts, but we could not find a proper reference, so we include the details.
+	
+	Let us start by recalling the construction of the limit algebra $A$:
+	Consider the algebra $$\widetilde{A}=\lbrace (a_n)_n\in\prod\limits_{n}A_n\mid \exists n_0: a_{n+1}=\varphi_n(a_n)\forall n\geq n_0\rbrace.$$
+	Then $A$ is the closure of the image of $\widetilde{A}$ under the quotient map $q:\prod A_n\rightarrow \prod A_n/\bigoplus A_n$.
+	Now if $f\in C_0(X)$, then $C_0(X)$-linearity of the $\varphi_n$ implies, that $\widetilde{A}$ is invariant under component-wise multiplication with $f$. It also leaves the ideal $\bigoplus A_n$ invariant. Hence we get a well-defined linear map
+	$q(\widetilde{A})\rightarrow q(\widetilde{A})$ by $f\cdot q((a_n)_n):=q((f\cdot a_n)_n)$. Using the equality $\norm{q((a_n)_n)}=lim \norm{a_n}$ (see K-theory script 6.8)
+	$\norm{q((f\cdot a_n)_n)}=\lim \norm{f\cdot a_n}\leq \norm{f}\lim \norm{a_n}=\norm{f}\norm{q((a_n)_n)}$. Consequently, $f\cdot$ extends to a bounded linear map $A\rightarrow A$, actually to an element in $Z(M(A))$, where the adjoint is given by $\overline{f}\cdot$. Thus, we have constructed a $*$-homomorphism $\Phi:C_0(X)\rightarrow Z(M(A))$. 
+	\begin{lemma}\label{Lem:InductiveLimitsOfC_0(X)-algebras}
+		The $*$-homomorphism $\Phi$ from above is non-degener\-ate. Consequently, $A$ is a $C_0(X)$-algebra such that the canonical maps $\psi_n:A_n\rightarrow A$ are $C_0(X)$-linear.
+	\end{lemma}
+	\begin{proof}
+		Let $a\in A$ and $\varepsilon>0$ be given. By construction $\bigcup_n \psi(A_n)$ is dense in $A$, so there exists $b\in A_n$ such that $\norm{\psi_n(b)-a}<\frac{\varepsilon}{2}$. Since the structure homomorphism for $A_n$ is non-degenerate we can also find $f\in C_0(X)$ and $c\in A_n$ such that $\norm{b-fc}< \frac{\varepsilon}{2\norm{\psi_n}}$, and hence $\norm{\psi_n(b)-f\psi_n(c)}<\frac{\varepsilon}{2}$.
+		Putting things together we obtain
+		$\norm{f\psi_n(c)-a}<\norm{f\psi_n(c)-\psi_n(b)}+\norm{\psi_n(b)-a}<\varepsilon$.
+	\end{proof}
+	
+	We will now identify the fibres of the limit algebra:
+	\begin{lemma}
+		Let $(A_n,\varphi_n)$ be an inductive sequence of $C_0(X)$-al\-gebras and $A=\lim A_n$. Then, for every $x\in X$, $((A_n)_x,(\varphi_n)_x)$ is an inductive sequence of $\mathrm{C}^*$-algebras and
+		$$ \lim\limits_{n\rightarrow\infty} (A_n)_x\cong A_x.$$
+	\end{lemma}
+	\begin{proof}
+		It is immediate, that $((A_n)_x,(\varphi_n)_x)$ is indeed an inductive sequence of $\mathrm{C}^*$-algebras. Hence we only need to identify the limit.
+		Let $\pi_{n,x}:A_n\rightarrow (A_n)_x$ denote the quotient maps onto the fibres and $\psi_{n,x}:(A_n)_x\rightarrow \lim\limits_{n}(A_n)_x$ the canonical maps. By the universal property of the limit we obtain a surjective $*$-homo\-morphism $$\pi:A\rightarrow \lim\limits_{n}(A_n)_x.$$
+		It remains to show, that the kernel of $\pi$ coincides with the ideal $I_x=\overline{C_0(X\setminus\lbrace x\rbrace)A}$ of $A$.
+		If $a=\psi_n(b)$ for some $b\in A_n$ and $f\in C_0(X\setminus\lbrace x\rbrace)$, then $\pi(fa)=\pi(f\psi_n(b))=\pi(\psi_n(fb))=\psi_{n,x}(\pi_{n,x}(fb))=0$. By continuity we get $I_x\subseteq ker(\pi)$.
+		
+		Suppose conversely that $a\in ker(\pi)$ and $\varepsilon>0$ is given. First we can find $n\in\NN$ and $b\in A_n$ such that $\norm{a-\psi_n(b)}<\frac{\varepsilon}{3}$. Thus
+		$\norm{\psi_{n,x}(\pi_{n,x}(b))}=\norm{\pi(\psi_n(b))}=\norm{\pi(\psi_n(b)-a)}\leq \norm{a-\psi_n(b)}<\frac{\varepsilon}{3}$.
+		Upon replacing $b$ and $n$ by $\varphi_{m,n}(b)$ for $m$ big enough we can actually assume that $\norm{\pi_{x,n}(b)}<\frac{\varepsilon}{3}$. Then there exists some $b'\in A_n$ such that $\norm{b-b'}<\frac{\varepsilon}{3}$ and $\pi_{n,x}(b')=0$. Hence there must be $b''\in A_n$ and $\varphi\in C_0(X\setminus\lbrace x\rbrace)$ such that $\norm{b'-\varphi b''}<\frac{\varepsilon}{3}$.
+		Putting things together we obtain
+		$$\norm{a-\varphi\psi_n(b'')}\leq \norm{ a- \psi_n(b)}+\norm{\psi_n(b)-\psi_n(b')}+\norm{\psi_n(b')-\psi_n(\varphi b'')}<\varepsilon$$
+		and hence $ker(\pi)\subseteq I_x$, which completes the proof.
+	\end{proof}
+	Next, we want to show that taking the limit of an inductive sequence commutes with pullbacks: Let $(A_n,\varphi_n)_{n\in\NN}$ be an inductive sequence of $C_0(X)$-algebras and $f:Y\rightarrow X$ a continuous map. Then we get $C_0(Y)$-linear $*$-homo\-morphisms $f^*\varphi_n:f^*A_n\rightarrow f^* A_{n+1}$ by the formula $$(f^*\varphi_n)(\xi)(y)=(\varphi_n)_{f(y)}(\xi(y)).$$
+	as in Lemma \ref{Lem:PullbackOfHomomorphisms}. 
+	\begin{prop}\label{Prop:LimitsAndPullbacks}
+		Let $(A_n,\varphi_n)_{n\in\NN}$ be an inductive sequence of $C_0(X)$-al\-gebras and $f:Y\rightarrow X$ a continuous map.
+		Then $(f^*A_n,f^*\varphi_n)_{n}$ is an inductive system of $C_0(Y)$-algebras and $f^*(\lim_n A_n)$ is $C_0(Y)$-linearly isomorphic to $\lim_n f^*(A_n)$.
+	\end{prop}
+	\begin{proof}
+		Let $A=\lim_n A_n$ and $\psi_n:A_n\rightarrow A$ be the canonical $\ast$-homo\-morphisms. Then by Lemma \ref{Lem:PullbackOfHomomorphisms} we obtain $C_0(Y)$-linear $*$-homo\-morphisms $f^*\psi_n:f^*A_n\rightarrow f^*A$ such that $f^*\psi_{n+1}\circ f^*\varphi_n=f^*(\psi_{n+1}\circ \varphi_n)=f^*\psi_n$. Using the universal property of the limit, we obtain a $C_0(Y)$-linear $*$-homo\-morphism $$\Psi:\lim\limits_{n}f^*A_n\rightarrow f^*A.$$
+		To show that it is an isomorphism, it is enough to check that $\Psi_y$ is an isomorphism for all $y\in Y$. But under the identifications
+		$$(\lim_{n}f^*A_n)_y\cong \lim_{n}(A_n)_{f(y)}\text{ and }(f^*A)_y\cong A_{f(y)}$$ the map $\Psi_y$ coincides with the isomorphism 
+		$$\lim\limits_{n}(A_n)_{f(y)}\rightarrow A_{f(y)}$$
+		from the previous Lemma.
+	\end{proof}
+	
+	Suppose now that $(A_n,\varphi_n)_n$ is an inductive sequence of $G$-alge\-bras, such that all the connecting homomorphisms are $G$-equivariant. We have already seen in Lemma \ref{Lem:InductiveLimitsOfC_0(X)-algebras}, that $A=\lim_n A_n$ is a $C_0(G^{(0)})$-algebra in a canonical way, such that all the homo\-morphisms $\psi_n:A_n\rightarrow A$ are $C_0(G^{(0)})$-linear. The following Proposition shows how we can use the $G$-actions at each stage of the sequence to obtain a $G$-action on the limit.
+	\begin{prop}
+		Let $(A_n,\varphi_n)_n$ be an inductive sequence of $G$-algebras, such that $\varphi_n$ is $G$-equivariant for all $n\in\NN$. Let $A:=\lim_n A_n$ and $\psi_n:A_n\rightarrow A$ be the canonical maps. Then there exists a canonical $G$-action on $A$, such that $\psi_n$ is $G$-equivariant for all $n\in\NN$.
+	\end{prop}
+	\begin{proof}
+		For each $n\in\NN$ let $\alpha_n:d^*A_n\rightarrow r^*A_n$ denote the $C_0(G)$-linear isomorphism implementing the action of $G$ on $A_n$. Since $\varphi_n$ is $G$-equivariant for every $n\in\NN$ we have commutative diagrams
+		\begin{center}
+			\begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+			\matrix (m) [matrix of math nodes, row sep=3em,
+			column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+			{ d^*A_n &  r^*A_n\\
+				d^*A_{n+1} &  r^*A_{n+1}\\ };
+			\path[->,font=\scriptsize]
+			(m-1-1) edge node[auto] {$ \alpha_n $} (m-1-2)
+			(m-2-1) edge node[auto] {$ \alpha_{n+1} $} (m-2-2)
+			(m-1-1) edge node[auto] { $ d^*\varphi_n $ } (m-2-1)
+			(m-1-2) edge node[auto] {$ r^*\varphi_n $} (m-2-2)
+			;
+			\end{tikzpicture}
+		\end{center}
+		By the universal property, we obtain a $C_0(G)$-linear $*$-isomorphism between the respective limits. Combining this with Proposition \ref{Prop:LimitsAndPullbacks} we obtain a $C_0(G)$-linear $*$-isomorphism
+		$$\alpha:d^*A\rightarrow r^*A.$$
+		As each $\alpha_n$ is compatible with the multiplication in $G$, so is the limit homomorphism $\alpha$.
+	\end{proof}

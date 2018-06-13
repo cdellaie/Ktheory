@@ -1,0 +1,311 @@
+In this final section we study the $\K$-theory of tensor products by crossed products with ample groupoids in analogy with the results from \cite{CEO}. The main tool is a mixed Künneth formula involving the topological K-theory of the groupoid in question. Under the assumtion that $G$ satisfies the Baum-Connes conjecture with coefficients, one can relate this mixed Künneth formula to the usual Künneth formula for the crossed product.
+	Let us recall the usual Künneth formula: We say that a $\mathrm{C}^*$-algebra $A$ satisfies the \textit{Künneth formula} if for all $\mathrm{C}^*$-algebras $B$, there is a canonical short exact sequence
+	$$0\longrightarrow \K_*(A)\otimes \K_*(B)\stackrel{\alpha}{\longrightarrow}\K_*(A\otimes B)\stackrel{\beta}{\longrightarrow}\mathrm{Tor}(\K_*(A),\K_*(B))\longrightarrow 0.$$
+	The map $\alpha:\K_*(A)\otimes \K_*(B)\rightarrow \K_*(A\otimes B)$ in the above sequence can be obtained using the Kasparov product as the composition
+	\begin{center}
+		\begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+		\matrix (m) [matrix of math nodes, row sep=3em,
+		column sep=2em, text height=1.5ex, text depth=0.25ex]
+		{ \mathrm{KK}(\CC,A)\otimes \mathrm{KK}_*(\CC,B) &  \mathrm{KK}_*(\CC,A)\otimes \mathrm{KK}_*(A,A\otimes B)\\
+			&  \mathrm{KK}_*(\CC,A\otimes B) \\
+		};
+		\path[->,font=\scriptsize]
+		(m-1-1) edge node[auto] {$\id\otimes\sigma_A $} (m-1-2)
+		(m-1-2) edge node[auto] {$ \otimes_A $} (m-2-2)
+		(m-1-1) edge node[auto] {$ \alpha  $} (m-2-2)
+		
+		;
+		\end{tikzpicture}
+	\end{center}
+	where $\sigma_A:\KK_*(\CC,B)\rightarrow \KK_*(A,A\otimes B)$ is Kasparov's external tensor product in $\KK$-theory.
+	The following result is shown in \cite[Proposition~4.2]{CEO} (extending earlier results by \cite{MR650021}):
+	\begin{prop}
+		Let $A$ be a separable $\mathrm{C}^*$-algebra. Then $A$ satisfies the Künneth formula if and only if $\alpha:\K_*(A)\otimes \K_*(B)\rightarrow \K_*(A\otimes B)$ is an isomorphism for all separable $\mathrm{C}^*$-algebras $B$ with $\K_*(B)$ free abelian.
+	\end{prop}
+	The authors in \cite{CEO} then define the class $\mathcal{N}$ to be the class of all separable $\mathrm{C}^*$-algebras such that $\alpha:\K_*(A)\otimes \K_*(B)\rightarrow \K_*(A\otimes B)$ is an isomorphism for all separable $\mathrm{C}^*$-algebras $B$ with $\K_*(B)$ free abelian. It turns out that the class $\mathcal{N}$ is quite large and enjoys many nice permanence properties:
+	\begin{enumerate}
+		\item The class $\mathcal{N}$ contains the bootstrap class $\mathcal{B}$ (see \cite[Definition~22.3.4]{MR1656031}).
+		\item If $A\in\mathcal{N}$ and $B$ is $\mathrm{KK}$-dominated by $A$ (see \cite[Definition~23.10.6]{MR1656031}), then $B\in\mathcal{N}$.
+		\item If $0\rightarrow I\rightarrow A\rightarrow A/I\rightarrow 0$ is a semi-split short exact sequence of $\mathrm{C}^*$-algebras such that two of them are in $\mathcal{N}$, then so is the third.
+		\item If $A,B\in\mathcal{N}$, then $A\otimes B\in\mathcal{N}$.
+		\item If $A=\lim_i A_i$ is an inductive limit, such that each $A_i\in\mathcal{N}$ and, such that all the structure maps are injective, then $A\in\mathcal{N}$.
+	\end{enumerate}
+	
+	Our first goal is, to replace $\K_*(A)$ by the topological $\K$-theory of an ample groupoid with coefficients in a suitable separable $G$-algebra $A$ and define an equivariant version of the map $\alpha$.
+	Before we can get into it, we need some preliminary observations on minimal tensor products of $C_0(X)$-algebras:
+	
+	Recall, that for arbitrary $\mathrm{C}^*$-algebras $A$ and $B$, their minimal tensor product $A\otimes B$ sits as an essential ideal inside $M(A)\otimes M(B)$, and hence, using the universal property of the multiplier algebra, there exists a unique embedding $\iota: M(A)\otimes M(B)\hookrightarrow M(A\otimes B)$, satisfying $\iota(m\otimes n)(a\otimes b)=ma\otimes nb$ and $(a\otimes b)\iota(m\otimes n)=am\otimes bn$. In particular, we have $\iota(ZM(A)\otimes ZM(B))\subseteq ZM(A\otimes B)$. In what follows we will suppress $\iota$ in our notation and view $ZM(A)\otimes ZM(B)$ as a subalgebra of $ZM(A\otimes B)$:
+	\begin{prop}\cite[Proposition~3.4]{MR3549520}
+		Let $A$ be a $C_0(X)$-algebra with structure map $\Phi_X$ and $B$ a $C_0(Y)$-algebra with structure map $\Phi_Y$. Then $A\otimes B$ is a $C_0(X\times Y)$-algebra with respect to the map $\Phi_X\otimes \Phi_Y$. Moreover, the fibre over $(x,y)\in X\times Y$ is $$(A\otimes B)_{(x,y)}=(A\otimes B)/I_x\otimes B+A\otimes J_y,$$ where $I_x$ and $J_y$ are the ideals corresponding to the fibres $A_x$ and $B_y$ respectively.
+	\end{prop}
+	In many situations the fibres are much nicer to describe:
+	\begin{prop}\label{Prop:FibresMinimalTensorProduct}
+		Let $A$ be a $C_0(X)$-algebra, and $B$ be a $C_0(Y)$-algebra. If either $A$ or $B$ is separable and exact, then $$(A\otimes B)_{(x,y)}=A_x\otimes B_y.$$
+	\end{prop}
+	\begin{proof}
+		This is a direct consequence of \cite[IV.3.4.22, Proposition~IV.3.4.23]{MR2188261}.
+	\end{proof}
+	Now let $A$ and $B$ be $C_0(X)$-algebras over the same space $X$, and let $\Delta:X\rightarrow X\times X$ be the diagonal inclusion. Then we define the minimal balanced tensor product $A\otimes_X B$ of $A$ and $B$ by $\Delta^*(A\otimes B)$. Thus, $A\otimes_X B$ is a $C_0(X)$-algebra by construction. Note, that $A\otimes_X B$ is canonically isomorphic the quotient of $A\otimes B$ by the ideal $\overline{C_0(X\times X\setminus \Delta(X))A\otimes B}$.
+	It follows from Proposition \ref{Prop:FibresMinimalTensorProduct} above, that if either $A$ or $B$ is separable and exact, that for all $x\in X$ we have
+	$$(A\otimes_X B)_x=A_x\otimes B_x.$$
+	With this description of the fibres it is not so hard to see the following:
+	\begin{lemma}
+		Let $A$ and $B$ be $C_0(X)$-algebras and $f:Y\rightarrow X$ a continuous map. If either $A$ or $B$ is separable and exact, we have $f^*(A\otimes_X B)\cong f^*A\otimes_Y f^*B$.
+	\end{lemma}
+	\begin{proof}
+		Consider the map $f\times f:Y\times Y\rightarrow X\times X$. We will first show, that $f^*A\otimes f^*B$ is canonically isomorphic to $(f\times f)^*(A\otimes B)$ as a $C_0(Y\times Y)$-algebra. Consider the map
+		$$\Phi:f^*A\otimes f^*B\rightarrow (f\times f)^*(A\otimes B),$$ 
+		which on an elementary tensor $\varphi\otimes \psi\in f^*A\otimes f^*B$ is defined by
+		$$\Phi(\varphi\otimes \psi)(y,y')=\varphi(y)\otimes\psi(y')
+		\in A_{f(y)}\otimes B_{f(y')}=(f\times f)^*(A\otimes B)_{(y,y')}.$$
+		Note, that we use the assumption that either $A$ or $B$ is separable and exact here, to identify the fibres in the last equality. Since
+		\begin{align*}\norm{\Phi(\varphi\otimes\psi)}&=\sup\limits_{(y,y')} \norm{\varphi(y)\otimes\psi(y')}\\
+		&=\sup\limits_{(y,y')}\norm{\varphi(y)}\norm{\psi(y')}\\
+		&\leq\norm{\varphi}\norm{\psi}\\
+		&=\norm{\varphi\otimes\psi},
+		\end{align*}
+		the map $\Phi$ extends to a bounded $C_0(Y\times Y)$-linear $\ast$-homomorphism, which clearly induces an isomorphism on each fibre. Hence $\Phi$ is an isomorphism as desired.
+		Observe, that we have $\Delta_X\circ f=(f\times f)\circ \Delta_Y$, where $\Delta_X$ and $\Delta_Y$ denote the diagonal inclusions respectively. Hence we have
+		\begin{align*}
+		f^*(A\otimes_X B)=(\Delta_X\circ f)^*(A\otimes B)&=((f\times f)\circ \Delta_Y)^*(A\otimes B)\\
+		&=\Delta_Y^*((f\times f)^*(A\otimes B))\\
+		& \cong\Delta_Y^*(f^*A\otimes f^*B)\\
+		&=f^*A\otimes_Y f^*B.
+		\end{align*}
+	\end{proof}
+	Suppose now, that $G$ is an étale Hausdorff groupoid. Suppose further, that $(A,G,\alpha)$ and $(B,G,\beta)$ are groupoid dynamical systems. With the above lemma at hand, it is now easy to define a diagonal action. Suppose that either $A$ or $B$ is separable and exact. Then we define the diagonal action of $G$ on $A\otimes_{G^{(0)}} B$ via the composition
+	$$d^*(A\otimes_{G^{(0)}} B)\cong d^*A\otimes_G d^*B\stackrel{\alpha\otimes \beta}{\longrightarrow}r^*A\otimes_G r^*B\cong r^*(A\otimes_{G^{(0)}} B).$$
+	Note, that if $(A,G,\alpha)$ is a groupoid dynamical system and $B$ is any $\mathrm{C}^*$-algebra, such that either $A$ or $B$ is separable and exact, then $(A\otimes B,G,\alpha\otimes id)$ is a groupoid dynamical system. The reduced crossed product is compatible with the minimal balanced tensor product in the following way:
+	\begin{prop}\cite[Theorem~6.1]{MR3383622}
+		There is a natural isomorphism
+		$$\Psi:(A\otimes B)\rtimes_{\alpha\otimes id,r} G\rightarrow (A\rtimes_{\alpha,r}G)\otimes B.$$
+	\end{prop}
+	Before we can proceed, we also need the following:
+	\begin{prop}
+		Let $A,B$ and $D$ be separable $G$-algebras, such that $D$ is exact. Then there is a homomorphism
+		$$\sigma_D:\KK^G(A,B)\rightarrow \KK^G(A\otimes_{G^{(0)}}D,B\otimes_{G^{(0)}}D),$$
+		given by associating to an element $(E,\Phi,T)\in\mathbb{E}^G(A,B)$ the triple $(E\otimes_A A\otimes_{G^{(0)}} D, \Phi\otimes \id,T\otimes\id)$.
+	\end{prop}
+	
+	Let us now return to the Künneth formula. Fix a second countable ample Hausdorff groupoid $G$. For ease of notation let us denote its unit space by $X$.
+	Let $A$ be a separable exact $G$-algebra and $B$ any $\mathrm{C}^*$-algebra. We wish to define a map
+	$$\alpha_G:\K^{\mathrm{top}}_*(G;A) \otimes \K_*(B)\rightarrow \K_*^{\mathrm{top}}(G;A\otimes B).$$
+	Consider the trivial group denoted by $1$. Then the canonical groupoid homomorphism $G\rightarrow 1$ induces a homomorphism
+	$$\KK_*(\CC,B)\rightarrow \KK^G_*(C_0(X),C_0(X,B)).$$
+	Let $\varepsilon$ denote the composition:
+	\begin{center}
+		\begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+		\matrix (m) [matrix of math nodes, row sep=3em,
+		column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+		{ \K_*(B) & \KK_*(\CC,B) &  \KK^G_*(C_0(X),C_0(X,B))\\
+			& &  \KK_*^G(A\otimes_{X}C_0(X),A\otimes_{X}C_0(X,B)) \\
+		};
+		\path[->,font=\scriptsize]
+		(m-1-1) edge node[auto] {$ \cong $} (m-1-2)
+		
+		(m-1-2) edge node[auto] {$  $} (m-1-3)
+		(m-1-3) edge node[auto] {$ \sigma_A $} (m-2-3)
+		(m-1-1) edge node[auto] {$ \varepsilon  $} (m-2-3)
+		
+		;
+		\end{tikzpicture}
+	\end{center}
+	Under the canonical identifications of $G$-algebras $A\otimes_X C_0(X)\cong A$ and $A\otimes_X C_0(X,B)\cong A\otimes B$ we will view $\varepsilon$ as a map
+	$$\varepsilon:\K_*(B)\rightarrow \KK_*^G(A,A\otimes B).$$
+	Now for any proper and $G$-compact $G$-space $Y\subseteq \mathcal{E}(G)$  we define a map $\alpha_Y$ as the composition
+	\begin{center}
+		\begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+		\matrix (m) [matrix of math nodes, row sep=3em,
+		column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+		{ \KK_*^G(C_0(Y),A)\otimes \K_*(B) &  \KK_*^G(C_0(Y),A)\otimes \KK_*^G(A,A\otimes B)\\
+			&   \KK_*^G(C_0(Y),A\otimes B) \\
+		};
+		\path[->,font=\scriptsize]
+		(m-1-1) edge node[auto] {$\id\otimes\varepsilon $} (m-1-2)
+		(m-1-2) edge node[auto] {$ \otimes_A $} (m-2-2)
+		(m-1-1) edge node[auto] {$ \alpha_Y  $} (m-2-2)
+		
+		;
+		\end{tikzpicture}
+	\end{center}
+	Passing to the limit, the maps $\alpha_Y$ induce the desired map
+	$$\alpha_G:\K_*^{\mathrm{top}}(G;A)\otimes \K_*(B)\rightarrow \K_*^{\mathrm{top}}(G;A\otimes B).$$
+	\begin{defi}
+		We denote by $\mathcal{N}_G$ the class of all separable exact $G$-algebras $A$ such that $\alpha_G$ is an isomorphism for all $B$ with $\K_*(B)$ free abelian.
+	\end{defi}
+	We will now show, that for a $G$-algebra $A$ to be in $\mathcal{N}_G$ also corresponds to satisfying a $G$-equivariant version of the Künneth formula:
+	\begin{prop}\label{Prop:Equivariant Kunneth sequence}
+		Let $A$ be a separable and exact $G$-algebra. Then $A\in \mathcal{N}_G$ if and only if for every $\mathrm{C}^*$-algebra $B$, there exists a canonical homomorphism $$\beta_G:\K_*^{\mathrm{top}}(G;A\otimes B)\rightarrow \mathrm{Tor}(\K_*^{\mathrm{top}}(G;A),\K_*(B))$$ such that the sequence
+		
+			$$0\rightarrow \K_*^{\mathrm{top}}(G;A)\otimes\K_*(B)\stackrel{\alpha_G}{\rightarrow}\K_*^{\mathrm{top}}(G;A\otimes B)\stackrel{\beta_G}{\rightarrow}\mathrm{Tor}(\K_*^{\mathrm{top}}(G;A),\K_*(B))\rightarrow 0$$
+		is exact.
+	\end{prop}
+	\begin{proof}
+		Let $\mathcal{S}$ denote the category of all separable $\mathrm{C}^*$-algebras with $\ast$-homo\-morphisms as morphisms, and let $\mathbf{Ab}$ denote the category of abelian groups. Consider the functor $F_*:\mathcal{S}\rightarrow\mathbf{Ab}$, given by $F_*(B)=\K_*^{\mathrm{top}}(G;A\otimes B)$ and $F_*(\Phi)=(\id\otimes \Phi)_*$ for a $\ast$-homomorphism $\Phi:B_1\rightarrow B_2$. We will show that $F_*$ is a Künneth functor in the sense of \cite[Definition~3.1]{CEO}, provided that $A\in\mathcal{N}_G$. It is clear, that $F_*$ is stable and homotopy invariant, since the topological $\K$-theory has these properties. To see (K2), combine \cite[Lemma~4.1]{CEO} with \cite[Proposition~5.6]{Tu98}. Item (K3) again follows from the corresponding property of topological K-theory and (K4) is precisely what it means for $A$ to be in the class $\mathcal{N}_G$. Hence an application of \cite[Theorem~3.3]{CEO} completes the proof.	
+	\end{proof}
+	The class $\mathcal{N}_G$ enjoys many stability properties similar to those of $\mathcal{N}$:
+	\begin{lemma}\label{Lemma:Stability Properties of N_G}
+		Let $G$ be a second countable ample groupoid. Then the following hold:
+		\begin{enumerate}
+			\item If $A\in\mathcal{N}_G$ and $B$ is a separable exact $\mathrm{C}^*$-algebra, which is $\KK^G$-dominated by $A$ (i.e. there exist $x\in\KK^G(A,B)$ and $y\in \KK^G(B,A)$ such that $y\otimes x=1_B\in \KK^G(B,B)$), then $B\in\mathcal{N}_G$.
+			\item If $0\rightarrow I\rightarrow A\rightarrow A/I\rightarrow 0$ is a semi-split short exact sequence of $G$-algebras such that two of them are in $\mathcal{N}_G$, then so is the third.
+			\item If $A\in\mathcal{N}_G$ and $B\in\mathcal{N}$, then $A\otimes B\in\mathcal{N}_G$, where $A\otimes B$ is equipped with the action $\alpha\otimes\id$.
+			\item If $(A_n,\varphi_n)_n$ is an inductive sequence of $G$-algebras with injective and $G$-equivariant connecting maps, such that each $A_n\in\mathcal{N}_G$ for all $n\in\NN$, then $A\in\mathcal{N}_G$.
+		\end{enumerate}
+	\end{lemma}
+	\begin{proof}
+		For the proof of $(1)$ let $D$ be any $\mathrm{C}^*$-algebra with $\K_*(D)$ free abelian and consider the following commutative diagram:
+		\begin{center}
+			\begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+			\matrix (m) [matrix of math nodes, row sep=3em,
+			column sep=3em, text height=1.5ex, text depth=0.25ex]
+			{ \K_*^{\mathrm{top}}(G;B)\otimes \K_*(D) & \K_*^{\mathrm{top}}(G;A)\otimes \K_*(D) & \K_*^{\mathrm{top}}(G;B)\otimes \K_*(D)\\
+				\K_*^{\mathrm{top}}(G;B\otimes D)& \K_*^{\mathrm{top}}(G;A\otimes D)&\K_*^{\mathrm{top}}(G;B\otimes D) \\
+			};
+			\path[->,font=\scriptsize]
+			(m-1-1) edge node[auto] {$ (\cdot\otimes y)\otimes \id $} (m-1-2)
+			(m-1-2) edge node[auto] {$ (\cdot\otimes x)\otimes \id $} (m-1-3)
+			(m-2-1) edge node[auto] {$ \otimes \sigma_D(y) $} (m-2-2)
+			(m-2-2) edge node[auto] {$ \otimes \sigma_D(x) $} (m-2-3)
+			(m-1-1) edge node[auto] {$ \alpha_G  $} (m-2-1)
+			(m-1-2) edge node[auto] {$ \alpha_G  $} (m-2-2)
+			(m-1-3) edge node[auto] {$ \alpha_G  $} (m-2-3)
+			;
+			\end{tikzpicture}
+		\end{center}
+		By assumption, the composition of the horizontal arrows are the identity maps in each row and the middle vertical map is an isomorphism. An easy diagram chase then shows, that the left (and right) vertical arrows must be isomorphisms as well.
+		
+		For the proof of $(2)$, we first note that exactness passes to ideals (see \cite[Theorem~IV.3.4.3]{MR2188261}), quotients by \cite[Corollary~IV.3.4.19]{MR2188261} and semi-split extensions (see \cite[Theorem~IV.3.4.20]{MR2188261}) by deep results of Kirchberg and Wassermann. By \cite[Lemma~4.1]{CEO} the sequence
+		$0\rightarrow I\otimes B\rightarrow A\otimes B\rightarrow A/I\otimes B\rightarrow 0$ is a semi-split short exact sequence as well, and hence $(2)$ follows from an easy application of the Five Lemma.
+		
+		For $(3)$ let us first observe, that if $A$ and $B$ are separable and exact $\mathrm{C}^*$-algebras, then so is their minimal tensor product $A\otimes B$ by associativity of the minimal tensor product. Now suppose that $A\in\mathcal{N}_G$ and $B\in\mathcal{N}$. Let $D$ be any $\mathrm{C}^*$-algebra with $\K_*(B)$ free abelian. As in the proof of \cite[Lemma~4.4(iii)]{CEO} we can use this fact to make the canonical identification 
+		$$\Tor(\K_*^{\mathrm{top}}(G;A),\K_*(B)\otimes \K_*(D))\cong \Tor(\K_*^{\mathrm{top}}(G;A),\K_*(B))\otimes \K_*(D).$$
+		Now consider the following commutative diagram:
+		\begin{center}
+			\begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+			\matrix (m) [matrix of math nodes, row sep=3em,
+			column sep=3.0em, text height=1.5ex, text depth=0.25ex]
+			{ 	0 & 0\\
+				\K_*^{\mathrm{top}}(G;A)\otimes \K_*(B)\otimes \K_*(D) & \K_*^{\mathrm{top}}(G;A)\otimes \K_*(B\otimes D)\\
+				\K_*^{\mathrm{top}}(G;A\otimes B)\otimes \K_*(D)& \K_*^{\mathrm{top}}(G;A\otimes B\otimes D) \\
+				\Tor(\K_*^{\mathrm{top}}(G;A),\K_*(B)\otimes \K_*(D)) & \Tor(\K_*^{\mathrm{top}}(G;A), \K_*(B\otimes D))\\
+				0&0\\
+			};
+			\path[->,font=\scriptsize]
+			(m-2-1) edge node[auto] {$ \id\otimes\alpha $} (m-2-2)
+			(m-3-1) edge node[auto] {$ \alpha_G $} (m-3-2)
+			(m-4-1) edge node[auto] {$ \Tor(\id,\alpha) $} (m-4-2)
+			(m-1-1) edge node[auto] {$   $} (m-2-1)
+			(m-1-2) edge node[auto] {$   $} (m-2-2)
+			(m-2-1) edge node[auto] {$   $} (m-3-1)
+			(m-2-2) edge node[auto] {$   $} (m-3-2)
+			(m-3-1) edge node[auto] {$   $} (m-4-1)
+			(m-3-2) edge node[auto] {$   $} (m-4-2)
+			(m-4-1) edge node[auto] {$   $} (m-5-1)
+			(m-4-2) edge node[auto] {$   $} (m-5-2)
+			;
+			\end{tikzpicture}
+		\end{center}
+		Under the identification of the $\Tor$ groups mentioned above, the first column is the equivariant Künneth sequence for $(A,B)$ tensored with $\K_*(D)$. Thus, using our assumption, that $A\in\mathcal{N}_G$, it is exact by Proposition \ref{Prop:Equivariant Kunneth sequence}. Similarly, the second column is the equivariant Künneth sequence for $(A,B\otimes D)$, and hence exact, too.
+		Finally, the top and bottom arrows are isomorphisms, since $B$ was assumed to be in $\mathcal{N}$. By the Five Lemma, the middle vertical map $\alpha_G$ must be an isomorphism as well.
+		
+		Finally, for item $(4)$ note, that separability clearly passes to sequential inductive limits and exactness passes to inductive limits with injective connecting maps (see \cite[Proposition~IV.3.4.4]{MR2188261}). Hence the result follows from Theorem \ref{Theorem:Continuity of top. K-theory}.
+	\end{proof}
+	Using the Baum-Connes assembly map we can relate the map $\alpha_G$ to the map $\alpha$ for the crossed product as follows:
+	\begin{prop}
+		Let $A$ be a separable exact $G$-algebra and $B$ be any $\mathrm{C}^*$-algebra. Then the diagram
+		\begin{center}
+			\begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+			\matrix (m) [matrix of math nodes, row sep=3em,
+			column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+			{ \K_*^{\mathrm{top}}(G;A)\otimes \K_*(B) & \K_*(A\rtimes_r G)\otimes \K_*(B)\\
+				\K_*^{\mathrm{top}}(G;A\otimes B)& \K_*((A\otimes B)\rtimes_r G) \\
+			};
+			\path[->,font=\scriptsize]
+			(m-1-1) edge node[auto] {$ \mu_A\otimes \id $} (m-1-2)
+			(m-2-1) edge node[auto] {$ \mu_{A\otimes B} $} (m-2-2)
+			(m-1-1) edge node[auto] {$ \alpha_G  $} (m-2-1)
+			(m-1-2) edge node[auto] {$ \alpha  $} (m-2-2)
+			;
+			\end{tikzpicture}
+		\end{center}
+		commutes. In particular, if $\mu_{A\otimes B}$ is an isomorphism for all $\mathrm{C}^*$-algebras $B$, then $A\in\mathcal{N}_G$ if and only if $A\rtimes_r G\in\mathcal{N}$.
+	\end{prop}
+	\begin{proof}
+		First, note that for all $x\in \K_*(B)$ we have $j_G(\varepsilon(x))=\sigma_{A\rtimes_r G}(x)$.
+		Using this, we can easily check commutativity of the above diagram on the level of each $G$-compact subspace $Y\subseteq \mathcal{E}(G)$ as follows: For $y\in \KK^G_*(C_0(Y),A)$ and $x\in\K_*(B)$ we compute
+		\begin{align*}
+		\mu_{Y,A\otimes B}(\alpha_Y(y\otimes x)) & = [p_Y]\otimes_{C_0(Y)\rtimes_r G} j_G(\alpha_Y(y\otimes x))\\
+		& = [p_Y]\otimes_{C_0(Y)\rtimes_r G} j_G(y\otimes_A \varepsilon(x))\\
+		& = [p_Y]\otimes_{C_0(Y)\rtimes_r G} (j_G(y)\otimes_{A\rtimes_r G} \sigma_{A\rtimes_r G}(x))\\
+		& = \mu_{Y,A}(y)\otimes \sigma_{A\rtimes_r G}(x)\\
+		& = \alpha(\mu_{Y,A}(y)\otimes x).
+		\end{align*}
+		The second statement then follows directly from the commutativity of the diagram.
+	\end{proof}
+	We are now ready for the main result of this section:
+	\begin{satz}\label{Theorem:Kunneth}
+		Let $G$ be a second countable ample groupoid and $A$ a separable and exact $G$-algebra. Suppose that $A_{\mid K}\rtimes K\in\mathcal{N}$ for all compact open subgroupoids $K\subseteq G$. Then $A\in\mathcal{N}_G$.
+	\end{satz}
+	\begin{proof}
+		Let $B$ be a fixed $\mathrm{C}^*$-algebra with $\K_*(B)$ free abelian. For each $H\in \mathcal{S}(G)$ define contravariant functors
+		$\mathcal{F}_H:\mathcal{C}(H)\rightarrow\mathbf{Ab}$ and $\mathcal{G}_H:\mathcal{C}(H)\rightarrow\mathbf{Ab}$ by
+		$$\mathcal{F}_H(C_0(Y)):=\KK^H_*(C_0(Y),A)\otimes \K_*(B),$$
+		$$\mathcal{G}_H(C_0(Y)):=\KK^H_*(C_0(Y),A\otimes B).$$
+		Both $(\mathcal{F}_H)_{H\in\mathcal{S}(G)}$ and $(\mathcal{G}_H)_{H\in\mathcal{S}(G)}$ define Going-Down functors in the sense of Definition \ref{Def:GDfunctor}.
+		
+		Moreover, for each $H\in \mathcal{S}(G)$ and every proper $H$-space $Y$ the maps $\alpha_Y$ determine natural transformations $\Lambda_H:\mathcal{F}_H\rightarrow\mathcal{G}_H$, which form a Going-Down transformation $\Lambda$.
+		Our assumptions then translate to the fact that $\Lambda_K:\mathcal{F}_K(C(K^{(0)}))\rightarrow \mathcal{G}_K(C(K^{(0)}))$ is an isomorphism for every compact open subgroupoid $K$ of $G$. Hence, by Theorem \ref{Theorem:Going-Down Theorem} the result follows.
+	\end{proof}
+	The following corollary gives many examples, when the hypothesis of Theorem \ref{Theorem:Kunneth} are satisfied and thus provides many examples of $G$-algebras in class $\mathcal{N}_G$.
+	\begin{kor}\label{Cor:Kunneth}
+		Let $G$ be a second countable ample groupoid and $A$ be a separable exact $G$-algebra, such that $A_u$ is type I for all $u\in G^{(0)}$. Then $A\in\mathcal{N}_G$.
+	\end{kor}
+	\begin{proof}
+		It follows from \cite[Proposition~10.3]{Tu98}, that $A_{\mid K}\rtimes K$ is a type I $\mathrm{C}^*$-algebra for all compact subgroupoids $K\subseteq G$, and hence it is contained in the bootstrap class $\mathcal{B}\subseteq \mathcal{N}$. The result then follows from Theorem \ref{Theorem:Kunneth}.
+	\end{proof}
+	We conclude this section by pointing out the connections between Theorem \ref{Theorem:Kunneth} and the Baum-Connes conjecture:
+	\begin{prop}\label{Prop:BCandKunneth}
+		Let $G$ be a second countable ample groupoid and $A\in\mathcal{N}_G$. Consider the following properties:
+		\begin{enumerate}
+			\item $G$ satisfies the Baum-Connes conjecture with coefficients in $A\otimes B$ for all separable $\mathrm{C}^*$-algebras $B$ (with respect to the trivial action on the second factor).
+			\item $A\rtimes_r G\in\mathcal{N}$.
+		\end{enumerate}
+		Then $(1)$ implies $(2)$ and the converse holds, provided that $G$ satisfies the Baum-Connes conjecture with coefficients in $A$.
+	\end{prop}
+	\begin{proof}
+		Consider the commutative diagram
+		\begin{center}
+			\begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+			\matrix (m) [matrix of math nodes, row sep=3em,
+			column sep=3em, text height=1.5ex, text depth=0.25ex]
+			{ 	0 & 0\\
+				\K_*^{\mathrm{top}}(G;A)\otimes \K_*(B) & \K_*(A\rtimes_r G)\otimes \K_*(B)\\
+				\K_*^{\mathrm{top}}(G;A\otimes B)& \K_*((A\rtimes_r G)\otimes B) \\
+				\Tor(\K_*^{\mathrm{top}}(G;A),\K_*(B)) & \Tor(\K_*(A\rtimes_r G), \K_*(B))\\
+				0&0\\
+			};
+			\path[->,font=\scriptsize]
+			(m-2-1) edge node[auto] {$ \mu_A\otimes\id $} (m-2-2)
+			(m-3-1) edge node[auto] {$ \mu_{A\otimes B} $} (m-3-2)
+			(m-4-1) edge node[auto] {$ \Tor(\mu_A,\id) $} (m-4-2)
+			(m-1-1) edge node[auto] {$   $} (m-2-1)
+			(m-1-2) edge node[auto] {$   $} (m-2-2)
+			(m-2-1) edge node[auto] {$ \alpha_G  $} (m-3-1)
+			(m-2-2) edge node[auto] {$  \alpha $} (m-3-2)
+			(m-3-1) edge node[auto] {$  \beta_G $} (m-4-1)
+			(m-3-2) edge node[auto] {$ \beta  $} (m-4-2)
+			(m-4-1) edge node[auto] {$   $} (m-5-1)
+			(m-4-2) edge node[auto] {$   $} (m-5-2)
+			;
+			\end{tikzpicture}
+		\end{center}
+		Since $A\in\mathcal{N}_G$ the left column is exact by Proposition \ref{Prop:Equivariant Kunneth sequence}. Now in the situation of $(1)$, all the horizontal arrows are isomorphisms. Consequently, the right column is also exact, which establishes $(2)$.
+		If conversely $A\rtimes_r G\in\mathcal{N}$ and moreover $G$ satisfies the Baum-Connes conjecture with coefficients in $A$, then both columns in the above diagram are exact by Proposition \ref{Prop:Equivariant Kunneth sequence} and \cite[Proposition~4.2]{CEO} respectively. Moreover, the top and bottom horizontal maps are isomorphisms and an application of the Five Lemma completes the proof.
+		
+	\end{proof}
+	Combining Theorem \ref{Theorem:Kunneth} and the preceding proposition we have the following corollary.
+	\begin{kor}\label{Corollary:Kunneth}
+		Let $G$ be a second countable ample groupoid and $A$ a separable exact $G$-algebra such that $A_{\mid K}\rtimes K\in\mathcal{N}$ for all compact open subgroupoids $K\subseteq G$. If $G$ satisfies the Baum-Connes conjecture with coefficients in $A\otimes B$ for all separable $\mathrm{C}^*$-algebras $B$ (with respect to the trivial action on the second factor), then $A\rtimes_r G\in\mathcal{N}$.		
+		In particular, $C_r^*(G)\in\mathcal{N}$, provided that $G$ satisfies the Baum-Connes conjecture with coefficients in $C_0(G^{(0)},B)$ for all separable $\mathrm{C}^*$-algebras $B$ (equipped with the trivial action).
+	\end{kor}

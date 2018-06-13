@@ -1,0 +1,61 @@
+In this section we will show, that the topological $\K$-theory of an ample groupoid is continuous with respect to the coefficient algebra.
+	Recall, that an étale groupoid is called \textit{exact}, if for every $G$-equivariant exact sequence
+	$$0\rightarrow I\rightarrow A\rightarrow B\rightarrow 0$$
+	of $G$-algebras, the corresponding sequence
+		$$0\rightarrow I\rtimes_r G\rightarrow A\rtimes_r G\rightarrow B\rtimes_r G \rightarrow 0$$
+		of reduced crossed products is exact.
+	The following is an analogue of \cite[Lemma~2.5]{MR2010742} for étale groupoids:
+	\begin{lemma}\label{Lemma:Proper Groupoids and inductive limits}
+		Let $G$ be an étale groupoid and $(A_n,\varphi_n)_n$ an inductive sequence of $G$-algebras with limit $A=\lim_n A_n$. Then $(A_n\rtimes_r G,\varphi_n\rtimes G)_n$ is an inductive sequence of $\mathrm{C}^*$-algebras. Suppose additionally, that either one of the following conditions hold:
+		\begin{enumerate}
+			\item All the connecting maps $\varphi_n$ are injective.
+			\item The groupoid $G$ is exact.
+		\end{enumerate}
+		Then $A\rtimes_r G=\lim_n A_n\rtimes_r G$ with respect to the connecting homomorphisms $\varphi_n\rtimes G$.
+	\end{lemma}
+	\begin{proof}
+		It is clear that $(A_n\rtimes_r G,\varphi_n\rtimes G)$ is an inductive sequence of $\mathrm{C}^*$-algebras. For the second statement we follow the argument in \cite[Lemma~2.5]{MR2010742}:
+		In the case of $(1)$ we may regard each $A_n\rtimes_r G$ as a subalgebra of $A\rtimes_r G$ and hence also the inductive limit $\overline{\bigcup_{n\in\NN}A_n\rtimes_r G}$ is contained in $A\rtimes_r G$. Let us check that $\bigcup_{n\in\NN} \Gamma_c(G,r^*\mathcal{A}_n)\subseteq \overline{\bigcup_{n\in\NN}A_n\rtimes_r G}$ is dense in $A\rtimes_r G$. First, consider elements of the form $f\otimes a\in \Gamma_c(G,r^*\mathcal{A})$ for $f\in C_c(G)$ and $a\in A$. Let $\varepsilon>0$ be given. Then, by $(1)$ we can find $n\in\NN$ and $b\in A_n$ such that $\norm{a-b}<\frac{\varepsilon}{\norm{f}}$. It follows, that $f\otimes b\in \Gamma_c(G,r^*\mathcal{A}_n)$ with $\norm{f\otimes a-f\otimes b}\leq \norm{f}\norm{a-b}<\varepsilon$. Since finite sums of elements of the form $f\otimes a$ are dense in $\Gamma_c(G,r^*\mathcal{A})$ in the inductive limit topology, it follows that $\bigcup_{n\in\NN}\Gamma_c(G,r^*\mathcal{A}_n)$ is dense in $\Gamma_c(G,r^*\mathcal{A})$ with respect to the inductive limit topology and hence also with respect to the reduced norm topology.
+		For the proof of $(2)$ we make use of the following general fact:
+		If $(B_n,\psi_n)$ is an inductive sequence of $\mathrm{C}^*$-algebras, then so is $(B_n/ker(\psi_n),\widetilde{\psi_n})$, where $\widetilde{\psi}_n$ are the maps induced by $\psi_n$ on the quotients. Then it is easy to check, that all the maps $\widetilde{\psi}_n$ are injective and $B=\lim_n B_n/ker(\psi_n)$.
+		Returning to the proof of $(2)$,
+		let $I_n=ker(\varphi_n)$. Using the exactness of $G$ now, we see that $I_n\rtimes G$ is precisely the kernel of the map $\varphi_n \rtimes G:A_n\rtimes_r G\rightarrow A\rtimes_r G$.
+		By the above remark we have $A=\lim_n A_n/I_n$ and since the connecting maps are all injective we get $A\rtimes_r G=\lim_n (A_n/I_n)\rtimes_r G$ by $(1)$. Using the exactness of $G$ now, we see that $I_n\rtimes G$ is precisely the kernel of the map $\varphi_n \rtimes G:A_n\rtimes_r G\rightarrow A\rtimes_r G$, hence $(A_n/I_n)\rtimes_r G=A_n\rtimes_r G/I_n\rtimes_r G$ and another application of the above mentioned fact together with the identity $I_n\rtimes_r G=ker(\varphi_n\rtimes_r G)$ yields
+		$$A\rtimes_r G	=\lim_n A_n/I_n\rtimes_r G=\lim_n A_n\rtimes_r G/I_n\rtimes_r G=\lim_n A_n\rtimes_r G.$$
+	\end{proof}
+	\begin{satz}\label{Theorem:Continuity of top. K-theory}
+		Let $G$ be an ample groupoid and $(A_n,\varphi_n)_n$ an inductive sequence of $G$-algebras. If we let $A=\lim A_n$, then the maps $\psi_{n,*}:\K_*^{\mathrm{top}}(G;A_n)\rightarrow \K_*^{\mathrm{top}}(G;A)$ induced by the canonical maps $\psi_n:A_n\rightarrow A$, give rise to an isomorphism
+		$$\lim_{n\rightarrow\infty}\K_*^{\mathrm{top}}(G;A_n)\cong \K_*^{\mathrm{top}}(G;A).$$
+	\end{satz}
+	\begin{proof}
+		Let $\psi^*:\lim_{n\rightarrow\infty}\K_*^{\mathrm{top}}(G;A_n)\rightarrow \K_*^{\mathrm{top}}(G;A)$ be the homomorphism induced by the morphisms $\psi_n: A_n\rightarrow A$. Our aim is to show that $\psi^*$ is an isomorphism. For every proper $G$-space $X$ let $$\psi_X^*: \lim_{n\rightarrow\infty}\mathrm{KK}^G_*(C_0(X),A_n)\rightarrow \mathrm{KK}_*^G(C_0(X),A)$$ be the morphism induced by $\psi_n$ at the level of $X$. Now the structure maps for taking the limit over $X$ are given by left Kasparov products, whereas the structure maps for taking the limit over the $A_n$ is given by right Kasparov products.
+		Since the Kasparov product is associative, the limits can be permuted and we get $$\lim_{n\rightarrow\infty}\K_*^{\mathrm{top}}(G;A_n)\cong \lim_X\left( \lim_n \mathrm{KK}^G_*(C_0(X),A_n)\right).$$
+		The map $\psi^*$ can then be computed via the maps $\psi_X^*$ by
+		$$\lim_X\left( \lim_n \mathrm{KK}^G_*(C_0(X),A_n)\right)\rightarrow \lim_X \mathrm{KK}^G_*(C_0(X),A).$$
+		We define a contravariant functor $$\mathcal{F}_H^*(C_0(X)):=\lim_n \mathrm{KK}_*^H(C_0(X),A_{n\mid H}).$$ Then $\mathcal{F}$ is a Going-Down functor. Let $\mathcal{G}$ denote the Going-Down functor $C_0(X)\mapsto \mathrm{KK}^H_*(C_0(X),A_{\mid H})$ from Example \ref{Example:Going-Down functor}. Then the maps $\psi_X$ define a Going-Down transformation $\Psi:\mathcal{F}\rightarrow\mathcal{G}$, such that $\Psi^*(G)=\psi^*$. By Theorem \ref{Theorem:Going-Down Theorem} it is hence enough to prove, that
+		$$\lim\limits_n \mathrm{KK}^H_*(C(H^{(0)}),A_{n\mid H})\rightarrow \mathrm{KK}^H_*(C(H^{(0)}),A_{\mid H})$$
+		is an isomorphism for all compact open subgroupoids $H$ in $G$.
+		For every $n\in\NN$ we have a commutative diagram
+		\begin{center}
+			\begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+			\matrix (m) [matrix of math nodes, row sep=3em,
+			column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+			{ \mathrm{KK}^H_*(C(H^{(0)}),A_{n\mid H}) & \mathrm{KK}^H_*(C(H^{(0)}),A_{\mid H}) \\
+				\K_*(A_{n\mid H}\rtimes H) & \K_*(A_{\mid H}\rtimes H) \\
+			};
+			\path[->,font=\scriptsize]
+			(m-1-1) edge node[auto] {$ (\psi_n)_* $} (m-1-2)
+			(m-1-2) edge node[auto] {$ \mu $} (m-2-2)
+			(m-2-1) edge node[auto] { $ (\psi_n\rtimes H)_* $ } (m-2-2)
+			(m-1-1) edge node[auto] { $ \mu_n $ } (m-2-1)
+			;
+			\end{tikzpicture},
+		\end{center}
+		where $\mu$ and $\mu_n$ are the isomorphisms coming from the groupoid version of the Green-Julg theorem (see \cite[Proposition~6.25]{Tu99}). By commutativity of the above diagrams it is hence enough to prove, that the maps $(\psi_n\rtimes H)_*$ induce an isomorphism
+		$$\lim\limits_n\K_*(A_{n\mid H}\rtimes H)\rightarrow\K_*(A_{\mid H}\rtimes H).$$
+		Using the continuity of $\K$-theory, the result follows from Lemma \ref{Lemma:Proper Groupoids and inductive limits}.
+	\end{proof}
+	As an immediate consequence, we get the following.
+	\begin{kor}\label{Cor:InductiveLimit}
+		Let $G$ be an ample groupoid and $(A_n,\varphi_n)_n$ an inductive sequence of $G$-algebras with $A=\lim_{n\rightarrow\infty}A_n$. Suppose $G$ satisfies the Baum-Connes conjecture with coefficients in $A_n$ for all $n\in\NN$. Assume further, that $G$ is exact, or that all the connecting homomorphisms $\varphi_n$ are injective. Then $G$ satisfies the Baum-Connes conjecture with coefficients in $A$.
+	\end{kor}

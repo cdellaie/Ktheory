@@ -1,0 +1,57 @@
+We say that a $\mathrm{C}^*$-algebra $A$ satisfies the \textit{Künneth formula} if for all $\mathrm{C}^*$-algebras $B$ there exists a canonical short exact sequence
+	\begin{equation} \label{KunnethSequence}	
+0\longrightarrow \K_*(A)\otimes \K_*(B)\stackrel{\alpha}{\longrightarrow}\K_*(A\otimes B)\stackrel{\beta}{\longrightarrow}\mathrm{Tor}(\K_*(A),\K_*(B))\longrightarrow 0,
+	\end{equation}
+	where $A\otimes B$ denotes the minimal tensor product of $A$ and $B$ and $\K_*$ denotes $\ZZ /2\ZZ$-graded $\K$-theory. \\
+
+The Künneth formula is known to hold for every $C^*$-algebras in the bootstrap class $\mathcal B$, from the seminal work of Rosenberg and Schochet \cite{RosenbergKunneth}. Recall that $\mathcal B$ is the smallest class of separable nuclear $C^*$-algebras such that:
+\begin{itemize}
+\item[$\bullet$] $\C \in \mathcal B$,
+\item[$\bullet$] $\mathcal B$ is closed under countable inductive limits,  
+\item[$\bullet$] $\mathcal B$ is closed under $KK$-equivalence,
+\item[$\bullet$] if $0 \rightarrow I \rightarrow A \rightarrow A/I \rightarrow 0$ is a short exact sequence of $C^*$-algebras and two of these are in $\mathcal B$, so is the third. 
+\end{itemize}
+In the groupoid setting, J-L. Tu proved (\cite{TuThese}, lemma $10.6$) that every a-T-menable groupoid $G$ has its reduced $C^*$-algebra $C^*_r(G)$ in $\mathcal B$. Some $C^*$-algebras are known not to be in $\mathcal B$ and to satisfy the Künneth formula, such as reduced $C^*$-algebras of lattices in $Sp(n,1)$. Indeed, if $A\in \mathcal B$, then $A$ is $KK$-equivalent to a commutative $C^*$-algebra (see \cite{blackadar}, corollary $20.10.3$). Moreover, a result of Skandalis (\cite{SkandalisNotion}) shows that if $\Gamma$ is an infinite hyperbolic property T group, then $C^*_r(\Gamma)$ is not $K$-nuclear. In particular, it cannot be KK-equivalent to a commutative $C^*$-algebra (a more recent reference for this result is theorem $6.2.1$ of the notes of N. Higson and E. Guentner \cite{HigsonGuentnerNotes}) so that $C^*_r(\Gamma)$ is not in $\mathcal B$. But corollary $0.2$ of J. Chabert, S. Echterhoff and H. Oyono-Oyono \cite{ChabertEOY} together with V. Lafforgue's result \cite{lafforgue2012conjecture} that hyperbolic groups satisfy the Baum-Connes conjecture with coefficients imply that $C^*_r(\Gamma)$ satisfies the Künneth formula.\\
+
+The goal of this work is to extend the results of \cite{ChabertEOY} to the setting of \'etale groupoids. Let us first recall these results, before stating definitions we will need about groupoid crossed-products. The result we are trying to extend is the following:
+
+\begin{thm}[\cite{ChabertEOY}, Th. 0.1 and Cor. 0.2] Let $G$ be a locally compact group and $A$ a $G$-algebra such that:
+\begin{itemize}
+\item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients in all $C^*$-algebras $A\otimes B$ for all $C^*$-algebras $B$ with trivial $G$-action,
+\item[$\bullet$] for every $C^*$-algebra $B$, considered as a $G$-algebra with trivial action, and every compact subgroup $K$ of $G$, $A\rtimes_r K$ satisfies the Künneth formula.
+\end{itemize}
+Then $A\rtimes_r G$ satisfies the Künneth formula.
+\end{thm}
+
+In this paper we study the question of when $A$ satisfies the Künneth formula for the case that $A=C\rtimes_r G$ is a (reduced) crossed product, where $G$ is an ample groupoid and $C$ is a $G$-algebra.
+	We follow the strategy of \cite{CEO} and compare existence of the sequence \ref{KunnethSequence} to the existence of a canonical exact sequence
+
+		\begin{equation}\label{MixedSequence}
+		0\rightarrow \K_*^{\mathrm{top}}(G;C)\otimes\K_*(B)\stackrel{\alpha_G}{\rightarrow}\K_*^{\mathrm{top}}(G;C\otimes B)\stackrel{\beta_G}{\rightarrow}\mathrm{Tor}(\K_*^{\mathrm{top}}(G;C),\K_*(B))\rightarrow 0\\
+		\end{equation}
+
+	Here $\K_*^{\mathrm{top}}(G;C)$ denotes the topological $\K$-theory of $G$ with coefficient $C$. The link between the sequences \ref{MixedSequence} and \ref{KunnethSequence} is given by the Baum-Connes assembly map $\mu_C:\K_*^{\mathrm{top}}(G;C)\rightarrow K_*(C\rtimes_r G)$.
+	Let $\mathcal{N}_G$ denote the class of all separable exact $G$-algebras $C$ for which the canonical exact sequence \ref{MixedSequence} exists. We show that whenever $C$ is in $\mathcal{N_G}$ and $G$ satisfies the Baum-Connes conjecture with coefficients in $C\otimes B$ for all separable $\mathrm{C}^*$-algebras $B$ with respect to the trivial action on $B$, then $A=C\rtimes_r G$ satisfies the Künneth formula.
+	We then use the machinery of Going-Down functors to show, that the class $\mathcal{N}_G$ is non-empty, and in fact fairly large by proving the following results.
+	\begin{thmx}(see Theorem \ref{Theorem:Kunneth} and Corollary \ref{Cor:Kunneth})
+		Let $G$ be an ample groupoid and $A$ a separable and exact $G$-algebra. Suppose that $A_{\mid K}\rtimes K$ satisfies the (ordinary) Künneth formula for all compact open subgroupoids $K\subseteq G$. Then $A\in \mathcal{N}_G$. In particular, if the fibre $A_x$ is type I for all $x\in G^{(0)}$, then $A\in \mathcal{N}_G$.
+	\end{thmx}
+	
+	As an immediate consequence of this and Proposition \ref{Prop:BCandKunneth} we get the following.
+	\begin{corx}(see Corollary \ref{Corollary:Kunneth})
+		Let $G$ be an ample groupoid and $A$ a separable and exact $G$-algebra. Suppose that $A_{\mid K}\rtimes K$ satisfies the (ordinary) Künneth formula for all compact open subgroupoids $K\subseteq G$. Suppose further that $G$ satisfies the Baum-Connes conjecture for $A\otimes B$ for every $\mathrm{C}^*$-algebra $B$ (with $G$ acting trivially on $B$).
+		Then $A\rtimes_r G$ satisfies the Künneth formula. 
+	\end{corx}
+	
+	We also show that the class $\mathcal{N}_G$ enjoys many stability properties. Among these we prove that $\mathcal{N}_G$ is stable under taking inductive limits. To prove this we show that the topological $\K$-theory is continuous with respect to the coefficient algebra, which constitutes another application of the Going-Down principle and is inspired by \cite[§7]{MR1836047}:
+	\begin{thmx}(see Theorem \ref{Theorem:Continuity of top. K-theory})
+		Let $G$ be an ample groupoid and $(A_n,\varphi_n)_n$ an inductive sequence of $G$-algebras. If we let $A=\lim A_n$, then the maps $\psi_{n,*}:\K_*^{\mathrm{top}}(G;A_n)\rightarrow \K_*^{\mathrm{top}}(G;A)$ induced by the canonical maps $\psi_n:A_n\rightarrow A$, give rise to an isomorphism
+		$$\lim_{n\rightarrow\infty}\K_*^{\mathrm{top}}(G;A_n)\cong \K_*^{\mathrm{top}}(G;A).$$
+	\end{thmx}
+	An immediate consequence is the following permanence property for the Baum-Connes conjecture:
+	\begin{corx}(see Corollary \ref{Cor:InductiveLimit})
+		Let $G$ be an ample groupoid and $(A_n,\varphi_n)_n$ an inductive sequence of $G$-algebras with $A=\lim_{n\rightarrow\infty}A_n$. Suppose $G$ satisfies the Baum-Connes conjecture with coefficients in $A_n$ for all $n\in\NN$. Assume further, that $G$ is exact, or that all the connecting homomorphisms $\varphi_n$ are injective. Then $G$ satisfies the Baum-Connes conjecture with coefficients in $A$.
+	\end{corx}
+	
+
+	

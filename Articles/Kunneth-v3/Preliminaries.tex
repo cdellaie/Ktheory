@@ -1,0 +1,65 @@
+	Recall, that a \textit{groupoid} is a set $G$ together with a distinguished subset $G^{(2)}\subseteq G\times G$, called the set of \textit{composable pairs}, a product map $G^{(2)}\rightarrow G$ denoted by $(g,h)\mapsto gh$, and an inverse map $G\rightarrow G$, written $g\mapsto g^{-1}$, such that:
+	\begin{enumerate}
+		\item If $(g_1,g_2),(g_2,g_3)\in G^{(2)}$, then so are $(g_1g_2,g_3)$ and $(g_1,g_2g_3)$ and their products coincide, meaning $(g_1g_2)g_3=g_1(g_2g_3)$;
+		\item for all $g\in G$ we have $(g,g^{-1})\in G^{(2)}$; and
+		\item for any $(g,h)\in G^{(2)}$ we have $g^{-1}(gh)=h$ and $(gh)h^{-1}=g$.
+	\end{enumerate}
+	Every groupoid comes with a subset
+	$$G^{(0)}=\lbrace gg^{-1}\mid g\in G\rbrace=\lbrace g^{-1}g\mid g\in G\rbrace$$
+	called the set of \textit{units} of $G$, and two maps $r,d:G\rightarrow G^{(0)}$ given by
+	$r(g)=gg^{-1}$ and $d(g)=g^{-1}g$ called \textit{range} and \textit{domain} maps respectively.
+	A subgroupoid of $G$ is a subset $H\subseteq G$ which is closed under the product and inversion meaning that $gh\in H$ for all $(g,h)\in G^{(2)}\cap H\times H$ and $g^{-1}\in H$ for all $g\in H$.
+	
+	When $G$ is endowed with a locally compact Hausdorff topology under which the product and inversion maps are continuous, $G$ is called a locally compact groupoid. A \textit{bisection} is a subset $S\subseteq G$ such that the restrictions of the range and domain maps to $S$ are local homeomorphisms onto open subsets of $G$. We will denote the set of all open bisections by $G^{op}$. A locally compact, Hausdorff groupoid is called \textit{étale} if there is a basis for the topology of $G$ consisting of open bisections. It follows that $G^{(0)}$ is open in $G$. Recall that it is also closed, since $G$ is assumed to be Hausdorff. A topological groupoid is called \emph{ample} if it has a basis of compact open bisections. We will write $G^a$ for the subset of $G^{op}$ consisting of all compact open bisections. If $G$ is a locally compact, Hausdorff and étale groupoid, then $G$ is ample if and only if $G^{(0)}$ is totally disconnected (see \cite[Proposition 4.1]{Exel10}).
+	
+	For a subset $D\subseteq G^{(0)}$ write
+	$$G_D:=\lbrace g\in G\mid d(g)\in D\rbrace,\ G^D:=\lbrace g\in G\mid r(g)\in D\rbrace,\ \text{and } G_D^D:=G_D\cap G^D.$$
+	If $D=\lbrace u\rbrace$ consists of a single point $u\in G^{(0)}$ we will omit the braces in our notation and write $G_u:=G_D$, $G^u:=G^D$ and $G_u^u:=G_D^D$.
+	
+	Recall that if $X$ is a locally compact Hausdorff space and $A$ is a $\mathrm{C}^*$-algebra, then we call $A$ a $C_0(X)-algebra$ if there exists a non-degenerate $\ast$-homomorphism
+	$$\Phi:C_0(X)\rightarrow Z(M(A)),$$ where $Z(M(A))$ denotes the center of the multiplier algebra of $A$. For every $x\in X$ there is a closed ideal $I_x$ in $A$ defined by $I_x=\overline{C_0(X\setminus\lbrace x\rbrace)A}$ and we call the quotient $A_x:=A/I_x$ the \textit{fibre} of $A$ over $x$. We write $a(x)$ for the image of $a\in A$ in $A_x$ under the quotient map. Put $\mathcal{A}=\coprod_{x\in X} A_x$. Then $\mathcal{A}$ can be equipped with a topology such that it becomes an upper-semicontinouos $\mathrm{C}^*$-bundle over $X$ and moreover $A\cong \Gamma_0(X,\mathcal{A})$, where $\Gamma_0(X,\mathcal{A})$ denotes the continuous sections of this bundle which vanish at infinity.
+	Throughout this work we will freely alternate between the bundle picture and the picture as $C_0(X)$-algebras. For convenience bundles will always be denoted by calligraphic letters.
+	The reader unfamiliar with the theory is referred to the expositions in \cite[Appendix C]{Williams} and \cite[Section~3.1]{Goehle}.
+	
+	recall that a $\ast$-homomorphism $\Phi:A\rightarrow B$ between two $C_0(X)$-algebras $A$ and $B$ is called \textit{$C_0(X)$-linear} if $\Phi(f a)=f \Phi(a)$ for all $f\in C_0(X)$ and all $a\in A$.
+	
+	If $\Phi:A\rightarrow B$ is a $C_0(X)$-linear homomorphism, it induces $\ast$-homo\-morphisms $\Phi_x:A_x\rightarrow B_x$ on the level of the fibres given by $\Phi_x(a(x))=\Phi(a)(x)$.
+	Conveniently, one can check several properties of $\Phi$ on the level of the fibres and vice versa:
+	\begin{lemma}\cite[Lemma~2.1]{MR2820377}\label{Lem:IsomorphismCriteriumForC(X)-linearHomomorphisms}
+		Let $\Phi:A\rightarrow B$ be a $C_0(X)$-linear homomorphism. Then $\Phi$ is injective (resp. surjective, resp. bijective) if and only if $\Phi_x$ is injective (resp. surjective, resp. bijective) for all $x\in X$.
+	\end{lemma}
+	
+	We will also need the notion of a pullback: If $A$ is a $C_0(X)$-algebra and $f:Y\rightarrow X$ a continuous map, we can define the \textit{pullback} of $A$ along $f$ as follows:
+	Let $q:\mathcal{A}\rightarrow X$ denote the upper-semicontinouos $\mathrm{C}^*$-bundle over $X$ associated to $A$. Then we can form the pullback bundle $f^*\mathcal{A}=\lbrace ((y,a)\in Y\times\mathcal{A}\mid f(y)=q(a)\rbrace$. The bundle $f^*\mathcal{A}$ is an upper-semicontinouos $\mathrm{C}^*$-bundle over $Y$ whose fibres $(f^*\mathcal{A})_y$ are canonically isomorphic to $A_{f(y)}$. We let $f^*A:=\Gamma_0(Y,f^*\mathcal{A})$ denote the corresponding $C_0(Y)$-algebra. Note, that we can canonically identify $(f^*A)_y=A_{f(y)}$.
+	It is an easy exercise to show that if $A$ is a $C_0(X)$-algebra and $f:Y\rightarrow X$ and $g:Z\rightarrow Y$ are two continuous maps, then the algebras $(f\circ g)^*A$ and $g^*(f^*A)$ are canonically isomorphic as $C_0(Z)$-algebras.
+	
+	Pullbacks also behave nicely with respect to $C_0(X)$-linear $\ast$-homomorphisms:	
+	\begin{lemma}\label{Lem:PullbackOfHomomorphisms}
+		Let $A$ and $B$ be two $C_0(X)$-algebras and $f:Y\rightarrow X$ a continuous map. If $\Phi:A\rightarrow B$ is a $C_0(X)$-linear homomorphism, then the map
+		$$f^*\Phi:f^*A\rightarrow f^*B$$
+		given by $(f^*\Phi)(\psi)(y)=\Phi_{f(y)}(\psi(y))$ is a $C_0(Y)$-linear homomorphism.
+		Moreover, the pullback construction is functorial meaning if $\Psi:B\rightarrow C$ is another $C_0(X)$-linear $*$-homo\-morphism into a $C_0(X)$-algebra $C$ then $f^*\Psi\circ f^*\Phi=f^*(\Psi\circ \Phi)$.
+	\end{lemma}
+	
+	Recall that a \textit{groupoid dynamical system} $(A,G,\alpha)$ consists of a locally compact Hausdorff groupoid $G$, a $C_0(G^{(0)})$-algebra $A$ and a family $(\alpha_g)_{g\in G}$ of $*$-isomorphisms $\alpha_g:A_{d(g)}\rightarrow A_{r(g)}$ such that $\alpha_{gh}=\alpha_g\circ \alpha_h$ for all $(g,h)\in G^{(2)}$ and such that $g\cdot a:=\alpha_g(a)$ defines a continuous action of $G$ on the upper-semicontinuous bundle $\mathcal{A}$ associated to $A$.	
+	We will often omit the action $\alpha$ in our notation and just say that $A$ is a $G$-algebra.
+	Since the topology on an upper-semicontinuous $\mathrm{C}^*$-bundle is notoriously difficult to handle we will rely on the following alternate characterization in this paper:
+	\begin{lemma}\cite[Lemma~4.3]{MR2547343}
+		Let $(A,G,\alpha)$ be a groupoid dynamical system. Then the mapping $$f\mapsto [g\mapsto \alpha_g(f(g))]$$ defines a $C_0(G)$-linear $\ast$-isomorphism $d^*A\rightarrow r^*A$, also denoted by $\alpha$.
+		
+		Conversely, if $G$ is a groupoid, $A$ a $C_0(G^{(0)})$-algebra, and $\alpha:d^*A\rightarrow r^*A$ is a $C_0(G)$-linear isomorphism then $\alpha$ induces an isomorphism $\alpha_g:A_{d(g)}\rightarrow A_{r(g)}$ for each $g\in G$. If the equation $\alpha_{gh}=\alpha_g\alpha_h$ holds for all $(g,h)\in G^{(2)}$, then $(A,G,\alpha)$ is a groupoid dynamical system.
+	\end{lemma}
+	
+	Finally, let us briefly recall the definition of a groupoid crossed product	following \cite{MR1900993}.
+	Let $G$ be an étale groupoid and $(A,G,\alpha)$ a groupoid dynamical system. Consider the complex vector space $\Gamma_c(G,r^*\mathcal{A})$. It carries a canonical $*$-algebra structure with respect to the following operations:
+	$$(f_1\ast f_2)(g)=\sum\limits_{h\in G^{r(g)}} f_1(h)\alpha_h(f_2(h^{-1}g))$$
+	and
+	$$f^*(g)=\alpha_g(f(g^{-1})^*).$$
+	See for example \cite[Proposition~4.4]{MR2547343} for a proof of this fact.
+	For $u\in G^{(0)}$ consider the Hilbert $A_u$-module $\ell^2(G^u,A_u)$. It is the completion of the space of finitely supported $A_u$-valued functions on $G^u$, with respect to the inner product 
+	$$\lk \xi,\eta\rk=\sum\limits_{h\in G^u}\xi(h)^*\eta(h).$$
+	We can then define a $*$-representation $\pi_u:\Gamma_c(G,r^*\mathcal{A})\rightarrow \mathcal{L}(\ell^2(G^u,A_u))$ by
+	$$\pi_u(f)\xi(g)=\sum\limits_{h\in G^u}\alpha_g(f(g^{-1}h))\xi(h).$$
+	Using this family of representations, we can define a $\mathrm{C}^*$-norm on the convolution algebra $\Gamma_c(G,r^*\mathcal{A})$ by
+	$$\norm{f}_r:=\sup\limits_{u\in G^{(0)}}\norm{\pi_u(f)}.$$
+	The reduced crossed product $A\rtimes_r G$ is defined to be the completion of $\Gamma_c(G,r^*\mathcal{A})$ with respect to $\norm{\cdot}_r$.
