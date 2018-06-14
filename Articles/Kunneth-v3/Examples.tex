@@ -1,4 +1,4 @@
-A natural question is to find examples of $C^*$-algebras for which theorem \ref{Kunneth} ensures the Künneth formula, without this being a consequence of previous known results \cite{RosenbergKunneth},\cite{ChabertEOY},\cite{OY4}. This is actually not an easy question (in the second author's opinion). The first class of examples we give are actually consequences of a combination of previous result, but they are obtained in a straitforward way. The author's thought they were interesting in themselves, and allow to illustrate the power of the Going-Down principle for grupoids (or at least to compare it to other methods). A positive answer will be provided by Uniform Roe algebras of spaces which admits a coarse embedding into Hilbert space. This is, to our knowledge, a new result, and an easy application of the Going-Down principle.\\ %Unfortunately, the author was not able to come up with such an example. We will nevertheless list several applications, as it shows the interest of the Going-Down principle extended to groupoids, even if the results are derivable from the existing litterature.\\
+A natural question is to find examples of $C^*$-algebras for which theorem \ref{Kunneth} ensures the Künneth formula, without this being a consequence of previous known results \cite{RosenbergKunneth},\cite{ChabertEOY},\cite{OY4}. This is actually not an easy question (in the second author's opinion). The first class of examples we give are actually also consequences of a combination of previous result, but they are obtained here in a straitforward way using the Going-Down principle for groupoids. The author's thought they were interesting in themselves, and allow to illustrate the power of our results (or at least to compare it to other methods). A genuine new application will be provided by Uniform Roe algebras of spaces which admits a coarse embedding into Hilbert space. This is, to our knowledge, a new result, and an easy application of the Going-Down principle.\\ %Unfortunately, the author was not able to come up with such an example. We will nevertheless list several applications, as it shows the interest of the Going-Down principle extended to groupoids, even if the results are derivable from the existing litterature.\\
 
 \subsection{Some examples}
 
@@ -44,32 +44,29 @@ The restriction principle applies for the groupoid $G_{\mathcal N}(\Gamma)\times
 
 \subsection{Uniform Roe algebras}
 
-Let $X$ be a countable discrete metric space with bounded geometry. In \cite{SkTuYu} is constructed the coarse groupoid $G(X)$ associated to $X$ where it is shown to be locally compact, ample, Hausdorff and principal. Thus $G(X)$ is in the class $\mathcal C$. Moreover, if $X$ admits a coarse embedding into a Hilbert space iff $G(X)$ is a-T-menable, which implies (\cite{TuThese}) the Baum-Connes conjecture with coefficients for $G(X)$. The coarse groupoid is principal, and has only two invariant subsets and thus only has only three subgroupoids: $G^{(0)}= \beta X$, $G(X)_{|\partial X}$ and $G(X)_{|X}$. As soon as $X$ is not bounded, none of the last two are compact. So the last condition of theorem \ref{Kunneth} reduces to the usual Künneth formula for $A$, and we get the following application. \\
+Let $X$ be a countable discrete metric space with bounded geometry. In \cite{SkTuYu} is constructed the coarse groupoid $G(X)$ associated to $X$ where it is shown to be locally compact, ample, Hausdorff and principal. Thus $G(X)$ is in the class $\mathcal C$. Moreover, if $X$ admits a coarse embedding into a Hilbert space iff $G(X)$ is a-T-menable, which implies (\cite{TuThese}) the Baum-Connes conjecture with coefficients for $G(X)$.\\
 
-\textbf{Application:} If $X$ admits a coarse embedding into a Hilbert space and $A$ is a $C^*$-algebra satisfying the Künneth formula, then $A\rtimes_r G(X)$ satisfies the Künneth formula. In particular the uniform Roe algebra $C_r^*(G(X))\cong C_u^* (X) $ satisfies the Künneth formula.  \\
+%\textbf{Application:} If $X$ admits a coarse embedding into a Hilbert space and $A$ is a $C^*$-algebra satisfying the Künneth formula, then $A\rtimes_r G(X)$ satisfies the Künneth formula. In particular the uniform Roe algebra $C_r^*(G(X))\cong C_u^* (X) $ satisfies the Künneth formula.  \\
 
-Of course, this is not new for complex coefficients: $G(X)$ being a-T-menable implies that $C_r^*(G(X))$ is in the bootstrap class. Notice that this fails for the Roe algebra $C^*(X) \cong l^\infty (X, \mathfrak K(H)) \rtimes_r G(X)$, as $l^\infty (X, \mathfrak K(H))$ fails to satisfy the Künneth formula. \\ 
+%Of course, this is not new for complex coefficients: $G(X)$ being a-T-menable implies that $C_r^*(G(X))$ is in the bootstrap class. Notice that this fails for the Roe algebra $C^*(X) \cong l^\infty (X, \mathfrak K(H)) \rtimes_r G(X)$, as $l^\infty (X, \mathfrak K(H))$ fails to satisfy the Künneth formula. \\ 
 
-\begin{prop}
+\begin{satz}
 		Let $X$ be a discrete metric space with bounded geometry, which admits a coarse embedding into a Hilbert space. Then $C_u^*(X)$ satisfies the Künneth formula.
-	\end{prop}
+	\end{satz}
 	\begin{proof}
-		Since $C_u^*(X)=C_r^*(G(X))$ not separable we cannot apply the results above directly. However, by \cite[Theorem~5.4]{STY02} there exists a second countable a-T-menable groupoid $G'$ such that $G(X)=G'\ltimes \beta X$. Let $\Psi$ denote the canonical isomorphism $C_r^*(G(X))\cong C_r^*(G')$. Then, for every $\mathrm{C}^*$-algebra $B$ we obtain a commutative diagram, where the vertical maps are isomorphisms.
-		\begin{center}
-			\begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
-			\matrix (m) [matrix of math nodes, row sep=3em,
-			column sep=2.5em, text height=1.5ex, text depth=0.25ex]
-			{ \K_*(C_r^*(G(X)))\otimes K_*(B) & \K_*(C_r^*(G(X))\otimes B) \\
-				\K_*(C_r^*(G'))\otimes K_*(B) & \K_*(C_r^*(G')\otimes B)  \\
-			};
-			\path[->,font=\scriptsize]
-			(m-1-1) edge node[auto] {$ \alpha $} (m-1-2)
-			(m-1-2) edge node[auto] {$ (\Psi\otimes\id_B)_* $} (m-2-2)
-			(m-2-1) edge node[auto] { $ \alpha' $ } (m-2-2)
-			(m-1-1) edge node[auto] { $ \Psi_*\otimes \id$ } (m-2-1)
-			;
-			\end{tikzpicture},
-		\end{center}
-		Since $G'$ is second countable and a-T-menable it satisfies the Baum-Connes conjecture with coefficients. It follows from Corollary \ref{Corollary:Kunneth} that $\alpha'$ is an isomorphism, provided that for every compact open subgroupoid $K$ of $G'$ the $\mathrm{C}^*$-algebra $C_r^*(K)$ satisfies the Künneth formula. But $C^*(K)=C_r^*(K)$ is type I by \cite[Proposition~10.3]{Tu98} and hence satisfies the Künneth formula. Using the commutative diagram above we conclude that $\alpha$ is an isomorphism as well.
+		Since $C_u^*(X)=C_r^*(G(X))$ is not separable we cannot apply the results above directly. However, by \cite[Theorem~5.4]{STY02} there exists a second countable a-T-menable groupoid $G'$ such that $G(X)=G'\ltimes \beta X$. Moreover, we may write $\beta X$ as an inverse limit $\lim\limits_{\longleftarrow} Y_i$, such that:
+		\begin{itemize}
+			\item Each $Y_i$ is a metrizable quotient of $\beta X$.
+			\item The action of $G'$ on $\beta X$ factors through an action of $G'$ on $Y_i$, making the quotient map $G'$-equivariant.
+			\item For each $i\leq j$ the canonical map $Y_j\rightarrow Y_i$ is $G'$-equivariant and surjective.
+		\end{itemize}
+		By the last item we get an inductive system $(C(Y_i))_i$ of separable $G'$-algebras with injective and $G'$-equivariant connecting homomorphisms. Hence $(C(Y_i)\rtimes_r G')_i$ is an inductive system with injective connecting maps as well and we can apply Lemma \ref{Lemma:Proper Groupoids and inductive limits} to obtain
+		$$C_u^*(X)=C_r^*(G(X))=C(\beta X)\rtimes_r G'=\lim\limits_{\longrightarrow} C(Y_i)\rtimes_r G'.$$
+		Now $G'$ is a second countable ample groupoid and satisfies the Baum-Connes conjecture for all coefficients by \cite{Tu98}. If $K\subseteq G'$ is a compact open subgroupoid, then $C(Y_i)_{\mid K}\rtimes K=C_r^*(K\ltimes(Y_i)_{\mid K})$ is the $\mathrm{C}^*$-algebra of a compact groupoid, and hence contained in the class $\mathcal{N}$. By Corollary \ref{Corollary:Kunneth} it follows that $C(Y_i)\rtimes_r G'$ satisfies the Künneth formula for all $i$, i.e. for every $\mathrm{C}^*$-algebra $B$ we obtain canonical short exact sequences
+		$$0\rightarrow \K_*(C(Y_i)\rtimes_r G')\otimes \K_*(B)\rightarrow \K_*((C(Y_i)\rtimes_r G')\otimes B)\rightarrow \Tor(\K_*(C(Y_i)\rtimes_r G'),\K_*(B))\rightarrow 0.$$
+		Since the connecting maps of the directed system $(C(Y_i)\rtimes_r G')_i$ are all injective by construction, we can apply \cite[II.9.6.6]{MR2188261} to get $$\lim\limits_{\longrightarrow}(C(Y_i)\rtimes_r G')\otimes B=C_u^*(X)\otimes B.$$
+		As the (algebraic) tensor product functor and the Tor functor commute with inductive limits, and $\mathrm{K}$-theory is continuous, we obtain a short exact sequence
+		$$0\rightarrow \K_*(C_u^*(X))\otimes \K_*(B)\rightarrow \K_*(C_u^*(X)\otimes B)\rightarrow \Tor(\K_*(C_u^*(X)),\K_*(B))\rightarrow 0,$$
+		in the limit, as desired.
 	\end{proof}
 	The same proof works for $A\rtimes_r G(X)$ whenever $A$ is type I.
