@@ -1,0 +1,34 @@
+\section{Representations of groupoids}
+
+\textbf{Mettre les references et des rappels sur les champs continus et mesurables d'espaces de Hilbert.}\\
+
+This section is a reminder on the different notions of representations for groupoids that exists.\\
+
+Renault defines a representation as the following data:\\
+
+\begin{itemize}
+\item[$\bullet$] a measure $\mu$ on $G^0$,\\
+\item[$\bullet$] a measurable field of Hilbert space $(\mathcal H , \mu)$ over $G^0$,\\
+\item[$\bullet$] a family of bounded operators $L_g : \mathcal H_{s(g)} \rightarrow \mathcal H_{r(g)}$ for each $g\in G$ satisfying $L_{g_1} L_{g_2} = L_{g_1 g_2}$ for every $(g_1,g_2)\in G^2$, $L_{e_x}= id_{\mathcal H_x}$, and 
+\[g\mapsto \langle L_g(\xi_{s(g)}) , \eta_{r(g)} \rangle \] 
+is measurable for every pair of measurable sections. \\
+\end{itemize}
+
+Recall the following: given a $C_0(G^0)$-Hilbert module $E$, a unitary representation $G$ is a unitary 
+\[V \in\mathcal L_{s^* C_0(G^0)}(s^* E, r^* E)\]
+which satisfies $V_1 V_2 = \Delta V$, where:\\
+
+\begin{itemize}
+\item[$\bullet$] $V_i $ is the $C_0(G^{2})$-operator induced from $V$ by the projection $p_i : G^2 \rightarrow G$,\\
+\item[$\bullet$] $\Delta $ is the (comultiplication) map $C_0(G)\rightarrow M(C_0(G^{2}))$-operator induced by the multiplication $\Delta : G^2 \rightarrow G$.\\
+\end{itemize}
+
+Fiberwise this gives you a more restrictive class than the representations in the sense of Renault. Indeed, in the case of a trivial groupoid over a locally compact space $X$, the spectral theorem ensures that any $*$-representation on a Hilbert space $H$
+\[\pi : C_0(X) \rightarrow \mathcal L(H)\]
+disintegrates into a representation in the sense of Renault on a field of Hilbert space. However, our $\{V_g\}$ gives a continuous field of representation over a continuous field of Hilbert space, which is a priori stronger.\\ 
+
+As in the case of groups, one can try to define a integrated representation, by 
+\[ (V(f)\xi )_x = \int_{g\in G^x} f(g) V_g (\xi_{s(g)}) d\lambda^x (g) \quad f \in C_c(G) , \xi \in E.\]
+This defines a multiplicative map $C_c(G)\rightarrow \mathcal B(E)$, where $\mathcal B (E)$ denotes the bounded operator of $E$ seen as a Banach space. 
+
+
