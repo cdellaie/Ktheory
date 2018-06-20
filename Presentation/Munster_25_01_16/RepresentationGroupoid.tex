@@ -2,9 +2,26 @@
 
 \textbf{Mettre les references et des rappels sur les champs continus et mesurables d'espaces de Hilbert.}\\
 
-This section is a reminder on the different notions of representations for groupoids that exists.\\
+This section is a reminder on the different notions of representations for groupoids that exists. Let us first begin by a reminder on continuous fields of $C^*$-algebras and Hilbert spaces.\\
 
-Renault defines a representation as the following data:\\
+A continuous field of $C^*$-algebras over a locally compact space $X$ is a pair 
+\[ \left( \{ A_x \}_{x\in X} , \Gamma_A \right) \]
+where:\\
+\begin{itemize}
+\item[$\bullet$] $A_x$ is a $C^*$-algebra,\\
+\item[$\bullet$] $\Gamma_A \subset \prod_{x\in X} A_x$ is a $*$-algebra such that $x\mapsto || \gamma (x) ||$ is continuous for every $\gamma \in \Gamma_A$, and if $\sigma \in \prod_{x\in X} A_x$ is locally uniformly approximable by sections, then $\sigma\in\Gamma_A$,\\
+\item[$\bullet$] $\{ \gamma(x)\}_{x\in X}$ is dense in $A_x$.\\
+\end{itemize}
+
+On the other hand a $C_0(X)$-algebra is a $C^*$-algebra $A$ endowed with a nondegenerate $*$-homomorphism 
+\[\phi : C_0(X) \rightarrow M(Z(A)). \]
+Any field $\left( \{ A_x \}_{x\in X} , \Gamma_A \right) $ over $X$ defines a $C_0(X)$-algebra 
+\[C^*(\Gamma_A) := \{\gamma\in \Gamma_A \text{ s.t. } x\mapsto ||\gamma(x) || \in C_0(X)\}.\]
+A $C_0(X)$-algebra $A$ is continuous if $x\mapsto || a_x||$ is continuous for each $a\in A$. Here, $a_x$ denotes the image of $a$ under the map $A \rightarrow A / \phi(I_x)A$,with $I_x$ the ideal of functions vanishing at $x$.\\
+
+There is a correspondence between these two notions.\\
+
+Let $G$ be a locally compact groupoid. Renault defines a representation of $G$ as the following data:\\
 
 \begin{itemize}
 \item[$\bullet$] a measure $\mu$ on $G^0$,\\
@@ -29,6 +46,12 @@ disintegrates into a representation in the sense of Renault on a field of Hilber
 
 As in the case of groups, one can try to define a integrated representation, by 
 \[ (V(f)\xi )_x = \int_{g\in G^x} f(g) V_g (\xi_{s(g)}) d\lambda^x (g) \quad f \in C_c(G) , \xi \in E.\]
-This defines a multiplicative map $C_c(G)\rightarrow \mathcal B(E)$, where $\mathcal B (E)$ denotes the bounded operator of $E$ seen as a Banach space. 
+This defines a map $C_c(G)\rightarrow \mathcal B(E)$, where $\mathcal B (E)$ denotes the bounded operator of $E$ seen as a Banach space. But this map is not even multiplicative!\\
 
-
+Instead, consider $G$ to be étale, and 
+\[V(f)_{xy} = \sum_{g\in G_y^x} f(g) V_g ,\]
+so that 
+\[(V(f)\xi)_{x}= \sum_{y\in X} V(f)_{xy} \xi_y = \sum_{g\in G^x} f(g)V_g(\xi_{s(g)}),\]
+but this time
+\[V(f\ast g)_{xz} = \sum_{y\in X} V(f)_{xy} V(g)_{yz}.\]
+If $G$ is not étale, suppose there is a measure $\mu$ on $G^0$.
