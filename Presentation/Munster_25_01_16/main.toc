@@ -42,4 +42,4 @@
 \contentsline {section}{\numberline {19}Number theory}{22}{section.19}
 \contentsline {section}{\numberline {20}Fock spaces, CuntzKrieger algebras, and second quantization}{22}{section.20}
 \contentsline {section}{\numberline {21}Representations of groupoids}{23}{section.21}
-\contentsline {section}{\numberline {22}Grothendieck and tensor products, the origin of nuclearity}{25}{section.22}
+\contentsline {section}{\numberline {22}Grothendieck and tensor products, the origin of nuclearity}{26}{section.22}

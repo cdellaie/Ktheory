@@ -42,7 +42,7 @@ The restriction principle applies for the groupoid $G_{\mathcal N}(\Gamma)\times
 %%%%
 %%%%
 
-\subsection{Uniform Roe algebras}
+\subsection{Uniform and maximal Roe algebras}
 
 Let $X$ be a countable discrete metric space with bounded geometry. In \cite{SkTuYu} is constructed the coarse groupoid $G(X)$ associated to $X$ where it is shown to be locally compact, ample, Hausdorff and principal. Thus $G(X)$ is in the class $\mathcal C$. Moreover, if $X$ admits a coarse embedding into a Hilbert space iff $G(X)$ is a-T-menable, which implies (\cite{TuThese}) the Baum-Connes conjecture with coefficients for $G(X)$.\\
 
@@ -50,17 +50,51 @@ Let $X$ be a countable discrete metric space with bounded geometry. In \cite{SkT
 
 %Of course, this is not new for complex coefficients: $G(X)$ being a-T-menable implies that $C_r^*(G(X))$ is in the bootstrap class. Notice that this fails for the Roe algebra $C^*(X) \cong l^\infty (X, \mathfrak K(H)) \rtimes_r G(X)$, as $l^\infty (X, \mathfrak K(H))$ fails to satisfy the Künneth formula. \\ 
 
+Let $X$ be a discrete bounded geometry metric space, i.e. means that its $R$-balls have uniformly bounded cardinality, or
+\[\sup_{x\in X} |B(x,R)| < \infty \quad \forall R>0.\]
+Motivated by index theory in the setting of non-compact Riemanian manifolds, J. Roe introduced a $C^*$-algebra $C^*(X)$, now called the Roe algebra of $X$. It comes in different versions, which are all completions of the $*$-algebra of locally compact finite propagation operators, of which we now recall the definition. If $H$ is an auxiliary separable Hilbert space and $R>0$, define 
+\[ \C_R[X] = \{T\in\mathcal B(l^2(X)\otimes H)\text{ s.t. } T_{xy}\in \mathfrak K(H) \text{ and } T_{xy} = 0 \text{ if } d(x,y)>R \} \]
+as a closed subspace of $\mathcal B(l^(X)\otimes H)$. Then 
+\[\C[X] = \cup_{R>0} \C_R[X]\]
+is a $*$-algebra, and
+\begin{itemize}
+\item[$\bullet$] if $H=\C$, the completion of $\C[X]$ inside $\mathcal B(l^2(X))$ is defined to be the \textit{uniform Roe algebra} $C_u^*(X)$ of $X$,
+\item[$\bullet$] if $H=l^2(\N)$, the completion of $\C[X]$ inside $\mathcal B(l^2(X)\otimes H)$ is defined to be the \textit{Roe algebra} $C^*(X)$  of $X$,
+\item[$\bullet$] the envelopping $C^*$-algebra of $\C[X]$ is called the \textit{maximal Roe algebra} $C_{max}^*(X)$  of $X$.
+\end{itemize}
+In \cite{SkTuYu}, G. Skandalis, J.-L. Tu and G. Yu define a locally compact Hausdorff ample groupoid $G(X)$, called the \textit{coarse groupoid} of $X$, such that the convolution algebra $C_c(G(X))$ is $*$-isomorphic to $\C[X]$, and 
+\begin{itemize}
+\item[$\bullet$] $C^*_r(G(X)) \cong C_u^*(X)$,
+\item[$\bullet$] $l^\infty_X=l^\infty(X, \mathfrak K(H))$ is a $G(X)$-algebra and $C^*(X)\cong l^\infty_X \rtimes_r G(X)$,
+\item[$\bullet$] $C_{max}^*(G(X)) \cong C_{max}^*(X)$.
+\end{itemize}
+An interesting feature of the coarse groupoid is that its dynamical properties reflect the coarse properties of $X$. Indeed,
+\begin{itemize}
+\item[$\bullet$] $X$ has property A iff $G(X)$ is amenable,
+\item[$\bullet$] $X$ embeds into Hilbert space iff $G(X)$ is a-T-menable,
+\item[$\bullet$] $X$ admits a fibred coarse embedding into Hilbert space iff $G(X)_{|\partial \beta X }$ is a-T-menable (see \cite{FinnSellFibred}). Here, $\partial \beta X$ is the complement of $X$ in $\beta X$, hence is a closed $G(X)$-invariant subset of $\beta X$.
+\end{itemize}
+Fibred coarse embeddings were introduced by Chen, Wang and Yu in \cite{ChenWangYu}.\\
+
+One would wish to apply the results of the present work directly, but the problem is that $G(X)$ is not second-countable, so that the $C^*$-algebras above are not separable. However, by \cite[Theorem~5.4]{STY02} there exists a second countable a-T-menable groupoid $G'$ such that $G(X)=G'\ltimes \beta X$. Moreover, we may write $\beta X$ as an inverse limit $\lim\limits_{\longleftarrow} Y_i$, such that:
+\begin{itemize}
+\item Each $Y_i$ is a metrizable quotient of $\beta X$.
+\item The action of $G'$ on $\beta X$ factors through an action of $G'$ on $Y_i$, making the quotient map $G'$-equivariant.
+\item For each $i\leq j$ the canonical map $Y_j\rightarrow Y_i$ is $G'$-equivariant and surjective.
+\end{itemize}
+We hence get that $G(X)$ can be written as a projective limit of second-countable ample groupoid. 
+
 \begin{satz}
 		Let $X$ be a discrete metric space with bounded geometry, which admits a coarse embedding into a Hilbert space. Then $C_u^*(X)$ satisfies the Künneth formula.
 	\end{satz}
 	\begin{proof}
-		Since $C_u^*(X)=C_r^*(G(X))$ is not separable we cannot apply the results above directly. However, by \cite[Theorem~5.4]{STY02} there exists a second countable a-T-menable groupoid $G'$ such that $G(X)=G'\ltimes \beta X$. Moreover, we may write $\beta X$ as an inverse limit $\lim\limits_{\longleftarrow} Y_i$, such that:
-		\begin{itemize}
-			\item Each $Y_i$ is a metrizable quotient of $\beta X$.
-			\item The action of $G'$ on $\beta X$ factors through an action of $G'$ on $Y_i$, making the quotient map $G'$-equivariant.
-			\item For each $i\leq j$ the canonical map $Y_j\rightarrow Y_i$ is $G'$-equivariant and surjective.
-		\end{itemize}
-		By the last item we get an inductive system $(C(Y_i))_i$ of separable $G'$-algebras with injective and $G'$-equivariant connecting homomorphisms. Hence $(C(Y_i)\rtimes_r G')_i$ is an inductive system with injective connecting maps as well and we can apply Lemma \ref{Lemma:Proper Groupoids and inductive limits} to obtain
+%However, by \cite[Theorem~5.4]{STY02} there exists a second countable a-T-menable groupoid $G'$ such that $G(X)=G'\ltimes \beta X$. Moreover, we may write $\beta X$ as an inverse limit $\lim\limits_{\longleftarrow} Y_i$, such that:
+%		\begin{itemize}
+%			\item Each $Y_i$ is a metrizable quotient of $\beta X$.
+%			\item The action of $G'$ on $\beta X$ factors through an action of $G'$ on $Y_i$, making the quotient map $G'$-equivariant.
+%			\item For each $i\leq j$ the canonical map $Y_j\rightarrow Y_i$ is $G'$-equivariant and surjective.
+%		\end{itemize}
+		With the notations above we get an inductive system $(C(Y_i))_i$ of separable $G'$-algebras with injective and $G'$-equivariant connecting homomorphisms. Hence $(C(Y_i)\rtimes_r G')_i$ is an inductive system with injective connecting maps as well and we can apply Lemma \ref{Lemma:Proper Groupoids and inductive limits} to obtain
 		$$C_u^*(X)=C_r^*(G(X))=C(\beta X)\rtimes_r G'=\lim\limits_{\longrightarrow} C(Y_i)\rtimes_r G'.$$
 		Now $G'$ is a second countable ample groupoid and satisfies the Baum-Connes conjecture for all coefficients by \cite{Tu98}. If $K\subseteq G'$ is a compact open subgroupoid, then $C(Y_i)_{\mid K}\rtimes K=C_r^*(K\ltimes(Y_i)_{\mid K})$ is the $\mathrm{C}^*$-algebra of a compact groupoid, and hence contained in the class $\mathcal{N}$. By Corollary \ref{Corollary:Kunneth} it follows that $C(Y_i)\rtimes_r G'$ satisfies the Künneth formula for all $i$, i.e. for every $\mathrm{C}^*$-algebra $B$ we obtain canonical short exact sequences
 		$$0\rightarrow \K_*(C(Y_i)\rtimes_r G')\otimes \K_*(B)\rightarrow \K_*((C(Y_i)\rtimes_r G')\otimes B)\rightarrow \Tor(\K_*(C(Y_i)\rtimes_r G'),\K_*(B))\rightarrow 0.$$
@@ -70,3 +104,16 @@ Let $X$ be a countable discrete metric space with bounded geometry. In \cite{SkT
 		in the limit, as desired.
 	\end{proof}
 	The same proof works for $A\rtimes_r G(X)$ whenever $A$ is type I.
+
+\begin{satz}
+		Let $X$ be a discrete metric space with bounded geometry, which admits a fibred coarse embedding into a Hilbert space. Then $C_{max}^*(X)$ satisfies the Künneth formula.
+\end{satz}
+\begin{proof}
+The closed saturated subset $\partial \beta X$ gives rise to the following exact sequence of $C^*$-algebras
+\[0 \rightarrow C_{max}^*(X\times X) \rightarrow C^*_{max}(G(X)) \rightarrow C_{max}(G(X)_{|\partial \beta X}) \rightarrow 0.\] 
+The groupoid $X\times X$ being proper, the $C^*$-algebra on the left side is of type I. By the above, 
+\[G(X)_{|\partial \beta X} = \partial \beta X \rtimes G' =\lim\limits_{\longleftarrow} X_i\cap G', \]
+where $X_i$ is the image of $\partial \beta X$ under the $G(X)$-equivariant quotient map $\beta X \rightarrow Y_i$.\\
+
+By hypothesis, $X$ admits a fibred embedding into Hilbert space, and $G(X)_{|\partial \beta X}$ is a-T-menable. The same argument as in the previous result thus concludes the proof.
+\end{proof}

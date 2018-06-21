@@ -8,26 +8,26 @@ A level-1 auxiliary file: RepresentationGroupoid.aux
 A level-1 auxiliary file: Grothendieck.aux
 The style file: plain.bst
 Database file #1: biblio.bib
-You're missing a field part---line 112 of file biblio.bib
+You're missing a field part---line 120 of file biblio.bib
  :     volume  = 
  :               ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 152 of file biblio.bib
+I was expecting a `,' or a `}'---line 160 of file biblio.bib
  : 
  : month = "10"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 162 of file biblio.bib
+I was expecting a `,' or a `}'---line 170 of file biblio.bib
  : 
  : month = ""
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 172 of file biblio.bib
+I was expecting a `,' or a `}'---line 180 of file biblio.bib
  : 
  : month = ""
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 182 of file biblio.bib
+I was expecting a `,' or a `}'---line 190 of file biblio.bib
  : 
  : month = "Summer"
 (Error may have been on previous line)

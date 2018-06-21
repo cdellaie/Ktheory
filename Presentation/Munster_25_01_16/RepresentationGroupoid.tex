@@ -2,14 +2,28 @@
 
 \textbf{Mettre les references et des rappels sur les champs continus et mesurables d'espaces de Hilbert.}\\
 
-This section is a reminder on the different notions of representations for groupoids that exists. Let us first begin by a reminder on continuous fields of $C^*$-algebras and Hilbert spaces.\\
+This section is a reminder on the different notions of representations for groupoids that exists. Let us first begin by a reminder on continuous fields of $C^*$-algebras and Hilbert spaces. All this material can be found in Diximier's book\cite{dixmier}.\\
+
+A continuous field of Banach spaces over a topological space $X$ is a pair 
+\[ E= \left( \{ E_x \}_{x\in X} , \Gamma_E \right) \]
+where:\\
+\begin{itemize}
+\item[$\bullet$] $E_x$ is a Banach space, with norm denoted $||\ .\ ||_x$,\\
+\item[$\bullet$] $\Gamma_E $ is a linear subspace of $\prod_{x\in X} E_x$ such that $x\mapsto || \gamma (x) ||_x$ is continuous (or upper semi-continuous according to Lafforgue) for every $\gamma \in \Gamma_E$, and if every $\sigma \in \prod_{x\in X} A_x$ is locally uniformly approximable by sections, i.e. if for every $x\in X$ and $\varepsilon >0$, there exists $\gamma\in\Gamma_A$ and a neighborhood $U$ of $x$ such that $\sup_{y\in U}||\sigma-\gamma||_y<\varepsilon$,
+then $\sigma\in\Gamma_A$,\\
+\item[$\bullet$] $\{ \gamma(x)\}_{x\in X}$ is dense in $E_x$.\\
+\end{itemize}
+The elements of $\Gamma_E$ are called the continuous sections of $E$. A continuous section is said to be bounded if 
+\[\sup_x ||\gamma(x)||_x< \infty.\] 
+The space of contiuous bounded sections with the sup-norm is a Banach space.\\ 
 
 A continuous field of $C^*$-algebras over a locally compact space $X$ is a pair 
 \[ \left( \{ A_x \}_{x\in X} , \Gamma_A \right) \]
 where:\\
 \begin{itemize}
 \item[$\bullet$] $A_x$ is a $C^*$-algebra,\\
-\item[$\bullet$] $\Gamma_A \subset \prod_{x\in X} A_x$ is a $*$-algebra such that $x\mapsto || \gamma (x) ||$ is continuous for every $\gamma \in \Gamma_A$, and if $\sigma \in \prod_{x\in X} A_x$ is locally uniformly approximable by sections, then $\sigma\in\Gamma_A$,\\
+\item[$\bullet$] $\Gamma_A \subset \prod_{x\in X} A_x$ is a $*$-algebra such that $x\mapsto || \gamma (x) ||$ is continuous for every $\gamma \in \Gamma_A$, and if every $\sigma \in \prod_{x\in X} A_x$ is locally uniformly approximable by sections, i.e. if for every $x\in X$ and $\varepsilon >0$, there exists $\gamma\in\Gamma_A$ such that $||\sigma-\gamma||<\varepsilon$,
+then $\sigma\in\Gamma_A$,\\
 \item[$\bullet$] $\{ \gamma(x)\}_{x\in X}$ is dense in $A_x$.\\
 \end{itemize}
 
@@ -25,11 +39,23 @@ Let $G$ be a locally compact groupoid. Renault defines a representation of $G$ a
 
 \begin{itemize}
 \item[$\bullet$] a measure $\mu$ on $G^0$,\\
-\item[$\bullet$] a measurable field of Hilbert space $(\mathcal H , \mu)$ over $G^0$,\\
+\item[$\bullet$] a measurable field of Hilbert spaces $(\mathcal H , \mu)$ over $G^0$,\\
 \item[$\bullet$] a family of bounded operators $L_g : \mathcal H_{s(g)} \rightarrow \mathcal H_{r(g)}$ for each $g\in G$ satisfying $L_{g_1} L_{g_2} = L_{g_1 g_2}$ for every $(g_1,g_2)\in G^2$, $L_{e_x}= id_{\mathcal H_x}$, and 
 \[g\mapsto \langle L_g(\xi_{s(g)}) , \eta_{r(g)} \rangle \] 
 is measurable for every pair of measurable sections. \\
 \end{itemize}
+
+The main examples are the left and right regular representations, and the trivial one. The left regular representation $\lambda$ is defined as
+the family of operators
+\[\lambda_g : \left\{ \begin{array}{rcl}
+L^2(G^x,\lambda^x) & \rightarrow & L^2(G^x,\lambda^x) \\
+\xi & \mapsto & [\gamma \mapsto \xi_{g^{-1}\gamma}] \\
+\end{array}\right.\]
+whereas the trivial representation is defined as 
+\[\tau_g : \left\{ \begin{array}{rcl}
+H_{s(g)}=\C & \rightarrow & H_{r(g)} = \C \\
+\xi & \mapsto &  \xi\\
+\end{array}\right.\]
 
 Recall the following: given a $C_0(G^0)$-Hilbert module $E$, a unitary representation $G$ is a unitary 
 \[V \in\mathcal L_{s^* C_0(G^0)}(s^* E, r^* E)\]
@@ -48,10 +74,19 @@ As in the case of groups, one can try to define a integrated representation, by
 \[ (V(f)\xi )_x = \int_{g\in G^x} f(g) V_g (\xi_{s(g)}) d\lambda^x (g) \quad f \in C_c(G) , \xi \in E.\]
 This defines a map $C_c(G)\rightarrow \mathcal B(E)$, where $\mathcal B (E)$ denotes the bounded operator of $E$ seen as a Banach space. But this map is not even multiplicative!\\
 
-Instead, consider $G$ to be étale, and 
+Instead, consider $G^0$ to be discrete, and 
 \[V(f)_{xy} = \sum_{g\in G_y^x} f(g) V_g ,\]
 so that 
 \[(V(f)\xi)_{x}= \sum_{y\in X} V(f)_{xy} \xi_y = \sum_{g\in G^x} f(g)V_g(\xi_{s(g)}),\]
 but this time
 \[V(f\ast g)_{xz} = \sum_{y\in X} V(f)_{xy} V(g)_{yz}.\]
-If $G$ is not étale, suppose there is a measure $\mu$ on $G^0$.
+If $G^0$ is not discrete, suppose there is a measure $\mu$ on $G^0$. Then
+\[V(f\ast g)_{xz} = \int_{X} V(f)_{xy} V(g)_{yz}d\mu(y).\]
+
+Some facts.\\
+
+Let $G$ be proper and $V\in\mathcal L_{s^*C_0(G^0)}(s^*E,r^*E)$ be a unitary represntations. If $c: G^0\rightarrow [0,1]$ is a cutoff function, any vector $\xi\in E$ can be averaged as to get an invariant one:
+\[(\overline \xi)_x = \int_{G^x} c(x\gamma) V_\gamma(\xi_{s(\gamma)}) d\lambda^x (\gamma).\]
+A simple computation and $(L_g)^*\lambda^{s(g)} = \lambda^{r(g)}$ gives indeed the $\overline \xi $ is $G$-invariant.
+
+This ensures that any proper groupoid has property T. 
