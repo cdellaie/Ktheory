@@ -161,8 +161,25 @@ The restriction principle applies for the groupoid $G_{\mathcal N}(\Gamma)\times
 
 \begin{itemize}
 \item[$\bullet$] Compact groups, or better: proper groupoids: Green-Julg. \\
+\item[$\bullet$] Proof for the integer group $\Z$: \\
+
+A model for $\underline E \Gamma$ is the space of finitely supported probabilty measures. For $\Z$, the barycenter map 
+\[\left\{ \begin{array}{rcl}
+\underline E \Z & \rightarrow & \R \\ 
+\sum_{n} p_n \delta_n & \mapsto & \sum_n p_n n \end{array}\right.\]
+is an equivariant continuous map homotopic to the identity.\\
+
+Prove the isomorphism
+\[ RK_*^\Z(\R, B) \cong RK_*(\mathbb{S}^1,B),\]
+under which the assembly map sends the Toeplitz extension, which is a generator of the right side, to a generator of the $K$-theory group of $C^*(\Z)$.\\
+
+\item[$\bullet$] For the free group on two elements $\mathbb F_2$, take $\mathbb F_2$'s Cayley graph $T$ as a model for $\underline E \mathbb F_2 =E\mathbb F_2$, and $B\mathbb F_2$ is the wedge of two circles,
+\[ RK_*^{\mathbb F_2}(T, B) \cong RK_*(\mathbb{S}^1 \wedge \mathbb{S}^1 ,B),\]
+and then?\\
+	
 \item[$\bullet$] Connes-Kasparov: proof by representation theory (Wasserman, etc)\\
 \item[$\bullet$] Kasparov's Conspectus: towards Higson-Kasparov paper and the proof for Haagerup (J-L. Tu's general version in $KK$-theory, plus the beautiful result that aTmenability implies bootstrap)\\
+
 \item[$\bullet$] Ideas from Coarse geometry, and Yu and Roe's work, SkandalisTuYu etc.\\
 
 \item[$\bullet$] A $\gamma$-element is a class $\gamma \in KK^\Gamma(\C,\C)$ such that there exists a $\underline E \Gamma \rtimes \Gamma$-algebra $A$ and elements 
@@ -179,9 +196,44 @@ where $p= j_\Gamma(\Sigma_{\underline E \Gamma, B}(\gamma))$ and the assembly ma
 is the identity, $\mu_{max,\Gamma}$ is an isomorphism. If $\gamma=1$, then $\lambda_*\in KK(C_{max}(\Gamma), C^*_r(\Gamma))$ is invertible and $\mu_{r,\Gamma}$ and $\mu_{max,\Gamma}$ are isomorphisms.\\
 \end{thm}
 
-\item[$\bullet$] Ruben asked: \\
+\item[$\bullet$] Rub\'en asked: \\
+
 Do you know a group satisfying Baum-Connes but which doesn't have a $\gamma$-element equal to $1$?   Do you know a group which is not $K$-amenable? \\
-Answer: Any non compact group having property T cannot have $\gamma=1$, because the class of the Kazhdan projection is not zero in $K_0(C_{max}^*(\Gamma))$ but is in $K_0(C_{r}^*(\Gamma))$. For any infinite hyperbolic group $\Gamma$ having T, its reduced $C^*$-algebra $C^*_r(\Gamma)$ is not K-nuclear (\cite{skandalis1988notion}), so any lattice in $Sp(n,1)$ works out. For instance: $Sp_{n,1}(\Z)$.
+
+\textbf{Answer:} Any non compact group having property T cannot have $\gamma=1$, because the class of the Kazhdan projection is not zero in $K_0(C_{max}^*(\Gamma))$ but is in $K_0(C_{r}^*(\Gamma))$. For any infinite hyperbolic group $\Gamma$ having T, its reduced $C^*$-algebra $C^*_r(\Gamma)$ is not K-nuclear (\cite{skandalis1988notion}), so any lattice in $Sp(n,1)$ works out. For instance: $Sp_{n,1}(\Z)$.\\
+
+\item[$\bullet$] Direct splitting method (Nishikawa 2018 \cite{nishikawa2018direct}):\\
+
+\begin{definition} A Kasparov cycle $(H,T)\in E^\Gamma(\C,\C)$ has property $(\gamma)$ if there exists a non-degenerate representation of the $\Gamma$-algebra $(C_0(\underline E \Gamma),\alpha)$,
+\[\pi : C_0(\underline E \Gamma) \rightarrow \mathcal L(H),\]
+such that
+\[\gamma \mapsto [\alpha_\gamma(\phi ), T] \in C_0(\Gamma, \mathfrak K(H)) \quad\forall \phi \in C_0(\underline E\Gamma)\]
+and 
+\[\int_\Gamma \alpha_\gamma(c^\frac{1}{2}) T \alpha_\gamma(c^\frac{1}{2})d\mu_\Gamma - T\in \mathfrak K(H),\]
+for some cutoff function $c$ on $\Gamma$ and Haar measure $\mu_\Gamma$. (integral in the strong topology)\\
+\end{definition}
+
+If such a pair $(H,T)$ and $\pi$ is given, define:\\
+
+\begin{itemize}
+\item the $\Gamma$-equivariant Hilbert $A$-module $\tilde H  = H\otimes l^2(\Gamma)\otimes A$,
+\item the Fredholm operator $(\tilde T)_{\gamma\gamma} = \gamma T \gamma^*$,
+\item the representation $\tilde \pi = \pi \otimes \rho_{\Gamma,A}$, where $\rho_{\Gamma,A}$ is the right regular representation on $l^2(\Gamma)\otimes A$.\\
+\end{itemize}
+
+Then $(\tilde H, \tilde \pi, \tilde T)$ defines a class in 
+\[\gamma\in KK_0(C_0(\underline E\Gamma) \otimes (A\rtimes_r \Gamma), A)\] 
+and the splitting map is defined as
+\[\nu_{\Gamma,A} : \left\{ \begin{array}{rcl}
+K_*(A\rtimes_r \Gamma) & \rightarrow & KK_*^\Gamma(C_0(\underline E \Gamma ), A) \\
+z & \mapsto & \tau_{C_0(\underline E\Gamma)}(z)\otimes \gamma 
+\end{array}\right.\]
+It is functorial in $A$ w.r.t. $\Gamma$-equivariant $*$-homomorphisms. The main result is the following:\\
+
+\begin{thm}
+The composition $\mu_{\Gamma,A}\circ \nu_{\Gamma,A}$ coincides the endomorphism of $K_*(A\rtimes_r \Gamma)$ induced by $(H,T)$.
+\end{thm}
+
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
