@@ -1,0 +1,175 @@
+We will end this paper with an extension of the main result. Indeed, the class of second countable ample groupoids can be used as a starting point of an inductively defined class of groupoids whose $C^*$-algebras satisfy the Kunneth formula. This class is directly inspired from the class of finite decompposition complexity for groups \cite{GTY}. \\
+
+
+Next we state a strengthening of Corollary \ref{Corollary:Kunneth}, which is proved in the second author's thesis \cite{DellAieraThesis}. It says that the Künneth morphism $\alpha_{A\rtimes_r G,B}$ comes from a controlled morphism $\hat \alpha_{A\rtimes_r G,B}$, which is a quantitative isomorphism.
+
+\begin{thm}[Theorem $5.2.13$ \cite{DellAieraThesis}]
+Let $G$ be a ($\sigma$-compact) second countable ample groupoid and $A$ a separable and exact $G$-algebra. Suppose that 
+\begin{itemize}
+\item[$\bullet$] $G$ satisfies the Baum-Connes conjecture with coefficients in $A\otimes B $ for every separable trivial $G$-algebra $B$,
+\item[$\bullet$] for every compact open subgroupoid $K$ of $G$, $A_{|K}\rtimes_r K \in \mathcal N$.
+\end{itemize} 
+Then $A\rtimes_r G$ satisfies the quantitative Künneth formula.
+\end{thm}
+
+Quantitative $K$-theory was developed by H. Oyono-Oyono and G. Yu in \cite{OY2}, and its application to the Künneth formula in \cite{OY4}. The main topic of the author's thesis \cite{DellAieraThesis} was a generalization of operator quantitative $K$-theory, called controlled $K$-theory, which allows to state that crossed products $A\rtimes_r G$ are $C^*$-algebras which are filtered by the set of symmetric compact subsets $K\subseteq G$. One can then study the controlled $K$-theory group $\hat K_*(A\rtimes_r G)$, which approximate $K_*(A\rtimes_r G)$ in a precise sense. We refer the reader to \cite{DellAieraThesis} or \cite{dell2017controlled} for more details. The proof of the quantitative Künneth formula is essentially the same as the classical one. One just has to use the controlled version of every morphism involved, and has to keep track of the propagation at every steps. The quantitative Künneth formula essentially means that the morphism $\alpha_{A\rtimes_r G, B}$ is induced by a controlled morphism $\hat\alpha_{A\rtimes_r G , B}$.\\
+
+We shall end this article with an account of what controlled $K$-theory can achieve concerning the Künneth formula: a stability result. In \cite{OY4}, H. Oyono-Oyono and G. Yu introduced the class $C_{fand}$ of finite asymptotic nuclear dimensional $C^*$-algebras, and show (\cite{OY4}, Proposition $5.6$ ) that every member of this class satisfies the Künneth formula. To define this class, we first need to recall what is a filtered $C^*$-algebra, and a controlled Mayer-Vietoris pair.
+
+\begin{definition}
+A coarse structure is a poset $\mathcal E$ equipped with an abelian semi group structure such that, for any two elements $E,E'\in \mathcal E$, there exists an element $F\in \mathcal E$ such that $E\leq F$ and $E'\leq F$. A $C^*$-algebra $A$ is said to be $\mathcal E$-filtered if there exists a family $\{A_E \}_{E\in \mathcal E}$ of closed self-adjoint subspaces of $A$ such that:
+\begin{itemize}
+\item[$\bullet$] $A_E \subseteq A_{E'}$ if $E\leq E'$,
+\item[$\bullet$] $A_E . A_{E'} \subseteq A_{EE'}$,
+\item[$\bullet$] $\cup_{E\in \mathcal E} A_E$ is dense in $A$.
+\end{itemize} 
+If $A$ is unital, we impose that $1\in A_E$ for every $E\in \mathcal E$.
+\end{definition} 
+
+Examples of filtered $C^*$-algebras include Roe algebras associated to proper metric spaces with bounded geometry, crossed-products of $C^*$-algebras by action by automorphisms of \'etale groupoids or discrete quantum groups. See \cite{DellAieraThesis}, chapter $3$ for details or \cite{dell2017controlled}. Any sub-$C^*$-algebra $B$ of $A$ is considered filtered by the family $\{B\cap A_E\}_{E\in \mathcal E}$. If $A$ and $A'$ are $\mathcal E$-filtered, then $A\cap A'$ is considered filtered by the family $\{A_E\cap A'_E\}_{E\in \mathcal E}$. \\
+
+To a $\mathcal E$-filtered $C^*$-algebra $A$, one can associate its controlled $K$-theory groups $\hat K_*(A)$ which is a family of groups 
+\[\{ K^{\varepsilon, E}_*(A) \}_{\varepsilon\in (0, \frac{1}{4}), E\in \mathcal E}\] 
+satisfying nice compatibility conditions and approximating the $K$-theory groups $K_*(A)$. A controlled morphism $\hat\phi = \{\phi_{\varepsilon, E}\}$ is a family of morphisms
+\[ \phi_{\varepsilon, E} : K^{\varepsilon, E}_*(A) \rightarrow K^{\alpha\varepsilon, h_\varepsilon .E}_*(B) \quad 
+\forall \varepsilon \in (0, \frac{1}{4\alpha}), E\in \mathcal E \]
+where $\alpha \leq 1$ is a fixed constant, and $h$ is a nondecreasing function. The point is that the way the propagation, i.e. the parameters are distorted, is uniform accross the family. The family must satisfy compatibility conditions we do not recall here in order to keep a reasonable length for the article (and the details of controlled $K$-theory are not essential for the proof). Forgetting the propagation, any controlled morphism $\hat \phi$ induces a morphism in $K$-theory  
+\[ \phi : K_*(A) \rightarrow K_*(B) . \]
+One of the interest of controlled $K$-theory lies in its computability. For instance, Mayer-Vietoris type exact sequences occur even if the filtered $C^*$-algebra is simple. More precisely, in \cite{OY4} is developed a notion of controlled Mayer-Vietoris pair, which we now recall.
+
+\begin{definition}
+Let $A$ be a $\mathcal E$-filtered $C^*$-algebra, $c\geq 1$ and $F\in \mathcal E$. A $F$-controlled Mayer-Vietoris pair with coercivity $c$ is a quadruple $(V_0, V_1, A^{(0)}, A^{(1)})$:
+\begin{itemize}
+\item[$\bullet$] the $V_i$'s are closed subspaces of $A_F$,
+\item[$\bullet$] $A^{(i)}$ is a $C^*$-algebra containing \[ V_i + A_{F'} V_i + V_i A_{F'}  + A_{F'} V_i A_{F'}\]
+with $F' = F^5$,
+\item[$\bullet$] for every $E\leq F$, every $x\in M_n(A_E)$ can be written as a sum \[x=x_0+x_1\] where $x_i\in M_n(V_i \cap A_E)$ and $|| x_i|| \leq c||x||$,
+\item[$\bullet$] for every $\varepsilon>0$, $E\leq F$ and every $\varepsilon$-close elements $x\in A_E^{(0)}$ and $y\in A_E^{(1)}$, i.e.
+\[|| x-y || < \varepsilon,\]
+there exists $z\in M_n( A_E^{(0)}\cap A_E^{(1)})$ such that \[ ||x-z|| < c\varepsilon \quad \text{and} \quad ||y-z|| < c\varepsilon .\]
+\end{itemize}
+If $\mathcal A$ and $\mathcal B$ are two families of $\mathcal E$-filtered $C^*$-algebras, we say that $\mathcal A$ $2$-decomposes over $\mathcal B$ if there exists a constant $c\geq 1$ such that, for every $A\in\mathcal A$, and every $E\in \mathcal E$, there exists a controlled Mayer-Vietoris pair $(V_0, V_1, A^{(0)}, A^{(1)})$ with coercivity $c$ with $A^{(0)}$, $A^{(1)}$ and $A^{(0)} \cap A^{(1)}$ belonging to $\mathcal B$.
+\end{definition} 
+
+If in possession of a controlled Mayer-Vietoris pair $(V_0, V_1, A^{(0)}, A^{(1)})$ for a filtered $C^*$-algebra $A$, Theorem $3.10$ of \cite{OY4} allows to compute its controlled $K$-theory in terms of the controlled $K$-theory of the sub-$C^*$-algebras $A_i$. See \cite{OY4},\cite{DellAieraThesis} or \cite{dell2017controlled} for precise definitions about controlled morphisms and controlled exact sequences. 
+
+\begin{thm}
+For every $\mathcal E$-filtered $C^*$-algebra $A$, $E\in \mathcal E$ and every $E$-controlled Mayer-Vietoris pair $(V_0, V_1, A^{(0)}, A^{(1)})$, there exists a controlled sequence
+\[\begin{tikzcd}
+ \hat K_*( A^{(0)}\cap A^{(1)} ) \arrow{r} & \hat K_*(A^{(0)}) \oplus \hat K_*(A^{(1)}) \arrow{r} & \hat K_*(A) \arrow{d} \\ 
+ \hat K_*(A) \arrow{u} & \hat K_*(A^{(0)}) \oplus \hat K_*(A^{(1)}) \arrow{l} & \hat K_*( A^{(0)}\cap A^{(1)} ) \arrow{l}
+\end{tikzcd}\]
+which is controlled-exact up to order $E$.  
+\end{thm}  
+
+This result allows H. Oyono-Oyono and G. Yu to prove a permanence result (\cite{OY4}, Theorem $4.12$).
+
+\begin{thm}
+Let $A$ be a $\mathcal E$-filtered $C^*$-algebra. If for every $E\in \mathcal E$ there exists a $E$-controlled Mayer-Vietoris pair $(V_0, V_1, A^{(0)}, A^{(1)})$ such that $A^{(0)}$, $A^{(1)}$ and $A^{(0)} \cap A^{(1)}$ satisfy the quantitative Künneth formula then $A$ satisfies the quantitative Künneth formula.   
+\end{thm}
+
+Let $\mathcal E$ be a coarse structure. A $\mathcal E$-filtered $C^*$-algebra $A$ is said to be locally bootstrap if, for every $E\in \mathcal E$, there exists $F\in \mathcal E$ and a sub-$C^*$-algebra $A^{(F)}$ of $A$, which is in the bootstrap class $\mathcal B$ and satisfies
+\[A_E \subseteq A^{(F)}\subseteq A_F. \]
+Notice the following property: a locally bootstrap $C^*$-algebra is automatically bootstrap. It is indeed an inductive limit of bootstrap $C^*$-algebras. Denote by $C_{fand}^{(0)}$ the class of locally bootstrap $C^*$-algebras. Then, a $C^*$-algebra $A$ belongs to the class $C^{(n+1)}_{fand}$ if it is $2$-decomposabe over $C_{fand}^{(n)}$. \\
+
+The asymptotic nuclear dimension of $A$ is the smaller $n$ such that $A$ belongs to $C^{(n)}_{fand}$, and we denote by $C_{fand}$ the class of $C^*$-algebras with finite asymptotic nuclear dimension,
+\[ C_{fand}  = \cup_{n\geq 0} C_{fand}^{(n)}.\]
+
+The two previous result combines in the main result of \cite{OY4}.
+\begin{thm}
+Let $A$ be a filtered $C^*$-algebra with finite asymptotic nuclear dimension. Then $A$ satisfies the Künneth formula. \end{thm}
+
+As an application, H. Oyono-Oyono and G. Yu prove that the uniform Roe algebra of a coarse space with finite asymptotic dimension satisfies the Künneth formula.\\
+
+%%%%%%%%%%%
+One crucial example of controlled Mayer Vietoris pair is given by any decomposition of the base space of an \'etale groupoid with compact base space. Let $G$ be such a groupoid and $U^0$ and $U^1$ two open subsets in $G^{(0)}$ such that
+\[G^{(0)} = U^0 \cup U^1. \]
+Recall (\cite{DellAieraThesis} chapter $3$, \cite{dell2017controlled}) that the set $\mathcal E$ of symmetric compact subsets of $G$ is a coarse structure with respect to which $C_r^*(G)$ is filtered by the family of subspaces 
+\[C_E(G) = \{ f\in C_c(G) \text{ s.t. supp}(f)\subseteq E  \}\]
+indexed by $E\in \mathcal E$.\\
+
+For any open subset $U\subseteq G$, define $U_E$ to be the partial orbit of $U$ by $E$, i.e. $s(int(E)^U)$, and $G^{(E)}_U$ to be the groupoid generated by $G_{|U}\cap E$. Then $U_E$ is an open subset of $G^{(0)}$ and $G^{(E)}_U$ is an open subgroupoid of $G$.\\
+ 
+Given the decomposition $G^{(0)}= U^0 \cap U^1$, set $F_i$ to be the closed subspace $C_0(G_{U^i})\cap C_E(G)$, and $A_i$ to be $C_r^*(G_{U^i_E}^{(E)})$, then 
+\[\left( \ F_0 \ , \ F_1 \ , \ A_0 \ , \ A_1 \  \right)\]
+is a $E$-controlled Mayer-Vietoris pair for $C_r^*(G)$. \\
+%%%%%%%%%%
+
+Suppose now that a groupoid can be decomposed in such a way at every order into subgroupoids whose reduced $C^*$-algebra satisfies the Künneth formula. The previous permanence result shows that the reduced $C^*$-algebra still satisfies the Künneth formula. 
+
+\begin{prop} Let $G$ be an \'etale groupoid such that, for every symmetric compact subset $E\subseteq G$, there exists a decomposition 
+\[G^{(0)} = U^0 \cup U^1\]
+such that $C^*_r(G_{U^0_E}^{(E)})$, $C^*_r(G_{U^1_E}^{(E)})$  and $C^*_r(G_{U^0_E}^{(E)}) \cap C^*_r(G_{U^1_E}^{(E)})$ satisfy the quantitative Künneth formula, then so does $C^*_r(G)$.
+\end{prop}
+
+This leads us to introduce the following notion.
+
+\begin{definition}
+Let $\mathcal G$ and $\mathcal H$ be two families of \'etale groupoids. \\
+
+We say that $\mathcal G$ is $d$-decomposable over $\mathcal F$ if, for every groupoid $G$ in $\mathcal G$, every symmetric compact subset $E\subseteq G$, there exist a covering of $E^{(0)} = s(E)=r(E)$ by $d+1$ open subsets 
+\[E^{(0)} = U_0 \cup ... \cup U_d \] such that the groupoids generated by $G_{|U_i} \cap E$ all belongs to the class $\mathcal H$.\\
+
+We say that $\mathcal G$ is finitely $d$-decomposable over $\mathcal F$ if there exist finitely many classes 
+\[\mathcal G= \mathcal F_0 \ , \ \mathcal F_1 \ , \ ... \ , \ \mathcal F_k = \mathcal F \] 
+such that $\mathcal F_j$ is $d$-decomposable over $\mathcal F_{j+1}$ for every $j$. The smallest integer, if it exists, $k$ realizing this condition is called the relative dimension of $\mathcal G$ w.r.t. $\mathcal F$ and is denoted by $dim_{d,\mathcal F}(\mathcal G)$.  
+\end{definition}
+
+In \cite{GWY}, E. Guentner, R.Willett and G. Yu introduced the notion of \textit{dynamical asymptotic dimension} for an \'etale groupoid. Unravelling the definition, one gets that the dynamical asymptotic dimension of $G$ is less than $d$ iff \[dim_{d,\text{Cpt}} (\{G\}) \leq 1,\]
+where Cpt is the class of compact \'etale groupoids.\\
+
+This coincides with the asymptotic dimension in coarse geometry: \[asdim(X)= asdim G(X)\]
+On the other hand: 
+
+\begin{prop}
+Let $X$ be a countable discrete metric space with bounded geometry and $G(X)$ its coarse groupoid. Then $G(X)$ $2$-decomposes over $Cpt$ iff $X$ has finite decomposition complexity in the sense of \cite{GuentnerTesseraYu}.
+\end{prop}
+
+\begin{proof}
+It is sufficient to check that a family $\mathcal X$ of countable discrete metric spaces with bounded geometry decomposes over another such family $\mathcal Y$ iff the corresponding family $G(\mathcal X) = \{G(X)\}_{X\in \mathcal X}$ decomposes over $G(\mathcal Y)$.\\
+
+Let $X\in \mathcal X$ and $R>0$. FDC gives the decomposition \[X = X_0 \cup X_1\]
+where each $X_i$ is a $R$-disjoint union $\coprod_j X_{ij}$ of uniformly bounded subspaces $X_{ij}$. Both $R$-disjointness and uniform boundedness translate into the property that
+\[(X\times X)_{|X_i} \cap \Delta_R =\coprod_j X_{ij} \times X_{ij}  \]   
+is contained in some neighboorhood of the diagonal. Set $U_i$ to be the closure of $X_i$ in $\beta X$. Taking the closure of the previous inequality into $\beta X\times X$ entails that $G(X)_{U_i} \cap \overline \Delta_R$ is compact open, hence the subgroupoid it generates is compact open.\\
+
+If $G(X)$ $2$-decomposes over $Cpt$, let $E\in \mathcal E_G$ and A FINIR
+\[G^{(0)} = U_0 \cup U_1\] \end{proof}
+
+%%%%
+But \[dim_{1,Cpt}(G(X))\leq \omega \text{ iff } X \text{ has FDC. } \]
+
+From the permanence result, one also have that, if $\mathcal F$ is any family of \'etale groupoids whose reduced $C^*$-algebras satisfy the Künneth formula, and $G$ is an \'etale groupoid such that \[dim_{1, \mathcal F} ( \{G\} ) < \infty, \]
+then $C_r^*(G)$ satisfy the Künneth formula.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

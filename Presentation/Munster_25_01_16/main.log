@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  7 SEP 2018 13:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  10 SEP 2018 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
+**main
 (./main.tex
 LaTeX2e <2017-04-15>
 Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
@@ -935,7 +935,7 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 20.
 )
 (./main.aux (./Groupoids.aux) (./HarishChandra.aux) (./UCT.aux)
 (./FunkyQuestions.aux) (./zoology.aux) (./RepresentationGroupoid.aux)
-(./Grothendieck.aux))
+(./Grothendieck.aux) (./controlledKunneth.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -1707,32 +1707,185 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 ) [28
 
 
-] (./main.bbl) [29
+]
+\openout2 = `controlledKunneth.aux'.
+
+ (./controlledKunneth.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+LaTeX Warning: Reference `Corollary:Kunneth' on page 29 undefined on input line
+ 4.
+
+
+LaTeX Warning: Citation `DellAieraThesis' on page 29 undefined on input line 4.
+
+
+
+LaTeX Warning: Citation `DellAieraThesis' on page 29 undefined on input line 6.
+
+
+
+LaTeX Warning: Citation `OY4' on page 29 undefined on input line 15.
+
+
+LaTeX Warning: Citation `DellAieraThesis' on page 29 undefined on input line 15
+.
+
+
+LaTeX Warning: Citation `DellAieraThesis' on page 29 undefined on input line 15
+.
+
+
+LaTeX Warning: Citation `dell2017controlled' on page 29 undefined on input line
+ 15.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+
+LaTeX Warning: Citation `OY4' on page 29 undefined on input line 17.
+
+
+LaTeX Warning: Citation `OY4' on page 29 undefined on input line 17.
+
+
+LaTeX Warning: Citation `DellAieraThesis' on page 29 undefined on input line 29
+.
+
+
+LaTeX Warning: Citation `dell2017controlled' on page 29 undefined on input line
+ 29.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+[29
+
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
+
+LaTeX Warning: Citation `OY4' on page 30 undefined on input line 38.
+
+
+LaTeX Warning: Citation `OY4' on page 30 undefined on input line 54.
+
+
+LaTeX Warning: Citation `OY4' on page 30 undefined on input line 54.
+
+
+LaTeX Warning: Citation `DellAieraThesis' on page 30 undefined on input line 54
+.
+
+
+LaTeX Warning: Citation `dell2017controlled' on page 30 undefined on input line
+ 54.
+
+[30]
+
+LaTeX Warning: Citation `OY4' on page 31 undefined on input line 65.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
+
+ []
+
+
+LaTeX Warning: Citation `OY4' on page 31 undefined on input line 78.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
+
+LaTeX Warning: Citation `DellAieraThesis' on page 31 undefined on input line 87
+.
+
+
+LaTeX Warning: Citation `dell2017controlled' on page 31 undefined on input line
+ 87.
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+
+LaTeX Warning: Citation `GWY' on page 32 undefined on input line 118.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--120
+
+ []
+
+[32]
+
+LaTeX Warning: Citation `GuentnerTesseraYu' on page 33 undefined on input line 
+125.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
+
+ []
+
+) [33] (./main.bbl) [34
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
  (./main.aux (./Groupoids.aux) (./HarishChandra.aux)
 (./UCT.aux) (./FunkyQuestions.aux) (./zoology.aux)
-(./RepresentationGroupoid.aux) (./Grothendieck.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 37.
+(./RepresentationGroupoid.aux) (./Grothendieck.aux) (./controlledKunneth.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E3E88DEDB88D140B25382EE1B3586A4D;3009.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 18890 strings out of 492990
- 359561 string characters out of 6132636
- 423193 words of memory out of 5000000
- 21972 multiletter control sequences out of 15000+600000
+ 18982 strings out of 492990
+ 361453 string characters out of 6132636
+ 423686 words of memory out of 5000000
+ 22041 multiletter control sequences out of 15000+600000
  15049 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,16n,84p,801b,1006s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,16n,84p,1114b,1011s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -1756,10 +1909,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (29 pages, 353166 bytes).
+Output written on main.pdf (34 pages, 377616 bytes).
 PDF statistics:
- 508 PDF objects out of 1000 (max. 8388607)
- 449 compressed objects within 5 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 545 PDF objects out of 1000 (max. 8388607)
+ 481 compressed objects within 5 object streams
+ 114 named destinations out of 1000 (max. 500000)
  373 words of extra memory for PDF output out of 10000 (max. 10000000)
 
