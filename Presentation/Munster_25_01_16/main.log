@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  10 SEP 2018 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  11 SEP 2018 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main
+**main.tex
 (./main.tex
 LaTeX2e <2017-04-15>
 Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
@@ -1838,29 +1838,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--112
  []
 
 
-LaTeX Warning: Citation `GWY' on page 32 undefined on input line 118.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--120
-
- []
+LaTeX Warning: Citation `GWY' on page 32 undefined on input line 116.
 
 [32]
 
 LaTeX Warning: Citation `GuentnerTesseraYu' on page 33 undefined on input line 
-125.
+119.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+LaTeX Warning: Citation `ArzhantsevaTesssera' on page 33 undefined on input lin
+e 133.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--135
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-) [33] (./main.bbl) [34
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+
+ []
+
+[33]
+
+LaTeX Warning: Citation `GuentnerTesseraYu' on page 34 undefined on input line 
+165.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
+
+ []
+
+) [34] (./main.bbl) [35
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
@@ -1879,13 +1898,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 18982 strings out of 492990
- 361453 string characters out of 6132636
- 423686 words of memory out of 5000000
- 22041 multiletter control sequences out of 15000+600000
+ 18989 strings out of 492990
+ 361521 string characters out of 6132636
+ 423707 words of memory out of 5000000
+ 22043 multiletter control sequences out of 15000+600000
  15049 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,16n,84p,1114b,1011s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,16n,84p,1118b,1011s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -1909,10 +1928,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (34 pages, 377616 bytes).
+Output written on main.pdf (35 pages, 382020 bytes).
 PDF statistics:
- 545 PDF objects out of 1000 (max. 8388607)
- 481 compressed objects within 5 object streams
- 114 named destinations out of 1000 (max. 500000)
+ 555 PDF objects out of 1000 (max. 8388607)
+ 490 compressed objects within 5 object streams
+ 119 named destinations out of 1000 (max. 500000)
  373 words of extra memory for PDF output out of 10000 (max. 10000000)
 
