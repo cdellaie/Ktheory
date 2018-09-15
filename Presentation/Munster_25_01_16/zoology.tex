@@ -72,9 +72,17 @@ a unital order isomorphism, i.e. \[\alpha(K_0(A)_+) \subseteq K_0(B)_+ \quad \te
 Then there exists a unital $*$-isomorphism $\phi; A\rightarrow B$ such that $\phi_*=\alpha$.
 \end{thm}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{$C^*$-simplicity}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We only consider discrete countable groups, usually denoted by $\Gamma$.\\
+We only consider discrete countable groups, usually denoted by $\Gamma$.
+
+\begin{definition}
+A group is said to be $C^*$-simple if its reduced $C^*$-algebra is simple, i.e. has no proper closed two sided ideals. 
+\end{definition}
+
+A motivation for the interest toward such a notion can be the following result of Murray and Von Neumman: the Von Neumman algebra $L(\Gamma)$ is simple (no proper weakly closed two sided ideals) iff it is a factor iff $\Gamma$ is ICC (infinite conjugacy classes, i.e. all non trivial conjugacy classes are infinite).\\  
 
 Recall that, given two unitary representations of $\Gamma$, we say that $\pi$ is weakly contained in $\sigma$ and write 
 \[\pi < \sigma\]
@@ -120,6 +128,17 @@ ensures by induction
 But if $n\in N$ is non trivial, $\lambda_{\Gamma}(n)$ is non trivial and sent to $\lambda_{\Gamma /N}(n) = 1$ via $\phi$, so that $Ker\ \phi$ is a proper ideal in $C^*_r(\Gamma)$.\\	
 \qed	 
 \end{dem}
+
+After the talk, Erik Guentner suggested the following proof. It is even shorter and doesn't assume any knowledge about weak containment or induction of representations. It is a weakening of the following fact: when $\Gamma$ is amenable, the trivial representation $1_\Gamma : C^*_{max}(\Gamma)\rightarrow \C$ extends to the reduced $C^*$-algebra.\\
+
+Indeed let $a\in \C [\Gamma]$ and $(F_n)$ be a sequence of Folner sets for the support of $a$. Define $\xi_n = \frac{1}{|F_n|^\frac{1}{2}} \chi_{F_n} \in l^2(\Gamma )$. Then, suppose $a$ is positive, and compute
+\[\begin{split}
+\langle a \xi_n , \xi_n \rangle & = \sum_{s\in \text{ supp }a} a_\gamma \frac{|F_n \cap sF_n|}{|F_n|} \\ 
+				& \rightarrow \| a \|_{1_\Gamma}
+\end{split}\]
+so that $ \| a\|_r \leq \| a\|_{1_\Gamma} $.\\
+
+Now if $N$ is a normal amenable subgroup of $\Gamma$...\\
 
 We saw that $\mathbb F_2$ is $C^*$-simple, yet it has a copy of $\Z$ as an amenable subgroup (non normal), and a normal (non amenable) subgroup: the commutator subgroup, which is an infinite rank free group, $\langle [x,y ] : x,y \in \mathbb F_2\rangle = \mathbb F([a^n, b^m] ; n,m) $. Both conditions are necessary.\\
 
