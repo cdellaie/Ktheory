@@ -37,6 +37,7 @@
 \contentsline {section}{\numberline {14}Haagerup property, cocycles and the mapping class group}{24}{section.14}
 \contentsline {section}{\numberline {15}Hawaii}{25}{section.15}
 \contentsline {subsection}{\numberline {15.1}HLS groupoids}{25}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}Visit to PennState, September 18th to 21st 2018}{26}{subsection.15.2}
 \contentsline {section}{\numberline {16}Mayer-Vietoris}{26}{section.16}
 \contentsline {section}{\numberline {17}Quantum groups}{26}{section.17}
 \contentsline {section}{\numberline {18}Property T}{26}{section.18}
