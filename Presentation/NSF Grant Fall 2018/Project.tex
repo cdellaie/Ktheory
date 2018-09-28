@@ -1,0 +1,33 @@
+\subsection{From approximation properties to the K\"unneth formula in operator $K$-theory and the Universal Coefficient Theorem}
+
+An important part of Operator Algebras as a field can be described as attempting to answer questions arising in Functional Analysis using other seemingly unrelated fields, the most common being Topological Dynamics, Group and Geometric Group theory. A good starting point to understand these preocupations is the work of Alexander Grothendieck on tensor products of topological vector spaces. \\
+
+At the time, starting his PhD in Nancy, Grothendieck was asked by Laurent Schwartz to develop a theory of tensor products for topological vector spaces. This question was motivated by the kernel theorem, whose proof was found to be too much involved by Laurent Schwartz in the general case, whereas the finite dimensional case reduces to the fact that 
+\[V^*\otimes W \cong Hom(V,W),\] 
+i.e. the space of linear maps is isomorphic as a vector space to the tensor product of the dual of the domain with the codomain. Having topological tensor products in one's toolbox led to hope for a simpler and more natural proof. The rest of the story is well known: Grothendieck found that one could define a lot of topologies on the algebraic tensor products. Spaces admitting only one such completion were called \textit{nucl\'eaires}, or nuclear, after the kernel theorem (\textit{nucl\'eaires} in French means "related to the kernel").\\
+
+The paper \textit{R\'esum\'e de la th\'eorie m\'etrique des produits tensoriels topologiques} \cite{GrothendieckResume}, commonly know as the Resum\'e, enhanced a vast research program. It specified the work to the case of Banach spaces. Surprisingly, the paper did not attract a lot of attention at the time, maybe because the trend was back then to focus on locally convex spaces. The paper was rediscovered in the \textbf{WHEN?}. See \cite{PisierSurvey} for a very nice survey on the subject.\\
+
+Approximation theory for $C^*$-algebras is direclty inspired and derives from this work. The broad idea is to study properties of various constructions such as tensor products or crossed-products (which is a twisted version of tensor products). It is very useful in that case to use functionnal spaces of functions on a topological group as a tool to construct exotic examples. Let me illustrate this by the following example.\\
+
+John Von Neumann defined a property on groups called \textit{amenability} as follows. A discrete countable group $\Gamma$ is said to be amenable if there exists an invariant mean (i.e. linear positive functional) $m: l^\infty(\Gamma)\rightarrow \C$. Now, the group ring $\C[\Gamma]$ is a $*$-algebra w.r.t. the convolution as a product and $(z. \gamma)^* = \overline{z}\gamma^{-1}$. This algebra can be represented as a self adjoint subalgebra of the bounded operators on the complex Hilbert space $l^2\Gamma$ by what is called the left regular representation $\lambda_\Gamma: \C[\Gamma]\rightarrow B(l^2\Gamma)$. The reduced $C^*$-algebra of the group $\Gamma$ is defined as the closure of the image of the regular representation.\\
+
+It turns out that, for such a group $\Gamma$, this $C^*$-algebra is nuclear iff $\Gamma$ is amenable. Thus, examples of nonamenable groups (like any nonabelian free group) provide instances of nonnuclear $C^*$-algebras. This example is typical of how a completely group theoretic property can be used to provide contructions of Banach algebras with interesting properties. Amenability was of uttermost importance in the classification of factors obtained by Connes \cite{}. \\ 
+
+Over the years, other properties have been found to be of interest. Without pretending to be exhaustive, let us just mention exactness, simplicity, finite nuclear dimension, the UCT class, the Bootstrap class,... Usually (meaning to my meagre knowledge) these classes are important because of their relation to Elliot's classification progam, or to topology and geometry. \\
+
+One of the objects of importance for $C^*$-algebras are the \textit{operator $K$-theory groups} $K_0(A)$ and $K_1(A)$, which are homotopy invariant abelian groups associated to any $C^*$-algebras. Georges Elliott suggested that all separable nuclear $C^*$-algebras should be classifiable by ``$K$-theoretic'' invariants. While seen as unreachable at the time of its statement, Elliott's conjecture cristallised last year as the following theorem.
+
+\begin{theorem}\label{classification}(By many, many hands) All separable simple unital UCT $C^*$-algebras of finite nuclear dimension are classifiable.
+\end{theorem}
+
+This result, together with the fact that the $K$-groups are notoriously difficult to compute, give motivations to the following problems:
+\begin{enumerate}
+\item define special families of $C^*$-algebras and prove that they satisfy the condition of the classification theorem \ref{classification},
+\item enlarge the range of applicability of theorem \ref{classification},
+\item find a way to compute the $K$-theory groups.
+\end{enumerate}    
+
+
+
+      

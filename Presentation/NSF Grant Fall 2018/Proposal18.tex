@@ -1,0 +1,390 @@
+\documentclass[11pt]{article}
+
+\bibliographystyle{abbrv}
+
+\usepackage{amsfonts}
+
+\usepackage{amsthm}
+
+\usepackage{amssymb}
+
+\usepackage{amsmath}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{mathabx}
+
+\usepackage{verbatim}
+
+\usepackage[all]{xy}
+
+% \usepackage{showlabels}
+%  Formatting matters
+% original dimensions
+
+\textwidth=5.75truein
+\textheight=8.5truein
+
+
+% dimensions to play with
+%\textheight=8.0truein   %for mac
+%\textwidth=6.0truein
+
+\oddsidemargin=0.3truein
+\evensidemargin=0.3truein
+
+%\topmargin=-0.35truein %original
+\topmargin=-0.25truein
+% \headheight=0.16truein
+\headheight=13pt
+\headsep=0.3truein
+
+\footskip=0.5truein
+
+\parindent=18pt
+\tolerance=6000
+\parskip=0pt
+
+
+
+\linespread{1.02}
+
+
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\T}{\mathbb{T}}
+
+\newcommand{\h}{\mathcal{H}}
+
+\newcommand{\Manoa}{M\=anoa}
+
+\newcommand{\Hawaii}{Hawai\kern.05em`\kern.05em\relax i}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition-theorem}[theorem]{Definition / Theorem}
+\newtheorem{project}[theorem]{Project}
+
+% without a number
+
+\newtheorem*{conjecture*}{Conjecture}
+\newtheorem*{theorem*}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{convention}[theorem]{Convention}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+
+% without a number
+
+\newtheorem*{example*}{Example}  
+\newtheorem*{remark*}{Remark}
+
+\begin{document}
+
+\section*{Project Description}
+
+%Cl\'{e}ment Dell'Aiera and Rufus Willett - $K$-theory, groups, and groupoids.\\
+
+
+In the first section below we discuss results (both intellectual merit and broader impacts) from prior support, in the second section we discuss the intellectual merit of the proposed project, and in the third section we discuss its broader impacts.
+ 
+\section{Results from prior NSF Support}
+
+PI Dell'Aiera has no prior support from the US NSF.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Current proposal}
+\input{Project}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Intellectual merit of current proposal}\label{imc}
+
+We will first discuss some background to the current proposal, then four areas of planned research, each containing several concrete projects.  The first two of these areas are intended as collaborations between the two PIs, and will need both of our expertise.  The PIs intend to work on the second two areas independently (one each), but to discuss this work with the other PI, and use these discussions to educate the other PI about important areas of current research interest.  
+
+These projects are disjoint from PI Willett's ongoing projects associated to NSF grant DMS 1564281; the latter primarily relate to noncommutative dimension theories and connections to computing $K$-theory.  The funding requested for PI Willett in the current proposal is for disjoint purposes from that covered by DMS 1564281: DMS 1564281 does not contain much funds for either summer support, or the PIs' travel (it contains some funds for graduate students, and for inviting visitors, as well as to support postdoctoral researchers, and to host meetings).
+
+\subsection*{Background}
+
+The projects making up this proposal involve operator algebras, dynamics, algebraic topology, geometry, and generalizations of group theory.  Most of the projects come out of the circle of ideas surrounding the Baum-Connes conjecture and related issues.  Having said that, the potential ramifications and applications should be of interest to a much broader audience than simply those interested in Baum-Connes.
+
+Let $\Gamma$ be a group, and have $\Gamma$ act on $\ell^2(\Gamma)$ via its left regular representation, i.e.\ $g\in \Gamma$ acts on the canonical orthonormal basis $\{\delta_h\}_{h\in \Gamma}$ via the map 
+$$
+\lambda_g:\delta_h\mapsto \delta_{gh}.
+$$
+This linearizes to a representation of the group algebra $\C[\Gamma]$ on $\ell^2(\Gamma)$, and completing in the associated operator norm gives the \emph{reduced group $C^*$-algebra} $C^*_r(G)$.  Let $K_*(C^*_r(\Gamma))$ be the operator $K$-theory of $C^*_r(\Gamma)$, an important invariant analogous to the classical cohomology of a topological space.  
+
+The Baum-Connes conjecture \cite{Baum:1994pr} posits that a certain \emph{assembly map}
+\begin{equation}\label{bc ass}
+\mu:RK_*^\Gamma(\underline{E}\Gamma)\to K_*(C^*_r(\Gamma))
+\end{equation}
+built using (higher) index theory is an isomorphism of abelian groups.  The left hand side is a topological device: it is built from elliptic differential operators on manifolds with fundamental group $\Gamma$, and the assembly map is `take index' in some sense.   The conjecture is important partly simply as the right hand side is difficult to compute directly, but there are many available tools from algebraic topology to compute the left hand side.  Moreover, the surprising connection predicted by the conjecture between the `topological' left hand side and `analytic' right hand side has many implications for manifold topology (e.g.\ the \emph{Novikov conjecture} on invariance of higher signatures \cite{Ferry:1993xw}), differential geometry (e.g.\ existence of \emph{positive scalar curvature} metrics \cite{Rosenberg:1983qy}), and representation theory (e.g.\ construction of \emph{discrete series representations} \cite{Lafforgue:2002zl}), amongst other things.  The Baum-Connes conjecture is responsible for many of the most general results on these and other problems.  
+
+A large part of this proposal is concerned with the more general Baum-Connes conjecture for \emph{groupoids}.  A groupoid $G$ is a (small) category such that every morphism $g\in G$ is invertible.  In the special case there is just one object in the category, a groupoid is just a group.  A more interesting example is given by the case of a group $\Gamma$ acting on a compact space $X$: one associates the \emph{transformation groupoid} $G=\Gamma\ltimes X$ which encodes the dynamics of the action.  In general one should think of groupoids as generalized dynamical systems; they also play an important role in noncommutative geometry as models for pathological spaces.   There are many other important examples of groupoids.  For example, from the point of view of manifold topology, a \emph{foliation} on a smooth manifold is encoded by its \emph{holonomy groupoid} \cite{Connes:1982ss}.  On the other hand, from a $C^*$-algebraic point of view, other important examples are associated to combinatorially-defined $C^*$-algebras such as \emph{Cuntz algebras} \cite{Renault:1980fk}, and many other related $C^*$-algebras arising from semigroups, graphs, and partial actions.  
+
+
+We now assume that a groupoid $G$ is additionally equipped with an \'{e}tale topology: this is a natural assumption that is satisfied by all the examples discussed above, at least up to \emph{Morita equivalence} (see for example \cite{Sims:2012fk}), which is the natural notion of isomorphism for groupoids.   Then there is also a reduced $C^*$-algebra $C^*_r(G)$ associated to such a groupoid \cite{Renault:2009zr}, and a Baum-Connes assembly map \cite{Tu:1999qm} 
+$$
+\mu:RK_*^G(\underline{E}G)\to K_*(C^*_r(G)).
+$$
+A major motivation again comes from connections with manifold topology and geometry, via holonomy groupoids \cite{Baum:2000ez,Connes:1982ss}.  Another particular case of great importance is when $G$ is the underlying \emph{coarse groupoid} of a metric space \cite{Skandalis:2002ng}.  In this case, the groupoid Baum-Connes conjecture reduces to (a slight variation of) the metric or \emph{coarse} version of the Baum-Connes conjecture \cite{Higson:1995fv}, which itself has very important applications to topology and geometry (see for example \cite{Yu:200ve}).  
+
+More recently, another crucial motivation for the study of the groupoid Baum-Connes conjecture comes from pure operator algebra theory: the program of Elliott \cite{Elliott:1995dq} (and many others) to classify simple, nuclear, separable, unital $C^*$-algebras via $K$-theoretic invariants.  This program is now almost complete, at least insofar as the original conjecture of Elliott can reasonably be pushed - that is, to the class of $C^*$-algebras which tensorially absorb the so-called \emph{Jiang-Su algebra} $\mathcal{Z}$.  The one main remaining open question is the range of validity of the so-called \emph{Universal Coefficient Theorem} (UCT): a $C^*$-algebra satisfies the UCT if it is $K$-theoretically equivalent to a commutative $C^*$-algebra in a sense that can be formalized using Kasparov's \emph{$KK$-theory} \cite{Rosenberg:1987bh}.  A suitably strong version of the groupoid Baum-Connes conjecture implies the UCT for $C^*_r(G)$; as many natural $C^*$-algebras can be constructed as groupoid $C^*$-algebras, this provides perhaps the most important tool for recognizing $C^*$-algebras in the UCT class.  To actually use the results of the Elliott program, it is also important to be able to compute the $K$-theory groups of simple, nuclear, separable, unital $C^*$-algebras; many (conjecturally, all) such $C^*$-algebras arise as $C^*_r(G)$ for some groupoid $G$, so the Baum-Connes conjecture should also be very useful here.
+
+Looking at methods of proof of the Baum-Connes conjecture, there are two paradigms that are important for this proposal.   The first is Kasparov's \emph{Dirac-dual-Dirac} method \cite{Kasparov:1988dw}, which was used to great effect by Higson and Kasparov \cite{Higson:2001eb} in their proof of the conjecture for amenable (more generally, a-T-menable) groups.  This was later pushed by Tu to the case of a-T-menable groupoids \cite{Tu:1999bq}; Tu's results provide perhaps the most important criterion for when a simple, nuclear, separable, unital $C^*$-algebra satisfies the UCT.  The second paradigm starts with Yu's work \cite{Yu:1998wj} on the metric (or \emph{coarse}) version of the Baum-Connes conjecture for spaces with \emph{finite asymptotic dimension}.  Yu developed a \emph{controlled $K$-theory} (pushed much further with Oyono-Oyono \cite{Oyono-Oyono:2011fk}), which gives one a great deal of flexibility in computing $K$-groups.  Compared to the Dirac-dual-Dirac method, Yu's method is more `hands-on': at least in principle, it could be used to compute the $K$-groups involved \emph{directly}.  Yu's method was subsequently extended to spaces with \emph{finite decomposition complexity} in a slightly different context \cite{Guentner:2009tg}, and this was itself extended by Guentner, PI Willett, and Yu to transformation groupoids \cite{Guentner:2014bh} (but not, unfortunately, to general \'{e}tale groupoids).
+
+On the other hand, the groupoid version of the Baum-Connes conjecture is known to be false in general.  This is thanks to the presence of spectral gap phenomena coming from \emph{expander graphs} \cite{Lubotzky:1994tw} (sparse, highly connected graphs important, for example, in computer science) and \emph{property (T)} \cite{Bekka:2000kx} (a rigidity property important, for example, in geometric group theory and dynamics) allowing one to build so-called \emph{Kazhdan projections}, and therefore classes in $K_0(C^*_r(G))$.  In some special cases, these classes can be shown not to be in the image of the assembly map \cite{Higson:2002la}.  Examples where the conjecture fails include some coarse groupoids -- where counterexamples can be constructed using expander graphs -- and some transformation groupoids, where counterexamples can be constructed using actions of the so-called \emph{Gromov monster} groups whose Cayley graphs contain expander graphs.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+\subsection{Finite dynamical complexity for topological groupoids}
+
+This projects in this section will be joint work between the two PIs.
+
+Inspired by Gromov's \emph{asymptotic dimension} \cite[Section 1.E]{Gromov:1993tr} from geometric group theory, Erik Guentner, PI Willett, and Guoliang Yu introduced a notion of dimension for group actions and more general \'{e}tale groupoids \cite{Guentner:2014aa}.  Our original motivation for this was to be able to compute $K$-theory, but in the process we discovered several interesting connections to techniques from dynamics, manifold topology, coarse geometry, and the $C^*$-algebra classification program, as discussed in \cite{Guentner:2014aa}.  These connections have already led to applications in those areas (for example \cite{Deeley:2016aa} in $C^*$-algebra theory and \cite{Bartels:2016aa} in manifold topology).  
+
+The $K$-theoretic computations were subsequently carried out in \cite{Guentner:2014bh} using the controlled $K$-theory methods mentioned in the background section; in particular, we prove the Baum-Connes conjecture.  We used a notion of \emph{finite dynamical complexity} that we expect is more general than finite dimensionality.  The idea of finite dynamical complexity makes sense for a general (\'{e}tale) groupoid.  Roughly, subgroupoids of $G$ that have compact closure are defined to have `zero complexity'; one then says that $G$ has finite dynamical complexity if it can (`locally') be cut into two pieces, repeated finitely many times, so at the end of the process one has just groupoids of zero complexity.
+
+%\begin{definition}
+%Let $G$ be an \'{e}tale groupoid.  Let $\mathcal{D}$ denote the smallest collection of all open subgroupoids of $G$ that contains those subgroupoids with compact closure, and that is closed under the following \emph{decomposability relation}: an open subgroupoid $H$ of $G$ \emph{decomposes over $\mathcal{D}$} if for any compact subset $K\subseteq H$ there exists an open cover $H^{(0)}=U\cup V$ such that the subgroupoids of $G$ generated by 
+%$$
+%H\cap r^{-1}(U)\cap s^{-1}(U) \cap K \quad \text{and} \quad H\cap r^{-1}(V)\cap s^{-1}(V)\cap K
+%$$
+%are in $\mathcal{D}$.
+
+%Then $G$ has \emph{finite dynamical complexity} if $G$ itself is contained in $\mathcal{D}$.
+%\end{definition}
+
+Now, the $K$-theoretic techniques of \cite{Guentner:2014bh} only work in the case of group actions, and not for more general groupoids, partly due to the type of controlled $K$-theory used, and partly as the proof used a new model for the Baum-Connes assembly map that does not obviously extend to more general groupoids.  On the other hand, in his thesis PI Dell'Aiera developed models of controlled $K$-theory and the Baum-Connes conjecture for \'{e}tale groupoids that are much more natural, and we suspect powerful, than the pre-existing ones.  Using his tools, and the ideas of PI Willett together with his collaborators Guentner and Yu, the following theorem should be attainable.
+
+\begin{project}
+Prove the Baum-Connes conjecture for \'{e}tale groupoids with finite dynamical complexity.
+\end{project} 
+
+There are two main motivations for this project.  First, it would give a much more concrete understanding of the Baum-Connes conjecture for such groupoids that the existing Dirac-dual-Dirac method used by Tu in his seminal work on a-T-menable groupoids \cite{Tu:1999bq}, and should reprove the UCT for many  groupoids whose $C^*$-algebras are simple, nuclear, separable, and unital.  This is desirable as Tu's result has recently become very important in the Elliott classification program, yet the proof is extremely difficult and dense, and understood by very people (we speculate almost no-one currently working in North America). Successfully completing this project will also allow more information to be gleaned about the $K$-theory of groupoid $C^*$-algebras (and thus algebras important in the classification program).  An example of how this was used to answer a question of Elliott and Sierakowksi can be found in the paper \cite{Li:2017ac} of Li and PI Willett.
+
+At least as importantly, a slight extension of the project above, that we also intend to work on, should give new results on the Baum-Connes conjecture: the point is that one can generalize finite dynamical complexity by redefining `zero complexity' to mean `in the class for which (a suitable version of) Baum-Connes is known'.  A natural way to define `zero complexity' is therefore the class of a-T-menable groupoids that appear in Tu's theorem \cite{Tu:1999bq}.  The class of groupoids that one can access like this is rather large; in particular, it should be much larger than the existing class for which Baum-Connes (and attendant corollaries, such as the UCT) are known.
+
+Finite dynamical complexity should also be of interest for other applications.  One $C^*$-algebraic question that seems particularly interesting is as follows.  It focuses on the property of $\mathcal{Z}$-stability, currently of much interest in the classification program as it is essentially equivalent to a $C^*$-algebra being in the class to which the program applies.
+
+\begin{project}\label{z stable proj}
+Investigate $\mathcal{Z}$-stability of the $C^*$-algebras of groupoids with finite dynamical complexity.
+\end{project}
+
+The strategy to use to try to prove this is clear: subgroupoids with compact closure have $\mathcal{Z}$-stable $C^*$-algebras (as can be deduced for example from \cite{Winter:2004rb}), so one needs to prove that $\mathcal{Z}$-stability respects the relation of being cut into subgroupoids in the obvious sense.  Work of Hirshberg-Orovitz \cite{Hirshberg:2013aa} on a useful criterion for $\mathcal{Z}$-stability should be relevant here.
+
+
+\begin{project}
+Study the class of groupoids with finite dynamical complexity.
+\end{project}
+
+There are many interesting questions here, some of which should be quite approachable.  For example, does finite dynamical complexity imply amenability?  We suspect the answer here is `yes'.  If so, then, are there amenable groupoids which do not have finite dynamical complexity?  We suspect that the answer is again `yes', but this is likely much harder; nonetheless, it seems worth pursuing as it might shed light on the important -- due to its applications to the stable Borel conjecture in manifold topology -- question (a special case of the above) of whether any amenable (more generally exact) group has finite decomposition complexity in the sense of \cite{Guentner:2013aa}.
+
+Another extremely interesting question is to find more transformation groupoids (i.e.\ dynamical systems) in the class: for example, does any free action of an elementarily amenable group on a finite dimensional space (or, just the Cantor set) give rise to an finite dynamical complexity groupoid?  Again, there is a natural strategy to pursue here, based on considering extensions of groups and the `cutting into pieces' relation.  If this could be done, there would be an in-principle computation of the $K$-theory of a huge class of crossed products.
+
+
+
+
+
+\subsection{Property (T) for topological groupoids}\label{dydim}
+
+The projects in this section will be joint work between the two PIs.
+
+Our work on this builds on a long-term project of PI Willett and various co-authors to understand how badly the Baum-Connes conjecture fails \cite{Higson:2002la} in the known counterexamples in the metric (coarse) setting, and for group actions \cite{Willett:2010ud,Willett:2010zh,Baum:2013kx,Buss:2014aa}.  The survey \cite{Baum:2015le} gives an overview of much of this material, including how the conjecture may be reformulated in order to obviate the existing counterexamples for group actions (and show that some previous counterexamples become confirming examples under this reformulation).  The Baum-Connes conjecture for groupoids (and also the version if coarse geometry) could also be reformulated along similar lines; however, the reformulated version for groupoids \emph{would} still have counterexamples.
+
+Now, the essential reason for the failure of the Baum-Connes conjecture is that some variant of \emph{property (T)} can be used to construct \emph{Kazhdan-type} projections in the associated $C^*$-algebras, and one can then show that the $K$-theory classes of these projections are not in the image of the Baum-Connes assembly map (closely related Kazhdan-type projections are also at the root of the known counterexamples to the UCT \cite{Skandalis:1988rr}).  This formulation is reasonable as a conceptual explanation, but it is certainly not precise: the problem is that while there is a very well-studied notion of property (T) for groups \cite{Bekka:2000kx}, and also for measured equivalence relations and measured groupoids \cite{Anantharaman-Delaroche:2005pb}, there is no good notion of property (T) for \emph{topological} groupoids (including group actions as a special case).  In the special case of coarse geometry, this gap was partially filled by PI Willett's introduction with Yu of \emph{geometric property (T)} \cite{Willett:2013cr}, a notion which plays precisely this role in the theory.
+
+Now, the notion of geometric property (T) very naturally inspires a definition of property (T) for general, locally compact, Hausdorff groupoids.   The PIs have come up with such a definition: the rough idea is that one first needs an appropriate notion of \emph{constant} (or \emph{invariant}) vector in the groupoid case (the existing such notions are inadequate for our purposes) and then one can naturally extend the usual notion of property (T) in the form that a representation with non-trivial vectors that are `almost constant' must contain a non-trivial vector that is actually constant.
+
+For groups, constant vectors have their usual representation-theoretic meaning, and our definition is equivalent to the usual one of property (T) for groups.  For coarse groupoids (the groupoids underlying the coarse version of the Baum-Connes conjecture), it is equivalent to the notion of geometric property (T) introduced in \cite{Willett:2013cr}.   
+
+%The following definition is due to the PIs, based on the earlier work of PI Willett, and PI Dell'Aiera's extensive considerations of groupoids during his thesis work.  
+
+%\begin{definition}
+%Let $G$ be an \'{e}tale groupoid, and let 
+%$$
+%\Phi:C_c(G)\to C_c(G^{(0)}),\quad \Phi(f)(x)=\sum_{g\in r^{-1}(x)}f(g).
+%$$
+%Given a $*$-representation $\pi:C_c(G)\to \mathcal{B}(H)$ to the bounded operators on some Hilbert space, a vector $\xi\in H$ is \emph{constant} of $\pi(f)=\pi(\Phi(f))$ for all $f\in C_c(G)$.  The groupoid $G$ has \emph{property (T)} if there exists a representation with non-trivial constant vectors\footnote{Equivalently, there exists an invariant measure on the base space in the sense of groupoid theory.}, and if there exists $\epsilon>0$ and a compact subset $K$ of $G$ such that for all representation on $H$, and any vector in the orthogonal complement of the constant vectors, there is $f\in C_c(G)$ supported in $K$ with $\|f\|_I\leq 1$ and 
+%$$
+%\|(\pi(f)-\pi(\Phi(f)))\xi\|\geq \epsilon\|\xi\|.
+%$$
+%\end{definition}
+
+
+\begin{project}
+Investigate the connection of property (T) to failures of the Baum-Connes conjecture.
+\end{project}
+
+We want to study the existence of Kazhdan-type projections, and whether or not their classes in $K_*(C^*_r(G))$ can lie in the image of the Baum-Connes assembly map (we also intend to consider other variants such as the maximal groupoid $C^*$-algebra $C^*(G)$ here).   Proving the existence of such projections should be possible using random walk type techniques as studied by Drutu and Nowak recently \cite{Drutu:2015aa} (this is also essentially the approach taken by PI Willett and Yu in \cite{Willett:2013cr}).  Having done this, showing that such projections define $K$-classes that are not in the image of the Baum-Connes assembly map is in general a challenging problem: the existing techniques for doing this use either a failure of \emph{exactness} \cite{Higson:2002la}, or a comparison of traces and some variant of Atiyah's covering index theorem \cite{Higson:1999km}.  Nonetheless, progress can be made in some special cases by developing the techniques of these works (this was done by PI Willett and Yu in \cite{Willett:2010ud}, for example), and we hope much more can be said here.
+
+Incidentally, to what extent these techniques - failures of exactness, versus comparison of traces - are really different is itself an intriguing question, which touches on deep issues in the (`soft') analysis of $C^*$-algebras.  Indeed, using tracial methods, the failure comes down to the failure of a certain amenable trace \cite[Chapter 6]{Brown:2008qy} to still be amenable when one passes to quotients; this essentially comes down to a failure of local reflexivity \cite[Chapter 9]{Brown:2008qy}, which is intimately connected to the failure of exactness \cite[Chapter 5]{Brown:2008qy}.  Thus all this connects to rather delicate questions on the functional analytic aspects of operator algebra theory (for example, whether exactness is equivalent to local reflexivity).  Much remains to be understood here, but we hope that the examples coming from failure of the Baum-Connes conjecture might help to clarify some of these analytic issues (much as they did in PI Willett's construction of the class of examples in \cite{Spakula:2013ys}; a spectacular example of similar connections is Ozawa's \cite{Ozawa:2004bf} work on von Neumann algebra solidity motivated partly by Skandalis's ideas about counterexamples to the UCT \cite{Skandalis:1988rr}).
+
+
+\begin{project}
+Study topological property (T) for groupoids.
+\end{project}
+
+Being more specific, there are first several fundamental questions here.  For example, we have shown that the definition above is invariant under Morita equivalences (from the point of view of noncommutative geometry, this is the natural notion of isomorphism for groupoids) in the \'{e}tale case.  However, much remains to be done here.  Several natural questions that should be approachable include the following.  If a groupoid has property (T) and is a-T-menable, must it be proper (i.e.\ trivial, in some sense)?  What (if any) is the connection with Anantharaman-Delaroche's notion of property (T) for measured groupoids?  What are the generalizations to actions on other classes of Banach spaces (compare for example the work of Bader et. al. \cite{Bader:2007eg} in the group case)?
+
+Property (T) for groups and measured groupoids have many other applications beyond the Baum-Connes conjecture, of course (see for example \cite[Chapter 6]{Bekka:2000kx} and \cite{Zimmer:2981ds}).  In the longer term we intend to pursue (and encourage our students to pursue) analogues of these connections.  
+
+
+%Although the above definition of property (T) seems very satisfactory for certain purposes, the fact that it necessitates the existence of an invariant measure on the base space is quite irritating.  The following project is joint work with PI Willett's PhD student John Robertson.
+
+%\begin{project}
+%Investigate the connection between the existence of invariant measures on the base space of a groupoid (`Greenleaf amenability') and amenability in the more usual topological sense (`Zimmer amenability').
+%\end{project}
+
+
+
+
+
+ 
+ 
+ \subsection{Quantum groups}     
+ 
+This project will be worked on by PI Dell'Aiera.  PI Dell'Aiera intends to discuss this work with PI Willett and use it as a way to educate PI Willett on quantum groups and the associated Baum-Connes conjecture.
+ 
+%%%%%%%%%%%%%%%%%%%%%%
+%\input{Quantumgroups}
+%\input{Quantumgroups2}
+%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%
+\input{QuantumGroups4}
+%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{A-T-menable groups and algebraic $K$-theory}\label{atmen}
+
+
+
+This project will be worked on by PI Willett as part of an ongoing collaboration with Guillermo Cortin\~{n}as and Gisela Tartaglia.  PI Willett intends to discuss this work with PI Dell'Aiera and use it as a way to educate PI Dell'Aiera on algebraic $K$-theory and the Farrell-Jones conjecture.
+
+This project aims to look at the purely algebraic versions of $K$-theory and the related variant of the Baum-Connes conjecture, and how all this interacts with the operator-$K$-theoretic versions.  See the survey \cite{Cortinas:2008aa} of Corti\~{n}as for some of the broad issues involved.
+
+The specific starting point is the inspirational work of Nigel Higson and Gennadi Kasparov on the Baum-Connes conjecture for a-T-menable groups \cite{Higson:2001eb}, as mentioned in the background section.  One of their results is that the Baum-Connes conjecture holds for any a-T-menable group.  In language (that can be found for example in \cite{Davis:1998qf}) closer to the Farrell-Jones conjecture -- a purely algebraic analogue of the Baum-Connes conjecture -- this is the same as saying that the Farrell-Jones-type assembly map
+ $$
+ H^G_*(\underline{E}G;K(\mathcal{K})) \to K_*(C^*_r(G)\otimes_{min} \mathcal{K})
+ $$
+for the group $C^*$-algebra of any amenable group is an isomorphism.  Here the left hand side is equivariant homology of the same \emph{classifying space} $\underline{E}G$ as appears in the Baum-Connes conjecture, with coefficients in $K(\mathcal{K})$,  the operator $K$-theory (spectrum) of the compact operators on a separable, infinite-dimensional Hilbert space.  The right hand side is the operator $K$-theory of the minimal $C^*$-algebraic tensor product of the reduced group $C^*$-algebra and the compact operators (taking this tensor product makes no difference by invariance of $K$-theory under Morita equivalences, but we include it as it gives a more precise analogy with what follows).
+ 
+ Much more recently, Corti\~{n}as and Tartaglia were able to show that the related Farrell-Jones assembly map 
+ \begin{equation}\label{k iso}
+ H^G_*(\underline{E}G;KH(\mathcal{K})) \to KH_*(\Z[G]\otimes \mathcal{K})
+ \end{equation}
+is an isomorphism whenever $G$ is an a-T-menable group.  Here $KH$ denotes Weibel's homotopy (algebraic) $K$-theory \cite[Section IV.12]{Weibel:2013bf}; the algebra appearing on the right hand side is the algebraic tensor product of the group ring $\Z[G]$ of $G$ with the compact operators; and the coefficient $KH(\mathcal{K})$ appearing on the left hand side is the homotopy $K$-theory (spectrum) of $\mathcal{K}$.  
+ 
+Now, one can replace the compact operators here by any ring and ask whether the map in line \eqref{k iso} remains an isomorphism.  The relevant one for the current discussion is the ring $\mathcal{S}$ consisting of all \emph{Schatten class} operators \cite[Chapter 2]{Simon:2005aa}: a compact operator $T$ is Schatten class if the eigenvalues of $T^*T$ are $p$-summable for some $p$.
+ 
+ \begin{project}
+ Prove the Farrell-Jones assembly map
+ \begin{equation}\label{s iso}
+ H^G_*(\underline{E}G;KH(\mathcal{S})) \to KH_*(\Z[G]\otimes \mathcal{S})
+ \end{equation}
+ is an isomorphism for any a-T-menable group.
+ \end{project}
+ 
+Now, the hoped-for isomorphism in line \eqref{s iso} may look like a minor technical version of that in line \eqref{k iso} -- we have just replaced the compact operators by a closely related dense subalgebra -- but it has rather more interesting consequences.  Indeed, the compact operator isomorphism from line \eqref{k iso} is interesting as an `internal' fact to algebraic $K$-theory, but it does not seem to touch on the case of the conjecture for the integral group ring $\Z[G]$ alone; this is the case of most interest, both from the point of view of algebraic $K$-theory, and for applications to topology and geometry.  On the other hand, a minor variation of earlier work of Corti\~{n}as and Tartaglia \cite{Cortinas:2013ly} (proved by us as part of the current project; the key ingredient is a variant on Karoubi's multiplicative Chern character \cite[Chapter 7]{Karoubi:1987zr}) shows the following result.
+
+\begin{theorem}\label{reg the}
+If the assembly map in line \eqref{s iso} is an isomorphism, then the classical\footnote{In particular, we use the classical classifying space $EG$, not the classifying space for proper actions $\underline{E}G$.} algebraic assembly map
+$$
+H^G_*(EG;K(\mathcal{\Z})) \to K_*(\Z[G])
+$$
+for algebraic $K$-theory is rationally injective, i.e.\ the \emph{algebraic $K$-theory Novikov conjecture} holds.
+\end{theorem}
+
+Combining this theorem with an isomorphism in line \eqref{s iso} for all a-T-menable groups would represent a major advance: while the algebraic $K$-theory Novikov conjecture is known in vast generality (most notably through work of B\"{o}kstedt, Hsiang, and Madsen \cite{Bokstedt:1993il}), all the current results require (implicitly or explicitly) some finite-dimensionality assumptions on the group cohomology of $G$; on the other hand, the class of a-T-menabile groups is analytically, rather than algebraically, defined, and contains many groups with highly complicated infinite dimensional group cohomology. 
+
+The methods we want to employ to prove the isomorphism in line \eqref{s iso} follow those of Higson and Kasparov.  However, this necessitates readjusting their infinite-dimensional Bott-periodicity theorem \cite{Higson:1999be} so that it works with Schatten ideals rather than the compact operator ideal.  This in turn requires much more analysis: on the one hand, fairly careful `hard' estimates of various Schatten $p$-norms generalizing the material in \cite[Chapter 4]{Simon:2005aa}; on the other hand, use of the `soft' \emph{bornological} techniques introduced to the area by Meyer \cite{Meyer:2007aa} to deal with the fact that $\mathcal{S}$ is not naturally a topological algebra, and that the hard estimates we need get worse as dimension increases.
+
+If we can achieve the goal above (at the moment, we are fairly optimistic, but the proof we have in mind is quite technical and long, and much remains to be checked), we would like to push it further.  Another interesting connection might be to the work of Kasparov and Yu on \emph{property (H)} \cite{Kasparov:2009jt}, a fairly general property of Banach spaces.  Many groups act nicely on, and even more (conjecturally, all) coarsely embed into, a Banach space with property (H).
+
+\begin{project}
+Study the assembly map in line \eqref{s iso} for groups acting nicely on, or coarsely embedding in, spaces with property (H).
+\end{project}
+
+Here one should only expect to get injectivity results on the assembly map in line \eqref{s iso} (at best).  Nonetheless, a canonical enough (split) injectivity result may be enough to prove an analogue of Theorem \ref{reg the} above that is strong enough to still deduce the algebraic $K$-theory Novikov conjecture.  This would be rather striking, covering a huge range of groups that are currently completely out of reach by other methods.
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ \section{Broader impacts of current proposal}
+ 
+
+ 
+PI Willett has been at the mathematics department at the University of \Hawaii~ at \Manoa~ for six years, while PI Dell'Aiera arrived in fall 2017.  
+
+Both PIs are involved in the training of graduate students, and will continue to be so.  Together with Erik Guentner, the PIs run a seminar in noncommutative geometry; this is currently well-attended by graduate students (7 out of the roughly 20 PhD students in our department; 5 out of the 7 are from underrepresented groups).  PI Willett expects that some of the attendees will start working with him on PhD projects, in addition to the one PhD student he currently advises.  PI Dell'Aiera cannot formally be an advisor to graduate students, but he has already had many informal interactions with graduate students, discussing mathematics with them, and guiding reading, building on his earlier work running seminars as a PhD student.
+
+PI Willett has also been involved in giving lecture series at summer schools and other conferences (six over the last three years, the largest to an audience of over a hundred junior operator algebraists), largely aimed at educating junior researchers from other institutions.  He expects this to continue (one more is currently planned for February 2018, for example).  
+
+PI Willett is heavily involved with efforts to improve mathematics education at the University of \Hawaii.  Within his own department, he has been on the graduate committee for the last five years, during which time he played an instrumental role in pushing through changed designed to broaden and modernize students' education, and to decrease time to graduation.  These changes seem successful so far, although have only been implemented for two years.  The graduate committee is currently focused on simplifying the application process for graduate students and making it more attractive, largely to attract more students from non-traditional backgrounds (partly as a goal in itself, partly as this is a good way for our low-ranked department to attract good students).
+
+In the university more broadly, PI Willett chairs the board overseeing foundations general education requirements.  In the last two years, the board has been working on (amongst other things) changing our mathematics general education requirement, designed to better introduce students to the uses of mathematics, and give a sense of it as a dynamic subject.  These changes are currently being implemented: we expect the net effect to be a more mathematically engaged student body, particularly those for whom general education is their only contact to mathematics.  PI Willett has spent a significant amount of time learning about best practices at other universities and mathematics departments as part of this process.  
+
+% We can definitely cut that off if you think it is too "bullshitty" (sorry I don't how to say this in proper English)
+
+In terms of connections to other fields, PI Dell'Aiera has some background in physics; %I think --> Yes, but I have no official certification
+he has grown more interested in applications of Noncommutative Geometry to other fields during his PhD, and wishes to learn more about its connections with physics and run seminars educating colleagues on this.  As a PhD student, he already did this (on the subject of quantum field theory) for a group of other interested graduate students.  Possible topics include a version of the standard model of particle physics based on noncommutative geometry that  Alain Connes et al developed (see \cite{ChamseddineConnes} for a survey). A second topic could be the surprising appearance of operator $K$-theory in solid state physics to study quasicrystals (see \cite{Bellissard}).  The noncommutative geometry seminar, co-organized by the two PIs and Erik Guentner, will be a natural place to educate the members of the department who are interested, including graduate students.
+
+
+
+
+
+
+
+ 
+
+\pagebreak
+
+
+\bibliography{Generalbib,biblio}
+
+
+\end{document}

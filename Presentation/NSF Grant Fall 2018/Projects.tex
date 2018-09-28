@@ -1,0 +1,78 @@
+\textbf{Project description}
+
+\section{Intelectual merit of current proposal}
+
+\subsection{Background}
+
+This project deals with several areas of mathematics: operator algebras, algebraic topology, metric geometry and representation theory. The main topic is the study of topological manifolds and actions of discrete groups on them, using generalized spaces arising from Noncommutative Geometry. When confronted with such an action, chances are good that the space of orbits will be badly behaved. Noncommutative Geometry proposes to build a groupoid encoding the dynamic of the action and the topology of the space. The study of invariants of convolution algebras of the groupoid, such as the $K$-theory of the reduced $C^*$-algebra of the groupoid, serves then as a replacement for usual cohomology theories. When the situation is under control, think of a free and proper action, all these tools reduce to classical cohomology of the quotient space. By extension, we think of topological groupoids as generalized spaces, and study them in their own rights.\\
+
+This approach is very fruitful. It allows one to study different kind of situations all at once. For instance, one can associate a groupoid $G$ to any metric space $X$ (more generally coarse spaces), such that the topological features of the latter encode the geometry "at infinity" of the space. The $K$-theory of the reduced $C^*$-algebra of this groupoid is a receptacle for generalized indexes. More precisely, if $M$ is a non-compact Riemanian manifold, one can define generalized elliptic operaotr on $M$, and their index lies in $K(C^*_r(G))$. In the case of a compact manifold $M$ with fundamental group $\Gamma$, higher index of generalized elliptic operator takes values in $K(C_r^*(\Gamma))$.\\
+
+A far reaching generalization of the index map is the Baum-Connes assembly map. If $G$ is a locally compact group, let $\underline E G$ be its classifying space for proper actions. A $G-C^*$-algebra is a $C^*$-algebra $A$ endowed with an action of $G$ by automorphisms. Out of such an algebra, one can construct a $C^*$-algebra $A\rtimes_r G$ called the reduced crossed product of $A$ by $G$. The crossed-product is supposed to encode dynamical informations on $G$ and its action on $A$. when $A= \C$, the reduced crossed product coincides with the reduced $C^*$-algebra of $G$. \\
+
+In order to compute $K_*(A\rtimes_r G)$ was introduced in \cite{BaumconnesHigson} the assembly map
+\[\mu_{G,A}: K_*^{top}(G,A)\rightarrow K_*(A\rtimes_r G)\]
+where:
+\begin{itemize}
+\item[$\bullet$] $A$ is any $G-C^*$-algebra, 
+\item[$\bullet$] $K_*^{top}(G,A)$ is the topological $K$-theory of $G$, which is computable by classical algebraic topology methods.
+\end{itemize}
+
+The Baum-Connes conjecture (with coefficients in $A$) states that this map is an isomorphism. The general Baum-Connes conjecture with coefficients is the claim that the assembly map is an isomorphism for every coefficients, and "the Baum-Connes conjecture" usually refers to the complex case, i.e. $A=\C$. The conjecture with coefficients is known to hold for a large class of groups: a-T-menable groups by work of N. Higson and G. Kasparov \cite{higsonkasparov}, hyperbolic groups by work of V. Lafforgue \cite{lafforgue2012conjecture}, etc. Yet counterexamples have been constructed by N. Higson, V. Lafforgue, G. Skandalis in \cite{HigsonLaffSk}.\\
+
+One of the most striking application of the Baum-Connes conjecture is the Novikov conjecture for higher signatures, namely if $\Gamma$ is a discrete group such that $B\Gamma$ has the homotopy type of a finite CW-complex, the rational injectivity of $\mu_{\Gamma,\C}$ implies that the higher signatures for $\Gamma$ are homotopy invariants.\\
+
+The Baum-Connes can be generalized to other settings: toplogical groupoids and coarse spaces. In the case of groupoids, one has to suppose that it is locally compact and has a Haar system. Them one can just suppose $G$ to be such a groupoid instead of a group in what was previously explained. The Baum-Connes conjecture for groupoids is nevertheless known to be false even for complex coefficients, see \cite{HigsonLaffSk}. In the case of metric spaces ( more generally coarse spaces), the goal is to compute the $K$-theory of the equivalent of the reduced crossed product $A\rtimes_r G$, namely the Roe algebra $C^*(X,A)$, where $A$ is a $C^*$-algebra. One also has an assembly map
+\[\mu_{X,A}: KX_*(X,A)\rightarrow K_*(C^*(X,A))\]
+where:
+\begin{itemize}
+\item[$\bullet$] $A$ is any $C^*$-algebra, 
+\item[$\bullet$] $KX_*(X,A)$ is the coarse $K$-homology of $X$, which is computable by classical algebraic topology methods.
+\end{itemize}
+
+The coarse Baum-Connes conjecture asserts that this map is an isomorphism when $A=\C$. We can also naturally refer to the coarse Baum-Connes conjecture with coefficients, or with coefficients in $A$. As in the group case, the conjecture has been proven in a large number of cases. G. yu proved it first for coarse spaces with finite asymptotic dimension \cite{Yu1}, then proved it for spaces with property A \cite{Yu2} (which implies asymptotic dimension). The two proofs are different in their technique. The first one uses what is described as a "controlled cutting and pasting", which is a way to cut down the Roe algebra in pieces arising from the finite asymptotic dimensionality of the space. The main difficulty is that the pieces are not ideals in $C^*(X)$, so that one cannot use Mayer-Vietoris sequences to reduce the proof to simpler cases. Still, G. Yu managed to define approximations of $K$-theory groups which still satisfies a weak Mayer-Vietoris exact sequence with respect to the decomposition.        
+
+\subsection{Quantum groups and controlled $K$-theory}     
+
+%%%%%%%%%%%%
+%%%%%%%%%%%%
+
+In \cite{MeyerNest}, R. Meyer and R. Nest reformulated the Baum-Connes conjecture using the machinery of triangulated categories. Let $G$ be a locally compact group. One can consider the category $\mathfrak{KK}^G$, whose objects are separable $C^*$-algebras endowed with an action of $G$ by automorphisms, and morphisms from $A$ to $B$ are elements of $KK_0^G(A,B)$. The composition of morphisms is given by an associative bilinear pairing constructed by G. Kasparov \cite{Kasparov} 
+\[\begin{array}{ccc} KK^G(A,B) \times KK^G(B,C) & \rightarrow & KK^G(A,C) \\ (z,z') & \mapsto & z\otimes_B z' \end{array},\]
+whose existence is highly non-trivial. Meyer and Nest showed in \cite{MeyerNest} that $\mathfrak{KK}^G$ is actually a triangulated category. The definition of a triangulated category is quite technical, and we won't recall it. Nonetheless, these are the categories in which one can localize with respect to a localizing subcategory, i.e. formally inverting a class of morphisms. The classical examples are derived categories in homological algebra, and stable homotopy categories in algebraic topology.\\
+
+In this setting, $\mathcal L$ denotes the localizing subcategory generated by the full subcategory of objects $A$ which are equivalent, in $\mathfrak{KK}^G$, to some induced $H$-algebra $Ind_H^G (A')$, for some compact subgroup $H$. If $F : \mathfrak{KK}^G \rightarrow \mathcal C$ is any homological functor into an abelian category, its localisation $\mathbb L F : \mathfrak{KK}^G \rightarrow \mathcal C$ remains so. Moreover, the localized functor comes with a natural transformation $\mathbb L F \rightarrow F $. In the case of the homological functor $F(A)= K(A\rtimes_r G)$, Meyer and Nest proved that $\mathbb L F(A) \rightarrow F(A) $ is naturally isomorphic to the assembly map \[\mu_{G,A} : K^{top}(G,A) \rightarrow K(A\rtimes_r G).\]
+
+This reformulation of the Baum-Connes conjecture allows one to avoid the use of the so called classifying space for proper actions $\underline E G$, introduced in \cite{BaumConnesHigson} by P. Baum, A. Connes and N. Higson. It is of particular interest in the setting of quantum groups (in the sense of Woronowicz \cite{Wo}), where even the notion of proper actions is not clear. The Baum-Connes conjecture could then be stated, and was proved in some cases, see \cite{Voigt1} and \cite{Voigt2}. \\
+
+The project that we want now to present proposes a way to tackle the issue of defining a classifying space for proper actions for any quantum group (at least discrete in a first time). The path that one could pursue in order to construct such a space would be the following.\\ 
+
+The first question one should ask is how one can recover $\underline E G$ from $K^{top}(G,A)$. If $\Gamma$ is a discrete group and $F\subseteq \Gamma$ a finite subset, recall that 
+\[P_F(\Gamma)= \{ \eta \in Prob(\Gamma) \text{ s.t. supp}(\eta ) \subseteq \gamma F \text{ for some } \gamma \in\Gamma \}\] 
+is called the Rips complex of $\Gamma$. Endowed with the weak-$*$ topology, it is a $G-CW$-complex, and $\cup_F P_F(\Gamma)$ is a model for $\underline E G$. Moreover
+\[K^{top}(G,A) \cong \varinjlim_{F\subset \Gamma} RK^G(P_F(\Gamma),A).\] 
+Let $\mathcal F$ be the collection of finite subsets $F\subset \Gamma$, seen as a category (it is a poset). If $C$ is any abelian category, denote by $\hat{ \mathcal C}$ the category of functors $\mathcal F \rightarrow \mathcal C$, with morphisms $\hat{\mathcal C}(X,Y)$ given by natural transformations $X \rightarrow Y\circ \rho$, where $\rho :  \mathcal F \rightarrow \mathcal F$ is non decreasing map. In \cite{OY2}, H. Oyono-Oyono and G. Yu introduced an approximation of $K$-theory called quantitative $K$-theory. In the first author thesis \cite{DellAieraThesis}, this approximation was extended to more general settings. To any filtered $C^*$-algebra $A$, one can associate its quantitative $K$-theory groups $\hat K_*(A)$. Moreover, for any $\Gamma-C^*$-algebra $A$, the reduced crossed product $A\rtimes_r \Gamma$ is naturally filtered by $\mathcal F$, and $\hat K_* (A\rtimes_r \Gamma)$ is well defined. It is actually a functor from $\mathfrak{KK}^G$ to a slight modification of $\hat C$, where $C$ is the category of $\Z_2$-graded abelian groups.
+
+\begin{Project} Compute the localisation of $\hat F( A) = \hat K_*(A\rtimes_r \Gamma) $.	
+\end{Project}
+
+One possible answer would be $\mathbb L \hat F(A) = (F\mapsto RK^\Gamma(C_0(P_F(\Gamma)),A))$. If true, the next step is the following.
+
+\begin{Project} Describe the relation between $\mathbb L \hat F(A)\rightarrow \hat F(A)$ and the controlled assembly map 
+$\hat \mu_{G,A}$.	
+\end{Project}
+
+Now, let $\mathbb G$ a compact quantum group and $\hat{\mathbb G}$ its dual, which is a discrete quantum group. It was shown in \cite{DellAieraThesis} that, for every $\hat{\mathbb G}$-algebra $A$, $A\rtimes_r \hat{\mathbb G}$ is filtered by the set $\mathcal E$ of equivalence classes of finite dimensional representations of $\mathbb G$.
+
+\begin{Project} Define a 
+$ \hat{\mathbb G} $-algebra $\Delta_\pi$ for every class $\pi\in \mathcal E$, such that $\mathbb L \hat F(A) = (\pi\mapsto KK^{\hat{\mathbb G}}(\Delta_\pi,A))$.   
+\end{Project}
+
+If the answer is positive, then $\Delta_\pi$ would be the natural equivalent of the Rips complex for discrete quantum groups. Its existence would shed light on the notion of proper action for quantum groups. This would allow the definition of a controlled assembly map for discrete quantum groups.
+
+\begin{Project} Extend these projects to the setting of general locally compact quantum groups.
+\end{Project}
+
+%%%%%
+%%%%%
+	
