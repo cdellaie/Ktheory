@@ -2,16 +2,14 @@ This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Proposal18.aux
 The style file: abbrv.bst
-I couldn't open database file Generalbib.bib
----line 118 of file Proposal18.aux
- : \bibdata{Generalbib
- :                    ,biblio}
-I'm skipping whatever remains of this command
-I found no database files---while reading file Proposal18.aux
+Database file #1: biblio.bib
+Repeated entry---line 457 of file biblio.bib
+ : @article{MeyerNest
+ :                   ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "GrothendieckResume"
 Warning--I didn't find a database entry for "PisierSurvey"
 Warning--I didn't find a database entry for "BCH84"
-Warning--I didn't find a database entry for "OY3"
 Warning--I didn't find a database entry for "Baum:1994pr"
 Warning--I didn't find a database entry for "Ferry:1993xw"
 Warning--I didn't find a database entry for "Rosenberg:1983qy"
@@ -60,14 +58,6 @@ Warning--I didn't find a database entry for "Spakula:2013ys"
 Warning--I didn't find a database entry for "Ozawa:2004bf"
 Warning--I didn't find a database entry for "Bader:2007eg"
 Warning--I didn't find a database entry for "Zimmer:2981ds"
-Warning--I didn't find a database entry for "Wo"
-Warning--I didn't find a database entry for "MeyerNest"
-Warning--I didn't find a database entry for "Kasparov"
-Warning--I didn't find a database entry for "BaumConnesHigson"
-Warning--I didn't find a database entry for "Voigt1"
-Warning--I didn't find a database entry for "Voigt2"
-Warning--I didn't find a database entry for "OY2"
-Warning--I didn't find a database entry for "DellAieraThesis"
 Warning--I didn't find a database entry for "Cortinas:2008aa"
 Warning--I didn't find a database entry for "Davis:1998qf"
 Warning--I didn't find a database entry for "Weibel:2013bf"
@@ -78,47 +68,47 @@ Warning--I didn't find a database entry for "Bokstedt:1993il"
 Warning--I didn't find a database entry for "Higson:1999be"
 Warning--I didn't find a database entry for "Meyer:2007aa"
 Warning--I didn't find a database entry for "Kasparov:2009jt"
-Warning--I didn't find a database entry for "ChamseddineConnes"
-Warning--I didn't find a database entry for "Bellissard"
-You've used 0 entries,
+Warning--empty journal in OY3
+Warning--empty year in OY3
+You've used 13 entries,
             2118 wiz_defined-function locations,
-            641 strings with 5539 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+            715 strings with 7217 characters,
+and the built_in function-call counts, 3876 in all, are:
+= -- 395
+> -- 147
+< -- 1
++ -- 63
+- -- 46
+* -- 268
+:= -- 668
+add.period$ -- 38
+call.type$ -- 13
+change.case$ -- 60
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 15
+duplicate$ -- 145
+empty$ -- 309
+format.name$ -- 46
+if$ -- 785
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 13
+missing$ -- 12
+newline$ -- 67
+num.names$ -- 26
+pop$ -- 48
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 48
 quote$ -- 0
-skip$ -- 1
+skip$ -- 101
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 289
+swap$ -- 19
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There were 2 error messages)
+type$ -- 52
+warning$ -- 2
+while$ -- 44
+width$ -- 15
+write$ -- 139
+(There was 1 error message)

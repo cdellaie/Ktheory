@@ -1,3 +1,7 @@
+\section{Intellectual merit of current proposal}
+
+This section describes three research projects that we intend to work on during the next years. We first give some background. The author will try to explain how the current questions in \textit{operator algebras} and \textit{noncomutative geometry} they are interested in are related to other parts of Mathematics. Our point of view is to see our activity as an offspring of Grothendieck's work on tensor products of Banach spaces. The sections that follow describe each several projects that are grouped by theme.   
+
 \subsection{From approximation properties to the K\"unneth formula in operator $K$-theory and the Universal Coefficient Theorem}
 
 An important part of Operator Algebras as a field can be described as attempting to answer questions arising in Functional Analysis using other seemingly unrelated fields, the most common being Topological Dynamics, Group and Geometric Group theory. A good starting point to understand these preocupations is the work of Alexander Grothendieck on tensor products of topological vector spaces. \\
@@ -98,7 +102,31 @@ The rest of the piece will be to give details and context to these ideas.
 
 \subsection{Weak decompositions}
 
-\textbf{Filtered algebras}
+Recall that a metric space $X$ has \textit{asymptotic dimension} less than $d$ if, for every $r>0$, there exists a decomposition of $X$
+\[X = X_0 \cup X_1 \cup ... \cup X_d,\]
+into $d+1$ subspaces that are $r$-disjoint family of uniformly bounded subsets, i.e. \[X_i = \coprod_r X_{i,j}\] with $\sup_{i,j} diam(X_{i,j})<\infty$. A nice example to keep in mind is $\Z$, which is of asymptotic dimension $1$. The upper bound can be seen by looking at the decomposition 
+\[ \Z = \coprod_k [| \ 20rk, 20rk+10r \ |] \cup \coprod_k [| \  (2k+1)10r , (2k+1)10r+10r \ |] \] It is a fact that $\Z^n$ has asymptotic dimension $n$. \\
+
+If one looks at $\Gamma=\bigoplus \Z$ with the left invariant metric 
+\[ l(a)= \sum_n n|a_n|, \quad \forall a = (a_n)_{n \geq 0}\] it is easily seen as being of infinite asymptotic dimension. Yet, it still admits a similar decomposition, if one is allowed to decompose in two steps. Indeed, $\Gamma$ identifies with finitely supported functions $\N \rightarrow \Z$. Define $\Gamma_i^{(1)}$ to be the space of such functions supported on $\coprod_k [| \ (2k+i)r, (2k+i)r+r \ |]$ for $i=0,1$. Each of the two pieces is a $r$-dijoint union of spaces almost isometric to $\Z^r$, which by finite asymptotic dimension can also be decomposed in the same way, only this time by a uniformly bounded family.\\ 
+
+The relevant property for our purpose is the decomposition of a space, for every $r$, into $r$-disjoint families. If one has such a decomposition
+\[X = X_0 \cup X_1 , \quad X_i = \coprod_r X_{ij},\]
+one can look at the $C^*$-algebras
+\[C^*(X)\] 
+
+When $X$ is a discrete countable group endowed with a left invariant metric, the coarse Baum-Connes conjecture for $X$ is know to imply the homotopy invariance of higher signature for $\Gamma$ (Novikov conjecture). The $K$-theory of interest is that of the \textit{Roe algebra} $C^(X)$. 
+
+In his celebrated work \cite{Yu1}, G. Yu proved the Novikov conjecture for spaces with finite asymptotic dimension using these kind of decompositions. Building on the techniques used in that article, H. Oyono-Oyono and G. Yu developed a refinment of $K$-theory called \textit{quantitative $K$-theory} which allows one to compute the $K$-theory of, for instance, the $C^*$-algebra $C^*(|\Gamma|) \cong l^\infty(\Gamma)\rtimes \Gamma$ from the $K$-theory of the subalgebras 
+\[A_i = \prod_{j} C^*(X_{ij}).\]
+These are not closed ideals in $C^*(X)$, but are close enough of being so that a Mayer-Vietoris type sequence exists in \textit{quantitative $K$-theory}. this allows one to carry out the same type of proofs as in \cite{Yu1} and actually led to a proof of the coarse Baum-Connes conjecture for spaces with \textit{finite decomposition complexity}, hence of the Novikov conjecture for groups like $\bigoplus \Z$.  \\
+
+\textbf{Filtered algebras}\\
+
+The use of this kind of decomposition is not limited to prove coarse Baum-Connes conjecture. In \cite{OY3}, Oyono-Oyono and Yu give a stability result for the K\"unneth formula that can be loosely summarized as: if a filtered $C^*$-algebra admits at every order $r$-approximate ideals such that these sub-$C^*$-algebras and their intersection satisfy a quantitatve version of the K\"unneth formula, then the original algebra also does.\\
+  
+The author defined in his thesis a slight generalization of quantitative $K$-theory
+
 
 \subsection{Quantum groups}
 
@@ -116,9 +144,15 @@ By Stone-weierstrass theorem, the union of the $C_\pi(G)$ is dense in $C(G)$, wh
 with $\pi \circ\sigma = \pi \otimes\sigma \oplus \sigma \otimes \pi$, wich defines a structure of semigroup on $\mathcal E$. In short, $C^*(\Gamma)$ is filtered by 
 $\mathcal E_G$. This generalizes entirely to discrete quantum groups, and even to crossed product of $C^*$-algebras by action by automorphisms of such things. \\
 
-In the case of the Roe algebra $C^*(X)$, the filtration was given by the \textit{entourages} of $X$. In a sense, the representations of the dual of a discrete quantum group encode its noncommutative coarse geometry. The following projects are an attempt to translate notions of Coarse Geometry into the realm of quantum groups.       
+In the case of the Roe algebra $C^*(X)$, the filtration was given by the \textit{entourages} of $X$. In a sense, the representations of the dual of a discrete quantum group encode its noncommutative coarse geometry. The following projects are an attempt to translate notions of Coarse Geometry into the realm of quantum groups. \\
 
+For any group (or groupoid) $G$, there exists a universal topological space $\underline E G$ that classifies its proper actions in the sense that, for every proper left $G$-space $Z$, there exists a unique (up to homotopy) equivariant continuous map $Z \rightarrow \underline E G$. This space is called the classifying space for proper actions. It appears in the formulation of the Baum-Connes conjecture, which asserts that the $K$-theory of $C^*_r(G)$ can be computed from the analytic $K$-homology of $\underline E G$. In order to give a method to compute the $K$-theory of quantum groups, Meyer and Nest defined a Baum-Connes assembly map and conjecture for these. One of the problems they faced was the lack of classifying space for proper actions for quantum groups. \\
 
+\textbf{Project:} For any compact quantum group $\mathbb G$, define a universal $C^*$-algebra endowed with a proper action of the dual $\hat {\mathbb G}$. When the quantum group is commutative, one should get the continuous functions on $\underline E \Gamma$ where $\Gamma= \hat G$ is the dual of the compact abelian original group.\\
+
+To go further, 
+
+\section{Broader impacts of current proposal}
 
 
 
