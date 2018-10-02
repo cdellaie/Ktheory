@@ -1,6 +1,4 @@
-\section{Intellectual merit of current proposal}
-
-This section describes three research projects that we intend to work on during the next years. We first give some background. The author will try to explain how the current questions in \textit{operator algebras} and \textit{noncomutative geometry} they are interested in are related to other parts of Mathematics. Our point of view is to see our activity as an offspring of Grothendieck's work on tensor products of Banach spaces. The sections that follow describe each several projects that are grouped by theme.   
+This section describes three research projects that we intend to work on during the next years. We first give some background. The author will try to explain how the current questions in \textit{operator algebras} and \textit{noncommutative geometry} they are interested in are related to other parts of Mathematics. Our point of view is to see our activity as an offspring of Grothendieck's work on tensor products of Banach spaces. The sections that follow describe each several projects that are grouped by theme.   
 
 \subsection{From approximation properties to the K\"unneth formula in operator $K$-theory and the Universal Coefficient Theorem}
 
@@ -8,15 +6,17 @@ An important part of Operator Algebras as a field can be described as attempting
 
 At the time, starting his PhD in Nancy, Grothendieck was asked by Laurent Schwartz to develop a theory of tensor products for topological vector spaces. This question was motivated by the kernel theorem, whose proof was found to be too much involved by Laurent Schwartz in the general case, whereas the finite dimensional case reduces to the fact that 
 \[V^*\otimes W \cong Hom(V,W),\] 
-i.e. the space of linear maps is isomorphic as a vector space to the tensor product of the dual of the domain with the codomain. Having topological tensor products in one's toolbox led to hope for a simpler and more natural proof. The rest of the story is well known: Grothendieck found that one could define a lot of topologies on the algebraic tensor products. Spaces admitting only one such completion were called \textit{nucl\'eaires}, or nuclear, after the kernel theorem (\textit{nucl\'eaires} in French means "related to the kernel").\\
+where $V$ and $W$ are finite dimensional vector spaces and $Hom(V,W)$ is the space of linear maps $V\rightarrow W$. Having topological tensor products in one's toolbox led to hope for a simpler and more natural proof. The rest of the story is well known: Grothendieck found that one could define a lot of completion of the algebraic tensor products. Spaces admitting only one such completion were called \textit{nucl\'eaires}, or nuclear, after the kernel theorem (\textit{nucl\'eaires} means "related to the kernel" in French).\\
 
 The paper \textit{R\'esum\'e de la th\'eorie m\'etrique des produits tensoriels topologiques} \cite{GrothendieckResume}, commonly know as the Resum\'e, enhanced a vast research program. It specified the work to the case of Banach spaces. Surprisingly, the paper did not attract a lot of attention at the time, maybe because the trend was back then to focus on locally convex spaces. The paper was rediscovered in the \textbf{WHEN?}. See \cite{PisierSurvey} for a very nice survey on the subject.\\
 
-Approximation theory for $C^*$-algebras is direclty inspired and derives from this work. The broad idea is to study properties of various constructions such as tensor products or crossed-products (which is a twisted version of tensor products). It is very useful in that case to use functionnal spaces of functions on a topological group as a tool to construct exotic examples. Let me illustrate this by the following example.\\
+Approximation theory for $C^*$-algebras is a direct offspring of this work. The idea is to study properties of various constructions such as tensor products or crossed-products (which is a twisted version of tensor products) of $C^*$-algebras. It is very useful in that case to use functionnal spaces of functions on a topological group as a tool to construct exotic examples. Let me illustrate this by the following example.\\
 
 John Von Neumann defined a property on groups called \textit{amenability} as follows. A discrete countable group $\Gamma$ is said to be amenable if there exists an invariant mean (i.e. linear positive functional) $m: l^\infty(\Gamma)\rightarrow \C$. Now, the group ring $\C[\Gamma]$ is a $*$-algebra w.r.t. the convolution as a product and $(z. \gamma)^* = \overline{z}\gamma^{-1}$. This algebra can be represented as a self adjoint subalgebra of the bounded operators on the complex Hilbert space $l^2\Gamma$ by what is called the left regular representation $\lambda_\Gamma: \C[\Gamma]\rightarrow B(l^2\Gamma)$. The reduced $C^*$-algebra of the group $\Gamma$ is defined as the closure of the image of the regular representation.\\
 
-It turns out that, for such a group $\Gamma$, this $C^*$-algebra is nuclear iff $\Gamma$ is amenable. Thus, examples of nonamenable groups (like any nonabelian free group) provide instances of nonnuclear $C^*$-algebras. This example is typical of how a completely group theoretic property can be used to provide contructions of Banach algebras with interesting properties. Many other areas of mathematics contribute to fuel new ideas in operator algebras. A nice object which is general enough to encompass all of these constructions and provides easily a $C^*$-algebra is a groupoid. Indeed, out of an action by homeomorphisms of a group $\Gamma$ on a topological space $\Omega$ or out of a metric space $X$, one can build groupoids (respectively the action groupoid $\Omega \rtimes \Gamma$ and the coarse groupoid $G(X)$ \cite{SkTuYu}) nice enough to have convolution algebras. \\  
+It turns out that, for such a group $\Gamma$, this $C^*$-algebra is nuclear iff $\Gamma$ is amenable. Thus, examples of nonamenable groups (like any nonabelian free group) provide instances of nonnuclear $C^*$-algebras. This example is typical of how a completely group theoretic property can be used to provide contructions of Banach algebras with interesting properties. Many other areas of mathematics contribute to fuel new ideas in operator algebras. A nice object which is general enough to encompass all of these constructions and provides easily a $C^*$-algebra is a \textit{groupoid}. For our purpose, the reader only needs to know that a groupoid is meant to be two locally compact spaces: the objects $G^0$ and the arrows $G$. $G$ is ``group like" in the sense that it has a partial multiplication law and every arrow has an inverse for it. The difference with a group is that $G$ sits over the base space $G^0$: every arrow has a source and a target in $G^0$.\\  
+
+This extra flexibility makes groupoids very versatile. Indeed, out of an action by homeomorphisms of a group $\Gamma$ on a topological space $\Omega$ or out of a metric space $X$, one can build groupoids (respectively the action groupoid $\Omega \rtimes \Gamma$ and the coarse groupoid $G(X)$ \cite{SkTuYu}) nice enough to have convolution algebras. \\  
 %Amenability was of uttermost importance in the classification of factors obtained by Connes \cite{}. \\ 
 
 % Examples from http://www.texample.net/tikz/examples/borrowers-and-lenders/ 
@@ -40,34 +40,39 @@ It turns out that, for such a group $\Gamma$, this $C^*$-algebra is nuclear iff 
 \end{tikzpicture}\]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-A very interesting game is to take a property in any of these fields, try to define it in the setting of groupoids, and then to unravel the definition in another setting. For instance, amenability can be easily defined to locally compact groupoids \cite{}. But if one looks at the coarse groupoid $G(X)$ of a metric space, saying it is amenable is equivalent to say that $X$ has Yu's property (A). Another direction is to use properties of groupoids to build interesting classes of $C^*$-algebras. For instance, second countable locally compact amenable groupoids have their reduced $C^*$-algebras that are known to satisfy the K\"unneth formula. \\
+Taking a property in any of these areas, trying to define it in the setting of groupoids, then unravel the definition in another setting has proven to be a very fruitful strategy. For instance, amenability can be easily defined for locally compact groupoids \cite{}. But if one looks at the coarse groupoid $G(X)$ of a metric space, saying it is amenable is equivalent to say that $X$ has Yu's property (A). Another direction is to use properties of groupoids to build interesting classes of $C^*$-algebras. For instance, second countable locally compact amenable groupoids have their reduced $C^*$-algebras that are known to satisfy the K\"unneth formula. \\
 
 Over the years, other properties have been found to be of interest. Without pretending to be exhaustive, let us just mention exactness, simplicity, finite nuclear dimension, the UCT class, the Bootstrap class,... Usually (meaning to my knowledge) these classes are important because of their relation to Elliot's classification progam, or to topology and geometry. \\
 
-One of the objects of importance for $C^*$-algebras are the \textit{operator $K$-theory groups} $K_0(A)$ and $K_1(A)$, which are homotopy invariant abelian groups associated to any $C^*$-algebras. Georges Elliott suggested that all separable nuclear $C^*$-algebras should be classifiable by ``$K$-theoretic'' invariants. While seen as unreachable at the time of its statement, Elliott's conjecture cristallised last year as the following theorem.
+One of the objects of importance for $C^*$-algebras are the \textit{operator $K$-theory groups} $K_0(A)$ and $K_1(A)$, which are homotopy invariant abelian groups associated to any $C^*$-algebras. Let us just say that $K_0(A)$ is built out of equivalence classes of projections in $M_n(A)$, while $K_1(A)$ is built from equivalence classes of unitaries in $M_n(A)$. These groups are a generalized cohomology theory on $C^*$-algebra. Georges Elliott suggested that all separable nuclear $C^*$-algebras should be classifiable by ``$K$-theoretic'' invariants. While seen as unreachable at the time of its statement, Elliott's conjecture cristallised last year as the following theorem.
 
-\begin{theorem}\label{classification}(By many, many hands) All separable simple unital UCT $C^*$-algebras of finite nuclear dimension are classifiable.
+\begin{theorem}\label{classification}(By many, many hands \cite{}) All separable simple unital UCT $C^*$-algebras of finite nuclear dimension are classifiable.
 \end{theorem}
 
 This result, together with the fact that the $K$-groups are notoriously difficult to compute, give motivations to the following problems:
 \begin{enumerate}
-\item define special families of $C^*$-algebras and prove that they satisfy the condition of the classification theorem \ref{classification},
+\item define special families of $C^*$-algebras and prove that they satisfy the conditions of the classification theorem \ref{classification},
 \item enlarge the range of applicability of theorem \ref{classification},
 \item find a way to compute the $K$-theory groups.
 \end{enumerate}    
 
-The first two points are very active branches of research right now, and much work has been devoted to find a way to prove that finite nuclear dimension for $C^*$-algebras implies UCT. UCT stands for Universal Coefficients Theorem, and a $C^*$-algebra is said to belong to the UCT class if Kasparov abelian groups $KK_0(A,B)$ and $KK_1(A,B)$ can be computed for every $C^*$-algebras $B$ from the $K$-theory groups of $A$ and $B$. A very similar class is that of $C^*$-algebras that satisfy the K\"unneth formula. \\
+The first two points are very active branches of research right now, and much work has been devoted to find a way to prove that finite nuclear dimension for $C^*$-algebras implies UCT. UCT stands for Universal Coefficients Theorem, and a $C^*$-algebra is said to belong to the UCT class if Kasparov abelian groups $KK_0(A,B)$ and $KK_1(A,B)$ can be computed for every $C^*$-algebras $B$ from the $K$-theory groups of $A$ and $B$. A very similar class is that of $C^*$-algebras that satisfy the K\"unneth formula. The map $\alpha: [p]\otimes [q] \mapsto [p\otimes q]$ induces a product in $K$-theory (at the level of $K_0$, then similar formulas do the jobs for $K_*$). A $C^*$-algebra $A$ is said to satisfy the K\"unneth formula if 
 
-On the other hand, the $K$-groups are computable for $C^*$-algebras coming from groups satisfying the Buam-Connes conjecture. In \cite{BCH84}, P. Baum, A. Connes and N. Higson suggested that a certain group homomorphism
+\[\alpha: K_*(A) \otimes K_*(B)\rightarrow K_*(A\otimes B)\]
+ is an isomorphism for every $C^*$-algebra $B$ such that $K_*(B)$ is free abelian. It is know to be true for every $C^*$-algebra in the \textit{Bootstrap class}, i.e. that is $KK$-equivalent to a commutative $C^*$-algebra ($KK$-equivalence is a suitable notion of weak equivalence for $C^*$-algebras).\\
+
+On the other hand, the $K$-groups are computable for $C^*$-algebras coming from groups satisfying the Baum-Connes conjecture. In \cite{BCH84}, P. Baum, A. Connes and N. Higson suggested that a certain group homomorphism
 \[\mu_G : K_*^{top}(\underline E G) \rightarrow K_*(C_r^*(G)), \]
 called the assembly map, is an isomorphism. Here, 
 \begin{itemize}
 \item[$\bullet$] $\underline E G$ is the classifying space for proper actions of $G$, a CW-complex associated to $G$,
-\item[$\bullet$] $K_*^{top}(X)$ is, for every left $G$-space $X$, the \textit{$G$-equivariant analytic $K$-homology} of $X$, a classical homolgy group that can be computed by the traditional means of algebraic topology,
+\item[$\bullet$] $K_*^{top}(X)$ is, for every left $G$-space $X$, the \textit{$G$-equivariant analytic $K$-homology} of $X$, a classical homology group that can be computed by the traditional means of algebraic topology,
 \item[$\bullet$] and of course $K_*(C_r^*(G))$ stands for the $K$-theory groups of the reduced $C^*$-algebra of $G$. 
 \end{itemize}
 
-Another reason why computation of $K$-theory groups is so interesting is its link with classical geometry and topology. Indeed, if $G=\pi_1(M)$ is the fundamental group of a closed aspherical manifolds, the assembly map $\mu_G$ specializes to 
+This conjecture is a far reaching generalization of the Atiyah-Singer index theorem, and is know to be true for every group which has the Haagerup property (Gromov's a-T-menability). In particular, every amenable group satisfies the Baum-Connes conjecture. The conjecture has a version with coefficients and can also be generalized to the setting of groupoids. The conjecture with coefficients is known to be false for groups, but no counterexample is known at this moment for the original conjecture. The case of groupoids in strikingly different: in \cite{SkTuYu}, Skandalis, Tu and Yu build very simple examples of groupoids which do not satisfy the Baum-Connes conjecture (already without coefficients).\\
+
+Another reason why computation of $K$-theory groups and the Baum-Connes conjecture is so interesting is its link with classical geometry and topology. Indeed, if $G=\pi_1(M)$ is the fundamental group of a closed aspherical manifolds, the assembly map $\mu_G$ specializes to 
 \[\mu_G : K_*(M)\rightarrow K_*(C^*_r(G)).\]
 The injectivity of $\mu_G$ proves the Novikov conjecture for $M$, which states the homotopy invariance of higher signatures of $M$. More precisely:
 
@@ -121,13 +126,19 @@ In his celebrated work \cite{Yu1}, G. Yu proved the Novikov conjecture for space
 \[A_i = \prod_{j} C^*(X_{ij}).\]
 These are not closed ideals in $C^*(X)$, but are close enough of being so that a Mayer-Vietoris type sequence exists in \textit{quantitative $K$-theory}. this allows one to carry out the same type of proofs as in \cite{Yu1} and actually led to a proof of the coarse Baum-Connes conjecture for spaces with \textit{finite decomposition complexity}, hence of the Novikov conjecture for groups like $\bigoplus \Z$.  \\
 
-\textbf{Filtered algebras}\\
+The idea behind quantitative $K$-theory is to relax some relations in the definition of the $K$-groups. Recall that these are defined as equivalence classes of projections and unitaries in $C^*$-algebras. But being in a normed algebra offers some advantage compared to the algebraic setting: one can do approximation. The only additional ingredients one needs is a \textit{filtration} on the $C^*$-algebra, meaning a family of operator spaces $\{A_r\}_{r>0}$ such that $\cup_r A_r$ is dense in $A$ and $A_r A_s \subseteq A_{r+s}$. Then the quantitative $K$-group $K_0^{\varepsilon,r}(A)$ will be defined as equivalence classes of almost projections 
+\[p=p^*\in M_n(A_r) \text{ s.t. } ||p^2 - p || <\varepsilon  \] 	 
+and $K_1^{\varepsilon,r}(A)$ as equivalence classes of almost unitaries
+\[u\in M_n(A_r) \text{ s.t. } ||uu^* - 1_n || <\varepsilon  \text{ and }  ||u^*u - 1_n || <\varepsilon \]
 
-The use of this kind of decomposition is not limited to prove coarse Baum-Connes conjecture. In \cite{OY3}, Oyono-Oyono and Yu give a stability result for the K\"unneth formula that can be loosely summarized as: if a filtered $C^*$-algebra admits at every order $r$-approximate ideals such that these sub-$C^*$-algebras and their intersection satisfy a quantitatve version of the K\"unneth formula, then the original algebra also does.\\
+%\textbf{Filtered algebras}\\
+The use of this kind of decomposition is not limited to prove coarse Baum-Connes conjecture. In \cite{OY3}, Oyono-Oyono and Yu give a stability result for the K\"unneth formula that can be loosely summarized as: if a filtered $C^*$-algebra admits at every order $r$-approximate ideals such that these sub-$C^*$-algebras and their intersection satisfy a quantitative version of the K\"unneth formula, then the original algebra also does.\\
   
-The author defined in his thesis a slight generalization of quantitative $K$-theory
+The author defined in his thesis a slight generalization of quantitative $K$-theory where the index $r$ can be any element of a \textit{coarse structure}, which is an abelian partially ordered semigroup equipped with a maximum. In the case of a groupoid $G$, the set of symmetric compact subsets of $G$ form a coarse structure $\mathcal E_G$ w.r.t. the inclusion and the composition
+\[E \circ F = EF \cup FE,\]
+where $EF = \{ xy \in G \text{ s.t. } x\in E, y\in F \ x\text{ and } y \text{ composable} \}$. Then the reduced and maximal $C^*$-algebras $C^*_r(G)$ and $C^*_{max}(G)$ are filtered by $\mathcal E_G$. The other case of interest, described in the next section, is the one of quantum groups.\\
 
-
+This filtration makes it possible to use quantitative $K$-theory for any $C^*$
 \subsection{Quantum groups}
 
 Quantum groups can be thought as \textit{noncommutative locally compact groups} in the same way that $C^*$-algebras can be seen as noncommutative spaces. This means that when the $C^*$-algebra is unital and commutative, it is isomorphic to the algebra of complex continuous functions on a compact group. The basic examples of easiest compact quantum groups are:
@@ -150,9 +161,8 @@ For any group (or groupoid) $G$, there exists a universal topological space $\un
 
 \textbf{Project:} For any compact quantum group $\mathbb G$, define a universal $C^*$-algebra endowed with a proper action of the dual $\hat {\mathbb G}$. When the quantum group is commutative, one should get the continuous functions on $\underline E \Gamma$ where $\Gamma= \hat G$ is the dual of the compact abelian original group.\\
 
-To go further, 
+To go further, Kunneth going down , quanatitative K, Rips complex, assembly maps, expanders.
 
-\section{Broader impacts of current proposal}
 
 
 
