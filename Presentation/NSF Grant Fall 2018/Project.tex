@@ -138,8 +138,24 @@ The author defined in his thesis a slight generalization of quantitative $K$-the
 \[E \circ F = EF \cup FE,\]
 where $EF = \{ xy \in G \text{ s.t. } x\in E, y\in F \ x\text{ and } y \text{ composable} \}$. Then the reduced and maximal $C^*$-algebras $C^*_r(G)$ and $C^*_{max}(G)$ are filtered by $\mathcal E_G$. The other case of interest, described in the next section, is the one of quantum groups.\\
 
-This filtration makes it possible to use quantitative $K$-theory for any $C^*$
+This filtration makes it possible to use quantitative $K$-theory for any crossed-product of a $C^*$-algebra by an action of groupoid. Of course, there is a way to go from quantitative $K$-theory to actual $K$-theory (essentially by forgetting the filtration). The technical advantage of using the quantitative version resides in the existence of more exact sequences. More precisely, while in $K$-theory one needs a decomposition $A= I_0+I_1$ into ideals to use Mayer-Vietoris sequences, quantitative $K$-theory only requires ``approximate ideals'', which we don't want to define here. The point is that they exist even in simple $C^*$-algebras. \\
+
+Building on previous work \cite{OY4}, \cite{GWY},\cite{GWY}, together with Christian B\"onicke we define in \cite{DelBo18} the \textit{coarsely generated family} of a (countable) family of subgroupoids of a groupoid. One of the result of \cite{DelBo18} is the following.
+
+\begin{theorem} Let $G$ be an \'etale groupoid and let $\mathcal G$ be such a family such that the reduced $C^*$-algebras of all the groupoids in $\mathcal C$ satisfy uniformly the quantitative K\'unneth formula. If $G$ belongs to the coarsely generated family of $\mathcal C$, then $C^*(G)$ satisfies the K\'unneth formula.         
+\end{theorem}
+
+This result can be thought as "the K\"unneth formula for groupoids is stable with respect to finite decomposition". The natural question is to know if that can be done for the UCT class, and for the Baum-Connes conjecture.\\
+
+\textbf{Project} Are the Baum-Connes conjecture and the UCT stable with respect to finite decomposition?
+
+In \cite{OY4}, Oyono-Oyono and Yu give a proof of the Novikov conjecture for FDC group. This result suggests strongly that the Baum-Connes conjecture is stable w.r.t. finite decomposition at least for the restricted class of coarse groupoids. A good intuition is that whatever works for coarse groupoids usually extends to ample groupoids (which are \'etale groupoids with totally disconnected base space). \\
+
+If true, this result would give new examples of groupoids which satisfy the Baum-Connes conjecture. Indeed, in \cite{DelBo18} we show that some groupoids finitely decompose over subgroupoids which are a-T-menable without being themselves a-T-menable (we can come up with an actual example). The biggest class of groupoids known to satisfy the Baum-Connes conjecture being the a-T-menable ones, one would then prove the Baum-Connes comjecture for a class strictly bigger.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Quantum groups}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Quantum groups can be thought as \textit{noncommutative locally compact groups} in the same way that $C^*$-algebras can be seen as noncommutative spaces. This means that when the $C^*$-algebra is unital and commutative, it is isomorphic to the algebra of complex continuous functions on a compact group. The basic examples of easiest compact quantum groups are:
 \begin{itemize}
