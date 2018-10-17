@@ -20,8 +20,8 @@
 \contentsline {subsection}{\numberline {6.3}Classification and the UCT}{12}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}$C^*$-simplicity}{12}{subsection.6.4}
 \contentsline {section}{\numberline {7}Groups}{14}{section.7}
-\contentsline {section}{\numberline {8}$C^*$-algebras}{15}{section.8}
-\contentsline {section}{\numberline {9}Baum-Connes}{17}{section.9}
+\contentsline {section}{\numberline {8}$C^*$-algebras}{16}{section.8}
+\contentsline {section}{\numberline {9}Baum-Connes}{18}{section.9}
 \contentsline {section}{\numberline {10}GPOTS \& NCGOA 2018}{20}{section.10}
 \contentsline {subsection}{\numberline {10.1}Arnaud Brothier: some representations of the Thompson group}{20}{subsection.10.1}
 \contentsline {subsection}{\numberline {10.2}Piotr Nowak: Property T for $Out(\mathbb F_n)$}{20}{subsection.10.2}
@@ -31,18 +31,18 @@
 \contentsline {section}{\numberline {12}Noncommutative geometry}{20}{section.12}
 \contentsline {subsection}{\numberline {12.1}Basic objects and constructions}{20}{subsection.12.1}
 \contentsline {subsection}{\numberline {12.2}Quantum groups}{21}{subsection.12.2}
-\contentsline {subsection}{\numberline {12.3}Why $SU_q(2)$?}{21}{subsection.12.3}
+\contentsline {subsection}{\numberline {12.3}Why $SU_q(2)$?}{22}{subsection.12.3}
 \contentsline {subsection}{\numberline {12.4}TQFT}{23}{subsection.12.4}
-\contentsline {subsection}{\numberline {12.5}Reminder}{24}{subsection.12.5}
+\contentsline {subsection}{\numberline {12.5}Reminder}{25}{subsection.12.5}
 \contentsline {section}{\numberline {13}Langlands}{25}{section.13}
-\contentsline {section}{\numberline {14}Haagerup property, cocycles and the mapping class group}{25}{section.14}
+\contentsline {section}{\numberline {14}Haagerup property, cocycles and the mapping class group}{26}{section.14}
 \contentsline {section}{\numberline {15}Hawaii}{26}{section.15}
 \contentsline {subsection}{\numberline {15.1}HLS groupoids}{26}{subsection.15.1}
 \contentsline {subsection}{\numberline {15.2}Visit to PennState, September 18th to 21st 2018}{27}{subsection.15.2}
-\contentsline {section}{\numberline {16}Mayer-Vietoris}{27}{section.16}
-\contentsline {section}{\numberline {17}Quantum groups}{27}{section.17}
-\contentsline {section}{\numberline {18}Property T}{27}{section.18}
-\contentsline {section}{\numberline {19}Number theory}{27}{section.19}
-\contentsline {section}{\numberline {20}Fock spaces, CuntzKrieger algebras, and second quantization}{27}{section.20}
-\contentsline {section}{\numberline {21}Representations of groupoids}{28}{section.21}
-\contentsline {section}{\numberline {22}Grothendieck and tensor products, the origin of nuclearity}{31}{section.22}
+\contentsline {section}{\numberline {16}Mayer-Vietoris}{28}{section.16}
+\contentsline {section}{\numberline {17}Quantum groups}{28}{section.17}
+\contentsline {section}{\numberline {18}Property T}{28}{section.18}
+\contentsline {section}{\numberline {19}Number theory}{28}{section.19}
+\contentsline {section}{\numberline {20}Fock spaces, CuntzKrieger algebras, and second quantization}{28}{section.20}
+\contentsline {section}{\numberline {21}Representations of groupoids}{29}{section.21}
+\contentsline {section}{\numberline {22}Grothendieck and tensor products, the origin of nuclearity}{32}{section.22}
