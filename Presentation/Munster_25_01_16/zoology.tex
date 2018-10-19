@@ -150,8 +150,24 @@ Now if $N$ is a normal amenable subgroup of $\Gamma$...\\
 
 We saw that $\mathbb F_2$ is $C^*$-simple, yet it has a copy of $\Z$ as an amenable subgroup (non normal), and a normal (non amenable) subgroup: the commutator subgroup, which is an infinite rank free group, $\langle [x,y ] : x,y \in \mathbb F_2\rangle = \mathbb F([a^n, b^m] ; n,m) $. Both conditions are necessary.\\
 
-This result led to following (false) conjecture: a group is $C^*$-simple iff it has no non trivial amenable normal subgroups.
+This result led to following (false) conjecture: a group is $C^*$-simple iff it has no non trivial amenable normal subgroups.\\
 
+\subsection{Completely positive maps}
+
+If $A$ and $B$ are $C^*$-algebra, then a linear map $\phi : A\rightarrow B$ is called completely positive if 
+\[\phi^{(n)}(a) = (\phi(a_{ij}))_{ij} \geq 0 \quad \forall a \in M_n(A)_+.\]
+Denote $CP(A,B)$ the normed vector space of completely positive maps form $A$ to $B$. $S(A)$ denotes the state space of $A$, endowed with the weak-$*$ topology (it's then a convex subspace of $A^*$, compact when $A$ is unital).\\
+
+Then: \\
+\begin{itemize}
+\item[$\bullet$] $CP(C(X),C(Y)) \cong C(Y, P(X))$ via $\mu_y(f) = \Phi(f)(y)$; \\
+
+\item[$\bullet$] $CP(A,C(Y)) \cong C(Y, S(A))$ via $\omega_y(f) = \Phi(a)(y)$;\\
+
+\item[$\bullet$] What about $CP(C(X),B)$? Continuous sections on the continuous field of $C^*$-algebras $\bigoplus_{\omega\in S(B)} B(H_\omega)$.\\
+\end{itemize}
+ 
+\newpage
 %%%%%%%%%%%%%%%%%%%%%
 \section{Groups}
 %%%%%%%%%%%%%%%%%%%%%
@@ -165,7 +181,7 @@ This result led to following (false) conjecture: a group is $C^*$-simple iff it 
 \[\oplus \Z_2 \rtimes \Z.\]
 \end{itemize}
 
-Tessera and Arhantseva showed that there exists a group which is a split extension of two groups that are coarsely embeddalbe into Hilberrt space, and that does not admit such an embedding.\\
+Tessera and Arhantseva showed that there exists a group which is a split extension of two groups that are coarsely embeddable into Hilberrt space, and that does not admit such an embedding.\\
 
 \begin{itemize}
 \item[$\bullet$] \textbf{Amenability} Abelian, Compact, extension of such (Elementary amenable), Grigorchuk group: amenable but not elementary amenable (first example of finitely generated group with intermediate growth, i.e. faster than polynomial but subexponential). Every group with subexponential growth (equivalent to virtually nilpotent by Gromov's Polynomial growth theorem). When discrete, $\Gamma$ is amenable iff $C^*_r(\Gamma)$ is nuclear.\\
@@ -186,12 +202,13 @@ All finite asymtotic dimension groups satisfy the Novikov conjecture.\\
 
 The groups $\Z^{(\infty)}=\bigoplus_{j=0}^\infty \Z$ with $d(x,y)=\sum j |x_j -y_j|$ and $\Z \wr \Z$ have infinite asymptotic dimension.\\
 
-\item[$\bullet$] \textbf{FDC} $\Z^{(\infty)}$ has FDC and infinite asdim, but is not finitely generated. The following subgroup of $SL(2,\R)$ has FDC, infinite asymptotic dimension and is finitely generated:  
+\item[$\bullet$] \textbf{FDC} $\Z^{(\infty)}$ has FDC and infinite asymptotic dimension, but is not finitely generated. The following subgroup of $SL(2,\R)$ has FDC, infinite asymptotic dimension and is finitely generated:  
 \[G= \left\{\begin{pmatrix} \pi^n  & P(\pi) \\ 0 & \pi^{-n}\end{pmatrix} | n\in \Z, P \text{ Laurent polynomial with integer coefficients}\right\},\]
 with $\left\{\begin{pmatrix} 1  & P(\pi) \\ 0 & 1\end{pmatrix} \right\} \cong \Z \wr \Z $ as a subgroup (so infinite dimension). Any countable subgroup of $GL(n,R)$ for $R$ a commutative ring has FDC, countable subgroups of almost connected Lie groups, elementary amenable, finite asymptotic dimension and hyperbolic, all have FDC.
 \\
 
-\item[$\bullet$] \textbf{Property A} $|\Gamma|$ has property (A) iff $C_u^*(\Gamma)$ is nuclear (Ozawa, but Guentner-Kaminker...). Non-equivariant version of Haagerup's property. All FDC groups have (A).\\
+\item[$\bullet$] \textbf{Property A} $|\Gamma|$ has property (A) iff $C_u^*(\Gamma)$ is nuclear (Ozawa, but Guentner-Kaminker...) iff $\beta \Gamma \rtimes \Gamma$ is amenable. Non-equivariant version of Haagerup's property. All FDC groups have (A).\\
+\item[$\bullet$] \textbf{Coarsely embeddable into Hilbert space} $|\Gamma|$ coarsely embeds iff $\beta \Gamma \rtimes \Gamma$ is a-T-menable.\\
 \end{itemize}
 
 And groupoids:
@@ -203,6 +220,42 @@ And groupoids:
 \item[$\bullet$] action groupoids $X\rtimes \Gamma$, principal bundles groupoids $P\times_G P$, where $P \rightarrow X$ is a $G$-bundle
 \item[$\bullet$] equivalence relation groupoids
 \end{itemize}
+
+\newpage
+
+Stability:
+
+\begin{table}[h]
+\begin{tabular}{c|c|c|c|c|}
+\cline{2-5}
+                                                         & \textbf{Amenablitiy} & \textbf{Haagerup} & \textbf{(T)}            & \textbf{Baum-Connes}  \\ \hline
+\multicolumn{1}{|l|}{\textbf{Product}}                   &            Yes          &                   &                      &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{Subgroups}}                 &            Yes          &                   & No, $\Z < SL(3,\Z)$   &                       \\ 
+\multicolumn{1}{|l|}{}                                   &                         &                   & Finite index yes   &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{Quotients}}                 &            Yes          &                   &         Yes          &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{Extensions}}                &            Yes          &                   &                      &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{Direct limits}}             &            Yes          &                   &                      &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{Free products}}             &No, $\mathbb F_2 = \Z \ast \Z$   &           &                      &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{HNN extensions}}            &                      &                      &                      &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{Free amalgamated products}} &                      &                      &                      &                       \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{c|c|c|c|}
+\cline{2-4}
+                                                         & \textbf{Finite Asymptotic dimension} & \textbf{FDC} & \textbf{(A)}    \\ \hline
+\multicolumn{1}{|l|}{\textbf{Product}}                   &              Yes     &            Yes    &                            \\ \hline
+\multicolumn{1}{|l|}{\textbf{Subgroups}}                 &              Yes     &           Yes     &                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Quotients}}                 &                      &                   &     By amenable subgroups   \\ \hline
+\multicolumn{1}{|l|}{\textbf{Extensions}}                &            Yes       &            Yes    &     Yes                     \\ \hline
+\multicolumn{1}{|l|}{\textbf{Direct limits}}             &                      &                   &     Yes                     \\ \hline
+\multicolumn{1}{|l|}{\textbf{Direct unions}}             & No, $\Z ^{(\infty)}$ &            Yes    &                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Free products}}             &                      &                   &     Yes                     \\ \hline
+\multicolumn{1}{|l|}{\textbf{HNN extensions}}            &          Yes         &             Yes   &                             \\ \hline
+\multicolumn{1}{|l|}{\textbf{Free amalgamated products}} &           Yes        &              Yes  &                             \\ \hline
+\end{tabular}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{$C^*$-algebras}
