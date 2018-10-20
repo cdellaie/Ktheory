@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  18 OCT 2018 18:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  19 OCT 2018 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -932,10 +932,41 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 20.
 \c@conj=\count143
 \c@Res=\count144
 \c@Expl=\count145
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen171
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
-(./main.aux (./Groupoids.aux) (./HarishChandra.aux) (./UCT.aux)
-(./FunkyQuestions.aux) (./zoology.aux) (./RepresentationGroupoid.aux)
-(./Grothendieck.aux) (./controlledKunneth.aux))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.markings.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen172
+\pgfdecoratedremainingdistance=\dimen173
+\pgfdecoratedinputsegmentcompleteddistance=\dimen174
+\pgfdecoratedinputsegmentremainingdistance=\dimen175
+\pgf@decorate@distancetomove=\dimen176
+\pgf@decorate@repeatstate=\count146
+\pgfdecorationsegmentamplitude=\dimen177
+\pgfdecorationsegmentlength=\dimen178
+)
+\tikz@lib@dec@box=\box39
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.markings.code.tex))) (./main.aux (./Groupoids.aux)
+(./HarishChandra.aux) (./UCT.aux) (./FunkyQuestions.aux) (./zoology.aux)
+(./RepresentationGroupoid.aux) (./Grothendieck.aux) (./controlledKunneth.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -963,16 +994,16 @@ Package french.ldf Warning: OT1 encoding should not be used for French.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count146
-\scratchdimen=\dimen171
-\scratchbox=\box39
-\nofMPsegments=\count147
-\nofMParguments=\count148
+\scratchcounter=\count147
+\scratchdimen=\dimen179
+\scratchbox=\box40
+\nofMPsegments=\count148
+\nofMParguments=\count149
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count149
-\MPscratchDim=\dimen172
-\MPnumerator=\count150
-\makeMPintoPDFobject=\count151
+\MPscratchCnt=\count150
+\MPscratchDim=\dimen180
+\MPnumerator=\count151
+\makeMPintoPDFobject=\count152
 \everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -992,7 +1023,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box40
+\AtBeginShipoutBox=\box41
 Package hyperref Info: Link coloring ON on input line 14.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1001,7 +1032,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count152
+\c@section@level=\count153
 )
 LaTeX Info: Redefining \ref on input line 14.
 LaTeX Info: Redefining \pageref on input line 14.
@@ -1282,23 +1313,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--168
  []
 
 [14]
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--189
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
-
+Overfull \hbox (9.75313pt too wide) in paragraph at lines 193--195
+\OT1/cmr/m/n/10 On the other hand, one has a non in-jec-tive mor-phism $\OML/cm
+m/m/it/10 BS[] \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 Aff\OT1/cmr/m/n/10 (\U/msb/m
+/n/10 R\OT1/cmr/m/n/10 ); \OML/cmm/m/it/10 a \OMS/cmsy/m/n/10 7!
  []
 
 
@@ -1306,28 +1339,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--195
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 198--200
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
-
+Overfull \hbox (3.71048pt too wide) in paragraph at lines 207--209
+\OT1/cmr/m/n/10 is in-ver-tible. Same for $\OML/cmm/m/it/10 SL\OT1/cmr/m/n/10 (
+2\OML/cmm/m/it/10 ; \U/msb/m/n/10 Z\OT1/cmr/m/n/10 )$. Ame-nable groups, Coxe-t
+er groups, Groups
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
-
- []
-
-
-Overfull \hbox (20.90567pt too wide) detected at line 206
-\OML/cmm/m/it/10 G \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--209
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
 
  []
 
@@ -1337,56 +1377,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--211
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
 
  []
 
 [16]
-Overfull \hbox (115.18172pt too wide) in paragraph at lines 229--242
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
+
+ []
+
+
+Overfull \hbox (20.90567pt too wide) detected at line 226
+\OML/cmm/m/it/10 G \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
+[17]
+Overfull \hbox (115.18172pt too wide) in paragraph at lines 275--288
 [][] 
  []
 
 
-Overfull \hbox (117.83601pt too wide) in paragraph at lines 245--258
+Overfull \hbox (117.83601pt too wide) in paragraph at lines 291--304
 [][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 261.
+(hyperref)                removing `math shift' on input line 307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 261.
+(hyperref)                removing `superscript' on input line 307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 261.
+(hyperref)                removing `math shift' on input line 307.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
 
-LaTeX Warning: Citation `schochetRosenberg' on page 17 undefined on input line 
-278.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 277--279
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
 
-LaTeX Warning: Citation `Ozawa' on page 17 undefined on input line 279.
+LaTeX Warning: Citation `schochetRosenberg' on page 19 undefined on input line 
+324.
 
 
-Overfull \hbox (27.72696pt too wide) detected at line 280
+Underfull \hbox (badness 10000) in paragraph at lines 323--325
+
+ []
+
+
+LaTeX Warning: Citation `Ozawa' on page 19 undefined on input line 325.
+
+
+Overfull \hbox (27.72696pt too wide) detected at line 326
 \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (^^@) 
 \OMS/cmsy/m/n/10 
  [] \OML/cmm/m/it/10 M[] \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10
@@ -1397,71 +1482,12 @@ Overfull \hbox (27.72696pt too wide) detected at line 280
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--281
-
- []
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--289
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 290--292
-
- []
-
-
-LaTeX Warning: Citation `SkandalisNotion' on page 18 undefined on input line 29
-4.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--305
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--312
-
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 313--315
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 
  []
 
@@ -1471,37 +1497,96 @@ Underfull \hbox (badness 10000) in paragraph at lines 333--335
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--339
+Underfull \hbox (badness 10000) in paragraph at lines 336--338
 
  []
 
-[19]
+
+LaTeX Warning: Citation `SkandalisNotion' on page 19 undefined on input line 34
+0.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 349--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--344
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--348
+Underfull \hbox (badness 10000) in paragraph at lines 356--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
+Underfull \hbox (badness 10000) in paragraph at lines 359--361
 
  []
 
 
-Overfull \hbox (38.78354pt too wide) in paragraph at lines 355--357
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--377
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--394
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
+
+ []
+
+
+Overfull \hbox (38.78354pt too wide) in paragraph at lines 401--403
 \OT1/cmr/m/n/10 is the iden-tity, $\OML/cmm/m/it/10 ^^V[]$ \OT1/cmr/m/n/10 is a
 n iso-mor-phism. If $\OML/cmm/m/it/10 ^^M \OT1/cmr/m/n/10 = 1$, then $\OML/cmm/
 m/it/10 ^^U[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 KK\OT1/cmr/m/n/10 (\OML/cmm/m
@@ -1509,219 +1594,218 @@ m/it/10 ^^U[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 KK\OT1/cmr/m/n/10 (\OML/cmm/m
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--357
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
-
- []
-
-
-Overfull \hbox (0.77615pt too wide) in paragraph at lines 367--368
+Overfull \hbox (0.77615pt too wide) in paragraph at lines 413--414
 \OT1/cmr/m/n/10 there exists a non-degenerate re-pre-sen-ta-tion of the $^^@$-a
 lgebra $(\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 ([]^^@)\OML/cmm/m/it/10 ; \OT1/cm
 r/m/n/10 )$, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--374
-
- []
-
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+Underfull \hbox (badness 10000) in paragraph at lines 418--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--392
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
 
-Overfull \hbox (8.06287pt too wide) in paragraph at lines 403--403
+Underfull \hbox (badness 10000) in paragraph at lines 436--438
+
+ []
+
+
+Overfull \hbox (8.06287pt too wide) in paragraph at lines 449--449
 []\OT1/cmr/bx/n/12 Arnaud Bro-thier : some re-pre-sen-ta-tions of the Thomp-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 405.
+(hyperref)                removing `math shift' on input line 451.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 405.
+(hyperref)                removing `subscript' on input line 451.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 405.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 423--425
-
- []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 455--457
-
- []
+(hyperref)                removing `math shift' on input line 451.
 
 [22]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 475.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 475.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 475.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
+Underfull \hbox (badness 10000) in paragraph at lines 469--471
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 504--506
+Underfull \hbox (badness 10000) in paragraph at lines 501--503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--511
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--517
-
- []
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 521.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--531
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 521.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 521.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 526--527
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 537--539
+Underfull \hbox (badness 10000) in paragraph at lines 550--552
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 558--559
+Underfull \hbox (badness 10000) in paragraph at lines 555--557
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 561--563
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 571--572
+Underfull \hbox (badness 10000) in paragraph at lines 576--577
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 579--581
+Underfull \hbox (badness 10000) in paragraph at lines 583--585
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 597--599
+Underfull \hbox (badness 10000) in paragraph at lines 604--605
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--601
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 621--622
-
- []
-
-
-LaTeX Warning: Citation `HLS' on page 27 undefined on input line 623.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 623--624
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 625--626
+Underfull \hbox (badness 10000) in paragraph at lines 617--618
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 632--634
+Underfull \hbox (badness 10000) in paragraph at lines 625--627
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 635--636
+Underfull \hbox (badness 10000) in paragraph at lines 643--645
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--638
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--640
-
- []
-
-
-LaTeX Warning: Citation `HLS' on page 28 undefined on input line 642.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 648--649
+Underfull \hbox (badness 10000) in paragraph at lines 652--653
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 654--656
+Underfull \hbox (badness 10000) in paragraph at lines 667--668
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 656--657
+LaTeX Warning: Citation `HLS' on page 29 undefined on input line 669.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 659--660
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
 
  []
 
-) [29]
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--680
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 681--682
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 683--684
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 685--686
+
+ []
+
+
+LaTeX Warning: Citation `HLS' on page 29 undefined on input line 688.
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 694--695
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 700--702
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--703
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 705--706
+
+ []
+
+) [30]
 \openout2 = `RepresentationGroupoid.aux'.
 
  (./RepresentationGroupoid.tex
@@ -1784,7 +1868,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-[30
+[31
 
 
 ]
@@ -1832,7 +1916,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
 
-[31]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
@@ -1842,7 +1926,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-) [32]
+) [33]
 \openout2 = `Grothendieck.aux'.
 
  (./Grothendieck.tex
@@ -1855,7 +1939,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-) [33
+) [34
 
 
 ]
@@ -1867,30 +1951,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--2
  []
 
 
-LaTeX Warning: Reference `Corollary:Kunneth' on page 34 undefined on input line
+LaTeX Warning: Reference `Corollary:Kunneth' on page 35 undefined on input line
  4.
 
 
-LaTeX Warning: Citation `DellAieraThesis' on page 34 undefined on input line 4.
+LaTeX Warning: Citation `DellAieraThesis' on page 35 undefined on input line 4.
 
 
 
-LaTeX Warning: Citation `DellAieraThesis' on page 34 undefined on input line 6.
+LaTeX Warning: Citation `DellAieraThesis' on page 35 undefined on input line 6.
 
 
 
-LaTeX Warning: Citation `OY4' on page 34 undefined on input line 15.
+LaTeX Warning: Citation `OY4' on page 35 undefined on input line 15.
 
 
-LaTeX Warning: Citation `DellAieraThesis' on page 34 undefined on input line 15
+LaTeX Warning: Citation `DellAieraThesis' on page 35 undefined on input line 15
 .
 
 
-LaTeX Warning: Citation `DellAieraThesis' on page 34 undefined on input line 15
+LaTeX Warning: Citation `DellAieraThesis' on page 35 undefined on input line 15
 .
 
 
-LaTeX Warning: Citation `dell2017controlled' on page 34 undefined on input line
+LaTeX Warning: Citation `dell2017controlled' on page 35 undefined on input line
  15.
 
 
@@ -1899,17 +1983,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
  []
 
 
-LaTeX Warning: Citation `OY4' on page 34 undefined on input line 17.
+LaTeX Warning: Citation `OY4' on page 35 undefined on input line 17.
 
 
-LaTeX Warning: Citation `OY4' on page 34 undefined on input line 17.
+LaTeX Warning: Citation `OY4' on page 35 undefined on input line 17.
 
 
-LaTeX Warning: Citation `DellAieraThesis' on page 34 undefined on input line 29
+LaTeX Warning: Citation `DellAieraThesis' on page 35 undefined on input line 29
 .
 
 
-LaTeX Warning: Citation `dell2017controlled' on page 34 undefined on input line
+LaTeX Warning: Citation `dell2017controlled' on page 35 undefined on input line
  29.
 
 
@@ -1917,30 +2001,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[34
+[35
 
 
 ]
 
-LaTeX Warning: Citation `OY4' on page 35 undefined on input line 38.
+LaTeX Warning: Citation `OY4' on page 36 undefined on input line 38.
 
 
-LaTeX Warning: Citation `OY4' on page 35 undefined on input line 54.
+LaTeX Warning: Citation `OY4' on page 36 undefined on input line 54.
 
 
-LaTeX Warning: Citation `OY4' on page 35 undefined on input line 54.
+LaTeX Warning: Citation `OY4' on page 36 undefined on input line 54.
 
 
-LaTeX Warning: Citation `DellAieraThesis' on page 35 undefined on input line 54
+LaTeX Warning: Citation `DellAieraThesis' on page 36 undefined on input line 54
 .
 
 
-LaTeX Warning: Citation `dell2017controlled' on page 35 undefined on input line
+LaTeX Warning: Citation `dell2017controlled' on page 36 undefined on input line
  54.
 
-[35]
+[36]
 
-LaTeX Warning: Citation `OY4' on page 36 undefined on input line 65.
+LaTeX Warning: Citation `OY4' on page 37 undefined on input line 65.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 72--74
@@ -1948,7 +2032,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--74
  []
 
 
-LaTeX Warning: Citation `OY4' on page 36 undefined on input line 78.
+LaTeX Warning: Citation `OY4' on page 37 undefined on input line 78.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 82--83
@@ -1956,14 +2040,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
  []
 
 
-LaTeX Warning: Citation `DellAieraThesis' on page 36 undefined on input line 87
+LaTeX Warning: Citation `DellAieraThesis' on page 37 undefined on input line 87
 .
 
 
-LaTeX Warning: Citation `dell2017controlled' on page 36 undefined on input line
+LaTeX Warning: Citation `dell2017controlled' on page 37 undefined on input line
  87.
 
-[36]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
@@ -1989,11 +2073,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--112
  []
 
 
-LaTeX Warning: Citation `GWY' on page 37 undefined on input line 116.
+LaTeX Warning: Citation `GWY' on page 38 undefined on input line 116.
 
-[37]
+[38]
 
-LaTeX Warning: Citation `GuentnerTesseraYu' on page 38 undefined on input line 
+LaTeX Warning: Citation `GuentnerTesseraYu' on page 39 undefined on input line 
 119.
 
 
@@ -2002,7 +2086,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--133
  []
 
 
-LaTeX Warning: Citation `ArzhantsevaTesssera' on page 38 undefined on input lin
+LaTeX Warning: Citation `ArzhantsevaTesssera' on page 39 undefined on input lin
 e 137.
 
 
@@ -2015,13 +2099,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
-[38]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-LaTeX Warning: Citation `GuentnerTesseraYu' on page 39 undefined on input line 
+LaTeX Warning: Citation `GuentnerTesseraYu' on page 40 undefined on input line 
 169.
 
 
@@ -2034,7 +2118,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--179
 
  []
 
-) [39] (./main.bbl) [40
+) [40] (./main.bbl) [41
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
@@ -2053,13 +2137,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 19004 strings out of 492990
- 361684 string characters out of 6132636
- 423708 words of memory out of 5000000
- 22046 multiletter control sequences out of 15000+600000
+ 20112 strings out of 492990
+ 394265 string characters out of 6132636
+ 444533 words of memory out of 5000000
+ 23131 multiletter control sequences out of 15000+600000
  15049 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,18n,84p,1118b,1011s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,18n,84p,1118b,1012s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -2084,10 +2168,10 @@ exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (40 pages, 409104 bytes).
+Output written on main.pdf (41 pages, 414468 bytes).
 PDF statistics:
- 604 PDF objects out of 1000 (max. 8388607)
- 532 compressed objects within 6 object streams
- 131 named destinations out of 1000 (max. 500000)
+ 608 PDF objects out of 1000 (max. 8388607)
+ 535 compressed objects within 6 object streams
+ 132 named destinations out of 1000 (max. 500000)
  397 words of extra memory for PDF output out of 10000 (max. 10000000)
 

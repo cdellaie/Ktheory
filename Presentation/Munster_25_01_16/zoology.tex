@@ -179,19 +179,39 @@ Then: \\
 \item[$\bullet$] Automorphism of a regular tree, the Grigorchuk group,
 \item[$\bullet$] Lamplighter groups $ H^\Gamma\rtimes \Gamma$, usually 
 \[\oplus \Z_2 \rtimes \Z.\]
+\item[$\bullet$] $\begin{pmatrix}1 & 0 \\ 2 & 1\end{pmatrix}$ and $\begin{pmatrix}1 & 2 \\ 0 & 1\end{pmatrix}$ generate a free group of finite index in $SL(2,\Z)$. The corresponding semi-direct product $\Gamma = \Z^2\rtimes \mathbb F_2$ does not have Haagerup's property ( $(\Gamma, \Z^2)$ has relative property (T) ).\\
+
+\item[$\bullet$] Cayley graphs: finite groups, symmetric groups, $\Z^2$, $\mathbb F_2$, $\Z$ with original generating sets. $B(1,2)$. Lamplighter groups: meta-abelian without finite presentation. \\
+
+$SL(2,\Z)$ has presentation 
+\[<x,y \ | \ x^4=1, x^2=y^3> \quad p,q \geq 1,\] 
+and in this presentation, the quotient by $<x^2>$ is isomorphic to \[PSL(2,\Z)\cong \Z_2 \ast \Z_3.\] This gives a way to draw their Cayley graph easily.\\
+
+\item[$\bullet$] Baumslag-Solitar monster
+\[BS_{p,q} = <a,b \ | \ ab^p a^{-1} = b^q>\]
+are nonhopfian when $p$ and $q$ are coprime and at least $2$. $BS_{p,q}$ is the Higman-Neumann-Neumann extension $HNN(\Z,p \Z, \theta)$ where $\theta(p)=q$: 
+\[BS_{p,q} < Aut(T_{p+q}) \quad \text{where } T_{p+q}\text{ homogeneous tree of degree }p+q.\]
+On the other hand, one has a non injective morphism $BS_{p,q}\rightarrow Aff(\R); a \mapsto \frac{qx}{p} ; b\mapsto x+1$. The diagonal morphism $BS_{p,pq} \rightarrow Aut(T_{p+q})\times Aff(\R)$ has discrete image and $BS_{p,q}$ has Haagerup's property (because both $Aut(T_{p+q})$ and $Aff(\R)$ have it.\\
+
+\item[$\bullet$] Infinite torsion questions: subgroups of $GL(n, \Z[\frac{1}{p}])$.\\
 \end{itemize}
 
 Tessera and Arhantseva showed that there exists a group which is a split extension of two groups that are coarsely embeddable into Hilberrt space, and that does not admit such an embedding.\\
 
 \begin{itemize}
 \item[$\bullet$] \textbf{Amenability} Abelian, Compact, extension of such (Elementary amenable), Grigorchuk group: amenable but not elementary amenable (first example of finitely generated group with intermediate growth, i.e. faster than polynomial but subexponential). Every group with subexponential growth (equivalent to virtually nilpotent by Gromov's Polynomial growth theorem). When discrete, $\Gamma$ is amenable iff $C^*_r(\Gamma)$ is nuclear.\\
-In terms of CP functions?\\
 
-\item[$\bullet$] \textbf{Haagerup's property} Introduced by Haagerup on his work on the Free groups. Incidentatly, $\mathbb F_2$ is not amenable but has Haagerup's property. Equivalent to Gromov's a-T-menability and property FH in the locally compact case. Every such group satisfies the Baum-Connes conjecture with coefficients, and is $K$-amenable ($\lambda \in KK(C_{max}(\Gamma), C^*_r(\Gamma))$ is invertible). Same for $SL(2,\Z)$. Amenable groups, Coxeter groups, Groups acting metrically properly on trees or spaces with walls. In terms of CP functions?\\
+In terms of CP functions? $\Gamma$ is amenable iff there exists a net of commpactly supported continuous positive definite functions converging pointwise to $1$.\\
+
+\item[$\bullet$] \textbf{Haagerup's property} Introduced by Haagerup on his work on the Free groups. Incidentatly, $\mathbb F_2$ is not amenable but has Haagerup's property. Stability by closed subgroups so $\mathbb F_ n$ and the free group with countably many generators. Equivalent to Gromov's a-T-menability and property FH in the locally compact case. Every such group satisfies the Baum-Connes conjecture with coefficients, and is $K$-amenable, i.e. 
+\[\lambda \in KK_0(C_{max}(\Gamma), C^*_r(\Gamma))\] 
+is invertible. Same for $SL(2,\Z)$. Amenable groups, Coxeter groups, Groups acting metrically properly on trees or spaces with walls. $SU(n,1)$ and $SO(n,1)$: $g\mapsto d(gx_0,x_0)$ is conditionally negative and definite, where $d$ is the hyperbolic distance and $x_0$ any point in real or complex projective space. Baumslag-Solitar 's groups $BS_{p,q}$.\\
+
+In terms of CP functions? $G$ has Haagerup's property iff there exists a continuous proper conditionally negative definite function $G\rightarrow \R_+$, iff there exists a sequence of continuous normalized positive definite functions converging uniformly on compact subsets of $G$. \\
 
 \item[$\bullet$] \textbf{Property T} Any compact group. $SL(n,\Z)$ for $n\geq 3$. Simple real Lie groups with real rank $\geq 2$ and their lattices: $SL(n,\R)$, $n\geq 3$; $SO(p,q)$, $p>q\geq 2$; $SO(p,p)$, $p\geq 3$. Simple algebraic groups of rank $\geq 2$ over a local field. $Sp(n,1)$, $n\geq 2$ which is a simple real Lie group of real rank $1$, and its lattices, which are dicrete countable hyperbolic groups. $Aut (\mathbb F_5)$. Mapping class groups are supposed to have property (T), but the proof is still not clear and contains gaps. \\ 
 \[\text{Property (T) } + \text{ Haagerup } = \text{ Compact. } \]
-$\Gamma$ has (T) iff every CP function that converges pointwise to $1$ converges uniformly to $1$.\\
+In terms of CP functions? $\Gamma$ has (T) iff every sequence of continuous normalized positive definite functions that converges uniformly on compact subsets to $1$ converges uniformly to $1$. Or iff every continuous conditionally negative definite function on $\Gamma$ is bounded.\\
 
 \item[$\bullet$] \textbf{Asymptotic dimension} $\text{asdim }|\Gamma| = \text{dim}_{nuc}( C_u^*(\Gamma)) $. $\Z^n$ of asymptotic dimension $n$. Asymptotic dimension of a tree is one: $asdim(\mathbb F_n) = 1$. Hyperbolic groups (trees from far away) are of finite asymptotic dimension (which can be arbitrarily large). Finitely generated solvable goups such that the abelian quotients are finitely generated have finite asymptotic dimension. Example of such: the group 
 \[Sol = \Z^2\rtimes_A \Z \quad \text{where}\quad \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix},\]
@@ -211,6 +231,8 @@ with $\left\{\begin{pmatrix} 1  & P(\pi) \\ 0 & 1\end{pmatrix} \right\} \cong \Z
 \item[$\bullet$] \textbf{Coarsely embeddable into Hilbert space} $|\Gamma|$ coarsely embeds iff $\beta \Gamma \rtimes \Gamma$ is a-T-menable.\\
 \end{itemize}
 
+Other properties: hyperbolicity in Gromov's sense, $K$-amenability, polya-$\mathcal P$ (polyabelian = solvable?, polycyclic,..), virtually abelian or nilpotent, Rapid decay property,...\\
+
 And groupoids:
 \begin{itemize}
 \item[$\bullet$] the coarse groupoid $G(X)$: \'etale (even ample) with totally disconnected basis $\beta X$. Dynamical asymptotic dimension of asymptotic dimension of $X$. A-T-menable iff $X$ has property $A$
@@ -223,6 +245,30 @@ And groupoids:
 
 \newpage
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\[\begin{tikzpicture}[node distance=1cm, auto,]
+ %nodes
+\node[punkt] (CEH) {Coarse embedding into Hilbert space};\\
+\node[above=of CEH] (dummy) {};
+\node[punkt, right=of dummy] (aTm) {Haagerup}
+	edge[pil, bend left=45] node[auto] {} (CEH.east);
+\node[punkt,left=of dummy] (A) {Property (A)}
+	edge[pil, bend right=45] node[auto] {} (CEH.west); 
+\node[punkt, above=of A] (FDC) {Finite decomposition complexity};
+\node[punkt, above=of FDC] (asdim) {Finite asymptotic dimension};
+\node[punkt,right=of asdim] (fin) {Finite};
+
+\node[punkt, above=of aTm] (am) {Amenability};
+
+\draw[vecArrow] (asdim) to (FDC);
+\draw[vecArrow] (FDC) to (A);
+\draw[vecArrow] (am) to (aTm);
+\draw[vecArrow] (fin) to (asdim);
+\draw[vecArrow] (fin) to (am);
+
+\end{tikzpicture}\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5in}\\
 Stability:
 
 \begin{table}[h]
@@ -230,8 +276,8 @@ Stability:
 \cline{2-5}
                                                          & \textbf{Amenablitiy} & \textbf{Haagerup} & \textbf{(T)}            & \textbf{Baum-Connes}  \\ \hline
 \multicolumn{1}{|l|}{\textbf{Product}}                   &            Yes          &                   &                      &                       \\ \hline
-\multicolumn{1}{|l|}{\textbf{Subgroups}}                 &            Yes          &                   & No, $\Z < SL(3,\Z)$   &                       \\ 
-\multicolumn{1}{|l|}{}                                   &                         &                   & Finite index yes   &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{Subgroups}}                 &            Yes          &       No          & No, $\Z < SL(3,\Z)$   &                       \\ 
+\multicolumn{1}{|l|}{}                                   &                         &   Closed yes      & Finite index yes   &                       \\ \hline
 \multicolumn{1}{|l|}{\textbf{Quotients}}                 &            Yes          &                   &         Yes          &                       \\ \hline
 \multicolumn{1}{|l|}{\textbf{Extensions}}                &            Yes          &                   &                      &                       \\ \hline
 \multicolumn{1}{|l|}{\textbf{Direct limits}}             &            Yes          &                   &                      &                       \\ \hline
