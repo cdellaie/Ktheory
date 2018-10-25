@@ -29,9 +29,15 @@ Overview and more specialized books:
 \item[$\bullet$] Noether's theorem, Yvette K
 \item[$\bullet$] Nother's wonderful theorem
 \item[$\bullet$] The annus mirabellus of Einstein
-\item[$\bullet$] The Road to Reality, Sir Roger Penrose 
+\item[$\bullet$] The Road to Reality, Sir Roger Penrose \\
 \end{itemize}
 
+Books about Einstein: 
+\begin{itemize}
+\item[$\bullet$] Subtle is the Lord, Abraham Pais \cite{Pais1982}; biography of Einstein by someone who knew him;
+\item[$\bullet$] Einstein's miraculous year: Five papers that changed the face of physics, Penrose \& Einstein \cite{Penrose2005Einstein}; English translations of the five papers Einstein published in 1905 while working at the patent office in Bern.  
+\item[$\bullet$] Quantum: Einstein, Bohr, and the great debate about the nature of reality, Kumar \cite{Kumar}; history of quantum theory from Planck's blackbody radiation to the EPR paradox.
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Seminar}
 
@@ -231,7 +237,7 @@ with $\left\{\begin{pmatrix} 1  & P(\pi) \\ 0 & 1\end{pmatrix} \right\} \cong \Z
 \item[$\bullet$] \textbf{Coarsely embeddable into Hilbert space} $|\Gamma|$ coarsely embeds iff $\beta \Gamma \rtimes \Gamma$ is a-T-menable.\\
 \end{itemize}
 
-Other properties: hyperbolicity in Gromov's sense, $K$-amenability, polya-$\mathcal P$ (polyabelian = solvable?, polycyclic,..), virtually abelian or nilpotent, Rapid decay property,...\\
+Other properties: hyperbolicity in Gromov's sense, $K$-amenability, polya-$\mathcal P$ (polyabelian = solvable?, polycyclic,..), virtually abelian or nilpotent, Rapid decay property,... Exactness: Gromov's monsters are the only groups known not to be exact. $C^*$-simplicity: nonabelian Free groups, \\
 
 And groupoids:
 \begin{itemize}
@@ -303,9 +309,52 @@ Stability:
 \end{tabular}
 \end{table}
 
+\subsection{Quantum groups}
+
+One of the most useful ideas used by quantum groups theorists is to try and adapt concepts from geometric group theory in their setting. We could think of it as a way to algebraize notions like amenability, a-T-menability, etc. In the case of a discrete group $\Gamma$, it is known \cite{GWY} that
+\[asdim(\Gamma) = dim_{nuc} (l^\infty (\Gamma) \rtimes_r \Gamma).\] 
+By analogy, define \[asdim(\hat G) = dim_{nuc} (l^\infty (\hat G) \rtimes_r \hat G)\]
+for a discrete quantum group $(\hat G, \hat \Delta)$. Here
+\[l^\infty(\hat G) = \prod_{x\in Irr(G)} B(H_x)\]
+is naturally a $\hat G$-algebra. (Describe explicitely the action and give the example of $\hat{SU(2)}$.)\\
+
+The natural filtration of any crossed-product of a $\hat G$-algebra by $\hat G$ is given by the \textit{coarse structure} $\mathcal E_G$ of the finite dimensional symmetric representations of the compact dual $G$. This suggests that the \textit{coarse geometry} of the discrete quantum group $\hat G$ is encoded in $\mathcal E_G$. Indeed, the first thing one can do is to define a notion of $S$-separation for $x,y\in Irr(G)$ and $S\subseteq Irr(G)$:
+\[(x,y )\in \Delta_S  \text{ iff } \Delta(p_x) (p_y \otimes p_S)\neq 0.\] 
+
+\begin{itemize}
+\item[$\bullet$] is it true that $asdim(\hat G)=d$ iff for every $R\in \mathcal E_G$, there exists a partition
+\[Irr(G) = U_0 \coprod U_1 \coprod \ ... \ \coprod U_d\]
+such that each $U_i$ is a disjoint union $\coprod_j U_{ij}$ of uniformly bounded subsets $R$-separated:
+\begin{enumerate}
+\item there exists $S\in \mathcal E_G$ such that $(x,y)\in \Delta_S$ for every $x,y \in U_{ij}$,
+\item if $x\in U_{ij}$ and $y\in U_{ik}$, $j\neq k$, then $(x,y)\neq \Delta_R$.\\
+\end{enumerate}
+
+\item[$\bullet$] in the presence of finite asymptotic dimension, do we get a controlled Mayer-Vietoris pair? 
+\[ \prod_{x\in U_i} B(H_x) \rtimes_r \hat G\]
+
+\item[$\bullet$] Define an assembly map for $l^\infty(\hat G)\rtimes_r \hat G$, and try to prove it is an isomorphism with \textit{controlled cutting and pasting} techniques.
+\end{itemize}
+
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{$C^*$-algebras}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+How to construct $C^*$-algebras?\\
+\begin{itemize}
+\item[$\bullet$] Finitely generated/presented $C^*$-algebras? You have to get \textit{bounded relations}. (See Loring's book, \textit{Lifiting solutions to perturbing problems in $C^*$-algebras} \cite{Loring}.) \\
+
+\item[$\bullet$] Basic blocks: commutative $C_0(X)$, finite dimensional or matrix blocks $\oplus M_{d_k}(\C)$, $B(H)$ and its essential ideal $\mathfrak K(H)$, the Calkin quotient $Q(H)$,\\
+
+\item[$\bullet$] Sum and tensor product\textbf{s}.\\ 
+\item[$\bullet$] Convolution algebras.\\
+\item[$\bullet$] Crossed product by an action by automorphisms by a group-like object: groups, groupoids, semi-groups, quantum groups. Stress that it is a kind of semi-direct product in the category of $C^*$-algebras: for instance, $A\rtimes_r \Gamma$ can be defined as a particular completion of the algebraic tensor product
+\[A\otimes_{alg} C^*_r(\Gamma)\]
+where the product is not the usual one, but twisted by the action of $\Gamma$ on $A$, or, it is the same, the coaction of $C^*_r(\Gamma)$ on $A$.\\
+\end{itemize}
+
+Example of $C^*$-algebras:\\
 
 \begin{itemize}
 \item[$\bullet$] CAR algebra $C^*\langle a_i , a_i a_j +a_j a_i = \delta_{ij} \rangle $ or $\bigotimes M_2(\C)$ or 
@@ -631,9 +680,11 @@ Note: the functor $Spec$ gives an antiequivalence of categories between the cate
 A scheme is a locally ringed space locally isomorphic to an affine variety.
 \end{definition}
 
-%%%%%%%%%%%%
-\section{Langlands}
-%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Langlands}   %
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
 
 A modular form of weight $k$ is a section of 
 \[\Lambda^{k+2}T^*M.\]
@@ -705,7 +756,7 @@ The result follows from $f=f\ast \delta = (\sum (-1)^k a_k f^{(k)}) \ast g$. Mic
 Sarah Browne:\\
 
 \begin{itemize}
-\item[$\bullet$] Advice to read a book Nate Brown gave her, \textit{Lifiting solutions to perturbing problems in $C^*$-algebras}by Terry A. Loring (Fields Institute Monographs). In here canbefind te definition o semi projective $C^*$-algebras.
+\item[$\bullet$] Advice to read a book Nate Brown gave her, \textit{Lifting solutions to perturbing problems in $C^*$-algebras}by Terry A. Loring (Fields Institute Monographs). In here canbefind te definition o semi projective $C^*$-algebras.
 \end{itemize}
 
 \section{Mayer-Vietoris}
