@@ -172,7 +172,94 @@ Then: \\
 
 \item[$\bullet$] What about $CP(C(X),B)$? Continuous sections on the continuous field of $C^*$-algebras $\bigoplus_{\omega\in S(B)} B(H_\omega)$.\\
 \end{itemize}
- 
+
+\subsection{Dynamical characterization of $C^*$-simplicity}
+(Facts we are using: \\ 
+$C(\partial_F \Gamma)$ is $\Gamma$-injective, in particular any $\Gamma$-equivariant u.c.p. $C(\partial_f \Gamma)\rightarrow A$ is spit, so is an isometric embedding,\\
+$\partial_F \Gamma$ is totally disconnected, ) \\
+
+The goal of this section is to prove the following theorem.
+
+\begin{thm}
+$\Gamma$ is $C^*$-simple iff the action of $\Gamma$ on $\partial_F \Gamma$ is free.
+\end{thm}
+
+Let's do first the forward direction.\\
+
+Suppose the action is free. First, to show $C^*_r(\Gamma)$ is simple, it is enough to show that any representation 
+\[\pi : C^*_r(\Gamma) \rightarrow B(H) \]
+is injective. \\
+
+By Arveson's extension theorem, $\pi$ extends to a u.c.p. map 
+\[ \phi : C(\partial_F \Gamma)\rtimes_r \Gamma \rightarrow B(H). \]
+Its restriction $\phi_0$ to $C(\partial_F \Gamma)$ is $\Gamma$-equivariant, because $C(\partial_F \Gamma)$ is in the multiplicative domain of $\phi_0$, and thus must be an isometric embedding, by $\Gamma$-injectivity of $C(\partial_F \Gamma)$ (it is split because $\C \subseteq B(H)$). The equivariant u.c.p. map $\phi_0$ is an isomorphism onto its image: extend its inverse form $im \  \phi_0$ to $im \ \phi$ and denote the resulting u.c.p map by $\tau$. \\
+
+Claim: $\Psi = \tau \circ \phi $ is the canonical expectation $E : C(\partial_F \Gamma)\rtimes_r \Gamma \rightarrow C(\partial_F \Gamma)$ which is faithful. This implies $\pi$ is injective.\\
+
+Let's end up with the claim. 
+\begin{itemize}
+\item[$\bullet$] $\Psi_{|C(\partial_F \Gamma)} = id_{C(\partial_F \Gamma)}$. Indeed, $\tau$ is the inverse of $\phi_0 = \phi_{C(\partial_F \Gamma)}$.
+\item[$\bullet$] If $\gamma\neq e_\Gamma$, the action being free, for every $x$ there exists a function $f\in C(\partial_F \Gamma)$ such that 
+\[f(x)\neq 0 \quad \text{and} \quad f(s^{-1}x) =0.\]
+Now $C(\partial_F \Gamma)$ is in the multiplicative domain of $\Psi$, so
+\[ \Psi(\lambda_s) f = \Psi( \lambda_s f) = \Psi( (sf)\lambda_s ) = (sf) \Psi( \lambda_s ) \]
+which evaluated at $x$ gives $\Psi(\lambda_s)(x) = 0$, for all $x$, so $\Psi(\lambda_s)=0$. \\ 
+\end{itemize}
+
+The other direction is more intricated. It consists in two steps:\\
+\begin{enumerate}
+\item if $x\in \partial_F \Gamma$, then the stabilizer $\Gamma_x$ is amenable, which implies that $\lambda_{\Gamma/ \Gamma_x} <  \lambda_{\Gamma}$,\\
+\item if $X$ is a $X$ is a $\Gamma$-boundary, and $\gamma\neq 0$ such that $int(X_s)\neq \emptyset$, then $\lambda_{\Gamma} \nless \lambda_{\Gamma/ \Gamma_x}  $, so that the kernel of $C^*_r(\Gamma)\rightarrow C^*_{\lambda_{\Gamma/ \Gamma_x}}(\Gamma)$ is a non trivial two sided closed ideal.\\
+\end{enumerate}
+This, together with the fact that $\partial_F\Gamma$ is topologically free iff it is free, concludes the proof.\\
+
+First bullet: \\
+
+\begin{itemize}
+\item[$\bullet$] there exists a $\Gamma_x$-equivariant injective $*$-homomorphism
+\[ \rho:  l^\infty (\Gamma_x ) \rightarrow l^\infty (\Gamma)\]
+defined by $\rho(f)(ts_i)= f(t)$ for every $t\in\Gamma_x $, $\{s_i\}_i$ being a system of representatives of the right cosets $\Gamma_x \backslash \Gamma$.\\
+\item[$\bullet$] there exists a $\Gamma_x$-equivariant u.c.p. map \[\psi : l^{\infty } \rightarrow C(\partial_F \Gamma),\] by universal property of $\partial_F \Gamma$, and the fact that the spectrum of $l^\infty(\Gamma)$ is $\beta \Gamma$. (for any compact $\Gamma$-space, there exists a $\Gamma$-map $\partial_F \Gamma \rightarrow P(X)$. take the dual of this map for $X = \beta \Gamma$).\\
+
+\item[$\bullet$] The composition $\phi = ev_x \circ \psi \circ \rho$ defines a $\Gamma_x$-invariant state on $l^\infty(\Gamma_x)$, which concludes the proof.\\
+\end{itemize}
+
+Second bullet:\\
+
+This needs a lemma:
+
+\begin{lem} Let $X$ be a $\Gamma$-boundary.
+For every non empty subset of $X$, every $\varepsilon >0$, there exists a finite subset $F\subset \Gamma \backslash \{e_\Gamma\}$ such that
+\[ \min_{t\in F} \mu(tU^c) <\varepsilon \quad \forall \mu \in P(X).	 \]
+\end{lem}
+
+\begin{proof} 
+Let $x\in U$. By strong proximality, there exists $t_\mu \neq e_\Gamma$ such that
+\[\delta_x(U) - \mu(t_\mu U) = \mu(t_\mu U^c)<\varepsilon,\]
+and by continuity of the action 
+\[V_\mu = \{\nu\in P(X)\ | \ \nu(t_\mu U^c)< \varepsilon \}\]
+is a neighboorhood of $\mu$. By compactness of $P(X)$ in the weak-$*$ topology, we can extract a finite cover such that 
+\[P(X) = \cup_{i=1,m} V_{\mu_i}.\]
+Then $F= \{ t_{\mu_1}, ..., t_{\mu_m}\}$ fills the requirements of the lemma.\\ 
+\end{proof}
+
+Suppose the action is not topologically free and let $s\neq e_\Gamma$ such that the interior $U$ of $X_s$ is not empty. Let $F$ the finite subset given by the lemma for $U$ and $\varepsilon = \frac{1}{3}$. Suppose 
+\[\lambda_{\Gamma} < \lambda_{\Gamma / \Gamma_x}.\]
+We will show this is absurd by looking at the coefficient $c_\gamma=\langle \lambda_\Gamma (\gamma)\delta_e , \delta_e \rangle$, which is $0$ unless $\gamma = e_\Gamma$.\\
+
+On the finite subset $K= \{ tst^{-1} \}_{t\in F}$, approximate $c_\gamma$ up to $\varepsilon$ by a convex combination
+\[ \sum_{j=1,n} \alpha_j \langle \lambda_{\Gamma / \Gamma_x} (\gamma)\xi_j , \xi_j \rangle\] 
+of coefficients of the quasi regular representation.
+Set 
+\[\mu_j = \sum_{y \in \Gamma .x} |\xi_j(y)|^2 \delta_y \in P(X) \quad \text{and} \quad \mu = \sum \alpha_j \mu_j,\]
+where we identify $\Gamma. x $ with $\Gamma / \Gamma_x$. \textbf{A FINIR}\\
+
+\textbf{Questions:}\\
+\begin{itemize}
+\item[$\bullet$] Can we get a more direct proof for the last implication? (without representation theory) \\
+
+\item[$\bullet$] It is not known in general wether the action of $\Gamma$ on $\partial_F \Gamma$ is amenable. If $X$ is a $\Gamma$-space such that one of the stabilizer is not amenble, the action cannot be amenable. Is it true that, if $\Gamma$ is exact, this is the only obstruction for the amenability of the action?
+\end{itemize}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%
 \section{Groups}
