@@ -86,6 +86,7 @@ a unital order isomorphism, i.e. \[\alpha(K_0(A)_+) \subseteq K_0(B)_+ \quad \te
 Then there exists a unital $*$-isomorphism $\phi; A\rightarrow B$ such that $\phi_*=\alpha$.
 \end{thm}
 
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{$C^*$-simplicity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -260,6 +261,83 @@ where we identify $\Gamma. x $ with $\Gamma / \Gamma_x$. \textbf{A FINIR}\\
 
 \item[$\bullet$] It is not known in general wether the action of $\Gamma$ on $\partial_F \Gamma$ is amenable. If $X$ is a $\Gamma$-space such that one of the stabilizer is not amenble, the action cannot be amenable. Is it true that, if $\Gamma$ is exact, this is the only obstruction for the amenability of the action?
 \end{itemize}
+
+\subsection{Another proof}
+
+The last subsection uses representation theory (induction) which makes one wonder if this could be avoided. While the implication 
+\[\partial_F \Gamma \text{ is free } \Rightarrow	 \Gamma \text{ is }C^*\text{-simple}\]
+is still good enough if one wants to stay clear of representation theoretic lingo, the other direction can be proven in another way.\\
+
+This proof is taken from a set of notes that Ozawa wrote after giving lectures for the ``Annual Meeting of Operator Theory and Operator Algebras” at Tokyo university, 24–26 December 2014.\\
+
+For $X$ a compact $\Gamma$-space and $H$ a subgroup of $\Gamma$, we denote by:\\
+
+\begin{itemize}
+\item[$\bullet$] $E_x : C(X)\rtimes_r \Gamma \rightarrow C^*_r(\Gamma)$ the canonical conditional expectation onto $C_r^*(\Gamma)$ given by extending the evaluation at $x$,   \\
+\item[$\bullet$] $E_H : C^*_r(\Gamma) \rightarrow C^*_r(H)$ the canonical conditional expectation given by $E(\lambda_s) = \delta_{s\in H}$,\\
+\item[$\bullet$] $\tau_H$ the canoncical trace $C^*_r(H) \rightarrow \C$.\\
+\end{itemize} 
+
+The first thing one can show is the following.
+
+\begin{prop}
+Let $X$ be a $\Gamma$-boundary, then 
+\[C(X)\rtimes_r \Gamma\]
+is simple.
+\end{prop}
+
+\begin{proof}
+It is enough to show that any quotient map
+\[\pi: C(X)\rtimes_r \Gamma \rightarrow B\]
+is injective. By $C^*$-simplicity, $\pi$ restricts to an isomorphism on $C^*_{r}(\Gamma)$ so that the canoncial trace $\tau$ is well defined on $\pi(C_r^*(\Gamma)$. Seeing $\C$ as the sub-$C^*$-algebra of constant functions in $C(\partial_F \Gamma)$, we can extend $\tau$ to $B$.
+\[\begin{tikzcd}
+C(X)\rtimes_r \Gamma \arrow{r}{\pi}                     &                  B  \arrow[dotted]{rd}{\phi}                 &                                   \\
+C^*_r(\Gamma) \arrow{r}{\cong}\arrow[hookrightarrow]{u} &  \pi(C^*_r(\Gamma)) \arrow{r}{\tau} \arrow[hookrightarrow]{u}& \C \subseteq C(\partial_F \Gamma) \\
+\end{tikzcd}\]
+Now $\phi \circ \pi $ restricts to a $\Gamma$-u.c.p. map $C(X)\rightarrow C(\partial_F \Gamma)$ which can only be the inclusion. This ensures that 
+\[ C(X) \subseteq Dom(\phi \circ \pi). \]
+As $\phi$ extends $\tau$, $\phi \circ \pi$ is the canonical conditional expectation $C(X)\rtimes_r \Gamma \rightarrow C(X)$ which is faithful. In particular, $\pi$ is faithful, and is injective.  
+\end{proof}
+
+Applying this to $X=\partial_F \Gamma$, we get that $C(\partial_F \Gamma)\rtimes_r \Gamma$ is simple. In that case, every stabilizer
+\[\Gamma_x = \{ s\in \Gamma \ | \ sx=x \} \quad \forall x\in \partial_F\Gamma\]
+is amenable. Moreover, the strong stabilizer
+\[\Gamma^0_x = \{ s\in \Gamma \ | \ \exists U\text{ neighborhood of }x \text{ s.t. } s_U=id_U  \} \]
+is a normal subgroup of $\Gamma_x$.(In particular, is is amenable.) In that case, we will apply the following proposition.
+
+\begin{prop}
+Let $X$ be a minimal compact $\Gamma$-space. If 
+\[C(X)\rtimes_r \Gamma\]
+is simple and there exists $x\in X$ such that $\Gamma^0_x$ is amenable, then $X$ is topologically free.
+\end{prop}
+
+\begin{proof}
+By minimality, topological freeness is equivalent to $\Gamma^0_x=1$ for some $x$.\\ 
+
+Indeed, if $\Gamma^0_x = 1$ for some $x$, every non trivial group element cannot fix any neighborhood of $x$ hence for every $s\neq e_\Gamma$, we get a sequence of points that converge to $x$ which are not fixed by $s$. By minimality,
+\[X_s = \{ y \in X \ | \ sy \neq y \}\]
+is a non empty dense open set of $X$ for every $s\neq e_\Gamma$. By Baire category's theorem, 
+\[\cap_{s\in \Gamma\backslash \{e\}} X_s\]
+is dense in $X$ so that $X$ is topologically free.\\
+
+Let us show that $\Gamma^0_x=1$. Define a representation
+\[\rho : C(X)\rtimes_r \Gamma \rightarrow B(l^2(\Gamma / \Gamma^0_x))\]
+by $\rho(f\lambda_s) \delta_{\gamma \Gamma^0_x} = f(s\gamma.x) \delta_{s\gamma \Gamma^0_x}$. It is clearly covariant on the algebraic crossed-product.\\ 
+
+To prove $\rho$ extends to the whole crossed-product, i.e. $\|\rho(a) \| \leq \| a\|_{C(X)\rtimes_r \Gamma}$, it is enough to show that 
+\[\langle \ \rho(a)\delta_{\Gamma_x^0} , \delta_{\Gamma_x^0} \ \rangle \leq \| a\|_{C(X)\rtimes_r \Gamma}\]
+because $\delta_{\Gamma^0_x}$ is cyclic. This follows from the fact that the latter is the composition $\tau \circ E_{\Gamma_x^0} \circ E_x$ of 3 u.c.p maps (so contractive).\\
+ 
+Pick up $x$ such that $\Gamma^0_x$ is amenable and $s\in \Gamma$ arbitrary that fixes some neighborhood of $x$: there exists a neighborhood $U$ of $x$ such that $s_{|U}= id_{U}$. Let $f\in C(X)$ be nonzero and supported in $U$. Let us compute 
+\[\rho(f\lambda_s)\delta_{\gamma\Gamma^0_x}.\]
+\begin{itemize}
+\item[$\bullet$] If $\gamma .x \in U$, then $s\gamma . x = \gamma . x$ and 
+\[\rho(f\lambda_s)\delta_{\gamma\Gamma^0_x} = f(\gamma . x)\delta_{\gamma \Gamma^0_x} = \rho(f)\delta_{\gamma\Gamma^0_x}.\]  
+\item[$\bullet$] If $\gamma .x \notin U$, $f(\gamma . x) = 0 = f( s \gamma . x)$, so that $\rho(f\lambda_s)\delta_{\gamma\Gamma^0_x} =\rho(f)\delta_{\gamma\Gamma^0_x}$.\\
+\end{itemize}
+This shows that $\rho(f (\lambda_s - 1)) = 0$. By injectivity, $\lambda_s = 1$ and $s=e_\Gamma$ hence $\Gamma^0_x=1$ and we are done.
+\end{proof}
+
 \newpage
 %%%%%%%%%%%%%%%%%%%%%
 \section{Groups}
