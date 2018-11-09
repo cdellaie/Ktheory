@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2017)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
-The top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 A level-1 auxiliary file: Groupoids.aux
 A level-1 auxiliary file: HarishChandra.aux
 A level-1 auxiliary file: UCT.aux
@@ -11,18 +9,13 @@ A level-1 auxiliary file: Grothendieck.aux
 A level-1 auxiliary file: controlledKunneth.aux
 The style file: plain.bst
 Database file #1: biblio.bib
-You're missing a field part---line 128 of file biblio.bib
+You're missing a field part---line 138 of file biblio.bib
  :     volume  = 
  :               ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 176 of file biblio.bib
- : 
- : month = "10"
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 186 of file biblio.bib
  : 
- : month = ""
+ : month = "10"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 196 of file biblio.bib
@@ -32,58 +25,26 @@ I was expecting a `,' or a `}'---line 196 of file biblio.bib
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 206 of file biblio.bib
  : 
+ : month = ""
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 216 of file biblio.bib
+ : 
  : month = "Summer"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "MonodSuperrigidity"
+Warning--I didn't find a database entry for "LafforgueHyperbolic"
+Warning--I didn't find a database entry for "NowakOzawa"
+Warning--I didn't find a database entry for "OzawaT"
 Warning--I didn't find a database entry for "GWY"
 Warning--I didn't find a database entry for "schochetRosenberg"
 Warning--I didn't find a database entry for "Ozawa"
 Warning--I didn't find a database entry for "SkandalisNotion"
-Warning--I didn't find a database entry for "HLS"
 Warning--I didn't find a database entry for "DellAieraThesis"
 Warning--I didn't find a database entry for "OY4"
 Warning--I didn't find a database entry for "dell2017controlled"
 Warning--I didn't find a database entry for "GuentnerTesseraYu"
 Warning--empty year in OY2
-You've used 12 entries,
-            2118 wiz_defined-function locations,
-            605 strings with 5972 characters,
-and the built_in function-call counts, 3459 in all, are:
-= -- 352
-> -- 101
-< -- 2
-+ -- 45
-- -- 30
-* -- 218
-:= -- 586
-add.period$ -- 36
-call.type$ -- 12
-change.case$ -- 49
-chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 141
-empty$ -- 300
-format.name$ -- 30
-if$ -- 722
-int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 13
-newline$ -- 63
-num.names$ -- 24
-pop$ -- 41
-preamble$ -- 1
-purify$ -- 38
-quote$ -- 0
-skip$ -- 99
-stack$ -- 0
-substring$ -- 277
-swap$ -- 24
-text.length$ -- 2
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 46
-warning$ -- 1
-while$ -- 37
-width$ -- 14
-write$ -- 130
+Warning--empty journal in Penrose2005Einstein
 (There were 5 error messages)
