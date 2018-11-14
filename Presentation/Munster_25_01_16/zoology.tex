@@ -61,8 +61,170 @@ b & \mapsto &  \\
 \end{array}\right.\] 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Property (T)}
+\subsection{Dynamical Property (T)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The first thing I will try to do is to justify the use of groupoids. My opinion is that these objects are not loved as much as they deserve. People who very much like short and concise definitions enjoy to say that \textit{groupoids are small categories in which all morphisms are invertible.} This is true, but maybe does not shed light on the reasons people look at such objects. \\
+
+Groupoids can be thought as a generalisation of both groups and spaces. In that effect, a groupoid $G$ is made of two parts, in our case, two spaces, the \textit{group-like} part $G$ and the \textit{space-like} part $G^0$. Usually $G$ is called the space of arrows, and $G^0$ the base space, seen as a subset of $G$. Any arrow $g\in G$ has a starting point $x\in G^0$ and an ending point $y\in G^0$. This is encoded by two maps $s,r : G \rightrightarrows G^0$ called source and range. Two arrows can be composed as long as the ending point of the first coincides with the starting point of the second. The points of the base space act as units, and every arrow as an inverse with respect to this partial multiplication.
+
+\[\begin{tikzpicture}
+\draw  (0,1) node {$g$};
+\draw  (0,-1) node {$g^{-1}$};
+\draw [>=stealth, ->, thick] (-1,0.2) to[bend left] (1,0.2);
+\draw [>=stealth, ->,thick] (1,-0.2) to[bend left] (-1,-0.2);
+\draw  (-1,0) node {$\bullet$};
+\draw  (-1.5,0) node {$s(g)$};
+\draw  (1,0) node {$\bullet$};
+\draw  (1.5,0) node {$r(g)$};
+\end{tikzpicture}\]
+
+In our setting, all the spaces will be topological spaces and the maps will be continuous. We will even simplify greatly our life by only looking at second countable, locally compact, étale groupoids with compact base space. From now on, we will only say \textit{étale}, forgetting about all other technical assumptions to gain in clarity.\\ 
+
+Being étale means that the range map $r: G \rightarrow G^0$ is a local homeomorphism, i.e. for every $g\in G$, there exists a neighborhood $U$ of $g$ such that $r_{|U}$ is a homeomorphism. This implies in particular that every fiber $G^x = r^{-1}(x)$ and $G_x = s^{-1}(x)$ are discrete. When the base space $G^0$ has the additional property of being totally disconnected, we will say that $G$ is \textit{ample}. Here is a list of examples of étale groupoids.\\
+
+\begin{itemize}
+\item[$\bullet$] A (nice) compact space $X$ defines a trivial groupoid $G=G^0=X$ and source and target are the identity; in the opposite direction if the base space is a point, the groupoid is a group. One can already see how the notion of groupoid generalises both spaces and groups as promised.  \\
+
+\item[$\bullet$] As an intermediate situation between these two cases, consider a discrete group $\Gamma$ acting by homeomorphisms on a compact space $X$. Define the \textit{action groupoid} as follow. Topologically, it is the space $G= X\times \Gamma \rightrightarrows G^0 = X$. The multiplication encodes the action
+\[\begin{tikzpicture}
+\draw  (0,1) node {$(x,g)$};
+\draw  (0,-1) node {$(g.x,g^{-1})$};
+\draw  (2,1) node {$(g.x,g')$};
+\draw [>=stealth, ->, thick] (-1,0.2) to[bend left] (1,0.2);
+\draw [>=stealth, ->,thick] (1,-0.2) to[bend left] (-1,-0.2);
+\draw [>=stealth, ->, thick] (1,0.2) to[bend left] (3,0.2);
+\draw  (-1,0) node {$\bullet$};
+\draw  (-1.5,0) node {$x$};
+\draw  (1,0) node {$\bullet$};
+\draw  (1.5,0) node {$g.x$};
+\draw  (3,0) node {$\bullet$};
+\draw  (3.5,0) node {$g'g.x$};
+\end{tikzpicture}\]
+and this picture gives every element to reconstruct the groupoid.\\
+
+\item[$\bullet$] If $R\subseteq X\times X $ is an equivalence relation, then $R$ as a canonical structure of groupoid with the base space being the diagonal $R^0 = \{ (x,x) \ | \ x\in X\}$ and the multiplication being the only one possible
+\[(x,y)(y,z) = (x,z).\] 
+
+\item[$\bullet$] More interesting is the \textit{coarse groupoid} $G(X)$ associated to a discrete countable metric space $(X,d)$ with bounded geometry, that is
+\[\sup_{x\in X} |B(x,R)| < \infty \quad \forall R>0.\]
+A nice way of thinking about this condition is to imagine yourself looking at the space with a magnifying glass of prescribed radius, but as great as you wish. Then you should not observe more and more points in your sight as you move around. In other words, the points fitting in the radius of your glass is uniformly bounded.\\
+
+Now consider the $R$-diagonals:
+\[\Delta_R = \{(x,y) \ | \ d(x,y) < \infty\}\subseteq X\times X\]
+and take their closure $\overline{\Delta_R }$ in $\beta (X\times X) $ ($\beta Y$ being the Stone-\v{C}ech compactification of $Y$). The coarse groupoid is defined topologically as 
+\[G(X) = \cup_{R>0} \overline{\Delta_R} \rightrightarrows \beta X ,\]
+and is endowed with the structure of an \textit{ample} groupoid which extend the groupoid $X\times X \rightrightarrows X$ associated with the coarsest equivalence relation on $X$. The topological property of this groupoid encodes the metric or \textit{coarse} property of the space. For instance, $X$ has property A iff $G(X)$ is amenable, $X$ is coarsely embeddable into a Hilbert space iff $G(X)$ has Haagerup's property, etc.\\
+\item[$\bullet$] The last construction is associated to what is often referred as an \textit{approximated group}, which is the data of $\mathcal N = \{ \Gamma , \{N_k\}\}$ where $\Gamma$ is a discrete group, and the $N_k$'s are a tower of finite index normal subgroups with trivial intersection, i.e. 
+\[N_1 \triangleleft N_2 \triangleleft ... \quad \text{s.t. } \cap_k N_k = \{ e_\Gamma\} \text{ and } [\Gamma	: N_k] < \infty.  \]
+Then the $\Gamma_k$'s are finite groups. Set $\Gamma_\infty = \Gamma$ for convenience (which is not usually finite!). For any discrete group $\Lambda$, there exists a left-invariant proper metric, which is unique up to coarse equivalence (take any word metric if the group is finitely generated). Let us denote by $|\Lambda |$ the coarse class thus obtained. Then the first object of interest in that case is the coarse space $X_\mathcal{N}$ defined as the \textit{coarse disjoint union}
+\[X_\mathcal{N} = \coprod_k |\Gamma_k |.\]
+Here the metric is such that $d(| \Gamma_i| , |\Gamma_j| )\rightarrow \infty $ as $i+j$ goes to $\infty$, $i\neq j$.\\
+
+The second interesting object attached to $\mathcal{N}$ is the HLS (after Higson-Lafforgue-Skandalis \cite{HLS}, where it was first defined to build counter-examples to the Baum-Connes conjecture) groupoid. The base space is the Alexandrov compactification  of the integers 
+\[G_\mathcal{N}^0 = \overline{\N},\]
+and $G_\mathcal{N}$ is a bundle of groups with the fiber of $k$ being $\Gamma_k$. The topology is taken to be discrete over the finite base points, and a basis of neighborhood of $(\infty,\gamma)$ is given by 
+\[\mathcal{V}_{\gamma, N} = \{(k, q_k(\gamma)) \ | \ k\geq N \} \quad N\in\N ,\]
+where $q_k : \Gamma \rightarrow \Gamma_k$ is the quotient map.\\
+ \end{itemize}
+
+One of the reasons we use groupoids is that they are convenient to build interesting $C^*$-algebras. To see their relevance, one may start with the question \textit{What are operator algebraists doing?} A possible answer is that part of Noncommutative Geometry and Operator Algebras are devoted to the construction of interesting classes of $C^*$-algebras. For instance, \textit{nuclearity} was naturally introduced after Grothendieck's work, followed by a $C^*$-algebraic formulation. Arises then the question \textit{does there exist nonnuclear $C^*$-algebras?} A now classical result states that, when $\Gamma$ is a discrete group, the reduced $C_r^*(\Gamma)$ is nuclear iff $\Gamma$ is amenable. Calling out a nonamenable group, like any nonabelian free group, produces then a nonnuclear $C^*$-algebra. This game revealed itself to be very fruitful: study a property in some field and try to apply it to $C^*$-algebras to see what exotic being can be built out of it. The most common fields that have natural $C^*$-algbras associated to them are traditionally group theory, coarse geometry and dynamical systems (there are others like foliations etc, but let me just limit myself to these ones). This can be summarized in the following diagram.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\[\begin{tikzpicture}[node distance=1cm, auto,]
+ %nodes
+\node[punkt] (C) {$C^*$-algebras};\\
+\node[punkt, above=of C] (G) {Groupoids};
+\node[above=of G] (dummy) {};
+\node[punkt, right=of dummy] (CG) {Coarse Geometry}
+	edge[pil, bend left=45] node[auto] {$G(X)$} (G.east); 
+\node[punkt, left=of dummy] (TD) {Topological dynamics}
+	edge[pil, bend right=45] node[auto] [below left] {$\Omega\rtimes \Gamma$} (G.west); 
+\node[punkt, above=of dummy] (GT) {Group theory}
+	edge[pil, bend left=45] node[auto] {$Cay(\Gamma,S)$} (CG.north) 
+	edge[pil, bend right=45] node[auto] [above left] {$\Gamma \curvearrowright \Omega$} (TD.north);
+
+\draw[vecArrow] (G) to (C);
+\end{tikzpicture}\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Another interesting strategy is to try and translate a property in one of those upper boxes directly in terms of groupoids. Then the property can either be used to build $C^*$-algebras, either give a new definition in the case of other upper boxes. For instance, that is what we tried to do with Rufus Willett in our work on property T. Property T is originally a group property defined in terms of its unitary representations. In \cite{WillettYu}, Willett and Yu defined a geometric property T for monogenic discrete metric spaces with bounded geometry. Following their work, our first goal was to try and define a property T for (nice enough) topological groupoids so that in the case of groups and coarse groupoids, it reduces to these notions of property T. It gives then a notion of property T for dynamical systems, by considering property T for the action groupoid $X\rtimes \Gamma$. The second part of the work is dedicated to go down the last arrow, that is studying implications of property T for $G$ to its reduced and maximal $C^*$-algebras, and even more general completions of $C_c(G)$.\\
+
+Let us first recall what is property T for discrete groups.\\
+
+If $\pi : \Gamma \rightarrow B(H)$ is a unitary representation of $\Gamma$ on a separable Hilbert space, say that $\pi$ almost has invariant vectors if for every pair $(F,\varepsilon)$ where $F$ is a finite subset of the group and $\varepsilon$ a positive number, there exists a unit vector $\xi\in H$ such that 
+\[ \| s.\xi - \xi \| < \varepsilon\quad \forall s\in F. \]
+\begin{definition}
+A group $\Gamma$ has property T if every representation that almost has invariant vectors admits a nonzero invariant vector.
+\end{definition}
+
+This definition is not the original one. Indeed property T was defined by Kazhdan in order to prove that \textit{some} lattices in \textit{some} Lie groups were finitely generated. It seemed a very specific property and application, but it turned out that property T gave very nice applications. Here are some of the most spectacular the author is aware of.\\
+
+\begin{itemize}
+\item[$\bullet$] Margulis supperrigidity theorem (about this, see Monod's \cite{MonodSuperrigidity} beautiful generalization, which Erik called the most beautiful paper he ever read);\\
+\item[$\bullet$] existence of expander: for any infinite approximated group (in the sense of the examples above) $\Gamma$, the space $X_\mathcal{N}$ is an expander;\\
+\item[$\bullet$] existence of Kazdhan projections which are very wild objects one should only approach with care; \\
+\item[$\bullet$] more generally, property T was for a long time an obstruction to the Baum-Connes conjecture, up until the work of Lafforgue (\cite{LafforgueHyperbolic}, \cite{Lafforgue}). It still gives interesting properties for diverse crossed-product constructions as we will see.\\ 
+\end{itemize}
+
+One can prove easily that finite groups have T. Indeed, in that case, take the finite subset to be the whole group and look intensely at the identity
+\[ \| s.\xi - \xi \|^2 = 2 ( 1 - Re \langle s.\xi ,\xi \rangle ).  \]
+If $\xi$ is $(\Gamma,\varepsilon)$-invariant for $\varepsilon$ sufficiently small, then the above identity implies that $\frac{1}{|\Gamma |} \sum_{s\in \Gamma} s.\xi $ is nonzero because its inner-product with $\xi$ will have real part close to $1$. But $\xi$ is invariant.\\
+
+Now take $\Gamma = \Z$ and look at the left-regular representation, i.e. $H = l^2\Gamma$ and 
+\[(s.\xi)(x) = \xi(s^{-1}x).\]
+Then if $\xi_n = \frac{1}{|F_n|} \chi_{F_n}\in H$ is the characteristic function of $F_n$ normalized to be a unit vector, one can check that 
+\[ \sup_{s\in F}\| s.\xi_n - \xi  \| \rightarrow 0 \text{ as }n\rightarrow \infty \]
+so that the regular representation always almost has invariant vectors. But it never has nonzero invariant ones, so that $\Z$ does not have T. This proof actually works for every infinite amenable group. \\
+
+The moral of this story is that if one wants to find infinite groups with property T, one has to look at nonamenable groups. Maybe $\mathbb F_2$ or $SL(2,\Z)$? Actually not: they both surject to $\Z$ which does not have T, and this is an obstruction to having T as is obvious from the definition.\\
+
+Finding infinite groups with property T is actually a hard problem. Here are some examples, without any proofs since these would go out of scope for these notes.\\
+\begin{itemize}
+\item[$\bullet$] $SL(n,\R)$ and $SL(n,\Z)$ if $n\geq 3$;\\
+\item[$\bullet$] $Sp(n,1)$ and its lattices, which gives examples of infinite hyperbolic (in the sense of Gromov) groups having property T;\\
+\item[$\bullet$] $Aut(\mathbb{F}_5)$ and $Out(\mathbb{F}_5)$ by a recent result of Nowak and Ozawa \cite{NowakOzawa}. Their proof is interesting in that they use numerical computations to reach their result using a previous result of Ozawa \cite{OzawaT};\\
+\item[$\bullet$] $SO(p,q)$ with $p> q \geq 2$ and $SO(p,p)$ with $p \geq 3$. More generally, any real Lie group with real rank at least two, and all their lattices. Also, any simple algebraic group over a local field of rank at least two have T.\\ 
+\end{itemize} 
+
+To define property T for groupoids, we need to choose what kind of representations we are looking at, and to decide what are the invariant vectors.\\
+
+A representation will be a $*$-homomorphism $\pi : C_c(G)\rightarrow B(H)$. A vector $\xi\in H $ is called invariant if \[f.\xi = \Psi(f).\xi \quad \forall f\in C_c(G).\]
+The subspace of invariant vectors is denoted by $H^\pi$ and its orthogonal complement, the space of coinvariants, is denoted by $H_\pi$.\\
+
+Here $Psi$... Groups\\
+
+Let $\mathcal{F}$ be a family of representations.
+\begin{definition}
+$G$ has property T if there exists a pair $(K,\varepsilon)$ where $K\subseteq G$ is compact and $\varepsilon>0$ such that, for every $\pi \in \mathcal{F}$, there exists $f\in C_K(G)$ such that $\| f\|_I \leq 1$ and 
+\[\|f .\xi - \Psi (f).\xi \| < \varepsilon \| \xi\| \quad \forall \xi \in H_\pi. \]
+\end{definition}
+ 
+The first thing we did was to study what were the relationships between groupoid property T and other property T.\\
+
+\begin{itemize}
+\item[$\bullet$] if $G=\Gamma$ is a discrete group, $\Gamma$ has property T iff $G$ has property T (in the groupoid sense);\\
+\item[$\bullet$] if $X$ is a coarsely geodesic metric space, then $X$ has geometric property T iff $G(X)$ has property T;\\
+\item[$\bullet$] in the case of a topological action, $X\rtimes \Gamma$ has property T iff $\Gamma$ has T w.r.t. the family $\mathcal{F}_X$ of representations $\pi : \C[\Gamma]\rightarrow B(H) $ s.t. there exists a representation $\rho: C(X) \rightarrow B(H)$ such that $(\rho, \pi) $ is covariant. This hypothesis simplifies in the case where there exists a invariant ergodic probability measure on $X$; in that case property T for $X\rtimes \Gamma$ and for $\Gamma$ are equivalent;\\
+\item[$\bullet$] in the case of an approximated group $\Gamma$, then $G_\mathcal{N}$ has property T iff $\Gamma$ has T. This may sound disappointing, but if one refines the result, one gets the nice following property: $\Gamma$ has property $\tau$ w.r.t. $\mathcal{N}$ iff $G_\mathcal{N}$ has T w.r.t. the family of representations that extend to the reduced $C^*$-algebra of $G$.\\
+\end{itemize} 
+
+The last part of the work is devoted to the existence of Kazdhan projections. Recall, if $\mathcal{F}
+$ is a family of representations, $C^*_\mathcal{F}(G)$ is the $C^*$-algebra obtained as the completion of $C_c(G)$ w.r.t. the norm
+\[\| a \|_\mathcal{F} = \sup_{\pi \in \mathcal{F}} \{ \| \pi(a) \|\}. \]
+A Kazdhan projection $p\in C^*_\mathcal{F}(G)$ is a projection such that its image in any of the representations in $\mathcal{F}$ is the orthogonal projection on the invariant vectors.\\
+
+\begin{thm}
+Let $G$ be compactly generated. Then if $G$ has property T w.r.t. $\mathcal{F}$, there exists a Kazdhan projection $p\in C^*_\mathcal{F}(G)$. 
+\end{thm}
+
+This gives an obstruction to inner-exactness. Denote by $F$ the closed $G$-invariant subset 
+\[\{x\in G^0 \ | \ G^x \text{ is infinite }\}\]
+and $U$ its complement.\\
+
+\begin{thm}
+Let $G$ be compactly generated and with property T. If one can find a sequence of points $(x_i)_i\subset U$ such that, for every compact subset $K \subset G$, $K$ only intersects a finite number of orbits $G.x_i = r(s^{-1}(x_i))$, then $G$ is not inner-exact. In fact it is not $K$-inner-exact. in particular, at least one of the groupoids $G$, $G_{|U}$ or $G_{|U}$ does not satisfy the Baum-Connes conjecture.
+\end{thm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Classification and the UCT}
