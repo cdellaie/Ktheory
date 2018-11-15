@@ -646,6 +646,8 @@ for a discrete quantum group $(\hat G, \hat \Delta)$. Here
 \[l^\infty(\hat G) = \prod_{x\in Irr(G)} B(H_x)\]
 is naturally a $\hat G$-algebra. (Describe explicitely the action and give the example of $\hat{SU(2)}$.)\\
 
+Remark post-discussion with Mehrdad: In general, $l^\infty (\hat G) \rtimes_r \hat G$ is not exact so its nuclear dimension is not finite. Such a definition is thus hopeless.\\
+
 The natural filtration of any crossed-product of a $\hat G$-algebra by $\hat G$ is given by the \textit{coarse structure} $\mathcal E_G$ of the finite dimensional symmetric representations of the compact dual $G$. This suggests that the \textit{coarse geometry} of the discrete quantum group $\hat G$ is encoded in $\mathcal E_G$. Indeed, the first thing one can do is to define a notion of $S$-separation for $x,y\in Irr(G)$ and $S\subseteq Irr(G)$:
 \[(x,y )\in \Delta_S  \text{ iff } \Delta(p_x) (p_y \otimes p_S)\neq 0.\] 
 
@@ -665,6 +667,7 @@ such that each $U_i$ is a disjoint union $\coprod_j U_{ij}$ of uniformly bounded
 \end{itemize}
 
 \newpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{$C^*$-algebras}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -695,12 +698,39 @@ a           & \mapsto     & \begin{pmatrix} a & 0 \\ 0 & a\end{pmatrix}\end{arra
 Class of $C^*$-algebras.\\
 
 \begin{itemize}
-\item[$\bullet$] The bootstrap class $\mathcal B$ \\
+
+\item[$\bullet$] Nuclear $C^*$-algebras. Finite dimensional, commutative, AF-algebras are nuclear. $C_r^*(\Gamma)$ is nuclear iff $\Gamma$ is amenable (true for a discrete group, and more generally an \'etale groupoid). $C^*_u (X)$ is nuclear iff $X$ has Yu's property $A$. So $C_r^*(\mathbb F_2)$ is not nuclear but $l^\infty (\mathbb F_2) \rtimes_r \mathbb F_2$ is, giving an instance where nuclarity fails to pass to subalgebras.\\
+
+\item[$\bullet$] The bootstrap class $\mathcal B$. If $\Gamma$ has Haagerup's property, then $C^*_r(\Gamma)$ is Bootstrap. It is a specialization of a famous result of Tu (\cite{TuThese}, lemma 10.6) that if $G$ is a-T-menable, there exists a $G$-proper $C^*$-algebra $A$, $KK^G$-equivalent to $\C$, such that $A\rtimes_r G$ is Bootstrap. \\
+
 \item[$\bullet$] The class $\mathcal N$ of $C^*$-algebras $A$ such that the map 
 \[\alpha_{A,B}: K_*(A)\otimes K_*(B) \rightarrow K_*(A \otimes B)\]
 is an isomorphism for every $C^*$-algebra $B$ such that $K_*(B)$ is a free abelian group. In \cite{schochetRosenberg}, it is shown that $\mathcal N$ contains all of the bootstrap class.\\
-\item[$\bullet$] Non exact $C^*$-algebra: to my knowledge only one example is known: the reduced $C^*$-algebra $C_r^*(\Gamma) $ of a finitely generated group whose Cayley graph contains expander. Using Ozawa's result \cite{Ozawa}, one can construct finite dimensional $C^*$-algebras $M_{X_n}$ such that 
+
+\item[$\bullet$] Exact $C^*$-algebras. We say that $\Gamma$ is exact if $C_r^*(\Gamma)$ is exact. It is shown by Ozawa (completing work of Guentner and Kaminker \cite{GuentnerKaminkerExactness}) in \cite{OzawaExact} that $\Gamma$ is exact iff $\beta \Gamma \rtimes \Gamma$ is amenable iff $C^*_u(|\Gamma|)$ is nuclear.\\
+
+\item[$\bullet$] Non exact $C^*$-algebras: \\
+
+\begin{itemize}
+\item[$\bullet$] For any integer sequence $k_n$ which tends to $\infty$ as $n$ goes to $\infty$, 
+\[ \prod_{n\geq 0} M_{k_n} \]
+is not exact. As a result, for any discrete quantum group $\hat G$ which is truely noncommutative, $l^\infty(\hat G)$ is not exact. So is any of its crossed-product, so that the naive definition of the uniform-Roe algebra 
+\[l^\infty (\hat G) \rtimes_r \hat G\] 
+is not exact, hence not nuclear.\\
+
+\item[$\bullet$] The reduced $C^*$-algebra $C_r^*(\Gamma) $ of a finitely generated group whose Cayley graph contains expander. Using Ozawa's result \cite{OzawaExpander}, one can construct finite dimensional $C^*$-algebras $M_{X_n}$ such that 
 \[ 0 \rightarrow C_r^*(\Gamma) \otimes \bigoplus M_{X_n} \rightarrow C_r^*(\Gamma) \otimes \prod M_{X_n} \rightarrow C_r^*(\Gamma) \otimes \left(\prod M_{X_n} /  \bigoplus M_{X_n} \right) \rightarrow 0\] is not exact in the middle.\\ The problem of the existence of such a group is an interesting question, which was stated by Gromov and proved rigorously by several people in the wake of this.\\	
+\item[$\bullet$] If $\Gamma$ is a discrete group with Kirchberg's approximation property, then $\Gamma$ is amenable is equivalent to the maximal $C^*$-algebra $C^*(\Gamma)$ is exact (\cite{BrownOzawa}, prop 3.7.11). \\
+
+Any residually finite group satisfies Kirchberg's approximation property, hence \textit{any nonamenable residually finite group has a non-exact maximal $C^*$-algebra.} For instance, $C^*(\mathbb F_n)$ and $C^*(SL(n,\Z))$, $n\geq 2$, are not-exact, for the reason that
+\[\begin{tikzcd}0 \arrow{r} & J \otimes_{min} C^*(\Gamma) \arrow{r} & C^*(\Gamma) \otimes_{min} C^*(\Gamma)  \arrow{r} & C^*_r(\Gamma)\otimes_{min} C^*(\Gamma)  \arrow{r} & 0 \end{tikzcd}\]
+is not exact, where $J = \text{ ker } C^*(\Gamma) \rightarrow  C_r^*(\Gamma)  $.\\
+
+ Recall that $\Gamma$ has Kirchberg's approximation property if 
+\[\lambda \times \rho : C^*(\Gamma) \otimes_{alg} C^*(\Gamma) \rightarrow B(l^2 \Gamma) \]
+is min-continuous, i.e. extends to $C^*(\Gamma) \otimes_{min} C^*(\Gamma)$.\\
+\end{itemize}
+
 \end{itemize}
 
 One can define analog of approximation properties in the setting of $K$-theory. \\
@@ -785,6 +815,10 @@ Do you know a group satisfying Baum-Connes but which doesn't have a $\gamma$-ele
 
 \textbf{Answer:} Any non compact group having property T cannot have $\gamma=1$, because the class of the Kazhdan projection is not zero in $K_0(C_{max}^*(\Gamma))$ but is in $K_0(C_{r}^*(\Gamma))$. For any infinite hyperbolic group $\Gamma$ having T, its reduced $C^*$-algebra $C^*_r(\Gamma)$ is not K-nuclear (\cite{skandalis1988notion}), so any lattice in $Sp(n,1)$ works out. For instance: $Sp_{n,1}(\Z)$.\\
 
+Do you know when $\Gamma$ is amenable is equivalent to its maximal $C^*$-algebra being exact? When does $C_r^*(\Gamma)$ is exact implies $C^*(Gamma)$ is exact.\\
+
+\textbf{Answer:} When $\Gamma$ has Kirchberg's approximation property, i.e. $\lambda \otimes \rho$ extends to $C^*(\Gamma)\otimes_{min} C^*(\Gamma)$, then $\Gamma$ is amenable iff $C^*(\Gamma)$ is exact.\\
+ 
 \item[$\bullet$] Direct splitting method (Nishikawa 2018 \cite{nishikawa2018direct}):\\
 
 \begin{definition} A Kasparov cycle $(H,T)\in E^\Gamma(\C,\C)$ has property $(\gamma)$ if there exists a non-degenerate representation of the $\Gamma$-algebra $(C_0(\underline E \Gamma),\alpha)$,
