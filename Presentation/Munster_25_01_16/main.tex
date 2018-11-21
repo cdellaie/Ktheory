@@ -1,36 +1,37 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper,12pt]{book}
 
 \input{macro}
 
 
-\title{Questions from Münster}
-
+\title{\textbf{Questions from Münster}}
 \date{}
 \author{ Clément Dell'Aiera}
-
-
 %\usepackage{fullpage}
 
 \begin{document}
 \maketitle
 
-\newpage
+\pagestyle{plain}
 \tableofcontents
 
-\newpage
-\newpage
-\include{Groupoids}
-\include{HarishChandra}
-\include{UCT}
-\include{FunkyQuestions}
+\pagestyle{fancy}
+\chapter{Seminar}
+\input{Seminar}
 
-\newpage
+\chapter{Zoology of groups and $C^*$-algebras, and other wild creatures}
 \include{zoology}
 \include{RepresentationGroupoid}
 \include{Grothendieck}
 
 \newpage
-\include{controlledKunneth}
+\chapter{Old notes}
+\include{Groupoids}
+\include{HarishChandra}
+\include{UCT}
+\include{FunkyQuestions}
+
+%\newpage
+%\include{controlledKunneth}
 
 \bibliographystyle{plain}
 \bibliography{biblio} 
