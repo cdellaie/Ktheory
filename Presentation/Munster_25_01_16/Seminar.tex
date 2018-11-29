@@ -4,6 +4,50 @@ These are the notes I took co-corganizing with Erik Guentner and Rufus Willett t
 \section{Cartan subalgebras}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+The goal of this section is... Historical remarks: aVN and Feldman-Moore,...\\
+
+The first part will detail J. Renault's work \cite{RenaultCartan} on Cartan pairs.\\
+
+Recall that an element $x\in A$ normalizes a self-adjoint subspace $B$ of $A$ if 
+\[xBx^* \cup x^* B x \subset B.\] 
+The normalizer $N_A(B)$ is the set of all the elements of $A$ that normalize $B$.\\ 
+
+\begin{definition}
+Let $A$ be a $C^*$-algebra. A sub-$C^*$-algebra $B\subseteq A$ is called a Cartan subalgebra of $A$ if:
+\begin{itemize}
+\item[$\bullet$] $B$ is a maximal abelian self-adjoint subalgebra (MASA) of $A$;
+\item[$\bullet$] $B$ contains an approximate unit for $A$;
+\item[$\bullet$] the normaliser of $B$ in $A$ generates A as a $C^*$-algebra;
+\item[$\bullet$] there is a faithful conditional expectation $E : A \rightarrow B$.
+\end{itemize}
+The pair $(A,B)$ is referred to as a \textit{Cartan pair}.
+\end{definition}
+
+Examples: 
+\begin{itemize}
+\item[$\bullet$] $D_n \subset M_n(\C)$,
+\item[$\bullet$] $C(X) \subset C(X)\rtimes \Gamma$,
+\item[$\bullet$] $l^\infty(X) \subset C_u^*(X)$,
+\item[$\bullet$] $C_0(G^0)\subset C^*_r(G,\Sigma)$.
+\end{itemize}
+
+Renault obtained the following result in \cite{RenaultCartan}.
+
+\begin{thm}
+Any Cartan pair $(A,B)$ is isomorphic to the Cartan pair 
+\[(C^*_r(G,\Sigma), C_0(G^0)),\] 
+where $G$ is an \'etale topologically prinicipal groupoid with base space $G^0$ and $\Sigma$ is a twist over $G$.
+\end{thm}
+
+This theorem is very uselful. For instance, it implies that a nuclear $C^*$-algebra with a Cartan subalgebra satisfies the universal coefficient theorem of Rosenberg and Schochet \cite{RosenbergUCT}. Indeed, the reduced $C^*$-algebra of an \'etale groupoid is nuclear iff it is amenable, in which case it belongs to the bootstrap class \cite{TuThese}.\\ 
+
+The first step in the proof of the theorem is to build, for any inclusion of $C^*$-algebras $A\subseteq B$ with $B$ unital commutative, an action of $N_{A}(B)$ by partial homeomorphisms on the spectrum of $B$. A standard construction then give rise to an \'etale groupoid $\mathcal G_B$ (the groupoid of germs of a \textit{pseudogroup}) of this action. The twist is given by the same kind of construction.\\
+
+For the second step, one defines a generalized Gelfand transform 
+\[ \left\{ \right.\]
+
+\subsection{Groupoids of germs}
+
 Out of any inclusion of $C^*$-algebras $A\subseteq B$ with $A$ unital commutative, we construct an action of the normalizer of $A$ in $B$ by partial homeomorphism on $X$ the spectrum of $A$, i.e. a homomorphism of semigroup  
 \[\alpha: N_B(A) \rightarrow SHomeo(X).\] 
 
@@ -11,14 +55,53 @@ If $n\in N_B(A)$ and $x\in Spec(A)$, set
 \[\langle \alpha_n(x) , a\rangle =\langle x , n^*a n\rangle .\]
 This defines a homeomorphism 
 \[\alpha_n : U_n \rightarrow U_{n^*},\]
-where $U_n = \{x\in Spec(A), n^*n(x) >0\}$ such that $\alpha_{nm} =\alpha_{n} \circ \alpha_{m}$.\\
- 
-If $A$ is maximal abelian in $B$, and other conditions, then $B$ is shown to be isomorphic to the twisted reduced $C^*$-algebra of the groupoid of stalks of $N_B(A)$. This can be seen  as an extension of the Gelfand transform
-\[\left\{\begin{array}{rcl}
-B & \rightarrow & C^*_r(G) \\
-b & \mapsto &  \\
-\end{array}\right.\] 
+where $U_n = \{x\in Spec(A), n^*n(x) >0\}$ such that $\alpha_{nm} =\alpha_{n} \circ \alpha_{m}$.
 
+\begin{lem} If $B$ is abelian and contains an approximate unit, $\alpha: N_A(B) \rightarrow PHomeo(X) $ is a homorphism of inverse-semigroups.
+\end{lem}
+
+In our case, given a Cartan pair $(A,B)$, and $X = Spec(B)$, one defines:
+\begin{itemize} 
+\item[$\bullet$] $\Sigma_{B}$ as the quotient of 
+\[ \{(x, n)\in X\times N_A(B) \text{ s.t. } n^*n(x)>0 \}  \]
+by the equivalence relation $(x,n) \sim (x,n')$ when there exist $b,b'\in B$ such that $nb = n'b'$;  
+\item[$\bullet$] $\mathcal G_B$ as the groupoid of germs of the pseudogroup $\alpha(N_A(B))$;
+\end{itemize}
+
+\subsection{Generalized Gelfand transform}
+
+If $(x,n)\in X \times N_A(B)$ such that $n^*n(x)>0$, and $a\in A$ then
+\[\frac{E(n^*a)(x)}{\sqrt{ n^*n(x)} } \]
+only depends on the class of $(x,n)$ in $\Sigma_B$, hence defines a continuous section $\hat a$ of the twist $\Sigma_B$. The map extends to a $*$-homomorphism
+\[\Psi: A \rightarrow C^*_r(G_B, \Sigma_B)\]
+which is always linear injective and respects the Cartan algebras. Moreover, restricted to $B$, $\Psi$ coincides with the Gelfand transform $B \rightarrow C_0(X)$.\\ 
+
+When $(A,B)$ is a Cartan pair, $\Psi$ is an $*$-isomorphism.
+
+%If $A$ is maximal abelian in $B$, and other conditions, then $B$ is shown to be isomorphic to the twisted reduced $C^*$-algebra of the groupoid of stalks of $N_B(A)$. This can be seen  as an extension of the Gelfand transform
+
+\subsection{Roe algebras}
+
+In the case of uniform Roe algebras, White and Willett have obtained in \cite{WhiteCartan} rigidity results. The questions are:
+\begin{itemize} 
+\item[$\bullet$] What form can a Cartan subalgebra of $C^*_u(X)$ take?
+\item[$\bullet$] Can we describe when it is unique up to unitary equivalence?
+\end{itemize}
+
+The answers they have are the following. If $X$ is an infinite countable metric space with bounded geometry, any Cartan subalgebra of $C^*_u (X)$ is non separable and contains a complete family of orthogonal projections. Interesting examples show that Cartan subalgebras of uniform Roe algebras need not be isomorphic to $l^\infty$. Let us recall:
+\begin{definition} A sub-$C^*$-algebra $B$ of $A$ is a Roe Cartan pair
+if:
+\begin{itemize}
+\item[$\bullet$] $A$ is unital;
+\item[$\bullet$] $A$ contains the $C^*$-algebra of compact operators on a separable infinite dimensional Hilbert space as an essential ideal;
+\item[$\bullet$] B is a co-separable Cartan subalgebra of A abstractly isomorphic to $l^\infty (\N)$. (co-separable means that there is a countable subset of $A$ which generates $A$ together with $B$)
+\end{itemize}
+\end{definition}
+ 
+\begin{thm}
+Let $(A,B)$ a Roe Cartan pair. Then there exists a metric space with bounded geometry $X$ such that for any irreducible faithful representation of $A$ on a Hilbert space $H$, there exists a unitary $u : l^2(X) \rightarrow H$ that conjugates $A$ with $C^*_u(X)$, and $B$ with $l^\infty(X)$. \\
+Moreover, if $A= C^*_u(Y)$ for some bounded geometry metric spaxce $Y$ with property $A$, then $X$ and $Y$ are coarsely isomorphic.
+\end{thm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dynamical Property (T)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%

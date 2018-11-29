@@ -1,14 +1,13 @@
 This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
+A level-1 auxiliary file: zoology.aux
+A level-1 auxiliary file: RepresentationGroupoid.aux
+A level-1 auxiliary file: Grothendieck.aux
 A level-1 auxiliary file: Groupoids.aux
 A level-1 auxiliary file: HarishChandra.aux
 A level-1 auxiliary file: UCT.aux
 A level-1 auxiliary file: FunkyQuestions.aux
-A level-1 auxiliary file: zoology.aux
-A level-1 auxiliary file: RepresentationGroupoid.aux
-A level-1 auxiliary file: Grothendieck.aux
-A level-1 auxiliary file: controlledKunneth.aux
 The style file: plain.bst
 Database file #1: biblio.bib
 You're missing a field part---line 166 of file biblio.bib
@@ -40,51 +39,46 @@ Warning--I didn't find a database entry for "OzawaT"
 Warning--I didn't find a database entry for "GWY"
 Warning--I didn't find a database entry for "schochetRosenberg"
 Warning--I didn't find a database entry for "SkandalisNotion"
-Warning--I didn't find a database entry for "DellAieraThesis"
-Warning--I didn't find a database entry for "OY4"
-Warning--I didn't find a database entry for "dell2017controlled"
-Warning--I didn't find a database entry for "GuentnerTesseraYu"
-Warning--empty year in OY2
 Warning--empty journal in Penrose2005Einstein
-You've used 25 entries,
+You've used 24 entries,
             2118 wiz_defined-function locations,
-            691 strings with 7912 characters,
-and the built_in function-call counts, 6993 in all, are:
-= -- 704
-> -- 227
+            679 strings with 7716 characters,
+and the built_in function-call counts, 6831 in all, are:
+= -- 690
+> -- 225
 < -- 3
-+ -- 97
++ -- 96
 - -- 68
-* -- 443
-:= -- 1194
-add.period$ -- 75
-call.type$ -- 25
-change.case$ -- 104
+* -- 441
+:= -- 1163
+add.period$ -- 72
+call.type$ -- 24
+change.case$ -- 100
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 284
-empty$ -- 605
+cite$ -- 25
+duplicate$ -- 274
+empty$ -- 589
 format.name$ -- 68
-if$ -- 1450
+if$ -- 1416
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 29
-newline$ -- 128
-num.names$ -- 50
-pop$ -- 98
+int.to.str$ -- 24
+missing$ -- 28
+newline$ -- 123
+num.names$ -- 48
+pop$ -- 92
 preamble$ -- 1
-purify$ -- 83
+purify$ -- 80
 quote$ -- 0
-skip$ -- 192
+skip$ -- 186
 stack$ -- 0
-substring$ -- 510
-swap$ -- 37
+substring$ -- 509
+swap$ -- 36
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 92
-warning$ -- 2
-while$ -- 75
-width$ -- 27
-write$ -- 267
+type$ -- 88
+warning$ -- 1
+while$ -- 74
+width$ -- 26
+write$ -- 258
 (There were 5 error messages)
