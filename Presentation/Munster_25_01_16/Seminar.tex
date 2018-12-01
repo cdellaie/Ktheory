@@ -268,6 +268,51 @@ and $U$ its complement.\\
 Let $G$ be compactly generated and with property T. If one can find a sequence of points $(x_i)_i\subset U$ such that, for every compact subset $K \subset G$, $K$ only intersects a finite number of orbits $G.x_i = r(s^{-1}(x_i))$, then $G$ is not inner-exact. In fact it is not $K$-inner-exact. in particular, at least one of the groupoids $G$, $G_{|U}$ or $G_{|U}$ does not satisfy the Baum-Connes conjecture.
 \end{thm}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Kazdhan projections and failure of $K$-exactness}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+For $K\subset G$, $C_K(G)$ denotes the continuous functions supported in $K$. 
+
+\begin{thm}
+Let $G$ be an \'etale groupoid whose reduced $C^*$-algebra contains a non trivial Kazdhan projection $p$. Suppose there exists an invariant probability measure on $G^0$ and that there exists an open subset $U\subset G^0$ not equal to $G^0$ containing a sequence of points $(x_i)$ such that:
+\begin{itemize}
+\item[$\bullet$] $x_i$ has finite orbit ($x_i \in G^0_{fin}$);
+\item[$\bullet$] for every compact $K\subset U$, the orbits $Gx_i= r(G_{x_i})$ ultimately don't intersect $K	$;
+\end{itemize}
+then $C^*_r(G)$ is not $K$-exact.
+\end{thm}
+
+\begin{proof}
+Denote by $M_i$ the finite dimensional $C^*$-algebra $B(l^2G_{x_i})$ and $\lambda_i : C^*_r(G) \rightarrow M_i $ the corresponding left regular representation. We will show that the sequence 
+\[ \begin{tikzcd} 0 \arrow{r} & 
+C^*_r(G)\otimes \oplus M_i \arrow{r} & C^*_r(G)\otimes \prod M_i  \arrow{r}{q} & C^*_r(G)\otimes \prod M_i / \oplus M_i  \arrow{r} & 
+0 \end{tikzcd}\]
+is not exact in $K$-theory. We shall call $q$ the last map in this diagram.\\
+
+Define the following $*$-morphism 
+\[\phi \left\{ \begin{array}{rcl}
+C^*_r(G) & \rightarrow  & C^*_r(G) \otimes \left(\prod M_i\right) \\
+x        & \mapsto& x\otimes (\lambda_i(x))_i \\
+\end{array} \right.\]
+Claim: the image of $\phi$ is contained in the kernel of $q$.\\
+
+Let $x\in C_r^*(G)$ and $\epsilon>0$. Let $K\subset G$ be a compact subset and $a\in C_K(G)$ such that $\| x - a \|_r <\varepsilon$. Let $\phi_i$ be the $*$-homomorphism defined in the same fashion as $\phi$ only with the first $i$ components of $\phi(x)$ equated to zero. Denote by $\overline x$ the class of $x$ in $C^*_r(G)\otimes \prod M_i / \oplus M_i $. Then $\overline {\phi(x)} = \overline{\phi_i (x)}$. Also, as the orbits $G_{x_i}$ are ultimately disjoint, there is a $i_0$ such that $\lambda_i(a)=0$ and thus $\phi_i(a)= 0$ for all $i>i_0$. This ensures
+\[ \|\overline{\phi(x)} \|  = \|\overline{\phi_{i}(x)}\| = \|\overline{\phi_{i}(x)}-\overline{\phi_{i}(a)}\| < \varepsilon \]
+hence $\overline{\phi(x)}=0$.\\
+
+Let $p\in C^*_r(G)$ the Kazdhan projection. Then $P=\phi(p)$ goes to zero in the right side of the sequence above. Let us show that its class in $K$-theory does not come form an element in $K_0(C^*_r(G)\otimes \oplus M_i )$.\\
+
+The invariant probability measure on $G^0$ induces a trace $\tau$ on $C^*_r(G)$. Define $\tau_i$ to be the trace $\tau \otimes tr$ on $C^*(G)\otimes M_i$, where $tr$ is the normalized trace on $M_i$. It is easy to see that $\tau_n(P) = \tau(p)>0$. But if $z\in K_0(C^*_r(G)\otimes \oplus M_i)$, $\tau_n(z)$ is ultimatley zero. This implies that the non triviality of $P$ ensures the non $K$-exactness of the sequence above in $K$-theory.  
+
+\end{proof}
+
+This result gives interesting examples of non $K$-exact $C^*$-algebras:
+\begin{itemize}
+\item[$\bullet$] if $X$ is an expander, the coarse groupoid of $X$ satisfies the hypothesis above, so that the uniform Roe algebra $C^*_u(X)\cong C_r^*(G)$ is not $K$-exact; in particular, if $\Gamma$ contains an expander almost isometrically, its reduced errrrr no?   
+\item[$\bullet$] if $\Gamma$ is a residually finite group with property $(\tau)$, then any HLS groupoid associated to an approximating sequence of $\Gamma$ satisfies the hypothesis above so that $C_r^*(G)$ is not $K$-exact.
+\end{itemize} 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Classification and the UCT}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
