@@ -40,45 +40,45 @@ Warning--I didn't find a database entry for "GWY"
 Warning--I didn't find a database entry for "schochetRosenberg"
 Warning--I didn't find a database entry for "SkandalisNotion"
 Warning--empty journal in Penrose2005Einstein
-You've used 24 entries,
+You've used 26 entries,
             2118 wiz_defined-function locations,
-            679 strings with 7716 characters,
-and the built_in function-call counts, 6831 in all, are:
-= -- 690
-> -- 225
+            690 strings with 7997 characters,
+and the built_in function-call counts, 7277 in all, are:
+= -- 733
+> -- 245
 < -- 3
-+ -- 96
-- -- 68
-* -- 441
-:= -- 1163
-add.period$ -- 72
-call.type$ -- 24
-change.case$ -- 100
++ -- 105
+- -- 74
+* -- 461
+:= -- 1247
+add.period$ -- 78
+call.type$ -- 26
+change.case$ -- 109
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 274
-empty$ -- 589
-format.name$ -- 68
-if$ -- 1416
+cite$ -- 27
+duplicate$ -- 294
+empty$ -- 623
+format.name$ -- 74
+if$ -- 1505
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 28
-newline$ -- 123
-num.names$ -- 48
-pop$ -- 92
+int.to.str$ -- 26
+missing$ -- 30
+newline$ -- 133
+num.names$ -- 52
+pop$ -- 101
 preamble$ -- 1
-purify$ -- 80
+purify$ -- 87
 quote$ -- 0
-skip$ -- 186
+skip$ -- 201
 stack$ -- 0
-substring$ -- 509
-swap$ -- 36
+substring$ -- 520
+swap$ -- 38
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
+type$ -- 96
 warning$ -- 1
-while$ -- 74
-width$ -- 26
-write$ -- 258
+while$ -- 78
+width$ -- 28
+write$ -- 278
 (There were 5 error messages)

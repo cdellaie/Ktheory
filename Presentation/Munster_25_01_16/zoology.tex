@@ -106,16 +106,6 @@ with $\left\{\begin{pmatrix} 1  & P(\pi) \\ 0 & 1\end{pmatrix} \right\} \cong \Z
 
 Other properties: hyperbolicity in Gromov's sense, $K$-amenability, polya-$\mathcal P$ (polyabelian = solvable?, polycyclic,..), virtually abelian or nilpotent, Rapid decay property,... Exactness: Gromov's monsters are the only groups known not to be exact. $C^*$-simplicity: nonabelian Free groups, \\
 
-And groupoids:
-\begin{itemize}
-\item[$\bullet$] the coarse groupoid $G(X)$: \'etale (even ample) with totally disconnected basis $\beta X$. Dynamical asymptotic dimension of asymptotic dimension of $X$. A-T-menable iff $X$ has property $A$
-\item[$\bullet$] HLS groupoid associated to a sequence of finite metric spaces $X_n$ equipped with maps $X_n \rightarrow \Gamma$ to a finitely generated group $\Gamma = \langle S \rangle$. 
-\item[$\bullet$] groupoids of germs of semigroup of partial homeomorphisms acting on a topological space
-\item[$\bullet$] holonomy groupoids of a foliation
-\item[$\bullet$] action groupoids $X\rtimes \Gamma$, principal bundles groupoids $P\times_G P$, where $P \rightarrow X$ is a $G$-bundle
-\item[$\bullet$] equivalence relation groupoids
-\end{itemize}
-
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -141,7 +131,7 @@ And groupoids:
 
 \end{tikzpicture}\]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{0.5in}\\
+%\vspace{0.5in}\\
 Stability:
 
 \begin{table}[h]
@@ -156,25 +146,47 @@ Stability:
 \multicolumn{1}{|l|}{\textbf{Direct limits}}             &            Yes          &                   &                      &                       \\ \hline
 \multicolumn{1}{|l|}{\textbf{Free products}}             &No, $\mathbb F_2 = \Z \ast \Z$   &           &                      &                       \\ \hline
 \multicolumn{1}{|l|}{\textbf{HNN extensions}}            &                      &                      &                      &                       \\ \hline
-\multicolumn{1}{|l|}{\textbf{Free amalgamated products}} &                      &                      &                      &                       \\ \hline
+\multicolumn{1}{|c|}{\textbf{Free amalgamated }}         &                      &                      &                      &                       \\ 
+\multicolumn{1}{|c|}{\textbf{ products}}                 &                      &                      &                      &                       \\ 
+\hline
 \end{tabular}
 \end{table}
 
 \begin{table}[h]
 \begin{tabular}{c|c|c|c|}
 \cline{2-4}
-                                                         & \textbf{Finite Asymptotic dimension} & \textbf{FDC} & \textbf{(A)}    \\ \hline
-\multicolumn{1}{|l|}{\textbf{Product}}                   &              Yes     &            Yes    &                            \\ \hline
-\multicolumn{1}{|l|}{\textbf{Subgroups}}                 &              Yes     &           Yes     &                             \\ \hline
-\multicolumn{1}{|l|}{\textbf{Quotients}}                 &                      &                   &     By amenable subgroups   \\ \hline
-\multicolumn{1}{|l|}{\textbf{Extensions}}                &            Yes       &            Yes    &     Yes                     \\ \hline
-\multicolumn{1}{|l|}{\textbf{Direct limits}}             &                      &                   &     Yes                     \\ \hline
-\multicolumn{1}{|l|}{\textbf{Direct unions}}             & No, $\Z ^{(\infty)}$ &            Yes    &                             \\ \hline
-\multicolumn{1}{|l|}{\textbf{Free products}}             &                      &                   &     Yes                     \\ \hline
-\multicolumn{1}{|l|}{\textbf{HNN extensions}}            &          Yes         &             Yes   &                             \\ \hline
-\multicolumn{1}{|l|}{\textbf{Free amalgamated products}} &           Yes        &              Yes  &                             \\ \hline
-\end{tabular}
+                                                         & \textbf{Finite Asymptotic }              & \textbf{FDC} & \textbf{(A)}    \\ 
+							 & \textbf{dimension}                       &              &              \\ \hline
+\multicolumn{1}{|c|}{\textbf{Product}}                   &              Yes     &            Yes    &                             \\ \hline
+\multicolumn{1}{|c|}{\textbf{Subgroups}}                 &              Yes     &           Yes     &                             \\ \hline
+\multicolumn{1}{|c|}{\textbf{Quotients}}                 &                      &                   &     By amenable subgroups   \\ \hline
+\multicolumn{1}{|c|}{\textbf{Extensions}}                &            Yes       &            Yes    &     Yes                     \\ \hline
+\multicolumn{1}{|c|}{\textbf{Direct limits}}             &                      &                   &     Yes                     \\ \hline
+\multicolumn{1}{|c|}{\textbf{Direct unions}}             & No, $\Z ^{(\infty)}$ &            Yes    &                             \\ \hline
+\multicolumn{1}{|c|}{\textbf{Free products}}             &                      &                   &     Yes                     \\ \hline
+\multicolumn{1}{|c|}{\textbf{HNN extensions}}            &          Yes         &             Yes   &                             \\ \hline
+\multicolumn{1}{|c|}{\textbf{Free amalgamated }}         &           Yes        &              Yes  &                             \\ 
+\multicolumn{1}{|c|}{\textbf{ products}}                 &                      &                   &                             \\ \hline
+\end{tabular}  
 \end{table}
+
+\newpage
+Other group like objects, but with less properties.
+
+\subsection{Groupoids}
+
+\begin{itemize}
+\item[$\bullet$] The \textit{coarse groupoid} $G(X)$: \'etale (even ample) with totally disconnected basis $\beta X$. Dynamical asymptotic dimension of asymptotic dimension of $X$. Amenable iff $X$ has property $A$. A-T-menable iff $X$ coarsely embeds into Hilbert space. 
+\item[$\bullet$] HLS groupoid associated to a sequence of finite metric spaces $X_n$ equipped with maps $X_n \rightarrow \Gamma$ to a finitely generated group $\Gamma = \langle S \rangle$. 
+\item[$\bullet$] Groupoids of germs of semigroup of partial homeomorphisms acting on a topological space
+\item[$\bullet$] Full topological groups of an ample second-countable groupoid with compact base space
+\item[$\bullet$] Tillings groupoids ($\Omega\rtimes G$, usually amenable)
+\item[$\bullet$] Holonomy groupoids of a foliation
+\item[$\bullet$] Action groupoids $X\rtimes \Gamma$, principal bundles groupoids $P\times_G P$, where $P \rightarrow X$ is a $G$-bundle
+\item[$\bullet$] Equivalence relation groupoids
+\end{itemize}
+
+If $G$ is \'etale, $G$ is amenable iff $C^*_r(G)$ is nuclear. Amenability implies that the full $C^*$-algebra and the reduced coincides, but the converse is false by a result of Willett \cite{Willett2015non}.
 
 \subsection{Quantum groups}
 
