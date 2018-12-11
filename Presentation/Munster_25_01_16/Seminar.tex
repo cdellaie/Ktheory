@@ -339,6 +339,40 @@ Then there exists a unital $*$-isomorphism $\phi; A\rightarrow B$ such that $\ph
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{$C^*$-simplicity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{General introduction}
+
+Let $\Gamma$ be a discrete group. We will recall two equivalence relations on the set (?) of unitary representations of $\Gamma$, which are group homomorphisms
+\[\pi: \Gamma \rightarrow U(H_\pi) \]
+where $U(H)$ stands for the unitary group of a complex Hilbert space $H_\pi$. We will refer to such a representation as $(\pi, H_\pi)$ or even just $\pi$ or $H_\pi$ if no confusion is possible.\\
+
+Let $\pi$ and $\sigma$ be two representations of $\Gamma$.
+\begin{itemize}
+\item[$\bullet$] $\pi \cong \sigma$ iff there exists a unitary $u : H_\pi \rightarrow H_\sigma$ such that
+\[ u\pi_\gamma u^* =\sigma_\gamma \quad \forall \gamma \in \Gamma.\]
+\item[$\bullet$] $\pi \simeq \sigma$ iff there exists a sequence of unitaries $u_n : H_\pi \rightarrow H_\sigma$ such that
+\[ \| u_n\pi_\gamma u_n^* - \sigma_\gamma \| \rightarrow 0\quad \forall \gamma\in \Gamma.\]
+\end{itemize}
+
+\textbf{Fact:} It turns out that for a lot of groups (e.g. finite, abelian, compact, simple Lie groups,...), these two notions coincide
+\[ \pi \simeq \sigma \quad \text{iff}\quad \pi \cong \sigma \quad \text{for }\pi,\sigma \text{ irreducible}.\]
+Let $\hat \Gamma$ be the collection of all representations of $\Gamma$. A very hard problem is to describe
+\[\hat \Gamma / \simeq.\]
+It can be done sometimes, e.g. for $\Z$ the irreducible representations are given by the circle, and any representation decomposes more or less uniquely into these.\\
+
+Let us recall that the (left) regular representation 
+\[\lambda: \Gamma \rightarrow U(l^2\Gamma)\]
+is defined by $\lambda_g(\delta_h) = \delta_{gh}$. The reduced $C^*$-algebra $C_r^*(\Gamma)$ is the closure under the operator norm of the image of the regular representation, i.e.
+\[C^*_r(\Gamma) = \overline{span \{ \lambda_\gamma\}_{\gamma\in \Gamma}}.\]
+A representation $\pi $ is tempered if it extends to a $*$-representation of $C^*_r(\Gamma)$. This happens iff the linear extension
+\[\pi : \C[\Gamma]\rightarrow B(H_\pi)\]
+satisfies $\|\pi(a)\| \leq \|\lambda(a)\|, \forall a\in \C[\Gamma]$.\\
+
+\textbf{Fact:} All representations are tempered iff the group is amenable.\\
+
+Another (very hard) problem is to describe 
+\[\hat \Gamma_r / \simeq\]
+
+\subsection{Definitions}
 
 We only consider discrete countable groups, usually denoted by $\Gamma$.
 
@@ -827,10 +861,33 @@ where $r_\alpha^\beta = r_\alpha^{ij}r^\beta_{kl} z_i^k z_j^l$. If $End(A)= Hom(
 If one does that to the quantum plane $\mathbb A_q^2$, one stil doesn't find quite $M_q(2)$: half of the relations are missing. Also 
 \[(\mathbb A_q^{2|0})^! = \mathbb A_q^{0|2}?\] Exercise.
 
+%%%%%%%%%%%%%%%%%%%
 \subsection{TQFT}
+%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Motivations}
+
+This section is aimed at being an introduction to \textit{Topological Field Theories}. One of the difficulties of this particular topic is that it comes from different areas and can be attacked in different ways. The following is my attempt to make sense out of the large amount of information available on the subject. In particular, I do not claim exhaustivity or expertise.\\
+
+The starting point are probably \textit{path integral} formulations in Physics. In Statistical Mechanics and in Quantum Physics, the values predicted by the theory can often be written as expectation of the type
+\[\mathbb E[\exp (-\int V(q(t))) \quad \text{or} \quad \mathbb E [\exp \frac{i}{h} S(q)] .]\]
+Physically, one tries to define a positive function on the phase space $M$ (such as an energy (Hamiltonian) $H$ or an action $S$, the integral of a Lagrangian). The probability distribution of the system should then be
+\[\frac{1}{Z_M}e^{-\beta H(\omega)} D\omega \quad \text{or}\quad \frac{1}{Z_M}e^{\frac{i}{h}S(\omega)} D\omega .\]
+The first case is the one known as Gibbs measures, and describes the behaviour of a system in contact with a thermostat at inverse temperature $\beta$. The second case is the so called Feynman integral of quantum mechanics. The reason these formulas are used is that systems should satisfy some \textit{minimization principle}. In the classical case, the observed trajectories are the minima of the energy function, whereas in the quantum case the observe deviations from the classical trajectories up to the amplitude $e^{iS/h}$.\\ 
+
+That point is exactly where it starts to be complicated. Physicists want to define something propoptional to these exponential, and the measure $D\omega$ is supposed to be a reference measure with nice invariance properties. In the finite dimensional case, the natural measure would be the Lebesgue measure. But no such thing exists on a general functional space, which makes the definition above useless.\\  
+
+It turns out that these integral have very interesting invariance properties, notably in topology. More precisely, the \textit{partition function} $Z_M$ gives topological invariant when $M$ is a closed manifolds. This fact gave motivation to mathematicians to study more attentively these functional integrals. While you can try to define integrals analytically (see \textbf{REFERENCES}), there exists an algebraic approach which proposes intuitively to define the partition function on simple manifolds (possibly with border) and in coherent manner so that the partition function of a closed manifold can be computed by cutting it in simple pieces, computing the corresponding values, and reassembling these to get the final result. Mathematically, this requires: 
+\begin{itemize}
+\item[$\bullet$] describing an algebraic structure on the family of \textit{n-dimensional manifolds}, and giving generators;
+\item[$\bullet$] setting up the value of the partition function;
+\item[$\bullet$] showing that all of this makes sense.
+\end{itemize}
+This is accomplished by considering the $n$-category of bordisms and defining the (algebraic) partition function $Z$ to be a nice functor between the latter and the $n$-category of finite dimensional vector spaces over some fields. In dimension $1$ and $2$, it will be understood that only one value needs to be fixed (respectively on the point space and on the circle), while this still holds in higher dimension under more hypothesis.
+
+\subsubsection{Summary of the talks}
 
 We recalled the definitions of a monoidal category, a braided category, and a symmetric monoidal category. The two main examples are the category of bordisms $Bord^d$ in dimension $d$, and the category of vector spaces over a field $k$. The first talk focused on topological quantum fields theories in dimension $1$ and $2$.
-
 
 \begin{definition} A TQFT in dimension $d$ is a monoidal symmetric functor
 \[Z : Bord_d \rightarrow Vect_k.\] 
