@@ -29,7 +29,7 @@ I was expecting a `,' or a `}'---line 251 of file biblio.bib
  : month = ""
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 280 of file biblio.bib
+I was expecting a `,' or a `}'---line 291 of file biblio.bib
  : 
  : month = "Summer"
 (Error may have been on previous line)
@@ -40,45 +40,45 @@ Warning--I didn't find a database entry for "GWY"
 Warning--I didn't find a database entry for "schochetRosenberg"
 Warning--I didn't find a database entry for "SkandalisNotion"
 Warning--empty journal in Penrose2005Einstein
-You've used 27 entries,
+You've used 28 entries,
             2118 wiz_defined-function locations,
-            696 strings with 8179 characters,
-and the built_in function-call counts, 7517 in all, are:
-= -- 756
-> -- 258
+            703 strings with 8342 characters,
+and the built_in function-call counts, 7847 in all, are:
+= -- 791
+> -- 271
 < -- 3
-+ -- 110
-- -- 78
-* -- 473
-:= -- 1292
-add.period$ -- 81
-call.type$ -- 27
-change.case$ -- 114
++ -- 115
+- -- 82
+* -- 498
+:= -- 1347
+add.period$ -- 84
+call.type$ -- 28
+change.case$ -- 118
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 304
-empty$ -- 640
-format.name$ -- 78
-if$ -- 1553
+cite$ -- 29
+duplicate$ -- 315
+empty$ -- 667
+format.name$ -- 82
+if$ -- 1621
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 31
-newline$ -- 138
-num.names$ -- 54
-pop$ -- 106
+int.to.str$ -- 28
+missing$ -- 32
+newline$ -- 143
+num.names$ -- 56
+pop$ -- 108
 preamble$ -- 1
-purify$ -- 91
+purify$ -- 94
 quote$ -- 0
-skip$ -- 209
+skip$ -- 218
 stack$ -- 0
-substring$ -- 525
-swap$ -- 39
+substring$ -- 555
+swap$ -- 40
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 100
+type$ -- 104
 warning$ -- 1
-while$ -- 80
-width$ -- 29
-write$ -- 288
+while$ -- 84
+width$ -- 30
+write$ -- 299
 (There were 5 error messages)

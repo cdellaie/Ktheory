@@ -347,16 +347,16 @@ where $U(H)$ stands for the unitary group of a complex Hilbert space $H_\pi$. We
 
 Let $\pi$ and $\sigma$ be two representations of $\Gamma$.
 \begin{itemize}
-\item[$\bullet$] $\pi \cong \sigma$ iff there exists a unitary $u : H_\pi \rightarrow H_\sigma$ such that
+\item[$\bullet$] $\pi \backsimeq \sigma$ iff there exists a unitary $u : H_\pi \rightarrow H_\sigma$ such that
 \[ u\pi_\gamma u^* =\sigma_\gamma \quad \forall \gamma \in \Gamma.\]
-\item[$\bullet$] $\pi \simeq \sigma$ iff there exists a sequence of unitaries $u_n : H_\pi \rightarrow H_\sigma$ such that
+\item[$\bullet$] $\pi \approx \sigma$ iff there exists a sequence of unitaries $u_n : H_\pi \rightarrow H_\sigma$ such that
 \[ \| u_n\pi_\gamma u_n^* - \sigma_\gamma \| \rightarrow 0\quad \forall \gamma\in \Gamma.\]
 \end{itemize}
 
 \textbf{Fact:} It turns out that for a lot of groups (e.g. finite, abelian, compact, simple Lie groups,...), these two notions coincide
-\[ \pi \simeq \sigma \quad \text{iff}\quad \pi \cong \sigma \quad \text{for }\pi,\sigma \text{ irreducible}.\]
+\[ \pi \approx \sigma \quad \text{iff}\quad \pi \backsimeq \sigma \quad \text{for }\pi,\sigma \text{ irreducible}.\]
 Let $\hat \Gamma$ be the collection of all representations of $\Gamma$. A very hard problem is to describe
-\[\hat \Gamma / \simeq.\]
+\[\hat \Gamma / \approx.\]
 It can be done sometimes, e.g. for $\Z$ the irreducible representations are given by the circle, and any representation decomposes more or less uniquely into these.\\
 
 Let us recall that the (left) regular representation 
@@ -370,9 +370,85 @@ satisfies $\|\pi(a)\| \leq \|\lambda(a)\|, \forall a\in \C[\Gamma]$.\\
 \textbf{Fact:} All representations are tempered iff the group is amenable.\\
 
 Another (very hard) problem is to describe 
-\[\hat \Gamma_r / \simeq\]
+\[\hat \Gamma_r / \approx .\]
 
+\begin{definition}
+$\Gamma$ is $C^*$-simple if $C^*_r(\Gamma)$ is simple, i.e. admits no proper two sided closed ideal.
+\end{definition}
+
+\begin{thm}[Voiculescu]
+$\Gamma$ is $C^*$-simple iff $\hat \Gamma_r / \approx$ is a point.
+\end{thm}
+
+\textbf{Examples of $C^*$-simple groups:}
+\begin{itemize}
+\item[$\bullet$] Non abelian free groups;
+\item[$\bullet$] Torsion free hyperbolic groups;
+\item[$\bullet$] $PSL(n,\Z)$;
+\item[$\bullet$] Thompson's group $V$.
+\end{itemize}
+
+\subsubsection{Non $C^*$-simple examples}
+
+Recall that a group $\Gamma$ if the trivial representation 
+\[1_\Gamma : \Gamma \rightarrow U(\C) = \mathbb S^1; \gamma \mapsto id = 1;\]
+is tempered. As a consequence, non trivial amenable groups are not $C^*$-simple as $1 \approx \lambda$ ($dim (l^2\Gamma ) \neq 1 )$.\\
+
+More generally if there exists an amenable normal subgroup $K \vartriangleleft \Gamma$, then the quasi regular representation
+\[\lambda_{\Gamma / K} : \Gamma \rightarrow U (l^2(\Gamma / K)); \ \lambda_{\Gamma / K}(\gamma) (\delta_{xK}) = \delta_{\gamma x K}; \]
+is tempered, hence if $K$ is not trivial, $\Gamma$ is not $C^*$-simple. In particular any semi-direct product $K \rtimes H$ with $K$ amenable and non trivial is not $C^*$-simple.\\
+
+Amenability being stable by extensions and increasing unions, any group has a largest normal amenable subgroup $R \vartriangleleft \Gamma$ called the amenable radical. The previous discussion shows that if $\Gamma$ is $C^*$-simple, then $R= \{e\}$. The converse does not hold and was completely answered by Kennedy et al.
+
+\subsubsection{How to prove $C^*$-simplicity?}
+
+\'a la Powers \cite{Powers1975simplicity}.
+
+\begin{definition}
+A group $\Gamma$ is a \textit{Powers group} if for every finite subset $F\subset \Gamma$ there exists a partition
+\[\Gamma = C \coprod D \]
+and a finite number of elements $\gamma_1,...,\gamma_n\in \Gamma$ with 
+\begin{itemize}
+\item[$\bullet$] $\gamma C \cap C = \emptyset$ for every $\gamma in F$:
+\item[$\bullet$] $\gamma_i D \cap \gamma_j D = \emptyset$ for every $i\neq j$.
+\end{itemize}
+\end{definition}  
+
+\textbf{Examples:}
+\begin{itemize}
+\item[$\bullet$] The free group on two generators $\mathbb F_2$ (Powers \cite{Powers1975simplicity});
+\item[$\bullet$] Many other examples using "North-South" type dynamics (De la Harpe, Bridson, Osin).
+\end{itemize}
+
+Let us write a few words about the technique Powers used. For $\mathbb F_2 = \langle a,b\rangle$, let 
+\[\tau : C^*_r(\mathbb F_2) \rightarrow \C ; a \mapsto \langle \delta_e , a \delta_e \rangle\]
+be the canonical tracial state. 
+
+\begin{thm}[Powers \cite{Powers1975simplicity}]
+For every $a\in C_r^*(\Gamma)$, 
+\[\tau(x) = \lim \frac{1}{mn} \sum_{i=1,n \\ j= 1,m} \lambda_a^i \lambda_b^j x \lambda_b^{-j} \lambda_a^{-i}\]
+\end{thm}
+
+\begin{cor}
+$\mathbb F_2$ is $C^*$-simple.
+\end{cor}
+
+\begin{proof}
+Let $J \vartriangleleft C_r^*(\mathbb F_2)$ be an ideal. For $x\in C_r^*(\mathbb F_2) $ let $x_{mn}=\sum_{i=1,n \\ j= 1,m} \lambda_a^i \lambda_b^j x \lambda_b^{-j} \lambda_a^{-i} $. If $x\in J$ then $(x^* x )_{mn}\in J$ so $\tau(x^*x)1_{C_r^*(\mathbb F_2)} \in \overline{J}^{\| \ \|} $. If $J$ is not trivial, it contains a non zero element $x$, which forces $1_{C_r^*(\mathbb F_2)} \in J$ as $\tau(x^* x)>0$. This ensures that $J = C^*_r(\mathbb F_2)$ and we are done. 
+\end{proof}
+
+\begin{cor}
+$C^*_r(\mathbb F_2)$ has a unique tracial state.
+\end{cor}
+
+\begin{proof}
+Let $\tau'$ be a tracial state on $C^*_r(\mathbb F_2)$. Then for $x\in C^*_r(\mathbb F_2)$,
+\[\tau'(x)= \tau'(x_{mn}) \rightarrow \tau'(\tau(x)1) = \tau(x)\tau'(1) = \tau(x).\]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Definitions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We only consider discrete countable groups, usually denoted by $\Gamma$.
 
@@ -442,7 +518,9 @@ We saw that $\mathbb F_2$ is $C^*$-simple, yet it has a copy of $\Z$ as an amena
 
 This result led to following (false) conjecture: a group is $C^*$-simple iff it has no non trivial amenable normal subgroups.\\
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Completely positive maps}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 If $A$ and $B$ are $C^*$-algebra, then a linear map $\phi : A\rightarrow B$ is called completely positive if 
 \[\phi^{(n)}(a) = (\phi(a_{ij}))_{ij} \geq 0 \quad \forall a \in M_n(A)_+.\]
@@ -457,7 +535,44 @@ Then: \\
 \item[$\bullet$] What about $CP(C(X),B)$? Continuous sections on the continuous field of $C^*$-algebras $\bigoplus_{\omega\in S(B)} B(H_\omega)$.\\
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Injective $C^*$-algebras}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Recall that an abelian group $M$ is injective if, given any injective homomorphism of abelian group $A \hookrightarrow B$, any homomorphism $A\rightarrow M$ extends to a homomorphism $B\rightarrow M$. In words: any homomorphism into $M$ extends to superobjects. We will often use the following commutative diagram
+\[\begin{tikzcd}
+B \arrow[dotted]{dr}{\exists} &  \\
+A \arrow[hook]{u} \arrow{r}& M \\
+\end{tikzcd}\]
+to represent this situation.\\
+
+\begin{definition}
+A $C^*$-algebra $M$ is injective if, given an inclusion of $C^*$-algebra $A\subset B$, any injective $*$-homomorphism $A\rightarrow M$ extends to $B$ by a contractive completely positive (CCP) map.
+\[\begin{tikzcd}
+B \arrow[dotted]{dr}{\exists \ ccp} &  \\
+A \arrow[hook]{u} \arrow{r}& M \\
+\end{tikzcd}\] 
+Even if the straight arrow are here supposed to be $*$-homomorphism, Stinespring's dilation theorem ensures that we can suppose all the arrows to be only CCP maps. We will say that $M$ is $\Gamma$-injective if $\Gamma$ acts by automorphisms on all the $C^*$-algebras in the diagram, and all the arrows are $\Gamma$-equivariant.
+\end{definition} 
+
+We will show that there exists a maximal $\Gamma$-boudary $\partial_F \Gamma$, called the \textit{Thurston boundary}.\\
+
+\textbf{Major goal :} $C(\partial_F \Gamma)$ is $\Gamma$-injective.
+
+\begin{lem} If $M$ is injective and $S\subset M$, define
+\[Ann_M(S) = \{ m\in M \ | \ sm = 0 \forall s \in S.\]
+Then there exists a projection $p\in M$ satisfying $Ann_M(S) = pM$.
+\end{lem}
+
+\begin{proof}
+Embed $M$ unitally in some $B(H)$. Injectivity gives a CCP map $E: B(H)\rightarrow M$ such that $E(m)=m, \forall m\in M$ so $M\subset dom(E)$ (multiplicative domain). There exists a projection $p\in B(H)$ with $Ann_{B(H)}(S)= p B(H)$ (take the projection on $\cap_{s\in S} Ker(s)$). If $s\in S$, 
+\[sE(p) = E(sp)= 0 \text{ hence }E(p)\in Ann_{M}(S).\]
+Moreover  
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dynamical characterization of $C^*$-simplicity}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 (Facts we are using: \\ 
 $C(\partial_F \Gamma)$ is $\Gamma$-injective, in particular any $\Gamma$-equivariant u.c.p. $C(\partial_f \Gamma)\rightarrow A$ is spit, so is an isometric embedding,\\
 $\partial_F \Gamma$ is totally disconnected, ) \\
