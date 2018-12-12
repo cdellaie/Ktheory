@@ -341,9 +341,9 @@ Then there exists a unital $*$-isomorphism $\phi; A\rightarrow B$ such that $\ph
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{General introduction}
 
-Let $\Gamma$ be a discrete group. We will recall two equivalence relations on the set (?) of unitary representations of $\Gamma$, which are group homomorphisms
+Let $\Gamma$ be a discrete group. We will recall two equivalence relations on the set(?) of unitary representations of $\Gamma$, which are group homomorphisms
 \[\pi: \Gamma \rightarrow U(H_\pi) \]
-where $U(H)$ stands for the unitary group of a complex Hilbert space $H_\pi$. We will refer to such a representation as $(\pi, H_\pi)$ or even just $\pi$ or $H_\pi$ if no confusion is possible.\\
+where $U(H_\pi)$ stands for the unitary group of a complex Hilbert space $H_\pi$. We will refer to such a representation as $(\pi, H_\pi)$ or even just $\pi$ or $H_\pi$ if no confusion is possible.\\
 
 Let $\pi$ and $\sigma$ be two representations of $\Gamma$.
 \begin{itemize}
@@ -539,15 +539,15 @@ Then: \\
 \subsection{Injective $C^*$-algebras}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Recall that an abelian group $M$ is injective if, given any injective homomorphism of abelian group $A \hookrightarrow B$, any homomorphism $A\rightarrow M$ extends to a homomorphism $B\rightarrow M$. In words: any homomorphism into $M$ extends to superobjects. We will often use the following commutative diagram
+Recall that an abelian group $M$ is injective if, given any injective homomorphism of abelian group $A \hookrightarrow B$, any homomorphism $A\rightarrow M$ extends to a homomorphism $B\rightarrow M$. In words: any homomorphism into $M$ extends to super-objects. We will often use the following commutative diagram
 \[\begin{tikzcd}
 B \arrow[dotted]{dr}{\exists} &  \\
 A \arrow[hook]{u} \arrow{r}& M \\
 \end{tikzcd}\]
-to represent this situation.\\
+to represent this situation. We will now turn to a analog notion in the $C^*$-algebraic world.\\
 
 \begin{definition}
-A $C^*$-algebra $M$ is injective if, given an inclusion of $C^*$-algebra $A\subset B$, any injective $*$-homomorphism $A\rightarrow M$ extends to $B$ by a contractive completely positive (CCP) map.
+A $C^*$-algebra $M$ is \textit{injective} if, given an inclusion of $C^*$-algebra $A\subset B$, any injective $*$-homomorphism $A\rightarrow M$ extends to $B$ by a contractive completely positive (CCP) map.
 \[\begin{tikzcd}
 B \arrow[dotted]{dr}{\exists \ ccp} &  \\
 A \arrow[hook]{u} \arrow{r}& M \\
@@ -555,9 +555,13 @@ A \arrow[hook]{u} \arrow{r}& M \\
 Even if the straight arrow are here supposed to be $*$-homomorphism, Stinespring's dilation theorem ensures that we can suppose all the arrows to be only CCP maps. We will say that $M$ is $\Gamma$-injective if $\Gamma$ acts by automorphisms on all the $C^*$-algebras in the diagram, and all the arrows are $\Gamma$-equivariant.
 \end{definition} 
 
-We will show that there exists a maximal $\Gamma$-boudary $\partial_F \Gamma$, called the \textit{Thurston boundary}.\\
+We will define a particular class of compact spaces acted upon by $\Gamma$, called $\Gamma$-boundaries, and show that there exists a maximal $\Gamma$-boundary $\partial_F \Gamma$, called the \textit{Thurston boundary}. \\
 
-\textbf{Major goal :} $C(\partial_F \Gamma)$ is $\Gamma$-injective.
+The first \textbf{major goal} of this presentation is to show that $C(\partial_F \Gamma)$ is $\Gamma$-injective.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Description of commutative injective algebras}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{lem} If $M$ is injective and $S\subset M$, define
 \[Ann_M(S) = \{ m\in M \ | \ sm = 0 \forall s \in S.\]
@@ -565,16 +569,83 @@ Then there exists a projection $p\in M$ satisfying $Ann_M(S) = pM$.
 \end{lem}
 
 \begin{proof}
-Embed $M$ unitally in some $B(H)$. Injectivity gives a CCP map $E: B(H)\rightarrow M$ such that $E(m)=m, \forall m\in M$ so $M\subset dom(E)$ (multiplicative domain). There exists a projection $p\in B(H)$ with $Ann_{B(H)}(S)= p B(H)$ (take the projection on $\cap_{s\in S} Ker(s)$). If $s\in S$, 
+This is true if $M=B(H)$ for some Hilbert space. In the general case, embed $M$ unitally in some $B(H)$. By injectivity of $M$, there exists a CCP map $E: B(H)\rightarrow M$ such that $E(m)=m, \forall m\in M$ so $M\subset dom(E)$ (multiplicative domain). There exists a projection $p\in B(H)$ with $Ann_{B(H)}(S)= p B(H)$ (take the projection on $\cap_{s\in S} Ker(s)$). If $s\in S$, 
 \[sE(p) = E(sp)= 0 \text{ hence }E(p)\in Ann_{M}(S).\]
-Moreover  
+Moreover if $m\in Ann_M(S)\subset pB(H) $, $pm = m$ and
+\[E(p)m = E(pm) =E(m)=m\]
+so that for $m=E(p)$, we get $E(p)$ is a projection. This also proves that $E(p)Ann_M(S) =Ann_M(S)$. A slight fiddling ensures then that $Ann_M(S)=E(p)M$.
 \end{proof}
+
+\begin{cor}
+Let $X$ be a compact Hausdorff space. If $C(X)$ is injective then $X$ is Stonean, i.e. $\overline U$ is open for every open subset $U\subset X$.
+\end{cor}
+
+\begin{proof}
+Let $U\subset X$ be open, and $S=C_0(U)$. By the previous lemma, there exists a projection $p\in C(X)$ such that $Ann_{C(X)}(S) = p C(X)$. But $p$ cannot be anyone else than the characteristic function of $\overline{U}^c$ so that $1-p =\chi_{\overline U}$ is continuous and $\overline U$ is open.
+\end{proof}
+
+\textbf{Note:} Infinite compact Stonean spaces are not metrizable (not even second countable). Suppose the contrary and get a sequence $x_i \rightarrow x$ in $X$ and open sets $U_n = B(x_n,\varepsilon_n)$, with $\varepsilon_n$ such that $\overline U_n \cap \overline U_m = \emptyset $ for every $n\neq m$. Set $U= \cup_{n}  U_{2n}$, then $x\in \overline U$ ($\overline U$ is open) so $x_n \in \overline U$ for large $n$ but $x_n \notin \overline U $ for $n$ odd.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Furstenburg boundary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+If $\Gamma$ is a discrete group acting on a compact Hausdorff space $X$ (we will just say that $X$ is a $\Gamma$-space), the space of probability measures $Prob(X)$ endowed with the weak-$*$ topology is homeomorphic to the state space $S(C(X))$ with the topology of simple convergence. We identify $X$ with a closed subspace of $Prob(X)$ with the help of the Dirac masses ( $X \hookrightarrow Prob(X) ; x \mapsto \delta_x$ is an embedding). Recall that the action can be extended to $Prob(X)$, which is then a $\Gamma$-space by Banach-Alaoglu's theorem.
+
+\begin{definition} A $\Gamma$-space $X$ is:
+\begin{itemize}
+\item[$\bullet$] \textit{minimal} if the only $\Gamma$-invariant closed subset of $X$ are itself and $\emptyset$;
+\item[$\bullet$] \textit{strongly proximal} if $\overline{\Gamma . \mu}^{weak-*}$ contains $\delta_x$ for some $x\in X$;
+\item[$\bullet$] a $\Gamma$-boundary if it is minimal and strongly proximal
+\[ X\subset \overline{\Gamma . \mu}^{weak-*}\quad \forall \mu \in Prob(X).\]
+\end{itemize}
+\end{definition}
+
+\textbf{Example:} Let $SL(2,\Z)$ act on the projective line $\R P^1$ (the quotient of $\R^2\backslash \{0 \}$ by the group of dilations) given by 
+\[\begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} ax +b y \\ cx + dy \end{pmatrix}.\]
+Most $g\in Sl(2,\Z)$ are acting hyperbolically (two distinct eigenspaces, one expansive one contractive). Take $\mu\in Prob(\R P^1)$, and a generic element $g\in SL(2,\Z)$. As $n$ goes to $\infty$,
+\[g^n .\mu \rightarrow_{weak-*} \ \delta_{\text{Expanding eigenspace}}\]
+unless $\mu(\{\text{contractive eigenspace}\})>0$, hence \[\{\delta_{\text{Expanding eigenspace}}\}_{g\in SL(2,\Z)} \subset \overline{\Gamma. \mu}^{wk-*}.\]
+Exercise: the set of these is dense in $\R P^1\subset Prob(\R P^1)$. 
+
+\begin{thm}[Furstenburg] There exists a $\Gamma$-boundary $\partial_F \Gamma$ (now called the Furstenburg boundary) such that for any $\Gamma$-boundary $X$ there exists a continuous $\Gamma$-equivariant surjection $\partial_F \Gamma \twoheadrightarrow X$.
+\end{thm}
+
+\begin{proof}
+Let $\mathcal B$ be the class of all $\Gamma$-boundaries. It is non empty as it contains the point space. Take
+\[Z = \prod_{Y\in \mathcal B} Y \]
+which is compact by Tychonoff's theorem. Equip $Z$ by the diagonal $\Gamma$-action. 
+\begin{itemize}
+\item[$\bullet$] It is strongly proximal: for any $\mu \in Prob(Z)$, a diagonal argument gives a weak-$*$ convergent net $g_i .\mu \rightarrow \delta_z$ for some $z\in Z$.   
+\item[$\bullet$] It is not minimal, but Zorn's lemma ensures the existence of a minimal closed $\Gamma$-invariant subset $\partial_F \Gamma$ of $Z$.  
+\end{itemize}
+We obtain the desired map as the composition of the inclusion $\partial_F \Gamma \hookrightarrow Z$ with the projection on the $X$-factor $Z \twoheadrightarrow X$.
+\end{proof}
+
+\begin{thm}[Kalantar-Kennedy] $C(\partial_f \Gamma)$ is $\Gamma$-injective.
+\end{thm}
+
+\begin{lem} There exists a bijective correspondence between the completely positive maps from $C(X)$ to $C(Y)$ and the continous maps from $Y$ to $Prob(X)$. The statement remains true if one asks for equivariance. \textbf{send to a previous section on CP maps}
+\end{lem}
+
+\begin{lem}[Furstenburg] Let $X$ and $Y$ be two $\Gamma$-boundaries. Then any $\Gamma$-equivariant map $X\rightarrow Prob(Y)$ has image in $Y$, i.e. any UCP map $C(X)\rightarrow C(Y)$ is a $*$-homomorphism! Moreover there is at most one such map.
+\end{lem}
+
+\begin{proof}
+Take $\mu : X \rightarrow Prob(Y)$. The image $\mu(X)\subset Prob(Y)$ is a closed $\Gamma$-invariant subspace: by strong proximality of $Y$, there exists $y\in Y$ such that 
+\[ \delta_y \in \overline{\Gamma . \mu_x}^{wk-*} \subset \mu(X).\]
+By minimality of $Y$, $\overline{\Gamma . \mu_x}^{wk-*}\cap Y = Y$, By minimality of $X$, $\mu^{-1}(Y)= X$ i.e. $\mu(X)\subset Y $.\\
+
+Let $\mu, \eta: X\rightarrow Prob(Y)$ be two such maps. Then $\frac{1}{2}\mu +\frac{1}{2}\eta$, $\mu$ and $\eta$ all take values in $Y$ so that they are all equal. 
+\end{proof}  
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dynamical characterization of $C^*$-simplicity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 (Facts we are using: \\ 
-$C(\partial_F \Gamma)$ is $\Gamma$-injective, in particular any $\Gamma$-equivariant u.c.p. $C(\partial_f \Gamma)\rightarrow A$ is spit, so is an isometric embedding,\\
+$C(\partial_F \Gamma)$ is $\Gamma$-injective, in particular any $\Gamma$-equivariant u.c.p. $C(\partial_f \Gamma)\rightarrow A$ is split, so is an isometric embedding,\\
 $\partial_F \Gamma$ is totally disconnected, ) \\
 
 The goal of this section is to prove the following theorem.
@@ -660,7 +731,9 @@ where we identify $\Gamma. x $ with $\Gamma / \Gamma_x$. \textbf{A FINIR}\\
 \item[$\bullet$] It is not known in general wether the action of $\Gamma$ on $\partial_F \Gamma$ is amenable. If $X$ is a $\Gamma$-space such that one of the stabilizer is not amenble, the action cannot be amenable. Is it true that, if $\Gamma$ is exact, this is the only obstruction for the amenability of the action?
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Another proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The last subsection uses representation theory (induction) which makes one wonder if this could be avoided. While the implication 
 \[\partial_F \Gamma \text{ is free } \Rightarrow	 \Gamma \text{ is }C^*\text{-simple}\]
