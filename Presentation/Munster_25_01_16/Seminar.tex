@@ -622,7 +622,7 @@ which is compact by Tychonoff's theorem. Equip $Z$ by the diagonal $\Gamma$-acti
 We obtain the desired map as the composition of the inclusion $\partial_F \Gamma \hookrightarrow Z$ with the projection on the $X$-factor $Z \twoheadrightarrow X$.
 \end{proof}
 
-\begin{thm}[Kalantar-Kennedy] $C(\partial_f \Gamma)$ is $\Gamma$-injective.
+\begin{thm}[Kalantar-Kennedy] $C(\partial_F \Gamma)$ is $\Gamma$-injective.
 \end{thm}
 
 \begin{lem} There exists a bijective correspondence between the completely positive maps from $C(X)$ to $C(Y)$ and the continous maps from $Y$ to $Prob(X)$. The statement remains true if one asks for equivariance. \textbf{send to a previous section on CP maps}
@@ -639,7 +639,69 @@ By minimality of $Y$, $\overline{\Gamma . \mu_x}^{wk-*}\cap Y = Y$, By minimalit
 Let $\mu, \eta: X\rightarrow Prob(Y)$ be two such maps. Then $\frac{1}{2}\mu +\frac{1}{2}\eta$, $\mu$ and $\eta$ all take values in $Y$ so that they are all equal. 
 \end{proof}  
 
+\begin{cor}\label{Unicity}
+Any equivariant UCP map $ C(\partial_F \Gamma)\rightarrow C(\partial_F \Gamma)$ is the identity.
+\end{cor}
 
+Recall that if $A$ is a unital $\Gamma$-algebra, its state space $S(A)$ is convex compact $\Gamma$-space.
+
+\begin{prop}[Gleason] \label{Gleason}
+Let $Z \subset S(A)$ be a $\Gamma$-invariant closed convex subspace, which is minimal w.r.t. these properties. (Such a thing exists by Zorn's lemma.) Then
+\[\partial_{ex}Z = \{ \phi \in Z \ | \ \phi \text{ is not a non trivial convex combination of anything in } Z\}\]
+is a $\Gamma$-boundary.
+\end{prop}
+ 
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[scale=2]
+
+\draw [ultra thick, fill=blue!20] (2.5,0.5) circle (0.5);
+    
+\draw [ultra thick, draw=none, fill=blue!20]
+       (0,0) -- (1,0) -- (0.5,0.866) -- cycle;
+\draw  (0,0) node {$\bullet$};
+\draw  (1,0) node {$\bullet$};
+\draw  (0.5,0.866) node {$\bullet$};
+\end{tikzpicture}
+\caption{Two examples with $Z$ in blue and $\partial_{ex}Z $ in black.}
+\end{figure}
+
+\begin{proof}
+There is a barycenter map $\beta : Prob(Z) \rightarrow Z$ such that 
+\[\int_Z f d\mu = f(\beta(\mu)) \quad \forall f\in C(Z) \text{ affine}.\]
+Indeed, if $\mu = \delta_z$, $\beta(\mu) = z$ and if $\mu = \sum \alpha_i \delta_{z_i}$ with $0\leq \alpha_i \leq 1$ and $\sum \alpha_i =1$, then $\beta(\mu) = \sum \alpha_i z_i$. Finite convex combinations are weak-$*$ dense in $Prob(Z)$ by the Hahn-Banach separation theorem. As $\beta$ is weak-$*$ continuous, and affine so uniformly weak-$*$ continuous, it extends to the whole space $Prob(Z)$.\\
+
+Note: $\beta$ is $\Gamma$-equivariant continuous and satisfies $\beta(\mu)=z\in \partial_{ex} Z$ iff $\mu = \delta_z$.\\
+
+Then, for any $\mu \in Prob(Z)$,
+\[\beta(\overline{conv(\Gamma\mu)}) = \overline{conv (\Gamma \beta(\mu))}= Z,\]
+the first equality coming from continuity, $\Gamma$-equivariance and affinity. Now, $\partial_{ex} Z$ is minimal, and if $\mu \in \partial_{ex} Z$, then 
+\[A FINIR\]
+\end{proof}
+
+We are now ready for the main result of this section.\\
+
+\begin{thm}[Kalantar-Kennedy]
+$C(\partial_F \Gamma)$ is $\Gamma$-injective.
+\end{thm}
+
+\begin{proof}
+First, observe that $l^\infty(\Gamma)$ is $\Gamma$-injective. Let indeed $A\subset B$ be an inclusion of $C^*$-algebras and $\phi: A \rightarrow l^\infty (\Gamma)$ a $*$-homomorphism. Then $ev_{e}\circ \phi$ is a state on $A$, so it extends to a state $\Psi$ on $B$. Define $\tilde \phi: B \rightarrow l^\infty (\Gamma)$ by 
+\[\tilde \phi (b)(\gamma) = \Psi (\gamma^{-1}. b).\]
+Then $\Psi$ is a UCP $\Gamma$-equivariant map that extends $\phi$.\\
+
+Now, producing ucp equivariant maps
+\[\begin{tikzcd} C(\partial_F \Gamma) \arrow{r}{\alpha} & l^\infty(\Gamma) \arrow{r}{\beta} & C(\partial_F \Gamma) \end{tikzcd} \] 
+is sufficient to conclude, as their composition must be the identity by corollary \ref{Unicity}.\\
+
+Define $\alpha : C(\partial_F \Gamma) \rightarrow l^\infty (\Gamma) $ by fixing $\mu\in Prob(\partial_F \Gamma)$ and set 
+\[\alpha(f)(\gamma) = \mu (\gamma^{-1}.f).\]
+By Gleason's theorem \ref{Gleason}, there is a $\Gamma$-boundary $X\subset S(l^\infty (\Gamma)) $. By universal property of $\partial_F \Gamma$, we have an equivariant surjection $\partial_F \Gamma \twoheadrightarrow X \subset S(l^\infty (\Gamma))$. By duality, we get a $\Gamma$-equivariant ucp map
+\[\Psi : l^\infty (\Gamma) \rightarrow C(\partial_F \Gamma)\]
+and we are done.
+\end{proof}
+
+As a final remark, one can point out that this last proof used the following useful fact: if $B$ is injective and $\phi: A \rightarrow B$ is a split injective $\Gamma$-ucp map, then $A$ is injective. We use this with $A=C(\partial_F \Gamma)$ and $B=l^\infty(\Gamma)$.  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Dynamical characterization of $C^*$-simplicity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
