@@ -1,0 +1,156 @@
+\documentclass{article}
+\usepackage{amsfonts, graphicx, multicol, amssymb, amsmath}
+%usepackage{ulem}
+\usepackage[left=.4in,top=.4in,right=.4in,nohead,nofoot]{geometry}
+\newcommand{\example}{\subsubsection*{Example}}
+
+
+\newcommand\tr{\textrm{tr}}
+\newcommand{\vecxx}[2]{\begin{bmatrix} #1\\ #2\\ \end{bmatrix}}
+\newcommand{\vecxxx}[3]{\begin{bmatrix} #1\\ #2\\ #3 \end{bmatrix}}
+\newcommand{\vecxxxx}[4]{\begin{bmatrix} #1\\ #2\\ #3\\ #4 \end{bmatrix}}
+
+\newcommand{\svecxx}[2]{\left[\begin{smallmatrix} #1\\ #2\\ \end{smallmatrix}\right]}
+\newcommand{\svecxxx}[3]{\left[\begin{smallmatrix} #1\\ #2\\ #3 \end{smallmatrix}\right]}
+\newcommand{\svecxxxx}[4]{\left[\begin{smallmatrix} #1\\ #2\\ #3\\ #4 \end{smallmatrix}\right]}
+
+\newcommand\matxx[4]{\begin{bmatrix}#1 & #2\\ #3 & #4\end{bmatrix}}
+\newcommand\matxxx[9]{\begin{bmatrix}#1 & #2 & #3\\ #4& #5 & #6\\ #7 & #8 & #9\end{bmatrix}}
+
+\newcommand\diagxx[2]{\begin{bmatrix}#1 & 0\\ 0 & #2\end{bmatrix}}
+\newcommand\diagxxx[3]{\begin{bmatrix}#1 & 0 & 0\\ 0& #2 & 0\\ 0 & 0 & #3\end{bmatrix}}
+\newcommand\idxx{\begin{bmatrix}1 & 0\\ 0 & 1\end{bmatrix}}
+\newcommand\idxxx{\begin{bmatrix}1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1\end{bmatrix}}
+\newcommand\idxxxx{\begin{bmatrix}1 & 0 & 0 & 0\\ 0 & 1 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1\end{bmatrix}}
+
+\newcommand\bR{\mathbb{R}}
+\newcommand\bC{\mathbb{C}}
+
+
+\begin{document}
+
+%%%%%HEADING
+\noindent.\hrulefill.\\
+\begin{minipage}{0.5\textwidth}
+\noindent \sc{Math 307: Midterm 1}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\flushright \sc{Reference: Chapter 1 and 2, Peterson, Sochaki,\\ \emph{Linear Algebra and Differential Equations}.}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\vskip 0.2in
+Name:\\
+%\noindent ID Number:\\
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\flushright Score: \hspace{2in}
+\end{minipage}
+\vskip 0.25in
+\hrule
+
+%%%%HEADING
+\thispagestyle{empty}
+\vskip 0.1in
+\begin{center}
+\fbox{Note: Notes and calculators are forbidden. Phones must be turned off and closed books.}\\
+Show all your work, circle or box your answers. Write sentences and explain your line of thought.
+\end{center}
+\vskip .15in
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%        Questions       %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+\item \textbf{General Knowledge}
+\begin{enumerate}
+\item Which matrices amongst the following are in echelon form? When a matrix is not in echelon form, justify your answer.
+ \[\begin{split}
+ A =\begin{pmatrix} 1 & 0 & 3 \\ 0 & 1 & 1 \\ 0 & 0 & 0 \end{pmatrix} & \  B =\begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & 3 \\ 0 & 0 & 1 \end{pmatrix} \\
+C =\begin{pmatrix} 1 & 0 & 2 \\ 0 & 1 & 4 \\ 1 & 0 & 0 \end{pmatrix}  & \  D =\begin{pmatrix} 1 & 0 & -2 \\ 0 & 1 & -1 \\ 0 & 0 & 0 \end{pmatrix} \\
+\end{split}\]
+
+\vskip 1in
+
+\item Recall the three steps one has to do to conduct the Gaussian Elimination algorithm (also called the Row Reduction algorithm). 
+
+\vskip 3in
+
+\item Let $V$ and $W$ be two finite-dimensional vector spaces. Recall the dimension formula for a linear map $T: V \rightarrow W$.
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%        Problems       %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\item 
+\begin{enumerate}
+\item If possible, find the inverse of the following matrix:
+\[\begin{pmatrix}
+2 & 1 & 3 \\
+2 & 1 & 1 \\
+4 & 5 & 1 \\
+\end{pmatrix}.\]
+
+\vskip 3in
+
+\item Solve the system:
+\[ \left\{ 
+\begin{array}{ccc} 
+2x + y + 3 z & = & 6 \\
+2x + y +   z & = & -12 \\
+4x + 5y + z  & = & 3 \\
+\end{array}
+\right.
+\]
+\end{enumerate}
+
+\newpage
+
+\item Determine if the following matrices are invertible. If it is the case, compute the inverse.
+\begin{enumerate}
+\item \[ A =\begin{pmatrix} 2 & 1 & 3 \\ 1 & -1 & 1 \\ 1 & 1 & 2 \end{pmatrix}\]
+\item \[ B =\begin{pmatrix} 1 & -2 & 2 \\ 2 & -3 & 1 \\ 1 & -1 & -1\end{pmatrix} \]
+\end{enumerate}
+
+\vskip 3in
+
+\item Use Cramer's rule to solve the following system:
+ 
+\[\left\{\begin{array}{ccc}
+x+2y  & = & 3 \\
+2x-3y  & = & 5 \\
+\end{array}\right.\]
+\newpage
+
+\item Give a basis for the image and kernel of the following matrices. 
+\begin{enumerate}
+\item \[A= \begin{pmatrix} 1 & -1 & 0 \\ 1 & 0 & 3 \\ 2 & 0 & 6 \end{pmatrix} \]
+\vskip 3in
+\item \[B= \begin{pmatrix} 1 & 0 & 2 \\ 0 & 1 & 1 \\ -1 & -1 & -3 \end{pmatrix} \]
+\end{enumerate}
+
+\newpage
+\item Let  \[ V = \{ \begin{pmatrix} x \\ y \\ z \end{pmatrix}\in \mathbb{R}^3 \text{ s.t. } 4x+3y+2z =0\}.\]
+\begin{enumerate}
+\item Show that $V$ is a subspace of $\mathbb{R}^3$.
+\item Find a basis for $V$. (And justify your answer)
+\item What is the dimension of $V$?
+\end{enumerate}
+
+	\thispagestyle{empty}
+%	\vskip 0.1in
+%\vskip 1.5in
+
+	\thispagestyle{empty}
+%\vskip 0.1in
+\end{enumerate}
+\end{document}

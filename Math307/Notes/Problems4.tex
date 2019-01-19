@@ -1,0 +1,79 @@
+\section{Problems}
+
+\begin{Pb}
+Falling object.\\
+
+An object of mass $m$ is falling with velocity $v$. We take into account the force exerted by gravity $-mg$, and the air drag $-\alpha v$. 
+\begin{enumerate}
+\item Apply the FPD to find the equation satisfied by $v$: \[v' = g-\frac{\alpha}{m}v.\]
+\item Solve the equation.
+\end{enumerate}
+\end{Pb}
+
+\begin{Pb}
+Solve the following nonhomogeneous linear differential equations.
+\begin{enumerate}
+\item $y' + y = \sin(t)$,
+\item $y' + 4y = \tan(2t)$, \\
+\ \\
+\textbf{Hint:} \[\int \frac{dt}{cos(2t)} = \int\frac{du}{1-u^2}\]
+where we use the half-angle parametrization $u = \tan (t/2) $.
+\item $(1+t^2 ) y' = ty + (1+t^2)$,
+\item $(t+1) y' + ty = (t+1)^2$.
+\end{enumerate}
+\end{Pb}
+
+\begin{Pb} 
+Solve the following differential equations. Recall that we saw their meaning and their derivation in class.
+\begin{enumerate}
+\item Free fall with air drag
+\[v' + \frac{\alpha}{m} v = g,\]
+\item Linearized pendulum equation
+\[\theta'' + \frac{g}{L}\theta = 0\]
+\item Logistic equation for growth model in population dynamics
+\[P' = r(1-\frac{P}{K}) P. \]
+\item Spring mass equation
+\[x'' + \frac{k}{m}x = k L_0\]
+\item Oscillation with friction
+\[x'' +\alpha x'+ \frac{k}{m}x = 0 \]
+\end{enumerate}
+\end{Pb}
+
+\newpage
+\begin{Pb}
+Solve the following linear differential systems.
+\begin{enumerate}
+\item \[\left\{\begin{split}
+x' & = 3x +y-z\\
+y' & = 2y + z\\
+z' & = 2z\\
+\end{split}\right.\]
+\item \[Y' = \begin{pmatrix} 1 & 2 \\ -1 & 4 \end{pmatrix} Y + \begin{pmatrix}2 \\ t\end{pmatrix}\]
+\item \[\left\{\begin{split}
+x' & = 2tx -y +t \cos t \\
+y' & = x + 2ty + t \sin t\\
+\end{split}\right.\]
+Hint: for the homogeneous solution, the change of variable 
+\[\left\{\begin{split}
+u & = xe^{t^2} \\
+v & = ye^{t^2} \\
+\end{split}\right.\]
+can be useful.
+\item \[Y' = \begin{pmatrix} 4 & 2 \\ -1 & 1 \end{pmatrix} Y + \begin{pmatrix} \sin t \\ \cos t\end{pmatrix}\]
+\end{enumerate} 
+\end{Pb}
+
+\begin{Pb}
+Convert the following linear differential equations into first a order system of linear differential equations. 
+\begin{enumerate}
+\item $y'' + 3 y' +2y =0$
+\item $y''' +4y'' -y' -4y =0 $
+\item $y'' - y' -2y = \sin (t)$
+\item Convert the following system of linear differential equations into a first order one
+\[\left\{\begin{split}
+x'' & = x+y \\
+y'' & = x+ x' + y + y' \\
+\end{split}\right.\]
+\end{enumerate}
+\end{Pb}
+

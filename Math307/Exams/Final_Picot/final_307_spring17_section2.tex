@@ -1,0 +1,200 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb} % amscd, syntonly
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{eufrak}  % redundant if amsfonts package is used
+\usepackage{amsfonts}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage[dvips]{graphics}
+%\usepackage{geometry}
+%\geometry{top=3cm, bottom=1cm}% left=''longueur '', right=''longueur''
+\usepackage{multicol}
+\setlength{\columnsep}{1.5cm}
+\setlength{\columnseprule}{0.2pt}
+\addtolength{\textwidth}{7cm}
+\addtolength{\oddsidemargin}{-3.8cm}
+\addtolength{\textheight }{1.5cm} 
+\usepackage{fancyhdr}
+\usepackage{comment}
+\setlength{\topmargin}{-50pt} % Pas de marge en haut
+\fancypagestyle{garde}{% 
+\pagestyle{fancy}
+\fancyhead[LO]{Last name, first name, ID number : }
+\fancyhead[RO]{Score: \hskip.5cm /50}
+\fancyhead[CO]{\textbf{Final Exam, Math 307, section 1, Spring 2017 \vskip.3cm}}
+%\renewcommand{\headrulewidth}{0cm}
+}
+
+\begin{document}
+
+\thispagestyle{garde}
+\vskip 1cm
+
+\begin{enumerate}
+
+
+\item (22 points)Let's consider the non-homogeneous first order linear differential system
+\begin{equation*}
+  \left\{
+        \begin{array}{l}
+       y_1'(t)=-4y_1(t)-3y_2(t)+3y_3(t)\\
+       y_2'(t)=3y_1(t)+2y_2(t)-3y_3(t)+e^t\\
+       y_3'(t)=-3y_1(t)-3y_2(t)+2y_3(t).\\
+        \end{array}
+    \right.
+\end{equation*}
+
+
+where 
+
+\begin{enumerate}
+\item (1 point) Write the system in the matrix form $Y'(t)= AY(t)+G(t)$.
+\item (6 points) Find a diagonal matrix $D$ and an invertible matrix $P$ such that $D=P^{-1}AP$.
+\item (2 points) Find the general solution to the homogeneous system $Z'(t)=DZ(t)$.
+\item (6 points) Use the result of the previous question to find the general solution $Y_H(t)$to the homogeneous system $Y'(t)=AY(t)$ and find a fundamental set $Y_1(t),\ Y_2(t),\ Y_3(t)$ of solutions to this system.
+\item (6 points) Using the matrix $M(t)=[Y_1(t) \ Y_2(t) \ Y_3(t)]$, compute a particular solution $Y_p(t)$ to the non-homogeneous system $Y'(t)= AY(t) + G(t)$.
+\item (1 point) Use the result of the previous question to find the general solution to the non-homogeneous system $Y'(t)= AY(t) + G(t)$.   
+\end{enumerate}
+
+%\begin{comment}
+\underline{Solution}
+\begin{enumerate}
+\item Y'(t)= AY(t) + G(t) with $A= \begin{pmatrix} -4& -3& \phantom{-}3 \\ \phantom{-}3 & \phantom{-}2& -3 \\ -3& -3& \phantom{-}2\\ \end{pmatrix}$ and $G(t)=\begin{pmatrix} 0 \\ e^t \\0  \end{pmatrix}$.
+\item  $D= \begin{pmatrix} -1& \phantom{-} 0 & \phantom{-} 0 \\ \phantom{-}0&-1 &\phantom{-}0 \\  \phantom{-}0&  \phantom{-}0&  \phantom{-}2 \end{pmatrix}$,   $P= \begin{pmatrix}  \phantom{-} 1& \phantom{-} 0 & \phantom{-} 1 \\ \phantom{-} 0 &  \phantom{-} 1 &  -1 \\  \phantom{-}1&  \phantom{-} 1&  \phantom{-} 1 \end{pmatrix}$ and $P^{-1}= \begin{pmatrix}  \phantom{-} 2&  \phantom{-} 1 &  -1 \\ - 1 &  \phantom{-} 0 &\phantom{-} 1\\ -1 &  -1  & 1 \end{pmatrix}$
+
+\item $Z(t)= \begin{pmatrix} c_1e^{-t}\\c_2e^{-t}\\ c_3e^{2t} \end{pmatrix}$,  for  $c_1, \ c_2$ and $c_3$ 3 real constants.
+
+\item $Y_H(t)=PZ(t)=\begin{pmatrix} c_1e^{-t}+c_3e^{2t} \\c_2e^{-t}-c_3e^{2t} \\c_1e^{-t}+c_2e^{-t}+c_3e^{2t}  \end{pmatrix}$ for $c_1, \ c_2$  and $c_3$ 3 real constants. Thus
+\[
+Y_1(t)=\begin{pmatrix} e^{-t}\\0\\e^{-t}\end{pmatrix}, \ Y_2(t)=\begin{pmatrix} 0 \\ e^{-t} \\ e^{-t} \end{pmatrix}, \ Y_3(t)=\begin{pmatrix} \phantom{-}e^{2t} \\ -e^{2t} \\  \phantom{-}e^{2t}  \end{pmatrix}.
+\]
+
+\item $M(t)=\begin{pmatrix}  e^{-t} &0 & e^{2t}  \\0&e^{-t}&-e^{2t} \\e^{-t}&e^{-t} &e^{2t}\end{pmatrix} $, $ M^{-1}(t)=\begin{pmatrix} 2e^t& e^t & -e^{t} \\ -e^t &  0 & e^t\\ -e^{-2t} &  -e^{-2t} &  e^{-2t} \end{pmatrix} $, $\int M^{-1}(t) G(t)dt=\begin{pmatrix}\frac{e^{2t}}{2}\\ 0 \\ e^{-t} \end{pmatrix} $ so
+
+
+ \[ Y_p(t)=M(t)\int M^{-1}(t) G(t) dt=\begin{pmatrix}\frac{3e^t}{2}\\ -e^{t} \\ \frac{3e^t}{2} \end{pmatrix} \]
+
+
+\item The general solution to the non homogeneous system is 
+\[
+Y(t)=Y_H(t)+Y_p(t)=\begin{pmatrix} c_1e^{-t}+c_3e^{2t} +\frac{3e^t}{2}\\c_2e^{-t}-c_3e^{2t}-e^{t}\\c_1e^{-t}+c_2e^{-t}+c_3e^{2t}+\frac{3e^t}{2}  \end{pmatrix} 
+\]
+for $c_1, \ c_2$ and $c_3$ \text{ 3 real constants.}
+
+
+\end{enumerate}
+%\end{comment}
+
+\newpage
+
+
+ \item (9 points) Consider the homogeneous first order linear differential system
+\begin{equation*}
+  \left\{
+        \begin{array}{l}
+       y_1'(t)=y_1(t)-y_2(t)+y_3(t)\\
+       y_2'(t)=2y_2(t)+1y_3(t)\\
+       y_3'(t)=2y_3(t).\\
+        \end{array}
+    \right.
+\end{equation*}
+
+
+
+
+\begin{enumerate}
+\item (1 point) Write the system in the matrix form $Y'(t)= AY(t)+G(t)$.
+\item (2 points) Is the matrix $A$ diagonalizable? Explain your answer.
+\item (6 points) Find the general solution to the homogeneous system $Y(t)'= AY(t)$. 
+%(You will need to use the method of the integrating factor twice.)
+\end{enumerate}
+
+
+%\begin{comment}
+\underline{Solution}
+\begin{enumerate}
+\item Y'(t)= AY(t) 
+where $A= \begin{pmatrix}  \phantom{-}1&  -1& \phantom{-}1 \\ \phantom{-} 0& \phantom{-}2&  \phantom{-}1 \\ \phantom{-}0& \phantom{-}0&\phantom{-} 2\\ \end{pmatrix}$.
+\item The matrix $A$ has two eigenvalues which are 1 and 2. We find $E_2=\text{Span}\Big \lbrace   \begin{pmatrix}  -1\\ 1 \\ 0 \end{pmatrix}  \Big \rbrace$  and $E_1=\text{Span}\Big \lbrace   \begin{pmatrix}  1\\ 0 \\ 0 \end{pmatrix}  \Big \rbrace$. Therefore, $\text{dim}(E_1)+\text{dim}(E_2)=2\neq 3$ so $A$ is not diagonalizable. 
+\item From the third equation, we find $y_3(t)=c_3e^{2t}$. Plugging in the second equation and applying the method of the integrating factor, we find $y_2(t)=c_3te^{2t}+c_2e^{2t}$.  Plugging in the first equation and applying the method of the integrating factor once again, we get $y_1(t)=-c_3te^t+2c_3e^{2t}-c_2e^{2t}+c_1e^t$. Therefore, the general solution to the system is
+\[
+ Y(t)=\begin{pmatrix} -c_3te^{2t}+2c_3e^{2t}-c_2e^{2t}+c_1e^t\\ c_3te^{2t}+c_2e^{2t}\\ c_3e^{2t} \end{pmatrix}.
+\]
+for $c_1, \ c_2$ and $c_3$ \text{ 3 real constants.}
+\end{enumerate}
+%\end{comment} 
+
+\newpage
+
+\item (11 points) Let $T$ be the transformation
+\begin{align*}
+T:P_2 &\longrightarrow P_2\\
+ax^3+bx^2+cx+d &\longrightarrow (c+d)x^3+bx^2 -c-d
+\end{align*}
+\begin{enumerate}
+\item (1 points) Show that $T$ is a linear transformation.
+\item (4 points) Find a basis for $\text{Ker}(T)$ and the dimension of  $\text{Ker}(T)$.
+\item (3 points) Consider the basis $\alpha = \lbrace x^3+x^2, \ x^3-1, \ x+1, \ x^2+x  \rbrace$. Find $[T]^{\alpha}_{\alpha}.$
+\item (3 points) Let $p$ be the polynomial function in $P_3$ whose coordinate vector relatively to $\alpha$ is 
+\[ [p]_{\alpha}=\begin{pmatrix} 1\\ 2\\ -1\\ 1 \end{pmatrix}.\]
+Find $[T(p)]_{\alpha}.$
+\end{enumerate}
+
+\begin{comment}
+\underline{Solution:}
+
+\begin{enumerate}
+\item Straightforward
+\item A polynomial function $ax^3+bx^2+cx+d$ is in  $\text{Ker}(T)$ if and only if 
+$c+d=0, \ b=0 \text{ and } -c-d=0$
+so if and only if $ \begin{pmatrix} a\\ b \\ c\\ d \end{pmatrix}=a\begin{pmatrix} 1\\ 0 \\ 0\\ 0 \end{pmatrix}+ c\begin{pmatrix} 0\\ 0 \\ 1\\-1 \end{pmatrix}.$ Therefore, the  basis for $\text{Ker}(T)$ consists of the polynomial functions $x^3$ and $x-1$.
+\item Set of four linearly independent vectors in a vector space of dimension four so basis.
+\item Find $[T]^{\alpha}_{\alpha}=\begin{pmatrix} \frac{1}{2}&0&0&\frac{1}{2}\\ -\frac{1}{2}&1&2&\frac{1}{2} \\ -\frac{1}{2}&0&0&-\frac{1}{2}\\ \frac{1}{2}&0&0&\frac{1}{2} \end{pmatrix}$.
+\item $[T(p)]_{\alpha}=\begin{pmatrix} 1 \\ 0 \\ -1 \\ 1 \end{pmatrix}$
+\end{enumerate}
+\end{comment}
+
+
+\newpage
+\item (13 points) Random questions. You will not get credits if you do not explain your answers.
+\begin{enumerate} 
+\item (3 points) Consider the linear transformation 
+\begin{align*}
+T:P_3 &\longrightarrow P_3\\
+ax^3+bx^2+cx+d &\longrightarrow (a+2c)x^3-2a-4c.
+\end{align*} Is the polynomial function $p(x)=2x^2+1$ an eigenvector of $T$? Explain your answer. \\
+%\underline{Solution:} Yes, since $T(p)=0$, it is an eigenvector associated with the eigenvalue $0$.
+
+\vspace{2.5cm}
+
+\item (3 points) Let $v$ be an eigenvector of a matrix $A$ associated with an eigenvalue $\lambda$ and let $c$ be a non-zero scalar. Is the vector $c.v$ an eigenvector of $A$ associated with $\lambda$? \\
+%\underline{Solution:} Yes, since $A(c.v)=c.Av=c\lambda v=\lambda.cv$.
+
+ \vspace{2.5cm}
+
+
+\item (3 points) Let $v_1$ and $v_2$ be two linearly independant vectors in a vector space $V$ and let $c_1$ and $c_2$ be two scalars. What is the dimension of $\text{Span}\lbrace v_1,v_2, c_1 v_1,c_1 v_1+c_2 v_2 \rbrace$?
+ \\
+%\underline{Solution:} The dimension is 2 since $\text{Span}\lbrace v_1,v_2, \alpha v_1,\alpha v_1+\beta v_2 \rbrace$=$\text{Span}\lbrace v_1,v_2\rbrace$ 
+
+\vspace{2.5cm}
+
+\item (3 points) Find two basis $\alpha$ and $\beta$ for $\mathbb{R}^2$ such that the matrix $\begin{pmatrix} 1 &1 \\ -1 & 1 \end{pmatrix}$ is the change of basis matrix from $\alpha$ to $\beta$.\\
+%\underline{Solution:} $\alpha$ is the canonical basis and $\beta= \begin{pmatrix} 1 &1\end{pmatrix}, \  \begin{pmatrix} -1 & 1 \end{pmatrix}$. 
+
+\vspace{2.5cm}
+
+
+\item (1 point) Write a grammatically correct statement, about linear algebra or differential equations, that you learned this semester. You are not allowed to use any mathematical symbols. 
+ \\
+
+\vspace{2cm}
+
+\end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}

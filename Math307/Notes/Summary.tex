@@ -1,0 +1,81 @@
+\section{Linear systems}
+
+Solving $AX = B$.\\
+
+The space of solutions is the space of vectors of the type
+\[X= c_1 v_1 + c_2 v_2 + ... + c_k v_k + X_p \quad c_1,...,c_k \in \R,\]
+where $\{ v_1, v_2,...,v_k\}$ is a basis of $Ker(A)= NS(A)$, and $X_p$ is a particular solution. To compute a basis of the kernel, and a particular solution:
+\begin{itemize}
+\item[$\bullet$] row-reduce $A$ in echelon form $E$: we get $P$ invertible (product of elementary matrices corresponding to the row operations) such that \[PA = E\]
+\item[$\bullet$] the leading ones correspond to fixed variables, i.e. vectors that form a basis of $Im(A)= CS(A)$, that we can use to get vectors $X_1,...,X_{n-k}$ in $\R^m$ such that $\{AX_1,...,AX_{n-k}\}$ is a basis of $Im(A)$;
+\item[$\bullet$] if $B = \beta_1 A X_1 + ... + \beta_{n-k} A X_{n-k}$, then $X_p = \beta_1 X_1 + ... + \beta_{n-k} X_{n-k}$ is a particular solution;
+\item[$\bullet$] the free variables give a basis $\{v_1, ... ,v_k\}$ of $Ker(A)$.    
+\end{itemize}
+
+\section{Differential linear equations}
+
+Diagonalizable, Triangular, Jordan block,...\\
+
+Complex coefficients?\\
+
+High order to first order.\\
+
+\section{Problems}
+
+\begin{Pb}
+Solve the following equations.
+\begin{enumerate}
+\item \[\left\{\begin{split}
+x' & = -16 x +45 y + \cos (t)\\
+y' & = -6 x + 17 y + \sin (t)\\
+\end{split}\right.\]
+
+\item \[\left\{\begin{split}
+x' & = x +2y+3z + e^{3t}\\
+y' & = y + 2z + e^{2t} \\
+z' & = z + e^{t}\\
+\end{split}\right.\]
+
+\item \[\left\{\begin{split}
+x +y+z & = 3 \\
+x -y+z & = 1\\
+x+z & = 2\\
+\end{split}\right.\]
+
+\item \[\left\{\begin{split}
+x' & =  x +y\\
+y' & = -x+3y\\
+\end{split}\right.\] 
+
+\end{enumerate} 
+\end{Pb}
+
+\textbf{Solutions:} \\
+
+1. $A$ has two distinct eigenvalues $-1$ and $2$, hence is diagonalizable. We find the corresponding eigenvectors 
+\[v_{-1}= \begin{pmatrix} 3 \\ 1 \end{pmatrix} \quad v_{2}= \begin{pmatrix} 5 \\ 2 \end{pmatrix}, \]
+so that 
+\[P = \begin{pmatrix} 3 & 5 \\ 1 & 2 \end{pmatrix} \quad M= \begin{pmatrix} 3e^{-t} & 5e^{2t} \\ e^{-t} & 2e^{2t}\end{pmatrix}.\]
+A particular solution is given by 
+\[M \int M^{-1}B dt = \]
+so that the general solution is 
+\[X =  \begin{pmatrix} 3c_1 e^{-t} + 5 c_2 e^{2t} + \\ c_1 e^{-t}+ c_2 2e^{2t} + \end{pmatrix}\]
+where $c_1, c_2$ are any two constants.\\
+
+2. Top to bottom.\\
+
+3. Row reduction.\\
+
+4. $A$ has eigenvalue $2$ with multiplicity $2$, and the eigenspace has dimension $1$ (it is spanned by $v= \begin{pmatrix} 1 \\ 1 \end{pmatrix}$): $A$ is not diagonalizable.\\
+
+Let us call $N= A -2 I_2 = \begin{pmatrix} -1 & 1 \\ -1 & 1\end{pmatrix}$, then a simple computation shows $N^2 = 0$, which means 
+\[A^2 -4 A +4I_2 = 0.\]
+Let us take any vector that is NOT in $E_2 = Ker(A-2I_2)= \text{ Span }\{v\}$, for instance $u=u_1 =  \begin{pmatrix} 0 \\ 1 \end{pmatrix}$, and set $u_2 = Nu_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}$. Notice that $u_2 = v$. Then by the previous relation 
+\[0=A^2 u_1 -4 Au_1 +4u_1 = A(Au_1 - 2u_1) -2(A u_1 - u_1) +2u_1 \]
+i.e. $A v = 2v + u$. As $Au=v$, the matrix of $A$ in the basis $\{v,u\}$ (in that order!) is 
+\[\begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix},\]
+which is to say that
+\[P^{-1}AP  = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix}\]
+with $P = \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix}$.\\
+
+

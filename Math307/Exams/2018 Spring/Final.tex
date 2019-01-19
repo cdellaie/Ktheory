@@ -1,0 +1,201 @@
+\documentclass{article}
+\usepackage{amsfonts, graphicx, multicol, amssymb, amsmath}
+%usepackage{ulem}
+\usepackage[left=.4in,top=.4in,right=.4in,nohead,nofoot]{geometry}
+\newcommand{\example}{\subsubsection*{Example}}
+
+
+\newcommand\tr{\textrm{tr}}
+\newcommand{\vecxx}[2]{\begin{bmatrix} #1\\ #2\\ \end{bmatrix}}
+\newcommand{\vecxxx}[3]{\begin{bmatrix} #1\\ #2\\ #3 \end{bmatrix}}
+\newcommand{\vecxxxx}[4]{\begin{bmatrix} #1\\ #2\\ #3\\ #4 \end{bmatrix}}
+
+\newcommand{\svecxx}[2]{\left[\begin{smallmatrix} #1\\ #2\\ \end{smallmatrix}\right]}
+\newcommand{\svecxxx}[3]{\left[\begin{smallmatrix} #1\\ #2\\ #3 \end{smallmatrix}\right]}
+\newcommand{\svecxxxx}[4]{\left[\begin{smallmatrix} #1\\ #2\\ #3\\ #4 \end{smallmatrix}\right]}
+
+\newcommand\matxx[4]{\begin{bmatrix}#1 & #2\\ #3 & #4\end{bmatrix}}
+\newcommand\matxxx[9]{\begin{bmatrix}#1 & #2 & #3\\ #4& #5 & #6\\ #7 & #8 & #9\end{bmatrix}}
+
+\newcommand\diagxx[2]{\begin{bmatrix}#1 & 0\\ 0 & #2\end{bmatrix}}
+\newcommand\diagxxx[3]{\begin{bmatrix}#1 & 0 & 0\\ 0& #2 & 0\\ 0 & 0 & #3\end{bmatrix}}
+\newcommand\idxx{\begin{bmatrix}1 & 0\\ 0 & 1\end{bmatrix}}
+\newcommand\idxxx{\begin{bmatrix}1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1\end{bmatrix}}
+\newcommand\idxxxx{\begin{bmatrix}1 & 0 & 0 & 0\\ 0 & 1 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1\end{bmatrix}}
+
+\newcommand\bR{\mathbb{R}}
+\newcommand\bC{\mathbb{C}}
+
+
+\begin{document}
+
+%%%%%HEADING
+\noindent.\hrulefill.\\
+\begin{minipage}{0.5\textwidth}
+\noindent \sc{Math 307: Final}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\flushright \sc{Reference: Chapter 1 to 6, Peterson, Sochaki,\\ \emph{Linear Algebra and Differential Equations}.}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\vskip 0.2in
+Name:\\
+%\noindent ID Number:\\
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\flushright Score: \quad \quad \quad \quad /68 \hspace{2in}
+\end{minipage}
+\vskip 0.25in
+\hrule
+
+%%%%HEADING
+\thispagestyle{empty}
+\vskip 0.1in
+\begin{center}
+\fbox{Note: Notes and calculators are forbidden. Phones must be turned off and closed books.}\\
+Show all your work, circle or box your answers. Write sentences and explain your line of thought.
+\end{center}
+\vskip .15in
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%        Questions       %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+\item \textbf{General Knowledge} (10 points) You will not get credits if you do not explain your answers.
+\begin{enumerate}
+
+\item (3 points) Consider the linear transformation 
+\[T: \left\{\begin{array}{rcl}
+{\mathbb R}_3 [X] & \rightarrow & {\mathbb R}_3 [X]\\
+ax^3+bx^2+cx+d & \mapsto & (a+2c)x^3-2a-4c.
+\end{array}\right.\] 
+Is the polynomial function $p(x)=2x^2+1$ an eigenvector of $T$? Explain your answer. \\
+%\underline{Solution:} Yes, since $T(p)=0$, it is an eigenvector associated with the eigenvalue $0$.
+
+\vspace{2.5cm}
+
+\item (3 points) Let $v$ be an eigenvector of a matrix $A$ associated with an eigenvalue $\lambda$ and let $c$ be a non-zero scalar. Is the vector $c.v$ an eigenvector of $A$ associated with $\lambda$? \\
+%\underline{Solution:} Yes, since $A(c.v)=c.Av=c\lambda v=\lambda.cv$.
+
+ \vspace{2.5cm}
+
+
+\item (3 points) Let $v_1$ and $v_2$ be two linearly independant vectors in a vector space $V$ and let $c_1$ and $c_2$ be two scalars. What is the dimension of $\text{Span}\lbrace v_1,v_2, c_1 v_1,c_1 v_1+c_2 v_2 \rbrace$?
+ \\
+%\underline{Solution:} The dimension is 2 since $\text{Span}\lbrace v_1,v_2, \alpha v_1,\alpha v_1+\beta v_2 \rbrace$=$\text{Span}\lbrace v_1,v_2\rbrace$ 
+
+\vspace{2.4cm}
+
+%\item (3 points) Find two basis $\alpha$ and $\beta$ for $\mathbb{R}^2$ such that the matrix $\begin{pmatrix} 1 &1 \\ -1 & 1 \end{pmatrix}$ is the change of basis matrix from $\alpha$ to $\beta$.\\
+%\underline{Solution:} $\alpha$ is the canonical basis and $\beta= \begin{pmatrix} 1 &1\end{pmatrix}, \  \begin{pmatrix} -1 & 1 \end{pmatrix}$. 
+
+\vspace{2.5cm}
+
+
+\item (1 point) Write a grammatically correct statement, about linear algebra or differential equations, that you learned this semester. You are not allowed to use any mathematical symbols. 
+ \\
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%        Problems       %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\item (22 points)Let's consider the non-homogeneous first order linear differential system
+\begin{equation*}
+  \left\{
+        \begin{array}{l}
+       x'(t)=-4x(t)-3y(t)+3z(t)\\
+       y'(t)=3x(t)+2y(t)-3z(t)+e^t\\
+       z'(t)=-3x(t)-3y(t)+2z(t).\\
+        \end{array}
+    \right.
+\end{equation*}
+
+\begin{enumerate}
+\item (1 point) Write the system in the matrix form $Y'(t)= AY(t)+G(t)$.
+\item (6 points) Find a diagonal matrix $D$ and an invertible matrix $P$ such that $D=P^{-1}AP$.
+\item (2 points) Find the general solution to the homogeneous system $Z'(t)=DZ(t)$.
+\item (6 points) Use the result of the previous question to find the general solution $Y_H(t)$to the homogeneous system $Y'(t)=AY(t)$ and find a fundamental set $Y_1(t),\ Y_2(t),\ Y_3(t)$ of solutions to this system.
+\item (6 points) Using the matrix $M(t)=[Y_1(t) \ Y_2(t) \ Y_3(t)]$, compute a particular solution $Y_p(t)$ to the non-homogeneous system $Y'(t)= AY(t) + G(t)$.
+\item (1 point) Use the result of the previous question to find the general solution to the non-homogeneous system $Y'(t)= AY(t) + G(t)$.   
+\end{enumerate}
+
+\newpage
+\
+\newpage
+
+\item (9 points) Consider the homogeneous first order linear differential system
+\begin{equation*}
+  \left\{
+        \begin{array}{l}
+       x'(t)=x(t)-y(t)+z(t)\\
+       y'(t)=2y(t)+z(t)\\
+       z'(t)=2z(t).\\
+        \end{array}
+    \right.
+\end{equation*}
+
+\begin{enumerate}
+\item (1 point) Write the system in the matrix form $Y'(t)= AY(t)+G(t)$.
+\item (2 points) Is the matrix $A$ diagonalizable? Explain your answer.
+\item (6 points) Find the general solution to the homogeneous system $Y(t)'= AY(t)$. 
+%(You will need to use the method of the integrating factor twice.)
+\end{enumerate}
+
+\newpage 
+\
+\newpage
+
+\item (12 points) Let $T$ be the transformation
+\[T: \left\{\begin{array}{rcl}
+{\mathbb R}_2 [X] & \rightarrow & {\mathbb R}_2 [X] \\
+ax^3+bx^2+cx+d &\mapsto & (c+d)x^3+bx^2 -c-d
+\end{array}\right.\]
+\begin{enumerate}
+\item (1 points) Show that $T$ is a linear transformation.
+\item (1 points) Write the matrix of $T$ in the canonical basis $\mathcal B = \{1,x,x^2, x^3\}$.
+\item (4 points) Find a basis for $\text{Ker}(T)$ and the dimension of  $\text{Ker}(T)$.
+\item (3 points) Consider the basis $\alpha = \lbrace x^3+x^2, \ x^3-1, \ x+1, \ x^2+x  \rbrace$. Write the matrix of $T$ in the basis $\alpha$, $Mat_\alpha^\alpha (T)$.
+\item (3 points) Let $p$ be the polynomial function in $P_3$ whose coordinate vector relatively to $\alpha$ is 
+\[ [p]_{\alpha}=\begin{pmatrix} 1\\ 2\\ -1\\ 1 \end{pmatrix}.\]
+Find the expression of $T(p)$ in the basis $\alpha$, i.e. $[T(p)]_{\alpha}$.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+
+\item (7 points) The goal is to solve the following Bernoulli equation
+\[y'+ 3y + \cos (t) y^2.\] 
+Suppose $y$ is never zero.
+\begin{enumerate}
+\item (3 points) First show that $x= \frac{1}{y}$ satisfies the non-homogeneous linear differential equation \[x' = 3x + \cos(t).\] 
+\item (3 points) Solve $x' = 3x + \cos(t)$.
+\item (1 points) Solve $y'+ 3y + \cos (t) y^2$.
+\end{enumerate}
+
+\newpage
+%^\vspace{3in}
+
+\item (8 points) The goal is to solve the following Ricatti equation
+\[y'= y^2 -5y +6.\] 
+\begin{enumerate}
+\item (1 points) Find two particular solutions. \textbf{Hint:} look for constant solutions $y_p=\alpha$. 
+\item (2 points) For each particular solution $y_p$, show that $z= y-y_p$ satisfies a Bernoulli equation.
+\item (4 points) Reduce both Bernoulli equation to a linear equation and solve it.
+\item (1 points) Give the general solution of $y'= y^2 -5y +6$. 
+\end{enumerate}
+\newpage
+\
+
+\newpage
+\
+
+
+\end{enumerate}
+\end{document}

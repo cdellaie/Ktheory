@@ -1,0 +1,125 @@
+\begin{itemize}
+\item What is a vector space? What are vectors and scalars?
+\item Can you name examples of vector spaces? $\R^n$, $M_{m,n}(\R)$, $F(a,b)$, $C[a,b]$,...
+\item What is a subspace of a vector space? 
+\item How to check that a subset $W \subset V$ is a subspace of $V$? Check that
+\begin{enumerate}
+\item $0\in W$,
+\item If $\alpha$ and $\beta$ are real numbers and $u$ and $v$ vectors in $W$, check that $\alpha u + \beta v \in W$.\\
+\end{enumerate} 
+
+\fbox{\begin{minipage}{0.9\textwidth}
+  \textbf{Redaction on an example:} \\
+Check that \[W = \{ f \in C[0,1] \text{ s.t. } f(0)=0\}\]
+is a subspace of the vector space $V=C[0,1]$.
+\begin{enumerate}
+\item The constant function equal to $0$ belongs to $W$ hence $0\in W$,
+\item If $\alpha$ and $\beta$ are real numbers and $u$ and $v$ vectors in $W$, $( \alpha u + \beta v ) (0) =  \alpha .u(0) + \beta .  v(0) =\alpha .0 + \beta .  0 =0 $
+hence $W$ is stable by linear combination.
+\end{enumerate}
+These two points ensures that $W$ is a subspace of $V$.
+\end{minipage}}\\
+\\
+
+\item What is a linear combination of a family $\{v_1,...,v_k\}$ of vectors?
+\[\sum_{i= 1}^k a_i v_i \quad a_i \in \R\]
+\item What is a spanning family?
+\item What is linear independence?
+\[\sum_{i= 1}^k a_i v_i = 0  \Rightarrow a_1 = a_2 = ... = a_k = 0\]
+\item A family $\{v_1,...,v_k\}$ is a basis of the vector space $V$ if it is \textbf{spanning} and \textbf{linearly independent}. All basis have the same number of vectors, and this number is defined as the dimension of $V$. 
+\item If $V$ is a vector space of dimension $n$, we write $dim(V) = n$. Then $V$ is essentially the same as $\R^n$.  
+
+\fbox{\begin{minipage}{0.9\textwidth}
+\begin{itemize}
+\item[$\bullet$] $ dim( \R^n ) = n $,
+\item[$\bullet$] $ dim( M_{m,n}(\R) ) = mn $,
+\item[$\bullet$] $ dim( \R_n[X] ) = n+1 $.
+\end{itemize}
+\end{minipage}}\\
+\\
+
+\item A linear map or application is a map $f: E \rightarrow F$ where $E$ and $F$ are two vector spaces, such that:
+\[f(\lambda x + \mu y) =  \lambda f(x) + \mu f(y) \quad x,y \in E, \lambda, \mu \in \R.\]
+The set of linear maps from $E$ to $F$ is denoted $\mathcal L(E,F)$. It is itself a vector space.
+\item Two important subspaces associated to $f$ are:
+\begin{enumerate}
+\item its kernel $ker(f) = \{ x\in E \text{ s.t. } f(x)=0\} $. It is a subspace of $E$,
+\item its image $Im(f) = \{Ax , \text{ for } x\in E\} \subseteq F$. It is a subspace of $F$.
+\end{enumerate} 
+\item Let 
+$ \mathcal B =\{v_1, ..., v_n\}$ a basis of $V$ and $ \mathcal B' =\{w_1, ..., w_m\}$ a basis of $W$, and $T: V \rightarrow W$ a linear map. The matrix of $T$ expressed in the basis $\mathcal B$ and $\mathcal B'$ is defined by 
+\[Mat(T)_{\mathcal B}^{\mathcal B'} = (a_{ij})_{ij}\]
+where $T(v_j) = \sum_{i=1}^m a_{ij }w_i$.
+\item \textbf{Some examples:}
+\begin{enumerate}
+\item The rotation of angle $\theta$ around the origin in the plane $R_\theta: \R^2\rightarrow \R^2$ has the following matrix in the canonical basis:
+\[\begin{pmatrix}  
+\cos(\theta) & -\sin(\theta) \\
+\sin(\theta) & \cos(\theta) \\
+\end{pmatrix}.\]
+\item The derivation $D: \R_2[X]\rightarrow \R_2[X]$ defined by $D(P)(x) = P'(x)$ has the following matrix in the canonical basis:
+\[\begin{pmatrix}  
+0 & 1 & 0 \\
+0 & 0 & 2 \\
+0 & 0 & 0 \\
+\end{pmatrix}.\]
+\item The linear map $T: \R_2[X]\rightarrow \R_2[X]$ defined by 
+\[T(P)(x) = (x^2+1)P''(x)- xP'(x) + 2P(x)\] 
+has the following matrix in the canonical basis:
+\[\begin{pmatrix}  
+2 & 0 & 2 \\
+0 & 1 & 0 \\
+0 & 0 & 2 \\
+\end{pmatrix}.\]
+\end{enumerate}
+\item How to give a basis for the image and the kernel of a matrix $A$ (or a linear map represented by a matrix)?\\
+
+\fbox{\begin{minipage}{0.9\textwidth}
+\begin{itemize}
+\item[$\bullet$] Row reduce $A$ to its echelon form $\tilde A$,
+\item[$\bullet$] For every column $\tilde C_j$ in $\tilde A$ containing a leading one, pick the corresponding column vector $C_j$ in $A$. These vectors form a basis of the image of $A$.  
+\item[$\bullet$] For every remaining column $\tilde C_j$ in $\tilde A$, express $\tilde C_j$ as a linear combination of the columns $\tilde C_i$ containing a leading one, so as to get a relation
+\[a_1 \tilde C_1 + ... +a_j \tilde C_j + ... + a_n \tilde C_n = 0, \]
+and form the $n$-vector \[\begin{pmatrix}a_1 \\ a_2 \\ ... \\ a_n\end{pmatrix}.\]
+These vectors form a basis of $ker(A)$. 
+\end{itemize}
+\end{minipage}}\\
+\\
+\item Dimension formula: for a linear map $T: V \rightarrow W$,
+\[ dim(V) =  dim (Ker (T)) + dim(Im(T))\]
+and for $A\in M_{m,n}(\R)$,
+\[ n =  dim (Ker (A)) + dim(Im(A)).\]
+\end{itemize}
+
+\section*{Back to systems of linear equations}
+
+Recall that a linear system \[Ax = b\] can have $0$, $1$ or infinitely many solutions. If $A\in M_{mn}(\R)$, the system has $n$ variables and $m$ equations. The concepts of linear algebra of the previous chapter can help us give a more satisfactory answer to the problem of describing solutions than just ``zero, one or a lot".\\
+
+A good analogy to remember is that of an interview for a job: a solution is a hirable candidate, whereas each equation represents a requirement that you (the hiring comittee) expect from the candidates. No requirement means you could hire anybody, hence a lot of solutions. Add equations, and the number of solutions drops down up until zero. \\
+
+To quantify how much solutions there are, we can use the concept of \textit{dimension}. Solutions live in $\R^n$, which means no equation gives a vector space of solutions of dimension $n$. Each time you add an equation, the dimension drops down by one, \textit{if the new equation is not in the span of the previous ones}. (Otherwise it stays the same.)\\
+
+Now to solve \[Ax=b\]
+one must describe $Ker(A)$ and $Im(A)$. 
+\begin{enumerate}
+\item if $b\notin Im(A)$: no solution;
+\item if $b\in Im(A)$, find a particular solution $x_0$ such that $A x_0=b $. Then $x-x_0\in Ker(A)$, which means that the space of solutions is the affine space
+\[x_0 + Ker(A),\]
+\end{enumerate}
+i.e. the vectors of the form $x_0+v$, $v\in Ker(A)$. In a sense, $Ker(A)$ quantifies the \textit{degrees of freedom} of the system. If $A$ has no kernel, there is only one solution, but as soon as this is not the case, the number of solutions is infinite. A better answer to the question ``How much solutions does the system have?" is then to give the dimension of $Ker(A)$.\\
+
+A last thing to remember is the idea that:
+\begin{itemize}
+\item[$\bullet$] $Ker(A)$ respresents the \textit{free variables} of the system,
+\item[$\bullet$] $Im(A)$ corresponds to the \textit{fixed variables}.
+\end{itemize}
+That can be seen when solving the system by row reducing its augmented matrix: the equivalent system in echelon form gives several things.
+\begin{itemize}
+\item[$\bullet$] each leading one gives a fixed variable,
+\item[$\bullet$] each column that does not contain a leading one gives a free variable.
+\end{itemize}
+With that correspondence in mind,
+\[ \text{Free variables } + \text{ Fixed variables } = \text{ Total variables} \]
+tranlates into
+\[dim( Ker(A)) + rk(A) =n .\]
+ 

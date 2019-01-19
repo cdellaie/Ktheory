@@ -1,0 +1,66 @@
+\documentclass[a4paper,12pt]{book}
+%\documentclass[a4paper]{report}
+\input{macro}
+
+\title{Math 307 \\
+\textbf{Linear algebra and differential equations}}
+\date{Fall 2017}
+\author{Clément Dell'Aiera}
+
+\begin{document}
+\maketitle
+
+\pagestyle{plain}
+
+\include{Motivation}
+\tableofcontents
+\newpage
+
+\pagestyle{fancy}
+\chapter{Matrices and determinant}
+\input{Chapter1}
+\newpage
+\input{Problems1}
+\newpage
+
+\pagestyle{empty}
+\include{Quizz1}
+
+\chapter{Vector spaces}
+\pagestyle{fancy}
+\input{Chapter2}
+\newpage
+\input{Problems2}
+
+\chapter{Linear transformations, eigenvalues and eigenvectors}
+\pagestyle{fancy}
+\input{Chapter3}
+\newpage
+\input{Problems3}
+
+\chapter{Systems of linear differential equations}
+\pagestyle{fancy}
+\input{Chapter4}
+\newpage
+\pagestyle{empty}
+\input{Problems4}
+
+\newpage
+\pagestyle{empty}
+%\input{Poll}
+
+\chapter{Summary}
+\pagestyle{fancy}
+\input{Summary}
+
+\chapter{Applications}
+\pagestyle{fancy}
+\input{Applications}
+
+%\pagestyle{empty}
+%\include{Quizz1}
+
+\bibliographystyle{plain}
+\bibliography{biblio} 
+
+\end{document}

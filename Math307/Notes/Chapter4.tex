@@ -1,0 +1,333 @@
+%\section{Theory}
+
+\begin{itemize}
+\item A system of linear differential equation is a system
+\[\left\{ \begin{split} 
+y_1' & = a_{11}(t) y_1 + ... + a_{1n}(t) y_n + b_1(t) \\
+y_2' & = a_{21}(t) y_1 + ... + a_{2n}(t) y_n + b_2(t) \\ 
+... & ... \\
+y_n' & = a_{n1}(t) y_1 + ... + a_{nn}(t) y_n + b_n(t) \\
+\end{split} \right. \]
+It can be rewritten \[Y' = A(t)Y +B(t),\]
+where $A(t)$ is the matrix $\begin{pmatrix} a_{11}(t) & ... & a_{1n}(t) \\
+						...	& ...  & ... \\
+                                            a_{n1}(t) & ... & a_{nn}(t) \end{pmatrix}$ and $B(t)$ the vector $\begin{pmatrix} b_1(t) \\ ... \\ b_n(t)\end{pmatrix}$.
+
+\item \textbf{A reminder:} solutions of $y' = a(t)y + b(t)$:  
+\begin{enumerate}
+\item Solve the homogenous equation \[y_h'=a(t)y_h,\] 
+i.e. $y_h=Ce^{\Psi(t)}$ where $\Psi(t)$ is any primitive (antiderivative) of $a$. 
+\item Find a particular solution $y_p$ by variation of parameters, i.e. look for a solution of the type $y_p=C(t)e^{\Psi(t)}$. $y_p$ is solution if $C'(t)= e^{-\Psi (t)}b(t)$, so that \[y_p = (\int_{t_0}^t e^{-\Psi (s)}b(s)ds ) e^{\Psi(t)}.\]
+\item General solution of the type $y_h+y_p$, i.e.:
+\[y(t) = Ce^{\Psi(t)} + (\int_{t_0}^t e^{-\Psi (s)}b(s)ds ) e^{\Psi(t)},\]
+where $C$ is a constant.
+Up to changing $t_0$, you can rewrite this as:
+\[y(t) = \int_{t_0}^t e^{ \int_s^t a(u) du}b(s)ds .\]
+\end{enumerate}
+
+\item Fact: The space of solution of a first order homogeneous system of linear differential equations in $n$ unknowns is a vector space of dimension $n$. A set of fundamental solutions for this equation is a basis of this vector space, that is $n $ functions $Y_1$, $Y_2$, ... , $Y_n$ that are linearly independant and satify the equation.
+\item To check that $n $ functions $Y_1$, $Y_2$, ... , $Y_n$ form a SFS, one must check that:
+\begin{enumerate}
+\item Each $Y_i$ satisfy the equation,
+\item The Wronskian of the familiy is not zero at at least one time $t$, where the Wronskian is the function:
+\[W(t) = \det (Y_1(t) | Y_2(t) | ... | Y_n(t) ).\]
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Linear systems}  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We want to solve systems of linear differential equations, that we will write in the form 
+\[X' = AX+ G\]
+were $X$ is a vector of differentiable functions
+\[X= \begin{pmatrix} x_1 \\ x_2 \\ ... \\ x_n \end{pmatrix},\]
+$A$ is a square $n$-matrix of continuous functions, and $G$ is a $n$-vector of continuous functions. While $A$ and $G$ are given, $X$ is unknow.\\
+
+If $G=0$, we say that the equation is homogeneous. In that case, describing the space of solution of the equation is equivalent to describing the kernel of the linear transformation
+\[\left\{\begin{array}{rcl} V & \rightarrow & V \\
+X & \mapsto & X' - AX - G\end{array}\right.\]
+define on the vector space $V= D([a,b], R^n)$ of $n$-vectors of differentiable functions, which has a priori no reason to be finite dimensional. We will see that is actually the case that the solution of such a system is always of dimension $n$. The goal of this chapter is actually to describe this space of solutions as precisely as possible. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Diagonalizable case \& Variation of parameters with sytems of DE} %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The previous section generalizes to systems if one is ready to use matrices. Consider the system
+\[X' = AX + B(t).\]
+We will suppose that $A$ is diagonalizable, and that $P^{-1}AP = D$, with $P$ invertible and $D = diag(\lambda_1 , ... , \lambda_n)$ a diagonal matrix. The eigenvalues are thus denoted $\lambda_i$ and the associated eigenvectors are $ v_{\lambda_i}$, i.e. \[Av_{\lambda_i} = \lambda_i v_{\lambda_i}.\]
+
+\fbox{\begin{minipage}{0.9\textwidth}
+  \textbf{Algorithm to linearize a system of autonomous differential equations:} 
+\begin{enumerate}
+
+\item \textbf{Homogenous equation} Solve $Y'_h = AY_h$ 
+	\begin{itemize}
+	\item[$\bullet$] Solve the diagonal system $Z' = DZ$, which gives you
+	\[Z(t)  = \begin{pmatrix} C_1 e^{\lambda_1 t } \\  C_2 e^{\lambda_2 t } \\ ... \\  C_n e^{\lambda_n t }\end{pmatrix},\] 
+	\item[$\bullet$] Give the homogeneous solution \[Y_h(t) = PZ(t) = C_1 e^{\lambda_1 t } v_{\lambda_1} + C_2 e^{\lambda_2 t } v_{\lambda_2} +... +C_n e^{\lambda_n 	t } v_{\lambda_n}, \]
+	\item[$\bullet$] The family $\{Y_1(t), Y_2(t), ... , Y_n(t)\}$ is a Set of Fundamental Solution (SFS), with $Y_i(t) = e^{\lambda_i t } v_{\lambda_i}$. Denote by 
+	\[M(t) = \begin{pmatrix} Y_1(t) & Y_2(t) & ... & Y_n(t) \end{pmatrix},\]
+	then $Y_h$ can be written as \[Y_h(t) = M(t) C\]
+	with $C= \begin{pmatrix} C_1 \\ C_2 \\ ... \\ C_n \end{pmatrix}$ a vector of constants.
+	\end{itemize}
+
+\item \textbf{VOP} Look for a particular solutions of the type $Y_p(t) = M(t)C(t)$. Then such a $Y_p$ is a solution if \[C(t) = \int M^{-1}(t) B(t)dt.\]
+	\begin{itemize}
+	\item[$\bullet$] Compute $M^{-1}(t)$,
+	\item[$\bullet$] Find an antiderivative of each component of $M^{-1}(t)B(t)$. \end{itemize}
+
+\item \textbf{General solution:} \[Y(t) = Y_h(t)+ Y_p(t).\]
+
+\end{enumerate}  
+\end{minipage}}\\
+\\ 
+ 
+A simple case that is non diagonalizable is the one of a triangular system, i.e. one of the type
+\[\left\{\begin{split}
+x' & = ax +by+ c z\\
+y' & = dy + ez\\
+z' & = fz\\
+\end{split}\right.
+\quad \text{or} \quad 
+\left\{\begin{split}
+x' & = fz\\
+y' & = dy + ez\\
+z' & = ax +by+ c z\\
+\end{split}\right. .
+\]
+In that case, no need for linear algebra: solve backwards (or forward in the second case), i.e. start with the linear homogeneous differential equation at the bottom (resp. at the top, solve it, substitute in the next equation and continue as long as you need to solve everything.\\
+
+A quick method to solve linear differential equations of one unknown is the integrating factor, i.e. rewriting the equation in a integrable form. The trick is, when solving 
+\[ y' = ay + b,\]
+to set $u = e^{-\int a(t)dt }$, which is called the integrating factor. Multipling the equation by $u$, we get
+\[(uy)' = uy' + u' y = u (y' - a y ) = ub,\]
+so that $y = e^{\int a(t)dt} \int e^{-\int a(t)dt}b(t)dt$. A nice remark is that this is nothing new: it is basically the variation of parameters starting halfway. \\
+
+A simple example to illustrate this: if one wants to solve  
+\[\left\{\begin{split}
+x' & = 3x +y\\
+y' & = 2y \\
+\end{split}\right. ,\]
+one first solve for $y$, so that $y= C_2 e^{2t}$, and $x$ is solution of $x'-3x = C_2 e^{2t}$. The integrating factor is $u = e^{-3t}$ and 
+\[uy = \int ub = \int  e^{-3t} C_2  e^{2t} dt = -C_2 e^{-t} + C_1.\]
+The general solution is
+\[\left\{\begin{split}
+x & =C_1 e^{3t} -C_2 e^{2t}.\\
+y & = C_2 e^{2t} \\
+\end{split}\right. .\]
+
+What is $M$? (the matrix one has to compute by stacking all the SFS) Another way to look at the solution is to say they are of the type
+\[C_1 \begin{pmatrix} e^{3t} \\ 0 \end{pmatrix} + C_2 \begin{pmatrix} -e^{2t} \\ e^{2t} \end{pmatrix},\] 
+hence the two vectors above form a SFS, and \[M = \begin{pmatrix} e^{3t} & -e^{2t} \\ 0 & e^{2t}\end{pmatrix}.\]
+
+This would be useful if one wants to solve 
+\[\left\{\begin{split}
+x' & = 3x +y + \cos t\\
+y' & = 2y + \sin t\\
+\end{split}\right. \]
+for instance. The homogenous system was just solve before. \\
+
+This actually gives a way to solve \textit{all linear systems of differential equations} as any matrix can be reduce into its Jordan form, so up to a change of basis, any such system is a collection of upper triangular systems.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Applications to high order linear differential equations}  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let's look at the homogeneous part of the differential equation describing the motion of mass $m$ suspended by a spring of resistance $k$
+\[y'' + \omega^2 y =0, \]
+or more generally an equaion of the type
+\[y^{(n)} = a_0 y + a_1 y' + a_2 y'' + \ ... \ + a_{n-1} y^{(n-1)}. \]
+Here $\omega = \sqrt{\frac{k}{m}}$.\\
+
+We know how to solve this:
+\begin{enumerate}
+\item Find the root of the characteristic polynomial
+\[p (x) = x^n -(a_0 + a_1 x + a_2 x^2 + \ ... \ + a_{n-1} x^{n-1}) ,\]
+so that \[p (x) = (x-\lambda_1)^{m_1} (x-\lambda_2)^{m_2} \ ... \ (x-\lambda_r)^{m_r}\]
+where all the $\lambda_i$ are disctincts (which means $\lambda_i$ is a root of multiplicity $m_i$).
+\item The general solution of the equation is of the form
+\[y(t) =\sum_{i=1}^r (C_{i,1} +C_{i,2}t + ... + C_{i,m_i}t^{m_i -1}  ) e^{\lambda_i t},\]
+which means there are $m_1+...+m_r = n$ constants.
+\end{enumerate}
+
+If one wants to prove that, one can reduce the linear equation above to the following linear system 
+\[Y' = C_p Y +G,\]
+where \[ C_p = \begin{pmatrix} 
+0   & 1   &     &   & & & &         \\
+    & 0   & 1   &   & & & &         \\
+    &     & 0   & 1 & & & &         \\
+    &     &     &   & ... & & &         \\
+    &     &     &   & & & &         \\
+    &     &     &   & & & 0 &  1       \\
+a_0 & a_1 & a_2 &   & ... & & a_{n-2} & a_{n-1} \\
+
+\end{pmatrix} \quad \text{and}\quad  G = \begin{pmatrix} 0 \\ 0 \\ ... \\ 0 \\ b\end{pmatrix}.\]
+It is easy to see that solving one of the two equations is equivalent to solving the other.\\
+
+Now we know how to solve linear systems, so let us try to solve the homogeneous part $Y' = C_p Y$.\\
+
+Facts:
+\begin{itemize}
+\item[$\bullet$] The characteristic polynomial of $C_p$ is $p$, i.e.
+\[\chi_{C_p}(\lambda) = \det (C_p -\lambda I_n ) =  (-1)^n p(\lambda).\]
+\item[$\bullet$] The Jordan normal form of $C_p$ is 
+\[ \begin{pmatrix}   
+J_{\lambda_1,m_1} & & & \\
+                  & J_{\lambda_1,m_1} & & \\
+                  &                   & ... & \\
+                  &                   &     & J_{\lambda_r,m_r} \\
+\end{pmatrix},\]
+which is to say that each Jordan block is maximal. 
+\end{itemize}
+
+This ends the proof. Indeed, it suffices to understand how to solve the system $X' = J_{\lambda,m}X$ to solve the general case, which we know how to do (it is a upper-triangular system):
+\[\left\{\begin{split} 
+x_1' & = \lambda x_1 + x_2 \\
+x_2' & = \lambda x_2 + x_3 \\
+     & ...                  \\
+x_{n-1}' & = \lambda x_{n-1} + x_n \\
+x_n' & = \lambda x_n \\
+\end{split}\right.\]
+The general solution is given by 
+\[\left\{\begin{split} 
+x_{1} & = (C_n \frac{t^{n-1}}{(n-1)!} + ... + C_{2}t +C_{1}) e^{\lambda t} \\
+     & ...                  \\
+x_{n-2} & = (C_n \frac{t^2}{2} + C_{n-1}t +C_{n-2}) e^{\lambda t} \\
+x_{n-1} & = (C_n t + C_{n-1}) e^{\lambda t} \\
+x_n & = C_n e^{\lambda t} \\
+\end{split}\right.\]
+Now to get back to the original equation, one only need to look at the first row of $Y$, which will be a linear combination of all the coefficients of $X$, so that we get indeed that $y$ is given by any linear combination of $f_\lambda(t)e^{\lambda t}$ for all the eigenvalues $\lambda$ of $C_{p}$, and where $f_\lambda$ is any polynomial of degree less or equal to the multiplicity $m_\lambda$ of $\lambda$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{How to find the Jordan normal form}  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+For each eigenvalue $\lambda$, we define 
+\[E_\lambda^{k}= \ \text{ ker } (A-\lambda I_n)^k.\]
+These are subspaces such that:
+\begin{itemize}
+\item[$\bullet$] $E_\lambda^{0}= \{0 \}$ and $E_\lambda^{1}=E_\lambda$ is the eigenspace associated to $\lambda$;
+\item[$\bullet$] if $\lambda$ is of multiplicity $m$ then $E_\lambda^{m} = E$;
+\item[$\bullet$] $E_\lambda^{0} \subseteq E_\lambda^{1} \subseteq ... \subseteq E_\lambda^{m}$.
+\end{itemize}
+
+To build the Jordan normal form, we need to look at the jumps of dimensions between the spaces. Let us denote by $j_\lambda^{(k)}$ the jump
+\[dim(E_\lambda^{k}) -dim (E_\lambda^{k-1}),\]
+and by $N_\lambda= A-\lambda I_n$.\\
+
+One starts with finding $j= j^{(m)}_\lambda$ linearly independent vectors in $E_\lambda^{m}$ that are not in $E_\lambda^{m-1}$, say $v_1$, $v_2$, ..., $v_j$.\\
+
+\textbf{Claim:} the family $\{v_j , Nv_j , N^2 v_j, ... , N^{m-1}v_j : j = 1, j_\lambda^{m}\}$ is linearly independent. (Exercise)\\
+
+What is the matrix of $N_\lambda$ restricted to $E^{(m)}_\lambda /  E^{(m-1)}_\lambda $?
+It is $J_{0,j_\lambda^{(m)}}$, which means that the family gives a Jordan block associated to $\lambda$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Exponential of a matrix}    %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This section is not to be known for the final, but explains in more details how one can solve linear DE. The exponential of a matrix $A$ is defined as the serie (infinite sum)
+\[e^A = \sum_{k=0}^\infty \frac{1}{k!}A^k.\]
+
+It satisfies
+\begin{itemize}
+\item[$\bullet$] if $AB = BA $, $e^{A+B } = e^A e^B = e^B e^A $;
+\item[$\bullet$] $e^{tA}$ is differentiable and 
+\[ \frac{d}{dt}e^{tA} = Ae^{tA},\]
+\item[$\bullet$] if $P^{-1}A P = B$, then \[ P^{-1}e^A P= e^B.\]
+\end{itemize}
+
+Any of solution of 
+\[X' =AX\]
+can be written as
+\[X(t)= e^{tA}C\]
+where $C$ is a constant vector in $\mathbb R^n$.
+
+\textbf{Remark:} $e^{At}$ is actually the $M(t)$ of last section.
+ 
+\subsection{Nondiagonalizable case}
+
+For every $A$ there exists an ivertible matrix $P$ such that 
+\[P^{-1}AP =\begin{pmatrix}
+J_1 & 0 & & \\
+0 & J_2 & & \\
+ & & .. & \\
+ & & & J_r\\
+\end{pmatrix}\]
+where $J_i $ are Jordan blocks.
+
+Solving $X' = AX$ reduces to solving $Y' = JY$ where $J$ is a Jordan block. Write 
+\[J = \lambda I_n + N\]
+with $N^n =0$. Then 
+\[\begin{split}
+e^{tA}  & = e^{t\lambda} (1 + tN + \frac{1}{2}(tN)^2 + ... + \frac{1}{(n-1)!}(tN)^{n-1}) \\
+	&= e^{t\lambda} \begin{pmatrix} 1 & t & \frac{t^2}{2} &               &  ... & \frac{t^{n-1}}{(n-1)!} \\
+					0 & 1 & t             & \frac{t^2}{2} &      &                        \\
+					0 & 0 & 1 	      &	t             &  \frac{t^2}{2}      &           \\
+					0  & 0  & 	  0    &	       1        &   t   &    \frac{t^2}{2}  \\
+					0  & 0   & 	  0    &	          0     &   1   &    t  \\
+					0  & 0	& 0	& 0	& 0                       &	1\\			
+ 			\end{pmatrix}	
+\end{split}\]
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Nonlinear systems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We will focus on $2\times 2$ linear systems of the form
+\[\left\{\begin{array}{rcl}
+x' & = f(x,y) \\
+y' & = g(x,y) \\
+\end{array}\right.\]
+This system can be written as $X' = F(X)$, where $X= \begin{pmatrix} x \\ y \end{pmatrix}$ and $F(X=)\begin{pmatrix} f(x,y) \\ g(x,y) \end{pmatrix}$. As there is no variable $t$ appearing in the system, we call it autonomous. There is no general theory at our disposition to solve analytically these equations. One of the things we can do is linearize the system around equilibrium points.
+
+\begin{itemize}
+\item[$\bullet$] An equilibrium point of the system is a point $(x_0,y_0)$ such that $F(x_0,y_0)= 0$.
+\item[$\bullet$] The Jacobian of $F$ at $X= (x,y)$ is the matrix 
+\[J_F(x,y)=\begin{pmatrix} 
+\frac{\partial f}{\partial x} & \frac{\partial f}{\partial y } \\ 
+\frac{\partial g}{\partial x } & \frac{\partial g}{\partial y} 
+\end{pmatrix},\]
+and, analogous to the $1$-dimensional linear approximation \[h(x) \simeq h(x_0) + h'(x_0)(x-x_0),\] we have
+\[F(X) \simeq F(X_0) + J_F(X_0)(X-X_0).\]
+\item[$\bullet$] the linearized system at the equilibrium point $X_0=(x_0, y_0)$ is 
+\[Y' = J_F(x_0,y_0) (Y - X_0),\]
+i.e. it is $Y' = AY+B$ with $A =  J_F(x_0,y_0)$ and $B =  -J_F(x_0,y_0)X_0$.
+\end{itemize}
+
+For sufficiently nice function $F$, the linear approximation is valid is a small neighboorhood around the equilibrium point. This means that the behaviour of trajectories is very close to the trajectories of the linearized system if one stays close to the equilibirum point.\\
+
+\fbox{\begin{minipage}{0.9\textwidth}
+  \textbf{Algorithm to linearize a system of autonomous differential equations:} \\
+\begin{itemize}
+\item[$\bullet$] find the critical points of the system,
+\item[$\bullet$] compute the Jacobians $A_1,...,A_k$ at the critical points of the system,
+\item[$\bullet$] solve the linear systems of differential equations thus obtained \[Y' = A_i Y +B_i.\]
+\end{itemize}  
+\end{minipage}}\\
+\\
+
+As an example, you can do the Volta-Lokterra problem (Sharks and Sardines) of chapter $5$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

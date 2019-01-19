@@ -1,0 +1,233 @@
+\documentclass[11pt]{exam}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\RequirePackage{tikz, pgflibraryplotmarks}
+\usepackage[margin=1in]{geometry}
+\newcommand{\class}{Math 307	}
+\newcommand{\term}{Fall 2018}
+\newcommand{\examnum}{Exam 2 }
+\newcommand{\examdate}{10/25/18}
+\newcommand{\timelimit}{75 Minutes}
+\singlespacing
+\parindent 0ex
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+\begin{flushright}
+\begin{tabular}{p{2.8in} r l}
+\textbf{\class} & \textbf{Name (Print):} & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\textbf{Time Limit: \timelimit} 
+\end{tabular}\\
+\end{flushright}
+\rule[1ex]{\textwidth}{.1pt}
+
+% These commands set up the running header on the top of the exam pages
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\begin{flushleft}
+\begin{center}
+
+\end{center}
+\end{flushleft}
+
+\hfill
+\begin{minipage}[t]{4.3in}
+\vspace{0pt}
+%\cellwidth{3em}
+\gradetablestretch{2}
+\vqword{Problem}
+\addpoints % required here by exam.cls, even though questions haven't started yet.	
+\gradetable[v]%[pages]  % Use [pages] to have grading table by page instead of question
+
+\end{minipage}
+
+
+\pagebreak
+
+\begin{questions}
+
+\addpoints
+\question
+Let $S: \R^2 \rightarrow R^2$ and $T:R^2 \rightarrow \R^2$ 
+be transformations defined by
+
+$$ S \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix}
+2x+y \\ x-y \end{bmatrix},
+\quad  \quad T \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix}
+x-4y \\ 3x \end{bmatrix}$$
+
+\begin{parts}
+
+\part[5] Show that $S$ and $T$ are both linear transformations. 
+
+\vfill
+\part[5] Find $ST \begin{bmatrix} x \\ y \end{bmatrix}$ and $T^2 \begin{bmatrix} x \\ y \end{bmatrix}$.
+\vfill
+
+\part[5] Find the matrices of $S$ and $T$ with respect to the standard basis for $\R^2$.
+
+\end{parts}
+
+\vfill
+
+\newpage
+\addpoints
+\question
+\begin{parts}
+\part[10] 
+Prove or provide a counter example: If $T$ is a linear transformation, then so is $T+T^2$.
+
+
+\vfill
+
+\part[10] Let $D : C^{\infty}(-\infty,\infty) \rightarrow C^{\infty}(-\infty,\infty)$ be the usual derivative operator. Find a basis for the kernel of the operator
+$$D^2-4D+4$$
+
+\vfill
+
+
+
+\end{parts}
+
+
+\newpage
+\addpoints
+\question
+
+
+ Let $\alpha$ be the standard basis for $\R^3$ and $\beta$ the basis consisting of 
+
+$$\begin{bmatrix}
+1 \\
+0 \\
+1
+\end{bmatrix},
+\begin{bmatrix}
+1 \\
+1 \\
+0
+\end{bmatrix},
+\begin{bmatrix}
+0 \\
+0 \\
+1
+\end{bmatrix}
+$$
+\begin{parts} 
+\part[5] Find the change of basis matrix from $\alpha$ to $\beta$.
+\vfill
+\part[10] Find the change of basis matrix from $\beta$ to $\alpha$. 
+\vfill
+\vfill
+\part[10] Define $T: \R^3 \rightarrow R^3$ by 
+$T\begin{bmatrix}
+x \\
+y\\
+z
+\end{bmatrix}
+=\begin{bmatrix}
+x \\
+2y\\
+3z
+\end{bmatrix}
+$, Find $[T]_{\alpha}^{\alpha}$.
+\vfill
+
+\part[10] Express $[T]_{\beta}^{\beta}$ as the product of the three matrices found above.  
+\vfill
+\end{parts}
+
+
+
+\newpage
+\addpoints
+\question
+\begin{parts}
+\part[10] Let $A$ be an $n \times n$ matrix. Prove that a 
+number $\lambda$ is an eigenvalue of $A$ if and only if 
+$$\det( \lambda I - A)=0.$$
+
+
+\vfill
+\part[10] Let $A = \begin{bmatrix} 2 & 2 \\ 1 & 3 \end{bmatrix}$. Find the eigenvalue(s) and associated eigenvectors of $A$.   
+\vfill
+
+\part[10] Define what it means for $A$ to be similar to a matrix $B$, and what it means for $A$ to be diagonalizable.  Prove that if $A$ is similar to $B$, and $A$ is diagonalizable, then $B$ is also diagonalizable.   
+
+\vfill
+\end{parts}
+
+\newpage
+\addpoints
+\question
+Let $A = \begin{bmatrix} 2 & 2 & 0\\ 0 & 3 & 0 \\ 0 & 0 & 1 \end{bmatrix}$
+\begin{parts}
+\part[10] Find the eigenvalues and associated eigenvectors of $A$.  
+
+\vfill
+
+\part[10] Determine if $A$ is diagonalizable. If it is, give the matrix $P$ and the diagonal matrix $D$ such that $P^{-1} A P = D$.  
+
+\vfill
+
+
+
+
+
+
+
+
+
+\end{parts}
+
+\newpage
+\addpoints
+\question Suppose that $A$ is a matrix with characteristic polynomial $p(\lambda)=(\lambda -3)^2(\lambda-2)^2$. 
+
+\begin{parts}
+
+\part[10] If $\dim(E_3) = 2$ and $\dim(E_2) = 2$ what is the Jordan Normal Form of $A$?
+
+\vfill
+
+\part[10] If $\dim(E_3) = 1$ and $\dim(E_2) = 2$ what is the Jordan Normal Form of $A$?
+
+\vfill
+
+\end{parts}
+\newpage
+\addpoints
+\question[20] Suppose that $A$ is a matrix with characteristic polynomial $p(\lambda)=(\lambda +1)^2(\lambda-5)^4$. If we decide on a Jordan Normal Form, $J$, of $A$ as $$J= \begin{bmatrix}
+B_1 & 0 \\
+0 & B_2 
+\end{bmatrix}$$ where $B_1$ is a $2 \times 2$ matrix and $B_2$ is a $4 \times 4$ matrix, what are the possibilities (up to permutation of the Jordan blocks) of $B_1$ and $B_2$?  
+
+\newpage
+\addpoints
+\question[20]
+
+
+Is the following $n \times n$ matrix diagonalizable?
+
+
+$$
+\begin{bmatrix}
+    1 & 1 & 0 & \dots  & 0 \\
+    0 & 1 & 0 & \dots  & 0 \\
+    0 & 0 & 1 & \dots & 0 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    0 & 0 & 0 & \dots  & 1
+\end{bmatrix}
+$$
+
+\end{questions}
+\end{document}

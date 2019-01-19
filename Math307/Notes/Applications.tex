@@ -1,0 +1,204 @@
+This chapter contains some exercises for pratice \& some problems that are directed at the interested student. These are a little bit harder that what will be expected on the final, but are here to show the role of differential equations in applications, and to give some context to their study.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Some practice with first order linear equations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Solve the following differential equations:
+\begin{enumerate}
+\item $x' = x+\sin (t)$,
+\item $x' = x+t^2$,
+\item $x' = x+ e^{2t}$,
+\item $tx' = x+ t^2$,
+\item $x' = x+e^t$,
+\item $x' = \frac{-x+\sin (t)}{t}$,
+\item $x' -\frac{2x}{t+1}= (t+1)^2$,
+\item $x' - \alpha \frac{x}{t} = \frac{t+1}{t}$,
+\item $x' + \cos (t) x = \frac{1}{2}\sin (2t) $,
+\item $ x' - \frac{n}{t} x =e^t t^n$,
+\item $ x' + \frac{n}{t} x = \frac{\alpha}{t^n}$,
+\item $x' + x = \frac{1}{e^t}$,
+\item $x' + \frac{1-2t}{t^2}x -1$.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exact differential equations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+An equation of the form
+\[M(t,x)x' + L(t,x)=0\]
+is exact if 
+\[ \frac{\partial M}{\partial t} = \frac{\partial L}{\partial x}. \]
+If the equation is exact, then the solution are the level curve of the function $F(x,t)$ where:
+\[ \frac{\partial F}{\partial t} = L(t,x) \quad \text{and} \quad \frac{\partial F}{\partial x} = M(t,x).\]
+This means that the solutions $x(t)$ are given by the equation \[F(x(t),t)= C\]
+where $C$ is any constant. \\
+
+\fbox{\begin{minipage}{0.9\textwidth}
+  \textbf{Algorithm to solve an exact differential equation:} \\
+\begin{itemize}
+\item[$\bullet$] Check that $\frac{\partial M}{\partial t} = \frac{\partial L}{\partial x}$.
+\item[$\bullet$] Intergrate $L$ w.r.t. $t$ and $M$ w.r.t. $x$:
+\[\int L(t,x)dt = F_L(t,x) \quad \text{and} \quad \int M(t,x)dx = F_M(t,x).  \]
+\item[$\bullet$] Choose appropriate constant of integration to get $F(t,x)=  F_M(t,x) = F_L(t,x) $.
+\item[$\bullet$] Set $F(t,x)=C$. Maybe it is possible to solve this equation in $x$.
+\end{itemize}  
+\end{minipage}}\\
+\\
+
+\begin{Pb}
+Solve the following exact differential equations:
+\begin{enumerate}
+\item \[x' = \frac{ct-ax}{at+bx}\]
+\item \[ (t \cos(x) + 3x^2 ) x' + \sin (x) + 2t = 0\]
+\item \[ (t-2x)x' + t^2 + x  = 0\]
+\item \[(4x-t)x' - x+ 3t^2 = 0\]
+\item \[ (x^3-t) x' =x\]
+\end{enumerate}
+\end{Pb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Particular equations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Bernoulli equations}
+
+Equations of the form: \[z' = a(t)z +b(t)z^\alpha. \]
+\textbf{Idea:} Reducing it to a linear equation.\\
+
+Look for nowhere vanishing solutions $z$, so that:
+\[\frac{z'}{z^\alpha} = \frac{a(t) }{z^{\alpha-1}} + b(t).\]
+This is a linear equation in $x= z^{1-\alpha}$:
+\[\frac{1}{1-\alpha} x' = a(t)x + b(t).\]
+ 
+\subsection{Ricatti equations}
+Equations of the form: \[y' = a(t)y^2 +b(t) y + c(t). \]
+\textbf{Idea:} Reducing it to a Bernoulli equation.\\
+
+Suppose we know a particular solution $y_p$. We can solve the Ricatti equation in the following way:
+\begin{itemize}
+\item[$\bullet$] Find a particular solution $y_p$,
+\item[$\bullet$] Set $y= y_p + z $. Then $y$ is solution of the Ricatti equation if $z$ satisfies the Bernoulli equation
+\[z'= (2a(t)y_p +b(t)) z + a(t) z^2 .\]
+\item[$\bullet$] Solve the Bernoulli equation,
+\item[$\bullet$] Go back to $y$.
+\end{itemize}
+
+Solve the following differential equations:
+\begin{enumerate}
+\item \[y' +y^2+y+1 =0,\]
+\item \[y' =-2-y +y^2.\]
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{More $2$ by $2$ nonlinear systems}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+For each of these systems, (a) determine the equilibrium points, (b) linearize the systems at the equilibrium points, (c) give the general solution of these linear systems.
+
+\begin{enumerate}
+\item \[\left\{\begin{split} x' & = x+xy \\ y' & = 2y -xy \end{split}\right.\]
+\item \[\left\{\begin{split} x' & = x-x^2-xy \\ y' & = 2y-y^2-3xy \end{split}\right.\]
+\item \[\left\{\begin{split} x' & = x-2xy+xy^2 \\ y' & = y+xy \end{split}\right.\]
+\item \[\left\{\begin{split} x' & = 2y-xy \\ y' & = x^2-y^2 \end{split}\right.\]
+\item \[\left\{\begin{split} x' & = 2+x-2e^{-2y} \\ y' & = x - \sin (y) \end{split}\right.\]
+\item \[\left\{\begin{split} x' & = \sin (y) \\ y' & = x^2 +y \end{split}\right.\]
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sharks and sardines}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In the 1920s, Umberto d'Ancona, an italian official working for the Italian Bureau of Fisheries, was puzzled by the statistics he was getting. Fishing reports seemed to indicate abnormal variations in the proportion of food fish and sharks. Indeed, it seemed that fishing increased the number of food fish! Umberto turned to the mathematician Vito Volterra and submitted this problem to him, asking him for an explanation. Fun fact: Volterra was one of the inventor of mathematical ecology, with his book \textit{A Mathematical Theory of the Struggle for Life}. He came out with a model, consisting of a system of non linear differential equations with two unknowns which proposed an explanation.\\     
+
+Let $x(t)$ be the number of food fish (which we will suppose to be sardines) and $y(t)$ the number of sharks. We will make the following assumptions:
+\begin{enumerate}
+\item the population of sardines is only kept down by the sharks,
+\item the population of sharks is at the limit of its food supply, and is kept in check by the lack of sardines.
+\end{enumerate}
+
+\subsection{Derivation of the equation}
+
+If there are no shark, sardines would increase exponentially with rate $a>0$ i.e. $x$ would satisfy $x' = ax$. If there are no sardine, sharks would decay exponentially with rate $b>0$, i.e. $y$ would satisfy $y = -by$. we have to add an interaction term, and we can suppose that the number of meetings between sharks and sardines is proportional to $x(t)y(t)$, and this term is good for the sharks and bad for the fish, so that, introducing two positive constants $c$ and $d$, we get the system:
+\[\left\{\begin{split}
+x' & =  ax -cxy\\
+y' & =  -by +fxy 
+\end{split}\right.\]  
+
+\subsection{Questions}
+\begin{enumerate}
+\item Is this system linear?
+\item Compute the Jacobian of the (vector valued) function:
+\[ G(x,y) = \begin{pmatrix} ax -cxy \\ -by +fxy  \end{pmatrix}.\]
+Recall that the Jacobian is the matrix 
+\[J_G = \begin{pmatrix} \frac{\partial G_1}{\partial x } & \frac{\partial G_1}{\partial y } \\ \frac{\partial G_2}{\partial x} & \frac{\partial G_2}{\partial y} \end{pmatrix} \]
+It is useful for approximation, because $G(X) \simeq G(X_0) + J_G (X-X_0)$. 
+\item Find the equilibrium points of the system, i.e. the points $X_0 = (x_0, y_0)$ such that $G(X_0) = 0$.
+\item Solve the linear system
+\[X' = J_G X\]
+at the equilibrium point. It is called the linearized system.
+\item Call the teacher so he can explain something cool to you.
+\item Here is an exact way to solve the equation. By divinding the first line with the second, show that \[\frac{dx-b}{x} x'= \frac{a-cy }{y }y'. \]
+\item Integrate the previous equation to get that 
+\[ |x|^b|y|^a e^{-(dx + cy)} = C\]
+for some positive constant $C$. This means that the trajectories of the system are the level curves of the function \[F(x,y) = |x|^b|y|^a e^{-(dx + cy)}.\] With a computer, draw the trajectories in the phase space. Show that $F$ has a unique maximum at $(x,y)=(\frac{b}{d} , \frac{a}{c})$ and that the trajectories are periodic.
+\item The average population is defined as 
+\[\overline x = \frac{1}{T}\int_0^T x(t)dt \quad \overline y = \frac{1}{T}\int_0^T y(t)dt.\]
+Show that $(\overline x , \overline y ) =(\frac{b}{d} , \frac{a}{c})$.
+\item What is the effect of fishing? Can you explain Umberto's puzzle?
+\item What critics could you find about Volterra's model?
+\end{enumerate}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Two body problem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Sir Isaac Newton is credited with both invention of calculus and formulation of the laws of gravitation, in his 1687 book \textit{Philosophiae Naturalis Principia Mathematica} (Mathematical Principles of Natural Philosophy). The two first laws can be rewritten as:
+\begin{itemize}
+\item[$\bullet$] a body subject to a force has an acceleration proportional to the force and to the inverse of its mass
+\[ma = F, \]
+\item[$\bullet$] two massive bodies exert on each other opposite forces of magnitude proportional to the product of their mass and to the inverse of the square of the distance between them:
+\[F_{\text{2 on 1}} = G\frac{m_1 m_2}{r^2}u\]
+where $G$ is Newton's constant, $r = ||x-y||$ and $u$ is the vector connecting the two bodies $u = \frac{y-x}{||y-x||}$. 
+\end{itemize}
+
+Form these laws, one can deduce that the position $x$ and $y$ of a system of two isolated masses satisfy
+\[\left\{\begin{split}
+m_1 x'' & = G\frac{m_1 m_2}{||x-y||^2}\frac{y-x}{||y-x||} \\ 
+m_2 y'' & = G\frac{m_1 m_2}{||x-y||^2}\frac{x-y}{||x-y||} 
+\end{split}\right.\]
+
+A remark; for $N$ bodies, this equation can be extended, i.e. the positions $x_1$, $x_2$, ... $x_N$ of a system of $N$ isolated masses satisfy
+\[m_i x_i''  = G\sum_{j \neq i}\frac{m_i m_j}{||x_i-x_j||^2}\frac{x_j-x_i}{||x_j-x_i||}.  \]
+This differential equation, the first one to ever have been written (to my knowledge) is still not solved in any way! One of the reasons: it s not linear, so does not belong to the friendly group of nice equations we learnt how to solve during this class.\\
+
+We look at the first equation, i.e. the two body problem.
+\begin{enumerate}
+\item Define the center of mass as 
+\[ \omega = \frac{1}{m_1+m_2}(m_1 x + m_2 y),\]
+and show that \[ \omega'' = 0 . \]
+\item This means that the center of mass can be taken as the center of a galilean frame. Why? For now, we suppose that we are working in this frame with center $\omega$, which means $w=0$. 
+\item Define $r = x-w$ and show that $r$ satisfies \[ r'' = -\frac{K}{||r||^3}r,\] with $K = G\frac{m_2^3}{(m_1+m_2)^2}$.
+\item We now suppose that $y$ is incredibly massive compared to $x$. For instance, $y$ could be the position of the sun, and $x$ the earth. Denote then $m_1 = m$, and $m_2 = M$. What we just said amount to $\frac{m}{M}$ being very close to zero, what physicists write $m << M$. We will then take the approximation of the system when $\frac{m}{M}$ goes to zero.  \\
+Show that if $\frac{m}{M}$ goes to zero, $w \simeq y$. This means that the center of mass of the system is approximately the position of the most massive body (explaining why people say that planets revolve arounnd the sun). We then set $y=0$.
+\item It remains to solve \[x'' = \frac{GM}{||x-y||^2}\frac{y-x}{||y-x||}.\] 
+Using polar coordinates \[e_r = \cos (\theta) e_1 + \sin (\theta)e_2 \quad \text{and}\quad e_\theta  = -\sin (\theta) e_1 + \cos (\theta)e_2\]
+show that this equation is equivalent to 
+\[\left\{\begin{split}
+r''-r(\theta')^2 & = -\frac{GM}{r^2} 	\\ 
+2 r' \theta' + r\theta''  & = 0 
+\end{split}\right.\]
+\item Form the second equation, show that $r^2 \theta' $ is constant. Set $r^2 \theta'  = \alpha$.
+\item Show that the first equation reduces to 
+\[ r'' = \frac{\alpha^2}{r^3}-\frac{GM}{r^2}\]
+\end{enumerate}
+
+\section{Leaky Chauldron}
+\section{Measuring the mass of the electron}
+\section{Some references}
+
+Books I like for DE: \cite{hubbardwest},... for linear algebra \cite{MneimneReduction}\\
+
+Popular science books: for summer break reading...\\
+History of calculus \cite{alexander}. History of chaos theory \cite{Stuart} and Mandelbrot's account of fractal theory \cite{MandelbrotFractals}, \cite{MandelbrotLong} , \cite{MandelbrotFinance}.

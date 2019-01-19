@@ -1,0 +1,66 @@
+\section{Linear systems}
+
+\begin{itemize}
+\item What is a linear system? 
+\[ \left\{ 
+\begin{array}{ccc} 
+a_{11}x_1 + a_{12}x_2 +... + a_{1n}x_n & = & b_1 \\
+a_{21}x_1 + a_{22}x_2 +... + a_{2n}x_n & = & b_2 \\
+\ & \ & \ \\
+a_{m1}x_1 + a_{m2}x_2 +... + a_{mn}x_n & = & b_m \\
+\end{array}
+\right.
+\]
+\item What is the augmented matrix of a linear system?
+\[ \begin{pmatrix}
+a_{11} &  a_{12} & ... & a_{1n}  & b_1 \\
+a_{21} &  a_{22} & ... & a_{2n}  &  b_2 \\
+\ & \ & \ \\
+a_{m1} & a_{m2} & .. & a_{mn} &  b_m \\
+\end{pmatrix} \]
+\item Echelon form for a matrix (what is a leading 1?)
+\begin{enumerate}
+\item For every row, the first nonzero entry is a 1 (called a leading one).
+\item The leading 1 of every lower row is always further on the right than the leading one of a higher row.
+\item For every column containing a leading 1, all other entries are 0.
+\end{enumerate}
+\[ \begin{pmatrix}
+1 &  * & * & ... & *  & *\\
+0 &  0 & 1 & ... & *  &  * \\
+\ & \ & \ \\
+0 &  0 & 0 & ... &  * & * \\
+\end{pmatrix} \]
+\item Gaussian elimination / Row reduction algorithm: to put a matrix in echelom form.
+\begin{enumerate}
+\item Look down the first column until you find a nonzero entry (called a pivot). If you cannot find one, look to the next column, etc. 
+\item Move to the row containing the pivot to the first position and divide that row by the pivot to make that entry a leading one.
+\item Add appropriate multiples of this row to cancel the entries in the first column of each of the other rows.
+\end{enumerate}
+
+\item Number of solutions for linear systems depending on their echelon form:
+\begin{enumerate}
+\item \textbf{inconsistent systems:} there is a zero row on the left side with a nonzero entry on the right side. NO SOLUTION
+\item \textbf{consistent systems:} $NZR =$ number of nonzero row , $C =$ number of columns
+\begin{enumerate}
+\item $NZR < C$ : infinitely many solutions.  
+\item $NZR = C$ : one unique solution.
+\end{enumerate} 
+\end{enumerate}
+\end{itemize}
+
+\section{Matrix algebras and determinants}
+
+\begin{itemize}
+\item Definition of a matrix, operations on matrices: multiplication by a scalar, addition and multiplication. Matrices are useful to rewrite linear systems of equations.
+\item Inverse of a matrix: not all matrices are invertible! Do you have an example? How can we find the inverse of an invertible matrix?  
+\[(AB)^{-1} = B^{-1}A^{-1}\]
+\item How to find the inverse of a invertible matrix A of size $n$? Apply Gaussian elimination to the left side of the $n\times 2n$ matrix:
+\[\begin{pmatrix}
+A & I_n \end{pmatrix},\]
+and, if the matrix is invertible, the outcome is
+\[\begin{pmatrix}
+I_n & A^{-1} \end{pmatrix}.\]
+\item The transpose of a matrix $A\in M_{m,n}(\R)$ is the matrix $A^T\in M_{n,m}(\R)$ obtained by interchanging all the rows and columns of $A$.
+\[(AB)^{T} = B^{T}A^{T}\]
+\item Determinants: to every square matrix, its determinant $det(A)$ is a real number.
+\end{itemize} 

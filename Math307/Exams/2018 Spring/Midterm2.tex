@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage{amsfonts, graphicx, multicol, amssymb, amsmath}
+%usepackage{ulem}
+\usepackage[left=.4in,top=.4in,right=.4in,nohead,nofoot]{geometry}
+\newcommand{\example}{\subsubsection*{Example}}
+
+
+\newcommand\tr{\textrm{tr}}
+\newcommand{\vecxx}[2]{\begin{bmatrix} #1\\ #2\\ \end{bmatrix}}
+\newcommand{\vecxxx}[3]{\begin{bmatrix} #1\\ #2\\ #3 \end{bmatrix}}
+\newcommand{\vecxxxx}[4]{\begin{bmatrix} #1\\ #2\\ #3\\ #4 \end{bmatrix}}
+
+\newcommand{\svecxx}[2]{\left[\begin{smallmatrix} #1\\ #2\\ \end{smallmatrix}\right]}
+\newcommand{\svecxxx}[3]{\left[\begin{smallmatrix} #1\\ #2\\ #3 \end{smallmatrix}\right]}
+\newcommand{\svecxxxx}[4]{\left[\begin{smallmatrix} #1\\ #2\\ #3\\ #4 \end{smallmatrix}\right]}
+
+\newcommand\matxx[4]{\begin{bmatrix}#1 & #2\\ #3 & #4\end{bmatrix}}
+\newcommand\matxxx[9]{\begin{bmatrix}#1 & #2 & #3\\ #4& #5 & #6\\ #7 & #8 & #9\end{bmatrix}}
+
+\newcommand\diagxx[2]{\begin{bmatrix}#1 & 0\\ 0 & #2\end{bmatrix}}
+\newcommand\diagxxx[3]{\begin{bmatrix}#1 & 0 & 0\\ 0& #2 & 0\\ 0 & 0 & #3\end{bmatrix}}
+\newcommand\idxx{\begin{bmatrix}1 & 0\\ 0 & 1\end{bmatrix}}
+\newcommand\idxxx{\begin{bmatrix}1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1\end{bmatrix}}
+\newcommand\idxxxx{\begin{bmatrix}1 & 0 & 0 & 0\\ 0 & 1 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1\end{bmatrix}}
+
+\newcommand\bR{\mathbb{R}}
+\newcommand\bC{\mathbb{C}}
+
+
+\begin{document}
+
+%%%%%HEADING
+\noindent.\hrulefill.\\
+\begin{minipage}{0.5\textwidth}
+\noindent \sc{Math 307: Midterm 2}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\flushright \sc{Reference: Chapter 1 to 6, Peterson, Sochaki,\\ \emph{Linear Algebra and Differential Equations}.}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\vskip 0.2in
+Name:\\
+%\noindent ID Number:\\
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\flushright Score: \hspace{2in}
+\end{minipage}
+\vskip 0.25in
+\hrule
+
+%%%%HEADING
+\thispagestyle{empty}
+\vskip 0.1in
+\begin{center}
+\fbox{Note: Notes and calculators are forbidden. Phones must be turned off and closed books.}\\
+Show all your work, circle or box your answers. Write sentences and explain your line of thought.
+\end{center}
+\vskip .15in
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%        Questions       %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+\item \textbf{General Knowledge}
+\begin{enumerate}
+\item Let $A\in M_n(\mathbb R)$ be a square matrix of size $n$. What is the definition of $A$ being diagonalizable?
+
+\vskip 2.5in
+
+\item Give two criteria which make $A$ diagonalizable.
+
+\vskip 2.5in
+
+\item Is every matrix diagonalizable? If not, give an example of a matrix which is not diagonalizable.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%        Problems       %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\item 
+\begin{enumerate}
+
+\item If possible, diagonalize the following matrix.
+\[\begin{pmatrix}
+-3 & 15 \\
+-2 & 8 \\
+\end{pmatrix}.\]
+
+\vskip 4in
+
+\item Solve the differential equation:
+\[ \left\{ 
+\begin{array}{ccc} 
+ x' & = & -3x + 15y \\
+y'  & = & -2x + 8y \\
+\end{array}
+\right.
+\]
+\end{enumerate}
+
+\newpage
+
+\item List all the possible Jordan form of matrices with the following characteristic polynomial. 
+\begin{enumerate}
+\item $\chi(t) = (t-1)(t-3)^2 $
+\item $\chi(t) = (t-2)^3 $
+\end{enumerate}
+
+\vskip 3in
+
+\item Let $v$ be the velocity of a mass $m$ falling with initial velocity $v_0= v(0) = 0$ at $t_0=0$. If we take into account the air drag and the acceleration due to gravity, we get that $v$ satisfies the following differential equation \[v' +\frac{\alpha}{m}v =g.\]
+Here, $\alpha$ is a constant between $0$ and $1$ which says how strong is the air drag. Solve the differential equation and explain what happens physically.
+
+\newpage 
+
+\item Solve the following nonhomogeneous systems of linear differential equations. 
+\begin{enumerate}
+\item $y' +3y = \cos (t)$,
+\item $y' -2 y = e^{4t} $,
+\end{enumerate}
+
+\newpage
+\item %%%%%%%%%%%%%%%%%%
+Let us start at month $0$ with a couple of rabbits. Each month, a couple of rabbits gives birth to another one, as soon as two months passed since their conception. Let $F_n$ be the number of couple of rabbits after $n$ months, starting with $F_0 = F_1 = 1$. Then 
+\[F_{n+2} = F_{n+1}+ F_n,\]
+if $n\geq 0$.\\
+Let us introduce $X_n = \begin{pmatrix} F_{n+1} \\ F_{n}\end{pmatrix}$. Then:
+\[X_{n+1} = A X_n\]
+with $A=\begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}$. So we get the following relation:
+\[X_n = A^n X_0.\]
+The goal of this problem is to find an expression for $F_n$.
+
+\begin{enumerate}
+\item Compute the characteristic polynomial of $A$, $\chi_A(X)=det (A-X I_2)$, and its eigenvalues.
+\item Is $A$ diagonalizable? Why?
+\item If yes, diagonalize $A$: first find the eigenspaces of $A$, then the change of basis matrix $P$ and its inverse.   
+\item Compute $A^n$. 
+\item Give an expression for $F_n$.
+\end{enumerate}
+
+\newpage
+\
+
+\newpage
+\
+
+%%%%%%%%%%%%%%%%%%%%%%%5
+
+	\thispagestyle{empty}
+%	\vskip 0.1in
+%\vskip 1.5in
+
+	\thispagestyle{empty}
+%\vskip 0.1in
+\end{enumerate}
+\end{document}

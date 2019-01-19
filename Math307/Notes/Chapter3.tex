@@ -1,0 +1,143 @@
+\begin{itemize}
+\item The algebra $\mathcal L(V)$ of endomorphisms of a vector space $V$:
+\[\begin{split}
+(S+T)(v) & = S(v)+T(v) \\
+(ST)(v)  & = S(T(v))
+\end{split}\] 
+\item Linear differential operators:
+\[D: \begin{array}{rcl} C^\infty (a,b) & \rightarrow & C^\infty (a,b)\\
+ f & \mapsto & \frac{df}{dx} \end{array}\]
+and if $P(x) = a_0 + a_1 x + ... + a_n x^n,$
+\[P(D) = a_0id + a_1 D + ... + a_n D^n,\]
+or 
+\[P(D)(f) = a_0f + a_1 f' + ... + a_n f^{(n)}.\]
+A linear operator $T:C^\infty (a,b) \rightarrow C^\infty (a,b)$ is called a linear differential operator if it is of the form $T= P(D)$. Solving the linear differential equation 
+\[a_0f + a_1 f' + ... + a_n f^{(n)}= g\]
+is equivalent to solving the linear equation 
+\[T(f) = g.\]
+\item The characterstic polynomial of the homogeneous equation
+\[a_0f + a_1 f' + ... + a_n f^{(n)}= 0\]
+is $P(x) = a_0 + a_1 x + ... + a_n x^n$. If $P$ has roots $r_1$, $r_2$, ..., $r_k$ with multiplicity $m_1$, $m_2$, ..., $m_k$, i.e.
+\[P(x) = (x-r_1)^{m_1}(x-r_2)^{m_2}...(x-r_k)^{m_k}\]
+then a basis for the solutions of is 
+\[\{ t^j e^{r_l t}\}_{l= 1,k \ j= 0,m_l-1}.\]
+\item How to find a basis for the solution of a linear homogeneous differential equation?
+\end{itemize} 
+
+\section{Diagonalization}
+\begin{itemize}
+\item A non zero vector $v\in V$ is an eigenvector for a linear map $T: V\rightarrow V$ if
+\[T(v) = \lambda v.\]
+The number $\lambda$ is called the eigenvalue of $T$ associated to $v$. 
+\item $\lambda$ is an eigenvalue of $T$ iff \[det(T -\lambda Id) = 0.\]
+The polynomial $\chi_T(\lambda)= det(T -\lambda Id)$ is called the characteristic polynomial of $T$. 
+
+\item The eigenspace associated to a eigenvalue $\lambda $ is the linear subspace of all eigenvectors associated to $\lambda$, i.e.
+\[E_\lambda = Ker (A-\lambda I_n).\]
+
+\item Criteria for a square matrix to be diagonalizable:
+\begin{itemize}
+\item[$\bullet$] If $A$ has $n$ disctinct eigenvalues, $A$ is diagonalizable.
+\item[$\bullet$] If $\lambda_1$, $\lambda_2$ , ... $\lambda_k$ are the eigenvalues of $A$, then if 
+\[dim(E_{\lambda_1})+ dim(E_{\lambda_2}) +... +dim(E_{\lambda_k}) = n \]
+then $A$ is diagonalizable.
+\item[$\bullet$] If $A$ is symmetric, $A$ is diagonalizable.
+\end{itemize}
+
+\item Suppose $A$ is diagonalizable. Algorithm to put $A$ is diagonal form:\\
+\ \\
+\fbox{\begin{minipage}{0.9\textwidth}
+  \textbf{Diagonalization}
+\begin{enumerate}
+\item Compute the characteristic polynomial $\chi_A = det(A-X I_n)$ and its roots $\lambda_1$, $\lambda_2$, ... $\lambda_k$.
+\item Find bases for the eigenspaces: row reduce $A- \lambda I_n$ for every eigenvalues $\lambda$.
+\item Write the change of basis matrix \[P = \begin{pmatrix} v_1 & v_2 & ... & v_n \end{pmatrix}\]
+where $\{v_1, v_2, ... , v_n\}$ is a basis of $\R^n$ consisting only of eigenvectors of $A$.
+\item Compute \[D = P^{-1} A P.\]
+It is a diagonal matrix.
+\end{enumerate}
+\end{minipage}}\\
+\\
+
+\item The Jordan block of size $k$ asociated with $\lambda$ is defined to be the following $k$ by $k$ matrix:
+\[J_{k,\lambda}=\begin{pmatrix}
+\lambda &  1 & 0 & ... & 0 \\
+0 & \lambda & 1 & ... & 0  \\
+  &   &         &  ...   &  1 \\
+0 &   &         &  0   & \lambda \\
+\end{pmatrix}.\]
+
+\item Not every matrix is diagonalizable. For instance
+\[J_{2,a} = \begin{pmatrix} a & 1 \\ 0 & a \end{pmatrix}\]
+cannot be, for if it was, there would be an invertible matrix $P$ such that
+\[P^{-1}J_{2,a} P =  \begin{pmatrix} a & 0 \\ 0 & a \end{pmatrix}, \]
+which implies $\begin{pmatrix} a & 1 \\ 0 & a \end{pmatrix}=\begin{pmatrix} a & 0 \\ 0 & a \end{pmatrix}$. Similarly, every $J_{k,a}$ is not diagonalizable as soon as $k\geq 2$.\\
+
+But every matrix $A$ can be put in Jordan form, i.e. is similar to a matrix of the form
+\[\begin{pmatrix}
+J_1 & 0 & 0 & ... & 0 \\
+0 & J_2 & 0 & ... & 0  \\
+  &   &         &  ...   &  0 \\
+0 &   &         &  0   & J_r \\
+\end{pmatrix},\]
+where each $J_i$ is a Jordan block associated to an eigenvalue of $A$.
+
+\item How to find all the possible Jordan form of a matrix $A$ with characteristic polynomial $\chi_A(t) = (t-\lambda_1)^{m_1}(t-\lambda_2)^{m_2}...(t-\lambda_k)^{m_k} $? \\
+\ \\
+The possible Jordan forms are of the type:
+\[\begin{pmatrix}
+B_1 & 0 & 0 & ... & 0 \\
+0 & B_2 & 0 & ... & 0  \\
+  &   &         &  ...   &  0 \\
+0 &   &         &  0   & B_k \\
+\end{pmatrix},\]
+each $B_i$ being a block of size $m_i$ by $m_i$ of the type
+\[\begin{pmatrix}
+J_{k_1,\lambda_i} & 0 & 0 & ... & 0 \\
+0 & J_{k_2,\lambda_i} & 0 & ... & 0  \\
+  &   &         &  ...   &  0 \\
+0 &   &         &  0   & J_{k_l,\lambda_i} \\
+\end{pmatrix},\] 
+where $k_j$ are arbitrary size such that $k_1+k_2+...+k_l = m_i$.
+\end{itemize}
+
+\section{Applications}
+
+\subsection{The Fibonacci sequence}
+
+The Fibonacci sequence was first studied in India, and owes its name to the Italian mathematician Leonardo of Pisa, also known as Fibonacci. In his book, Liber Abaci (1202), he wrote the following problem: let us start at month $0$ with a couple of rabbits. Each month, a couple of rabbits gives birth to another one, as soon as two months passed since their conception. Let $F_n$ be the number of couple of rabbits after $n$ months, starting with $F_0 = F_1 = 1$. Then 
+\[F_{n+2} = F_{n+1}+ F_n,\]
+if $n\geq 0$.\\
+
+Can we find an expression for $F_n$?\\
+
+Of course, linear algebra didn't exist yet, so this solution was probably unknown at the time. Let us introduce $X_n = \begin{pmatrix} F_{n+1} \\ F_{n}\end{pmatrix}$. Then:
+\[X_{n+1} = A X_n\]
+with $A=\begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}$. So we get the following relation:
+\[X_n = A^n X_0.\]
+This shows that if we can compute $A^n$, we are done. To do that, let us try to reduce $A$ to a simpler form. \\
+
+First compute its eigenvalues:
+\[\chi_A(X) = det (A -XI_2) = X^2 -X-1 = (X-\phi)(X-\overline{\phi}),\]
+where $\phi = \frac{1+\sqrt 5}{2}$ and $\overline \phi = \frac{1-\sqrt 5}{2}$. So $A$ has eigenvalues $\phi$ and $\overline \phi$, which are distinct so $A$ is diagonalizable.\\
+
+Find the eigenspaces. For $E_\phi$, as $1-\phi = \overline \phi$, we have to find the kernel of:
+\[\begin{pmatrix} \overline \phi & 1 \\ 1 & -\phi  \end{pmatrix} \sim \begin{pmatrix} \overline \phi & 1 \\ 0 & -\phi-\frac{1}{\overline \phi}\end{pmatrix} \sim \begin{pmatrix}1 & \frac{1}{\overline \phi} \\ 0 & 0\end{pmatrix},\]
+and a basis of the kernel is given by $\begin{pmatrix} 1 \\ -\overline \phi \end{pmatrix}$.
+The same kind of computation gives that $E_{\overline \phi}$ is spanned by $\begin{pmatrix} 1 \\ -\phi \end{pmatrix}$.\\
+
+The change of basis matrix is given by:
+\[P=\begin{pmatrix} 1 & 1 \\ -\overline \phi & -\phi \end{pmatrix},\]
+of determinant $-\sqrt 5$, and $P^{-1} = \frac{-1}{\sqrt 5}\begin{pmatrix}-\phi & -1 \\ \overline \phi & 1 \end{pmatrix}$, with
+\[P^{-1} A P = \begin{pmatrix}\phi & 0 \\ 0 & \overline \phi \end{pmatrix}.\]
+This relation entails that 
+\[\begin{split} 
+X_n  	& = A^n X_0 \\
+     	& = P D^n P^{-1} X_0 \\
+	& =\frac{-1}{\sqrt 5} \begin{pmatrix} 1 & 1 \\ -\overline \phi & -\phi \end{pmatrix} 
+		\begin{pmatrix}\phi^n & 0 \\ 0 & \overline \phi^n \end{pmatrix}
+			 \begin{pmatrix}-\phi & -1 \\ \overline \phi & 1 \end{pmatrix} \begin{pmatrix} 1 \\ 1 \end{pmatrix} \\	
+	& = \begin{pmatrix} \frac{1}{\sqrt 5}(\phi^{n+1} - {\overline\phi}^{n+1} ) \\ \frac{1}{\sqrt 5}(\phi^n - {\overline\phi}^n ) \end{pmatrix}
+\end{split},\]
+so that \[F_n = \frac{1}{\sqrt 5}(\phi^n - {\overline\phi}^n ),\]
+for every $n$.

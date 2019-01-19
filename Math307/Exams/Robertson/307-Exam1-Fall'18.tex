@@ -1,0 +1,284 @@
+\documentclass[11pt]{exam}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\RequirePackage{tikz, pgflibraryplotmarks}
+\usepackage[margin=1in]{geometry}
+\newcommand{\class}{Math 307	}
+\newcommand{\term}{Fall 2018}
+\newcommand{\examnum}{Exam 1 }
+\newcommand{\examdate}{9/27/18}
+\newcommand{\timelimit}{75 Minutes}
+\singlespacing
+\parindent 0ex
+
+\begin{document}
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+\begin{flushright}
+\begin{tabular}{p{2.8in} r l}
+\textbf{\class} & \textbf{Name (Print):} & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\textbf{Time Limit: \timelimit} 
+\end{tabular}\\
+\end{flushright}
+\rule[1ex]{\textwidth}{.1pt}
+
+% These commands set up the running header on the top of the exam pages
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\begin{flushleft}
+\begin{center}
+
+\end{center}
+\end{flushleft}
+
+\hfill
+\begin{minipage}[t]{4.3in}
+\vspace{0pt}
+%\cellwidth{3em}
+\gradetablestretch{2}
+\vqword{Problem}
+\addpoints % required here by exam.cls, even though questions haven't started yet.	
+\gradetable[v]%[pages]  % Use [pages] to have grading table by page instead of question
+
+\end{minipage}
+
+
+\pagebreak
+
+\begin{questions}
+
+\addpoints
+\question[20]
+
+Which of the following matrices are in reduced row-echelon form?
+
+$
+\begin{bmatrix}
+1 & 3 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}
+$,
+$
+\begin{bmatrix}
+1 & 0 & 0 & 8\\
+0 & 1 & 0 & 5\\
+0 & 0 & 1 & 1\\
+\end{bmatrix}
+$,
+$
+\begin{bmatrix}
+1 & 3 & 1 & 1\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0\\
+\end{bmatrix}
+$,
+$
+\begin{bmatrix}
+1 & 3 & 0 & 2\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0\\
+\end{bmatrix}
+$,
+$
+\begin{bmatrix}
+1 & 0 & 3 & 4 & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0\\
+\end{bmatrix}
+$
+
+\newpage
+\addpoints
+\question
+\begin{parts}
+\part[5] 
+
+How do we find the dimension of a vector space?
+
+\vfill
+
+\part[5] Define the null space of a matrix. 
+
+\vfill
+
+\part[5] If $A$ is a $4 \times 3$ matrix, then the null space of $A$ is a subspace of what vector space?
+\vfill
+\part[5] True of false: $\det(AB)= \det(A)  \det(B)$
+\vfill
+
+
+\part[5] True of false: $\det(A+B)= \det(A) + \det(B)$
+\vfill
+
+
+
+\part[5] True of false: The rank of an $m \times n$ matrix is the minimum of $m$ and $n$. 
+\vfill
+
+\part[5] True of false: If $\det(A) \neq 0$ then $\det(A^{-1})=\frac{1}{\det(A)}$ 
+\vfill
+
+
+\part[5] Prove or provide a counter example to the following statement: If $A$ is invertible and $B$ is invertible then $A+B$ is invertible.
+\vfill
+
+\end{parts}
+
+
+\newpage
+\addpoints
+\question
+\begin{parts} 
+
+\part[15]Prove that $A$ and $B$ are row equivalent if and only if there is an invertible matrix $C$ such that $CA=B$.   
+\vfill
+
+\vfill
+\part[10] Compute 
+
+$$\det
+\Bigg(
+\begin{bmatrix}
+1 & 0 & 2 & 1\\
+1 & 1 & 0 & 1\\
+1 & 3 & 4 & 1\\
+1 & 0 & 2 & 1\\
+\end{bmatrix}
+\Bigg)
+$$
+\vfill
+\end{parts}
+
+
+
+\newpage
+\addpoints
+\question
+\begin{parts}
+\part[10] Compute 
+
+$$\det
+\Bigg(
+\begin{bmatrix}
+-1 & 0 & 0 & 2\\
+1 & 1 & 2 & 1\\
+0 & 0 & 0 & 1\\
+2 & 4 & 4 & 0\\
+\end{bmatrix}
+\Bigg)
+$$
+
+\vfill
+\part[10] Suppose $A$ is a $5 \times 5$ matrix such that $\det(A)=4$. Let $E
+=
+\begin{bmatrix}
+0 & 1 & 0 & 0 & 0 \\
+2 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 1\\
+\end{bmatrix}
+$. What is $\det(EA)=?$ 
+\vfill
+\end{parts}
+
+\newpage
+\addpoints
+\question
+\begin{parts}
+
+\part[10] Show that $ x^2+x+1, x-1 $ are linearly independent.
+
+\vfill
+
+\part[10] Show that the vectors $ x^2+1, x-1 $ do not span $P_2$.
+
+\vfill
+
+
+
+\part[10] Show that $ x^2+x+1,~ x^2-1, ~x+5, ~4 $ are linearly \textbf{dependent}.
+
+\vfill
+
+\part[10] Do the vectors $ x^2+x+1,~ x^2-1, ~4 $ form a basis for $P_2$? 
+
+
+\vfill
+
+\end{parts}
+
+\newpage
+\addpoints
+\question[20]
+
+Suppose that 
+
+$A= 
+\begin{bmatrix}
+3 & 0 & 0  & 0\\
+0 & 1 & 0  & 0\\
+0 & 0 & 1  & 0\\
+0 & 0 & 0  & 1\\
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 \\
+0 & 0 & 1 & 1\\
+\end{bmatrix}
+\begin{bmatrix}
+1 & 2 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 \\
+\end{bmatrix}
+$
+
+Determine if $A$ is invertible by computing $\det(A)$. If $A$ \textit{is} invertible, find $A^{-1}$. 
+\newpage
+\addpoints
+\question[20]
+Let 
+$$
+A
+=
+\begin{bmatrix}
+1 & 0 & -1 & 0 & -1 & 0 & -3 \\
+0 & 1 & 0 & 0 & -1 & 0 & -1 \\
+0 & 0 & 0 & 1 & -4 & 0 & -2 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\end{bmatrix}
+$$
+
+Find a \textbf{basis} for the \textbf{null space} and \textbf{row space} of $A$, the dimension of the null space of $A$, and the rank of $A$.  Note: One answer from this question should help you answer part f) from question 2. 
+
+
+
+\end{questions}
+
+%$
+%\begin{bmatrix}
+ %   x_{11} & x_{12} & x_{13} & \dots  & x_{1n} \\
+  %  x_{21} & x_{22} & x_{23} & \dots  & x_{2n} \\
+   % \vdots & \vdots & \vdots & \ddots & \vdots \\
+   % x_{d1} & x_{d2} & x_{d3} & \dots  & x_{dn}
+%\end{bmatrix}
+%$
+\end{document}

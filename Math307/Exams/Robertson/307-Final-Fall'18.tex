@@ -1,0 +1,287 @@
+\documentclass[11pt]{exam}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\RequirePackage{tikz, pgflibraryplotmarks}
+\usepackage[margin=1in]{geometry}
+\newcommand{\class}{Math 307	}
+\newcommand{\term}{Fall 2018}
+\newcommand{\examnum}{Final}
+\newcommand{\examdate}{12/13/18}
+\newcommand{\timelimit}{120 Minutes}
+\singlespacing
+\parindent 0ex
+
+\begin{document}
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+\begin{flushright}
+\begin{tabular}{p{2.8in} r l}
+\textbf{\class} & \textbf{Name (Print):} & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\textbf{Time Limit: \timelimit} 
+\end{tabular}\\
+\end{flushright}
+\rule[1ex]{\textwidth}{.1pt}
+
+% These commands set up the running header on the top of the exam pages
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\begin{flushleft}
+\begin{center}
+
+\end{center}
+\end{flushleft}
+
+\hfill
+\begin{minipage}[t]{4.3in}
+\vspace{0pt}
+%\cellwidth{3em}
+\gradetablestretch{2}
+\vqword{Problem}
+\addpoints % required here by exam.cls, even though questions haven't started yet.	
+\gradetable[v]%[pages]  % Use [pages] to have grading table by page instead of question
+
+\end{minipage}
+
+
+\pagebreak
+
+\begin{questions}
+
+\addpoints
+\question[28]
+
+Answer true or false to the following statements:
+\vskip.2in
+If $V$ is a vector space of dimension $n$, then $V$ is an $n \times n$ matrix.
+
+\vfill
+If $0$ is an eigenvalue of $A$, then $A$ is not invertible.   
+\vfill
+If $V$ is a vector space of dimension $n$, then any set of $n$ vectors must be linearly independent.
+
+\vfill
+If $\det(A) \neq 0$ then $A$ is invertible.
+\vfill
+If $A$ is an $n \times n$ invertible matrix, then the rows of $A$ are linerarly independent
+\vfill
+If $v_1$ and $v_2$ are linearly independent then there exists nonzero constants, $c_1$ and $c_2$, such that $c_1 v_1 +c_2 v_2 = 0$. 
+\vfill
+If $\lambda$ is an eigenvalue of $A$ then $\det(\lambda I - A)=0$. 
+\vfill
+If $V$ is a vector space of dimension $n$, then any collection of $n$ vectors forms a basis for $V$. 
+\vfill
+If $A$ is an $n \times n$ matrix with $n$ distinct eigenvalues, then $A$ is diagonalizable. 
+\vfill
+If $A$ is an $n \times n$ matrix with $n$ distinct eigenvalues, then $A$ is invertible. 
+
+\vfill
+If $A$ is an $n \times n$ matrix that is invertible, then $A$ is diagonalizable. 
+
+\vfill
+If $A$ is an $n \times n$ matrix that is diagonalizable, then $A$ is invertible. 
+\vfill
+If $V$ is a vector space of dimension $n$, then any basis has $n$ vectors.
+\vfill
+If $V$ is a vector space of dimension $n$, then any set of $n$ linearly independent vectors spans $V$.
+
+
+\pagebreak
+
+\addpoints
+\question[15]
+
+Consider the matrix 
+
+$\begin{bmatrix}
+1 & -1 & 1 \\
+0 & 2 & 1 \\
+0 & 0 & 2  \\
+\end{bmatrix}$.
+Determine the eigenvalues and associated eigenvectors.
+\vfill
+\vfill
+What is the Jordan Normal Form of this matrix?
+\vfill
+\pagebreak
+
+\addpoints
+\question
+
+Consider the homogeneous first order linear differential system
+\begin{equation*}
+  \begin{array}{l}
+       x'=x-y+z\\
+       y'=2y+z\\
+       z'=2z\\
+        \end{array}
+    \end{equation*}
+where $x,y,z$ are all functions of the variable $t$. 
+
+\begin{parts}
+\part[5] Write the system in the matrix form $Y'= AY$.
+\vfill
+\part[5] Is the matrix $A$ diagonalizable? (Hint: Problem 2)
+\vfill
+\part[5] Find the general solution to the homogeneous system $Y'= AY$. 
+\vfill
+\vfill
+\vfill
+\vfill
+
+%(You will need to use the method of the integrating factor twice.)
+\end{parts}
+
+\pagebreak
+
+\addpoints
+\question[20]
+Solve the initial value problem
+
+$$
+Y'=
+\begin{bmatrix}
+2 & 1 \\
+1 & 2 
+\end{bmatrix}
+Y
++
+\begin{bmatrix}
+x \\
+1
+\end{bmatrix},
+\quad \quad 
+Y(0)=
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix}$$
+There is space on the next page to continue your computation.
+
+\newpage 
+(Problem 4: Continued - below is space for computation)
+\newpage
+
+\addpoints
+\question
+
+
+Let's consider the non-homogeneous first order linear differential system
+\begin{equation*}
+\begin{array}{l}
+       x'=x+y+z\\
+       y'=y+z\\
+       z'=y+z\\
+        \end{array}
+\end{equation*}
+where $x,y,z$ are all functions of the variable $t$.
+
+\begin{parts}
+\part[5] Write the system in the matrix form $Y'= AY$.
+
+\vfill
+\vfill
+
+\part [15] Find a diagonal matrix $D$ and an invertible matrix $P$ such that $P^{-1}AP=D$.
+
+
+\vfill
+
+\vfill
+
+\vfill
+
+\vfill
+
+\vfill
+
+\vfill
+
+\vfill
+
+\vfill
+
+\pagebreak
+
+ \part[5] Find the general solution to the homogeneous system $Z'=DZ$.
+
+\vfill
+
+ \part[5] Find the general solution to the homogeneous system $Y'=AY$.
+
+\vfill
+
+\vfill
+
+\vfill
+
+\vfill
+
+
+
+\end{parts}
+
+\newpage
+\addpoints
+\question
+ Consider the following system:
+
+
+\begin{align*}
+{y_1}'' &= y_{1}'+y_{2}' + e^x \\
+{y_2}'' &= y_1 + y_2 + \sin(x)
+\end{align*}
+where $y_1$ and $y_2$ are functions of $x$.
+\begin{parts}
+\part[5] Write this system as a system of first order liner differential equations.
+
+\vfill
+
+\part Extra Credit: Solve the system from part (a). 
+\vfill
+\pagebreak
+
+\part[5] Write the following differential equation as a system of first order linear equations:
+
+$$y''-y'-2y=0$$  
+
+\vfill
+
+\part[10] Solve the system from part b).
+
+\vfill
+
+\vfill
+
+\vfill
+
+\part[5] Verify your solution by solving the original differential equation by using it's characteristic polynomial.  
+\vfill
+
+\end{parts}
+
+
+\newpage
+\addpoints
+\question[2]
+
+Write an English sentence (without mathematical symbols) describing something interesting you learned in this class.
+
+  
+
+%$
+%\begin{bmatrix}
+ %   x_{11} & x_{12} & x_{13} & \dots  & x_{1n} \\
+  %  x_{21} & x_{22} & x_{23} & \dots  & x_{2n} \\
+   % \vdots & \vdots & \vdots & \ddots & \vdots \\
+   % x_{d1} & x_{d2} & x_{d3} & \dots  & x_{dn}
+%\end{bmatrix}
+%$
+\end{questions}
+\end{document}

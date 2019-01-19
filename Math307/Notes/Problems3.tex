@@ -1,0 +1,141 @@
+\section{Problems}
+
+\begin{Pb}
+Let $a_0y + a_1 y' + ... + a_n y^{(n)}= 0$ be a homogeneous linear differential equation with characteristic polynomial $P$.  
+\begin{enumerate}
+\item Suppose $r$ is a root of the charateristic polynomial. Show that $e^{rt}$ is solution of the DE.
+\item Suppose $r$ is a root of multiplicity $m$ of the charateristic polynomial. Show that $e^{rt}$, $te^{rt}$, ..., $t^{m-1}e^{rt}$ are solutions of the DE.
+\item Show that $e^{rt}$, $te^{rt}$, ..., $t^{m-1}e^{rt}$ form an linearly independant family in $C^\infty(a,b)$.
+\end{enumerate}
+\end{Pb}
+
+\begin{Pb}
+Solve the following homogeneous linear differential equations.  
+\begin{enumerate}
+\item $y' = ay +b$,
+\item $y''+ C y =0$ with $C$ a real number,
+\item $y'' - 4y'+ 3y= 0$,
+\item $y'' - 3y'- 10y= 0$.
+\end{enumerate}
+\end{Pb}
+
+\begin{Pb}
+Determine if the following matrices are diagonalizable. Compute their eigenvalues and their eigenvectors. Give a basis for their eigenspaces.   
+\begin{enumerate}
+\item \[A= \begin{pmatrix}
+5 & -1  \\
+-1 & 1  \\
+\end{pmatrix}\]
+\item \[B= \begin{pmatrix}
+5 & 3  \\
+-1 & 1  \\
+\end{pmatrix}\]
+\item \[C= \begin{pmatrix}
+1 & 4 & -1 \\
+4 & 1 &  2 \\
+0 & 0 & 3\\
+\end{pmatrix}\]	
+\end{enumerate}
+\end{Pb}
+
+\begin{Pb}
+Let $a$ be a real number and
+\[A= \begin{pmatrix}
+ 0 & 1  \\
+-a & 1+a \\
+\end{pmatrix}.\]
+We want to study the sequence defined by \[u_{n+2}= (1+a)u_{n+1}-au_n,\]
+and two initial values $u_0$ and $u_1$.
+\begin{enumerate}	
+\item Determine for which values of $a$ the matrix $A$ is diagonalizable.
+\item When $A$ is diagonalizable, compute $A^n$ for $n\geq 0$.
+\item Suppose $A$ is diagonalizable. Denote by $X_n$ the vector $\begin{pmatrix} u_n \\ u_{n+1} \end{pmatrix}$. Give an expression for $X_{n+1}$ as a function of $X_n$ and $A$. 
+\item Express $X_n$ in function of $X_0$ and $a$.
+\item Give the general solution of the recurrence relation.\\
+\end{enumerate}
+
+\textit{Solution:}\\
+\\
+$\chi_A = (X-a)(X-1)$, so the eigenvalues are $1$ and $a$. We then have two possibilities:
+\begin{itemize}
+\item[$\bullet$] $a\neq 1$: the eigenvalues are distincts, so $A$ is diagonalizable,
+\item[$\bullet$] $a=1$, in which case we don't know a priori what happens. But if $A$ was diagonalizable, $A$ would be similar to $I_2$ so equal to $I_2$, which is not the case.
+\end{itemize}
+From this we get that $A$ is diagonalizable if and only if $a\neq 1$.\\
+
+If $a\neq 1$, the associated eigen vectors are
+\[ v_a= \begin{pmatrix}1 \\ a \end{pmatrix} \text{and} \quad v_1= \begin{pmatrix}1 \\ 1 \end{pmatrix}\]
+and $P = \begin{pmatrix} 1 & 1 \\ a & 1 \end{pmatrix}$.\\
+Then $A^n = P \begin{pmatrix} a^n & 0 \\ 0 & 1 \end{pmatrix} P^{-1}$ and $X_n = A^n X_0$ which gives $u_n$. (Do the computations)\\
+\end{Pb}
+
+\begin{Pb}
+List all the possible Jordan form of matrices with the following characteristic polynomial. 
+\begin{enumerate}
+\item $\chi(t) = (t-3)(t-2)(t-5) $
+\item $\chi(t) = (t-1)(t+4)^2 $
+\item $\chi(t) = (t-2)^3 $
+\end{enumerate}
+\end{Pb}
+
+\begin{Pb}
+Let 
+\[A= \begin{pmatrix}
+ 0 & -1  \\
+-1 & 0 \\
+\end{pmatrix}.\]
+Solve $X'=AX$.\\
+
+\textit{Solution:}\\
+\\
+$\chi_A = X^2 +1 $ hence the eigenvalues are 
+\[i \quad \text{and} \quad -i,\]
+with associated eigenvectors:
+\[v_{i} = \begin{pmatrix} 1 \\ -i \end{pmatrix} \quad \text{and} \quad v_{-i} = \overline{v_{i}} = \begin{pmatrix} 1 \\ i \end{pmatrix} ,\]
+and the complex solutions of the differential equation are
+\[C_1 e^{it} v_{i} + C_2 e^{-it} v_{-i} = \begin{pmatrix} C_1 \cos (t)  \\ i \end{pmatrix} \]
+for every complex numbers $C_1$ and $C_2$.\\
+
+To get the real solution, take the real and imaginary parts or set $X(t) = \overline{X(t)}$, you will get
+\[\begin{pmatrix}  x  \\ y \end{pmatrix} = C_1 \begin{pmatrix}  \cos (t)  \\ \sin (t) \end{pmatrix} + C_2 \begin{pmatrix}  -\sin (t) \\ \cos (t)   \\  \end{pmatrix} \]
+or again
+\[\left\{\begin{array}{rcl}  x & = & C_1  \cos (t) - C_2 \sin (t) \\ 
+                             y & = & C_1 \sin (t)  + C_2  \cos (t)  
+\end{array} \right.\]
+\end{Pb}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
