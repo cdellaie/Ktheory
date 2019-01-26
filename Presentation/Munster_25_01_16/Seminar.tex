@@ -1007,6 +1007,74 @@ The last example realizes $V$ as a countable subgroup of homeomorphsims of $\Ome
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Weakly and non-weakly band dominated operators}
+
+\subsection{Approximation of band dominated operators}
+
+In the following, $X$ denotes a discrete metric space (e.g. $\Z$). For $T\in B(l^2 X)$, define the \textit{matrix coefficients} of $T$
+\[T_{xy} = \langle \delta_x , T\delta_y \rangle \quad  \forall x,y\in X.\]
+Think of $T$ as a matrix $(T_{xy})$ indexed by $X$. The propagation of such a $T$ will then be the (possibly infinite) number
+\[prop(T) = \inf \{d(x,y) \ | \ T_{xy} \neq 0 \}. \]
+If the propagation of $T$ is finite, we will say that $T$ is \textit{bounded} or has \textit{finite propagation}. \textit{Band dominated operators} are the norm limits of bounded operators. They form a $C^*$-algebra $C^*_u(X)$, called the \textit{uniform Roe algebra} of $X$.\\
+
+\textbf{Questions:} 
+\begin{enumerate}
+\item If $T$ is band dominated, how can we approximate it by bounded operators?
+\item How can we recognize when $T$ is band dominated?
+\end{enumerate}
+
+The two next numbers will give partial answers to these two questions. Or at least try to explain why they are not trivial.
+
+\subsection{Approximation by bounded operators}
+
+For $T\in B(l^2X)$ band dominated, define $T^{(n)}$ to be the operator with matrix coefficients
+\[T^{(n)}_{xy} = \left\{ \begin{array}{lr} T_{xy} & \text{ if }d(x,y)\leq n  \\ 0 & \text{ otherwise. }\end{array}\right. \] 
+We hope that $T^{n}$ converges to $T$ in norm as $n$ goes to $\infty$.\\
+
+As an example, take $X= \Z$ with its canonical metric (given by the absolute value). Each $f\in C(\mathbb S^1)$ gives rise to a multiplication operator $M_f\in B(L^2(\mathbb S^1 ))$, and by Fourier transform to a convolution operator $T_f\in B(l^2\Z)$. It is the operator of norm $\| f\|_\infty$ with matrix coefficients $(T_f)_{xy}$ proportional to $\hat f(x-y)$.\\
+In particular, if $f= \sum_{n=-N}^N \lambda_n z^n$ is a trigonometric polynomial, then $T_f$ is bounded as $\hat f(n) =0$ for $|n| >N$. This ensures that every $T_f$ is band dominated, as every continuous functions is a uniform limit of trigonometric polynomials. For such operators, our naive guess 
+\[ `` \ T^{(n)}_f \rightarrow_{\| \|} T_f \text{ ''}\]
+is equivalent to 
+\[``\ \sum_{n=-N}^N \hat f(n)z^n \rightarrow_{\|\|_\infty} f \text{ ''}\]
+which is false. It is even worse: one can have $\| T_f \| = 1$ while $\|  T_f^{(n)} \| $ goes to $\infty$ (Baire category argument, see \cite{stein2003princeton} p. 167) and this implies (by uniform boundedness theorem) that $(T_f^{(n)})_n$ does not even converges to $T_f$ in the strong operator topology.\\
+
+\subsection{Weakly band dominated operators}
+
+\begin{definition}
+An operator $T\in B(l^2 X)$ has $(r,\varepsilon)$-propagation if for every subsets $A,B\subset X$ such that $d(A,B)>r$, \[\| \chi_A T\chi_B\| <\varepsilon .\]
+$T$ is weakly band dominated if, for every $\varepsilon >0$, there is $r>0$ such that $T$ has $(r,\varepsilon)$-propagation.
+\end{definition}
+
+Note: Bounded implies weakly band dominated, therefore, weakly band dominated being a closed condition, band dominated implies weakly band dominated, as the intuition suggests. \\
+
+\textbf{Question:} Does weakly bounded implies bounded?\\
+
+This was claimed without proof for spaces with finite asymptotic dimension by J. Roe ca '97, and actually proved
+\begin{itemize}
+\item[$\bullet$] by Rabinovich-Roch-Silbermann in '00 for $X=\Z^n$ \cite{rabinovich2001band};
+\item[$\bullet$] by \v{S}pakula-Tikuisis in '16 for finite asymptotic dimension (and a bit more, finite decomposition complexity spaces for the curious reader) \cite{spakula2017relative};
+\item[$\bullet$] by \v{S}pakula-Zhang in '18 for spaces with property A \cite{spakula2018quasi}.
+\end{itemize}
+We have no counterexamples to this date (25 jan. 2019).
+
+\begin{thm}[Folklore]
+The following are equivalent:
+\begin{enumerate}
+\item $T$ is weakly band dominated;
+\item for every $\varepsilon>0$, there exists $\delta>0$ such that if $f\in l^\infty(X)_1$ and $Lip(f)\leq \delta$ then $\| [T,f] \| <\varepsilon$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Let us start with the reverse implication. say $d(A,B)> r$, then there exists $f\in l^\infty(X)_1$ satisfying $0\leq f \leq 1$, $f_{|A}=1$, $f_{|B}=0$ and $Lip(f)< \frac{1}{r}$. Then $f\chi_A = \chi_A$ and $f\chi_B = 0$ so that 
+\[\begin{split}
+\chi_A T \chi_B & = \chi_A [f,T]\chi_B
+\end{split}\] 
+and $\| \chi_A T\chi_B \| \leq \frac{1}{r}$.
+\end{proof}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Noncommutative geometry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
