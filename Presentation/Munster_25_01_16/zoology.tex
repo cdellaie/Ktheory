@@ -49,8 +49,9 @@ Books about Einstein:
 \item[$\bullet$] Mapping class groups 
 \item[$\bullet$] Profinite groups, locally profinite groups, $Aut(\overline{\mathbb Q} /\mathbb Q)$
 \item[$\bullet$] Automorphism of a regular tree, the Grigorchuk group,
-\item[$\bullet$] Lamplighter groups $ H^\Gamma\rtimes \Gamma$, usually 
-\[\oplus \Z_2 \rtimes \Z.\]
+\item[$\bullet$] Lamplighter groups, usually 
+\[\Z_2 \wr \Z = \oplus \Z_2 \rtimes \Z.\]
+More generally, wreath products $ H\wr \Gamma = H^\Gamma\rtimes \Gamma$. 
 \item[$\bullet$] $\begin{pmatrix}1 & 0 \\ 2 & 1\end{pmatrix}$ and $\begin{pmatrix}1 & 2 \\ 0 & 1\end{pmatrix}$ generate a free group of finite index in $SL(2,\Z)$. The corresponding semi-direct product $\Gamma = \Z^2\rtimes \mathbb F_2$ does not have Haagerup's property ( $(\Gamma, \Z^2)$ has relative property (T) ).\\
 
 \item[$\bullet$] Cayley graphs: finite groups, symmetric groups, $\Z^2$, $\mathbb F_2$, $\Z$ with original generating sets. $B(1,2)$. Lamplighter groups: meta-abelian without finite presentation. \\
@@ -319,6 +320,46 @@ The restriction principle applies for the groupoid $G_{\mathcal N}(\Gamma)\times
 \item[$\bullet$] Bekka shows that ??
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Useful constructions in $KK$-theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+This section tries to compile interesting constructions in bivariant $KK$-theory that can be applied for the study of apporximation properties of $C^*$-algebras.
+
+\subsection*{Extensions, boundaries and $KK_1$}
+
+Kasparov-Stinespring and $E^{(\pi,T)}$.\\
+Toeplitz and suspension..
+
+\subsection*{Mapping cone and double cone constructions}
+
+The mapping cone of a $*$-homomorphism $\phi: A \rightarrow B$ is the $C^*$-algebra 
+\[C_\phi =\{ (a,f) \in A\oplus B[0,1] \ | \ f(0)= 0 \text{ and } f(1)=\phi(a) \}.\]
+The mapping cone naturally fits in the short exact sequence 
+\[s: \begin{tikzcd} 0 \arrow{r} & SB \arrow{r} & C_\phi \arrow{r} & A \arrow{r} & 0\end{tikzcd}\] 
+and the boundary map of this sequence coincides with $\phi_*$ modulo suspension, i.e.
+\[ \partial_{SB,CB} \otimes \partial_s = \phi_*.\]
+(This remains true for any homology or cohomology theory.)\\
+
+Given a sequence \[s: \begin{tikzcd} 0 \arrow{r} & A \arrow{r}{\alpha} & B \arrow{r}{\beta} & C \arrow{r} & 0\end{tikzcd}\] 
+with zero composition, consider the natural inclusion $\gamma : A \rightarrow C_\phi$. We call $C_\gamma$ the \textit{double cone }of $s$ and denote it by $C(s)$. Notice that $C(A\otimes C(s)) = A \otimes C(s)$.
+
+\begin{prop}[see \cite{ChabertEO} rk 4.3 and \cite{HLS} section 1]
+The sequence $K(A)\rightarrow K(B) \rightarrow K(C)$ is exact iff $K(C(s))=0$.
+\end{prop}  
+
+For the proof, use that $K(C(s))=0$ iff $\gamma_*$ is an isomorphism. This property is useful to show failure of $K$-exactness. 
+
+\begin{cor}
+If $A$ is in $\mathcal N$ (satisfies the K\"{u}nneth formula and separable...), then $A$ is $K$-exact. 
+\end{cor}
+
+\begin{proof}
+If $A$ is not $K$-exact, there exists a short exact sequence $s$ such that $A\otimes s$ is not exact in $K$-theory. Then $K(A\otimes C(s))\neq 0$ while $K(C(s))=0$, which prevents $A$ from satisfying the K\"{u}nneth formula.
+\end{proof}
+
+\subsection*{Geometric injective and projective resolutions}
+
 %%%%%%%%%%%%%
 \section{Baum-Connes}
 %%%%%%%%%%%%%%
@@ -482,7 +523,7 @@ is exact implies that the cone $C_\gamma$ of the natural inclusion $\gamma : J \
 
 \subsection{Visit to PennState, September 18th to 21st 2018}
 
-Michael Francis\\
+Michael Francis:
 
 \begin{itemize}
 \item[$\bullet$] Dixmier-Malliavin theorem: for every Lie group $G$,
@@ -493,13 +534,51 @@ The result follows from $f=f\ast \delta = (\sum (-1)^k a_k f^{(k)}) \ast g$. Mic
 \item[$\bullet$] a remak of John Roe in his lectures on Coarse Geometry, that there exists a Svarc-Milnor theorem for foliations.\\
 \end{itemize}
 
-Sarah Browne:\\
+Sarah Browne:
 
 \begin{itemize}
 \item[$\bullet$] Advice to read a book Nate Brown gave her, \textit{Lifting solutions to perturbing problems in $C^*$-algebras}by Terry A. Loring (Fields Institute Monographs). In here canbefind te definition o semi projective $C^*$-algebras.
 \end{itemize}
 
+\subsection{Visit to Texas A\&M, February 12th to 14th 2019, and University of Houston February 15th}
+
+$\bullet$ If for every $r$, $X$ is $2$-decomposable w.r.t. a family of uniformly embeddable spaces (into Hilbert space), then $X$ is itself CEH. This contradicts the (false) example I gave in the preprint with Christian of a group whose uniform Roe algebra satisfies the K\"{u}nneth formula. For this I used a split extension of two CEH groups, which is not itself CEH built by Arzhantseva and Tessera (\cite{arzhantseva2016admitting}). A misuse of the fibering theorem made me believe that this group was $2$-decomposable w.r.t. a uniformly CEH family. \\
+
+The main ingredients for this result are the following, and are all contained in a paper of Dadarlat and Guentner (see \cite{dadarlat2007uniform}). Let us fix some notation: $X$ is a discrete metric space, and $\mathcal U$ is a cover, by which we mean a collection of subset of $X$ whose union form $X$. We say that $\mathcal U$
+\begin{itemize}
+\item[$\bullet$] has Lebesgue number at least $L$ ($Leb(\mathcal U) \geq L$) if any ball of radius $L$ is completely contained in some $U\in \mathcal U$, 
+\item[$\bullet$] has $R$-multiplicity less than $k$ ($R-mult(\mathcal U) \geq R$) if any ball of radius $R$ interesect at most $k$ elements of $\mathcal U$. If ignored, $R$ is zero. 
+\item[$\bullet$] is $R$-separated if any two elements of $\mathcal U$ a at least $R$-apart,
+\item[$\bullet$] is $(k,R)$-separated if $\mathcal U$ admits a partition into $k+1$ families which are $R$-separated.
+\end{itemize}
+
+By a partition of unity $\phi$ subordinated to $\mathcal U$, we mean a collection of function $\{\phi_U\}_{U\in \mathcal U}$, each $\phi_U : X \rightarrow [0,1]$ being zero outside of $U$, and such that $\sum_U \phi_U(x) = 1$ for every $x\in X$. We say $Lip(\phi_U)\leq C$ is there exist $\delta >0$ such that if $d(x,y)<\delta$, $|f(x)-f(y)|< C$. And $Lip_{l^1(\mathcal U)}(\phi)< C$ if there exists $\delta$ such that if $d(x,y)< \delta$, $\| \phi(x)- \phi(y) \|_{l^1(\mathcal U)} =\sum_U |\phi_U(x)-\phi_U(y)| < C$.
+\begin{enumerate}
+\item if $\mathcal U$ is a cover of $X$ with $Leb(\mathcal U) \geq L$ and $mult(\mathcal U)\leq k$ then
+\[\phi_U (x) = \frac{d(x,X -U)}{\sum_{V\in \mathcal U} d(x,X -V)}\]
+defines a PDU such that 
+\[Lip(\phi_U)\leq \frac{2k+3}{L} \text{ and }Lip_{l^1(\mathcal U)} \leq \frac{(2k+2)(2k+3)}{L}.\]
+\item if $\mathcal U$ is $(k,L)$-separated, then $mult(\mathcal U) \leq k+1$; 
+\item if $\mathcal U$ is $(k,2R)$-separated, then $R-mult(\mathcal U) \leq k+1$;
+\item if $L-mult(\mathcal U)\leq k+1$, $Leb(\mathcal U_L)\geq L$;
+\item \textit{Summary:} If $\mathcal U$ is $(k,2L)$-separated, then $mult(\mathcal U_L)\leq k+1$ and $Leb(\mathcal U_L)\geq L $. Also $L-mult(\mathcal U )\leq k+1$. 
+\end{enumerate}
+
+Using \cite{dadarlat2007uniform}, thm 3.2, the result follows.\\
+
+%%%%%%%%%%%%
+$\bullet$ In \cite{WillettYuGromov}, thm 8.3, Willett and Yu constructed a counterexample for the Baum-Connes conjecture \textit{with coefficients}. Let $G$ be a group whose Cayley graph contains an expander $X$. $G$ does not act on $X$, but we can enlarge $X$ and set 
+\[N_\infty (X) = \cup_{R>0} N_R(X),\]
+so that $G$ acts on $N_\infty(X)$ and on 
+\[A= l^\infty(N_\infty (X)) = \overline{\cup_{R>0}l^\infty(N_R(X))}.\]
+Then the Baum-Connes assembly map for $G$ with coefficients in $A$ fails to be surjective.\\
+
+Now can we force this $C^*$-algebraic coefficients into a group so as to build a counterexample for Baum-Connes without coefficients? For instance, take the unrestricted wreath product 
+\[\Gamma=\Z_2 \wr_X G = \prod_{X} \Z_2 \rtimes G.\]
+One sees that the reduced $C^*$-algebra $C_r^*(\Gamma)$ should really look like $A\rtimes_r G$. Indeed, $N =\prod_X \Z_2$ is normal abelian in $\Gamma$, so that $C_r^*(\Gamma) \cong C^*_r(N)\rtimes_r G \cong C(\hat N)\rtimes_r G$.  
+
 \section{Mayer-Vietoris}
+
 
 \section{Quantum groups}
 
