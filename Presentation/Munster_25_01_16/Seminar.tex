@@ -908,7 +908,7 @@ and a bijection $\begin{pmatrix} I_1 & ... & I_n \\ J_{\sigma(1)} & ... & J_{\si
 \draw (-0.2,0.375) node {$J_2$};
 \draw (-0.2, 0.75) node {$J_3$};
 \end{tikzpicture} \] 
-\caption{The graph of $\begin{pmatrix} I_1 & I_2 & I_3 \\ J_2 & J_1 & J_3\end{pmatrix}$}
+\caption[]{The graph of $\begin{pmatrix} I_1 & I_2 & I_3 \\ J_2 & J_1 & J_3\end{pmatrix}$}
 \end{figure}
 
 In order to prove that $V$ is $C^*$-simple, we will:
@@ -1011,7 +1011,7 @@ The last example realizes $V$ as a countable subgroup of homeomorphsims of $\Ome
 
 \subsection{Approximation of band dominated operators}
 
-In the following, $X$ denotes a discrete metric space (e.g. $\Z$). For $T\in B(l^2 X)$, define the \textit{matrix coefficients} of $T$
+In the following, $X$ denotes a discrete metric space (e.g. $\Z$) with bounded geometry. This last requirement means that, for each positive number $r$, the cardinality of the $r$-balls is uniformly bounded, i.e. the number $N_r = \sup_{x\in X } |B(x,r)|$ is finite. For $T\in B(l^2 X)$, define the \textit{matrix coefficients} of $T$ by
 \[T_{xy} = \langle \delta_x , T\delta_y \rangle \quad  \forall x,y\in X.\]
 Think of $T$ as a matrix $(T_{xy})$ indexed by $X$. The propagation of such a $T$ will then be the (possibly infinite) number
 \[prop(T) = \inf \{d(x,y) \ | \ T_{xy} \neq 0 \}. \]
@@ -1073,6 +1073,69 @@ Let us start with the reverse implication. say $d(A,B)> r$, then there exists $f
 and $\| \chi_A T\chi_B \| \leq \frac{1}{r}$.
 \end{proof}
 
+\subsection{Characterizing membership in the Roe algebra}
+
+The main goal of this section is to prove the following result, after the work of Spakula and Tikuisis.
+
+\begin{thm}
+Consider the following properties of an operator $b\in B(l^2 X)$.
+\begin{enumerate}
+\item $\lim \| [b , f_n] \| =0  $ for every very lipschitz sequence $(f_n) \subset C_b(X)$;
+\item $b$ is quasi local;
+\item $[b , g ] \in \mathfrak K( l^2X)$ for every Higson function $g\in C_h(X)$;
+\item $b \in C^*_u(X)$. 
+\end{enumerate} 
+Then $(4) \implies (1) \iff (2) \iff (3) $. Moreover if $X$ has finite asymptotic dimension, then $(4)$ is equivalent to all of these.
+\end{thm}
+
+Some remarks are in order. 
+\begin{itemize}
+\item[$\bullet$] These results grew out of a question of John Roe, who asked about the implication $(2) \implies (4)$ when $X$ has \textit{finite asymptotic dimension} (FAD).
+\item[$\bullet$] The theorem in \cite{SpakulaTikuisis} is better: $(2)\implies (4)$ when $X$ has straight \textit{finite decomposition complexity} (FDC), which is much weaker than FAD. For instance, $\Z \wr \Z$ has FDC but not FAD, while FAD always implies FDC.
+\item[$\bullet$] There is a follow up paper which shows $(2)\implies (4)$ when $X$ has property A, an even weaker condition. This last result will be treated in a following number.
+\end{itemize}
+
+Let us understand the conditions better.
+
+\subsubsection*{Very Lipschitz condition} Recall that a function $f$ is Lipschitz if its Lipschitz modulus 
+\[Lip(f) = \sup_{x\neq y} \frac{|f(x) - f(y)|}{d(x,y)}\]
+is finite. More precisely, a function $f$ is $L$-Lipschitz if $Lip(f) \leq L \iff |f(x)-f(y)|\leq L d(x,y), \quad \forall x \neq y $.\\
+
+A sequence $(f_n)\subset l^\infty (X)$ is \textit{very Lipschitz} if
+\begin{itemize}
+\item[$\bullet$] the sequence is uniformly bounded: $\exists C> 0 $ such that $\| f_n \| \leq C$;
+\item[$\bullet$] $\lim Lip(f_n) = 0$.
+\end{itemize} 
+With this notation, the condition $(1)$ is equivalent to 
+\[\forall \varepsilon > 0 , \exists L> 0 \text{ s.t. if } \|f \| \leq 1 \text{ and } Lip(f)\leq L \text{ then } \| [b,f] \| <\varepsilon. \]
+Indeed, one direction is obvious, and suppose there exists $\varepsilon > 0 $ such that for every $L> 0$ there is a $f\in l^\infty (X)$ with $\| f\| \leq 1$, $Lip(f)\leq L $ and $\| [b, f ] \| \geq \varepsilon$. Take $L=\frac{1}{n}$ to get a very Lipschitz sequence $(f_n)$ with $\| [b,f]\| \geq \varepsilon > 0$, which contradicts $(1)$.\\
+
+\subsubsection*{Quasi-locality} $b\in B(l^2X)$ is quasi-local \\
+iff $\forall \varepsilon> 0$, $b$ has finite $\varepsilon$-propagation \\
+iff $\forall \varepsilon > 0, \exists  r > 0$ such that $\forall f,g \in l^\infty (X)$, if $\|f\| , \|g\| \leq 1 $ and $d(supp(f), supp(g))\geq r$ then $\| fbg \| < \varepsilon$.
+
+\subsubsection*{Higson functions} $g\in C_h(X)$ \\
+iff $\forall \varepsilon > 0, \forall  r > 0$,  there exists a finite subset $F\subset X$ such that if $x,y \notin F$ and $d(x,y)\leq r$, then $|g(x)-g(y)|\leq \varepsilon$.
+
+\subsubsection{Roe's question on conditions (2) and (4)}
+$(4)\implies (2)$ is not difficult. In short, quasi-locality is a closed condition, which is obviously satisfied by finite propagation bounded operators. \\
+
+\textit{Closed condition} If $\forall \delta> 0 $, there is a quasi-local operator $b'$ such that $\| b - b' \| < \delta $, then $b$ is quasi-local.\\
+
+\textit{Finite propagation operators are quasi-local} If $\xi \in l^2(X)$ is finitely supported and $prop(b)\leq r$, then $supp( b\xi ) \subset N_r( supp(\xi))$, and so if $d(supp(f), supp(g))> r$, then $gbf = 0$.\\
+
+$(4)\implies (1)$ is again not too hard. \\
+Condition (1) is closed and is satisfied by finite propagation operators. This follows from elementary estimates and a calculation of the kernel of the commutator.
+\begin{lem}
+If $b\in B(l^2X)$ such that $|b(x,y)|\leq C$ and $prop(b)\leq r$, then $\| b \| \leq C N_r$
+\end{lem}
+
+\begin{lem} Let $b$ as above and $f\in l^\infty(X) $. The kernel of $[b,f]$ is 
+\[[b,f](x,y) = b(x,y) (f(x)-f(y))).\]
+\end{lem}
+
+Now $(4)\implies (1)$ follows: if $prop(b)\leq r$, then $prop([b,f]) \leq r$ and $| [b,f](x,y)| \leq C Lip(f)r$ so that also $\| [b,f] \| \leq C r N_r Lip(f)$. As for the lemmas:\\
+ 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Noncommutative geometry}
