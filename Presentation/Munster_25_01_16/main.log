@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  21 FEB 2019 10:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  1 MAR 2019 12:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1855,21 +1855,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 879--881
 
  []
 
-! Argument of \Hy@tempa has an extra }.
-<inserted text> 
-                \par 
-l.911 ...2 & I_3 \\ J_2 & J_1 & J_3\end{pmatrix}$}
-                                                  
-? 
-Runaway argument?
-\@captype {\def \@currenvir {pmatrix}\edef \@currenvline {\on@line }\csname \ET
-C.
-! Paragraph ended before \Hy@tempa was complete.
-<to be read again> 
-                   \par 
-l.911 ...2 & I_3 \\ J_2 & J_1 & J_3\end{pmatrix}$}
-                                                  
-? 
 [29] [30]
 Underfull \hbox (badness 10000) in paragraph at lines 939--941
 
@@ -1920,70 +1905,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 1050--1051
 
  []
 
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 1084--1086
+LaTeX Font Info:    Try loading font information for U+euf on input line 1085.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [34]
+
+LaTeX Warning: Citation `SpakulaTikuisis' on page 35 undefined on input line 10
+94.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1112
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 1116--1118
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1122
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1136.
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1124
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1136.
+Overfull \hbox (1.47446pt too wide) in paragraph at lines 1125--1126
+[]\OT1/cmr/m/it/12 Finite propaga-tion op-er-at-ors are quasi-local \OT1/cmr/m/
+n/12 If $\OML/cmm/m/it/12 ^^X \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 l[]\OT1/cmr/m
+/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )$ is fi-nitely sup-por-ted and $\OML/
+cmm/m/it/12 prop\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 ) \OMS/cmsy/
+m/n/12 ^^T
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1136.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1141--1142
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
 
  []
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1165--1167
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1170--1172
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1176--1178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1188--1189
+Underfull \hbox (badness 10000) in paragraph at lines 1167--1168
 
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1193--1195
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1196--1197
+Underfull \hbox (badness 10000) in paragraph at lines 1208--1209
 
  []
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1214--1215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1221--1223
+Underfull \hbox (badness 10000) in paragraph at lines 1225--1226
 
  []
 
@@ -1992,21 +1967,109 @@ Underfull \hbox (badness 10000) in paragraph at lines 1242--1243
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1248--1250
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1251--1252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1256
+
+ []
+
 [39]
-LaTeX Font Info:    Try loading font information for U+euf on input line 1249.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Underfull \hbox (badness 10000) in paragraph at lines 1255--1256
+Underfull \hbox (badness 10000) in paragraph at lines 1257--1258
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1265
+Underfull \hbox (badness 10000) in paragraph at lines 1270--1272
 
  []
 
-) [41] [42
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 1302--1304
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1322.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1322.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1322.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1327--1328
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1351--1353
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1356--1358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1362--1364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1374--1375
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1382--1383
+
+ []
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1407--1409
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1428--1429
+
+ []
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 1441--1442
+
+ []
+
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 1449--1451
+
+ []
+
+) [47] [48
 
 ]
 Chapter 2.
@@ -2022,7 +2085,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 21.
 
-[43]
+[49]
 \openout2 = `zoology.aux'.
 
  (./zoology.tex
@@ -2035,7 +2098,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-[44
+[50
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 55--56
@@ -2062,7 +2125,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
-[45]
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
@@ -2092,7 +2155,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-[46]
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 87--89
 
  []
@@ -2127,19 +2190,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[47]
+[53]
 Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-[48]
+[54]
 Overfull \hbox (19.06032pt too wide) in paragraph at lines 139--154
 [][] 
  []
 
-[49]
+[55]
 
-LaTeX Warning: Citation `GWY' on page 50 undefined on input line 194.
+LaTeX Warning: Citation `GWY' on page 56 undefined on input line 194.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 198--200
@@ -2151,12 +2214,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
-[50]
+[56]
 Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
-[51]
+[57]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 224.
@@ -2219,9 +2282,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
-[52]
+[58]
 
-LaTeX Warning: Citation `schochetRosenberg' on page 53 undefined on input line 
+LaTeX Warning: Citation `schochetRosenberg' on page 59 undefined on input line 
 260.
 
 
@@ -2264,7 +2327,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 278--280
 
  []
 
-[53]
+[59]
 Underfull \hbox (badness 10000) in paragraph at lines 282--284
 
  []
@@ -2285,7 +2348,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 295--297
  []
 
 
-LaTeX Warning: Citation `SkandalisNotion' on page 54 undefined on input line 29
+LaTeX Warning: Citation `SkandalisNotion' on page 60 undefined on input line 29
 9.
 
 
@@ -2308,7 +2371,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
-[54]
+[60]
 Underfull \hbox (badness 10000) in paragraph at lines 315--317
 
  []
@@ -2331,9 +2394,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 341--343
 
  []
 
-[55]
+[61]
 
-LaTeX Warning: Citation `ChabertEO' on page 56 undefined on input line 347.
+LaTeX Warning: Citation `ChabertEO' on page 62 undefined on input line 347.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 368--369
@@ -2370,7 +2433,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
-[56]
+[62]
 Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
@@ -2420,7 +2483,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
-[57]
+[63]
 Underfull \hbox (badness 10000) in paragraph at lines 421--423
 
  []
@@ -2463,7 +2526,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Underfull \vbox (badness 1953) has occurred while \output is active []
 
- [58]
+ [64]
 Underfull \hbox (badness 10000) in paragraph at lines 475--477
 
  []
@@ -2478,7 +2541,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
  []
 
-[59]
+[65]
 Underfull \hbox (badness 10000) in paragraph at lines 499--500
 
  []
@@ -2513,7 +2576,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 517--518
 
  []
 
-[60]
+[66]
 Underfull \hbox (badness 10000) in paragraph at lines 532--534
 
  []
@@ -2528,7 +2591,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 545--546
 
  []
 
-[61]
+[67]
 Underfull \hbox (badness 10000) in paragraph at lines 567--568
 
  []
@@ -2538,7 +2601,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 573--575
 
  []
 
-) [62] [63]
+) [68] [69]
 \openout2 = `RepresentationGroupoid.aux'.
 
  (./RepresentationGroupoid.tex
@@ -2596,7 +2659,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-[64
+[70
 
 
 ]
@@ -2644,7 +2707,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-[65]
+[71]
 Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
@@ -2659,7 +2722,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-) [66]
+) [72]
 \openout2 = `Grothendieck.aux'.
 
  (./Grothendieck.tex
@@ -2672,15 +2735,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-) [67
+) [73
 
 
-] [68
+] [74
 
 
 ]
 Chapter 3.
-[69]
+[75]
 \openout2 = `Groupoids.aux'.
 
  (./Groupoids.tex
@@ -2726,7 +2789,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-[70
+[76
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
@@ -2738,7 +2801,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
-) [71]
+) [77]
 \openout2 = `HarishChandra.aux'.
 
  (./HarishChandra.tex
@@ -2764,10 +2827,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-[72
+[78
 
 
-]) [73]
+]) [79]
 \openout2 = `UCT.aux'.
 
  (./UCT.tex
@@ -2795,7 +2858,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-[74
+[80
 
 
 ]
@@ -2803,7 +2866,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
-) [75]
+) [81]
 \openout2 = `FunkyQuestions.aux'.
 
  (./FunkyQuestions.tex
@@ -2821,13 +2884,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-) [76
+) [82
 
 
-] (./main.bbl [77
+] (./main.bbl [83
 
 
-] [78]) [79]
+] [84]) [85]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
  (./main.aux (./zoology.aux)
@@ -2836,7 +2899,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 868E340F772CA2E1C8C8F8716BDBB95D;5103.
+(rerunfilecheck)             Checksum: 83F61E9682535BD7D1163289DE942069;5273.
 
 
 LaTeX Warning: There were undefined references.
@@ -2844,10 +2907,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 23551 strings out of 492990
- 482651 string characters out of 6132636
- 560556 words of memory out of 5000000
- 26358 multiletter control sequences out of 15000+600000
+ 23579 strings out of 492990
+ 482979 string characters out of 6132636
+ 560650 words of memory out of 5000000
+ 26361 multiletter control sequences out of 15000+600000
  21364 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,18n,84p,1291b,1051s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2870,10 +2933,10 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on main.pdf (79 pages, 470174 bytes).
+Output written on main.pdf (85 pages, 489444 bytes).
 PDF statistics:
- 986 PDF objects out of 1000 (max. 8388607)
- 877 compressed objects within 9 object streams
- 265 named destinations out of 1000 (max. 500000)
- 549 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1044 PDF objects out of 1200 (max. 8388607)
+ 928 compressed objects within 10 object streams
+ 290 named destinations out of 1000 (max. 500000)
+ 565 words of extra memory for PDF output out of 10000 (max. 10000000)
 

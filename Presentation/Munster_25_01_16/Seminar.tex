@@ -1134,7 +1134,130 @@ If $b\in B(l^2X)$ such that $|b(x,y)|\leq C$ and $prop(b)\leq r$, then $\| b \| 
 \[[b,f](x,y) = b(x,y) (f(x)-f(y))).\]
 \end{lem}
 
-Now $(4)\implies (1)$ follows: if $prop(b)\leq r$, then $prop([b,f]) \leq r$ and $| [b,f](x,y)| \leq C Lip(f)r$ so that also $\| [b,f] \| \leq C r N_r Lip(f)$. As for the lemmas:\\
+Now $(4)\implies (1)$ follows: if $prop(b)\leq r$, then \[prop([b,f]) \leq r \text{ and } | [b,f](x,y)| \leq C Lip(f)r\] so that also $\| [b,f] \| \leq C r N_r Lip(f)$. As for the lemmas, the first point reduces to:
+\[\begin{split}
+ |b\xi (x)|  & \leq \sum_{y\in B_r(x)} |b(x,y)|\ |\xi(y)| \\
+	& \leq C N_r^\frac{1}{2} \| \xi_{|B_r(x)} \|_2 \quad\text{ by CBC}.\\
+\implies \| b\xi \|_2^2 & = \sum_x |b\xi (x)|^2 \\
+			& \leq \sum_x C^2 N_r \| \xi_{|B_r(x)} \|_2^2 \\
+			& \leq \sum_x \sum_{y\in B_r(y)} C^2 N_r | \xi(y)|^2 \\
+			& \leq C^2N_r^2 \|\xi \|^2_2 
+\end{split}\]
+The second point is a direct calculation.
+
+\subsubsection*{$(1)\implies (2)$}
+The key point is the following.
+
+\begin{lem}
+If $A,B\subset X$ such that $d(A,B)\geq r$, then there exists a function $\phi : X \rightarrow [0,1]$ such that 
+\begin{itemize}
+\item[$\bullet$] $\phi =1$ on $A$,
+\item[$\bullet$] $\phi =0$ on $B$,
+\item[$\bullet$] $Lip(\phi) \leq \frac{1}{r}$.
+\end{itemize}
+\end{lem} 
+\begin{proof}
+Let us show that it gives the claimed implication. Let $\varepsilon >0 $, condition $(1)$ gives a constant $L$. Put $r> L^{-1}$. If then $f,g\in l^\infty(X)_1$ such that $d(supp(f),supp(g))\geq r$ we have $f\phi=f$ and $g\phi=0$ so that 
+\[\| fbg\| = \| f[\phi, b]g\| \leq \| [\phi,b]\| <\varepsilon .\]
+As for the lemma, just take
+\[\phi(x) = \max \{ 0, 1 -\frac{d(x,A)}{r}\}.\]
+\end{proof}
+
+\subsubsection*{$(2)\implies (1)$}
+The key here idea is: if $f$ has a small Lipschitz constant, then it varies slowly so that its level sets are well separated.\\
+
+Let $f\in l^\infty(X)$ such that $0\leq f \leq 1$ and $Lip(f)\leq L$, and put 
+\[\begin{split}
+A_i = &  \{x\ | \frac{i-1}{N} < f(x) \leq \frac{i}{N}\} \quad i=2,N \\ 
+A_1 = & \{x \ |  0\leq f(x) \leq \frac{1}{N} \} \end{split} \] 
+Then $f \sim \sum_{i=1}^N \frac{i}{N}A_i := g $ (actually $\| f-g\| \leq \frac{1}{N}$) and also 
+\[ d(A_i,A_j)\geq \frac{1}{NL} \quad \text{ if } |i-j|\geq 2.\]
+Also the $A_i$'s are disjoint and cover $X$. we will now estimate $\| [b,g] \| $. Let $\varepsilon>0$,
+\[\begin{split}
+\| [g,b] \| & = \| [ \sum_i \frac{i}{N} A_i , b] \| \\
+		& = \| \left( \sum_i \frac{i}{N} A_i \right) \ b  \ \left(\sum_i  A_i \right)-  
+				\left(\sum_i A_i \right) \ b \ \left(\sum_i \frac{i}{N} A_i \right) \| \\
+		& = \| \sum_{i,j} ( \frac{i}{N} -\frac{j}{N}) A_i b A_j\| \\
+		& \leq \| \sum_{|i-j| = 1} \frac{1}{N} A_i b A_j\| +\| \sum_{|i-j|\geq 2} (\frac{i}{N}-\frac{j}{N})A_i b A_j \| \\ 
+\end{split}\]
+Let us label the summands of this last line by I and II. By quasi-locality of $b$, we get a $r=r(\varepsilon)>0$, then for any choice of $N$, put $L= L(N,\varepsilon)$ such that $L< (rN)^{-1}$. Any such $f$ with $Lip(f)\leq L$ satisfies $d(A_i,A_j)> r$ so that $\| A_ifA_j \| < \varepsilon $ for each term in the second summand, so that 
+\[ (II) \leq N^2 \varepsilon. \]
+For $(I)$, the pairs $(i,j)$ can be split up into $4$ classes: ($i$ odd, $j = i+1$), ($i$ even, $j = i+1$) and the two symmetric cases. For each of these families, the sum is a block sum with orthogonal domain and range, hence the norm of the sum is less than the sup of the norm of the terms, so that 
+\[(I) \leq \frac{4}{N}.\]
+Let us wrap all of this up: if $\varepsilon$ is given, choose $N$ such that $\frac{4}{N} < \varepsilon$, choose $L= L(N,\frac{\varepsilon}{N^2})$. This gives:
+\[\begin{split}
+\| [b,g] \| & \leq (I) + (II) \\
+	& \leq \frac{4}{N} + \frac{\varepsilon}{N^2} N^2 \\
+	& \leq 2\varepsilon . \\
+\end{split}\]   
+
+\subsection{Heart of the paper}
+
+Let us turn the attention to the most important result of the paper:
+\[\text{If }X\text{ has FAD, then }(1)\implies (4).\]
+
+\begin{thm}
+Let $X$ be a bounded geometry uniformly discrete metric space. If $X$ has finite asymptotic dimension, then
+\[\forall \varepsilon>0, \exists L>0 \text{ s.t. }a\in Commut(L,\varepsilon) \implies a \in C^*_u(X) \] 
+and
+\[ a\in Commut(L,\varepsilon) \iff \| [a,f] \| <\varepsilon \quad \forall f\in l^\infty(X)_1, Lip(f)< L.\]
+\end{thm}
+
+\subsubsection*{Review of asymptotic dimension}
+
+Recall that $X$ has \textit{asymptotic dimension} less than $d$ if for every $r>0$, there exists a bounded cover $X$ which is $(d,r)$-separated. The typical example is the group $\Z$ with the metric induced by the absolute value, which has asymptotic dimension bounded by $1$. As an exercise, prove that $asdim(\Z^n) \leq n$.\\
+
+In the context of $asdim \leq 1$, conditional expectations into block subalgebras are very natural. Consider subsets $\{U_i\}$ of $X$ which are pairwise disjoint and $u_i$ the correponding multiplication operators. Define 
+\[\theta(a) = \sum_i u_i a u_i \quad \forall a \in B(l^2 X).\]
+\begin{itemize}
+\item[$\bullet$] $\theta(a)$ is SOT convergent;
+\item[$\bullet$] $\theta$ is lower continuous;\\
+Both of these follow essentially from
+\[\begin{split}
+\| \theta(a) \xi\|^2 & = \sum_i \| u_i a u_i \xi \|^2 \quad \text{by orthogonality of the support,} \\
+			& \leq \| a \| \ \sum_i \| u_i \xi\|^2 \\
+			& \leq \| a \| \ \| \xi\|^2  
+\end{split}\]
+Take the directed systems of all the sums over finite subsets of $I$, in which case the sum is finite.
+\item[$\bullet$] $\theta$ is a conditional expectation. (Meaning it is CP, $\theta(xay)=x\theta(a)y$ when $x,y$ are block diagonals wrt $\bigoplus_i l^2U_i$, and $\theta(a)$ is block diagonal.)
+\end{itemize}
+
+Write $u=\sum_i u_i$. \\
+
+\textbf{Fact:} if $prop(a)\leq r$ and $\mathcal U$ is $2r$-separated, then $uau=\theta(a)$.
+
+\begin{proof}
+If $\xi \in l^2 X$, $supp(u_i\xi)\subset U_i$, so that $supp(a u_i \xi ) \subset N_r(U_i)$ which is disjoint from $U_j$, $j\neq i$. Hence the cross terms $u_j a u_i \xi$ vanish. We get for finite sums \[\sum_{i,j \in F} u_i a u_j \xi =\sum_{i\in F} u_i a u_i \xi,\]
+and the result follows by continuity. 
+\end{proof}
+
+\textbf{Consequence:} If $b\in C^*_u(X)$, for every $\varepsilon >0$, there exists $r>0$ such that if $\mathcal U$ is $r$-separated, then 
+\[\| ubu -\theta(b)\| <\varepsilon.\]
+This renders the next proposition natural.
+\begin{prop}(Cor 4.3) 
+If $a\in Commut(L,\varepsilon)$, with the notations above, if $\mathcal U $ is $\frac{2}{L}$-separated, then 
+\[\| uau -\theta(a)\| <\varepsilon.\]
+\end{prop}
+
+Remark: if the theorem is true, then the above discussion shows that the result above must be true.\\
+
+\begin{proof}(of the theorem, assuming the above proposition)
+If $asdim(X)\leq 1$, fix a big $r>0$: we get a bounded cover $\mathcal W$ which is $(1,r)$-separated, meaning
+\[\mathcal W = \mathcal U \cup \mathcal V\]
+with $\mathcal U$ and $\mathcal V$ $r$-separated families. Then, if $a\in B(l^2X)$,
+\[a = uau + uav + vau + vav.\]
+we want to show that if $a\in Commut (L,\varepsilon)$ and $r>4L^{-1}$, then each term on the right is near a finite propagation operator. \\
+
+\textit{Claim:} this is true for $uau$ and $vav$. \\
+
+This follows from the proposition: $\mathcal U$ is $r>4L^{-1}> 2L^{-1}$-separated so that
+\[ \| uau -\theta(a) \| \leq \varepsilon \]
+and $\theta(a)$ is block diagonal w.r.t. a bounded family, it is thus of finite propagation (less than $\sup_{\mathcal U} diam (U)$).\\
+
+\textit{Claim:} this is true for $uav$ and $vau$.\\
+
+
+\end{proof}
  
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
