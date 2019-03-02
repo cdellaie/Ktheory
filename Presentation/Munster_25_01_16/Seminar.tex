@@ -1242,8 +1242,8 @@ If $a\in Commut(L,\varepsilon)$, with the notations above, if $\mathcal U $ is $
 Remark: if the theorem is true, then the above discussion shows that the result above must be true.\\
 
 \begin{proof}(of the theorem, assuming the above proposition)
-If $asdim(X)\leq 1$, fix a big $r>0$: we get a bounded cover $\mathcal W$ which is $(1,r)$-separated, meaning
-\[\mathcal W = \mathcal U \cup \mathcal V\]
+If $asdim(X)\leq 1$, fix a big $r>0$: we get a bounded cover $\mathcal Y$ which is $(1,r)$-separated, meaning
+\[\mathcal Y = \mathcal U \cup \mathcal V\]
 with $\mathcal U$ and $\mathcal V$ $r$-separated families. Then, if $a\in B(l^2X)$,
 \[a = uau + uav + vau + vav.\]
 we want to show that if $a\in Commut (L,\varepsilon)$ and $r>4L^{-1}$, then each term on the right is near a finite propagation operator. \\
@@ -1256,9 +1256,23 @@ and $\theta(a)$ is block diagonal w.r.t. a bounded family, it is thus of finite 
 
 \textit{Claim:} this is true for $uav$ and $vau$.\\
 
+Let $\mathcal U'=N_{L^{-1}}(\mathcal U)$, same for $\mathcal V'$. Both are at least $2L^{-1}$-separated. We thus obtain $f=\sum f_i$ with $f_i$ $[0,1]$-valued, with value $1$ on $U_i$, $0$ on $N_{L^-1}(U_i)^c$ and $Lip(f_i)\leq L$. Similarly for $\mathcal V$, we get $g=\sum_j g_j$. Then $uf=u$ and $vg=v$. Put 
+\[W_{ij} = N_{L^{-1}}(U_i)\cap N_{L^{-1}}(V_j) \quad , W = \coprod_{i,j} W_{ij}\]
+which is at least $2L^{-1}$-separated. Similarly, build $w$ and $w_{ij}$. we then calculate:
+\[\begin{split} 
+uav  &= ufagv \\
+	&= ugafv +u [f,a]gv + u [a,g]fv \\
+\text{So } \| uav-ugafv \| 	& \leq 2\varepsilon \\
+\end{split}\]   
 
+but now, $ugafv \in Commut(L,\varepsilon)$, so that the proposition applies using the $\{W_{ij}\}$ which are $2L^{-1}$-separated:
+\[\| wugafvw -\theta_w(ugafv) \| \leq \varepsilon.\]
+But $ wugafvw= ugafv$ since $wug ug $ and $fvw = fv $ ($supp (fv)\subset W$ and $supp(ug)\subset W$). And $\theta_w(ugafv)$ is block diagonal with finite propagation.
 \end{proof}
- 
+
+It remains to prove the proposition. 
+
+
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Noncommutative geometry}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  1 MAR 2019 12:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  1 MAR 2019 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1988,84 +1988,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 1257--1258
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1270--1272
+Underfull \hbox (badness 10000) in paragraph at lines 1284--1286
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 1302--1304
+Underfull \hbox (badness 10000) in paragraph at lines 1316--1318
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1322.
+(hyperref)                removing `math shift' on input line 1336.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1322.
+(hyperref)                removing `subscript' on input line 1336.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1322.
+(hyperref)                removing `math shift' on input line 1336.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1327--1328
+Underfull \hbox (badness 10000) in paragraph at lines 1341--1342
 
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1351--1353
+Underfull \hbox (badness 10000) in paragraph at lines 1365--1367
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1356--1358
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1372
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1362--1364
+Underfull \hbox (badness 10000) in paragraph at lines 1376--1378
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1374--1375
+Underfull \hbox (badness 10000) in paragraph at lines 1388--1389
 
  []
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 1379--1381
+Underfull \hbox (badness 10000) in paragraph at lines 1393--1395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1382--1383
+Underfull \hbox (badness 10000) in paragraph at lines 1396--1397
 
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1400--1401
+Underfull \hbox (badness 10000) in paragraph at lines 1414--1415
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1407--1409
+Underfull \hbox (badness 10000) in paragraph at lines 1421--1423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1428--1429
+Underfull \hbox (badness 10000) in paragraph at lines 1442--1443
 
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1441--1442
+Underfull \hbox (badness 10000) in paragraph at lines 1455--1456
 
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1449--1451
+Underfull \hbox (badness 10000) in paragraph at lines 1463--1465
 
  []
 
@@ -2909,7 +2909,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
 Here is how much of TeX's memory you used:
  23579 strings out of 492990
  482979 string characters out of 6132636
- 560650 words of memory out of 5000000
+ 560607 words of memory out of 5000000
  26361 multiletter control sequences out of 15000+600000
  21364 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2933,7 +2933,7 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on main.pdf (85 pages, 489444 bytes).
+Output written on main.pdf (85 pages, 490888 bytes).
 PDF statistics:
  1044 PDF objects out of 1200 (max. 8388607)
  928 compressed objects within 10 object streams
