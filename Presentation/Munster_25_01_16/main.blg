@@ -10,26 +10,26 @@ A level-1 auxiliary file: UCT.aux
 A level-1 auxiliary file: FunkyQuestions.aux
 The style file: plain.bst
 Database file #1: biblio.bib
-You're missing a field part---line 177 of file biblio.bib
+You're missing a field part---line 196 of file biblio.bib
  :     volume  = 
  :               ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 242 of file biblio.bib
+I was expecting a `,' or a `}'---line 261 of file biblio.bib
  : 
  : month = "10"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 252 of file biblio.bib
+I was expecting a `,' or a `}'---line 271 of file biblio.bib
  : 
  : month = ""
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 262 of file biblio.bib
+I was expecting a `,' or a `}'---line 281 of file biblio.bib
  : 
  : month = ""
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 302 of file biblio.bib
+I was expecting a `,' or a `}'---line 321 of file biblio.bib
  : 
  : month = "Summer"
 (Error may have been on previous line)
@@ -41,45 +41,45 @@ Warning--I didn't find a database entry for "schochetRosenberg"
 Warning--I didn't find a database entry for "SkandalisNotion"
 Warning--I didn't find a database entry for "ChabertEO"
 Warning--empty journal in Penrose2005Einstein
-You've used 35 entries,
+You've used 38 entries,
             2118 wiz_defined-function locations,
-            743 strings with 9455 characters,
-and the built_in function-call counts, 9839 in all, are:
-= -- 988
-> -- 367
+            760 strings with 9889 characters,
+and the built_in function-call counts, 10789 in all, are:
+= -- 1078
+> -- 425
 < -- 3
-+ -- 152
-- -- 112
-* -- 628
-:= -- 1696
-add.period$ -- 105
-call.type$ -- 35
-change.case$ -- 153
++ -- 175
+- -- 132
+* -- 698
+:= -- 1867
+add.period$ -- 114
+call.type$ -- 38
+change.case$ -- 172
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 390
-empty$ -- 820
-format.name$ -- 112
-if$ -- 2025
+cite$ -- 39
+duplicate$ -- 421
+empty$ -- 883
+format.name$ -- 132
+if$ -- 2211
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 40
-newline$ -- 178
-num.names$ -- 70
-pop$ -- 142
+int.to.str$ -- 38
+missing$ -- 43
+newline$ -- 193
+num.names$ -- 76
+pop$ -- 159
 preamble$ -- 1
-purify$ -- 123
+purify$ -- 139
 quote$ -- 0
-skip$ -- 272
+skip$ -- 293
 stack$ -- 0
-substring$ -- 662
-swap$ -- 47
+substring$ -- 708
+swap$ -- 50
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 130
+type$ -- 142
 warning$ -- 1
-while$ -- 104
-width$ -- 37
-write$ -- 372
+while$ -- 112
+width$ -- 40
+write$ -- 403
 (There were 5 error messages)

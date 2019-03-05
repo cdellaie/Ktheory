@@ -26,53 +26,54 @@
 \contentsline {subsection}{\numberline {1.5.4}Characterizing membership in the Roe algebra}{35}{subsection.1.5.4}
 \contentsline {subsubsection}{Roe's question on conditions (2) and (4)}{36}{section*.8}
 \contentsline {subsection}{\numberline {1.5.5}Heart of the paper}{38}{subsection.1.5.5}
-\contentsline {section}{\numberline {1.6}Noncommutative geometry}{41}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}Basic objects and constructions}{41}{subsection.1.6.1}
-\contentsline {subsection}{\numberline {1.6.2}Quantum groups}{42}{subsection.1.6.2}
-\contentsline {subsection}{\numberline {1.6.3}Why $SU_q(2)$?}{42}{subsection.1.6.3}
-\contentsline {subsection}{\numberline {1.6.4}TQFT}{44}{subsection.1.6.4}
-\contentsline {subsubsection}{Motivations}{44}{section*.12}
-\contentsline {subsubsection}{Summary of the talks}{45}{section*.13}
-\contentsline {subsection}{\numberline {1.6.5}Reminder}{46}{subsection.1.6.5}
-\contentsline {chapter}{\numberline {2}Zoology of groups and $C^*$-algebras, and other wild creatures}{49}{chapter.2}
-\contentsline {section}{\numberline {2.1}A list of books}{50}{section.2.1}
-\contentsline {section}{\numberline {2.2}Groups}{51}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Groupoids}{56}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Quantum groups}{56}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}$C^*$-algebras}{58}{section.2.3}
-\contentsline {section}{\numberline {2.4}Useful constructions in $KK$-theory}{61}{section.2.4}
-\contentsline {section}{\numberline {2.5}Baum-Connes}{62}{section.2.5}
-\contentsline {section}{\numberline {2.6}GPOTS \& NCGOA 2018}{65}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Arnaud Brothier: some representations of the Thompson group}{65}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Piotr Nowak: Property T for $Out(\mathbb F_n)$}{65}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Wilhem Winter: Relative nuclear dimension}{65}{subsection.2.6.3}
-\contentsline {subsection}{\numberline {2.6.4}Rufus Willett: Exactness and exotic crossed-product}{65}{subsection.2.6.4}
-\contentsline {section}{\numberline {2.7}Coarse geometry \& dynamics}{65}{section.2.7}
-\contentsline {section}{\numberline {2.8}Langlands}{65}{section.2.8}
-\contentsline {section}{\numberline {2.9}Haagerup property, cocycles and the mapping class group}{65}{section.2.9}
-\contentsline {section}{\numberline {2.10}Hawaii}{66}{section.2.10}
-\contentsline {subsection}{\numberline {2.10.1}HLS groupoids}{66}{subsection.2.10.1}
-\contentsline {subsection}{\numberline {2.10.2}Visit to PennState, September 18th to 21st 2018}{67}{subsection.2.10.2}
-\contentsline {subsection}{\numberline {2.10.3}Visit to Texas A\&M, February 12th to 14th 2019, and University of Houston February 15th}{67}{subsection.2.10.3}
-\contentsline {section}{\numberline {2.11}Mayer-Vietoris}{69}{section.2.11}
-\contentsline {section}{\numberline {2.12}Quantum groups}{69}{section.2.12}
-\contentsline {section}{\numberline {2.13}Property T}{69}{section.2.13}
-\contentsline {section}{\numberline {2.14}Number theory}{69}{section.2.14}
-\contentsline {section}{\numberline {2.15}Fock spaces, CuntzKrieger algebras, and second quantization}{69}{section.2.15}
-\contentsline {section}{\numberline {2.16}Representations of groupoids}{70}{section.2.16}
-\contentsline {section}{\numberline {2.17}Grothendieck and tensor products, the origin of nuclearity}{73}{section.2.17}
-\contentsline {chapter}{\numberline {3}Old notes}{75}{chapter.3}
-\contentsline {section}{\numberline {3.1}Simple examples for Baum-Connes for groupoids}{76}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Non commutative tori}{76}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Principal bundle over $U(2)$}{77}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Foliations}{77}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}An example from physics}{77}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Parabolic induction and Hilbert modules}{78}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}In $SL(2,\mathbb R)$}{78}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Universal Coefficient Theorem}{80}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Other questions}{80}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Funky questions, ideas of talks}{82}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Expanders}{82}{subsection.3.4.1}
-\contentsline {subsubsection}{Plan of the talk}{82}{section*.17}
-\contentsline {subsubsection}{Questions}{82}{section*.18}
-\contentsline {subsection}{\numberline {3.4.2}Ideas of funky talks}{82}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {1.5.6}Property (A) and its friends}{42}{subsection.1.5.6}
+\contentsline {section}{\numberline {1.6}Noncommutative geometry}{45}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Basic objects and constructions}{45}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Quantum groups}{46}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Why $SU_q(2)$?}{46}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.4}TQFT}{48}{subsection.1.6.4}
+\contentsline {subsubsection}{Motivations}{48}{section*.13}
+\contentsline {subsubsection}{Summary of the talks}{49}{section*.14}
+\contentsline {subsection}{\numberline {1.6.5}Reminder}{50}{subsection.1.6.5}
+\contentsline {chapter}{\numberline {2}Zoology of groups and $C^*$-algebras, and other wild creatures}{53}{chapter.2}
+\contentsline {section}{\numberline {2.1}A list of books}{54}{section.2.1}
+\contentsline {section}{\numberline {2.2}Groups}{55}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Groupoids}{60}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Quantum groups}{60}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}$C^*$-algebras}{62}{section.2.3}
+\contentsline {section}{\numberline {2.4}Useful constructions in $KK$-theory}{65}{section.2.4}
+\contentsline {section}{\numberline {2.5}Baum-Connes}{66}{section.2.5}
+\contentsline {section}{\numberline {2.6}GPOTS \& NCGOA 2018}{69}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Arnaud Brothier: some representations of the Thompson group}{69}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Piotr Nowak: Property T for $Out(\mathbb F_n)$}{69}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Wilhem Winter: Relative nuclear dimension}{69}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Rufus Willett: Exactness and exotic crossed-product}{69}{subsection.2.6.4}
+\contentsline {section}{\numberline {2.7}Coarse geometry \& dynamics}{69}{section.2.7}
+\contentsline {section}{\numberline {2.8}Langlands}{69}{section.2.8}
+\contentsline {section}{\numberline {2.9}Haagerup property, cocycles and the mapping class group}{69}{section.2.9}
+\contentsline {section}{\numberline {2.10}Hawaii}{70}{section.2.10}
+\contentsline {subsection}{\numberline {2.10.1}HLS groupoids}{70}{subsection.2.10.1}
+\contentsline {subsection}{\numberline {2.10.2}Visit to PennState, September 18th to 21st 2018}{71}{subsection.2.10.2}
+\contentsline {subsection}{\numberline {2.10.3}Visit to Texas A\&M, February 12th to 14th 2019, and University of Houston February 15th}{71}{subsection.2.10.3}
+\contentsline {section}{\numberline {2.11}Mayer-Vietoris}{73}{section.2.11}
+\contentsline {section}{\numberline {2.12}Quantum groups}{73}{section.2.12}
+\contentsline {section}{\numberline {2.13}Property T}{73}{section.2.13}
+\contentsline {section}{\numberline {2.14}Number theory}{73}{section.2.14}
+\contentsline {section}{\numberline {2.15}Fock spaces, CuntzKrieger algebras, and second quantization}{73}{section.2.15}
+\contentsline {section}{\numberline {2.16}Representations of groupoids}{74}{section.2.16}
+\contentsline {section}{\numberline {2.17}Grothendieck and tensor products, the origin of nuclearity}{77}{section.2.17}
+\contentsline {chapter}{\numberline {3}Old notes}{79}{chapter.3}
+\contentsline {section}{\numberline {3.1}Simple examples for Baum-Connes for groupoids}{80}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Non commutative tori}{80}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Principal bundle over $U(2)$}{81}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Foliations}{81}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}An example from physics}{81}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Parabolic induction and Hilbert modules}{82}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}In $SL(2,\mathbb R)$}{82}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Universal Coefficient Theorem}{84}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Other questions}{84}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Funky questions, ideas of talks}{86}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Expanders}{86}{subsection.3.4.1}
+\contentsline {subsubsection}{Plan of the talk}{86}{section*.18}
+\contentsline {subsubsection}{Questions}{86}{section*.19}
+\contentsline {subsection}{\numberline {3.4.2}Ideas of funky talks}{86}{subsection.3.4.2}

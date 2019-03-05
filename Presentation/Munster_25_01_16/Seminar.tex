@@ -1036,7 +1036,7 @@ In particular, if $f= \sum_{n=-N}^N \lambda_n z^n$ is a trigonometric polynomial
 \[ `` \ T^{(n)}_f \rightarrow_{\| \|} T_f \text{ ''}\]
 is equivalent to 
 \[``\ \sum_{n=-N}^N \hat f(n)z^n \rightarrow_{\|\|_\infty} f \text{ ''}\]
-which is false. It is even worse: one can have $\| T_f \| = 1$ while $\|  T_f^{(n)} \| $ goes to $\infty$ (Baire category argument, see \cite{stein2003princeton} p. 167) and this implies (by uniform boundedness theorem) that $(T_f^{(n)})_n$ does not even converges to $T_f$ in the strong operator topology.\\
+which is false. It is even worse: one can have $\| T_f \| = 1$ while $\|  T_f^{(n)} \| $ goes to $\infty$ (Baire category argument, see \cite{stein2003princeton} p. 167) and this implies (by uniform boundedness theorem) that $(T_f^{(n)})_n$ does not even converges to $T_f$ in the strong operator topology.
 
 \subsection{Weakly band dominated operators}
 
@@ -1066,11 +1066,16 @@ The following are equivalent:
 \end{thm}
 
 \begin{proof}
-Let us start with the reverse implication. say $d(A,B)> r$, then there exists $f\in l^\infty(X)_1$ satisfying $0\leq f \leq 1$, $f_{|A}=1$, $f_{|B}=0$ and $Lip(f)< \frac{1}{r}$. Then $f\chi_A = \chi_A$ and $f\chi_B = 0$ so that 
+Let us start with the reverse implication. Say $d(A,B)> r$, then there exists $f\in l^\infty(X)_1$ satisfying $0\leq f \leq 1$, $f_{|A}=1$, $f_{|B}=0$ and $Lip(f)\leq \frac{1}{r}$. Then $f\chi_A = \chi_A$ and $f\chi_B = 0$ so that 
 \[\begin{split}
 \chi_A T \chi_B & = \chi_A [f,T]\chi_B
 \end{split}\] 
-and $\| \chi_A T\chi_B \| \leq \frac{1}{r}$.
+and $\| \chi_A T\chi_B \| \leq \frac{1}{r}$.\\
+
+Remark: the function
+\[f(x)= \max \{0, 1-\frac{d(x,A)}{r}\}\]
+does the job. The Lipschitz constant is smaller than $\frac{1}{r}$ because of the easy inequality
+\[ | d(x,A) - d(y,A) | \leq d(x,y) \quad \forall x,y \in X ,A \subset X. \] 
 \end{proof}
 
 \subsection{Characterizing membership in the Roe algebra}
@@ -1091,7 +1096,7 @@ Then $(4) \implies (1) \iff (2) \iff (3) $. Moreover if $X$ has finite asymptoti
 Some remarks are in order. 
 \begin{itemize}
 \item[$\bullet$] These results grew out of a question of John Roe, who asked about the implication $(2) \implies (4)$ when $X$ has \textit{finite asymptotic dimension} (FAD).
-\item[$\bullet$] The theorem in \cite{SpakulaTikuisis} is better: $(2)\implies (4)$ when $X$ has straight \textit{finite decomposition complexity} (FDC), which is much weaker than FAD. For instance, $\Z \wr \Z$ has FDC but not FAD, while FAD always implies FDC.
+\item[$\bullet$] The theorem in \cite{spakula2017relative} is better: $(2)\implies (4)$ when $X$ has straight \textit{finite decomposition complexity} (FDC), which is much weaker than FAD. For instance, $\Z \wr \Z$ has FDC but not FAD, while FAD always implies FDC.
 \item[$\bullet$] There is a follow up paper which shows $(2)\implies (4)$ when $X$ has property A, an even weaker condition. This last result will be treated in a following number.
 \end{itemize}
 
@@ -1110,12 +1115,17 @@ With this notation, the condition $(1)$ is equivalent to
 \[\forall \varepsilon > 0 , \exists L> 0 \text{ s.t. if } \|f \| \leq 1 \text{ and } Lip(f)\leq L \text{ then } \| [b,f] \| <\varepsilon. \]
 Indeed, one direction is obvious, and suppose there exists $\varepsilon > 0 $ such that for every $L> 0$ there is a $f\in l^\infty (X)$ with $\| f\| \leq 1$, $Lip(f)\leq L $ and $\| [b, f ] \| \geq \varepsilon$. Take $L=\frac{1}{n}$ to get a very Lipschitz sequence $(f_n)$ with $\| [b,f]\| \geq \varepsilon > 0$, which contradicts $(1)$.\\
 
-\subsubsection*{Quasi-locality} $b\in B(l^2X)$ is quasi-local \\
-iff $\forall \varepsilon> 0$, $b$ has finite $\varepsilon$-propagation \\
-iff $\forall \varepsilon > 0, \exists  r > 0$ such that $\forall f,g \in l^\infty (X)$, if $\|f\| , \|g\| \leq 1 $ and $d(supp(f), supp(g))\geq r$ then $\| fbg \| < \varepsilon$.
+\subsubsection*{Quasi-locality} Recall that $b\in B(l^2X)$ is quasi-local iff $\forall \varepsilon> 0$, $b$ has finite $\varepsilon$-propagation,
+iff $\forall \varepsilon > 0, \exists  r > 0$ such that $\forall f,g \in l^\infty (X)$, if $\|f\| , \|g\| \leq 1 $ and $d(supp(f), supp(g))\geq r$ then $\| fbg \| < \varepsilon$.\\
 
-\subsubsection*{Higson functions} $g\in C_h(X)$ \\
-iff $\forall \varepsilon > 0, \forall  r > 0$,  there exists a finite subset $F\subset X$ such that if $x,y \notin F$ and $d(x,y)\leq r$, then $|g(x)-g(y)|\leq \varepsilon$.
+Let us introduce the space 
+\[C_{L,\varepsilon} = \{ a \in B(l^2 X) \ : \ \| [a,f] \| < \varepsilon \quad \forall f\in l^\infty(X)_1 \text{ s.t. } Lip(f)\leq L \}.\]
+What was said above reduces to the fact that the algebra of quasi-local operators is exactly
+\[\bigcap_{\varepsilon > 0} \bigcup_{L>0} C_{L,\varepsilon}.\]
+
+\subsubsection*{Higson functions} A function $g\in l^\infty (X)$ is said to be a Higson function, algebra denoted by $C_h(X)$ iff
+$\forall \varepsilon > 0, \forall  r > 0$,  there exists a finite subset $F\subset X$ such that if $x,y \notin F$ and $d(x,y)\leq r$, 
+then $|g(x)-g(y)|\leq \varepsilon$.
 
 \subsubsection{Roe's question on conditions (2) and (4)}
 $(4)\implies (2)$ is not difficult. In short, quasi-locality is a closed condition, which is obviously satisfied by finite propagation bounded operators. \\
@@ -1327,12 +1337,91 @@ which is $\frac{1}{2} - \frac{1}{2}=0$ if $i\neq j$, $1$ otherwise.
 
 Finally let's put all the lemmas together to get the proposition.
 
-\begin{proof} Let $\mathcal U $ be a $\frac{2}{L}$-separated family and $a\in C_{L,\varepsilon}$. \\
+\begin{proof} 
+Let $\mathcal U $ be a $\frac{2}{L}$-separated family and $a\in C_{L,\varepsilon}$. \\
 The first lemma gives 
 \[ \| [ uau \ , \overline u ] \| < \varepsilon \quad \forall \overline u \in G,\]
 and now $uau \in B(l^2 Z)$ for $Z = \cup U_i$, so by the second lemma,
 \[ \| uau - E(uau) \| < \varepsilon.\]
 The canoncial expectation $E(uau)$ is $\theta_{\mathcal U}(a)$, and this concludes the proof.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+
+\subsection{Property (A) and its friends}
+
+\textit{Motivation:} let $G$ be a countable discrete group with a bounded geometry left-invariant metric $d$. For each $A\subset X$ and every $r>0$, define the $r$-corona of $A$ to be the set
+\[\partial_r A = \{x \in X \ | \ 0< d(x,A) \leq R\}.\]
+
+Here is a possible definition of amenability.
+
+\begin{definition}
+The group $G$ is \textit{amenable} if for all $r,\varepsilon>0$, there exists a finite subset $A\subset X$ satisfying 
+\[ | \partial_r A | < \varepsilon |A|.\] 
+\end{definition}
+
+\textit{Remark:} we don't suppose the group to be finitely generated. For instance $G= \bigoplus_\Z \Z$ with the metric $l(n) = \sum_i \ i |n_i|$ is not finitely generated, yet is of bounded geometry and amenable. If $G$ is finitely generated, one does not need to qunatify over $r$ in the definition and can use $\partial A$ instead.\\
+
+This definition of amenability makes perfect sense for any bounded geometry metric space. However, it is a bit silly, since for any bounded geometry space $X$, the space $X \cup \N$ is amenable. Indeed, given $r>0$, take $A_r = [r,r+N]\subset \N$. Then $\frac{| \partial_r A | }{|A| } = \frac{2r}{N+1}$ is very small for $N$ large. This definition of amenabilty is thus local (`` something nice happens somewhere") when we actually want to say something about the global structure of $X$.
+
+\begin{definition}
+The metric space $X$ is \textit{uniformly locally amenable}, abreviated $(ULA)_\mu$ after on, if for all $r,\varepsilon>0$, there exists $s>0$ such that for all probability measure $\mu \in Prob(X)$, there is a finite subset $A\subset X$ satisfying 
+\[ diam(A)\leq s \quad \text{ and } \quad \mu( \partial_r A ) < \varepsilon \mu(A).\] 
+\end{definition}
+
+\textit{Remarks:}
+\begin{itemize}
+\item[$\bullet$] The strict inequality is important, otherwise take $A=\emptyset$.
+\item[$\bullet$] The condition would be vacuous without the condition $diam (A) \leq s$, with $s$ uniform on all probability measures. Otherwise just take the uniform probability on $A$ for all $A$: the measure of the $r$-corona is $0$.  
+\item[$\bullet$] $(ULA)_\mu$ is equivalent to property (A), see \cite{BNSWW}.
+\item[$\bullet$] If $G$ is a group, then if $G$ is amenable, $G$ is $(ULA)_\mu$. The proof is left as an exercise for the reader.
+\end{itemize}
+
+More definitions.
+
+\begin{definition} [\cite{dadarlat2007uniform}]
+The metric space $X$ is \textit{exact} if for all $r,\varepsilon>0$, there exists $s>0$ and a partition of unity $\{\phi_i\}_i$ on $X$ such that
+\begin{itemize}
+\item[$\bullet$] if $d(x,y) < r$, then 
+\[ \sum_{i\in I} |\phi_i(x) - \phi_i(y)| < \varepsilon ,\] 
+\item[$\bullet$] $diam( supp(\phi_i)) \leq s$ for every $i\in I$.
+\end{itemize}
+\end{definition}
+
+\begin{definition}[\cite{ChenTesseraWangYu}]
+The metric space $X$ has the \textit{metric sparsification property}, abreviated $MSP$ after on, if for all $r,\varepsilon>0$, there exists $s>0$ such that for all $\mu \in Prob (X)$, there exists $\Omega \subset X$ such that
+\begin{itemize}
+\item[$\bullet$] $\mu (\Omega) \geq 1- \varepsilon$,  
+\item[$\bullet$] $\Omega$ is a $r$-disjoint union of $s$-bounded sets.
+\end{itemize}
+\end{definition}
+
+\begin{thm}[by everyone above]
+Exact $\implies_{(1)}$ $(ULA)_\mu$ $\implies_{(2)}$ MSP $\implies_{(3)}$ $Exact$.
+\end{thm}
+
+The implication (3) is harder, see Sako \cite{sako2013property}. The proof is $C^*$-algebraic: can we find a direct proof?
+
+\begin{proof}
+(1) Given $r,\varepsilon> 0$, let $\mu \in Prob(X)$, and $\{\phi_i\}$ be as in the definition with 
+\[ \sum_{i\in I} |\phi_i(x) - \phi_i(y)| < \frac{\varepsilon}{N_r}. \]
+Hence for each fixed $x$, 
+\[\sum_{y : d(x,y)\leq r} \sum_{i\in I} |\phi_i(x) - \phi_i(y)| < \varepsilon = \varepsilon \sum_i \phi_i(x).\]
+As $\mu$ is a probability measure,
+\[\sum_x \mu(x) \sum_{y : d(x,y)\leq r}\sum_{i\in I} |\phi_i(x) - \phi_i(y)| < \varepsilon \sum_x \mu(x) \sum_i \phi_i(x).\]
+hence there exists an index $i_0$ such that
+\[\sum_x \mu(x) \sum_{y : d(x,y)\leq r}|\phi(x) - \phi(y)| < \varepsilon \sum_x \mu(x) \phi(x).\]
+with $\phi = \phi_{i_0}$. now write $\phi = \sum a_i \chi_{F_i}$ where $a_i > 0$ and $F_{i+1} \subset F_{i}$. All the $F_i$'s are in $supp(\phi)$ so their diameter is bounded above by $s$.
+\[\begin{split} 
+ \sum_x \mu(x) \sum_{y : d(x,y)\leq r}| \sum_k a_k(\chi_{F_k}(x) - \chi_{F_k}(y) ) | & < \varepsilon \sum_x \mu(x) \sum_k a_k \chi_{F_k}(x)\\
+\sum_x \mu(x) \sum_{y : d(x,y)\leq r} \sum_k a_k | \chi_{F_k}(x) - \chi_{F_k}(y) |  & < \varepsilon \sum_x \mu(x) \sum_k a_k \chi_{F_k}(x).\\
+\end{split}\]
+Hence
+\[\sum_x \mu(x) \sum_{y : d(x,y)\leq r} | \chi_{F_k}(x) - \chi_{F_k}(y) |   < \varepsilon \sum_x \mu(x) \chi_{F_k}(x) = \varepsilon \mu(F_k) \]
+for some $k=k_0$, and for $x\in \partial_r F_{k_0}$,
+\[\sum_{y : d(x,y)\leq r} | \chi_{F_k}(x) - \chi_{F_k}(y) | \leq 1 \leq \sum_{x\in \partial_r F_{k_0}} \mu(x)  = \mu (\partial_r F_{k_0}) .\]
+Set $A= F_{k_0}$, then
+\[\mu(\partial_r F_{k_0}) < \varepsilon \mu (A).\]
 \end{proof}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
