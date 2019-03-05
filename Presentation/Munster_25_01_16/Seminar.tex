@@ -1272,7 +1272,68 @@ But $ wugafvw= ugafv$ since $wug ug $ and $fvw = fv $ ($supp (fv)\subset W$ and 
 
 It remains to prove the proposition. 
 
+\subsubsection*{Block diagonal symmetries}
 
+\begin{lem}
+If $a \in C_{L,\varepsilon}$ and $\mathcal U $ is a $\frac{2}{L}$-separated family of $X$ then
+\[ \| [uau , \overline{u}] \| \\< \varepsilon \]
+where $u =\sum u_i$ is our usual notation for the characteristic function of $\cup U_i$, and $\overline u$ is a \textit{block diagonal symmetry}, i.e. an operator of the type $\sum \epsilon_i u_i$, $\epsilon_i\in \{ -1, 1\}$.
+\end{lem}
+
+\begin{proof}
+Extend each $u_i$ to a $[0,1]$-valued $L$-Lipschitz function, which is $1$ on $U_i$ and zero outside of $N_{L^{-1}}(U_i)$. Then the $f_i$ have disjoint support so that
+\[\overline{f}=\sum_i \epsilon_i f_i \]
+satisfies $Lip (\overline f )\leq L $, $\| f \| \leq 1$ and $\overline f u =\overline u$. But 
+\[[uau , \overline u ] = u [a, \overline f ] u \]   
+which has norm smaller than $\varepsilon$.
+\end{proof}
+
+The block diagonal symmetries form a topological group (with the SOT topology), isomorphic to $\prod_{\mathcal U} \Z_2$ endowed with the product topology. It is thus a totally disconnected compact group, and has a unique Haar probability measure $d\overline u$.
+
+\begin{lem}
+Let $Z \subset X$ and $b \in B(l^2 Z)$. If \[ \| [b, \overline u ] \| < \varepsilon \quad \forall \overline u \ \text{ block diagonal symmetry} \]
+then $\| b - E(b) \| < \varepsilon$, where $E: B(l^2 Z) \rightarrow \bigoplus  l^\infty (U_i)$ is the canonical expectation onto the block diagonal. Furthermore,
+\[E(b) = \int_G \ \overline u  b \overline u  \ d\overline u.\]
+\end{lem}
+
+\textit{Remark:} the example of the two point space is helpful to understand what is happening. Let say 
+\[ \overline u =  \begin{pmatrix} \epsilon_1 &  0 \\ 0 & \epsilon_2\end{pmatrix} \quad \text{and} \quad b=  \begin{pmatrix} x &  y \\ z & w \end{pmatrix}\]
+then a simple calculation shows 
+\[ \begin{split} \begin{pmatrix} x &  0 \\ 0 & w \end{pmatrix} 
+		& = \frac{1}{4}\sum_{\overline u \in G} \overline u b \overline u \\
+   		& = \frac{1}{4} \left( 
+ \begin{pmatrix} x &  y \\ z & w \end{pmatrix}+ \begin{pmatrix} x &  -y \\ -z & w \end{pmatrix}+  \begin{pmatrix} x &  y \\ z & w \end{pmatrix}+ \begin{pmatrix} x & - y \\ -z & w \end{pmatrix}
+\right).
+\end{split}\]
+
+The estimate is easy: 
+\[ \| E(b)-b \|   \leq \frac{1}{4} \sum \|  b \overline u - \overline u b\| < \varepsilon.\]
+
+\begin{proof}
+First check that on the group $G$, the $*$-SOT, SOT and pointwise convergence coincide. Since the norms are all smaller than $1$, we can consider finitely supported vectors, or even basis vectors. \\
+
+Next the integral is understood in the weak sense, meaning that the assertion is 
+\[\langle E(b) \xi, \eta \rangle = \int_G \langle \ \overline u b \overline u \ \xi , \eta \rangle \ d\overline u \quad \forall \xi, \eta \in l^2 X.\]
+ Ignoring existence, check the following matrix coefficients
+\[ \langle E(b)\delta_i, \delta_j \rangle = \left\{\begin{array}{lr} b_{ii} & \text{ if }i =j \\ 0 & \text{else.}\end{array}\right. \]
+and 
+\[\begin{split}
+\int_G \ \langle \overline u b \overline u  \ \delta_i , \delta_j   \rangle  \ d \overline u & = \int_G \ \langle b \overline u \ \delta_i , \overline u \ \delta_j \rangle d\overline u \\ 
+				& = (\int_G \ \epsilon_i \epsilon_j \ d\overline u ) \ b_{ij} .
+\end{split}\] 
+But \[ \int_G \ \epsilon_i \epsilon_j \ d\overline u = \mathbb P (\epsilon_i = \epsilon_j ) - \mathbb P (\epsilon_i \neq \epsilon_j)\]
+which is $\frac{1}{2} - \frac{1}{2}=0$ if $i\neq j$, $1$ otherwise.
+\end{proof}
+
+Finally let's put all the lemmas together to get the proposition.
+
+\begin{proof} Let $\mathcal U $ be a $\frac{2}{L}$-separated family and $a\in C_{L,\varepsilon}$. \\
+The first lemma gives 
+\[ \| [ uau \ , \overline u ] \| < \varepsilon \quad \forall \overline u \in G,\]
+and now $uau \in B(l^2 Z)$ for $Z = \cup U_i$, so by the second lemma,
+\[ \| uau - E(uau) \| < \varepsilon.\]
+The canoncial expectation $E(uau)$ is $\theta_{\mathcal U}(a)$, and this concludes the proof.
+\end{proof}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Noncommutative geometry}
