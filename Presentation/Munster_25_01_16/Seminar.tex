@@ -1343,13 +1343,16 @@ The first lemma gives
 \[ \| [ uau \ , \overline u ] \| < \varepsilon \quad \forall \overline u \in G,\]
 and now $uau \in B(l^2 Z)$ for $Z = \cup U_i$, so by the second lemma,
 \[ \| uau - E(uau) \| < \varepsilon.\]
-The canoncial expectation $E(uau)$ is $\theta_{\mathcal U}(a)$, and this concludes the proof.
+The canonical expectation $E(uau)$ is $\theta_{\mathcal U}(a)$, and this concludes the proof.
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 
-\subsection{Property (A) and its friends}
+\subsection{Property (A)}
 
+The last part of the section is devoted to prove the assertion (quasi-locality implies locality) when $X$ has property (A).
+
+\subsubsection*{Property (A) and its friends}
 \textit{Motivation:} let $G$ be a countable discrete group with a bounded geometry left-invariant metric $d$. For each $A\subset X$ and every $r>0$, define the $r$-corona of $A$ to be the set
 \[\partial_r A = \{x \in X \ | \ 0< d(x,A) \leq R\}.\]
 
@@ -1360,7 +1363,7 @@ The group $G$ is \textit{amenable} if for all $r,\varepsilon>0$, there exists a 
 \[ | \partial_r A | < \varepsilon |A|.\] 
 \end{definition}
 
-\textit{Remark:} we don't suppose the group to be finitely generated. For instance $G= \bigoplus_\Z \Z$ with the metric $l(n) = \sum_i \ i |n_i|$ is not finitely generated, yet is of bounded geometry and amenable. If $G$ is finitely generated, one does not need to qunatify over $r$ in the definition and can use $\partial A$ instead.\\
+\textit{Remark:} we don't suppose the group to be finitely generated. For instance $G= \bigoplus_\Z \Z$ with the metric $l(n) = \sum_i \ i |n_i|$ is not finitely generated, yet is of bounded geometry and amenable. If $G$ is finitely generated, one does not need to quantify over $r$ in the definition and can use $\partial A$ instead.\\
 
 This definition of amenability makes perfect sense for any bounded geometry metric space. However, it is a bit silly, since for any bounded geometry space $X$, the space $X \cup \N$ is amenable. Indeed, given $r>0$, take $A_r = [r,r+N]\subset \N$. Then $\frac{| \partial_r A | }{|A| } = \frac{2r}{N+1}$ is very small for $N$ large. This definition of amenabilty is thus local (`` something nice happens somewhere") when we actually want to say something about the global structure of $X$.
 
