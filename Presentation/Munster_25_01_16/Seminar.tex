@@ -1426,6 +1426,105 @@ for some $k=k_0$, and for $x\in \partial_r F_{k_0}$,
 Set $A= F_{k_0}$, then
 \[\mu(\partial_r F_{k_0}) < \varepsilon \mu (A).\]
 \end{proof}
+
+\newpage
+\subsubsection*{Quasi-locality and property (A)}
+
+The main goal of this section is to provide a proof of $(1)\implies (4)$ in the case where $X$ has property (A). Let us fix some notations.\\
+
+For $(X,d)$ a metric space, a partition of unity will be given by a pair $(\phi,\mathcal U)$ where $\mathcal U$ is a cover of $X$ and $\phi$ is a map
+\[\phi: X \rightarrow l^2(\mathcal U)_{1,+}\quad,\]
+such that $x\mapsto \phi_{U}(x)$ is supported in $U$ for every $U\in \mathcal U$. (The notation $l^2(\mathcal U)_{1,+}$ means positive elements of norm $1$.) If $\mathcal U = \{U_i\}_{i\in I}$, we will identify $l^2(\mathcal U)$ with $l^2(I)$. \\
+ 
+The characterization of property (A) which we use is the following, obtained by Dadarlat and Guentner in \cite{dadarlat2007uniform}.
+
+\begin{thm} 
+A metric space $X$ is called \textit{exact} if, for every $r,\varepsilon>0$, there exists a partition of unity $\phi: X \rightarrow l^2(\mathcal U)$ such that $\mathcal U $ is uniformly bounded with finite multiplicity and 
+\[d(x,y)\leq r \implies \| \phi(x) - \phi(y) \|_{2} \leq \varepsilon.\]
+If $X$ is discrete and of bounded geometry, exactness and property (A) are equivalent.
+\end{thm} 
+
+We will also need to know that property (A) implies the metric sparsification property, which was proven in the last section.\\
+
+The key idea of the proof relies on an approximation property of quasi-local operators: their norm can be approximated by finitely supported vectors. This means that if $b\in \bigcap_\varepsilon \bigcup_L C_{L,\varepsilon}$,
+\[\| b \| = \sup_{\|v \| =1 \ , \ diam( supp(v))<\infty} \|bv\|. \]
+This relies on the following lemma.
+
+\begin{lem}[\cite{spakula2018quasi}, lemma 5.2]
+For every $M,L,\varepsilon$, there exists $s>0$ such that, for every $b\in C_{L,\varepsilon}$ with $\| b \| \leq M$, there exists $v\in l^2(X)$ satisfying $\|v\| = 1$, $diam(supp(v)) <s$ and 
+\[\| b v\| \geq \| b\| -\varepsilon.\] 
+\end{lem}
+
+\begin{proof}(of the result, using the lemma) 
+Let $X$ discrete with bounded geometry and property (A), and say $b\in B(l^2 X)$ is quasi-local and fix $\varepsilon>0$. Then there is $L>0$ such that $b\in C_{L,\varepsilon}$ and, by the lemma, a $s>0$ such that $\| T \|$  can be approximated up to $\varepsilon$ by $s$-supported vectors for every $T\in C_{2\varepsilon, L}$ with $\| T\| \leq M$.\\
+
+Choose a partition of unity $\phi$ with uniformly bounded support and 
+\[ d(x,y)\leq s+\frac{1}{L} \implies \| \phi(x) - \phi(y) \| \leq \varepsilon.\]
+
+Let us show that the norm of \[a= b-\sum_i \phi_i b \phi_i = \sum_i \phi_i [\phi_i , b] \]
+is small enough.\\
+
+The following computation shows that $a\in C_{2\varepsilon, L}$:
+\[\begin{split}
+\| [a,f]\|      & = \| [\sum_i \phi_i [\phi_i , b],f] \| 		\\
+		& \leq \| \sum_i \phi_i [b,f] \phi_i \| + \| [b,f]\|    \\
+		& \leq 2\varepsilon
+\end{split}\]
+where we used $\| \sum_i \phi_i [b,f] \phi_i - \phi[b,f] \phi\| < \varepsilon$. This follows from the fact that, if $e_j$ are positive contractions with $\frac{2}{L}$-separated support, and $T\in C_{\varepsilon,L}$, then $\| eTe-\sum_i e_i T e_i \| <\varepsilon $. This is not a trivial statement, and was proven in the last section (Cor 5.3 of \cite{spakula2018quasi}).\\
+
+Of course, $\|a\| \leq 2M$, so we can apply the statement of the first paragraph to $a$: there exists a unit vector $v\in l^2X$ with support $F$ satisfying $diam(F) < s$ and $\|\ av \| \geq \|a\| -\varepsilon $, and 
+
+\[\begin{split}
+|\sum_{i} \phi_i(x) ( \phi_i(x)-\phi_i(y)) b_{xy}|   & \leq M (\sum_i \phi_i^2 (x) )^{\frac{1}{2}} \ (\sum_i |\phi_i (x) - \phi_i(y)|^2)^\frac{1}{2} \\
+		& \leq M \|\phi(x) - \phi(y) \|_2 \\
+\end{split}\]
+so that if $x\in N_{L^{-1}}$, $\|\phi(x) - \phi(y) \|_2 \leq \varepsilon$,
+\[\begin{split}
+|av|_x  & = |\sum_{i, y\in F} \phi_i(x) ( \phi_i(x)-\phi_i(y)) b_{xy} v_y| \\
+		& \leq \sum_{y\in F} |\sum_i\phi_i(x) ( \phi_i(x)-\phi_i(y)) b_{xy}| \ | v_y |\\
+		& \leq \varepsilon M \sum_{ y\in F} | v_y |\\
+		&  \leq \varepsilon M  N_{s}^{\frac{1}{2}}\  \| v \|.\\
+\end{split}\]
+Now $\| av \|^2 =  \sum_x |av|^2_x \leq  M^2  N_{s}^2  \| v \|^2 \varepsilon^2 +  \sum_{x\in N_{L^{-1}}} |av|^2_x$, but $a$ being in $C_{2\varepsilon, L}$, 
+\[ \| \chi_{F} a \chi_{N_{L^{-1}}(F)}\| <\varepsilon \] hence $\| av \|^2 \leq (M^2  N_{s}^2 +1)^{\frac{1}{2}} \| v \| \varepsilon $.
+\end{proof}
+
+It remains to prove the lemma.
+
+\begin{proof} 
+Let $b\in C_{\varepsilon,L}$ and $M=\|b\|$. Let $v\in l^2(X)$ be a unit vector such that $\|bv \|  \leq \| b \| -\frac{\varepsilon}{2M}$ (so that $\|bw\| \geq \|bv\| -\varepsilon$). Denote by $\mu$ the probablity measure on $X$ defined by 
+\[\mu(\{x\} ) = |v_x|^2 .\]
+The MSP implies that there is a subset $\Omega \subset X$ with $\mu(\Omega^c)<\varepsilon$ and $\Omega$ is a $\frac{4}{L}$-separated disjoint union \[\Omega = \coprod_{\frac{4}{L}} \Omega_i\]
+of uniformly bounded subsets, i.e. $diam(\Omega_i)<s$ for all $i$. Denote by $w_i = P_{\Omega_i}v$, and $w=\sum_i w_i$. Then the condition above says that $\|v-w \|^2 < \varepsilon$ and $diam(supp(w_i)) <s$ so if we could approximate $\| b\| $ using one of the $w_i$'s, that would end the proof.\\
+
+There exists $f_i\in l^\infty(X)_1$ such that 
+\begin{itemize}
+\item[$\bullet$] $Lip(f_i)\leq L$,
+\item[$\bullet$] $supp(f_i) \subset N_{L^{-1}}(\Omega_i)$,
+\item[$\bullet$] $f_i = 1$ on $\Omega_i$ and $0$ outside of $N_{L^{-1}}(\Omega_i)$.
+\end{itemize}
+Then $f = \sum_i f_i$ and $1-f$ are also $L$-lipschitz functions and $fw=w$. But $bw = [b,f]w +fbw$ so
+\[\begin{split} 
+\| bw \|     & \leq  \varepsilon \|w\| + \| f b f w\| \\
+ 		& \leq 2\varepsilon \|w\| + \| \sum_i f_i b f_i w\| \\
+\end{split}\]
+In the last line, we used that $\| fbf - \sum f_i b f_i \| \leq \varepsilon$:\\
+
+Now, the same trick $f_i b = [f_i,b] + bf_i$ entails that 
+\[\begin{split} 
+ \| \sum_i f_i b f_i w\|^2   & =  \sum_i \| f_i b w\|^2 \\
+ 		& \leq \varepsilon \sum_i \| w_i\|^2 +\sum_i \| b w_i\|^2   \\
+		& \leq \varepsilon \| w\|^2 +\sum_i \| b w_i\|^2   \\
+\end{split}\]
+so that 
+\[ (\| bw\| -3\varepsilon \| w \|)^2 \leq \sum_i \| b w_i\|^2 \leq \sum_i \frac{\| b w_i\|^2}{\| w_i\|^2}\|w_i \|^2 \leq \sup_i (\frac{\| b w_i\|^2}{\| w_i\|^2} )\|w\|^2 \]
+from which follows that
+\[\frac{\| bw\|}{\|w\| } \leq \sup_i\frac{\| b w_i\|}{\| w_i\|}+3\varepsilon.\]
+and
+\[ \sup_i\frac{\| b w_i\|}{\| w_i\|}+3\varepsilon \geq \frac{\|bv\| -\varepsilon \|v\| }{\|w\|}\geq \|bv\| -\varepsilon \geq \|b\| -2\varepsilon \]
+so that there exists $i_0$ such that $\frac{\| bw_{i_0} \| }{\| w_{i_0} \| }\geq 6 \varepsilon,$ and $diam(supp(w_{i_0})) <s$. 
+\end{proof}
+
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Noncommutative geometry}
