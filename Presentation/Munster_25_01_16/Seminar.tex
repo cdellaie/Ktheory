@@ -1266,7 +1266,7 @@ and $\theta(a)$ is block diagonal w.r.t. a bounded family, it is thus of finite 
 
 \textit{Claim:} this is true for $uav$ and $vau$.\\
 
-Let $\mathcal U'=N_{L^{-1}}(\mathcal U)$, same for $\mathcal V'$. Both are at least $2L^{-1}$-separated. We thus obtain $f=\sum f_i$ with $f_i$ $[0,1]$-valued, with value $1$ on $U_i$, $0$ on $N_{L^-1}(U_i)^c$ and $Lip(f_i)\leq L$. Similarly for $\mathcal V$, we get $g=\sum_j g_j$. Then $uf=u$ and $vg=v$. Put 
+Let $\mathcal U'=N_{L^{-1}}(\mathcal U)$, same for $\mathcal V'$. Both are at least $2L^{-1}$-separated. We thus obtain $f=\sum f_i$ with $f_i$ $[0,1]$-valued, with value $1$ on $U_i$, $0$ on $N_{L^{-1}}(U_i)^c$ and $Lip(f_i)\leq L$. Similarly for $\mathcal V$, we get $g=\sum_j g_j$. Then $uf=u$ and $vg=v$. Put 
 \[W_{ij} = N_{L^{-1}}(U_i)\cap N_{L^{-1}}(V_j) \quad , W = \coprod_{i,j} W_{ij}\]
 which is at least $2L^{-1}$-separated. Similarly, build $w$ and $w_{ij}$. we then calculate:
 \[\begin{split} 
@@ -1472,13 +1472,13 @@ The following computation shows that $a\in C_{2\varepsilon, L}$:
 \end{split}\]
 where we used $\| \sum_i \phi_i [b,f] \phi_i - \phi[b,f] \phi\| < \varepsilon$. This follows from the fact that, if $e_j$ are positive contractions with $\frac{2}{L}$-separated support, and $T\in C_{\varepsilon,L}$, then $\| eTe-\sum_i e_i T e_i \| <\varepsilon $. This is not a trivial statement, and was proven in the last section (Cor 5.3 of \cite{spakula2018quasi}).\\
 
-Of course, $\|a\| \leq 2M$, so we can apply the statement of the first paragraph to $a$: there exists a unit vector $v\in l^2X$ with support $F$ satisfying $diam(F) < s$ and $\|\ av \| \geq \|a\| -\varepsilon $, and 
+Of course, $\|a\| \leq 2M$, so we can apply the statement of the first paragraph to $a$: there exists a unit vector $v\in l^2X$ with support $F$ satisfying $diam(F) < s$ and $\| av \| \geq \|a\| -\varepsilon $, and 
 
 \[\begin{split}
 |\sum_{i} \phi_i(x) ( \phi_i(x)-\phi_i(y)) b_{xy}|   & \leq M (\sum_i \phi_i^2 (x) )^{\frac{1}{2}} \ (\sum_i |\phi_i (x) - \phi_i(y)|^2)^\frac{1}{2} \\
 		& \leq M \|\phi(x) - \phi(y) \|_2 \\
 \end{split}\]
-so that if $x\in N_{L^{-1}}$, $\|\phi(x) - \phi(y) \|_2 \leq \varepsilon$,
+so that if $x\in N_{L^{-1}}(F)$, $\|\phi(x) - \phi(y) \|_2 \leq \varepsilon$, and
 \[\begin{split}
 |av|_x  & = |\sum_{i, y\in F} \phi_i(x) ( \phi_i(x)-\phi_i(y)) b_{xy} v_y| \\
 		& \leq \sum_{y\in F} |\sum_i\phi_i(x) ( \phi_i(x)-\phi_i(y)) b_{xy}| \ | v_y |\\
