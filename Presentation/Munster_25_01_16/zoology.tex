@@ -540,9 +540,12 @@ Sarah Browne:
 \item[$\bullet$] Advice to read a book Nate Brown gave her, \textit{Lifting solutions to perturbing problems in $C^*$-algebras}by Terry A. Loring (Fields Institute Monographs). In here canbefind te definition o semi projective $C^*$-algebras.
 \end{itemize}
 
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Visit to Texas A\&M, February 12th to 14th 2019, and University of Houston February 15th}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-$\bullet$ If for every $r$, $X$ is $2$-decomposable w.r.t. a family of uniformly embeddable spaces (into Hilbert space), then $X$ is itself CEH. This contradicts the (false) example I gave in the preprint with Christian of a group whose uniform Roe algebra satisfies the K\"{u}nneth formula. For this I used a split extension of two CEH groups, which is not itself CEH built by Arzhantseva and Tessera (\cite{arzhantseva2016admitting}). A misuse of the fibering theorem made me believe that this group was $2$-decomposable w.r.t. a uniformly CEH family. \\
+\subsubsection*{K\"{u}nneth formula, useless stability and extensions} If for every $r$, $X$ is $2$-decomposable w.r.t. a family of uniformly embeddable spaces (into Hilbert space), then $X$ is itself CEH. This contradicts the (false) example I gave in the preprint with Christian of a group whose uniform Roe algebra satisfies the K\"{u}nneth formula. For this I used a split extension of two CEH groups, which is not itself CEH built by Arzhantseva and Tessera (\cite{arzhantseva2016admitting}). A misuse of the fibering theorem made me believe that this group was $2$-decomposable w.r.t. a uniformly CEH family. \\
 
 The main ingredients for this result are the following, and are all contained in a paper of Dadarlat and Guentner (see \cite{dadarlat2007uniform}). Let us fix some notation: $X$ is a discrete metric space, and $\mathcal U$ is a cover, by which we mean a collection of subset of $X$ whose union form $X$. We say that $\mathcal U$
 \begin{itemize}
@@ -566,8 +569,18 @@ defines a PDU such that
 
 Using \cite{dadarlat2007uniform}, thm 3.2, the result follows.\\
 
+An interesting question was the following. The rule that associate to a coarse space $X$ its coarse groupoid is a functor, where the domain category is the one of coarse spaces and coarse maps, and the target category is the one of groupoid and generalized morphisms.\\
+
+Does any generalized morphism between coarse groupoids arises from a coarse map?\\
+
+The answer should be no. Thake an extension of groups
+\[1 \rightarrow H \rightarrow G \rightarrow C \rightarrow 1,\]
+maybe split. Then the quotient arrow should give a generalized morphism between the coarse groupoids, but it is not a coarse map as soon as $H$ is unbounded.\\
+
+Can we show that under suitable conditions, if $C^*_u|H|$ and $C^*_u|C|$ satisfy the K\"{u}nneth formula, then so does $C^*_u|G|$?  
+
 %%%%%%%%%%%%
-$\bullet$ In \cite{WillettYuGromov}, thm 8.3, Willett and Yu constructed a counterexample for the Baum-Connes conjecture \textit{with coefficients}. Let $G$ be a group whose Cayley graph contains an expander $X$. $G$ does not act on $X$, but we can enlarge $X$ and set 
+\subsubsection*{Wreath product and counterexample} In \cite{WillettYuGromov}, thm 8.3, Willett and Yu constructed a counterexample for the Baum-Connes conjecture \textit{with coefficients}. Let $G$ be a group whose Cayley graph contains an expander $X$. $G$ does not act on $X$, but we can enlarge $X$ and set 
 \[N_\infty (X) = \cup_{R>0} N_R(X),\]
 so that $G$ acts on $N_\infty(X)$ and on 
 \[A= l^\infty(N_\infty (X)) = \overline{\cup_{R>0}l^\infty(N_R(X))}.\]
@@ -577,8 +590,57 @@ Now can we force this $C^*$-algebraic coefficients into a group so as to build a
 \[\Gamma=\Z_2 \wr_X G = \prod_{X} \Z_2 \rtimes G.\]
 One sees that the reduced $C^*$-algebra $C_r^*(\Gamma)$ should really look like $A\rtimes_r G$. Indeed, $N =\prod_X \Z_2$ is normal abelian in $\Gamma$, so that $C_r^*(\Gamma) \cong C^*_r(N)\rtimes_r G \cong C(\hat N)\rtimes_r G$.  
 
-\section{Mayer-Vietoris}
+%%%%%%%%%%%%%
+\subsubsection*{Matui's conjecture}
 
+Matui's conjecture states that 
+\[K_i (C_r^*(G)) \cong \bigoplus_k H^{2k+i}(G)\]
+for every second countable \'etale essentially principal minimal groupoid with base space homeomorphic to a Cantor space. See \cite{MatuiSurvey} for a survey, by Matui himself.\\
+
+Basically, there are two directions that one can take: proving it, for instance for groupoids with FAD, of even for groupoids satisfying the Baum-Connes conjecture? on the other direction: try to find a counterexample.\\
+
+A counterexample was given by Scarparo in \cite{scarparo2018homology}. The groupoid is obtained as $G=\Omega \rtimes \Gamma$, where $\Gamma$ is the infinite dihedral group $\Z\rtimes \Z_2$ and the action is given by shift on $\varinjlim \Gamma/ \Gamma_i$, $\Gamma_j = n_j \Z \rtimes \Z$. Is it FAD? A-T-menable?\\
+
+Pick a strictly increasing sequence of integers $(n_i)$ such that $n_i | n_{i+1}$ and look at the following box-space
+\[X = \coprod_{i\geq 1} | \Z_{n_i}|,\]
+which has property A.\\
+
+Does Matui's conjecture hold for the coarse groupoid $G(X)$?\\ 
+
+Recall that $C^*_r(G) \cong C_u^*(X)$ and let us compute its $K$-theory. \\
+
+Here are some ideas on how to do it. $K_0$ is big. Show that 
+\[K_1(C^*_u(X)) \cong \{ (k_j)_{j\in \Z} \ |\ k \text{ is bounded } \} /  \{ k=(k_j)_{j\in \Z} \ |\ \lim_j k =0 \}.\]
+\begin{itemize}
+\item[$\bullet$] Let $u_j\in M_{n_j}$ be the shift on $\Z_{n_i}$. Then any unitary in $U_N(C^*_u(X))$ is stably homotopic to a product $(u_j^{k_j})_j$.
+\item[$\bullet$] Such a product is not trivial in $K$-theory. To show that a unitary is not trivial in $K_1$, one can for instance compute the trace of 
+\[D(u)u^{-1}\]
+where $D$ is a derivation. For instance $D(u)= [N,u]$ where $N$ is the propagation operator (multiplication by the length).\\
+Remark: if $D$ is the derivation on the circle, then $\int D(u)u^{-1}$ is the winding number.  
+\item[$\bullet$] Take the exact sequence associated to the decompostion $\beta X = X \cup \partial \beta X$, which because $X$ has property A (ghost operators are compact) is
+\[0\rightarrow \mathfrak K \rightarrow C_u^*(X) \rightarrow l^{\infty}(X)/c_{0}(X) \rtimes_r \Z \rightarrow 0\]
+then Pimsner-Voiculescu should conclude. 
+\item[$\bullet$] Mayer-Vietoris argument: $X$ splits into two copies of $U$, coarse unions of lines of length $\frac{n_j}{2}$, with intersection $W$ the coarse union of two-points spaces that are further and further apart, so that the $K$-theory is 
+\[K(C^*_u(\coprod_{n\geq N} W_n)) \cong K(l^\infty \N).\]
+Compute $K(C_u^*U)$.
+\end{itemize} 
+
+To compute the homology, first read \cite{MatuiSurvey}.
+
+\subsubsection*{Failure of $K$-exactness}
+
+Show that if $X$ is an expander, then $C^*_u(X)$ is not $K$-exact.
+
+\subsubsection*{Automata groups and exotic construction}
+
+Can one use automata groups to build an example of a discrete group which has A but is not FDC?\\
+
+Andrzej Zuk build a example of an amenable automata group which is not elementary amenable. The idea of FDC is that it should be the "elementary property A" groups.
+
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+\newpage
+\section{Mayer-Vietoris}
 
 \section{Quantum groups}
 

@@ -14,14 +14,9 @@ You're missing a field part---line 196 of file biblio.bib
  :     volume  = 
  :               ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 261 of file biblio.bib
- : 
- : month = "10"
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 271 of file biblio.bib
  : 
- : month = ""
+ : month = "10"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 281 of file biblio.bib
@@ -29,7 +24,12 @@ I was expecting a `,' or a `}'---line 281 of file biblio.bib
  : month = ""
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 321 of file biblio.bib
+I was expecting a `,' or a `}'---line 291 of file biblio.bib
+ : 
+ : month = ""
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 331 of file biblio.bib
  : 
  : month = "Summer"
 (Error may have been on previous line)
@@ -41,45 +41,45 @@ Warning--I didn't find a database entry for "schochetRosenberg"
 Warning--I didn't find a database entry for "SkandalisNotion"
 Warning--I didn't find a database entry for "ChabertEO"
 Warning--empty journal in Penrose2005Einstein
-You've used 38 entries,
+You've used 40 entries,
             2118 wiz_defined-function locations,
-            760 strings with 9889 characters,
-and the built_in function-call counts, 10789 in all, are:
-= -- 1078
-> -- 425
-< -- 3
-+ -- 175
-- -- 132
-* -- 698
-:= -- 1867
-add.period$ -- 114
-call.type$ -- 38
-change.case$ -- 172
+            770 strings with 10101 characters,
+and the built_in function-call counts, 11423 in all, are:
+= -- 1147
+> -- 439
+< -- 4
++ -- 181
+- -- 136
+* -- 727
+:= -- 1965
+add.period$ -- 121
+call.type$ -- 40
+change.case$ -- 180
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 421
-empty$ -- 883
-format.name$ -- 132
-if$ -- 2211
+cite$ -- 41
+duplicate$ -- 455
+empty$ -- 941
+format.name$ -- 136
+if$ -- 2356
 int.to.chr$ -- 0
-int.to.str$ -- 38
-missing$ -- 43
-newline$ -- 193
-num.names$ -- 76
-pop$ -- 159
+int.to.str$ -- 40
+missing$ -- 45
+newline$ -- 203
+num.names$ -- 80
+pop$ -- 170
 preamble$ -- 1
-purify$ -- 139
+purify$ -- 145
 quote$ -- 0
-skip$ -- 293
+skip$ -- 318
 stack$ -- 0
-substring$ -- 708
-swap$ -- 50
-text.length$ -- 3
+substring$ -- 750
+swap$ -- 61
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 142
+type$ -- 150
 warning$ -- 1
-while$ -- 112
-width$ -- 40
-write$ -- 403
+while$ -- 119
+width$ -- 42
+write$ -- 425
 (There were 5 error messages)
