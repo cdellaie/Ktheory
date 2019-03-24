@@ -3,7 +3,15 @@
 \usepackage[frenchb]{babel}
 %\usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}      
-\usepackage{url}                
+\usepackage{url}             
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+%\theoremstyle{definition}
+%\newtheorem{theorem}[definition]{Theorem}
+   
 \setlength\parindent{0pt}
 
 \pagestyle{empty}             
@@ -264,6 +272,94 @@ Date de naissance : 22/03/1990 \`{a} Metz (Moselle).
 
 \titre{Description d\'etaill\'ee des travaux et projets de recherches}
 
-Cette partie vise \`a d\'etailler les travaux d\'ej\`a accomplis ainsi que futurs. Le texte se divise en trois parties. La premi\`ere pr\'esente le domaine d'inter\^et du candidat, d'une mani\`ere g\'en\'erale, afin d'introduire les objets et les questions sur lesquelles nous travaillons. La seconde partie d\'etaille les travaux publi\'es ainsi que les sujets d\'ej\`a accomplis. La derni\`ere partie se consacre \`a des questions ou des projets qui se veulent des ouvertures vers des travaux futurs. La r\'edaction, qui d\'ebute sans assumer quelconque connaissance en g\'eometrie non-commutative et alg\`ebres d'op\'erateurs, exige de fa\c{c}on croissante une connaissance de plus en plus pouss\'ee de ces domaines. Ainsi, la lectrice curieuse de nos activit\'es peut se limiter \`a la premi\`ere section, l\`a o\`u la sp\'ecialiste peut sans probl\`eme directement commencer par la partie suivante.\\
+Cette partie vise \`a d\'etailler les travaux d\'ej\`a accomplis ainsi que futurs. Le texte se divise en trois parties. La premi\`ere pr\'esente le domaine d'inter\^et du candidat, d'une mani\`ere g\'en\'erale, afin d'introduire les objets et les questions sur lesquelles nous travaillons. La seconde partie d\'etaille les travaux publi\'es ainsi que les sujets d\'ej\`a termin\'es. La derni\`ere partie se consacre \`a des questions ou des projets qui se veulent des ouvertures vers des travaux futurs. La r\'edaction, qui d\'ebute sans assumer quelconque connaissance en g\'eometrie non-commutative et alg\`ebres d'op\'erateurs, exige de fa\c{c}on croissante une connaissance de plus en plus pouss\'ee de ces domaines. Ainsi, la lectrice curieuse de nos activit\'es peut se limiter \`a la premi\`ere section, l\`a o\`u la sp\'ecialiste peut sans probl\`eme directement commencer par la partie suivante.
+
+\subsection*{Alg\`ebres d'op\'erateurs et g\`eometrie non-commutative}
+
+Pour d\'efinir notre champ d'\'etude, nous pr\'esenterons rapidement les objets \'etudi\'es, les questions pos\'ees \`a leur sujet et enfin, notre contribution.\\
+
+Les alg\`ebres d'op\'erateurs sont n\'ees avec les travaux de Murray et Von Neumann qui, dans 4 articles fondateurs \cite{}, d\'efinissent les alg\`ebres de Von Neuman (alors appel\'ees \textit{rings of operators}). Les motivations proviennent ici de la physique: la m\'ecanique quantique date d'il y a moins de 20 ans et consistent encore \`a l'\'epoque d'une liste de r\`egles de calcul, que les physiciens s'efforcent de synth\'etiser en une th\'eorie coh\'erente. Rappelons qu'une alg\`ebre de Von Neumann est une sous-alg\`ebre auto-adjointe des op\'erateurs born\'es sur un espace de  Hilbert, \'egale \`a son bicommutant. La signification physique est la suivante: une mesure effectu\'ee sur un syst\`eme quantique est repr\'esent\'ee par un op\'erateur auto-adjoint $a$ sur un espace de Hilbert $H$. Si $\xi \in H$ est un vecteur unitaire, la mesure de l'observable $a$ dans l'\'etat $\xi$ est donn\'ee par la variable al\'eatoire associ\'ee \`a la forme lin\'eaire $\mu(f) = \langle \xi , f(a) \xi \rangle$ o\`u $f$ est une fonction continue sur le spectre de $a$.  \\
+
+Dans les ann\'ees 40, les alg\`ebres d'op\'erateurs se voient appliqu\'ees en analyse harmonique avec les travaux de Gelfand et Naimark \cite{}, et Mackey,... C'est \`a ce moment que naissent les $C^*$-alg\`ebres. La condition du bicommutant est remplac\'ee par ``\^etre ferm\'ee pour la topologie induite par la norme d'op\'erateurs''. La situation apr\`es la seconde guerre voient les applications fleurir: classifications de facteurs de type III avec Alain Connes \cite{}, polyn\^ome de Jones \cite{}, qui offre le premier invariant topologique pour les noeuds capable de distinguer un noeud de son symm\'etrique-miroir, th\'eorie quantique des champs alg\'ebrique avec \cite{}, application en th\'eorie de l'indice et \`a la topologie des feuilletage (Alain Connes \cite{}), formulation g\'eometrico-alg\'ebrique d'une version du mod\`ele standard, utilisant notamment les \textit{triplets spectraux} d'Alain Connes, applications d'assemblages de Baum-Connes avec un succ\`es retentissant en topologie alg\'ebrique avec une solution tr\`es g\'en\'erale \`a la conjecture de Novikov, etc. \\
+
+Le type de questions qui nous int\'eressent se situent \`a la fronti\`ere entre la g\'eom\'etrie m\'etrique, la topologie alg\'ebrique et les propri\'et\'es d'approximation. Ces derni\`eres datent plus ou moins des travaux de th\`ese de Grothendieck, qui a d\'ebut\'e en analyse fonctionnelle. Alors venu faire sa th\`ese \`a Nancy avec Dieudonn\'e et Schwartz, Grothendieck se voit proposer de cr\'eer une notion de produit tensoriel pour les espaces vectoriels topologiques. Ce probl\`eme lui vient de Schwartz, qui aimerait simplifier sa preuve du th\'eor\`eme des noyaux, qui dit (en simplifiant) que toute op\'erateur lin\'eaire born\'e admet ``une matrice", c'est-\`a-dire un noyau, si l'on admet les distributions comme noyaux possibles. En dimension finie, ce r\'esultat est rapidement prouv\'e: il s'agit de montrer que l'espace vectoriel des les op\'erateurs lin\'eaires de $V$ dans $W$ est isomorphe \`a $V^* \otimes W$. La suite est bien connue: Grothendieck d\'efinit non pas un, mais toute une famille de produit tensoriels, qui admettent un \'el\'ement maximal et un \'el\'ement minimal. Les espaces pour lesquels ces deux notions co\"incident, et n'ont donc qu'un seul produit tensoriel, sont appel\'es \textit{nucl\'eaires}, en r\'ef\'erence au th\'eor\`eme.\\
+
+Permettons nous un bon dans le temps, et passons aux $C^*$-alg\`ebres. Elles aussi poss\`edent des produits tensoriels, avec un produit tensoriel minimal (dit \textit{spatial}) et un \textit{maximal}. Les $C^*$-alg\`ebres nucl\'eaires sont celles n'en poss\'edant qu'un seul. Une question naturelle est alors de savoir si toute les $C^*$-alg\`ebres sont nucl\'eaires ou non. C'est \`a ce moment que l'on appelle la th\'eorie des groupes au secours. Lors de ses travaux sur les d\'ecompositions paradoxales, Von Neumann a d\'efini la notion de groupe moyennable. Un groupe discret est \textit{moyennable} s'il existe une \textit{moyenne}, i.e. une forme lin\'eaire born\'ee $m : l^\infty (\Gamma) \rightarrow \mathbb C$ telle que $m(1_{l^\infty(\Gamma)}) = 1$ et qui soit $\Gamma$-invariante ($\Gamma$ agit naturellement par translation sur $l^\infty (\Gamma)$). Les groupes moyennables comprennent les groupes ab\'eliens, finis, r\'esolubles, le groupe de Grigorchuk, du \textit{lamplighter}, etc.\\
+
+Maintenant, \`a un groupe discret $\Gamma$ est associ\'ee sa $C^*$-alg\'ebre r\'eduite $C^*_r(\Gamma)$. Il se trouve que le th\'eor\`eme suivant clos la question de la nucl\'earit\'e de telles $C^*$-alg\`ebres. 
+
+%\begin{theorem}En gardant les m\^emes notations, $\Gamma$ est moyennable ssi $C^*_r(\Gamma)$ est nucl\'eaires.\end{theorem}
+
+Il suffit donc de prendre n'importe quel groupe non-moyennable, par exemple le groupe libre \`a 2 g\'en\'erateurs $\mathbb F_2$ ou encore $SL(2,\mathbb Z)$, pour produire une $C^*$-alg\`ebre non nucl\'eaire.\\    
+
+Il existe pl\'ethore de propri\'etes d'approximations, et qui sont souvent reli\'ees \`a des propri\'et\'es d'objets provenant d'autres domaines, \`a qui l'on associe une $C^*$-alg\'ebre. Un bon exemple est la $C^*$-alg\`ebre de Roe uniforme $C^*_u(X)$ associ\'ee \`a un espace m\'etrique $X$. La nucl\'earit\'e d'icelle est \'equivalente \`a l'espace $X$ satisfaisant la propri\'et\'e A de Yu \cite{}. Ces $C^*$-alg\`ebres sont importantes en topologie alg\'ebrique. Leurs groupes de $K$-th\'eorie sont le r\'ec\'eptacle des indices pseudo-differentiels abstraits (i.e. des classes de $K$-homologie). Ici, l'on utilise la $K$-th\'eorie op\'eratorielle, qui est une g\'en\'eralisation de la $K$-th\'eorie topologique d'Atiyah aux alg\`ebres de Banach. Elle offre un analogue \`a la cohomologie dans le cas commutatif (et c'est bien un th\'eorie cohomologique au sens de Steenrod). Elle n'est \`a pas confondre avec la $K$-th\'eorie alg\'ebrique, m\^eme si pour une large classe de $C^*$-alg\`ebres, elles co\"incident. L'exemple le plus frappant est peut-\^etre la cas de la conjecture de Novikov. La preuve la plus g\'en\'erale qui existe \`a ce jour utilise la conjecture de Baum-Connes, qui donne un algorithme pour calculer les groupes de $K$-th\'eorie de $C^*_r(\Gamma)$ et $C_u^*(X)$: si un groupe est a-T-moyennable, ou s'il admet un plongement uniforme dans un espace de Hilbert s\'eparable, alors il satisfait la conjecture de Novikov. En particulier, cela est vrai de tous les groupes moyennables, ou hyperbolique au sens de Gromov.
+
+\subsection*{Publications}
+
+Les trois grandes questions concernant la $K$-th\'eorie des $C^*$-alg\'ebres auxquelles je m'int\'eresse sont la conjecture de Baum-Connes, la formule de K\"unneth et la formule de coefficients universels. Nous pr\'esentons maintenant les travaux publi\'es.\\
+
+\subsubsection*{Topological property T for groupoids} 
+Avec Rufus Willett. Preprint sur arxiv, novembre 2018. Soumis pour publication.\\
+
+La propri\'ete T est une condition sur les repr\'esentations unitaires d'un groupe. Elle a \'et\'e d\'efini par Kazdhan \cite{} afin de prouver que certains r\'esaux de certains groupes de Lie sont finiement engendr\'es. De fa\c{c}on inattendue, elle se r\'ev\'ela \^etre tr\`es fructueuse en th\'erorie des repr\'esentations et en alg\'ebres d'op\'erateurs. Citons par exemple la premi\`ere preuve non probabiliste par Margulis de l'existence de graphes expanseurs. L'aspect qui nous int\'eresse ici est que, si $\Gamma$ a la propri\'t\'e T, il existe un projecteur $p$ dans $C^*_r(\Gamma)$ (la projection de Kazdhan) dont les propri\'et\'es sont tr\'s exotiques. Il est la raison pour laquelle la propri\'et\'e T est rest\'ee pendant longtemps une obstruction \`a la conjecture de Baum-Connes (jusqu'aux travaux de Vincent Lafforgue \cite{} qui prouve la dite conjecture pour certains groupes ayant T). Partant de ce constat, Willett et Yu d\'efinissent dans \cite{} un \textit{propri\'et\'e T g\'eom\'etrique} pour les espaces m\'etriques.\\
+
+Le point de d\'epart de ce travail est le constat qu'\`a un espace m\'etrique $X$ peut \^etre associ\'e un groupo\"ide topologique $G(X)$ \'etale \`a base totalement discontinue telle que les $C^*_u(X)$ et $C_r^*(G(X))$ soit naturellement isomorphes, et qui entrelacent les applications d'asemblages associ\'ees. Nous avons alors d\'efinit une \textit{propri\'et\'e T topologique} pour les groupo\"ides topologiques. 
+
+\subsubsection*{Going-Down functors and the Künneth-formula for crossed products by ample groupoids}, avec Christian Bönicke. Preprint sur arxiv, octobre 2018. Soumis pour publication.
+
+En topologie alg\'ebrique commutative, la formule de K\'unneth donne une mani\`ere de calculer la cohomologie d'un produit $H^*(X\times Y)$ en utilisant $H^*(X)$ et $H^*(Y)$. En passant au non-commutatif, la formule de K\"unneth \'etudie le calcul de $K_*(A \otimes B)$ en fonction de $K_*(A)$ et $K_*(B)$ ($\otimes$ est ici le produit tensoriel spatial). Plus pr\'ecisement, on dit que $A$ satisfait la formule de K\"unneth si une certaine application $\alpha_{A,B}: K(A)\otimes K(B) \rightarrow K(A\otimes B)$ est un isomorphisme pour toute $C^*$-alg\`ebre $B$ dont les groupes de $K$-th\'eorie sont libres ab\'eliens. Cette formule est v\'erifi\'ee pour une classe de $C^*$-alg\`ebres appel\'ees \textit{bootstrap}, et si 
+
+\subsubsection*{A K\"{u}nneth formula for \'etale groupoids} Preprint disponible sur ma webpage personnelle.\\
+
+Cet article est une version pr\'eliminaire de l'article ci-dessus. En discutant avec Christian, nous avons r\'ealis\'e que certains de nos r\'esultats se recoupaient et avons d\'ecid\'e de collaborer. L'article est cependant diff\'erent. Le foncteur d'induction est par exemple d\'efinit d'une fa\c{c}on diff\'erente et on introduit une propri\'et\'e d'\^etre localement compactement induit qui m\'eriterait d\^etre \'etudi\'ee.
+
+
+\subsubsection*{Controlled $K$-theory for groupoids and applications to Coarse Geometry}, Journal of Functional Analysis,Volume 275, Issue 7, October 2018, Pages 1756-1807. 
+
+\subsubsection*{S\'eminaires et vulgarisation}
+
+Le s\'eminaire de g\'eom\'etrie non-commutative est anim\'e par Erik Guentner, Rufus Willett et moi-m\^eme. Nous d\'ecidons en g\'en'eral d'un ou plusieurs th\`emes au d\'ebut du semestre et donnons ensuite des expos\'es toutes les semaines \'a un groupe de 5 \`a 10 \'etudiants en th\'ese, ainsi qu'\`a quelques professeurs. Les th\'emes trait\'es pour l'instant sont les suivants:
+\begin{itemize}
+\item[$\bullet$] les $C^*$-alg\`ebres et les sous-alg\`ebres de Cartan;
+\item[$\bullet$] la propri\'et\'e T;
+\item[$\bullet$] la moyennabilit\'e des groupes;
+\item[$\bullet$] $C^*$-simplicit\'e;
+\item[$\bullet$] quasi-localit\'e;
+\end{itemize}
+
+Je me consacre aussi \`a d'autres s\'eminaires. J'ai notamment donn\'e des expos\'es aux s\'eminaires suivants.
+\begin{itemize}
+\item[$\bullet$] \textit{Topological Quantum Field Theories}: le s\'eminaire avant au d\'epart pour but d'\'etudier les repr\'esentations des alg\`ebres de Hopf ainsi que leur apparition dans la construction de TQFT en dimenion 2. Les TQFT sont des formulations alg\'ebriques de certaines int\'egrales (de Feynman) utilis\'ees par les physiciens en th\'eorie quantique des champs. Bien que math\'ematiquement mal d\'efinies dans certains cas, les calculs donnent des r\'esultats qui concordent avec l'exp\'erience \`a un degr\'es de pr\'ecision de l'ordre du ??. Certains math\'ematiciens ont propos\'e d'interpr\'eter la valeur de certaines de ces int\'egrales comme la valeur d'un foncteur $Z : Bord_n \rightarrow C$ entre $n$-cat\'egories.  J'ai pr\'esent\'e la classification des TQFT en dimension 2 et 3, une introduction \`a la conjecture de ?? et a sar\'esolution par Lurie et?, ainsi que la refomulation dans ce contexte du polyn\^ome de Jones obtenue par Witten dans \cite{}.
+\item[$\bullet$] \textit{Right-Angled Artin Groups}: ce s\'eminaire se veut une introduction \`a la th\'eorie g\'eom\'etrique des groupes, en prenant comme exemple les groupes d'Artin \`a angle droit (RAAGs) et les mapping class groups. J'y ai donn\'e un expos\'e sur le th\'eor\`eme affirmant que tout sous-groupe d'un RAAG qui est 2-g\'en\'er\'e est soit ab\'elien soit libre. 
+\item[$\bullet$] s\'eminaire d'Analyse. J'y ai donn\'e un expos\'e introduisant \`a la g\'eom\'etrie non-commutative.
+\end{itemize}
+
+\subsection*{Projets de recherche}
+
+Conjecture de Matui
+Exactitude en K-th\'eorie
+Groupes quantiques
 
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
