@@ -41,45 +41,46 @@ Warning--I didn't find a database entry for "schochetRosenberg"
 Warning--I didn't find a database entry for "SkandalisNotion"
 Warning--I didn't find a database entry for "ChabertEO"
 Warning--empty journal in Penrose2005Einstein
-You've used 40 entries,
+Warning--there's a number but no series in williams2007crossed
+You've used 41 entries,
             2118 wiz_defined-function locations,
-            770 strings with 10101 characters,
-and the built_in function-call counts, 11423 in all, are:
-= -- 1147
-> -- 439
-< -- 4
-+ -- 181
-- -- 136
-* -- 727
-:= -- 1965
-add.period$ -- 121
-call.type$ -- 40
-change.case$ -- 180
+            774 strings with 10170 characters,
+and the built_in function-call counts, 11660 in all, are:
+= -- 1171
+> -- 446
+< -- 5
++ -- 184
+- -- 138
+* -- 739
+:= -- 2006
+add.period$ -- 125
+call.type$ -- 41
+change.case$ -- 183
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 455
-empty$ -- 941
-format.name$ -- 136
-if$ -- 2356
+cite$ -- 43
+duplicate$ -- 467
+empty$ -- 963
+format.name$ -- 138
+if$ -- 2408
 int.to.chr$ -- 0
-int.to.str$ -- 40
-missing$ -- 45
-newline$ -- 203
-num.names$ -- 80
-pop$ -- 170
+int.to.str$ -- 41
+missing$ -- 47
+newline$ -- 208
+num.names$ -- 82
+pop$ -- 176
 preamble$ -- 1
-purify$ -- 145
+purify$ -- 148
 quote$ -- 0
-skip$ -- 318
+skip$ -- 323
 stack$ -- 0
-substring$ -- 750
-swap$ -- 61
-text.length$ -- 4
+substring$ -- 755
+swap$ -- 63
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 150
-warning$ -- 1
-while$ -- 119
-width$ -- 42
-write$ -- 425
+type$ -- 152
+warning$ -- 2
+while$ -- 121
+width$ -- 43
+write$ -- 436
 (There were 5 error messages)
