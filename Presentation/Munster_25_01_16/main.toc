@@ -57,25 +57,25 @@
 \contentsline {subsection}{\numberline {2.10.1}HLS groupoids}{74}{subsection.2.10.1}
 \contentsline {subsection}{\numberline {2.10.2}Visit to PennState, September 18th to 21st 2018}{75}{subsection.2.10.2}
 \contentsline {subsection}{\numberline {2.10.3}Visit to Texas A\&M, February 12th to 14th 2019, and University of Houston February 15th}{76}{subsection.2.10.3}
-\contentsline {section}{\numberline {2.11}Mayer-Vietoris}{80}{section.2.11}
-\contentsline {section}{\numberline {2.12}Quantum groups}{80}{section.2.12}
-\contentsline {section}{\numberline {2.13}Property T}{80}{section.2.13}
-\contentsline {section}{\numberline {2.14}Number theory}{80}{section.2.14}
-\contentsline {section}{\numberline {2.15}Fock spaces, CuntzKrieger algebras, and second quantization}{80}{section.2.15}
-\contentsline {section}{\numberline {2.16}Representations of groupoids}{81}{section.2.16}
-\contentsline {section}{\numberline {2.17}Grothendieck and tensor products, the origin of nuclearity}{84}{section.2.17}
-\contentsline {chapter}{\numberline {3}Old notes}{85}{chapter.3}
-\contentsline {section}{\numberline {3.1}Simple examples for Baum-Connes for groupoids}{86}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Non commutative tori}{86}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Principal bundle over $U(2)$}{87}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Foliations}{87}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}An example from physics}{87}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Parabolic induction and Hilbert modules}{88}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}In $SL(2,\mathbb R)$}{88}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Universal Coefficient Theorem}{90}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Other questions}{90}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Funky questions, ideas of talks}{92}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Expanders}{92}{subsection.3.4.1}
-\contentsline {subsubsection}{Plan of the talk}{92}{section*.25}
-\contentsline {subsubsection}{Questions}{92}{section*.26}
-\contentsline {subsection}{\numberline {3.4.2}Ideas of funky talks}{92}{subsection.3.4.2}
+\contentsline {section}{\numberline {2.11}Mayer-Vietoris}{81}{section.2.11}
+\contentsline {section}{\numberline {2.12}Quantum groups}{81}{section.2.12}
+\contentsline {section}{\numberline {2.13}Property T}{81}{section.2.13}
+\contentsline {section}{\numberline {2.14}Number theory}{81}{section.2.14}
+\contentsline {section}{\numberline {2.15}Fock spaces, CuntzKrieger algebras, and second quantization}{81}{section.2.15}
+\contentsline {section}{\numberline {2.16}Representations of groupoids}{82}{section.2.16}
+\contentsline {section}{\numberline {2.17}Grothendieck and tensor products, the origin of nuclearity}{85}{section.2.17}
+\contentsline {chapter}{\numberline {3}Old notes}{87}{chapter.3}
+\contentsline {section}{\numberline {3.1}Simple examples for Baum-Connes for groupoids}{88}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Non commutative tori}{88}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Principal bundle over $U(2)$}{89}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Foliations}{89}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}An example from physics}{89}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Parabolic induction and Hilbert modules}{90}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}In $SL(2,\mathbb R)$}{90}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Universal Coefficient Theorem}{92}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Other questions}{92}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Funky questions, ideas of talks}{94}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Expanders}{94}{subsection.3.4.1}
+\contentsline {subsubsection}{Plan of the talk}{94}{section*.25}
+\contentsline {subsubsection}{Questions}{94}{section*.26}
+\contentsline {subsection}{\numberline {3.4.2}Ideas of funky talks}{94}{subsection.3.4.2}
