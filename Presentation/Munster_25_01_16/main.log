@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  3 APR 2019 09:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  3 APR 2019 09:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2653,76 +2653,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 582--583
  []
 
 [76]
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
+Underfull \hbox (badness 10000) in paragraph at lines 596--597
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--597
+Underfull \hbox (badness 10000) in paragraph at lines 599--601
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 601--602
+Underfull \hbox (badness 10000) in paragraph at lines 605--606
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 606--608
+Underfull \hbox (badness 10000) in paragraph at lines 607--608
 
  []
 
 [77]
-Underfull \hbox (badness 10000) in paragraph at lines 610--614
+Underfull \hbox (badness 10000) in paragraph at lines 610--612
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--619
+Underfull \hbox (badness 10000) in paragraph at lines 614--618
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 628--630
+Underfull \hbox (badness 10000) in paragraph at lines 621--623
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 631--632
+Underfull \hbox (badness 10000) in paragraph at lines 632--634
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 633--634
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
 
  []
 
 [78]
-Underfull \hbox (badness 10000) in paragraph at lines 636--638
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--640
+Underfull \hbox (badness 10000) in paragraph at lines 640--642
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--642
+Underfull \hbox (badness 10000) in paragraph at lines 643--644
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--668
+Underfull \hbox (badness 10000) in paragraph at lines 645--646
 
  []
 
-[79] [80]) [81]
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
+
+ []
+
+[80]) [81]
 \openout2 = `RepresentationGroupoid.aux'.
 
  (./RepresentationGroupoid.tex
@@ -3025,9 +3025,6 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
@@ -3057,7 +3054,7 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on main.pdf (97 pages, 532281 bytes).
+Output written on main.pdf (97 pages, 532214 bytes).
 PDF statistics:
  1162 PDF objects out of 1200 (max. 8388607)
  1033 compressed objects within 11 object streams
