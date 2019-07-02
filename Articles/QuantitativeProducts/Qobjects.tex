@@ -1,0 +1,27 @@
+\section{Coarsening}
+
+This section aims at providing a categorical framework for the quantitative $K$-theory developed by Oyono-Oyono and Yu in \cite{OY2}, and extended, under the name of controlled $K$-theory, in \cite{Dell}.\\
+
+Let $C$ be a category with ... (properties?) Its \textit{coarsening} (I also thought of \textit{quantitativisation} but it sounds weird) $\hat C$ will be defined as the category:
+\begin{itemize}
+\item[$\bullet$] with objects the contravariant functors from $Set$ to $C$ which respect finite unions and general intersections;
+\item[$\bullet$] and morphisms the natural transformations between these functors.
+\end{itemize}
+
+Quantitative $K$-theory was first used in computations of $K$-theory groups of Roe algebras (see \cite{Yu}), and is inspired by \textit{coarse geometry}, which explains the name we chose. The first result that can shed some light on the abstract definition of $\hat C$ is the following.
+
+\begin{prop}
+The category of coarse spaces is equivalent to the coarsening of the category Set.
+\end{prop}
+
+\begin{proof}
+Let $X$ be a coarse space. Define the functor $F_X$ which, to a set $S$, associates the quotient of the set of functions $S\rightarrow X$ by the equivalence relation of \textit{bornotopy}. Recall that two functions $f,g: S \rightarrow X$ are bornotopic if $\sup_S d(f(s),g(s)) < \infty$. Coarse maps preserve bornotopy so this defines a functor.\\
+
+Let $F: Set^{op} \rightarrow Set$. Define $X_F$ to be the codomain of $X$. 
+
+\end{proof} 
+
+An interesting related example is the coarsening of the category $C^*$ obtained from a filtered $C^*$-algebra. Let $A$ be such an algebra, and define, for a set $S$, the $C^*$-algebra $\mathbb A (S)$ to be the closure in $l^\infty(S,A)$ of \[\cup_{r>0} \prod_S A_r.\] Precomposition by the $K$-theory functor gives a coarsening of the category of $\Z / \Z_2$-graded abelian groups
+\[\mathbb K(\mathbb A) (S) = K_*( \hat l^\infty (S,A)).\] 
+We propose to see $\mathbb K (\mathbb A)$ as an alternative (maybe equivalent) to the quantitative $K$-theory. An argument in favor of this idea is that the main technique that made quantitative $K$-theory so efficient, so-called \textit{controlled cutting and pasting}, translates in our setting. We avoid however the use of $\varepsilon$ and $r$'s.
+
