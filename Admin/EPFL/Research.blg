@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Research.aux
+The style file: abbrv.bst
+Illegal, another \bibstyle command---line 59 of file Research.aux
+ : \bibstyle
+ :          {plain}
+I'm skipping whatever remains of this command
+Database file #1: biblio.bib
+Repeated entry---line 369 of file biblio.bib
+ : @article{higsonkasparov
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 547 of file biblio.bib
+ : @article{MeyerNest
+ :                   ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in OY3
+Warning--empty year in OY3
+You've used 34 entries,
+            2118 wiz_defined-function locations,
+            720 strings with 8616 characters,
+and the built_in function-call counts, 9505 in all, are:
+= -- 960
+> -- 370
+< -- 2
++ -- 153
+- -- 114
+* -- 629
+:= -- 1657
+add.period$ -- 101
+call.type$ -- 34
+change.case$ -- 156
+chr.to.int$ -- 0
+cite$ -- 36
+duplicate$ -- 368
+empty$ -- 769
+format.name$ -- 114
+if$ -- 1929
+int.to.chr$ -- 0
+int.to.str$ -- 34
+missing$ -- 35
+newline$ -- 172
+num.names$ -- 68
+pop$ -- 131
+preamble$ -- 1
+purify$ -- 125
+quote$ -- 0
+skip$ -- 251
+stack$ -- 0
+substring$ -- 618
+swap$ -- 39
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 132
+warning$ -- 2
+while$ -- 106
+width$ -- 36
+write$ -- 361
+(There were 3 error messages)

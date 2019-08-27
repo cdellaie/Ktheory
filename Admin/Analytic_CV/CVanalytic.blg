@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: CVanalytic.aux
+The style file: plain.bst
+Database file #1: biblio.bib
+I was expecting a `,' or a `}'---line 395 of file biblio.bib
+ : 
+ : @article{GWY2,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 444 of file biblio.bib
+ : @article{higsonkasparov
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 672 of file biblio.bib
+ : @article{MeyerNest
+ :                   ,
+I'm skipping whatever remains of this entry
+Warning--can't use both volume and number fields in connesfoliations
+Warning--empty publisher in NowakYu
+Warning--empty journal in OY3
+Warning--empty year in OY3
+You've used 35 entries,
+            2118 wiz_defined-function locations,
+            730 strings with 9058 characters,
+and the built_in function-call counts, 10922 in all, are:
+= -- 1122
+> -- 407
+< -- 5
++ -- 166
+- -- 126
+* -- 747
+:= -- 1822
+add.period$ -- 106
+call.type$ -- 35
+change.case$ -- 166
+chr.to.int$ -- 0
+cite$ -- 39
+duplicate$ -- 421
+empty$ -- 897
+format.name$ -- 126
+if$ -- 2266
+int.to.chr$ -- 0
+int.to.str$ -- 35
+missing$ -- 36
+newline$ -- 177
+num.names$ -- 70
+pop$ -- 139
+preamble$ -- 1
+purify$ -- 132
+quote$ -- 0
+skip$ -- 301
+stack$ -- 0
+substring$ -- 827
+swap$ -- 69
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 138
+warning$ -- 4
+while$ -- 123
+width$ -- 37
+write$ -- 377
+(There were 3 error messages)
