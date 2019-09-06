@@ -406,8 +406,8 @@ It is natural to ask the following questions:
 (i.e., the coarse groupoid $G(X)$) is a Fredholm groupoid)?
 \end{enumerate}
 }
-
-Directions for answering:\\
+\newpage
+\section{Box spaces}
 
 Topological properties of the coarse groupoids encode coarse properties of the underlying metric space. For instance, $X$ has Yu's property (A) iff $G(X)$ is (topologically) amenable. In that case, the following sequence of $C^*$-algebras
 \[0 \rightarrow \mathfrak K(l^2 X) \rightarrow C^*_u(X) \rightarrow C_r^*(G_{\partial \beta X}) \rightarrow 0\] 
@@ -418,9 +418,59 @@ The only notions that are not always satisfied by the coarse groupoid to be Fred
 \item[$\bullet$] $G= G_{\mathcal N}(\Gamma)$ is metrically amenable iff $R(G)$ is norming; 
 \item[$\bullet$]$G_{\mathcal N}(\Gamma)$ is topologically amenable iff $\Gamma$ is amenable.
 \end{itemize}
-Any non-amenable group with property FD of Lubotsky and Shalom gives then such a $G_{\mathcal N}(\Gamma)$. A natural question is to adapt this result to the coarse setting by using the box space associated to $(\Gamma, \mathcal N)$.
+Any non-amenable group with property FD of Lubotsky and Shalom gives then such a $G_{\mathcal N}(\Gamma)$. A natural question is to adapt this result to the coarse setting by using the box space associated to $(\Gamma, \mathcal N)$. We can show that exhaustivity of $R(G_{\mathcal N})$ ensures amenability of $\Gamma$ (equivalently topological amenability of $G_{\mathcal N}$. This 
 
-\bigskip
+\begin{proposition}
+If $R(G)$ is exhaustive for $C^*_{max}(G_{\mathcal N}(\Gamma))$, then $\Gamma$ is amenable (which is equivalent to $G$ being topologically amenable).
+\end{proposition}
+
+\begin{proof}
+The trace at infinity 
+\[\tau(f) = \sum_{g\in G_\infty = \{\infty\} \times \Gamma } f(g)\]
+extends to an irreducible representation $C^*_{max}(G_{\mathcal N}(\Gamma)) \rightarrow \mathbb C$. But if $ker \ \lambda_x \subset ker \tau$, $x$ must be $\infty$. Indeed, $N_n \subset Ker \lambda_ n $ for all $n\in \mathbb N$. But $\lambda_\infty = \lambda_\Gamma$, hence the trace extends to $C_r^*\Gamma$, which is equivalent to $\Gamma$ being amenable. 
+\end{proof}
+
+\section{Application to inner-exactness}
+
+Recall that, given a decomposition of the base space 
+\[G^0 = U \coprod F,\]
+with $U$ open (and $F$ closed...) and $G$-invariant, we have a exact sequence of $*$-algebras
+\[ 0 \rightarrow C_c(G_{|U})\rightarrow  C_c(G)\rightarrow  C_c(G_{|F})\rightarrow 0. \]
+Here, we used the notation $G_{S} = G_S^S = s^{-1}(S)\cap r^{-1}(S)$. While taking the maximal separation-completion preserves exactness (see Renault \cite{}), it might not be so for the reduced one, i.e. the sequence 
+\[ 0 \rightarrow C_r^*(G_{|U})\rightarrow  C_r^*(G)\rightarrow  C_r^*(G_{|F})\rightarrow 0. \]
+can fail to be exact. Examples were described in \cite{DellAieraWillett} (see theorem ) and include:
+\begin{itemize}
+\item[$\bullet$] the coarse groupoid associated to an expander $X$, with $U=X \subset \beta X$,
+\item[$\bullet$] the HLS groupoid associated to an approximated group $(\Gamma,\mathcal N)$ with property $(\tau)_{\mathcal N}$.
+\end{itemize}
+
+In this section, we prove that exhaustivity of $R(G)= \{\lambda_x\}_{x\in G^0} $ prevents this from happening.
+
+\begin{thm}
+Let $G$ be a Hausdorff and locally compact groupoid with a Haar system. Suppose $R(G)$ is exhaustive, then $G$ is inner exact.
+\end{thm}
+
+This will follow from the proposition below. Here we denote by $R_F$ the family $\{ \lambda_x \}_{x\in F}$.
+\begin{proposition} Let $F$ a closed minimal $G$-invriant subset of $G^0$.
+If $R_F$ is exhaustive, then \[ 0 \rightarrow C_r^*(G_{|U})\rightarrow  C_r^*(G)\rightarrow  C_r^*(G_{|F})\rightarrow 0 \]
+is an exact sequence of $C^*$-algebras.
+\end{proposition}
+
+\begin{proof}
+Recall that $F$ begin $G$-invariant, $\lambda^{G_{|F}}_x (f) =\lambda^G_x(f), \forall f \in C_c(G_{|F})$. Let us first point out that the sequence above is exact iff
+\[ \sup_{x\in F} \|\lambda_x(a) \| = \inf_{y | a-y\in C_c(G_{|U})} \sup_{x\in G^0} \| \lambda_x(y)\| \quad \forall a \in C_c(G_{|F}).  \]
+The left hand side is the reduced norm for $C_c(G_{|F})$. Let us call the right hand side $\alpha$, and $C^*_\alpha(G_{|F})$ the separated-completion of $C_c(G_{|F})$ w.r.t $\alpha$. Then $\alpha(a) \leq \| a \|$ holds and the identity of $C_c(G_{|F})$ extends to a surjective $*$-homomorphism
+\[C^*_\alpha(G_{|F}) \rightarrow C^*_r(G_{|F}).\]
+To build a surjective $*$-homomorphism in the reverse direction, consider the $*$-representation 
+\[\phi: C_\alpha^*(G_{|F}) \rightarrow C_r(G) / C_r^*(G_{|U}).\]
+It is irreducible by minimality of $F$, hence by exhaustivity of $R_F$, there exists a $x\in F$ such that $ker \ \lambda_x \subset ker \ \phi$, so that the identity of $C_c(G_{|F})$ extends to a surjective $*$-homomorphism
+\[C^*_r(G_{|F}) \rightarrow C^*_\alpha(G_{|F}),\]
+and $C^*_r(G_{|F}) \cong C^*_\alpha(G_{|F})$.\\
+\end{proof}
+
+This gives already two classes of examples where the regular representations are not exhaustive. In particular, if $U$ is minimal in the definition of $G$ being Fredholm, these examples contradicts the hypothesis 4. 
+
+\newpage
 \section{Appendix: Induced Representations}
 
 Let $\maG\tto X$ be a second countable, Hausdorff, \'etale groupoid with $X$ compact and $\maH \tto Y$ a closed, \'etale subgroupoid of $\maG$.
