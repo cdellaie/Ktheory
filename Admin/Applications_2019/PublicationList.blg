@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: PublicationList.aux
+The style file: plain.bst
+Database file #1: biblio.bib
+Repeated entry---line 430 of file biblio.bib
+ : @article{kazhdan
+ :                 ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in OY3
+Warning--empty year in OY3
+You've used 10 entries,
+            2118 wiz_defined-function locations,
+            567 strings with 5560 characters,
+and the built_in function-call counts, 3083 in all, are:
+= -- 311
+> -- 133
+< -- 0
++ -- 53
+- -- 42
+* -- 226
+:= -- 534
+add.period$ -- 29
+call.type$ -- 10
+change.case$ -- 50
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 107
+empty$ -- 240
+format.name$ -- 42
+if$ -- 618
+int.to.chr$ -- 0
+int.to.str$ -- 10
+missing$ -- 10
+newline$ -- 52
+num.names$ -- 20
+pop$ -- 40
+preamble$ -- 1
+purify$ -- 40
+quote$ -- 0
+skip$ -- 74
+stack$ -- 0
+substring$ -- 226
+swap$ -- 9
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 40
+warning$ -- 2
+while$ -- 34
+width$ -- 12
+write$ -- 106
+(There was 1 error message)
