@@ -34,8 +34,63 @@ We are interested to applications of exhaustivity to \textit{Roe algebras} and \
 
 \section{Controlled $K$-theory}
 
-\subsection*{Baum-Connes for groupoids with finite complexity}
+Controlled, or quantitative, $K$-theory is a refinement of operator $K$-theory that has been developed following the celebrated proof of the Novikov conjecture for groups with asymptotic dimension by Guoliang Yu \cite{Yu1}. In this proof appear some groups build from almost-projections and almost-unitaries, with finite propagation, of the Roe algebra $C*(X)$ of a coarse space $X$. These groups are in essence $K$-theory groups with the added possibility of controlling the propagation of the classes, propagation coming from the distance function. This allows to apply \textit{controlled cutting and pasting} techniques to compute the $K$-theory groups of $C^*(X)$, i.e. Mayer-Vietoris like exact sequences, but involving \textit{almost ideals} instead of genuine ideals. In the case of finite asymptotic dimension, these ideals reduce to finite dimensional $C^*$-algebras, i.e. matrix algebras.\\
 
+In \cite{OY1}, Oyono-Oyono and Yu applied this idea to the computation of the $K$-theory of the Roe algebras of some expanders. They formalized quantitative $K$-theory for $C^*$-algebras similar to reduced $C^*$-algebras of group $C^*_r(G)$ and Roe algebras $C^*(X)$ in \cite{OY2}, and in \cite{dell2018controlled}, the author generalized this approach to the setting of groupoid $C^*$-algebras and quantum groups, and general coarse spaces. These techniques were also applied to computations in $K$-theory:\\
+\begin{itemize} 
+\item[$\bullet$] Guentner, Willett and Yu proved in \cite{GWY2} the Baum-Connes conjecture for group actions which have \textit{finite dynamical complexity}, a transcription in the setting of topological group actions of \textit{finite decomposition complexity}, a weakening of \textit{finite asymptotic dimension}.\\   
+\item[$\bullet$] Oyono-Oyono and Yu proved the the K\"unneth formula \cite{oyono2019quantitative} and the coarse Baum-Connes conjecture \cite{} for spaces with \textit{finite decomposition complexity}.\\
+\end{itemize}
+
+Let us point out that hese results do not give new examples where the Baum-Connes conjecture, coarse or not, holds. All these coarse spaces are coarsely embeddable into Hilbert spaces and all these groups or groups actions are a-T-menable, which falls under the monumental results of \cite{HigsonKasparov}, \cite{TuThese} and \cite{Yu2}. Their interest lie in that these last papers are notoriously hard, and the controlled philosophy gives new proofs which follows the classical cutting and pasting technique.\\  
+
+\subsection*{Baum-Connes for groupoids with finite complexity}
+  
 \textit{with Rufus Willett, University of Hawai'i at Manoa}\\
 
+The notion of \textit{finite dynamical complexity} naturally generalizes to \'etale groupoids, and these should be natural candidates for which the Baum-Connes conjecture can be proven using controlled $K$-theory. In a recent preprint \cite{willett2019decompositions}, Rufus Willett defined \textit{local decomposabity} for $C^*$-algebras, inspired by the above decomposition properties. He is then able to derive a Mayer-Vietoris like sequence involving a $C^*$-algebra which decomposes in that sense over two of its subalgebras. If they are ideals, one recover the classical Mayer-Vietoris exact sequence. This is used to establish a stability result for the K\"unneth formula and a stability result for the vanishing of $K$-theory groups.\\
+
+\begin{project}
+Prove the Baum-Connes conjecture for groupoids with finite dynamical complexity by local decomposability techniques.  
+\end{project} 
+
 \subsection*{Getting rid of the $\varepsilon$ and $R$'s}
+
+The use of controlled $K$-theory is quite cumbersome. One has to keep track of $\varepsilon $ and $R$'s while doing already complicated $K$-theoretic computations. The following project is in the line of applying the controlled philosophy to $K$-theoretic computations, while trying to avoid keeping track of the propagation to every step. The idea is to define a global object in which appoximate relations become exact. \\
+
+Let $A$ be a unital filtered $C^*$-algebra: $A$ is the closure of the union of a family  $\{A_r\}_{r>0}$ of closed self-adjoint subspaces such that $A_r A_s \subset A_{r+s}$. Define $\hat {l^\infty} (A)$ to be the closure in $\prod_{\N} A \otimes \mathfrak K$ of the union of 
+\[\mathcal A_r = \prod_{i\in \N} A_r \otimes \mathfrak K \]
+when $r>0$. Let $w\in \beta \N$ be a principal ultrafilter and define $\hat A_w$ to be the quotient of $\hat {l^\infty} (A)$ by the ideal 
+\[ I_w = \{ (a_i) | \lim_w \|a_i \| = 0\}.\]
+We call \textit{approximate ideal} of $A$ an ideal of $\hat A_w$. It can be shown that finite asymtotic dimension and finite dynamical complexity give rise to approximate ideals in $\hat{C^*(X)}_w$ and $\hat{C_r^*(G)}_w$ respectively. Moreover, in these cases, we have a genuine Mayer-Vietoris decomposition which, when evaluated at a finite place, gives back the quantitatve Mayer-Vietoris exact sequence. We thus can translate approximate ideals and quantitative relations into ideals and exact relations in the global algebra $\hat {l^\infty} (A)$.  
+
+\begin{project}
+Investigate stability properties of $K$-theoretic computations and the K\"unneth formula using $\hat {l^\infty} (A)$.
+\end{project}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

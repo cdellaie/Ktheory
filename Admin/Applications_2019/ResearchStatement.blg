@@ -2,54 +2,58 @@ This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ResearchStatement.aux
 The style file: abbrv.bst
-Illegal, another \bibstyle command---line 46 of file ResearchStatement.aux
+Illegal, another \bibstyle command---line 57 of file ResearchStatement.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
 Database file #1: biblio.bib
+Repeated entry---line 390 of file biblio.bib
+ : @article{higsonkasparov
+ :                        ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 753 of file biblio.bib
  : @article{NistorPrudhon
  :                       ,
 I'm skipping whatever remains of this entry
-You've used 12 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            583 strings with 5591 characters,
-and the built_in function-call counts, 3535 in all, are:
-= -- 360
-> -- 124
+            643 strings with 6901 characters,
+and the built_in function-call counts, 6255 in all, are:
+= -- 637
+> -- 229
 < -- 2
-+ -- 51
-- -- 38
-* -- 226
-:= -- 601
-add.period$ -- 37
-call.type$ -- 12
-change.case$ -- 53
++ -- 95
+- -- 70
+* -- 401
+:= -- 1077
+add.period$ -- 67
+call.type$ -- 22
+change.case$ -- 99
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 144
-empty$ -- 299
-format.name$ -- 38
-if$ -- 734
+cite$ -- 22
+duplicate$ -- 249
+empty$ -- 519
+format.name$ -- 70
+if$ -- 1284
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 14
-newline$ -- 63
-num.names$ -- 24
-pop$ -- 53
+int.to.str$ -- 22
+missing$ -- 24
+newline$ -- 113
+num.names$ -- 44
+pop$ -- 89
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 79
 quote$ -- 0
-skip$ -- 96
+skip$ -- 170
 stack$ -- 0
-substring$ -- 246
-swap$ -- 22
+substring$ -- 423
+swap$ -- 32
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
+type$ -- 84
 warning$ -- 0
-while$ -- 39
-width$ -- 14
-write$ -- 131
-(There were 2 error messages)
+while$ -- 69
+width$ -- 24
+write$ -- 236
+(There were 3 error messages)
