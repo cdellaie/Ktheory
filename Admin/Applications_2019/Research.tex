@@ -1,29 +1,39 @@
 \subsection{Groupoids and approximation properties}
 
-The following projects revolve around the idea of building $C^*$-algebras with exotic properties using topological groupoids and $*$-representations of their convolution algebra.
+The following projects revolve around the idea of building $C^*$-algebras with exotic properties using topological groupoids and $*$-representations of their convolution algebra. We make intensive use of two classes of examples: \textit{coarse groupoids} and \textit{HLS groupoids}. Let us describe a particular case of coarse groupoids, and the associated HLS groupoid. Let $\Gamma$ be a finitely generated group together with a decreasing sequence of finite index normal subgroups $N_{i+1}\unlhd N_i$ such that $\cap N_i = 1$. Denote by $\Gamma_n$ the finite group $\Gamma/ N_n$.
+\begin{itemize}
+\item[$\bullet$] The HLS groupoid $G_{\mathcal N}(\Gamma)$ is a group bundle with base space the one space compactification $\N \cup \{\infty\}$. The fiber is the finite group $\Gamma_n$ over finite places, and $\Gamma$ at $\infty$. The topology is made is such a way that the finite fibers ``converge" to the whole group.  
+\item[$\bullet$] The coarse groupoid, in that case, is the groupoid of the action of $\Gamma$ on $\beta X$, the Stone-\v{C}ech compactification of $X$. Here $X$ is the disjoint union $X= \coprod_{n\in \N} \Gamma_n$ of all the finite groups $\Gamma_n$. They are seen as metric spaces with the help of the word metric coming from a fixed generating set, and the total metric satisfies $\lim d(\Gamma_i, \Gamma_j)= \infty$ when $i+j \rightarrow \infty$. The action of $\Gamma$ by translation is extended to the compactification.  
+\end{itemize}
 
+One can for instance take $\Gamma = SL_2(\Z) $, $p$ any prime number, and $\Gamma_n = SL_2(\Z / p^n \Z) $. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{Property T}
 
-\textit{with Rufus Willett, University of Hawai'i at Manoa}\\
+\textit{with Rufus Willett, University of \Hawaii at M\={a}noa}\\
 
-In \cite{DellWillett}, Rufus Willett and the author introduced a topological version of Property (T) for topological groupoids. This definition generalizes that of groups, but also recover \textit{Geometric Property (T)}, defined by Willett and Yu in \cite{WillettYu} for metric spaces with bounded geometry. It also is related to property $( \tau )$, a representation theoretic property for residually finite groups, giving a criterion to build expanders, and to \textit{measurable Property T} defined by Anantharaman-Delaroche in \cite{anantharamanT}. These connections provide evidence that our definition at least make sense, but its real interest lies in the following results.\\
+In \cite{DellWillett}, Rufus Willett and I introduced a topological version of Property (T) for topological groupoids. This definition generalizes that of groups, but also recover \textit{Geometric Property (T)}, defined by Willett and Yu in \cite{WillettYu} for metric spaces with bounded geometry. It also is related to property $( \tau )$, a representation theoretic property for residually finite groups, giving a criterion to build expanders, and to \textit{measurable Property T} defined by Anantharaman-Delaroche in \cite{anantharamanT}. These connections provide evidence that our definition is a good generalization, but its real interest lies in the following results.\\
 \begin{itemize}
-\item[$\bullet$] In the \'etale case, property (T) can be characterized as a spectral gap condition for operators analogous to the Laplacian on a compactly generated \'etale groupoid. This allows to characterize property (T) as a spectral gap condition and the existence of a Kazdhan projection. \\
-\item[$\bullet$] Property (T), together with some technical assumptions, lead to \textit{failure of inner-exactness}. We show that this result holds for the coarse groupoid associated to an expander, and to the HLS groupoid associated to a residually finite group with property $(\tau )$. \\
+\item[$\bullet$] In the \'etale case, property (T) can be characterized as a spectral gap condition for operators analogous to the Laplacian on a compactly generated \'etale groupoid. This allows one to characterize property (T) as a spectral gap condition and the existence of a Kazdhan projection. \\
+\item[$\bullet$] Property (T), together with some technical assumptions, leads to \textit{failure of inner-exactness}. We show that this result holds for the coarse groupoid associated to an expander, and to the HLS groupoid associated to a residually finite group with property $(\tau )$. \\
 \end{itemize}
-In ongoing work, we try to apply topological property (T) to failure of K-exactness. For instance, it is shown by Spakula in \cite{SpakulaNonexact} that residually finite groups satisfying a strengthening of property $(\tau)$ have their uniform Roe algebra, which is a groupoid reduced $C^*$-algebra in disguise, are not $K$-exact. This suggest that a stronger form of topological property (T) would lead to failure of $K$-exactness for the reduced $C^*$-algebra of our groupoid. %We can aleady show this for uniform Roe algebras of some expanders. 
+In ongoing work, we try to apply topological property (T) to failure of K-exactness. For instance, it is shown by \v{S}pakula in \cite{SpakulaNonexact} that residually finite groups satisfying a strengthening of property $(\tau)$ have their uniform Roe algebra, which is a groupoid reduced $C^*$-algebra in disguise, are not $K$-exact. This suggest that a stronger form of topological property (T) would lead to failure of $K$-exactness for the reduced $C^*$-algebra of our groupoid. %We can aleady show this for uniform Roe algebras of some expanders. 
 
 \begin{project}
 Finding a condition for compactly generated \'etale groupoids which, together with property (T), ensures that its reduced $C^*$-algebra is not $K$-exact. 
 \end{project}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsubsection*{Exhaustivity of representations}
 
-\textit{with Yu Qiao}\\
+\textit{with Yu Qiao, Shaanxi Normal University}\\
 
-Motivated by questions coming from spectral theory of N-body Hamiltonians, and characterization of Fredholm integral operators and Toeplitz operators, Nistor and Prudhon introduced in \cite{NistorPrudhon} the concept of \textit{exhaustive families of representations}. A family of $*$-representations of a $C^*$-algebra $A$ is \textit{exhaustive} if every irreducible $*$-representation is weakly contained in one of the representation of the family.\\
+Motivated by questions coming from spectral theory of N-body Hamiltonians, and characterizations of Fredholm integral operators and Toeplitz operators, Nistor and Prudhon introduced in \cite{NistorPrudhon} the concept of \textit{exhaustive families of representations}. A family of $*$-representations of a $C^*$-algebra $A$ is \textit{exhaustive} if every irreducible $*$-representation is weakly contained in one of the representations of the family.\\
 
-In particular they prove that, for a groupoid that satisfies the Effros-Hahn conjecture and have amenable isotropy groups, the family of regular representations is exhaustive for the maximal $C^*$-algebra of the groupoid. This result has for consequence a famous result of Exel \cite{exel2014invertibility} about invertibility of elements of amenable groupoids $C^*$-algebras.\\
+In particular they prove that, for a groupoid with amenable isotropy groups that satisfies the Effros-Hahn conjecture, the family of regular representations is exhaustive for the maximal $C^*$-algebra of the groupoid. This result has for consequence a famous result of Exel \cite{exel2014invertibility} about invertibility of elements of amenable groupoids $C^*$-algebras.\\
 
 We are interested to applications of exhaustivity to \textit{Roe algebras} and \textit{HLS groupoids}. Indeed, Skandalis, Tu and Yu defined in \cite{SkTuYu} a so-called \textit{coarse groupoid} $G(X)$ associated to a coarse metric space $X$, whose reduced $C^*$-algebra coincides with the uniform Roe algebra of $X$. This groupoid has features very similar to \textit{Fredholm groupoids}, intensively used in index theory: the base space $G^0 = \beta X$ has a dense open subset $U=X$ such that $G_{|U}\cong U\times U$. We denote by $F$ the boundary $\beta X - X$.
 
@@ -31,19 +41,41 @@ We are interested to applications of exhaustivity to \textit{Roe algebras} and \
 Find conditions ensuring that the family of regular representations restricted to the boundary $\{\lambda_x\}_{x\in F}$ is exhaustive and/or giving an isomorphism $C_r^*G_F \cong C^*_r G / C^*_r G_U$.
 \end{project}
  
-For instance, we already know that this fails for coarse groupoids of some expanders, HLS groupoid of non amenable groups. 
+For instance, we already know that this fails for coarse groupoids of some expanders, and HLS groupoid of non amenable groups. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsubsection*{Matui's conjecture}
 
+\textit{with Christian B\"onicke, School of Mathematics and Statistics of the University of Glasgow}\\ 
 
-\section{Hilbert-Hadamard spaces and the Novikov conjecture}
+In \cite{matui2016etale}, Matui stated two conjectures about the Crainic-Moerdijk homology (as defined in \cite{crainic2000homology}) and the $K$-theory groups of nice ample essentially principal and minimal groupoids. The first one, the HK conjecture, predicts that 
+\[K_i (C_r^*(G)) \cong \bigoplus_k H^{2k+i}(G)\quad i=0,1.\]
+
+While the conjecture was proven for particular cases (see \cite{ortega2018homology}, \cite{farsi2018ample} for recent results, and  \cite{MatuiSurvey} for a survey), a counterexample was given by Scarparo in \cite{scarparo2018homology}. The groupoid is obtained using \textit{odometers}, i.e. $G=\Omega \rtimes \Gamma$, where $\Gamma$ is the infinite dihedral group $\Z\rtimes \Z_2$ and the action is given by shift on $\Omega=\varinjlim \Gamma/ \Gamma_i$, $\Gamma_j = n_j \Z \rtimes \Z$.\\
+
+We suggest to look at this conjecture for coarse groupoids. 
+
+\begin{project}
+For a metric space $X$ with bounded geometry, compute the homology of the groupoids $G(X)$ and compare it to the $K$-theory of the uniform Roe algebra $C^*_u(X)$. In other words does Matui's conjecture hold for coarse groupoids?
+\end{project}
+
+These computations should be carriable in some general cases, for instance in the presence of finite asymptotic dimension. In that case, the $K$-theory is computable since the Baum-Connes conjecture holds, and the homology can be computed using coarse homology (see chapter 7 of \cite{NowakYu}). We also propose to start the computations with HLS groupoids and coarse groupoids associated to box spaces. This should be seen as an analog of Scarparo's counterexamples.
+
+\subsubsection*{Other}
+
+I know that groupoids are appearing in a lot of other parts of operator algebras, and I would be very happy to learn about higher rank graphs $C^*$-algebras or semi-group $C^*$-algebras for instance.  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Controlled $K$-theory}
 
-Controlled, or quantitative, $K$-theory is a refinement of operator $K$-theory that has been developed following the celebrated proof of the Novikov conjecture for groups with asymptotic dimension by Guoliang Yu \cite{Yu1}. In this proof appear some groups build from almost-projections and almost-unitaries, with finite propagation, of the Roe algebra $C*(X)$ of a coarse space $X$. These groups are in essence $K$-theory groups with the added possibility of controlling the propagation of the classes, propagation coming from the distance function. This allows to apply \textit{controlled cutting and pasting} techniques to compute the $K$-theory groups of $C^*(X)$, i.e. Mayer-Vietoris like exact sequences, but involving \textit{almost ideals} instead of genuine ideals. In the case of finite asymptotic dimension, these ideals reduce to finite dimensional $C^*$-algebras, i.e. matrix algebras.\\
+Controlled, or quantitative, $K$-theory is a refinement of operator $K$-theory that has been developed following the celebrated proof of the Novikov conjecture for groups with finite asymptotic dimension by Guoliang Yu \cite{Yu1}. In the course of the proof, some groups appear built from almost-projections and almost-unitaries, with finite propagation, of the Roe algebra $C*(X)$ of a coarse space $X$. These groups are in essence $K$-theory groups with the added possibility of controlling the propagation of the classes, propagation coming from the distance function. This allows one to apply \textit{controlled cutting and pasting} techniques to compute the $K$-theory groups of $C^*(X)$, i.e. Mayer-Vietoris like exact sequences, but involving \textit{almost ideals} instead of genuine ideals. In the case of finite asymptotic dimension, these ideals reduce to finite dimensional $C^*$-algebras, i.e. matrix algebras.\\
 
-In \cite{OY1}, Oyono-Oyono and Yu applied this idea to the computation of the $K$-theory of the Roe algebras of some expanders. They formalized quantitative $K$-theory for $C^*$-algebras similar to reduced $C^*$-algebras of group $C^*_r(G)$ and Roe algebras $C^*(X)$ in \cite{OY2}, and in \cite{dell2018controlled}, the author generalized this approach to the setting of groupoid $C^*$-algebras and quantum groups, and general coarse spaces. These techniques were also applied to computations in $K$-theory:\\
+In \cite{OY1}, Oyono-Oyono and Yu applied this idea to the computation of the $K$-theory of the Roe algebras of some expanders. They formalized quantitative $K$-theory for $C^*$-algebras similar to reduced $C^*$-algebras of groups $C^*_r(G)$ and Roe algebras $C^*(X)$ in \cite{OY2}, and in \cite{dell2018controlled}, I generalized this approach to the setting of groupoid $C^*$-algebras and quantum groups, and general coarse spaces. These techniques were also applied to computations in $K$-theory:\\
 \begin{itemize} 
-\item[$\bullet$] Guentner, Willett and Yu proved in \cite{GWY2} the Baum-Connes conjecture for group actions which have \textit{finite dynamical complexity}, a transcription in the setting of topological group actions of \textit{finite decomposition complexity}, a weakening of \textit{finite asymptotic dimension}.\\   
+\item[$\bullet$] Guentner, Willett and Yu proved in \cite{GWY2} the Baum-Connes conjecture for group actions which have \textit{finite dynamical complexity}. This is a translation in the setting of topological group actions of \textit{finite decomposition complexity}, a weakening of \textit{finite asymptotic dimension}.\\   
 \item[$\bullet$] Oyono-Oyono and Yu proved the the K\"unneth formula \cite{oyono2019quantitative} and the coarse Baum-Connes conjecture \cite{} for spaces with \textit{finite decomposition complexity}.\\
 \end{itemize}
 
@@ -51,28 +83,39 @@ Let us point out that hese results do not give new examples where the Baum-Conne
 
 \subsubsection*{Baum-Connes for groupoids with finite complexity}
   
-\textit{with Rufus Willett, University of Hawai'i at Manoa}\\
+\textit{with Rufus Willett, University of \Hawaii at M\={a}noa}\\
 
-The notion of \textit{finite dynamical complexity} naturally generalizes to \'etale groupoids, and these should be natural candidates for which the Baum-Connes conjecture can be proven using controlled $K$-theory. In a recent preprint \cite{willett2019decompositions}, Rufus Willett defined \textit{local decomposabity} for $C^*$-algebras, inspired by the above decomposition properties. He is then able to derive a Mayer-Vietoris like sequence involving a $C^*$-algebra which decomposes in that sense over two of its subalgebras. If they are ideals, one recover the classical Mayer-Vietoris exact sequence. This is used to establish a stability result for the K\"unneth formula and a stability result for the vanishing of $K$-theory groups.\\
+The notion of \textit{finite dynamical complexity} naturally generalizes to \'etale groupoids, and these should be natural candidates for which the Baum-Connes conjecture can be proven using controlled $K$-theory. In a recent preprint \cite{willett2019decompositions}, Rufus Willett defined \textit{local decomposabity} for $C^*$-algebras, inspired by the above decomposition properties. He is then able to derive a Mayer-Vietoris like sequence involving a $C^*$-algebra which decomposes in that sense over two of its subalgebras. If they are ideals, one recover the classical Mayer-Vietoris exact sequence. This is used to establish a stability result for the K\"unneth formula and a stability result for the vanishing of $K$-theory groups.
 
 \begin{project}
 Prove the Baum-Connes conjecture for groupoids with finite dynamical complexity by local decomposability techniques.  
 \end{project} 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsubsection*{Getting rid of the $\varepsilon$ and $R$'s}
+
+\textit{with Amine Marrakchi, Research Institute for Mathematical Sciences, Kyoto University}\\
 
 The use of controlled $K$-theory is quite cumbersome. One has to keep track of $\varepsilon $ and $R$'s while doing already complicated $K$-theoretic computations. The following project is in the line of applying the controlled philosophy to $K$-theoretic computations, while trying to avoid keeping track of the propagation to every step. The idea is to define a global object in which appoximate relations become exact. \\
 
 Let $A$ be a unital filtered $C^*$-algebra: $A$ is the closure of the union of a family  $\{A_r\}_{r>0}$ of closed self-adjoint subspaces such that $A_r A_s \subset A_{r+s}$. Define $\hat {l^\infty} (A)$ to be the closure in $\prod_{\N} A \otimes \mathfrak K$ of the union of 
 \[\mathcal A_r = \prod_{i\in \N} A_r \otimes \mathfrak K \]
-when $r>0$. Let $w\in \beta \N$ be a principal ultrafilter and define $\hat A_w$ to be the quotient of $\hat {l^\infty} (A)$ by the ideal 
-\[ I_w = \{ (a_i) | \lim_w \|a_i \| = 0\}.\]
-We call \textit{approximate ideal} of $A$ an ideal of $\hat A_w$. It can be shown that finite asymtotic dimension and finite dynamical complexity give rise to approximate ideals in $\hat{C^*(X)}_w$ and $\hat{C_r^*(G)}_w$ respectively. Moreover, in these cases, we have a genuine Mayer-Vietoris decomposition which, when evaluated at a finite place, gives back the quantitatve Mayer-Vietoris exact sequence. We thus can translate approximate ideals and quantitative relations into ideals and exact relations in the global algebra $\hat {l^\infty} (A)$.  
+when $r>0$. Let $\omega\in \beta \N$ be a principal ultrafilter and define $\hat A_\omega$ to be the quotient of $\hat {l^\infty} (A)$ by the ideal 
+\[ I_\omega = \{ (a_i) | \lim_\omega \|a_i \| = 0\}.\]
+We call \textit{approximate ideal} of $A$ an ideal of $\hat A_\omega$. It can be shown that finite asymtotic dimension and finite dynamical complexity give rise to approximate ideals in $\hat{C^*(X)}_\omega$ and $\hat{C_r^*(G)}_\omega$ respectively. Moreover, in these cases, we have a genuine Mayer-Vietoris decomposition which, when evaluated at a finite place, gives back the quantitatve Mayer-Vietoris exact sequence. We thus can translate approximate ideals and quantitative relations into ideals and exact relations in the global algebra $\hat {l^\infty} (A)$.  
 
 \begin{project}
-Investigate stability properties of $K$-theoretic computations and the K\"unneth formula using $\hat {l^\infty} (A)$.
+Investigate stability properties of $K$-theoretic computations and the K\"unneth formula using $\hat {l^\infty} (A)$ and $\hat A_\omega$.
 \end{project}  
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Hilbert-Hadamard spaces and the Novikov conjecture}
+
+%\textit{with Guoliang Yu, Texas A \& M University}\\ 
 
 
 
