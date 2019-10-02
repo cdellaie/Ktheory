@@ -794,7 +794,42 @@ A simple computation gives that if $u =\sum_{i} (-1)^{\varepsilon_i} \chi_{U_i} 
 If $f$ is supported in a compact subset of $G$, since $G$ is \'etale, there is a Borel cover such that $\coprod G_{U}^U \cap K = G^0 \cap K$, so that the average of $f$ over this cover is $f$ restricted to $G^0$, which is the conditional expectation on $C_0(G^0)$. In particular, $C_c(G)$ is stable by $E$.\\
 \end{proof}
 
+\newpage
+%%%%%%%%%%%%%%%%%
+\subsection{Visit to Texas (A\&M and University of Houston), September 30 to October 5 August 2019}
+%%%%%%%%%%%%%%%%%%
 
+\subsubsection*{Exhaustive representations of Roe algebras}
+
+Motivated by characterizations of Fredholm and spectral questions of N-body Hamiltonians, Victor Nistor and Nicolas Prudhon introduced in \cite{} the notion of exhaustivity of a family of $*$-representation of a $C^*$-algebra.
+
+\begin{definition}
+A family of representations  
+\[\mathcal F = \{\phi : A \rightarrow B(H_\phi)\}\]
+is exhaustive if, for every irreducible representation $\sigma : A \rightarrow B(H_\sigma)$, there exists $\phi\in \mathcal F$ such that $ker \phi \subset ker \sigma$
+\end{definition}
+
+\subsubsection*{Property T and non K-exactness}
+
+Let $A \subset B(H)$ be a unital concrete filtered $C^*$-algebra, and 
+\[\mathcal N = \{\sigma : A \rightarrow B(H_\sigma) = M_{k(\sigma)}\}\]
+a family of cyclic (irreducible?) representations.
+\begin{definition}
+We say that $A$ has property $(\tau )_{\mathcal N}$ if there exist a controlled set $E$ and a positive constant $\varepsilon>0$ such that 
+\[\forall \eta \in \Lambda_{i}, \exists a\in (A_E)_{+,1}, \quad \| a \otimes 1 \xi - 1 \otimes \sigma_i(a) \eta  \| > \varepsilon . \]
+\end{definition}
+
+Examples: 
+\begin{itemize}
+\item[$\bullet$] $\Gamma$ has property T iff $C^*\Gamma$ has $(\tau)$ with respect to the trivial representation.
+\item[$\bullet$] $\Gamma$ has property T with respect to $\mathcal F$ iff $C_{\mathcal F}^*\Gamma$ has $(\tau)$ with respect to the trivial representation.
+\item[$\bullet$] $X$ has geometric property T iff $C^*_u(X)$ has $(\tau)$ with respect to the trivial representation.
+\item[$\bullet$] $G$ has topological property T with respect to $F$ iff $C^*_F(G)$ has $(\tau)$ with respect to the trivial representation.
+\end{itemize}
+
+Suppose we have an abelian sub-$C^*$-algebra $1_A \in B\subset A$ such that $A_E$ is a finitely generated $B$-module which normalizes $B$, and that we can find generators $a_i$, $i = 1,N$ such that
+\[\sum a_i^* a_i = 1.\]
+Define $\Delta = \sum_i x_i^* x_i $ with $x_i =  a \otimes 1 - 1 \otimes \sigma(a)$
 %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%
 \newpage
