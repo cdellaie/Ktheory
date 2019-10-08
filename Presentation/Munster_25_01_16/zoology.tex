@@ -809,6 +809,7 @@ A family of representations
 is exhaustive if, for every irreducible representation $\sigma : A \rightarrow B(H_\sigma)$, there exists $\phi\in \mathcal F$ such that $ker \phi \subset ker \sigma$
 \end{definition}
 
+\newpage
 \subsubsection*{Property T and non K-exactness}
 
 Let $A \subset B(H)$ be a unital concrete filtered $C^*$-algebra, and 
@@ -829,7 +830,42 @@ Examples:
 
 Suppose we have an abelian sub-$C^*$-algebra $1_A \in B\subset A$ such that $A_E$ is a finitely generated $B$-module which normalizes $B$, and that we can find generators $a_i$, $i = 1,N$ such that
 \[\sum a_i^* a_i = 1.\]
-Define $\Delta = \sum_i x_i^* x_i $ with $x_i =  a \otimes 1 - 1 \otimes \sigma(a)$
+Define $\Delta = \sum_i x_i^* x_i $ with $x_i =  a \otimes 1 - 1 \otimes \sigma(a)$.\\
+
+Fix two representations $\phi : A \rightarrow B(H_\phi)$ and $\sigma : A \rightarrow B(H_\sigma)$ and define the subspace of $H_\phi \otimes H_\sigma $:
+\[\Lambda_{\phi,\sigma} = \{\eta \in H_\phi \otimes H_\sigma \ | \ (\pi(a)\otimes 1)\eta  = (1\otimes \sigma(a)^*) \eta \ \forall a\in A\}.\]
+Then $\Lambda_{\phi,\sigma}$ naturally comes equipped with a representation of $A$ defined by either $\pi\otimes 1$ or $1\otimes \sigma$. 
+\begin{lem}
+$\Lambda_{\phi,\sigma}$ is nonzero iff there exists a nonzero intertwiner $T: H_\sigma \rightarrow H_\phi$.
+\end{lem}
+
+\begin{proof}
+The correspondance between the intertwiners is given by 
+\[ T = \sum_i e_i^*\otimes x_i \longleftrightarrow \eta= \sum_i e_i \otimes x_i.\]  
+\end{proof}
+
+Let $G$ be an \'etale locally compact groupoid, compactly generated. Name $K\subset G$ a compact generating subset, and cover it by bisections $\{a_i\}_{i=1,N}$. 
+Suppose
+\begin{itemize}
+\item[$\bullet$] there are a countable family of finite dimensional representations
+\[\phi_i : C_c(G)\rightarrow B(H_i)\]
+such that $\bigoplus_i \phi_i$ is faithful on a quotient of $A= C^*_r (G)$. 
+\item[$\bullet$] we can find finite dimensional representations $\sigma_j : A \rightarrow B(K_j)= M_{d_j}$ satisfying
+	\begin{itemize}
+	\item[(i)] $d_j= dim(K_j) \rightarrow \infty$,
+	\item[(ii)] there exists a Kazhdan pair $(K,\varepsilon)$ such that $\{\phi_i\}$ and $\{\sigma_j\}$ have $(K,\varepsilon)$-spectral gap.
+	\end{itemize}
+\end{itemize}  
+Define
+\[\Delta =\sum_{k=1}^N  (a_k \otimes 1 - 1\otimes (\sigma_j(a_k)^*)_j)^*(a_k \otimes 1 - 1\otimes (\sigma_j(a_k)^*)_j) \in C_c(G)\otimes_{alg} \prod M_{d_j}.  \]
+Then the spectral projection of $\Delta$ belongs to $C^*_r(G) \otimes \prod M_{d_j}$ and goes to zero in $C^*_r(G) \otimes \prod M_{d_j}/\bigoplus M_{d_j}$.\\
+
+Indeed, $\Delta= (\Delta_{ij})$.
+The first thing to realize is that $ker(\Delta_{ij})=\Lambda_{ij}$. The spectral gap condition ensures that the characteristic function of the singleton $\{0\}$ is continous on the spectrum of $\Delta$ in 
+\[\bigoplus_{ij} H_i \otimes K_j = \bigoplus_{ij} \Lambda_{ij} \oplus \Lambda_{ij}^{\perp}, \]
+so that by continous functional calculus $p \in C_r^*(G)$. Decompose $p =(p_{ij})$, then $p_{ij}$ is nonzero iff $\Lambda_{ij}$ is nonzero iff there is an nonzero intertwiner $K_j \rightarrow H_i$. $H_i$ being finite dimensional and $K_j$ being irreducible, that can only happen for finitely many $j$ so that $p_i =(p_{ij})_j$ is finitely supported in $j$ and the second claims follow. 
+
+
 %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%
 \newpage
