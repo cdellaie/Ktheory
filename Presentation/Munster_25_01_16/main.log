@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  8 OCT 2019 11:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.25)  8 OCT 2019 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2831,17 +2831,29 @@ Overfull \hbox (7.07367pt too wide) in paragraph at lines 799--799
 -
  []
 
-[86]
-Underfull \hbox (badness 10000) in paragraph at lines 832--834
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--815
 
  []
+
+
+LaTeX Warning: Citation `Renault' on page 86 undefined on input line 816.
+
+[86]
+
+LaTeX Warning: Citation `RoeWillett' on page 87 undefined on input line 838.
 
 [87]
-Underfull \hbox (badness 10000) in paragraph at lines 860--862
+Underfull \hbox (badness 10000) in paragraph at lines 870--872
 
  []
 
-[88]) [89]
+[88]
+Underfull \hbox (badness 10000) in paragraph at lines 898--900
+
+ []
+
+[89]) [90]
 \openout2 = `RepresentationGroupoid.aux'.
 
  (./RepresentationGroupoid.tex
@@ -2899,7 +2911,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-[90
+[91
 
 
 ]
@@ -2947,7 +2959,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-[91]
+[92]
 Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
@@ -2962,7 +2974,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-) [92]
+) [93]
 \openout2 = `Grothendieck.aux'.
 
  (./Grothendieck.tex
@@ -2975,15 +2987,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-) [93
-
-
-] [94
+) [94
 
 
 ]
 Chapter 3.
-[95]
+[95
+
+
+]
 \openout2 = `Groupoids.aux'.
 
  (./Groupoids.tex
@@ -3144,16 +3156,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 23673 strings out of 492990
- 484325 string characters out of 6132636
- 562114 words of memory out of 5000000
- 26385 multiletter control sequences out of 15000+600000
+ 23814 strings out of 492990
+ 488026 string characters out of 6132636
+ 564491 words of memory out of 5000000
+ 26524 multiletter control sequences out of 15000+600000
  21364 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,22n,84p,1291b,1051s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3176,10 +3185,10 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on main.pdf (105 pages, 563147 bytes).
+Output written on main.pdf (105 pages, 568096 bytes).
 PDF statistics:
- 1224 PDF objects out of 1440 (max. 8388607)
- 1087 compressed objects within 11 object streams
- 357 named destinations out of 1000 (max. 500000)
+ 1226 PDF objects out of 1440 (max. 8388607)
+ 1089 compressed objects within 11 object streams
+ 359 named destinations out of 1000 (max. 500000)
  605 words of extra memory for PDF output out of 10000 (max. 10000000)
 

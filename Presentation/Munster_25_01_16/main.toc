@@ -59,13 +59,13 @@
 \contentsline {subsection}{\numberline {2.10.3}Visit to Texas A\&M, February 12th to 14th 2019, and University of Houston February 15th}{76}{subsection.2.10.3}
 \contentsline {subsection}{\numberline {2.10.4}Visit to SCMS (Fudan University, Shanghai), 21 July to 15 August 2019}{81}{subsection.2.10.4}
 \contentsline {subsection}{\numberline {2.10.5}Visit to Texas (A\&M and University of Houston), September 30 to October 5 August 2019}{86}{subsection.2.10.5}
-\contentsline {section}{\numberline {2.11}Mayer-Vietoris}{89}{section.2.11}
-\contentsline {section}{\numberline {2.12}Quantum groups}{89}{section.2.12}
-\contentsline {section}{\numberline {2.13}Property T}{89}{section.2.13}
-\contentsline {section}{\numberline {2.14}Number theory}{89}{section.2.14}
-\contentsline {section}{\numberline {2.15}Fock spaces, CuntzKrieger algebras, and second quantization}{89}{section.2.15}
-\contentsline {section}{\numberline {2.16}Representations of groupoids}{90}{section.2.16}
-\contentsline {section}{\numberline {2.17}Grothendieck and tensor products, the origin of nuclearity}{93}{section.2.17}
+\contentsline {section}{\numberline {2.11}Mayer-Vietoris}{90}{section.2.11}
+\contentsline {section}{\numberline {2.12}Quantum groups}{90}{section.2.12}
+\contentsline {section}{\numberline {2.13}Property T}{90}{section.2.13}
+\contentsline {section}{\numberline {2.14}Number theory}{90}{section.2.14}
+\contentsline {section}{\numberline {2.15}Fock spaces, CuntzKrieger algebras, and second quantization}{90}{section.2.15}
+\contentsline {section}{\numberline {2.16}Representations of groupoids}{91}{section.2.16}
+\contentsline {section}{\numberline {2.17}Grothendieck and tensor products, the origin of nuclearity}{94}{section.2.17}
 \contentsline {chapter}{\numberline {3}Old notes}{95}{chapter.3}
 \contentsline {section}{\numberline {3.1}Simple examples for Baum-Connes for groupoids}{96}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Non commutative tori}{96}{subsection.3.1.1}

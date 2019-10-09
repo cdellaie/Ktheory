@@ -809,6 +809,44 @@ A family of representations
 is exhaustive if, for every irreducible representation $\sigma : A \rightarrow B(H_\sigma)$, there exists $\phi\in \mathcal F$ such that $ker \phi \subset ker \sigma$
 \end{definition}
 
+Let $G$ be a locally compact groupoid with Haar system, and $C_c(G)$ the $*$-algebra of compactly supported complex valued functions with the convolution product. Define the \textit{maximal $C^*$-algebra} $C^*(G)$ to be its envelopping $C^*$-algebra, and the \textit{reduced $C^*$-algebra} $C^*_r(G)$ to be its completion under the norm 
+\[\|a\|_r = \sup_{x\in G^0} \|\lambda_x(a)\| \]
+where $\lambda_x\in B(L^2(G_x, \mu_x))$ is the left regular representation based at $x\in G^0$.\\
+
+Let $U\subset G^0$ be an invariant open subset, and $F$ its complementary. From \cite{Renault}, the exact sequence of $*$-algebras 
+\[0\rightarrow C_c(G_{|U}) \rightarrow C_c(G)\rightarrow C_c(G_{|F})\rightarrow 0\]  
+extends to an exact sequence of $C^*$-algebra,
+\[0\rightarrow C^*(G_{|U}) \rightarrow C^*(G)\rightarrow C^*(G_{|F})\rightarrow 0\]
+while at the level of the reduced norm, the sequence 
+\[0\rightarrow C_r^*(G_{|U}) \rightarrow C_r^*(G)\rightarrow C_r^*(G_{|F})\rightarrow 0\]
+might fail to be exact in the middle. Let us call the \textit{ghost ideal} $I_G$ the kernel of the map $C^*_r(G)\rightarrow C^*_r(G_{|F})$. Then $C^*_r(G_{|U}) \subset I_G$, and we have the following diagram
+\[\begin{tikzcd}
+0 \arrow{r} &  C^*(G_{|U}) \arrow[r,hook] \arrow[d, two heads] & C^*(G)\arrow[r, two heads] \arrow[d, two heads] & C^*(G_{|F})\arrow{r} \arrow[d, two heads, "\lambda_F" ] & 0 \\
+0 \arrow{r} &  C_r^*(G_{|U})\arrow[r,hook] \arrow[d,hook] & C_r^*(G)\arrow[r, two heads]  \arrow[d,equal] & C_r^*(G_{|F})\arrow{r} \arrow[d,equal] & 0 \\
+0 \arrow{r} &  I_G \arrow[r,hook] & C_r^*(G)\arrow[r, two heads] & C_r^*(G_{|F})\arrow{r} & 0 \\
+\end{tikzcd}\]
+with exact first and third rows. A diagram chase ensures that if $\lambda_F$ is an isomorphism, then $I_G=C^*_r(G_U)$, or \textit{all ghosts are compacts}. But exhaustivity of the boundary regular representations $R_F=\{\lambda_x\}_{x\in F}$ always implies that $\lambda_F$ is an isomorphism. We thus get the following.
+
+\begin{prop}
+If $G_F$ is metrically amenable, then $I_G=C^*_r(G_U)$. Equivalently
+\[0\rightarrow C_r^*(G_{|U}) \rightarrow C_r^*(G)\rightarrow C_r^*(G_{|F})\rightarrow 0\]
+is exact. In particular, this is satisfied if $R_F$ is exhaustive.
+\end{prop} 
+
+Two cases of interests are will be the coarse setting, and so called HLS groupoids. In these cases $C^*(G) \cong C^*_r(G_U) \cong \mathfrak K$ (explaining why we call the exactitude of the sequence `` all ghosts are compacts"). 
+
+It is proven in \cite{RoeWillett} that property Yu's (A) (see \cite{}) is equivalent to $I_G\cong \mathfrak K(l^2X)$. So in that case, we get
+\begin{cor}
+A space $X$ has property (A) if and only if the representations at infinity $\mathcal F_\infty$ is an exhaustive family for the uniform Roe algebra $C^*_u(X)$.
+\end{cor}
+
+\begin{proof}
+If $\mathcal F_\infty$ is exhaustive then $G(X)$ is metrically amenable, hence all ghosts are compact by the previous proposition, which gives property (A).\\
+If $X$ has property (A), then $G(X)$ is topologically amenable, and so metrically amenable. Any irreducible representations $\phi: C^*_m(X)\rightarrow B(H)$ is either the induction of the unique representation of $\mathfrak K(l^2X)$, either factorizes through $C^*_m(X)/\mathfrak K(l^2 X)$. In the second case, 
+\[C^*_m(X)/\mathfrak K(l^2 X) \cong C^*_u(X) / \mathfrak K(l^2 X) \cong C^*_u(X) / I_G \cong l^\infty(X)/c_0(X) \rtimes_r G(X), \]
+so any representation factorizes through $l^\infty(X)/c_0(X) \rtimes_r G(X)$ which implies $F_\infty $ is exhaustive.\\
+\end{proof}
+
 \newpage
 \subsubsection*{Property T and non K-exactness}
 
