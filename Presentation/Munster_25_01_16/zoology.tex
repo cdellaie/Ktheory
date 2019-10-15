@@ -801,7 +801,7 @@ If $f$ is supported in a compact subset of $G$, since $G$ is \'etale, there is a
 
 \subsubsection*{Exhaustive representations of Roe algebras}
 
-Motivated by characterizations of Fredholm and spectral questions of N-body Hamiltonians, Victor Nistor and Nicolas Prudhon introduced in \cite{} the notion of exhaustivity of a family of $*$-representation of a $C^*$-algebra.
+Motivated by characterizations of Fredholm and spectral questions of N-body Hamiltonians, Victor Nistor and Nicolas Prudhon introduced in \cite{nistor2014exhausting} the notion of exhaustivity of a family of $*$-representation of a $C^*$-algebra.
 
 \begin{definition}
 A family of representations  
@@ -833,9 +833,17 @@ If $G_F$ is metrically amenable, then $I_G=C^*_r(G_U)$. Equivalently
 is exact. In particular, this is satisfied if $R_F$ is exhaustive.
 \end{prop} 
 
-Two cases of interests are will be the coarse setting, and so called HLS groupoids. In these cases $C^*(G) \cong C^*_r(G_U) \cong \mathfrak K$ (explaining why we call the exactitude of the sequence `` all ghosts are compacts"). 
+Two cases of interests are will be the coarse setting, and so called HLS groupoids. In these cases $C^*(G) \cong C^*_r(G_U) \cong \mathfrak K$ (explaining why we call the exactitude of the sequence `` all ghosts are compacts"). \\
 
-It is proven in \cite{RoeWillett} that property Yu's (A) (see \cite{}) is equivalent to $I_G\cong \mathfrak K(l^2X)$. So in that case, we get
+We will recall now a construction of limit spaces due to \v{S}pakula and Willett (see \cite{vspakula2017metric}). Let $(X,d)$ be a discrete metric space with bounded geometry, i.e. $\forall R>0, \sup_{x\in X} |B(x,R)| < \infty$. The distance function $d: X\times X \rightarrow \R$ can be extended to $\tilde d: \beta X \times \beta X \rightarrow \R \cup \{\infty\}$. If $\omega \in \beta X$, define 
+\[X(\omega) = \{\alpha \in \beta X / \tilde d (\omega , \alpha ) < \infty\}.\]
+Then, it is shown in \cite{SpakulaWillett} that $(X(\omega), \tilde d)$ is a discrete metric space with bounded geometry. (For instance, if $X=|\Gamma|$, $X(\omega)=|\Gamma | $, and if $X$ is a box space, then $X(\omega) = X$ when $\omega \in X$, and $|\Gamma|$ if $\omega\in \partial \beta X$.\\
+
+Given $\omega\in \beta X$, and $T\in C_m^*(X)$, one can look at the coefficients $T_{xy}= \langle \delta_y, T\delta_x\rangle$, which are bounded on $X\times X$, hence 
+\[T^{(\omega)}=\lim_{\omega} T_{xy}\]
+defines a bounded operator $B(l^2(X(\omega)))$, and $T\mapsto T^{(\omega)}$ defines what is called a representation at infinity $\phi_\omega : C_m^*(X)\rightarrow B(l^2(X(\omega))))$. The family $\{\phi_{\omega}\}_{\omega\in \partial \beta X}$ is called the family or representations at infinity of $X$. Note: they coincide with the regular representations of $C_c(G(X))$. \\
+
+It is proven in \cite{roe2014ghostbusting} that property Yu's (A) (see \cite{nowak2008property} for a survey) is equivalent to $I_G\cong \mathfrak K(l^2X)$. So in that case, we get
 \begin{cor}
 A space $X$ has property (A) if and only if the representations at infinity $\mathcal F_\infty$ is an exhaustive family for the uniform Roe algebra $C^*_u(X)$.
 \end{cor}
@@ -847,8 +855,42 @@ If $X$ has property (A), then $G(X)$ is topologically amenable, and so metricall
 so any representation factorizes through $l^\infty(X)/c_0(X) \rtimes_r G(X)$ which implies $F_\infty $ is exhaustive.\\
 \end{proof}
 
+In the case of the HLS groupoid, we have the following corollary.
+
+\begin{cor}
+Let $(\Gamma, \mathcal N)$ be an approximated group, and $G_{\mathcal N}(\Gamma)$ the associated HLS groupoid. The following are equivalent:
+\begin{itemize}
+\item[(i)] the family of regular representations $\{\lambda_x\}_{x\in \overline N}$ is exhaustive for $C^*G_{\mathcal N}$,
+\item[(ii)] the regular representation at infinity is exhaustive for $C^*G_{\mathcal N}$ is exhaustive for $C^G_{\mathcal N}$,
+\item[(iii)] the group $\Gamma$ is amenable,
+\item[(iv)] the groupoid $G_{\mathcal N}(\Gamma)$ is amenable. 
+\end{itemize}
+\end{cor}
+
+\begin{proof}
+The equivalence of (iii) and (iv) is done in \cite{WillettNonamenable}.\\
+
+The trivial representation $1_\Gamma: C^*\Gamma \rightarrow \C$ always extends $C^*G_{\mathcal N}(\Gamma)$, let us call it $\tau$. If $\{\lambda_\Gamma\}$ is exhaustive, $\tau$ extends to $C^*_r(\Gamma)= C^*G_{\mathcal N}(\Gamma)/ker(\lambda_\Gamma)$, so that $\Gamma$ is amenable. \\
+\end{proof}
+
+We can compare this to the example built in \cite{WillettNonamenable}: Willett shows that a certain HLS groupoid associated to $\Gamma=\mathbb F_2$ is metrically amenable while not being itself amenable. What we have here is an example of a groupoid which is metrically amenable while the regular representations are not exhaustive.\\
+
+In both cases, it turns out that topological amenability and exhaustivity of the boundary regular representations are equivalent. This result can be generalized to the following case.\\
+
+Suppose there exists an invariant open dense subset $U\subset G^0$ such that $G_{|U}\cong U\times U$. Then we can identify, for any point $x\in U$, the fiber and the open subset, i.e. $G_x\cong U$. The representation that corresponds to any $\lambda_x$ under that isomorphism is called the vector representation, and denoted $\pi_0 : C^*G \rightarrow B(L^2(U,\mu))$. Notice that $\mu $ is the pull-back of any of the Haar measure under the previous isomorphism.\\
+
+The diagram reduces to:
+\[\begin{tikzcd}
+0 \arrow{r} & \mathfrak K(L^2(U,\mu)) \arrow[r,hook] \arrow[d, two heads] & C^*(G)\arrow[r, two heads] \arrow[d, two heads] & C^*(G_{|F})\arrow{r} \arrow[d, two heads, "\lambda_F" ] & 0 \\
+0 \arrow{r} &  C_r^*(G_{|U})\arrow[r,hook] \arrow[d,hook] & C_r^*(G)\arrow[r, two heads]  \arrow[d,equal] & C_r^*(G_{|F})\arrow{r} \arrow[d,equal] & 0 \\
+0 \arrow{r} &  I_G \arrow[r,hook] & C_r^*(G)\arrow[r, two heads] & C_r^*(G_{|F})\arrow{r} & 0 \\
+\end{tikzcd}\]
+so that if $\{\lambda_x\}_{x\in F}$ is exhaustive, then $\lambda_F$ is an isomorphism and $\mathfrak K(L^2(U,\mu))\cong C^*_r(G) \cong I_G$. What about the reverse?
 \newpage
-\subsubsection*{Property T and non K-exactness}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Property T and non K-exactness}%5555555555555%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Let $A \subset B(H)$ be a unital concrete filtered $C^*$-algebra, and 
 \[\mathcal N = \{\sigma : A \rightarrow B(H_\sigma) = M_{k(\sigma)}\}\]
