@@ -819,7 +819,7 @@ extends to an exact sequence of $C^*$-algebra,
 \[0\rightarrow C^*(G_{|U}) \rightarrow C^*(G)\rightarrow C^*(G_{|F})\rightarrow 0\]
 while at the level of the reduced norm, the sequence 
 \[0\rightarrow C_r^*(G_{|U}) \rightarrow C_r^*(G)\rightarrow C_r^*(G_{|F})\rightarrow 0\]
-might fail to be exact in the middle. Let us call the \textit{ghost ideal} $I_G$ the kernel of the map $C^*_r(G)\rightarrow C^*_r(G_{|F})$. Then $C^*_r(G_{|U}) \subset I_G$, and we have the following diagram
+might fail to be exact in the middle. We still have a injective morphism on the left and a surjective morphism on the right. Let us call the \textit{ghost ideal} $I_G$ the kernel of the map $C^*_r(G)\rightarrow C^*_r(G_{|F})$. Then $C^*_r(G_{|U}) \subset I_G$, and we have the following commutative diagram
 \[\begin{tikzcd}
 0 \arrow{r} &  C^*(G_{|U}) \arrow[r,hook] \arrow[d, two heads] & C^*(G)\arrow[r, two heads] \arrow[d, two heads] & C^*(G_{|F})\arrow{r} \arrow[d, two heads, "\lambda_F" ] & 0 \\
 0 \arrow{r} &  C_r^*(G_{|U})\arrow[r,hook] \arrow[d,hook] & C_r^*(G)\arrow[r, two heads]  \arrow[d,equal] & C_r^*(G_{|F})\arrow{r} \arrow[d,equal] & 0 \\
@@ -837,11 +837,13 @@ Two cases of interests are will be the coarse setting, and so called HLS groupoi
 
 We will recall now a construction of limit spaces due to \v{S}pakula and Willett (see \cite{vspakula2017metric}). Let $(X,d)$ be a discrete metric space with bounded geometry, i.e. $\forall R>0, \sup_{x\in X} |B(x,R)| < \infty$. The distance function $d: X\times X \rightarrow \R$ can be extended to $\tilde d: \beta X \times \beta X \rightarrow \R \cup \{\infty\}$. If $\omega \in \beta X$, define 
 \[X(\omega) = \{\alpha \in \beta X / \tilde d (\omega , \alpha ) < \infty\}.\]
-Then, it is shown in \cite{SpakulaWillett} that $(X(\omega), \tilde d)$ is a discrete metric space with bounded geometry. (For instance, if $X=|\Gamma|$, $X(\omega)=|\Gamma | $, and if $X$ is a box space, then $X(\omega) = X$ when $\omega \in X$, and $|\Gamma|$ if $\omega\in \partial \beta X$.\\
+Then, it is shown in \cite{vspakula2017metric} that $(X(\omega), \tilde d)$ is a discrete metric space with bounded geometry. (For instance, if $X=|\Gamma|$, $X(\omega)=|\Gamma | $, and if $X$ is a box space, then $X(\omega) = X$ when $\omega \in X$, and $|\Gamma|$ if $\omega\in \partial \beta X$.)\\
 
 Given $\omega\in \beta X$, and $T\in C_m^*(X)$, one can look at the coefficients $T_{xy}= \langle \delta_y, T\delta_x\rangle$, which are bounded on $X\times X$, hence 
 \[T^{(\omega)}=\lim_{\omega} T_{xy}\]
-defines a bounded operator $B(l^2(X(\omega)))$, and $T\mapsto T^{(\omega)}$ defines what is called a representation at infinity $\phi_\omega : C_m^*(X)\rightarrow B(l^2(X(\omega))))$. The family $\{\phi_{\omega}\}_{\omega\in \partial \beta X}$ is called the family or representations at infinity of $X$. Note: they coincide with the regular representations of $C_c(G(X))$. \\
+defines a bounded operator $B(l^2(X(\omega)))$, and $T\mapsto T^{(\omega)}$ defines what is called a representation at infinity $\phi_\omega : C_m^*(X)\rightarrow B(l^2(X(\omega))))$. The family $F_\infty=\{\phi_{\omega}\}_{\omega\in \partial \beta X}$ is called the family or representations at infinity of $X$. Note: they coincide with the regular representations of $C_c(G(X))$. \\
+
+The coarse groupoid admits a description in that setting. Recall that a partial translation of $(X,d)$ is a partial bijection with controlled graph, that is a bijection $t: D\rightarrow R$ between subsets $D,R\subset X$, such $\sup_{x\in D} d(x,t(x))<\infty$. \\ 
 
 It is proven in \cite{roe2014ghostbusting} that property Yu's (A) (see \cite{nowak2008property} for a survey) is equivalent to $I_G\cong \mathfrak K(l^2X)$. So in that case, we get
 \begin{cor}
@@ -945,10 +947,35 @@ The first thing to realize is that $ker(\Delta_{ij})=\Lambda_{ij}$. The spectral
 \[\bigoplus_{ij} H_i \otimes K_j = \bigoplus_{ij} \Lambda_{ij} \oplus \Lambda_{ij}^{\perp}, \]
 so that by continous functional calculus $p \in C_r^*(G)$. Decompose $p =(p_{ij})$, then $p_{ij}$ is nonzero iff $\Lambda_{ij}$ is nonzero iff there is an nonzero intertwiner $K_j \rightarrow H_i$. $H_i$ being finite dimensional and $K_j$ being irreducible, that can only happen for finitely many $j$ so that $p_i =(p_{ij})_j$ is finitely supported in $j$ and the second claims follow. 
 
-
 %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%
 \newpage
+
+\section{Topics class in Analysis}
+
+\subsection*{Title: Large scale geometry and operator algebras}
+\textit{Spring 2020, Cl\'ement Dell'Aiera}
+\subsection*{Description} 
+Large scale geometry studies geometric properties of a metric space that emerge when you look at it from far away. The motivation behind this course is the use of this idea in operator algebras and index theory. More precisely, we will construct \textit{exotic} operator algebras using the geometry at infinity of discrete groups. The main goal is to study some non exact sequences of $C^*$-algebras, which are of importance in Noncommutative Geometry and are related to the Novikov conjecture, an important problem in Algebraic Topology.
+
+\subsection*{Organization of the class}
+The first part of the class will focus on finitely generated groups and their large scale geometry. We will introduce Cayley graphs and box spaces, two type of metric spaces associated to groups. We will cover a lot of examples, and discuss expanders (with maybe Margulis' proof of their existence).\\
+
+The second part of the class will be devoted to building operator algebras associated to these objects. We will introduce $*$-algebras and their completions, with a gentle reminder on every notion. Metric amenabilty and its relationship to approximation properties of the so-called Roe algebra will be studied. We will introduce exact sequences of $C^*$-algebra and define a particular sequence associated to the uniform Roe algebra of a metric space, and its localization at infinity.\\
+
+If time allows, we will end by a informal introduction to the problems in algebraic topology that these allow to solve.  
+
+\subsection*{Prerequisites}
+
+Knowing what are groups, rings, vector spaces, topological spaces and matrices. We will provide a reminder on all the notions that need to be covered, and no prior knowledge is assumed in functional analysis, algebraic topology or noncommutative geometry.
+
+\subsection*{Looking at things from far away}
+
+What is the chronology of ideas concerning looking at infinity? Maybe it starts with projective geometry: embedding the affine plane $\mathbb A^n$ into the projective space $\mathbb P^n$. You also have the Gromov boundary of a hyperbolic group $\overline \Gamma = \Gamma \cup \partial \Gamma$. This idea generalizes to CAT(0) spaces (see Bridson-Haefliger). Formalization gives you the notion of compactification: a compact topological space $\overline X$ containing $X$ as an open dense subset. The boundary $\partial X$ is then the complement of $X$ in $\overline X$. Of course, the compactification will always have more structure. Typically, $X$ comes with a group of automorphisms which extends to homeomorphisms on the boundary: in projective space, any affine map induces a homography, and a quasi-isometry extends to an homeomorphism of the Gromov boundary of a hyperbolic group. The biggest compactification is the Stone-\v{C}ech compactification, a totally disconnected space whose points are ultrafilters. This time, the ``group" of automorphisms is only a semigroup, that of \textit{partial translations}, which extends to a pseudogroup of partial homeomorphisms acting on the compactification.   
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+\newpage
+
 \section{Mayer-Vietoris}
 
 \section{Quantum groups}
