@@ -950,6 +950,42 @@ so that by continous functional calculus $p \in C_r^*(G)$. Decompose $p =(p_{ij}
 
 Let $A\subset B(H)$ be a $C^\ast$-algebra.
 
+\section{Coarse decompositions for groupoids, stability of the Baum-Connes conjecture}
+
+Let us define the localization algebra for groupoids.\\
+
+Let $G$ be a locally compact \'etale groupoid with base space $G^0$, and $C_c(G)$ its $*$-algebra of complex compactly supported continuous functions.\\
+
+Let $K\subset G$ be a compact subset of $G$. Recall the definition of the Rips complex $P_K(G)$. Blablabla. It is a $G$-$CW$-complex, locally finite,...\\
+
+Let $Z$ be a $G$-space and $E$ be a Hilbert $G$-module equipped with a non-degenerate $G$-equivariant representation $\phi: C_0(G^0)\rightarrow \mathcal L(E)$. For $K\in \mathcal E_G$, let $A_K$ be the self-adjoint subspace of $G$-invariant operators $T\in \mathcal L(E)$ with $prop(T)\subset K$ and $[T,f]\in \mathfrak K(E)$.\\
+ 
+Define $J_K$ to be the ideal
+\[J_K = \{ T\in A_K | \forall f\in C_0(Z), \ Tf \in \mathfrak K(E)\}. \]
+
+\begin{definition}
+The Roe algebra $C^*_G(Z,E)$ is defined to be the completion of $\cup_{K\in \mathcal E_G} J_K$ in the operator norm of $\mathcal L(E)$, and the \textit{localization algebra} $C^*_L(Z,E)$ is the completion of 
+\[\{a: [0,\infty ) \rightarrow \mathbb C[Z,E] | a(t)\in J_{K_t} \text{ s.t. } \cap K_t \subset G^0\}\]
+under the norm
+\[\|a\|_L = \sup_{t\in [0,\infty)} \| a(t)\|_{C^*(Z,E)}.\] 
+\end{definition}
+ 
+Prove that when $Z$ is a free proper space, the localization map is equivalent to the Baum-Connes assembly map.\\
+
+Recall the definition of absorbing representations. Let $A$ a $G$-algebra and $\phi: A\rightarrow \mathcal L_B(H)$ a faithful representation of $A$ on a $B$-$G$-Hilbert module, considered as an inclusion $A\subset \mathcal L_B(H)$. Then $\phi$ is called \textit{absorbing} if for every Hilbert $G$-$B$-module $K$ and representation $\sigma: A\rightarrow \mathcal L_B(K)$, there exists a sequence of $G$-invariant isometries $v_n : K\rightarrow H$ such that $v_n^* a v_n - \sigma (a)\in \mathfrak K(K)$ and $\lim \|v_n^* a v_n - \sigma (a) \| = 0$, $\forall a\in A$.\\
+
+If $H$ is absorbing, 
+\[RK_*^G(Z,B) \cong K_{*+1}(Q^*_G(Z,H)).\]
+
+\section{Non-proper actions, restriction principle and the Baum-Connes conjecture}
+
+A motivating example.\\
+
+Let $\Gamma = SL(2, \Z)$ acting on the hyperbolic plane with all rational points added at infinity, $\mathbb H \cup \mathbb Q$. The stabilizer of any of the infinite points is $\Lambda \cong \Z$. If $X$ denotes the Cayley graph of $\Gamma$, with a new vertex added for each of these rational points $q$, and an edge connecting $q$ to any element in $\Gamma_q$, then $X$ is quasi-isometric to the subspace of the boundary points, which is the Farey graph, qi to a tree. We thus can use Oyono-Oyono's theorem to conclude that $\Gamma$ acts on a tree with amenable stabilizers, hence satisfies the Baum-Connes conjecture.\\
+
+The question is to see how far we can push that technique, here deducing the conjecture for $SL(2,\Z)$ from $\Z$.\\
+
+Let $\Gamma$ acting on a real Hilbert space $H$ by affine isometries. There are two ways for the action to fail to be proper: having huge stabilizers, or having a bad orbit. We will focus on the first case. Suppose that every orbit $X_v= \Gamma \cdot v$ is proper and that the family $\{X_v\}_v$ uniformly coarsely embeds into a Hilbert space. Can we deduce the Baum-Connes conjecture for $\Gamma$? 
 
 %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%

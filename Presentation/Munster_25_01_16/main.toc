@@ -59,14 +59,16 @@
 \contentsline {subsection}{\numberline {2.10.3}Visit to Texas A\&M, February 12th to 14th 2019, and University of Houston February 15th}{76}{subsection.2.10.3}
 \contentsline {subsection}{\numberline {2.10.4}Visit to SCMS (Fudan University, Shanghai), 21 July to 15 August 2019}{81}{subsection.2.10.4}
 \contentsline {subsection}{\numberline {2.10.5}Visit to Texas (A\&M and University of Houston), September 30 to October 5 August 2019}{86}{subsection.2.10.5}
-\contentsline {section}{\numberline {2.11}Topics class in Analysis}{91}{section.2.11}
-\contentsline {section}{\numberline {2.12}Mayer-Vietoris}{93}{section.2.12}
-\contentsline {section}{\numberline {2.13}Quantum groups}{93}{section.2.13}
-\contentsline {section}{\numberline {2.14}Property T}{93}{section.2.14}
-\contentsline {section}{\numberline {2.15}Number theory}{93}{section.2.15}
-\contentsline {section}{\numberline {2.16}Fock spaces, CuntzKrieger algebras, and second quantization}{93}{section.2.16}
-\contentsline {section}{\numberline {2.17}Representations of groupoids}{94}{section.2.17}
-\contentsline {section}{\numberline {2.18}Grothendieck and tensor products, the origin of nuclearity}{97}{section.2.18}
+\contentsline {section}{\numberline {2.11}Coarse decompositions for groupoids, stability of the Baum-Connes conjecture}{90}{section.2.11}
+\contentsline {section}{\numberline {2.12}Non-proper actions, restriction principle and the Baum-Connes conjecture}{91}{section.2.12}
+\contentsline {section}{\numberline {2.13}Topics class in Analysis}{92}{section.2.13}
+\contentsline {section}{\numberline {2.14}Mayer-Vietoris}{94}{section.2.14}
+\contentsline {section}{\numberline {2.15}Quantum groups}{94}{section.2.15}
+\contentsline {section}{\numberline {2.16}Property T}{94}{section.2.16}
+\contentsline {section}{\numberline {2.17}Number theory}{94}{section.2.17}
+\contentsline {section}{\numberline {2.18}Fock spaces, CuntzKrieger algebras, and second quantization}{94}{section.2.18}
+\contentsline {section}{\numberline {2.19}Representations of groupoids}{95}{section.2.19}
+\contentsline {section}{\numberline {2.20}Grothendieck and tensor products, the origin of nuclearity}{98}{section.2.20}
 \contentsline {chapter}{\numberline {3}Old notes}{99}{chapter.3}
 \contentsline {section}{\numberline {3.1}Simple examples for Baum-Connes for groupoids}{100}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Non commutative tori}{100}{subsection.3.1.1}
