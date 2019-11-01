@@ -53,34 +53,35 @@
 \contentsline {section}{\numberline {2.7}Coarse geometry \& dynamics}{73}{section.2.7}
 \contentsline {section}{\numberline {2.8}Langlands}{73}{section.2.8}
 \contentsline {section}{\numberline {2.9}Haagerup property, cocycles and the mapping class group}{73}{section.2.9}
-\contentsline {section}{\numberline {2.10}Hawaii}{74}{section.2.10}
-\contentsline {subsection}{\numberline {2.10.1}HLS groupoids}{74}{subsection.2.10.1}
-\contentsline {subsection}{\numberline {2.10.2}Visit to PennState, September 18th to 21st 2018}{75}{subsection.2.10.2}
-\contentsline {subsection}{\numberline {2.10.3}Visit to Texas A\&M, February 12th to 14th 2019, and University of Houston February 15th}{76}{subsection.2.10.3}
-\contentsline {subsection}{\numberline {2.10.4}Visit to SCMS (Fudan University, Shanghai), 21 July to 15 August 2019}{81}{subsection.2.10.4}
-\contentsline {subsection}{\numberline {2.10.5}Visit to Texas (A\&M and University of Houston), September 30 to October 5 August 2019}{86}{subsection.2.10.5}
-\contentsline {section}{\numberline {2.11}Coarse decompositions for groupoids, stability of the Baum-Connes conjecture}{90}{section.2.11}
-\contentsline {section}{\numberline {2.12}Non-proper actions, restriction principle and the Baum-Connes conjecture}{91}{section.2.12}
-\contentsline {section}{\numberline {2.13}Topics class in Analysis}{92}{section.2.13}
-\contentsline {section}{\numberline {2.14}Mayer-Vietoris}{94}{section.2.14}
-\contentsline {section}{\numberline {2.15}Quantum groups}{94}{section.2.15}
-\contentsline {section}{\numberline {2.16}Property T}{94}{section.2.16}
-\contentsline {section}{\numberline {2.17}Number theory}{94}{section.2.17}
-\contentsline {section}{\numberline {2.18}Fock spaces, CuntzKrieger algebras, and second quantization}{94}{section.2.18}
-\contentsline {section}{\numberline {2.19}Representations of groupoids}{95}{section.2.19}
-\contentsline {section}{\numberline {2.20}Grothendieck and tensor products, the origin of nuclearity}{98}{section.2.20}
-\contentsline {chapter}{\numberline {3}Old notes}{99}{chapter.3}
-\contentsline {section}{\numberline {3.1}Simple examples for Baum-Connes for groupoids}{100}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Non commutative tori}{100}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Principal bundle over $U(2)$}{101}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Foliations}{101}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}An example from physics}{101}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Parabolic induction and Hilbert modules}{102}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}In $SL(2,\mathbb R)$}{102}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}Universal Coefficient Theorem}{104}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Other questions}{104}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Funky questions, ideas of talks}{106}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Expanders}{106}{subsection.3.4.1}
-\contentsline {subsubsection}{Plan of the talk}{106}{section*.34}
-\contentsline {subsubsection}{Questions}{106}{section*.35}
-\contentsline {subsection}{\numberline {3.4.2}Ideas of funky talks}{106}{subsection.3.4.2}
+\contentsline {section}{\numberline {2.10}Representations of groupoids}{74}{section.2.10}
+\contentsline {section}{\numberline {2.11}Grothendieck and tensor products, the origin of nuclearity}{77}{section.2.11}
+\contentsline {chapter}{\numberline {3}Research projects}{79}{chapter.3}
+\contentsline {section}{\numberline {3.1}Hawaii}{80}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}HLS groupoids}{80}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Visit to PennState, September 18th to 21st 2018}{81}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Visit to Texas A\&M, February 12th to 14th 2019, and University of Houston February 15th}{82}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Visit to SCMS (Fudan University, Shanghai), 21 July to 15 August 2019}{87}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Visit to Texas (A\&M and University of Houston), September 30 to October 5 August 2019}{92}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}Coarse decompositions for groupoids, stability of the Baum-Connes conjecture}{98}{section.3.2}
+\contentsline {section}{\numberline {3.3}Non-proper actions, restriction principle and the Baum-Connes conjecture}{98}{section.3.3}
+\contentsline {section}{\numberline {3.4}Topics class in Analysis}{100}{section.3.4}
+\contentsline {section}{\numberline {3.5}Mayer-Vietoris}{102}{section.3.5}
+\contentsline {section}{\numberline {3.6}Quantum groups}{102}{section.3.6}
+\contentsline {section}{\numberline {3.7}Property T}{102}{section.3.7}
+\contentsline {section}{\numberline {3.8}Number theory}{102}{section.3.8}
+\contentsline {section}{\numberline {3.9}Fock spaces, CuntzKrieger algebras, and second quantization}{102}{section.3.9}
+\contentsline {chapter}{\numberline {4}Old notes}{103}{chapter.4}
+\contentsline {section}{\numberline {4.1}Simple examples for Baum-Connes for groupoids}{104}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Non commutative tori}{104}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Principal bundle over $U(2)$}{105}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Foliations}{105}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}An example from physics}{105}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Parabolic induction and Hilbert modules}{106}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}In $SL(2,\mathbb R)$}{106}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Universal Coefficient Theorem}{108}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Other questions}{108}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Funky questions, ideas of talks}{110}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Expanders}{110}{subsection.4.4.1}
+\contentsline {subsubsection}{Plan of the talk}{110}{section*.34}
+\contentsline {subsubsection}{Questions}{110}{section*.35}
+\contentsline {subsection}{\numberline {4.4.2}Ideas of funky talks}{110}{subsection.4.4.2}

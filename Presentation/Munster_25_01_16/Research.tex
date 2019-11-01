@@ -1,0 +1,589 @@
+%%%%%%%%%%%%%%%%%%%%%
+\section{Hawaii}
+%%%%%%%%%%%%%%%%%%%%
+
+\subsection{HLS groupoids}
+
+Let $(\Gamma,\mathcal N)$ be an \textit{approximated group} and $G_{\mathcal N}$ its associated HLS groupoid. Then:
+
+\begin{itemize}
+\item[$\bullet$] $G_{\mathcal N}$ is amenable iff $\Gamma$ is amenable,\\
+
+\item[$\bullet$] if $G_{\mathcal N}$ is a-T-menable, then $\Gamma$ is a-T-menable. The converse doesn't hold: in \cite{HLS}, the authors construct an approximated pair $(\mathbb F_2, \mathbb N)$ such that the assembly map $\mu_{G_{\mathcal N},r }$ is not surjective, even if $\mathbb F_2$ is a-t-menable. \\
+
+\item[$\bullet$] $G_{\mathcal N}$ has T iff $\Gamma$ has T,\\
+
+\item[$\bullet$] the algebraic exact sequence
+\[\begin{tikzcd}0 \arrow{r} & \bigoplus_n \C[\Gamma_n] \arrow{r} & C_c(G_{\mathcal N})\arrow{r} &  \C [\Gamma]\arrow{r} & 0 \end{tikzcd}\]
+extends to 
+\[\begin{tikzcd}0 \arrow{r} & \bigoplus_n C^*_{r}(\Gamma_n) \arrow{r} & C^*_r(G_{\mathcal N})\arrow{r} &  C^*_{r,\infty}(\Gamma)\arrow{r} & 0 \end{tikzcd},\]
+where the right side algebra is the completion of $\C[\Gamma]$ w.r.t. the norm 
+\[ ||x||_{r,\infty} = \sup \{ ||y ||_r : q(y)=x\} \quad \forall x \in \C [\Gamma].\]
+This is not an exotic crossed product functor, but one can still define an assembly map $\mu_{\Gamma, r, \infty}$ as the composition of $\mu_{\Gamma,max}$ with the induced at the level of $K$-theory of the quotient map $C_{max}^*(\Gamma) \rightarrow C_{r,\infty}^*(\Gamma) $. This exact sequence and the one induced by the decomposition of $G^0 = \overline \N$ is $\N$ and $\infty$ intertwines the assembly maps so that the next point follows:\\
+
+\item[$\bullet$] $G_{\mathcal N}$ satisfies BC iff $\Gamma$ satifies BC for $\mu_{\Gamma,r,\infty}$.\\
+
+\item[$\bullet$] If $\Gamma$ has T, then if $\mu_\Gamma$ is injective (which is the case for all closed subgroups of connected Lie groups), then $\mu_{\mathcal G_{\mathcal N}}$ fails to be surjective.\\
+
+\item[$\bullet$] \textbf{Congruence subgroup property.} If $\Gamma$ has c.s.p. , then the assembly map fails to be surjective for any HLS groupoid $G_{\mathcal N}(\Gamma)$. If one can find such a groupoid which is a-T-menable for $SO(n,1)$, then this would imply Serre's c.s.p. conjecture: Any lattice in $SO(n,1)$ does not have c.s.p.\\
+\end{itemize}
+
+A useful fact from \cite{HLS}: 
+\[\begin{tikzcd}0 \arrow{r} & J \arrow{r}{\alpha} & A \arrow{r}{\beta} &  B \arrow{r} & 0 \end{tikzcd}\]
+is exact implies that the cone $C_\gamma$ of the natural inclusion $\gamma : J \rightarrow C_\beta$ has vanishin K-groups: \[K_*(C_\gamma) = 0.\]
+
+\subsection{Visit to PennState, September 18th to 21st 2018}
+
+Michael Francis:
+
+\begin{itemize}
+\item[$\bullet$] Dixmier-Malliavin theorem: for every Lie group $G$,
+\[ C_c^\infty(G) \ast C_c^\infty(G) = C_c^\infty(G). \]
+The idea is to decompose, in the real case, the Dirac mass at $0$ as a derivative of $\delta_0 =g^{(n)}$ for some $g\in C^{n-2}(\R)$, but this doesn't quite do the job, so that they show that there exists $g\in C_c^\infty(G)$ and $a_n$ going to $0$ as fast as needed so that 
+\[\delta_ 0 = \sum a_k g^{(k)}.\]
+The result follows from $f=f\ast \delta = (\sum (-1)^k a_k f^{(k)}) \ast g$. Michael extended this result to Lie groupoids.\\
+\item[$\bullet$] a remak of John Roe in his lectures on Coarse Geometry, that there exists a Svarc-Milnor theorem for foliations.\\
+\end{itemize}
+
+Sarah Browne:
+
+\begin{itemize}
+\item[$\bullet$] Advice to read a book Nate Brown gave her, \textit{Lifting solutions to perturbing problems in $C^*$-algebras}by Terry A. Loring (Fields Institute Monographs). In here canbefind te definition o semi projective $C^*$-algebras.
+\end{itemize}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Visit to Texas A\&M, February 12th to 14th 2019, and University of Houston February 15th}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection*{K\"{u}nneth formula, useless stability and extensions} 
+
+\begin{prop}
+If for every $r$, $X$ is $2$-decomposable w.r.t. a family of uniformly embeddable spaces (into Hilbert space), then $X$ is itself CEH. 
+\end{prop}
+
+This contradicts the (false) example I gave in the preprint with Christian of a group whose uniform Roe algebra satisfies the K\"{u}nneth formula. For this I used a split extension of two CEH groups, which is not itself CEH built by Arzhantseva and Tessera (\cite{arzhantseva2016admitting}). A misuse of the fibering theorem made me believe that this group was $2$-decomposable w.r.t. a uniformly CEH family. \\
+
+The main ingredients for this result are the following, and are all contained in a paper of Dadarlat and Guentner (see \cite{dadarlat2007uniform}). 
+
+\begin{proof}
+Let us fix some notation: $X$ is a discrete metric space, and $\mathcal U$ is a cover, by which we mean a collection of subset of $X$ whose union form $X$. We say that $\mathcal U$
+\begin{itemize}
+\item[$\bullet$] has Lebesgue number at least $L$ ($Leb(\mathcal U) \geq L$) if any ball of radius $L$ is completely contained in some $U\in \mathcal U$, 
+\item[$\bullet$] has $R$-multiplicity less than $k$ ($R-mult(\mathcal U) \geq R$) if any ball of radius $R$ interesect at most $k$ elements of $\mathcal U$. If ignored, $R$ is zero. 
+\item[$\bullet$] is $R$-separated if any two elements of $\mathcal U$ a at least $R$-apart,
+\item[$\bullet$] is $(k,R)$-separated if $\mathcal U$ admits a partition into $k+1$ families which are $R$-separated.
+\end{itemize}
+
+By a partition of unity $\phi$ subordinated to $\mathcal U$, we mean a collection of function $\{\phi_U\}_{U\in \mathcal U}$, each $\phi_U : X \rightarrow [0,1]$ being zero outside of $U$, and such that $\sum_U \phi_U(x) = 1$ for every $x\in X$. We say $Lip(\phi_U)\leq C$ is there exist $\delta >0$ such that if $d(x,y)<\delta$, $|f(x)-f(y)|< C$. And $Lip_{l^1(\mathcal U)}(\phi)< C$ if there exists $\delta$ such that if $d(x,y)< \delta$, $\| \phi(x)- \phi(y) \|_{l^1(\mathcal U)} =\sum_U |\phi_U(x)-\phi_U(y)| < C$.
+\begin{enumerate}
+\item if $\mathcal U$ is a cover of $X$ with $Leb(\mathcal U) \geq L$ and $mult(\mathcal U)\leq k$ then
+\[\phi_U (x) = \frac{d(x,X -U)}{\sum_{V\in \mathcal U} d(x,X -V)}\]
+defines a PDU such that 
+\[Lip(\phi_U)\leq \frac{2k+3}{L} \text{ and }Lip_{l^1(\mathcal U)} \leq \frac{(2k+2)(2k+3)}{L}.\]
+\item if $\mathcal U$ is $(k,L)$-separated, then $mult(\mathcal U) \leq k+1$; 
+\item if $\mathcal U$ is $(k,2R)$-separated, then $R-mult(\mathcal U) \leq k+1$;
+\item if $L-mult(\mathcal U)\leq k+1$, $Leb(\mathcal U_L)\geq L$;
+\item \textit{Summary:} If $\mathcal U$ is $(k,2L)$-separated, then $mult(\mathcal U_L)\leq k+1$ and $Leb(\mathcal U_L)\geq L $. Also $L-mult(\mathcal U )\leq k+1$. 
+\end{enumerate}
+
+Using \cite{dadarlat2007uniform}, thm 3.2, the result follows.\\
+\end{proof}
+ 
+Can we show that under suitable conditions, if $C^*_u|N|$ and $C^*_u|H|$ satisfy the K\"{u}nneth formula, then so does $C^*_u|G|$?  \\
+
+\begin{prop}
+Let $N$ be a coarsely embeddable discrete group, $H$ a discrete group with Haagerup's property and $G = N\rtimes H$ be a semi-direct product. Then the uniform Roe algebra $C^*_u(G)$ satisfies the K\"unneth formula. In particular, there exists a group which is not coarsely embeddable and satisfies the result. 
+\end{prop}
+
+\begin{proof}
+By classical properties of semi-direct products (see \cite{williams2007crossed}, prop. 3.11),
+\[C^*_u(G)  \cong (l^\infty(G)\rtimes_r N)\rtimes_r H.\]
+The first projection $N\rtimes H\rightarrow N$ induces a proper surjective $N$-equivariant map 
+\[\beta ( N\rtimes H ) \twoheadrightarrow \beta N,\] 
+inducing a proper surjective groupoid morphism  
+\[\beta ( N\rtimes H )\rtimes N \twoheadrightarrow \beta N \rtimes N.\] 
+Now, by a construction similar to the proof of theorem 7.1, the ample groupoid \[\beta(N\rtimes H) \rtimes N,\] where the action of $N$ on $H$ is trivial, is an inductive limit $Y_i\rtimes N$ of a-T-menable second-countable ample groupoids, so that its reduced $C^*$-algebra $A=l^\infty(N\times H)\rtimes_r N$ satisfies the K\"unneth formula. Now if $H$ has Haagerup's property, it satisfies the Baum-Connes conjecture with coefficients so that we can apply the Going-Down principle: 
+\[A\rtimes_r H \cong C^*_u(G)\] satisfies the K\"unneth formula. \\%(Is it true that $A\in \mathcal N$ and $K$ compact implies $A\rtimes_r K \in \mathcal N$? NO)\\
+
+Indeed, one has to show that $A_{|K}\rtimes_r K$ satisfies the K\"unneth formula for every finite subgroup $K$ of $H$. In that case,
+\[A_{|K}\rtimes_r K \cong (l^\infty(N\times H)\rtimes_r N)\rtimes F.\]
+$K$ being a finite group, the action map $(\beta ( N\rtimes H )\rtimes N)\rtimes K \rightarrow \beta (N\rtimes H ) \rtimes N$ is proper. Any proper negative type function on $\beta N \rtimes N$ can then be pulled back to $(\beta ( N\rtimes H )\rtimes N)\rtimes K$, which is thus a-T-menable.\\ 
+
+Taking the example of \cite{arzhantseva2016admitting} we get an example of a group which does not coarsely embed, such that its uniform Roe algebra satisfies the K\"unneth formula.\\
+\end{proof}
+
+Another interesting question was the following. The rule that associate to a coarse space $X$ its coarse groupoid is a functor, where the domain category is the one of coarse spaces and coarse maps, and the target category is the one of groupoid and generalized morphisms.\\
+
+Does any generalized morphism between coarse groupoids arises from a coarse map?\\
+
+The answer should be no. Take an extension of groups
+\[1 \rightarrow H \rightarrow G \rightarrow C \rightarrow 1,\]
+maybe split. Then the quotient arrow should give a generalized morphism between the coarse groupoids, but it is not a coarse map as soon as $H$ is unbounded.\\
+
+Let $\phi: G\rightarrow H$ be a group homomorphism (they are discrete). It induces $l^\infty(H)\rightarrow l^\infty(G)$ and a continuous map $\beta \phi: \beta G\rightarrow \beta H $, which is $G$-equivariant (the action of $G$ on $H$ being given by composition by $\phi $ and multiplication). This gives a strict groupoid morphism 
+\[\beta G\rtimes G \rightarrow \beta H \rtimes H\]
+(Take $(x,g) \mapsto (\beta \phi(x),\phi(g)$). If $\phi$ is surjective, this map is surjective.\\
+%\newpage
+%%%%%%%%%%%%
+\subsubsection*{Wreath product and counterexample} In \cite{WillettYuGromov}, thm 8.3, Willett and Yu constructed a counterexample for the Baum-Connes conjecture \textit{with coefficients}. Let $G$ be a group whose Cayley graph contains an expander $X$. $G$ does not act on $X$, but we can enlarge $X$ and set 
+\[N_\infty (X) = \cup_{R>0} N_R(X),\]
+so that $G$ acts on $N_\infty(X)$ and on 
+\[A= l^\infty(N_\infty (X)) = \overline{\cup_{R>0}l^\infty(N_R(X))}.\]
+Then the Baum-Connes assembly map for $G$ with coefficients in $A$ fails to be surjective.\\
+
+Now can we force this $C^*$-algebraic coefficients into a group so as to build a counterexample for Baum-Connes without coefficients? For instance, take the unrestricted wreath product 
+\[\Gamma=\Z_2 \wr_X G = \prod_{X} \Z_2 \rtimes G.\]
+One sees that the reduced $C^*$-algebra $C_r^*(\Gamma)$ should really look like $A\rtimes_r G$. Indeed, $N =\prod_X \Z_2$ is normal abelian in $\Gamma$, so that $C_r^*(\Gamma) \cong C^*_r(N)\rtimes_r G \cong C(\hat N)\rtimes_r G$.  
+
+%%%%%%%%%%%%%
+\subsubsection*{Matui's conjecture}
+
+Matui's conjecture states that 
+\[K_i (C_r^*(G)) \cong \bigoplus_k H^{2k+i}(G)\]
+for every second countable \'etale essentially principal minimal groupoid with base space homeomorphic to a Cantor space. See \cite{MatuiSurvey} for a survey, by Matui himself.\\
+
+Basically, there are two directions that one can take: proving it, for instance for groupoids with FAD, of even for groupoids satisfying the Baum-Connes conjecture? on the other direction: try to find a counterexample.\\
+
+A counterexample was given by Scarparo in \cite{scarparo2018homology}. The groupoid is obtained as $G=\Omega \rtimes \Gamma$, where $\Gamma$ is the infinite dihedral group $\Z\rtimes \Z_2$ and the action is given by shift on $\varinjlim \Gamma/ \Gamma_i$, $\Gamma_j = n_j \Z \rtimes \Z$. Is it FAD? A-T-menable?\\
+
+Pick a strictly increasing sequence of integers $(n_i)$ such that $n_i | n_{i+1}$ and look at the following box-space
+\[X = \coprod_{i\geq 1} | \Z_{n_i}|,\]
+which has property A.\\
+
+Does Matui's conjecture hold for the coarse groupoid $G(X)$?\\ 
+
+Recall that $C^*_r(G) \cong C_u^*(X)$ and let us compute its $K$-theory. \\
+
+Here are some ideas on how to do it. $K_0$ is big. Show that 
+\[K_1(C^*_u(X)) \cong \{ (k_j)_{j\in \Z} \ |\ k \text{ is bounded } \} /  \{ k=(k_j)_{j\in \Z} \ |\ \lim_j k =0 \}.\]
+\begin{itemize}
+\item[$\bullet$] Let $u_j\in M_{n_j}$ be the shift on $\Z_{n_i}$. Then any unitary in $U_N(C^*_u(X))$ is stably homotopic to a product $(u_j^{k_j})_j$.
+\item[$\bullet$] Such a product is not trivial in $K$-theory. To show that a unitary is not trivial in $K_1$, one can for instance compute the trace of 
+\[D(u)u^{-1}\]
+where $D$ is a derivation. For instance $D(u)= [N,u]$ where $N$ is the propagation operator (multiplication by the length).\\
+Remark: if $D$ is the derivation on the circle, then $\int D(u)u^{-1}$ is the winding number.  
+\item[$\bullet$] Take the exact sequence associated to the decompostion $\beta X = X \cup \partial \beta X$, which because $X$ has property A (ghost operators are compact) is
+\[0\rightarrow \mathfrak K \rightarrow C_u^*(X) \rightarrow l^{\infty}(X)/c_{0}(X) \rtimes_r \Z \rightarrow 0\]
+then Pimsner-Voiculescu should conclude. 
+\item[$\bullet$] Mayer-Vietoris argument: $X$ splits into two copies of $U$, coarse unions of lines of length $\frac{n_j}{2}$, with intersection $W$ the coarse union of two-points spaces that are further and further apart, so that the $K$-theory is 
+\[K(C^*_u(\coprod_{n\geq N} W_n)) \cong K(l^\infty \N).\]
+Compute $K(C_u^*U)$.
+\end{itemize} 
+
+To compute the homology, first read \cite{MatuiSurvey}. Also, if $X$ is a box-space, $G(X)_{|\partial \beta X}= \partial \beta X \rtimes \Gamma$. We can use the Mayer-Vietoris exact sequence to compute $H(G(X))$ from $H(X\times X)$ and $H(\partial \beta X \rtimes \Gamma)\cong H(\Gamma, C(\partial\beta X))$. To compute the latter, start with a projective resolution of $\Z [\Gamma]$: 
+\[\begin{tikzcd} 0 \arrow{r} & \Z [\Gamma] \arrow{r}{\partial} & \Z [\Gamma] \arrow{r}{\epsilon} & \Z \arrow{r} & 0 \end{tikzcd}\]
+and tensor it by $C(\partial \beta X)$. The homology of this complex is $H(\Gamma, C(\partial\beta X))$.\\
+
+Christian and Jamie did the following to build a map from Matui's homology to the $K$-theory groups of $G$. They use Putnam's paper \cite{putnam1997excision}.
+\[\begin{tikzcd}
+0\arrow{r} 	&	H_1(G) 		\arrow{r}\arrow{d}	&	\arrow{r}\arrow{d}	&		\arrow{r}\arrow{d}	& H_0(G) \arrow{d} \\
+0\arrow{r}	&	K_1(C^*_r(G))	\arrow{r} 		&	K_0(C_\iota) \arrow{r}  & K_0(C_0(G^0))	\arrow{r}{\iota} 	& K_0(C^*_r(G))
+\end{tikzcd}\]
+
+On our part, we tried to understand how to build a Chern like map. Here are some questions:
+\begin{itemize}
+\item[$\bullet$] Can Matui's homology be computed as a inductive limit $H_*(G)= \varinjlim_E H_*(P_E(G)$ on the Rips complexes of some topological homology theory? The motivating example is that the coarse homology of a coarse space $X$ is obtained as $HX_*(X)=\varinjlim H_*(P_d(X))$. 
+\item[$\bullet$] Show that if $G$ si $d$-BLR (see \cite{}), then $H_n(G)=0$ for $n>d$. 
+\end{itemize}
+\subsubsection*{Failure of $K$-exactness}
+
+Show that if $X$ is an expander, then $C^*_u(X)$ is not $K$-exact.
+
+\subsubsection*{Automata groups and exotic construction}
+
+Can one use automata groups to build an example of a discrete group which has A but is not FDC?\\
+
+Andrzej Zuk build a example of an amenable automata group which is not elementary amenable. The idea of FDC is that it should be the "elementary property A" groups.
+
+\newpage
+%%%%%%%%%%%%%%%%%
+\subsection{Visit to SCMS (Fudan University, Shanghai), 21 July to 15 August 2019}
+%%%%%%%%%%%%%%%%%%
+
+\subsubsection*{The $C^*$-algebra associated to a Hilbert-Hadamard space}
+
+The best hope for computing the operator $K$-theory of crossed-product $C^*$-algebras is generally to establish the Baum-Connes conjecture. In that case, for a nice group (more generally a nice enough groupoid) $G$ and a $C^*$-algebra on which $G$ acts by automorphisms, the $K$-theory groups $K_*(A\rtimes_r G)$ is isomorphic to Kasparov's $K$-homology $RK_*^G(\underline E G, A)$. The first argument of the latter is the so called \textit{classifying space for proper actions} of $G$, a locally finite (nope) CW-complex. Classical computational methods allow in principle to compute the $K$-homology of such a space.  Still, in order to actually carry these computations, one should also have a concrete model for $\underline EG$, which is not an easy task.\\
+
+The Baum-Connes conjecture has been proven for a very large class of groups, including almost connected locally compact Hausdorff groups, a-T-menable groups, and hyperbolic groups. The main idea behind the vast majority of these proofs is the \textit{Dirac-Dual-Dirac} method:
+\begin{itemize}
+\item[$\bullet$] Find a (possibly infinite dimensional) space $M$ endowed with an action of $G$,
+\item[$\bullet$] Build a $C^*$-algebra $A(M)$ from $M$ such that $G$-acts on it,
+\item[$\bullet$] Prove that $A(M)$ is $KK^G$-equivalent to $\C$.
+\end{itemize}
+
+The last step implies the conjecture by nonsensical diagram chase and natural properties of the assembly map. The first appearance of this method was in a paper of Kasparov where the Novikov conjecture is proven for groups acting properly by isometries on non-positively curved spaces. The peak of its career was nonetheless attained in the celebrated work of Higson-Kasparov for a-T-menalble groups. In the first case, the space $M$ is the non-positively curved manifold acted upon by $G$ whereas in the a-T-menable case, it is a Hilbert space on which $G$ has an isometric metrically proper action.\\
+
+The presentation of the algebra $A(H)$ is done by inductive limits on the finite dimensional spaces of the Hilbert space, and is quite cumbersome. In their recent paper, Gong, Wu and Yu give an alternative construction for $A(M)$, which avoids inductive limits in the infinite dimensional case, and has the flexibility of applying to a infinite diemsnional version of non-positively curved spaces that the authors call \textit{Hilbert-Hadamard spaces}.
+
+\begin{definition}
+A Hilbert-Hadamard space $(M,d)$ is a metric space which is CAT(0) and such that each of its tangent cone embeds isometrically in a Hilbert space. 
+\end{definition}
+
+The last condition is equivalent, by Schoenberg's theorem, to the metric of the tangent cone to be a negative definite kernel. Any Hadamard manifold or Hilbert space is of course a Hilbert-Hadamard space. The prototypical example will be the space of square integrable loops of a Hadamard manifold $M$, i.e. $L^2(\mathbb S^1, w, M)$. \\
+
+Let us first recall the construction of $A(M)$.\\
+
+Let $(X,d)$ be a Hilbert-Hadamard space. We will denote by $\R_t$ the real vector space $\R$ for positive $t$, $0$ otherwise. Let $T= X\times \R_+$, and for each $(x,t)\in T$, let $C_{x,t}$ be the Clifford algebra associated to the real vector space $T_x X \oplus \R_t$ endowed with the nondegenerate bilinear symmetric form $q(u_x,v)= \|u_x\|_x^2+ v^2$, and form the infinite %$C^*$ I think you don't need the norm in the definition of continuous field of C*algebras>>>? 
+$*$-algebraic product 
+\[\mathcal A(X) = \prod_{(x,t)\in T} C_{x,t}.\]
+ For every $x_0\in X$, let $\sigma(x,t)$ be the image of the tangent vector $\dot\gamma(1)\in T_x X \oplus \R_t$ in $C_{x,t}$, where $\gamma$ is the unique geodesic $[0,1]\rightarrow X$ from $(x_0,0)$ to $(x,t)$. Any complex valued function $f\in C_0(\R) $ can be written uniquely as the sum of an even and odd functions, that is $f(s) = f_0(s^2)+sf_1(s^2)$. For $f\in C_0(\R)$ and $x_0\in X$, $a_{f,x_0}$ denotes the element $\mathcal A(X)$ given by 
+ \[ (x,t) \mapsto f_0(d(x,x_0)^2+t^2) +  f_1(d(x,x_0)^2+t^2) \sigma_{x_0}(x,t).\]
+Let $\Gamma_X$ be the complex subspace generated by $\{a_{f,x_0} \}_{f\in C_0(\R) , x_0\in X}$. Each $C_{x,t}$ acts by bounded operators on $\Lambda_\C (T_x X \oplus \R_t)$, and one can check that the $a_{f,x}$ are bounded sections of $\mathcal A(X)$, whereas the $\sigma_x$ are not. That is one of the reason for considering functional calculus.
+
+\begin{definition}
+The $C^*$-algebra $A(X)$ is obtained as the sections of the continuous field 
+\[(\mathcal A(X), \Gamma_X ).\]
+\end{definition}
+
+This presentation of $A(X)$ as the $C^*$-algebra associated to a continuous field gives a simple criterium to decide when two Hilbert-Hadamard spaces give isomorphic algebras (at least up to Morita equivalence). It will also allow us to compute its $K$-theory. For details on continuous fields of $C^*$-algebras, we refer to chapter 10 of Dixmier's book\cite{dixmier}.\\
+
+Suppose that there exist: 
+\begin{itemize}
+\item[(A)] an isometry $\phi: M \rightarrow N$ 
+\item[(B)] and invertible isometries (with isometric inverses) $u_m: T_m M \rightarrow T_{\phi(m)}N$ for every $m\in M$.
+\end{itemize} 
+The latter define $*$-isomorphisms $C_{m,t} \cong C_{\phi(m),t}$ and thus an ismorphism $u : \mathcal A(M)\rightarrow \mathcal A(N)$. Hence if $u(\Gamma_M)\subset \Gamma_N$, we have an ismorphism $A(M)\cong A(N)$. Note: a stronger condition would be  $u_m(\beta^M_{m_0}(m))= \beta^N_{\phi(m_0)}(\phi(m))$.\\ 
+
+We will see that can happen for:
+\begin{itemize}
+\item[$\bullet$] finite dimensional Riemanian manifolds with scalar curvature bounded below, only locally, but that should be enough for computing the $K$-theory;
+\item[$\bullet$] $L^2$ product of finite dimensional Hadamard manifold $M$, i.e. $L^2(N,w,M)$.
+\end{itemize}
+
+In the first case, the injectivity radius is uniformly bounded below, let us say by $\varepsilon$. We thus know that the exponential map gives a diffeomorphism when restricted to balls of radius $\varepsilon$ in $T_m M$. The details are given in the following example.\\ 
+
+Let $(M,g)$ be a finite dimensional Riemanian manifold, and let $\varepsilon>0$ such that $exp_m: T_m M \rightarrow M$ is a diffeomorphism when restricted to the ball centered at $0$ of radius $\varepsilon$. We have a local isomorphism of vector bundles
+\[T(T_m M)\rightarrow TM\]
+over the aformentioned ball, given by the linear isomorphism 
+\[Dexp_m : (v,w) \mapsto (exp_m(v) ,  D_{m'} exp_m (w))\] 
+for every $v\in B(0,\varepsilon)$ (here $m'= exp_m(v)$). Now the bounded linear operator $a_v :T_m M  \rightarrow T_m' M ; w \rightarrow D_{m'} exp_m (w-v)$ (composition of the derivative of the exponential with the identification $T_v V $ with $V$ given by translation) is inversible and thus we have an invertible isometry $u_v: T_m M \rightarrow T_{exp_m(v)}$ given by functional calculus (I know this is using a hammer to kill a fly, but I want something that works in infinite dimension)
+\[u_v = (a_v a_v^*)^{-\frac{1}{2}}a_v.\]
+In the finite dimensional case, this coincides with the parallel transport from $m$ to $m'$ along the unique geodesic joining them. The relation $u_v C_w (v) = - C_p(x)$ where $x=exp_m(v)$ and $p=exp_x(w)$ ensures that $u_v$ induces an isomorphism $u_v: C_m \rightarrow C_{exp_m(v)}$, $\forall v\in B(0,\varepsilon)$. All these isomorphisms are homotopic to $u_0 = Id$ by $s\mapsto u_{sv}$. \\
+
+Now proposition 10.1.13 in Dixmier's book \cite{dixmier} allow us to know how $A(M)$ looks like. Indeed, we have an open cover $(U_i,m_i)$ of $M$ with isomorphisms $\phi_i : A(T_{m_i}M) \rightarrow A(M)_{U_i}$ such that $g_{ij}= \phi_i^{-1} \phi_j$ satisfies $g_{ij}g_{jk} = g_{ik}$: $A(M)$ is isomorphisc to the sections of the conitnous field given by the cocycle $g=\{g_{ij}\}$. As each $A(T_{m_i}M) \cong C_0(U_i,Cliff_\C(T_{m_i}M ))$ has $K$-theory $\Z$, the $K$-theory of $A(M)$ is the $K$-theory of the bundle determined by the cocycle $g$.\\
+
+In the case of $X=L^2(N,\omega,M)$ with $M$ finite dimensional Hadamard, the same proof as in the finite dimensional case work: we can define the exponential map as the $L^2$-product of the exponential map on $M$. It satisfies the properties (A) and (B) follows form the fact that geodesics in $X$ are in correspondance with $L^2$-products of geodesics in $M$. Notice that in the finite dimensional case, $\mathcal A(M)\cong C_0(M,Cliff(M))$.\\
+
+The rest of the proof does not go through the infinite dimensional barrier. Indeed, the correct base space for $A(M)$ is the Gelfand spectrum of $A(M)_0$, which does not coincides with $M\times \R_+$ anymore. Proposition 1.10.13 of Dixmier's book applies in the case of a totally regular base space. Here I am confused, because any metric space is so, hence $M\times R_+$ should be, but maybe $A(M)$ is not a $C_0(M\times \R_+ )$-algebra, and that is the point. Another remark: in the finite dimensional case, it seems the unique geodesic property is not needed since the Jacobi vector fields generates locally the whole Clifford algebra. Thus we can just define localy the trivial Clifford bundle, and clutch it via a cocycle (which could not be a possibly non existing Clifford bundle in the case the cocyle is not trivial). The problem is that in the infinite dimensional case, the Clifford algebra is not a $C^*$-algebra anymore, and we do not have a nice descritpion, even locally, of what the sections $a_{f,x}$ generates.\\ 
+
+\textbf{Removing the non positive curvature assumption}\\
+
+Say that $X$ has a uniformly bounded injectivity radius $r$. As every ball of radius $r$ is uniquely geodesic, the vector field $\sigma_{x_0}(x,t)$ is still well defined when $d(x,x_0)<r$, and so is $a_{f,x_0}$ for $f\in C_0(\R)$ with $supp(f)\subset (-r,r)$. Denote the subspace of such functions by $S_r$ and $\Gamma_r$ to be the subspace of $\mathcal A(X)$ generated by $\{a_{f,x_0} \ | \ x_0\in X, f\in S_r \}$.
+
+\begin{definition}
+The $C^*$-algebra $A(X)_r$ is defined to be the sections of the continuous field $(\mathcal A(X), \Gamma_r)$.
+\end{definition}
+
+Questions:
+\begin{itemize}
+\item How changing $r$ affects the definition of $A(X)$?
+\item Compute $K(A(X))$ in the case of $L^2(\mathbb S^1, \mathbb S^1)$ and $L^2(\mathbb S^1, \mathbb R)$. 
+\end{itemize}
+
+The first question can be solved quickly in finite dimension. Here is a nice averaging argument. The normal vector to the sphere of radius $r$ can be obtained as the average of the family of vector fields parametrized by the sphere of radius $r-\varepsilon$, i.e. if $ n_{p,r}$ denotes the normal vector field to the sphere of center $p$ and radius $r$, denoted by $S(p,r)$,
+\[n_{x_0,r}(p) = \int_{ S(x_0, r-\varepsilon)} n_{x,\varepsilon} (p) d\sigma(x) \quad \forall p\in S(x_0 , r).\]
+This gives
+\[\beta_{x_0}(f) (p,t) =  \int_{ S(x_0, r-\varepsilon)} \beta_{x}(f^\tau) (p,t) d\sigma(x) \quad \forall p\in S(x_0 , r)\]
+where $f^\tau (s) = \frac{1}{\tau} f(\tau s)$ and $\tau= \frac{d(x_0 ,p)}{d(x,p)} = \frac{r}{\varepsilon}$. So if $f$ is supported in $(0,r)$, one can decompose it as a finite sum of continuous $f_i$ supported in small bands $(r_i , r_{i+1})$ of length less than $\epsilon$ and $f$ is in the closure of $A(X)_\epsilon$.\\
+
+In infinite dimension, the integral only converges weakly so I don't know if the argument can be extended. (Details: use $C_{x_0}= \tau C_x$.)\\
+
+\textbf{To do} \\
+
+Another description in term of $C_0(Z)$-algebras? Later. Also: is it a groupoid algebra with $G^0 = A(X)_0$? It could give insights in how to build interesting states on $A(M)$ when $M$ is infinite dimensional.\\
+
+Groupoid picture: $B=A(X)_0$ is maximal abelian and contains the unit of $A(M)$. The map defined by linear extension of $\beta_x(f)\mapsto \beta_x(f_0)$ is continuous, and so define a linear map $E: A(X)\rightarrow A(X)_0$ which is a conditional expectation, and it is faithful. The normaliser of $B$ in $A(X)$ is $A(X)_1$, and is generating so that $B$ is regular and $B$ is a Cartan subalgebra of $A(X)$.\\
+
+Let us determine what twisted groupoid $(G,\Sigma)$ model can be given to $A(X)_0 \subset A(X)$. $G$ is the trivial groupoid over the Gelfand spectrum of $A(X)_0$. This just means that there is no dynamic: we have a field of algebras, and nothing gets moved around.
+
+\subsection*{Random unrelated facts about groupoids}
+
+We will prove a lazy generalization of a result of Tikuisis and ... that the conditional expectation onto a Cartan algebra can in some case be obtained as an average over an abelian totally disconnected group. Their result applies to $l^\infty(X)$ in $C_u^*(X)$ for a bounded geometry discrete countable metric space $X$. We will do it for an \'etale groupoid (so the general case by a result of Renault).\\
+
+Let $G$ be an \'etale groupoid, with a second countable base space $G^0$. Let $\mathcal U$ be a (countable) Borel cover of $G^0$, and let $\mathbb G_{\mathcal U}= \prod_{\mathcal U} \Z / 2\Z$ endowed with the product topology. Such covers of $G^0$ form a directed system, and define $\mathbb G = \varinjlim \mathbb G_{\mathcal U}$. Now, $\mathbb G_{\mathcal U}$ can be realized as a subgroup of the unitary group of the GNS Hilbert space for $G$. Indeed, for $\varepsilon \in \mathbb G_{\mathcal U}$, denote 
+\[u = \sum_{U\in \mathcal U} (-1)^{\varepsilon_U} \chi_{U} \in U(L^2G).\]
+The product topology on $\mathbb G_{\mathcal U}$ coincides with the weak-$*$ topology on $U(L^2G)$, and as long as none of the Borel sets in $\mathcal U$ have empty interior, the representation is faithful. We thus identify $\mathbb G_{\mathcal U}$ with its image in $U(L^2G)$.\\
+
+Then, $\mathbb G_{\mathcal U}$ is locally compact, denote the Haar measure by $du$. Define \[E_{\mathcal U}(f)=\int_{\mathbb G_{\mathcal U}} u^* f u du \] for $f\in C_c(G)$. A priori this belongs to $L^\infty(G^0)$. Define $E$ to be the limit of the $E_{\mathcal U}$'s.
+
+\begin{prop}
+The map above is actually the conditional expectation $C_r^*(G)\rightarrow C_0(G^0)$.
+\end{prop}   
+
+\begin{proof}
+A simple computation gives that if $u =\sum_{i} (-1)^{\varepsilon_i} \chi_{U_i} $, 
+\[\langle u^* f u \delta_g , \delta_g'  \rangle =  \varepsilon_i \varepsilon_j f(g^{-1}g')\quad \text{if } g \in  G_{U_i}^{U_i}, g'\in  G_{U_j}^{U_j},\] so that 
+\[\langle \int u^* f u du . \delta_g , \delta_g'  \rangle = \sum_{ij}E(\varepsilon_i \varepsilon_j) f_{G_{U_i}^{U_j}} = f_{\coprod G_{U_i}^{U_i}}.\]
+If $f$ is supported in a compact subset of $G$, since $G$ is \'etale, there is a Borel cover such that $\coprod G_{U}^U \cap K = G^0 \cap K$, so that the average of $f$ over this cover is $f$ restricted to $G^0$, which is the conditional expectation on $C_0(G^0)$. In particular, $C_c(G)$ is stable by $E$.\\
+\end{proof}
+
+\newpage
+%%%%%%%%%%%%%%%%%
+\subsection{Visit to Texas (A\&M and University of Houston), September 30 to October 5 August 2019}
+%%%%%%%%%%%%%%%%%%
+
+\subsubsection*{Exhaustive representations of Roe algebras}
+
+Motivated by characterizations of Fredholm and spectral questions of N-body Hamiltonians, Victor Nistor and Nicolas Prudhon introduced in \cite{nistor2014exhausting} the notion of exhaustivity of a family of $*$-representation of a $C^*$-algebra.
+
+\begin{definition}
+A family of representations  
+\[\mathcal F = \{\phi : A \rightarrow B(H_\phi)\}\]
+is exhaustive if, for every irreducible representation $\sigma : A \rightarrow B(H_\sigma)$, there exists $\phi\in \mathcal F$ such that $ker \phi \subset ker \sigma$
+\end{definition}
+
+Let $G$ be a locally compact groupoid with Haar system, and $C_c(G)$ the $*$-algebra of compactly supported complex valued functions with the convolution product. Define the \textit{maximal $C^*$-algebra} $C^*(G)$ to be its envelopping $C^*$-algebra, and the \textit{reduced $C^*$-algebra} $C^*_r(G)$ to be its completion under the norm 
+\[\|a\|_r = \sup_{x\in G^0} \|\lambda_x(a)\| \]
+where $\lambda_x\in B(L^2(G_x, \mu_x))$ is the left regular representation based at $x\in G^0$.\\
+
+Let $U\subset G^0$ be an invariant open subset, and $F$ its complementary. From \cite{Renault}, the exact sequence of $*$-algebras 
+\[0\rightarrow C_c(G_{|U}) \rightarrow C_c(G)\rightarrow C_c(G_{|F})\rightarrow 0\]  
+extends to an exact sequence of $C^*$-algebra,
+\[0\rightarrow C^*(G_{|U}) \rightarrow C^*(G)\rightarrow C^*(G_{|F})\rightarrow 0\]
+while at the level of the reduced norm, the sequence 
+\[0\rightarrow C_r^*(G_{|U}) \rightarrow C_r^*(G)\rightarrow C_r^*(G_{|F})\rightarrow 0\]
+might fail to be exact in the middle. We still have a injective morphism on the left and a surjective morphism on the right. Let us call the \textit{ghost ideal} $I_G$ the kernel of the map $C^*_r(G)\rightarrow C^*_r(G_{|F})$. Then $C^*_r(G_{|U}) \subset I_G$, and we have the following commutative diagram
+\[\begin{tikzcd}
+0 \arrow{r} &  C^*(G_{|U}) \arrow[r,hook] \arrow[d, two heads] & C^*(G)\arrow[r, two heads] \arrow[d, two heads] & C^*(G_{|F})\arrow{r} \arrow[d, two heads, "\lambda_F" ] & 0 \\
+0 \arrow{r} &  C_r^*(G_{|U})\arrow[r,hook] \arrow[d,hook] & C_r^*(G)\arrow[r, two heads]  \arrow[d,equal] & C_r^*(G_{|F})\arrow{r} \arrow[d,equal] & 0 \\
+0 \arrow{r} &  I_G \arrow[r,hook] & C_r^*(G)\arrow[r, two heads] & C_r^*(G_{|F})\arrow{r} & 0 \\
+\end{tikzcd}\]
+with exact first and third rows. A diagram chase ensures that if $\lambda_F$ is an isomorphism, then $I_G=C^*_r(G_U)$, or \textit{all ghosts are compacts}. But exhaustivity of the boundary regular representations $R_F=\{\lambda_x\}_{x\in F}$ always implies that $\lambda_F$ is an isomorphism. We thus get the following.
+
+\begin{prop}
+If $G_F$ is metrically amenable, then $I_G=C^*_r(G_U)$. Equivalently
+\[0\rightarrow C_r^*(G_{|U}) \rightarrow C_r^*(G)\rightarrow C_r^*(G_{|F})\rightarrow 0\]
+is exact. In particular, this is satisfied if $R_F$ is exhaustive.
+\end{prop} 
+
+Two cases of interests are will be the coarse setting, and so called HLS groupoids. In these cases $C^*(G) \cong C^*_r(G_U) \cong \mathfrak K$ (explaining why we call the exactitude of the sequence `` all ghosts are compacts"). \\
+
+We will recall now a construction of limit spaces due to \v{S}pakula and Willett (see \cite{vspakula2017metric}). Let $(X,d)$ be a discrete metric space with bounded geometry, i.e. $\forall R>0, \sup_{x\in X} |B(x,R)| < \infty$. The distance function $d: X\times X \rightarrow \R$ can be extended to $\tilde d: \beta X \times \beta X \rightarrow \R \cup \{\infty\}$. If $\omega \in \beta X$, define 
+\[X(\omega) = \{\alpha \in \beta X / \tilde d (\omega , \alpha ) < \infty\}.\]
+Then, it is shown in \cite{vspakula2017metric} that $(X(\omega), \tilde d)$ is a discrete metric space with bounded geometry. (For instance, if $X=|\Gamma|$, $X(\omega)=|\Gamma | $, and if $X$ is a box space, then $X(\omega) = X$ when $\omega \in X$, and $|\Gamma|$ if $\omega\in \partial \beta X$.)\\
+
+Given $\omega\in \beta X$, and $T\in C_m^*(X)$, one can look at the coefficients $T_{xy}= \langle \delta_y, T\delta_x\rangle$, which are bounded on $X\times X$, hence 
+\[T^{(\omega)}=\lim_{\omega} T_{xy}\]
+defines a bounded operator $B(l^2(X(\omega)))$, and $T\mapsto T^{(\omega)}$ defines what is called a representation at infinity $\phi_\omega : C_m^*(X)\rightarrow B(l^2(X(\omega))))$. The family $F_\infty=\{\phi_{\omega}\}_{\omega\in \partial \beta X}$ is called the family or representations at infinity of $X$. Note: they coincide with the regular representations of $C_c(G(X))$. \\
+
+The coarse groupoid admits a description in that setting. Recall that a partial translation of $(X,d)$ is a partial bijection with controlled graph, that is a bijection $t: D\rightarrow R$ between subsets $D,R\subset X$, such $\sup_{x\in D} d(x,t(x))<\infty$. \\ 
+
+It is proven in \cite{roe2014ghostbusting} that property Yu's (A) (see \cite{nowak2008property} for a survey) is equivalent to $I_G\cong \mathfrak K(l^2X)$. So in that case, we get
+\begin{cor}
+A space $X$ has property (A) if and only if the representations at infinity $\mathcal F_\infty$ is an exhaustive family for the uniform Roe algebra $C^*_u(X)$.
+\end{cor}
+
+\begin{proof}
+If $\mathcal F_\infty$ is exhaustive then $G(X)$ is metrically amenable, hence all ghosts are compact by the previous proposition, which gives property (A).\\
+If $X$ has property (A), then $G(X)$ is topologically amenable, and so metrically amenable. Any irreducible representations $\phi: C^*_m(X)\rightarrow B(H)$ is either the induction of the unique representation of $\mathfrak K(l^2X)$, either factorizes through $C^*_m(X)/\mathfrak K(l^2 X)$. In the second case, 
+\[C^*_m(X)/\mathfrak K(l^2 X) \cong C^*_u(X) / \mathfrak K(l^2 X) \cong C^*_u(X) / I_G \cong l^\infty(X)/c_0(X) \rtimes_r G(X), \]
+so any representation factorizes through $l^\infty(X)/c_0(X) \rtimes_r G(X)$ which implies $F_\infty $ is exhaustive.\\
+\end{proof}
+
+In the case of the HLS groupoid, we have the following corollary.
+
+\begin{cor}
+Let $(\Gamma, \mathcal N)$ be an approximated group, and $G_{\mathcal N}(\Gamma)$ the associated HLS groupoid. The following are equivalent:
+\begin{itemize}
+\item[(i)] the family of regular representations $\{\lambda_x\}_{x\in \overline N}$ is exhaustive for $C^*G_{\mathcal N}$,
+\item[(ii)] the regular representation at infinity is exhaustive for $C^*G_{\mathcal N}$ is exhaustive for $C^G_{\mathcal N}$,
+\item[(iii)] the group $\Gamma$ is amenable,
+\item[(iv)] the groupoid $G_{\mathcal N}(\Gamma)$ is amenable. 
+\end{itemize}
+\end{cor}
+
+\begin{proof}
+The equivalence of (iii) and (iv) is done in \cite{WillettNonamenable}.\\
+
+The trivial representation $1_\Gamma: C^*\Gamma \rightarrow \C$ always extends $C^*G_{\mathcal N}(\Gamma)$, let us call it $\tau$. If $\{\lambda_\Gamma\}$ is exhaustive, $\tau$ extends to $C^*_r(\Gamma)= C^*G_{\mathcal N}(\Gamma)/ker(\lambda_\Gamma)$, so that $\Gamma$ is amenable. \\
+\end{proof}
+
+We can compare this to the example built in \cite{WillettNonamenable}: Willett shows that a certain HLS groupoid associated to $\Gamma=\mathbb F_2$ is metrically amenable while not being itself amenable. What we have here is an example of a groupoid which is metrically amenable while the regular representations are not exhaustive.\\
+
+In both cases, it turns out that topological amenability and exhaustivity of the boundary regular representations are equivalent. This result can be generalized to the following case.\\
+
+Suppose there exists an invariant open dense subset $U\subset G^0$ such that $G_{|U}\cong U\times U$. Then we can identify, for any point $x\in U$, the fiber and the open subset, i.e. $G_x\cong U$. The representation that corresponds to any $\lambda_x$ under that isomorphism is called the vector representation, and denoted $\pi_0 : C^*G \rightarrow B(L^2(U,\mu))$. Notice that $\mu $ is the pull-back of any of the Haar measure under the previous isomorphism.\\
+
+The diagram reduces to:
+\[\begin{tikzcd}
+0 \arrow{r} & \mathfrak K(L^2(U,\mu)) \arrow[r,hook] \arrow[d, two heads] & C^*(G)\arrow[r, two heads] \arrow[d, two heads] & C^*(G_{|F})\arrow{r} \arrow[d, two heads, "\lambda_F" ] & 0 \\
+0 \arrow{r} &  C_r^*(G_{|U})\arrow[r,hook] \arrow[d,hook] & C_r^*(G)\arrow[r, two heads]  \arrow[d,equal] & C_r^*(G_{|F})\arrow{r} \arrow[d,equal] & 0 \\
+0 \arrow{r} &  I_G \arrow[r,hook] & C_r^*(G)\arrow[r, two heads] & C_r^*(G_{|F})\arrow{r} & 0 \\
+\end{tikzcd}\]
+so that if $\{\lambda_x\}_{x\in F}$ is exhaustive, then $\lambda_F$ is an isomorphism and $\mathfrak K(L^2(U,\mu))\cong C^*_r(G) \cong I_G$. What about the reverse?
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Property T and non K-exactness}%5555555555555%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let $A \subset B(H)$ be a unital concrete filtered $C^*$-algebra, and 
+\[\mathcal N = \{\sigma : A \rightarrow B(H_\sigma) = M_{k(\sigma)}\}\]
+a family of cyclic (irreducible?) representations.
+\begin{definition}
+We say that $A$ has property $(\tau )_{\mathcal N}$ if there exist a controlled set $E$ and a positive constant $\varepsilon>0$ such that 
+\[\forall \eta \in \Lambda_{i}, \exists a\in (A_E)_{+,1}, \quad \| a \otimes 1 \xi - 1 \otimes \sigma_i(a) \eta  \| > \varepsilon . \]
+\end{definition}
+
+Examples: 
+\begin{itemize}
+\item[$\bullet$] $\Gamma$ has property T iff $C^*\Gamma$ has $(\tau)$ with respect to the trivial representation.
+\item[$\bullet$] $\Gamma$ has property T with respect to $\mathcal F$ iff $C_{\mathcal F}^*\Gamma$ has $(\tau)$ with respect to the trivial representation.
+\item[$\bullet$] $X$ has geometric property T iff $C^*_u(X)$ has $(\tau)$ with respect to the trivial representation.
+\item[$\bullet$] $G$ has topological property T with respect to $F$ iff $C^*_F(G)$ has $(\tau)$ with respect to the trivial representation.
+\end{itemize}
+
+Suppose we have an abelian sub-$C^*$-algebra $1_A \in B\subset A$ such that $A_E$ is a finitely generated $B$-module which normalizes $B$, and that we can find generators $a_i$, $i = 1,N$ such that
+\[\sum a_i^* a_i = 1.\]
+Define $\Delta = \sum_i x_i^* x_i $ with $x_i =  a \otimes 1 - 1 \otimes \sigma(a)$.\\
+
+Fix two representations $\phi : A \rightarrow B(H_\phi)$ and $\sigma : A \rightarrow B(H_\sigma)$ and define the subspace of $H_\phi \otimes H_\sigma $:
+\[\Lambda_{\phi,\sigma} = \{\eta \in H_\phi \otimes H_\sigma \ | \ (\pi(a)\otimes 1)\eta  = (1\otimes \sigma(a)^*) \eta \ \forall a\in A\}.\]
+Then $\Lambda_{\phi,\sigma}$ naturally comes equipped with a representation of $A$ defined by either $\pi\otimes 1$ or $1\otimes \sigma$. 
+\begin{lem}
+$\Lambda_{\phi,\sigma}$ is nonzero iff there exists a nonzero intertwiner $T: H_\sigma \rightarrow H_\phi$.
+\end{lem}
+
+\begin{proof}
+The correspondance between the intertwiners is given by 
+\[ T = \sum_i e_i^*\otimes x_i \longleftrightarrow \eta= \sum_i e_i \otimes x_i.\]  
+\end{proof}
+
+Let $G$ be an \'etale locally compact groupoid, compactly generated. Fix a compact generating subset $K\subset G$ that is symmetric, $K^{-1}=K$, and cover it by bisections $U_i$, $i=1,N$. There exists $\{a_i\}_{i=1,N}$, $a_i \in C_K(G)_{+,1}$ such that $\sum a_i = 1$. 
+Suppose
+\begin{itemize}
+\item[$\bullet$] there are a countable family of finite dimensional representations
+\[\phi_i : C_c(G)\rightarrow B(H_i)\]
+such that $\bigoplus_i \phi_i$ is faithful on a quotient of $A= C^*_r (G)$. 
+\item[$\bullet$] we can find finite dimensional representations $\sigma_j : A \rightarrow B(K_j)= M_{d_j}$ satisfying
+	\begin{itemize}
+	\item[(i)] $d_j= dim(K_j) \rightarrow \infty$,
+	\item[(ii)] there exists a Kazhdan pair $(K,\varepsilon)$ such that $\{\phi_i\}$ and $\{\sigma_j\}$ have $(K,\varepsilon)$-spectral gap.
+	\end{itemize}
+\end{itemize}  
+Define
+\[\Delta =\sum_{k=1}^N  (a_k \otimes 1 - 1\otimes (\sigma_j(a_k)^*)_j)^*(a_k \otimes 1 - 1\otimes (\sigma_j(a_k)^*)_j) \in C_c(G)\otimes_{alg} \prod M_{d_j}.  \]
+Then the spectral projection of $\Delta$ belongs to $C^*_r(G) \otimes \prod M_{d_j}$ and goes to zero in $C^*_r(G) \otimes \prod M_{d_j}/\bigoplus M_{d_j}$.\\
+
+Indeed, $\Delta= (\Delta_{ij})$.
+The first thing to realize is that $ker(\Delta_{ij})=\Lambda_{ij}$. The spectral gap condition ensures that the characteristic function of the singleton $\{0\}$ is continous on the spectrum of $\Delta$ in 
+\[\bigoplus_{ij} H_i \otimes K_j = \bigoplus_{ij} \Lambda_{ij} \oplus \Lambda_{ij}^{\perp}, \]
+so that by continous functional calculus $p \in C_r^*(G)$. Decompose $p =(p_{ij})$, then $p_{ij}$ is nonzero iff $\Lambda_{ij}$ is nonzero iff there is an nonzero intertwiner $K_j \rightarrow H_i$. $H_i$ being finite dimensional and $K_j$ being irreducible, that can only happen for finitely many $j$ so that $p_i =(p_{ij})_j$ is finitely supported in $j$ and the second claims follow. \\
+
+\newpage
+\textbf{New try}\\
+
+We recall some facts about representation theory of $C^*$-algebras. We will denote $\phi : A \rightarrow B(H)$ and $\sigma : A \rightarrow B(K)$ two representations, i.e. $*$-homomorphisms. Then one can define the space of intertwiners
+\[Hom_A(K,H) = \{ T\in B(K,H) / T \sigma (a) = \phi(a) T \forall a \in A \}.\]
+If $H$ and $K$ are finite dimensional, it is itself a finite dimensional representation of $A$, isomorphic to $\Lambda_{\sigma,\phi} =\{\eta \in K^* \otimes H / (\phi(a)\otimes 1)\eta = (1\otimes \sigma(a^*)\eta, \forall a\in A\}$. (If not, maybe on can restrict to the Hilbert-Schmidt operators to get a Hilbert space? Not important here.)\\
+ 
+We suppose $\sigma$ is (topologically) \textit{irreducible}, meaning that any vector is cyclic. There is a $A$-morphism 
+\[Hom_A(K,H) \otimes K \rightarrow H ;  T\otimes v \mapsto T(v),\]
+whose image we denote by $H^\sigma$ or $H^K$. It is the subspace of $\sigma$-\textit{isotypical components} of $H$. Then $H_\sigma$ will denote the orthogonal complement of $H^\sigma$. If $\sigma$ and $\sigma'$ are two non-equivalent irreducible representations, then $H^\sigma$ and $H^{\sigma'}$ are in direct sum, so that if $H$ is finite dimensional, only finitely many $H^\sigma$ are non zero.\\
+
+Fix a finite set $F= \{a_i\}_{i=1,N}$ in $A$ and $\Delta_{\sigma, \phi} = \sum_{a\in F} x_a^* x_a $ with $x_a =  \phi(a) \otimes 1 - 1 \otimes \sigma(a)$. Then
+\[Ker (\Delta_{\sigma, \phi}) \cong Hom_{C^*(F)}(K,H).\] 
+
+Let $A\subset B(H)$ be a finitely generated $C^\ast$-algebra, and $l(a)$ the associated length. Suppose
+\begin{itemize} 
+\item[$\bullet$] there exists a decomposition $H=\bigoplus H_n$ with finite dimensional $H_n$ such that $\lim dim H_n = +\infty$ and $A\subset \bigoplus B(H_n)$;
+\item[$\bullet$] there exists a sequence of finite dimensional irreducible representations $\sigma_m : A \rightarrow B(K_m)$ such that $\lim dim K_m = +\infty$ and $Hom_A(K_m, H_m) \neq 0$;
+\item[$\bullet$] there exist $r>0$ and $\varepsilon >0$ such that for all $\eta \in \bigoplus_m (H_m)_{\sigma_m}$, there exists $a\in A_{+,1}$ such that $\| (a_m\otimes 1)\eta - (1\otimes \sigma(a_m^*)\eta \| \geq \varepsilon \| \eta \|$. 
+\end{itemize}
+
+Denote by $\phi_n : A \rightarrow B(H_n)$ the restriction to the $n^{th}$-block, and consider $\oplus_{n,m} \Delta_{n,m} \in B(H\otimes K) $, where $\Delta_{n,m}$ is the operator $\Delta_{\phi_n, \sigma_m}$ associated to the finite generating set of $A$. By the hypothesis, for a fixed $n$, $(\Delta_{n,m})_m$ is finitely supported in $m$. Moreover, $Spec(\Delta_{n,m}) \subset \{0\}\cup (\varepsilon, \infty )$, so that the spectral projection $p$ onto its kernel belongs to $A\otimes \prod_m B(K_m)$. Indeed, the characteristic function $\chi$ of the singleton $\{0\}$ is continuous on the spectrum of $\Delta$, and $p = \chi(\Delta)$ is defined by continuous functional calculus. Moreover $p$ has the same block decomposition that $\Delta$, hence its image is $0$ in $A \otimes (\prod_m B(K_m) / \bigoplus B(K_m))$.\\
+
+As $Hom_A(K_m, H_m) \neq 0$, $tr(p_{nn}) \geq \frac{dim K_n}{dim H_n}$. Define
+\[K_0(A\otimes \prod_m B(K_m)) \rightarrow \prod \mathbb R / \oplus \mathbb R\] 
+by $\tau([p]) = (tr(p_{nn}))_n$.
+
+This trace-like map kills $A \otimes \bigoplus B(K_m) $, and $\tau([p])\neq 0$.
+
+\section{Coarse decompositions for groupoids, stability of the Baum-Connes conjecture}
+
+Let us define the localization algebra for groupoids.\\
+
+Let $G$ be a locally compact \'etale groupoid with base space $G^0$, and $C_c(G)$ its $*$-algebra of complex compactly supported continuous functions.\\
+
+Let $K\subset G$ be a compact subset of $G$. Recall the definition of the Rips complex $P_K(G)$. Blablabla. It is a $G$-$CW$-complex, locally finite,...\\
+
+Let $Z$ be a $G$-space and $E$ be a Hilbert $G$-module equipped with a non-degenerate $G$-equivariant representation $\phi: C_0(G^0)\rightarrow \mathcal L(E)$. For $K\in \mathcal E_G$, let $A_K$ be the self-adjoint subspace of $G$-invariant operators $T\in \mathcal L(E)$ with $prop(T)\subset K$ and $[T,f]\in \mathfrak K(E)$.\\
+ 
+Define $J_K$ to be the ideal
+\[J_K = \{ T\in A_K | \forall f\in C_0(Z), \ Tf \in \mathfrak K(E)\}. \]
+
+\begin{definition}
+The Roe algebra $C^*_G(Z,E)$ is defined to be the completion of $\cup_{K\in \mathcal E_G} J_K$ in the operator norm of $\mathcal L(E)$, and the \textit{localization algebra} $C^*_L(Z,E)$ is the completion of 
+\[\{a: [0,\infty ) \rightarrow \mathbb C[Z,E] | a(t)\in J_{K_t} \text{ s.t. } \cap K_t \subset G^0\}\]
+under the norm
+\[\|a\|_L = \sup_{t\in [0,\infty)} \| a(t)\|_{C^*(Z,E)}.\] 
+\end{definition}
+ 
+Prove that when $Z$ is a free proper space, the localization map is equivalent to the Baum-Connes assembly map.\\
+
+Recall the definition of absorbing representations. Let $A$ a $G$-algebra and $\phi: A\rightarrow \mathcal L_B(H)$ a faithful representation of $A$ on a $B$-$G$-Hilbert module, considered as an inclusion $A\subset \mathcal L_B(H)$. Then $\phi$ is called \textit{absorbing} if for every Hilbert $G$-$B$-module $K$ and representation $\sigma: A\rightarrow \mathcal L_B(K)$, there exists a sequence of $G$-invariant isometries $v_n : K\rightarrow H$ such that $v_n^* a v_n - \sigma (a)\in \mathfrak K(K)$ and $\lim \|v_n^* a v_n - \sigma (a) \| = 0$, $\forall a\in A$.\\
+
+If $H$ is absorbing, 
+\[RK_*^G(Z,B) \cong K_{*+1}(Q^*_G(Z,H)).\]
+
+\section{Non-proper actions, restriction principle and the Baum-Connes conjecture}
+
+A motivating example.\\
+
+Let $\Gamma = SL(2, \Z)$ acting on the hyperbolic plane with all rational points added at infinity, $\mathbb H \cup \mathbb Q$. The stabilizer of any of the infinite points is $\Lambda \cong \Z$. If $X$ denotes the Cayley graph of $\Gamma$, with a new vertex added for each of these rational points $q$, and an edge connecting $q$ to any element in $\Gamma_q$, then $X$ is quasi-isometric to the subspace of the boundary points, which is the Farey graph, qi to a tree. We thus can use Oyono-Oyono's theorem to conclude that $\Gamma$ acts on a tree with amenable stabilizers, hence satisfies the Baum-Connes conjecture.\\
+
+The question is to see how far we can push that technique, here deducing the conjecture for $SL(2,\Z)$ from $\Z$.\\
+
+Let $\Gamma$ acting on a real Hilbert space $H$ by affine isometries. There are two ways for the action to fail to be proper: having huge stabilizers, or having a bad orbit. We will focus on the first case. Suppose that every orbit $X_v= \Gamma \cdot v$ is proper and that the family $\{X_v\}_v$ uniformly coarsely embeds into a Hilbert space. Can we deduce the Baum-Connes conjecture for $\Gamma$? 
+
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+\newpage
+
+\section{Topics class in Analysis}
+
+\subsection*{Title: Large scale geometry and operator algebras}
+\textit{Spring 2020, Cl\'ement Dell'Aiera}
+\subsection*{Description} 
+Large scale geometry studies geometric properties of a metric space that emerge when you look at it from far away. The motivation behind this course is the use of this idea in operator algebras and index theory. More precisely, we will construct \textit{exotic} operator algebras using the geometry at infinity of discrete groups. The main goal is to study some non exact sequences of $C^*$-algebras, which are of importance in Noncommutative Geometry and are related to the Novikov conjecture, an important problem in Algebraic Topology.
+
+\subsection*{Organization of the class}
+The first part of the class will focus on finitely generated groups and their large scale geometry. We will introduce Cayley graphs and box spaces, two type of metric spaces associated to groups. We will cover a lot of examples, and discuss expanders (with maybe Margulis' proof of their existence).\\
+
+The second part of the class will be devoted to building operator algebras associated to these objects. We will introduce $*$-algebras and their completions, with a gentle reminder on every notion. Metric amenabilty and its relationship to approximation properties of the so-called Roe algebra will be studied. We will introduce exact sequences of $C^*$-algebra and define a particular sequence associated to the uniform Roe algebra of a metric space, and its localization at infinity.\\
+
+If time allows, we will end by a informal introduction to the problems in algebraic topology that these allow to solve.  
+
+\subsection*{Prerequisites}
+
+Knowing what are groups, rings, vector spaces, topological spaces and matrices. We will provide a reminder on all the notions that need to be covered, and no prior knowledge is assumed in functional analysis, algebraic topology or noncommutative geometry.
+
+\subsection*{Looking at things from far away}
+
+What is the chronology of ideas concerning looking at infinity? Maybe it starts with projective geometry: embedding the affine plane $\mathbb A^n$ into the projective space $\mathbb P^n$. You also have the Gromov boundary of a hyperbolic group $\overline \Gamma = \Gamma \cup \partial \Gamma$. This idea generalizes to CAT(0) spaces (see Bridson-Haefliger). Formalization gives you the notion of compactification: a compact topological space $\overline X$ containing $X$ as an open dense subset. The boundary $\partial X$ is then the complement of $X$ in $\overline X$. Of course, the compactification will always have more structure. Typically, $X$ comes with a group of automorphisms which extends to homeomorphisms on the boundary: in projective space, any affine map induces a homography, and a quasi-isometry extends to an homeomorphism of the Gromov boundary of a hyperbolic group. The biggest compactification is the Stone-\v{C}ech compactification, a totally disconnected space whose points are ultrafilters. This time, the ``group" of automorphisms is only a semigroup, that of \textit{partial translations}, which extends to a pseudogroup of partial homeomorphisms acting on the compactification.   
+%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+\newpage
+
+\section{Mayer-Vietoris}
+
+\section{Quantum groups}
+
+\section{Property T}
+
+\section{Number theory}
+
+\section{Fock spaces, CuntzKrieger algebras, and second quantization}
+
+
+
+
+
+
+
+
+
+
+
+
