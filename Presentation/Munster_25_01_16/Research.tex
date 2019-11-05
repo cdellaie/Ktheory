@@ -527,7 +527,54 @@ Recall the definition of absorbing representations. Let $A$ a $G$-algebra and $\
 If $H$ is absorbing, 
 \[RK_*^G(Z,B) \cong K_{*+1}(Q^*_G(Z,H)).\]
 
-\section{Non-proper actions, restriction principle and the Baum-Connes conjecture}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Paschke duality for groupoids}  %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let $X$ be a proper right $G$-space, with $p: X \rightarrow G^0$ the anchor map. It is a local homeomorphism, and the fiber $X_s = p^{-1}(s)$ is discrete.\\
+
+Given a $G$-algebra $A$ and a $G$-Hilbert $A$-module $H$, we will build two Hilbert modules.\\
+
+Define $L^2(X,H)$ to be the completion of the sections $ \Gamma_c(G,r^* H)$ with the $C_0(G^0)$-valued inner product
+\[ \langle \eta, \xi \rangle_s = \sum_{x\in X_s}\langle \eta(x), \xi(x) \rangle_{H} \quad \forall \eta,\xi \in \Gamma_c(G,r^* H). \]
+The $A$-module structure is given by $(\eta a)(x)=\eta(x)a(p(x))$, and multiplication $(f \eta)(x)= f(x)\eta(x)$ defines a non-degenerate $G$-equivariant representation $\phi : C_0(X)\rightarrow \mathcal L_A(L^2(X,E)$.\\
+
+The pull-back $s^* L^2(X,H) := C_0(G)\otimes_s L^2(X,H) $ is naturally ismorphic to the $s^*A$-Hilbert module, obtained by completion of the sections $\Gamma_c (X\times_{p,s}G,H)$ with $C_0(G)$-valued inner product 
+\[\langle \eta, \xi\rangle_g = \sum_{x\in X_{s(g)}} \langle \eta(x,g) , \xi(x,g) \rangle_H \quad \forall \eta ,\xi \in \Gamma_c (X\times_{p,s}G,H)\]
+and $C_0(G)$-module structure given by $(\eta f)(x, g) = \eta(x,g)f(g)$.\\ 
+The same is true when $r$ replaces $s$, and the map $(U\eta)(x,g) = \eta(xg,g)$ defines a unitary 
+\[U : s^* L^2(X,H) \rightarrow r^* L^2(X,H)\]
+such that $U_g U_h = U_{gh}$ for all $(g,h)\in G^2$.\\
+
+Define $L^2_G(X,H)$ to be the $A\rtimes_r G$ Hilbert module obtained by completion of the sections $\Gamma_c(X,r^* H)$ with respect to the inner-product
+\[ \langle \eta, \xi \rangle_g = \sum_{x\in X_{r(g)}} \langle \eta(x) , \xi(xg)\rangle_H \]
+and $C_r^*(G)$-module structure given by $(\eta f)(x) = \sum_{g\in G_{p(x)}} \eta(xg^{-1})f(g)$ for $f\in C_c(G)$, $\eta\in \Gamma_c(X,r^* H)$.\\
+
+The case of $X=G$ and $H=A$ is particularly interesting, as it allows a definition for the left regular representation. The left regular representation $\lambda_{G,A}$ is given by 
+\[ \lambda(f )\eta  = f \ast \eta \quad\forall f,\eta \in \Gamma_c(G,r^*A).\] 
+This induces a injective $*$-homomorphism 
+\[\lambda_{G,A} : A\rtimes_r G \rightarrow \mathcal L_A( L^2(G,A)).\]
+Using the internal tensor product, we can thus define 
+\[E = L^2_G(X,H) \otimes_\lambda L^2(G,A).\]
+We have $s^* E \cong L^2_G(X,H) \otimes_{s^* \lambda} s^* L^2(G,A)$ (and the same for $r$).
+
+\begin{prop}
+For $\eta \otimes \xi \in L^2_G(X,H) \otimes_\lambda L^2(G,A) $, the map 
+\[(V\eta\otimes\xi)(x) =\sum_{g\in G_{p(x)}} \eta(xg^{-1})\xi (g)\]
+induces an isomorphism of $G$-Hilbert $C_0(G^0)$-module
+\[ V : L^2_G(X,H) \otimes_\lambda L^2(G,A) \rightarrow L^2(X,H).\]
+\end{prop}
+
+\begin{cor}
+The isomorphism $V$ induces an ismorphism
+\[\mathfrak K_{A\rtimes_r G} ( L^2(G,A) ) \cong C^*_G(X, L^2(X,H)).\]
+\end{cor}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Non-proper actions, restriction principle and the Baum-Connes conjecture}  %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 A motivating example.\\
 
