@@ -536,16 +536,16 @@ Let $X$ be a proper right $G$-space, with $p: X \rightarrow G^0$ the anchor map.
 
 Given a $G$-algebra $A$ and a $G$-Hilbert $A$-module $H$, we will build two Hilbert modules.\\
 
-Define $L^2(X,H)$ to be the completion of the sections $ \Gamma_c(G,r^* H)$ with the $C_0(G^0)$-valued inner product
+Define $L^2(X,H)$ to be the completion of the sections $ \Gamma_c(G,r^* H)$ with the $A$-valued inner product
 \[ \langle \eta, \xi \rangle_s = \sum_{x\in X_s}\langle \eta(x), \xi(x) \rangle_{H} \quad \forall \eta,\xi \in \Gamma_c(G,r^* H). \]
-The $A$-module structure is given by $(\eta a)(x)=\eta(x)a(p(x))$, and multiplication $(f \eta)(x)= f(x)\eta(x)$ defines a non-degenerate $G$-equivariant representation $\phi : C_0(X)\rightarrow \mathcal L_A(L^2(X,E)$.\\
+The $A$-module structure is given by $(\eta a)(x)=\eta(x)a(p(x))$, and multiplication $(f \eta)(x)= f(x)\eta(x)$ defines a non-degenerate $G$-equivariant representation $\phi : C_0(X)\rightarrow \mathcal L_A(L^2(X,E))$.\\
 
 The pull-back $s^* L^2(X,H) := C_0(G)\otimes_s L^2(X,H) $ is naturally ismorphic to the $s^*A$-Hilbert module, obtained by completion of the sections $\Gamma_c (X\times_{p,s}G,H)$ with $C_0(G)$-valued inner product 
 \[\langle \eta, \xi\rangle_g = \sum_{x\in X_{s(g)}} \langle \eta(x,g) , \xi(x,g) \rangle_H \quad \forall \eta ,\xi \in \Gamma_c (X\times_{p,s}G,H)\]
-and $C_0(G)$-module structure given by $(\eta f)(x, g) = \eta(x,g)f(g)$.\\ 
-The same is true when $r$ replaces $s$, and the map $(U\eta)(x,g) = \eta(xg,g)$ defines a unitary 
+and $s^*A$-module structure given by $(\eta f)(x, g) = \eta(x,g)f(g)$.\\ 
+The same is true when $r$ replaces $s$, and the map $(U\eta)(x,g) = \eta(xg,g)$ defines a adjoinable operator 
 \[U : s^* L^2(X,H) \rightarrow r^* L^2(X,H)\]
-such that $U_g U_h = U_{gh}$ for all $(g,h)\in G^2$.\\
+which is unitary, such that $U_g U_h = U_{gh}$ for all $(g,h)\in G^2$.\\
 
 Define $L^2_G(X,H)$ to be the $A\rtimes_r G$ Hilbert module obtained by completion of the sections $\Gamma_c(X,r^* H)$ with respect to the inner-product
 \[ \langle \eta, \xi \rangle_g = \sum_{x\in X_{r(g)}} \langle \eta(x) , \xi(xg)\rangle_H \]
@@ -567,8 +567,9 @@ induces an isomorphism of $G$-Hilbert $C_0(G^0)$-module
 \end{prop}
 
 \begin{cor}
-The isomorphism $V$ induces an ismorphism
-\[\mathfrak K_{A\rtimes_r G} ( L^2(G,A) ) \cong C^*_G(X, L^2(X,H)).\]
+The isomorphism $V$ induces a $*$-isomorphism
+\[\mathfrak K_{A\rtimes_r G} ( L^2(G,A) ) \cong C^*_G(X, L^2(X,H))\]
+by $T\mapsto U^*(1\otimes T)U$.
 \end{cor}
 
 \newpage
@@ -580,10 +581,48 @@ A motivating example.\\
 
 Let $\Gamma = SL(2, \Z)$ acting on the hyperbolic plane with all rational points added at infinity, $\mathbb H \cup \mathbb Q$. The stabilizer of any of the infinite points is $\Lambda \cong \Z$. If $X$ denotes the Cayley graph of $\Gamma$, with a new vertex added for each of these rational points $q$, and an edge connecting $q$ to any element in $\Gamma_q$, then $X$ is quasi-isometric to the subspace of the boundary points, which is the Farey graph, qi to a tree. We thus can use Oyono-Oyono's theorem to conclude that $\Gamma$ acts on a tree with amenable stabilizers, hence satisfies the Baum-Connes conjecture.\\
 
-The question is to see how far we can push that technique, here deducing the conjecture for $SL(2,\Z)$ from $\Z$.\\
+The question is to see how far we can push that technique, here deducing the conjecture for $SL(2,\Z)$ from $\Z$. One can also look at $\Z^2$ acting on $\Z$ by translation by the first component.\\
 
 Let $\Gamma$ acting on a real Hilbert space $H$ by affine isometries. There are two ways for the action to fail to be proper: having huge stabilizers, or having a bad orbit. We will focus on the first case. Suppose that every orbit $X_v= \Gamma \cdot v$ is proper and that the family $\{X_v\}_v$ uniformly coarsely embeds into a Hilbert space. Can we deduce the Baum-Connes conjecture for $\Gamma$? 
 
+\subsection{Breakdown of the argument of Herv\'e for extensions}
+
+Let $1 \rightarrow N \rightarrow G \rightarrow Q \rightarrow 1$ be a group extension. Suppose $Q$ is torsion free. The goal is to deduce the Baum-Connes conjecture for $G$ from the Baum-Connes conjecture for $N$ and $Q$.\\
+
+Consider the space $Z = Q$. It is endowed with two actions:
+\begin{itemize}
+\item[$\bullet$] $G\times Q$ acts on $Z$ via $(g,q)z = gzq^{-1}$; the generic stabilizer is isomorphic to $G$, but not as $G\times 1 \subset G\times Q$.
+\item[$\bullet$] $G$ acts on $Z$ by left multiplication. The generic stabilizer is $stab(e) \cong N$.
+\end{itemize}
+
+Now, the restriction principle gives that 
+\begin{itemize}
+\item[$\bullet$] $BC(G,C_0(Z))$ is equivalent to $BC(N,\C)$.
+\item[$\bullet$] $BC(G,\C)$ is equivalent to $BC(G\times Q,C_0(Z))$.
+\end{itemize}
+
+If we suppose $BC(N,\C)$, it is enough to show
+\[BC(G,C_0(Z)) + BC(Q,C_0(Z)\rtimes_r G) \Rightarrow BC(G\times Q,C_0(Z)),\]
+which is where the partial assembly map comes in. The diagram 
+\[\begin{tikzcd}
+K^{top}(G\times Q , C_0(Z)) \arrow{r}{\mu_{G\times Q, C_0(Z)}} \arrow{d}{\mu^{Q}_{G,C_0(Z)}}& K(C_0(Z)\rtimes_r (G\times Q)) \\
+K^{top}(Q , C_0(Z)\rtimes_r G) \arrow{ru}{\mu_{Q,C_0(Z)\rtimes_r G}}& \\
+\end{tikzcd}\]
+commutes, and $\mu_{Q,C_0(Z)\rtimes_r G}$ is an isomorphism by hypothesis. The remaining point is to show that $BC(G,C_0(Z))$ implies that the partial assembly map is an isomorphism.\\
+
+To adapt the argument, we want to replace that $Z$ $G$-coarsely embeds into a Hilbert space.
+
+\subsection{Argument for trees}
+
+Herv\'e Oyono-Oyono proves that, if $G$ acts properly by isometries on a tree $X$, the Baum-Connes conjecture for the stabilizers implies it for the group $G$.\\
+
+Question: why is the extension 
+\[\begin{tikzcd} 0 \arrow{r} & C_0(X^0)\rtimes \Z \arrow{r}& C_+(X^1)\rtimes \Z \arrow{r} & C^*_r(\Z) \arrow{r}& 0 \end{tikzcd}\]
+equivalent to the Topelitz extension in the case of $G=\Z$ and $X = \Z$?\\
+
+The left slot is $c_0(\Z)\rtimes \Z \cong \mathfrak K(l^2\Z)$, and the right slot is $C^*_r(\Z)\cong C(\mathbb S^1)$. As $C_+(X^1)$ is the function on $\Z$ that have limit in $+\infty$ and tend to zero at $-\infty$, it is generated by $c_0(\Z)$ and $\chi_F$ where $F$ is any neighboorhood of infinity, $F=[N,+\infty]$. The crossed product is thus generated by $c_0(\Z), \chi_F, \lambda_1$. But $c_0(\Z), S$ can be taken as well as a generating set since $SS^* = \chi_{[n+1,\infty]}$ and $S^*S =\chi_F$. Then $S$ is the shift, and $C_+(X^1)\rtimes_r \Z\cong C^*(S)$.\\
+
+It seems the important bit is to be able to give an orientation to path, and then, if $G$ acts on $X$, take $Y$ to be the set of points that you can obtained by following a positively oriented path from a fixed point $x_0$. Let $G= (X\rtimes G)_{|Y}$ and $C_+(X^1)$ corresponds to the functions that admit a limit along positively oriented paths going outward from $x_0$.\\ 
 %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%
 \newpage
