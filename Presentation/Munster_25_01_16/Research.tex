@@ -136,56 +136,10 @@ Now can we force this $C^*$-algebraic coefficients into a group so as to build a
 \[\Gamma=\Z_2 \wr_X G = \prod_{X} \Z_2 \rtimes G.\]
 One sees that the reduced $C^*$-algebra $C_r^*(\Gamma)$ should really look like $A\rtimes_r G$. Indeed, $N =\prod_X \Z_2$ is normal abelian in $\Gamma$, so that $C_r^*(\Gamma) \cong C^*_r(N)\rtimes_r G \cong C(\hat N)\rtimes_r G$.  
 
-%%%%%%%%%%%%%
 \subsubsection*{Matui's conjecture}
 
-Matui's conjecture states that 
-\[K_i (C_r^*(G)) \cong \bigoplus_k H^{2k+i}(G)\]
-for every second countable \'etale essentially principal minimal groupoid with base space homeomorphic to a Cantor space. See \cite{MatuiSurvey} for a survey, by Matui himself.\\
+See the section below.
 
-Basically, there are two directions that one can take: proving it, for instance for groupoids with FAD, of even for groupoids satisfying the Baum-Connes conjecture? on the other direction: try to find a counterexample.\\
-
-A counterexample was given by Scarparo in \cite{scarparo2018homology}. The groupoid is obtained as $G=\Omega \rtimes \Gamma$, where $\Gamma$ is the infinite dihedral group $\Z\rtimes \Z_2$ and the action is given by shift on $\varinjlim \Gamma/ \Gamma_i$, $\Gamma_j = n_j \Z \rtimes \Z$. Is it FAD? A-T-menable?\\
-
-Pick a strictly increasing sequence of integers $(n_i)$ such that $n_i | n_{i+1}$ and look at the following box-space
-\[X = \coprod_{i\geq 1} | \Z_{n_i}|,\]
-which has property A.\\
-
-Does Matui's conjecture hold for the coarse groupoid $G(X)$?\\ 
-
-Recall that $C^*_r(G) \cong C_u^*(X)$ and let us compute its $K$-theory. \\
-
-Here are some ideas on how to do it. $K_0$ is big. Show that 
-\[K_1(C^*_u(X)) \cong \{ (k_j)_{j\in \Z} \ |\ k \text{ is bounded } \} /  \{ k=(k_j)_{j\in \Z} \ |\ \lim_j k =0 \}.\]
-\begin{itemize}
-\item[$\bullet$] Let $u_j\in M_{n_j}$ be the shift on $\Z_{n_i}$. Then any unitary in $U_N(C^*_u(X))$ is stably homotopic to a product $(u_j^{k_j})_j$.
-\item[$\bullet$] Such a product is not trivial in $K$-theory. To show that a unitary is not trivial in $K_1$, one can for instance compute the trace of 
-\[D(u)u^{-1}\]
-where $D$ is a derivation. For instance $D(u)= [N,u]$ where $N$ is the propagation operator (multiplication by the length).\\
-Remark: if $D$ is the derivation on the circle, then $\int D(u)u^{-1}$ is the winding number.  
-\item[$\bullet$] Take the exact sequence associated to the decompostion $\beta X = X \cup \partial \beta X$, which because $X$ has property A (ghost operators are compact) is
-\[0\rightarrow \mathfrak K \rightarrow C_u^*(X) \rightarrow l^{\infty}(X)/c_{0}(X) \rtimes_r \Z \rightarrow 0\]
-then Pimsner-Voiculescu should conclude. 
-\item[$\bullet$] Mayer-Vietoris argument: $X$ splits into two copies of $U$, coarse unions of lines of length $\frac{n_j}{2}$, with intersection $W$ the coarse union of two-points spaces that are further and further apart, so that the $K$-theory is 
-\[K(C^*_u(\coprod_{n\geq N} W_n)) \cong K(l^\infty \N).\]
-Compute $K(C_u^*U)$.
-\end{itemize} 
-
-To compute the homology, first read \cite{MatuiSurvey}. Also, if $X$ is a box-space, $G(X)_{|\partial \beta X}= \partial \beta X \rtimes \Gamma$. We can use the Mayer-Vietoris exact sequence to compute $H(G(X))$ from $H(X\times X)$ and $H(\partial \beta X \rtimes \Gamma)\cong H(\Gamma, C(\partial\beta X))$. To compute the latter, start with a projective resolution of $\Z [\Gamma]$: 
-\[\begin{tikzcd} 0 \arrow{r} & \Z [\Gamma] \arrow{r}{\partial} & \Z [\Gamma] \arrow{r}{\epsilon} & \Z \arrow{r} & 0 \end{tikzcd}\]
-and tensor it by $C(\partial \beta X)$. The homology of this complex is $H(\Gamma, C(\partial\beta X))$.\\
-
-Christian and Jamie did the following to build a map from Matui's homology to the $K$-theory groups of $G$. They use Putnam's paper \cite{putnam1997excision}.
-\[\begin{tikzcd}
-0\arrow{r} 	&	H_1(G) 		\arrow{r}\arrow{d}	&	\arrow{r}\arrow{d}	&		\arrow{r}\arrow{d}	& H_0(G) \arrow{d} \\
-0\arrow{r}	&	K_1(C^*_r(G))	\arrow{r} 		&	K_0(C_\iota) \arrow{r}  & K_0(C_0(G^0))	\arrow{r}{\iota} 	& K_0(C^*_r(G))
-\end{tikzcd}\]
-
-On our part, we tried to understand how to build a Chern like map. Here are some questions:
-\begin{itemize}
-\item[$\bullet$] Can Matui's homology be computed as a inductive limit $H_*(G)= \varinjlim_E H_*(P_E(G)$ on the Rips complexes of some topological homology theory? The motivating example is that the coarse homology of a coarse space $X$ is obtained as $HX_*(X)=\varinjlim H_*(P_d(X))$. 
-\item[$\bullet$] Show that if $G$ si $d$-BLR (see \cite{}), then $H_n(G)=0$ for $n>d$. 
-\end{itemize}
 \subsubsection*{Failure of $K$-exactness}
 
 Show that if $X$ is an expander, then $C^*_u(X)$ is not $K$-exact.
@@ -201,8 +155,9 @@ Andrzej Zuk build a example of an amenable automata group which is not elementar
 \subsection{Visit to SCMS (Fudan University, Shanghai), 21 July to 15 August 2019}
 %%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{The $C^*$-algebra associated to a Hilbert-Hadamard space}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The best hope for computing the operator $K$-theory of crossed-product $C^*$-algebras is generally to establish the Baum-Connes conjecture. In that case, for a nice group (more generally a nice enough groupoid) $G$ and a $C^*$-algebra on which $G$ acts by automorphisms, the $K$-theory groups $K_*(A\rtimes_r G)$ is isomorphic to Kasparov's $K$-homology $RK_*^G(\underline E G, A)$. The first argument of the latter is the so called \textit{classifying space for proper actions} of $G$, a locally finite (nope) CW-complex. Classical computational methods allow in principle to compute the $K$-homology of such a space.  Still, in order to actually carry these computations, one should also have a concrete model for $\underline EG$, which is not an easy task.\\
 
 The Baum-Connes conjecture has been proven for a very large class of groups, including almost connected locally compact Hausdorff groups, a-T-menable groups, and hyperbolic groups. The main idea behind the vast majority of these proofs is the \textit{Dirac-Dual-Dirac} method:
@@ -528,6 +483,111 @@ If $H$ is absorbing,
 \[RK_*^G(Z,B) \cong K_{*+1}(Q^*_G(Z,H)).\]
 
 \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Matui's conjecture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Matui's conjecture states that 
+\[K_i (C_r^*(G)) \cong \bigoplus_k H^{2k+i}(G)\]
+for every second countable \'etale essentially principal minimal groupoid with base space homeomorphic to a Cantor space. See \cite{MatuiSurvey} for a survey, by Matui himself.\\
+
+Basically, there are two directions that one can take: proving it, for instance for groupoids with FAD, of even for groupoids satisfying the Baum-Connes conjecture? on the other direction: try to find a counterexample.\\
+
+A counterexample was given by Scarparo in \cite{scarparo2018homology}. The groupoid is obtained as $G=\Omega \rtimes \Gamma$, where $\Gamma$ is the infinite dihedral group $\Z\rtimes \Z_2$ and the action is given by shift on $\varinjlim \Gamma/ \Gamma_i$, $\Gamma_j = n_j \Z \rtimes \Z$. Is it FAD? A-T-menable?\\
+
+Pick a strictly increasing sequence of integers $(n_i)$ such that $n_i | n_{i+1}$ and look at the following box-space
+\[X = \coprod_{i\geq 1} | \Z_{n_i}|,\]
+which has property A.\\
+
+Does Matui's conjecture hold for the coarse groupoid $G(X)$?\\ 
+
+Recall that $C^*_r(G) \cong C_u^*(X)$ and let us compute its $K$-theory. \\
+
+Here are some ideas on how to do it. $K_0$ is big. Show that 
+\[K_1(C^*_u(X)) \cong \{ (k_j)_{j\in \Z} \ |\ k \text{ is bounded } \} /  \{ k=(k_j)_{j\in \Z} \ |\ \lim_j k =0 \}.\]
+\begin{itemize}
+\item[$\bullet$] Let $u_j\in M_{n_j}$ be the shift on $\Z_{n_i}$. Then any unitary in $U_N(C^*_u(X))$ is stably homotopic to a product $(u_j^{k_j})_j$.
+\item[$\bullet$] Such a product is not trivial in $K$-theory. To show that a unitary is not trivial in $K_1$, one can for instance compute the trace of 
+\[D(u)u^{-1}\]
+where $D$ is a derivation. For instance $D(u)= [N,u]$ where $N$ is the propagation operator (multiplication by the length).\\
+Remark: if $D$ is the derivation on the circle, then $\int D(u)u^{-1}$ is the winding number.  
+\item[$\bullet$] Take the exact sequence associated to the decompostion $\beta X = X \cup \partial \beta X$, which because $X$ has property A (ghost operators are compact) is
+\[0\rightarrow \mathfrak K \rightarrow C_u^*(X) \rightarrow l^{\infty}(X)/c_{0}(X) \rtimes_r \Z \rightarrow 0\]
+then Pimsner-Voiculescu should conclude. 
+\item[$\bullet$] Mayer-Vietoris argument: $X$ splits into two copies of $U$, coarse unions of lines of length $\frac{n_j}{2}$, with intersection $W$ the coarse union of two-points spaces that are further and further apart, so that the $K$-theory is 
+\[K(C^*_u(\coprod_{n\geq N} W_n)) \cong K(l^\infty \N).\]
+Compute $K(C_u^*U)$.
+\end{itemize} 
+
+To compute the homology, first read \cite{MatuiSurvey}. Also, if $X$ is a box-space, $G(X)_{|\partial \beta X}= \partial \beta X \rtimes \Gamma$. We can use the Mayer-Vietoris exact sequence to compute $H(G(X))$ from $H(X\times X)$ and $H(\partial \beta X \rtimes \Gamma)\cong H(\Gamma, C(\partial\beta X))$. To compute the latter, start with a projective resolution of $\Z [\Gamma]$: 
+\[\begin{tikzcd} 0 \arrow{r} & \Z [\Gamma] \arrow{r}{\partial} & \Z [\Gamma] \arrow{r}{\epsilon} & \Z \arrow{r} & 0 \end{tikzcd}\]
+and tensor it by $C(\partial \beta X)$. The homology of this complex is $H(\Gamma, C(\partial\beta X))$.\\
+
+Christian and Jamie did the following to build a map from Matui's homology to the $K$-theory groups of $G$. They use Putnam's paper \cite{putnam1997excision}.
+\[\begin{tikzcd}
+0\arrow{r} 	&	H_1(G) 		\arrow{r}\arrow{d}	&	\arrow{r}\arrow{d}	&		\arrow{r}\arrow{d}	& H_0(G) \arrow{d} \\
+0\arrow{r}	&	K_1(C^*_r(G))	\arrow{r} 		&	K_0(C_\iota) \arrow{r}  & K_0(C_0(G^0))	\arrow{r}{\iota} 	& K_0(C^*_r(G))
+\end{tikzcd}\]
+
+On our part, we tried to understand how to build a Chern like map. Here are some questions:
+\begin{itemize}
+\item[$\bullet$] Can Matui's homology be computed as a inductive limit $H_*(G)= \varinjlim_E H_*(P_E(G)$ on the Rips complexes of some topological homology theory? The motivating example is that the coarse homology of a coarse space $X$ is obtained as $HX_*(X)=\varinjlim H_*(P_d(X))$. 
+\item[$\bullet$] Show that if $G$ si $d$-BLR (see \cite{}), then $H_n(G)=0$ for $n>d$. 
+\end{itemize}
+
+\textbf{About $G$-rings and $G$-modules.}\\
+
+Let $R$ be a ring and $M$ be a $R$-module. Let $G$ be an ample groupoid and $X$ a right $G$-space with \'etale momentum map. We will denote by 
+\begin{itemize}
+\item[$\bullet$] $R[G]$ the abelian group $C_c(G,R)$ (if $R$ does not come up with a topology, we take the discrete one);
+\item[$\bullet$] $M[X]$ the abelian group $C_c(X,M)$ (same remark).
+\end{itemize}
+We will define a ring structure on $R[G]$, and a $R[G]$-module structure on $M[X]$. For that, we suppose that $G$ acts on $R$, i.e. we have a morphism (of rings)
+\[\alpha : \Z[G] \rightarrow R.\]
+Define for $a,b\in R[G]$,
+\[(ab)(g) = \sum_{h\in G^{r(g)}} a(h)\alpha_h {b(h^{-1}g)} \quad g\in G.\]
+and $m\in M[X]$,
+\[(ma)(x) = \sum_{g\in G^{p(x)}} m(xg^{-1})a(g) \quad g\in G.\]
+Similarly,
+\[(am)(x) = \sum_{g\in G^{p(x)}}a(g) m(g^{-1}x) \quad g\in G,\]
+defines a structure of left $R[G]$-module in the case where $X$ is a left $G$-space.\\
+
+Recall that if $p: X\rightarrow G^0$ and $q: Y\rightarrow G^0$ are spaces over $G^0$, then their fibred product is 
+\[X\times_{p,q}Y = \{(x,y)\in X\times Y \ | \ p(x)= q(y)\}.\]
+It is a closed subspace of $X\times Y$.\\
+
+By a $G$-module, we mean a space $Y\rightarrow G^0$ over $G^0$ equipped with commuting left and right actions of $G$. If $Y$ is $G$-module and $N$ a $R$-bimodule, we then have a $R[G]$-bimodule structure on $N[Y]$. The left action restricts to a structure of $R[G^0]$-module. We can thus form the balanced tensor product
+\[M[X]\otimes_{R[G^0]} N[Y],\]
+which we declare a right $R[G]$-module by $(m\otimes n)a = m\otimes (na)$.
+
+\begin{prop}
+There is an isomorphism of $R[G]$-modules
+\[R[X]\otimes_{R[G^0]} M[Y] \cong M[X\times_{p,q}Y] \]
+\end{prop}
+
+\begin{proof}
+The first thing to see is that $R[X]\otimes M[Y] \cong M[X\times Y]$. Indeed, $G$ being ample and $p,q$ being \'etales ensure that any compact subset of $X\times Y$ is contained in a set of the form $\cup_{i=1}^N V_i \times K_i$, where the $V_i $'s are disjoint a compact open subsets such that $p_{|V_i}$ is a homeomorphism, and $K_i$ is a compact subset of $Y$. If $f\in M[X\times Y]$ is supported in such a set, then 
+\[f = \sum_{i=1}^N \chi_{V_i} \otimes f_i\]
+Then the injection $R[X]\otimes M[Y] \rightarrow M[X\times Y]$ is surjective, so is an isomorphism. The canonical projection $R[X]\otimes_\Z M[Y] \rightarrow R[X]\otimes_{R[G^0]} M[Y] $ is thus $M[X\times Y] \rightarrow R[X]\otimes_{R[G^0]} M[Y] $.\\
+ 
+Seeing $X\times_{p,q} Y$ as a closed subspace of $X\times Y$, it is immediate to see that if $m\otimes n \in M[X\times_{p,q} Y]$,
+\[(ma \otimes n)(x,y) = m(x)a(p(x))n(y) = m(x)a(q(y))n(y) = (m\otimes an)(x,y)\]
+which gives that the canonical projection $M[X\times Y]\rightarrow R[X]\otimes_{R[G^0]} M[Y]$ has cokernel $M[X\times_{p,q} Y]$, so $M[X]\otimes_{R[G^0]} M[Y] \cong M[X\times_{p,q}Y] $ as abelian groups, which concludes since the isomorphism is clearly $R[G]$-equivariant.  \\
+\end{proof}
+I guess it would not be harder to show $M[X]\otimes_{R[G^0]} N[Y] \cong (M\otimes_R N)[X\times_{p,q}Y] $. \\
+
+Examples: \\
+Let $R=M= \Z$. Then $G^n$ is nothing else than the itereated fibred product $G\times_{s,r} G \times_{s,r} ... \times_{s,r} G$, so that $G^{n+1} = G\times_{s,r} G^n $. The previous proposition gives then
+\[\Z[G^{n+1}]\cong \Z [G] \otimes_{\Z [G^0] } \Z[G^n]. \]
+
+To Do\\
+I would like to look at the category of $G$-equivariant sheaves over proper $G$-compact spaces, i.e. contravariant $G$-equivariant functors 
+\[\mathcal O (X) \rightarrow C\]
+where $X$ is a proper $G$-compact space and $C$ a category equipped with an action of $G$.\\
+
+Is it interesting to do induction? Restriction principle? Let $N$ be a $R[G]$-module. If $X$ is a left $G$-space and a right $G'$-space, then $M[X]$ is a $R[G]$-$R[G']$-bimodule and 
+\[ ind_X N := (N \otimes_{R[G^0]} M[X])^{G'}. \]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Paschke duality for groupoids}  %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
