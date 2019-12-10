@@ -375,15 +375,17 @@ so that if $\{\lambda_x\}_{x\in F}$ is exhaustive, then $\lambda_F$ is an isomor
 
 \begin{definition}
 A $C^*$-algebra $A$ is $K$-exact if, for every exact sequence
-\[0 \rightarrow J \rightarrow B \rightarrow B/J \rightarrow 0,\]
-the induced sequence
+\[0 \rightarrow J \rightarrow B \rightarrow B/J \rightarrow 0\]
+of $C^*$-algebras, the induced sequence
 \[ K(J) \rightarrow K(B) \rightarrow K(B/J) \]
 is exact in the middle.
 \end{definition}
 
 In the separable case, $C^*$-algebras in the Bootstrap class (equivalent to $K$-commutative) are $K$-nuclear, which are themselves $K$-exact. This gives a lot of examples, such as the reduced $C^*$-algebras of amenable groups (more generally a-T-menable groupoids).\\
 
-On the counterexample side, Ozawa proved bot that $\prod M_n$ and $C^*_r (G)$ are not $K$-exact, if the Cayley graph of $G$ contains isometrically an expander. Spakula showed that if $X$ is a box space obtained from a residually finite group $G$ with property (T), then its uniform Roe algebra $C_u^*(X)$ is not $K$-exact. The proof of these results relies on building a Kazdhan-type projection which witnesses the failure of the sequence $(*)$. We will provide a general procedure to do so with the help of what we call a \textit{twisted Laplacian}. A natural condition on its spectrum, which would be a analog of property (T) in that setting, will allow to produce a Kazdhan-type projection that will lead to failure of $K$-exactness.\\
+On the counterexample side, Ozawa proved bot that $\prod M_n$ and $C^*_r (G)$ are not $K$-exact, if the Cayley graph of $G$ contains isometrically an expander. Spakula showed that if $X$ is a box space obtained from a residually finite group $G$ with property (T), then its uniform Roe algebra $C_u^*(X)$ is not $K$-exact. The proof of these results relies on building a Kazdhan-type projection which witnesses the failure of the sequence $(*)$. We will provide a general procedure to do so with the help of what we call a \textit{twisted Laplacian}. A natural condition on its spectrum, which would be a analog of property (T) in that setting, will allow to produce a Kazdhan-type projection that will lead to failure of $K$-exactness.
+
+\subsection{Twisted Laplacians}
 
 We first recall some facts about representation theory of $C^*$-algebras. We will denote $\phi : A \rightarrow B(H)$ and $\sigma : A \rightarrow B(K)$ two representations, i.e. $*$-homomorphisms. Then one can define the space of intertwiners
 \[Hom_A(K,H) = \{ T\in B(K,H) / T \sigma (a) = \phi(a) T \forall a \in A \}.\]
@@ -418,22 +420,64 @@ proving that
 \[\partial = \sum_{s\in S} x_s \otimes c_s\]  
 satisfies $\partial^* \partial = \Delta \otimes 1_{\mathcal O_S}$, thus $\partial$ can be thought of as a twisted Dirac operator.\\
 
-Let $A\subset B(H)$ be a finitely generated $C^\ast$-algebra, $S$ a finite self-adjoint generating set and $l(a)$ the associated length. Suppose
-\begin{itemize} 
-\item[$\bullet$] there exists a decomposition $H=\bigoplus H_n$ with finite dimensional $H_n$ such that $\lim dim H_n = +\infty$ and $A\subset \bigoplus B(H_n)$;
-\item[$\bullet$] there exists a sequence of finite dimensional irreducible representations $\sigma_m : A \rightarrow B(K_m)$ such that $\lim dim K_m = +\infty$ and $Hom_A(K_m, H_m) \neq 0$;
-\item[$\bullet$] there exist $r>0$ and $\varepsilon >0$ such that for all $\eta \in \bigoplus_m (H_m)_{\sigma_m}$, there exists $a\in A_{+,1}$ such that $\| (a_m\otimes 1)\eta - (1\otimes \sigma(a_m^*)\eta \| \geq \varepsilon \| \eta \|$. 
+The projection onto the kernel of $\Delta_{\sigma,\phi}$ always exists in the bidual of $A$, by Borel functional calculus.
+\[ p_{\sigma,\phi} = \chi(\Delta_{\sigma,\phi})\]
+where $\chi$ is the characteristic function of the singleton $\{0\}$.
+
+\subsection{Kazdhan projections}
+
+Let $A\subset B(H)$ be a unital finitely generated $C^\ast$-algebra, $S$ a finite self-adjoint generating set and $l(a)$ the associated length. We denote by $A_r$ the closed self-adjoint subspace of elements of length lesser than $r$. Then we have a filtration
+\begin{itemize}
+\item[$\bullet$] $A = \overline{\cup_{r>0} A_r}$,
+\item[$\bullet$] $A_r A_s \subset A_{s+t}$,
+\item[$\bullet$]  $1_A \in A_r$ for every $r>0$.
 \end{itemize}
 
-Denote by $\phi_n : A \rightarrow B(H_n)$ the restriction to the $n^{th}$-block, and consider $\oplus_{n,m} \Delta_{n,m} \in B(H\otimes K) $, where $\Delta_{n,m}$ is the operator $\Delta_{\phi_n, \sigma_m}$ associated to the finite generating set of $A$. By the hypothesis, for a fixed $n$, $(\Delta_{n,m})_m$ is finitely supported in $m$. Moreover, $Spec(\Delta_{n,m}) \subset \{0\}\cup (\varepsilon, \infty )$, so that the spectral projection $p$ onto its kernel belongs to $A\otimes \prod_m B(K_m)$. Indeed, the characteristic function $\chi$ of the singleton $\{0\}$ is continuous on the spectrum of $\Delta$, and $p = \chi(\Delta)$ is defined by continuous functional calculus. Moreover $p$ has the same block decomposition that $\Delta$, hence its image is $0$ in $A \otimes (\prod_m B(K_m) / \bigoplus B(K_m))$.\\
+Suppose that:
+\begin{itemize} 
+\item[$\bullet$] there exists a decomposition $H=\bigoplus H_m$, with $dim(H_m)$ finite
+\item[$\bullet$] for every $r>0$, there exists $M>0$ such that 
+\[A_r \subset \mathcal B_M \oplus \prod_{m\geq M+1} B_m \]
+with $\mathcal B_M = B(\oplus_{m=1}^{M} H_M)$ and $B_m = B(H_m)$.
+\end{itemize}
 
-As $Hom_A(K_m, H_m) \neq 0$, $tr(p_{nn}) \geq \frac{dim K_n}{dim H_n}$. Define
-\[K_0(A\otimes \prod_m B(K_m)) \rightarrow \prod \mathbb R / \oplus \mathbb R\] 
-by $\tau([p]) = (tr(p_{nn}))_n$.
+The $C^*$-algebras $\{\mathcal B_M \oplus \prod_{m\geq M+1} B_m \}_M$ naturally form an inductive system, denote by $\mathcal B_\infty$ the inductive limit. Then the second condition ensures the existence of an embedding
+\[\phi: A \hookrightarrow \mathcal B_\infty.\]
 
-This trace-like map kills $A \otimes \bigoplus B(K_m) $, and $\tau([p])\neq 0$.\\
+Suppose that there exists a family of finite dimensional irreducible representations $\sigma_n : A \rightarrow B(K_n)$ such that 
+\[sp(\Delta_{n}) \subset \{0\} \cup (\varepsilon, \infty)\]
+with $\Delta_n = \Delta_{\sigma_n,\phi}$. In particular, if $K\oplus K_n$, 
+\[\Delta = (\Delta_n)_n \in A\otimes \prod_n B(K_n) \subset B(H\otimes K) \]
+Denote $\prod_n B(K_n)$ by $C$, and its ideal $\bigoplus_n B(K_n)$ by $J$. We then have the exact sequence
+\[0 \rightarrow J \rightarrow C \rightarrow C/J \rightarrow 0\]
+of $C^*$-algebras, and the assumptions on our representations allow us to define the Kazdhan type projection $p = \chi(\Delta)\in A\otimes C$.\\
 
+\begin{prop}
+The class \[ [p] \in K_0(A\otimes C)\]
+is not in the image of $K_0(A\otimes J)$.
+\end{prop}
+\begin{proof}
+The completely positive map $\mathcal B_N \oplus \prod_{n\geq N+1} B_n \rightarrow \prod_{n\geq 1} B_n$ induces a morphism 
+\[\tau: K_0(A\otimes C)\rightarrow \prod \Z / \oplus \Z.\]
+Notice that $\tau$ is zero on $A\otimes J$, but $\tau([p]) \neq 0$. \\
+\end{proof}
+
+\begin{prop}
+The projection $p$ goes to zero in $A\otimes C/J$.
+\end{prop}
+
+\begin{proof}
+
+\end{proof}
+
+Note: I need an asymptotic version of property (T) with asymptotic intertwiners 
+\[ T: K \rightarrow H \quad \| [T_{nn},a] \| \rightarrow 0\]
+and asymptotic invariant vectors (almost invariant vectors?)
+\[\eta \in K\otimes H \quad a\otimes 1 \eta_n - 1\otimes a^* \eta \rightarrow 0\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{First draft}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Let $A \subset B(H)$ be a unital concrete filtered $C^*$-algebra, and 
 \[\mathcal N = \{\sigma : A \rightarrow B(H_\sigma) = M_{k(\sigma)}\}\]
@@ -487,7 +531,26 @@ Indeed, $\Delta= (\Delta_{ij})$.
 The first thing to realize is that $ker(\Delta_{ij})=\Lambda_{ij}$. The spectral gap condition ensures that the characteristic function of the singleton $\{0\}$ is continous on the spectrum of $\Delta$ in 
 \[\bigoplus_{ij} H_i \otimes K_j = \bigoplus_{ij} \Lambda_{ij} \oplus \Lambda_{ij}^{\perp}, \]
 so that by continous functional calculus $p \in C_r^*(G)$. Decompose $p =(p_{ij})$, then $p_{ij}$ is nonzero iff $\Lambda_{ij}$ is nonzero iff there is an nonzero intertwiner $K_j \rightarrow H_i$. $H_i$ being finite dimensional and $K_j$ being irreducible, that can only happen for finitely many $j$ so that $p_i =(p_{ij})_j$ is finitely supported in $j$ and the second claims follow. \\
+
+Suppose that:
+\begin{itemize} 
+\item[$\bullet$] there exists a decomposition $H=\bigoplus H_n$ with finite dimensional $H_n$ such that $\lim dim H_n = +\infty$ and $A\subset \bigoplus B(H_n)$;
+\item[$\bullet$] there exists a sequence of finite dimensional irreducible representations $\sigma_m : A \rightarrow B(K_m)$ such that $\lim dim K_m = +\infty$ and $Hom_A(K_m, H_m) \neq 0$;
+\item[$\bullet$] there exist $r>0$ and $\varepsilon >0$ such that for all $\eta \in \bigoplus_m (H_m)_{\sigma_m}$, there exists $a\in A_{+,1}$ such that $\| (a_m\otimes 1)\eta - (1\otimes \sigma(a_m^*)\eta \| \geq \varepsilon \| \eta \|$. 
+\end{itemize}
+
+Denote by $\phi_n : A \rightarrow B(H_n)$ the restriction to the $n^{th}$-block, and consider $\oplus_{n,m} \Delta_{n,m} \in B(H\otimes K) $, where $\Delta_{n,m}$ is the operator $\Delta_{\phi_n, \sigma_m}$ associated to the finite generating set of $A$. By the hypothesis, for a fixed $n$, $(\Delta_{n,m})_m$ is finitely supported in $m$. Moreover, $Spec(\Delta_{n,m}) \subset \{0\}\cup (\varepsilon, \infty )$, so that the spectral projection $p$ onto its kernel belongs to $A\otimes \prod_m B(K_m)$. Indeed, the characteristic function $\chi$ of the singleton $\{0\}$ is continuous on the spectrum of $\Delta$, and $p = \chi(\Delta)$ is defined by continuous functional calculus. Moreover $p$ has the same block decomposition that $\Delta$, hence its image is $0$ in $A \otimes (\prod_m B(K_m) / \bigoplus B(K_m))$.\\
+
+As $Hom_A(K_m, H_m) \neq 0$, $tr(p_{nn}) \geq \frac{dim K_n}{dim H_n}$. Define
+\[K_0(A\otimes \prod_m B(K_m)) \rightarrow \prod \mathbb R / \oplus \mathbb R\] 
+by $\tau([p]) = (tr(p_{nn}))_n$.
+
+This trace-like map kills $A \otimes \bigoplus B(K_m) $, and $\tau([p])\neq 0$.\\
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Coarse decompositions for groupoids, stability of the Baum-Connes conjecture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Let us define the localization algebra for groupoids.\\
 
@@ -514,6 +577,49 @@ Recall the definition of absorbing representations. Let $A$ a $G$-algebra and $\
 If $H$ is absorbing, 
 \[RK_*^G(Z,B) \cong K_{*+1}(Q^*_G(Z,H)).\]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Paschke duality for groupoids}  %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Let $X$ be a proper right $G$-space, with $p: X \rightarrow G^0$ the anchor map. It is a local homeomorphism, and the fiber $X_s = p^{-1}(s)$ is discrete.\\
+
+Given a $G$-algebra $A$ and a $G$-Hilbert $A$-module $H$, we will build two Hilbert modules.\\
+
+Define $L^2(X,H)$ to be the completion of the sections $ \Gamma_c(G,r^* H)$ with the $A$-valued inner product
+\[ \langle \eta, \xi \rangle_s = \sum_{x\in X_s}\langle \eta(x), \xi(x) \rangle_{H} \quad \forall \eta,\xi \in \Gamma_c(G,r^* H). \]
+The $A$-module structure is given by $(\eta a)(x)=\eta(x)a(p(x))$, and multiplication $(f \eta)(x)= f(x)\eta(x)$ defines a non-degenerate $G$-equivariant representation $\phi : C_0(X)\rightarrow \mathcal L_A(L^2(X,E))$.\\
+
+The pull-back $s^* L^2(X,H) := C_0(G)\otimes_s L^2(X,H) $ is naturally ismorphic to the $s^*A$-Hilbert module, obtained by completion of the sections $\Gamma_c (X\times_{p,s}G,H)$ with $C_0(G)$-valued inner product 
+\[\langle \eta, \xi\rangle_g = \sum_{x\in X_{s(g)}} \langle \eta(x,g) , \xi(x,g) \rangle_H \quad \forall \eta ,\xi \in \Gamma_c (X\times_{p,s}G,H)\]
+and $s^*A$-module structure given by $(\eta f)(x, g) = \eta(x,g)f(g)$.\\ 
+The same is true when $r$ replaces $s$, and the map $(U\eta)(x,g) = \eta(xg,g)$ defines a adjoinable operator 
+\[U : s^* L^2(X,H) \rightarrow r^* L^2(X,H)\]
+which is unitary, such that $U_g U_h = U_{gh}$ for all $(g,h)\in G^2$.\\
+
+Define $L^2_G(X,H)$ to be the $A\rtimes_r G$ Hilbert module obtained by completion of the sections $\Gamma_c(X,r^* H)$ with respect to the inner-product
+\[ \langle \eta, \xi \rangle_g = \sum_{x\in X_{r(g)}} \langle \eta(x) , \xi(xg)\rangle_H \]
+and $C_r^*(G)$-module structure given by $(\eta f)(x) = \sum_{g\in G_{p(x)}} \eta(xg^{-1})f(g)$ for $f\in C_c(G)$, $\eta\in \Gamma_c(X,r^* H)$.\\
+
+The case of $X=G$ and $H=A$ is particularly interesting, as it allows a definition for the left regular representation. The left regular representation $\lambda_{G,A}$ is given by 
+\[ \lambda(f )\eta  = f \ast \eta \quad\forall f,\eta \in \Gamma_c(G,r^*A).\] 
+This induces a injective $*$-homomorphism 
+\[\lambda_{G,A} : A\rtimes_r G \rightarrow \mathcal L_A( L^2(G,A)).\]
+Using the internal tensor product, we can thus define 
+\[E = L^2_G(X,H) \otimes_\lambda L^2(G,A).\]
+We have $s^* E \cong L^2_G(X,H) \otimes_{s^* \lambda} s^* L^2(G,A)$ (and the same for $r$).
+
+\begin{prop}
+For $\eta \otimes \xi \in L^2_G(X,H) \otimes_\lambda L^2(G,A) $, the map 
+\[(V\eta\otimes\xi)(x) =\sum_{g\in G_{p(x)}} \eta(xg^{-1})\xi (g)\]
+induces an isomorphism of $G$-Hilbert $C_0(G^0)$-module
+\[ V : L^2_G(X,H) \otimes_\lambda L^2(G,A) \rightarrow L^2(X,H).\]
+\end{prop}
+
+\begin{cor}
+The isomorphism $V$ induces a $*$-isomorphism
+\[\mathfrak K_{A\rtimes_r G} ( L^2(G,A) ) \cong C^*_G(X, L^2(X,H))\]
+by $T\mapsto U^*(1\otimes T)U$.
+\end{cor}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -620,49 +726,7 @@ where $X$ is a proper $G$-compact space and $C$ a category equipped with an acti
 
 Is it interesting to do induction? Restriction principle? Let $N$ be a $R[G]$-module. If $X$ is a left $G$-space and a right $G'$-space, then $M[X]$ is a $R[G]$-$R[G']$-bimodule and 
 \[ ind_X N := (N \otimes_{R[G^0]} M[X])^{G'}. \]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Paschke duality for groupoids}  %%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Let $X$ be a proper right $G$-space, with $p: X \rightarrow G^0$ the anchor map. It is a local homeomorphism, and the fiber $X_s = p^{-1}(s)$ is discrete.\\
-
-Given a $G$-algebra $A$ and a $G$-Hilbert $A$-module $H$, we will build two Hilbert modules.\\
-
-Define $L^2(X,H)$ to be the completion of the sections $ \Gamma_c(G,r^* H)$ with the $A$-valued inner product
-\[ \langle \eta, \xi \rangle_s = \sum_{x\in X_s}\langle \eta(x), \xi(x) \rangle_{H} \quad \forall \eta,\xi \in \Gamma_c(G,r^* H). \]
-The $A$-module structure is given by $(\eta a)(x)=\eta(x)a(p(x))$, and multiplication $(f \eta)(x)= f(x)\eta(x)$ defines a non-degenerate $G$-equivariant representation $\phi : C_0(X)\rightarrow \mathcal L_A(L^2(X,E))$.\\
-
-The pull-back $s^* L^2(X,H) := C_0(G)\otimes_s L^2(X,H) $ is naturally ismorphic to the $s^*A$-Hilbert module, obtained by completion of the sections $\Gamma_c (X\times_{p,s}G,H)$ with $C_0(G)$-valued inner product 
-\[\langle \eta, \xi\rangle_g = \sum_{x\in X_{s(g)}} \langle \eta(x,g) , \xi(x,g) \rangle_H \quad \forall \eta ,\xi \in \Gamma_c (X\times_{p,s}G,H)\]
-and $s^*A$-module structure given by $(\eta f)(x, g) = \eta(x,g)f(g)$.\\ 
-The same is true when $r$ replaces $s$, and the map $(U\eta)(x,g) = \eta(xg,g)$ defines a adjoinable operator 
-\[U : s^* L^2(X,H) \rightarrow r^* L^2(X,H)\]
-which is unitary, such that $U_g U_h = U_{gh}$ for all $(g,h)\in G^2$.\\
-
-Define $L^2_G(X,H)$ to be the $A\rtimes_r G$ Hilbert module obtained by completion of the sections $\Gamma_c(X,r^* H)$ with respect to the inner-product
-\[ \langle \eta, \xi \rangle_g = \sum_{x\in X_{r(g)}} \langle \eta(x) , \xi(xg)\rangle_H \]
-and $C_r^*(G)$-module structure given by $(\eta f)(x) = \sum_{g\in G_{p(x)}} \eta(xg^{-1})f(g)$ for $f\in C_c(G)$, $\eta\in \Gamma_c(X,r^* H)$.\\
-
-The case of $X=G$ and $H=A$ is particularly interesting, as it allows a definition for the left regular representation. The left regular representation $\lambda_{G,A}$ is given by 
-\[ \lambda(f )\eta  = f \ast \eta \quad\forall f,\eta \in \Gamma_c(G,r^*A).\] 
-This induces a injective $*$-homomorphism 
-\[\lambda_{G,A} : A\rtimes_r G \rightarrow \mathcal L_A( L^2(G,A)).\]
-Using the internal tensor product, we can thus define 
-\[E = L^2_G(X,H) \otimes_\lambda L^2(G,A).\]
-We have $s^* E \cong L^2_G(X,H) \otimes_{s^* \lambda} s^* L^2(G,A)$ (and the same for $r$).
-
-\begin{prop}
-For $\eta \otimes \xi \in L^2_G(X,H) \otimes_\lambda L^2(G,A) $, the map 
-\[(V\eta\otimes\xi)(x) =\sum_{g\in G_{p(x)}} \eta(xg^{-1})\xi (g)\]
-induces an isomorphism of $G$-Hilbert $C_0(G^0)$-module
-\[ V : L^2_G(X,H) \otimes_\lambda L^2(G,A) \rightarrow L^2(X,H).\]
-\end{prop}
-
-\begin{cor}
-The isomorphism $V$ induces a $*$-isomorphism
-\[\mathfrak K_{A\rtimes_r G} ( L^2(G,A) ) \cong C^*_G(X, L^2(X,H))\]
-by $T\mapsto U^*(1\otimes T)U$.
-\end{cor}
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
