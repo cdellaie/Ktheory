@@ -69,6 +69,8 @@
 \contentsline {section}{\numberline {3.3}Coarse decompositions for groupoids, stability of the Baum-Connes conjecture}{101}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Paschke duality for groupoids}{101}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Matui's conjecture}{103}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}About $G$-rings and $G$-modules.}{104}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Vanishing theorem and another question}{106}{subsection.3.5.2}%
 \contentsline {section}{\numberline {3.6}Non-proper actions, restriction principle and the Baum-Connes conjecture}{107}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Breakdown of the argument of Herv\'e for extensions}{107}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Argument for trees}{108}{subsection.3.6.2}%

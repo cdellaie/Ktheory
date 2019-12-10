@@ -674,7 +674,7 @@ On our part, we tried to understand how to build a Chern like map. Here are some
 \item[$\bullet$] Show that if $G$ si $d$-BLR (see \cite{}), then $H_n(G)=0$ for $n>d$. 
 \end{itemize}
 
-\textbf{About $G$-rings and $G$-modules.}\\
+\subsection{About $G$-rings and $G$-modules.}
 
 Let $R$ be a ring and $M$ be a $R$-module. Let $G$ be an ample groupoid and $X$ a right $G$-space with \'etale momentum map. We will denote by 
 \begin{itemize}
@@ -727,7 +727,19 @@ where $X$ is a proper $G$-compact space and $C$ a category equipped with an acti
 Is it interesting to do induction? Restriction principle? Let $N$ be a $R[G]$-module. If $X$ is a left $G$-space and a right $G'$-space, then $M[X]$ is a $R[G]$-$R[G']$-bimodule and 
 \[ ind_X N := (N \otimes_{R[G^0]} M[X])^{G'}. \]
 
+\subsection{Vanishing theorem and another question}
 
+It is natural to go from the ordered complex $\{G^n\}$ to the unordered one $\Delta=\{G^n/S_n\}$. This corresponds to passing from free proper actions to proper actions (the latter can have some isotropy due to the fact that one can stabilize a simplex), and the Rips complex $\cup P_K(G)$ is a topological realization of $\Delta$. So let us consider
+\[\Delta_n = G^n / S_n\] where the permutation group $S_n$ acts by permutting (shocking) the coordinates. \\
+
+It is probable that the counterexample of Scarparo does not survive this change of homology, meaning that the $K$-theory $K_*(C(\Omega)\rtimes \Gamma)$ is isomorphic to 
+\[\begin{split}
+H_*(G)  & =  H_*(\Gamma, \Omega)\\
+	&= \varinjlim H_*(\Gamma, \Gamma / \Gamma_i) \\
+	& = \varinjlim H_*( \Gamma_i) 
+\end{split}\]
+
+The other question is to show properly that some dynamical condition implies that $G$ has finite projective dimension. This is well studied in the case of groups (for instance see Brown's book: if a group acts freely and properly on a finite dimensional CW-complex, its has finite projective dimension).
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Non-proper actions, restriction principle and the Baum-Connes conjecture}  %%%%
