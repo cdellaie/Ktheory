@@ -389,10 +389,16 @@ On the counterexample side, Ozawa proved bot that $\prod M_n$ and $C^*_r (G)$ ar
 
 We first recall some facts about representation theory of $C^*$-algebras. We will denote $\phi : A \rightarrow B(H)$ and $\sigma : A \rightarrow B(K)$ two representations, i.e. $*$-homomorphisms. Then one can define the space of intertwiners
 \[Hom_A(K,H) = \{ T\in B(K,H) / T \sigma (a) = \phi(a) T \forall a \in A \}.\]
-If $H$ and $K$ are finite dimensional, it is itself a finite dimensional representation of $A$, isomorphic to $\Lambda_{\sigma,\phi} =\{\eta \in K^* \otimes H / (\phi(a)\otimes 1)\eta = (1\otimes \sigma(a^*)\eta, \forall a\in A\}$. (If not, maybe on can restrict to the Hilbert-Schmidt operators to get a Hilbert space? Not important here.)\\
+If $H$ and $K$ are finite dimensional, it is itself a finite dimensional representation of $A$, isomorphic to $\Lambda_{\sigma,\phi} =\{\eta \in K^* \otimes H / (\phi(a)\otimes 1)\eta = (1\otimes \sigma(a^*)\eta, \forall a\in A\}$. \\
+
+In the cas where only $K$ is finite dimensional, one can restrict to the Hilbert-Schmidt operators to get a Hilbert space, i.e. one consider the Hilbert space $K^*\otimes_2 H$ of bounded operators from $K$ to $H$ endowed with the inner-product
+\[\langle a, b \rangle = Tr(a^* b) \]
+where $Tr$ is the normalized trace on $B(K)\cong M_d$. Then $A$ acts on $K^*\otimes_2 H$ via
+\[ a. T = \phi(a)T\sigma(a)^*\]
+and invariant vectors ($ a.T = T$) correspond to intertwiners. \\ 
  
 We suppose $\sigma$ is (topologically) \textit{irreducible}, meaning that any vector is cyclic. There is a $A$-morphism 
-\[Hom_A(K,H) \otimes K \rightarrow H ;  T\otimes v \mapsto T(v),\]
+\[B(K,H) \otimes K \rightarrow H \ ;\  T\otimes v \mapsto T(v),\]
 whose image we denote by $H^\sigma$ or $H^K$. It is the subspace of $\sigma$-\textit{isotypical components} of $H$. Then $H_\sigma$ will denote the orthogonal complement of $H^\sigma$. If $\sigma$ and $\sigma'$ are two non-equivalent irreducible representations, then $H^\sigma$ and $H^{\sigma'}$ are in direct sum. An important consequence for us is that, if $H$ is finite dimensional, only finitely many $H^\sigma$ are non zero for distinct $\sigma$'s.\\
 
 Fix a finite self-adjoint set $S= \{a_i\}_{i=1,N}$ in $A$.
@@ -433,6 +439,26 @@ Let $A\subset B(H)$ be a unital finitely generated $C^\ast$-algebra, $S$ a finit
 \item[$\bullet$]  $1_A \in A_r$ for every $r>0$.
 \end{itemize}
 
+\subsubsection*{Diagonal case}
+
+Suppose that there exists 
+\begin{itemize}
+\item[$\bullet$] a decomposition $H=\bigoplus H_m$, with $dim(H_m)$ finite, diverging to $\infty$ such that 
+\[A \subset \prod_{m} B_m \]
+with $B_m = B(H_m)$,
+\item[$\bullet$] pairwise inequivalent finite dimensional irreducible representations \[\sigma_n : A \rightarrow B_n= B(K_n)\] such that $K_n < H_n$.
+\end{itemize} 
+This is Ozawa's example $\prod M_n$. Is it a different proof? The first condition applies for instance when $X=\coprod X_n$ is an expander with infinite distance between the finite components.\\
+
+Consider $\sigma = \oplus \sigma_i$ and $\Delta = \Delta_{\sigma, \phi}$, where $\phi$ is the representation $A\rightarrow \prod B_m$. Then $\Delta$ stabilizes $H_m\otimes K_n$: denote by $\Delta_{m,n}$ the associated coefficients. If the family $\{\Delta_{m,n}\}$ has uniform spectral gap, i.e. there exists $\varepsilon>0$ such that
+\[sp(\Delta_{m,n})\subset \{0\}\cup (\varepsilon, \infty) \]
+then the spectral projection $p=\chi(\Delta)$ belongs, by continuous functional calculus, in $A\otimes \prod_n B_n$. By naturality of continuous functional calculus, $p$ stabilizes $H_n\otimes K_m$, and $p_{m,n}$ is the projection onto the isotypical component $H_m^{\sigma_n}$. $H_n$ being finite dimensional, at $n$ fixed, $p$ is finitely supported in $m$, so that it goes to zero in $A\otimes \oplus B_m$.\\
+
+Moreover $K_n< H_n$ so $Tr(p_{nn})>0$ (normalized trace on $B(H_n\otimes K_n)$. The map $p \mapsto (Tr(p_{nn})$ induces
+a morphism \[\tau : K(A\otimes \prod_n B_n) \rightarrow \prod_n \Z / \oplus_n \Z.\]
+This morphism kills anything coming from $K(A\otimes \oplus B_n)$, but we just showed that $\tau(p)\neq 0$.
+
+\subsubsection*{Asymptotically diagonal case}
 Suppose that:
 \begin{itemize} 
 \item[$\bullet$] there exists a decomposition $H=\bigoplus H_m$, with $dim(H_m)$ finite
