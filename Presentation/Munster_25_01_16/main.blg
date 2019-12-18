@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
 A level-1 auxiliary file: zoology.aux
 A level-1 auxiliary file: RepresentationGroupoid.aux
 A level-1 auxiliary file: Grothendieck.aux
@@ -13,22 +15,22 @@ You're missing a field part---line 212 of file biblio.bib
  :     volume  = 
  :               ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 297 of file biblio.bib
+I was expecting a `,' or a `}'---line 308 of file biblio.bib
  : 
  : month = "10"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 307 of file biblio.bib
+I was expecting a `,' or a `}'---line 318 of file biblio.bib
  : 
  : month = ""
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 317 of file biblio.bib
+I was expecting a `,' or a `}'---line 328 of file biblio.bib
  : 
  : month = ""
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 357 of file biblio.bib
+I was expecting a `,' or a `}'---line 368 of file biblio.bib
  : 
  : month = "Summer"
 (Error may have been on previous line)
@@ -42,4 +44,45 @@ Warning--I didn't find a database entry for "ChabertEO"
 Warning--I didn't find a database entry for "WillettNonamenable"
 Warning--empty journal in Penrose2005Einstein
 Warning--there's a number but no series in williams2007crossed
+You've used 50 entries,
+            2118 wiz_defined-function locations,
+            827 strings with 11319 characters,
+and the built_in function-call counts, 14445 in all, are:
+= -- 1454
+> -- 556
+< -- 6
++ -- 231
+- -- 172
+* -- 923
+:= -- 2463
+add.period$ -- 151
+call.type$ -- 50
+change.case$ -- 226
+chr.to.int$ -- 0
+cite$ -- 52
+duplicate$ -- 571
+empty$ -- 1192
+format.name$ -- 172
+if$ -- 2988
+int.to.chr$ -- 0
+int.to.str$ -- 50
+missing$ -- 56
+newline$ -- 252
+num.names$ -- 100
+pop$ -- 218
+preamble$ -- 1
+purify$ -- 183
+quote$ -- 0
+skip$ -- 406
+stack$ -- 0
+substring$ -- 964
+swap$ -- 81
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 186
+warning$ -- 2
+while$ -- 152
+width$ -- 52
+write$ -- 529
 (There were 5 error messages)
