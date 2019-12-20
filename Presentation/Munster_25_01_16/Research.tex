@@ -901,6 +901,21 @@ This also generalisz quite nicely to a less equivariant setting. Say $G$ acts by
 \[ \beta X \times \{G_s\}_{s\in X} \hookrightarrow  \beta X \rtimes G \twoheadrightarrow G(X).\]
 (The first term is the isotropy subgroupoid)
 
+\subsubsection*{Coarse Green isomorphism}
+
+Recall that in the case of a transitive action of a group discrete $G$ on a discrete space $X$, choose a base point $s\in X$ and an element $g_x\in G$ such that $g_x .s =x$ for all $X\in X$. If $G_s$ denotes the stabilizer, then the maps $(x,g)\mapsto (g^{-1}_x g , (x , gx))$ and $(g, (x,y))\mapsto (g_x g, x) $ define a groupoid isomorphism
+\[ X\rtimes G \cong G_s \times (X\times X)\]
+which gives Green's isomorphism
+\[C_0(X)\rtimes_r G \cong C^*_r(G_s) \otimes \mathfrak K(l^2 X).\]
+Show that this isomorphism extends to an isomorphism
+\[G(X)\rtimes G \cong G_s \times G(X) \quad \text{and} \quad 
+C^*_G(X) \cong C_r^*(G_s) \otimes C^*_u(X)\]
+In the spirit of Oyono-Oyono, it should follow that if a group acts properly by isometries on a space $X$ and such that there exists an orbit that is proper, and satisfies the coarse Baum-Connes conjecture, with a stabilizer that satisfies the Baum-Connes conjecture, then $X$ satisfies the coarse Baum-Connes conjecture. \\ 
+
+In the non  transitive case, one has
+\[ C^*_G(X) \cong \bigoplus_{s\in \Omega} C_r^*(G_s) \otimes C^*_u(X_s)\]
+with $\Omega$ a fundamental domain. When are $C_G^*(X)$ and $C^*_r(G)$ Morita equivalent?
+
 \subsection{Generalized descent morphism}
 
 Let $X$ be space endowed with commuting actions of two groups $G$ and $G'$, a left action of $G$ and a right action of $G'$. Let $(E,\phi, T)$ be a $KK^{G'}$-cycle and define:

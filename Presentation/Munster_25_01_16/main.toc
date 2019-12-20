@@ -97,6 +97,6 @@
 \contentsline {subsection}{\numberline {4.3.1}Other questions}{124}{subsection.4.3.1}%
 \contentsline {section}{\numberline {4.4}Funky questions, ideas of talks}{126}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Expanders}{126}{subsection.4.4.1}%
-\contentsline {subsubsection}{Plan of the talk}{126}{section*.37}%
-\contentsline {subsubsection}{Questions}{126}{section*.38}%
+\contentsline {subsubsection}{Plan of the talk}{126}{section*.38}%
+\contentsline {subsubsection}{Questions}{126}{section*.39}%
 \contentsline {subsection}{\numberline {4.4.2}Ideas of funky talks}{126}{subsection.4.4.2}%
