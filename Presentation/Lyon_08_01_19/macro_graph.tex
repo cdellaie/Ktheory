@@ -1,0 +1,43 @@
+\usepackage{picture}
+\newcount\X % integer horizontal coordinate
+\newcount\Y % integer vertical coordinate
+\newcount\L % level= number of edges from center to extremities
+\newcount\E % length of the current edge to be drawn.
+
+\def\a {\put (\X,\Y){\line(1,0){\E}}
+        \advance\X\E }
+
+\def\b {\put (\X,\Y){\line(0,1){\E}}
+        \advance\Y\E }
+
+\def\c {\put (\X,\Y){\line(-1,0){\E}}
+        \advance\X-\E }
+
+\def\d {\put (\X,\Y){\line(0,-1){\E}}
+        \advance\Y-\E }
+
+
+\def\s {\ifnum\L = 1
+          \expandafter\gobblethree
+        \else
+          \advance\L by -1
+          \divide\E by 2
+        \fi }
+
+\def\gobblethree #1#2#3{}
+
+\def\A {\a\s{\D}{\A}{\B}}
+\def\B {\b\s{\A}{\B}{\C}}
+\def\C {\c\s{\B}{\C}{\D}}
+\def\D {\d\s{\C}{\D}{\A}}
+
+\X 0
+\Y 0
+
+% we choose 4cm as the length of each of the 4 segments connected to the center
+\setlength{\unitlength}{\dimexpr 4cm/256\relax}%
+
+\E 140 % a length expressed as integer multiple of \unitlength
+
+\L 7 % level 9 would still be ok, but not level 10 which leads to
+% ERROR: TeX capacity exceeded, sorry [main memory size=5000000].
