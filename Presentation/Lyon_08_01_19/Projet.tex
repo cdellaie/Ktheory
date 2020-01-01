@@ -87,26 +87,26 @@ avec :
 %\end{picture}
 %\end{frame}
 
-\begin{frame}{$G=\mathbb F_2$}
-\begin{center}
-\begin{tikzpicture}
-\draw (0,0) node{$\bullet$};
-\foreach \i in {1,...,4}
-{
-	\draw (90*\i:2) node{$\bullet$};
-      \draw (0,0) -- (90*\i: 2);      
-}
-\foreach \i in {1,...,4}
-{\foreach \a in {-1,...,1}
-{
-	\draw (90*\i:2)+(90*\a+90*\i:1) node{$\bullet$};
+%\begin{frame}{$G=\mathbb F_2$}
+%\begin{center}
+%\begin{tikzpicture}
+%\draw (0,0) node{$\bullet$};
+%\foreach \i in {1,...,4}
+%{
+%	\draw (90*\i:2) node{$\bullet$};
+ %     \draw (0,0) -- (90*\i: 2);      
+%}
+%\foreach \i in {1,...,4}
+%{\foreach \a in {-1,...,1}
+%{
+%	\draw (90*\i:2)+(90*\a+90*\i:1) node{$\bullet$};
       %\draw (0,0) -- (90*\i: 1);      
-}}
-\end{tikzpicture}
-\end{center}
-\end{frame}
+%}}
+%\end{tikzpicture}
+%\end{center}
+%\end{frame}
 
-\begin{frame}
+\begin{frame}{$G=\mathbb F_2 = \langle a,b\rangle$}
 \begin{center}
 \vfill
 \includegraphics[width=0.8\linewidth]{Cayley_2}
@@ -114,63 +114,77 @@ avec :
 \end{center}
 \end{frame}
 
-\begin{frame}
+%\begin{frame}
+%\begin{center}
+%\vfill
+%\includegraphics[width=0.8\linewidth]{Cayley}
+%\vfill
+%\end{center}
+%\end{frame}
+
+\begin{frame}{$G= \Z/(5)\ast \Z/(3) = \langle a,b \ : \ a^5, b^3\rangle$}
 \begin{center}
 \vfill
-\includegraphics[width=0.8\linewidth]{Cayley}
+\includegraphics[width=0.8\linewidth]{PSL2}
 \vfill
 \end{center}
 \end{frame}
 
-\begin{frame}{$G=PSL(2,\Z)$}
-\begin{center}
-\begin{tikzpicture}
-\scriptsize 
-\foreach \i in {1,...,3}
-{
-	\draw (120*\i:1) node{$\bullet$};
-      \draw (120* \i : 1) -- (120*\i+120: 1);
-	\draw (120* \i : 1) -- (120*\i: 2);
-      
-}
+%\begin{frame}{$G=PSL(2,\Z)$}
+%\begin{center}
+%\begin{tikzpicture}
+%\scriptsize 
+%\foreach \i in {1,...,3}
+%{
+%	\draw (120*\i:1) node{$\bullet$};
+ %     \draw (120* \i : 1) -- (120*\i+120: 1);
+%	\draw (120* \i : 1) -- (120*\i: 2);
+      %}
 
-\foreach \j in {1,...,3}
-{\foreach \i in {1,...,3}
-{
-	\draw (120*\j:3)+(120*\i+60:1) node{$\bullet$};
-	\draw  (120*\j:3)+(120*\i+60:1) -- (120*\j:3)+(120*\i+180:1) -- (120*\j:3)+(120*\i+300:1) -- cycle;
+%\foreach \j in {1,...,3}
+%{\foreach \i in {1,...,3}
+%{
+%	\draw (120*\j:3)+(120*\i+60:1) node{$\bullet$};
+%	\draw  (120*\j:3)+(120*\i+60:1) -- (120*\j:3)+(120*\i+180:1) -- (120*\j:3)+(120*\i+300:1) -- cycle;
       %\draw ((120*\j:3)+(120*\i+60:1)) -- ((120*\j:3)+(120*\i+180:1));
-}}
- 
-\end{tikzpicture}
-\end{center}\end{frame}
+%}}
+ %%\end{tikzpicture}
+%\end{center}\end{frame}
 
-\begin{frame}{Alg\`ebres de Roe}
-Rappel: 
-\[l^2X = Vect_{\mathbb C} \{e_x\}_{x\in X} \quad \langle e_x, e_y\rangle =\delta_{xy}. \]
-est un espace de Hilbert. La norme est $\|x\| =\sqrt{\langle x, x\rangle}$.\\
-\vfill
-$B(l^2X)$ d\'enote l'alg\`ebre des op\'erateurs lin\'eaires born\'es. La norme
+\begin{frame}{Notations} 
+\begin{block}{$l^2(X)=Vect_{\mathbb C} \{e_x\}_{x\in X}$}
+Il est muni du produit hermiten $\langle e_x, e_y\rangle =\delta_{xy}$. 
+\end{block}
+C'est un espace de Hilbert (complexe). La norme est \[\|x\| =\sqrt{\langle x, x\rangle}.\]
+\begin{block}{$B(l^2X)$ d\'enote l'alg\`ebre des op\'erateurs lin\'eaires born\'es. }
+La norme
 \[\|a\| = \sup \{ ||ax|| \ | \ \|x\| \leq 1 \} \] 
-la munit d'une structure d'alg\`ebre de Banach.\\
+la munit d'une structure d'alg\`ebre de Banach.
+\end{block}
 \vfill
-Pour $a\in B(l^2 X)$, on peut regarder les coefficients \[a_{xy} = \langle e_y, ae_x \rangle.\]
+Pour $a\in B(l^2 X)$, on peut regarder les coefficients \[a_{xy} = \langle e_y, ae_x \rangle .\]
 \end{frame}
 
 \begin{frame}{Propagation finie}
 On regarde \[\C_r [X] = \{ (a_{xy})\in B(l^2 X) \ : \ a_{xy }=0 \text{ si } d(x,y)> r\}  \]
-Et \[\C_u[X] = \cup_{r>0} \C_r[X] \subset B(l^2 X) \]
-est la sous-alg\'ebre de $B(l^2 X)$ des op\'erateurs de propagation finie.
+Et 
+\begin{block}{}
+\[\C_u[X] = \cup_{r>0} \C_r[X] \subset B(l^2 X) \]
+\end{block}
+est la sous-alg\'ebre de $B(l^2 X)$ des op\'erateurs de \textit{propagation finie}.
 \vfill
+\textit{Exemple:} Si $X=(V,E)$ est un graphe, le Laplacien
+\[(\Delta v)(x) = v(x) - \frac{1}{N_x}\sum_{x\sim y} f(y) \quad \forall v\in l^2(X)\]
+est de propagation finie.
 \end{frame}
 
 \begin{frame}{Propagation finie}
-\begin{center}%\vspace{0.5cm}
+\begin{center}
 \vfill
 \includegraphics[width=0.8\linewidth]{finite_propagation}
 \vfill
 %\captionof{figure}{\color{Green} A family of graphs}
-\end{center}%\vspace{0.5cm}
+\end{center}
 \end{frame}
 
 \begin{frame}{Alg\`ebre de Roe}
@@ -199,9 +213,9 @@ R\^{o}le en classification.\\
 \end{frame}
 
 \begin{frame}{$K$-th\'eorie}
-Soit $H$ un espce de Hilbert s\'eparable.
+Soit $H$ un espace de Hilbert s\'eparable.
 \vfill
-\begin{theorem}
+\begin{theorem}[2018 - Classification du programme d'Elliot ]
 Les sous-alg\'ebres ferm\'ees $A$ de $B(H)$ qui sont
 \begin{itemize}
 \item[$\bullet$] approximables par des alg\'ebres de matrices (\textit{nucl\'eaires}),
@@ -212,10 +226,10 @@ Les sous-alg\'ebres ferm\'ees $A$ de $B(H)$ qui sont
 sont classifi\'ees par des invariant provenant de la $K$-th\'eorie.
 \end{theorem} 
 \vfill
-\'Eliminer l'hypoth\`ese UCT est connue comme le \textit{probl\`eme UCT}. 
+\textit{Le probl\`eme UCT}: \'Eliminer la derni\`ere hypoht\`ese.
 \end{frame}
 
-\begin{frame}{Probl\`eme UCT pour $C^*_u(\Z)$}
+\begin{frame}{Probl\`eme UCT pour $C^*_u(\Z)$ (j.w.w. Amine Marrakchi)}
 Pour $R$ tr\`es grand,
 \begin{center}
 \begin{tikzpicture}
@@ -235,6 +249,13 @@ Pour $R$ tr\`es grand,
 \draw (4.5,-0.5) node[below]{$10R$};
 \end{tikzpicture}
 \end{center}
+\begin{itemize}
+\item Choisir $r_n>0$ croissante telle que $\lim_n r_r = +\infty$.
+\item $X_n$ partie bleue, et $Y_n$ partie rouge.
+\end{itemize}
+\[ B_r= \prod_n \C_r[X_n] \subset \hat l^\infty (\mathbb N , C^*_u(\Z))\]
+\[B = \overline{\cup_{r>0} B_r}\]
+De m\^eme pour $\{Y_n\}$ donne $R_r$.
 \end{frame}
 
 
