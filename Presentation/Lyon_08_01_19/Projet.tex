@@ -8,7 +8,7 @@ Un espace m\'etrique d\'enombrable discret  $X$ est \`a \textit{g\'eom\'etrie bo
 \begin{itemize}
 \item[$\bullet$] $X=(V,E)$ graphe de degr\'e uniform\'ement born\'e.
 \vfill
-\item[$\bullet$] $G=\langle S \rangle$ groupe finiement engendr\'e, muni de la \textit{m\'etrique des mots}\\
+\item[$\bullet$] $G=\langle S \rangle$ groupe finiment engendr\'e, muni de la \textit{m\'etrique des mots}\\
 \[l(g) = \inf\{k : g = s_1 s_2 ... s_k , \ s_i \in S\}, \quad d(g,h) = l(g^{-1}h).\]
 \end{itemize}
 \vfill
@@ -152,13 +152,13 @@ avec :
 %\end{center}\end{frame}
 
 \begin{frame}{Notations} 
-\begin{block}{$l^2(X)=Vect_{\mathbb C} \{e_x\}_{x\in X}$}
+\begin{block}{$l^2X=\overline{Vect_{\mathbb C} \{e_x\}_{x\in X}}$}
 Il est muni du produit hermiten $\langle e_x, e_y\rangle =\delta_{xy}$. 
 \end{block}
 C'est un espace de Hilbert (complexe). La norme est \[\|x\| =\sqrt{\langle x, x\rangle}.\]
 \begin{block}{$B(l^2X)$ d\'enote l'alg\`ebre des op\'erateurs lin\'eaires born\'es. }
 La norme
-\[\|a\| = \sup \{ ||ax|| \ | \ \|x\| \leq 1 \} \] 
+\[\|a\| = \sup \{\ ||ax|| \ : \ \|x\| \leq 1 \} \] 
 la munit d'une structure d'alg\`ebre de Banach.
 \end{block}
 \vfill
@@ -230,6 +230,16 @@ sont classifi\'ees par des invariant provenant de la $K$-th\'eorie.
 \end{frame}
 
 \begin{frame}{Probl\`eme UCT pour $C^*_u(\Z)$ (j.w.w. Amine Marrakchi)}
+\begin{block}{Projet de recherche 1/2}
+Prouver le th\'eor\`eme UCT pour $C^*_u(\Z)$.
+\end{block}
+\vfill
+Pour cela, on plonge $C^*_u(X)$ dans son \textit{alg\`ebre \`a l'infini} $C^*_\infty(X)$.
+\[ F_r = \prod_{n\in \mathbb N} \C_r[X] \subset l^\infty(\mathbb N , C^*_u(X))\]
+\[C^*_\infty(X) = \overline{\cup_{r>0 } F_r} \ mod \ \bigoplus_n C^*_u(X)\]
+\end{frame}
+
+\begin{frame}{Probl\`eme UCT pour $C^*_u(\Z)$ (j.w.w. Amine Marrakchi)}
 Pour $R$ tr\`es grand,
 \begin{center}
 \begin{tikzpicture}
@@ -253,9 +263,26 @@ Pour $R$ tr\`es grand,
 \item Choisir $r_n>0$ croissante telle que $\lim_n r_r = +\infty$.
 \item $X_n$ partie bleue, et $Y_n$ partie rouge.
 \end{itemize}
-\[ B_r= \prod_n \C_r[X_n] \subset \hat l^\infty (\mathbb N , C^*_u(\Z))\]
+\[ B_r= \prod_n \C_r[X_n] \subset l^\infty (\mathbb N , C^*_u(\Z))\]
 \[B = \overline{\cup_{r>0} B_r}\]
 De m\^eme pour $\{Y_n\}$ donne $R_r$.
 \end{frame}
 
+\begin{frame}{Probl\`eme UCT pour $C^*_u(\Z)$ (j.w.w. Amine Marrakchi)}
+L'image de $C^*_u(\Z)$ dans $C^*_\infty(\Z)$ est \textit{decomposable} en deux id\'eaux bilat\`eres ferm\'es 
+\[B+C\]
+\vfill
+\begin{block}{Mayer-Vietoris}
+Un r\'esultat classique de topologie alg\'ebrique ram\`ene la preuve de UCT \`a celle de UCT pour $B$ et $C$.
+\end{block}
+\vfill
+Cela d\'ecoule du fait que UCT soit vrai pour les matrices.
+\end{frame}
 
+\begin{frame}{Probl\`eme UCT pour $C^*_u(\Z)$ (j.w.w. Amine Marrakchi)}
+\begin{block}{Projet de recherche 2/2}
+Prouver le th\'eor\`eme UCT pour les $C^*$-alg\`ebres de dimension nucl\`eaire finie.
+\end{block}
+\vfill
+Importance: solution possible du probl\`eme UCT.
+\end{frame}
