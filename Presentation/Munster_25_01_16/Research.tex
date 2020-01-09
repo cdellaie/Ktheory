@@ -924,16 +924,20 @@ with $\Omega$ a fundamental domain. When are $C_G^*(X)$ and $C^*_r(G)$ Morita eq
 
 Let $G$ a countable discrete group acting on a metric space with bounded geometry $X$. Suppose 
 \[\sup_{x\in X} d(x,gx) <\infty \quad \forall g\in G.\]
-Then we get a groupoid morphism
-\[\phi : G \rightarrow G(X) \]
-and the groupoid $G\times G(X)$ (with base space $\beta X$) acts on $G(X)$ via 
+Then we get an action of $G$ on the coarse groupoid $G(X)$, given by $g \cdot [x,\alpha] = [x, g\circ \alpha]$, where we see an element of the group as a bisection with full support in the total groupoid. We also have maps
+\[\phi_\omega : G \rightarrow G(X) ; g \mapsto [\omega, g] \]
+for every $\omega\in \beta X$.\\
+The groupoid $G\times G(X)$ (with base space $\beta X$) acts on $G(X)$ via 
 \[(g , \alpha)x = gx\alpha^{-1}.\]
 The stabilizer of a point in the base space $\omega \in \beta X$ is 
-\[St(\omega) = \{ (g,\alpha) \ | \ g= \alpha\} = \{(g , [\omega, g])\} \cong G.\]
+\[St(\omega) = \{ (g,\alpha) \ | \ \phi_\omega(g)= \alpha\} = \{(g , [\omega, g])\} \cong G.\]
+If $K<G(X)$ is a subgroupoid inclusion, we can restrict the action, and the stabilizers become
+\[St^K(\omega) = \{ (g,\alpha) \ | \ \phi_\omega(g)= \alpha \in K\} \cong \phi_\omega^{-1}(K).\]
 Now the Green-Julg isomorphism (extended to the transitive groupoid case by Muhly-Renault-Williams) gives that 
 \[ A\rtimes_r (G\times G(X)) \cong (A_x \rtimes_r G) \otimes \mathfrak K(l^2 X).\]
 Here the action is restricted to $X\times X$ so that it is transitive, and $x\in X \subset \beta X$. So for every $G\times G(X)$-algebra $A$, $BC(G\times G(X) , A) \iff BC(G, A_x) $, in particular 
 \[ BC(G, A ) \iff BC(G\times G(X) , C(\beta X)\otimes A).\]
+\[ BC(\phi^{-1}_\omega(K), A ) \iff BC(G\times K , C(\beta X)\otimes A).\]
 We can factorize the assembly map by a partial assembly, as to get the following commutative diagram
 \[\begin{tikzcd}
 KK^{G\times G(X)}(\underline E G\times \underline G(X), A ) \arrow{dr}{\mu_{G\times G(X)}}\arrow{r}{\mu_G^X } 
@@ -1020,7 +1024,9 @@ with vertical isomorphisms. This shows that
 
 This can be generalized a lot, at the expense of loosing clarity. Indeed, in the case a generalized morphism of groupoids $\phi : G \rightarrow G'$, LeGall has shown \cite{} how to build a morphism
 \[\phi^* : KK^{G'}(A,B) \rightarrow KK^G(\phi^* A, \phi^* B)\] 
-and $j_X$ is $\phi^*$ for the generalized morphism induced by a bimodule. 
+and $j_X$ is $\phi^*$ for the generalized morphism induced by a bimodule. \\
+
+There is actually a proof in Valette's book (proper actions...) showing the naturality of the maximal assembly map, and the naturality of the assembly map for either monomorphisms, of general morphisms where the domain is $K$-amenable. This follows from the previous construction, considering the graph of the morphism. Also, we can get a bit more: the assembly map is natural with respect to proper morphisms, which in the group case is equivalent to having a compact kernel.\\
 
 \subsection{Partial assembly map}
 
