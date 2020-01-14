@@ -8,7 +8,13 @@ Length spaces\\
 Euclidean spaces, Hilbert spaces.\\
 Infinite dimensional spaces, CAT(0) spaces, metric on probability measures.\\
 
-Underline the difference between nice finite dimensional objects like a manifold or a Cayley graph and infinite dimensional functional spaces.
+Underline the difference between nice finite dimensional objects like a manifold or a Cayley graph and infinite dimensional functional spaces.\\
+
+Interaction between metrics and topology.\\
+
+Metrization theorem (A compact Hausdorff space is metrizable iff it is second countable)\\
+
+The large scale geometry is not captured by the topology: $\sup \{ d(x,y) , 1\}$ generates the same topology but turns the space into a bounded one.
 
 \section{Groups and their graphs}
 
@@ -40,7 +46,13 @@ In the case of a group, a box space.
 Focus on Hilbert spaces. Equip the Hilbert space with the weak topology. The closed balls are then compact (Banach Alaoglu) Interesting applications?\\
 
 Other interesting examples: spaces of probability measures, of repartition functions. Gauge fields theory = moduli space of connections on $G$-principal bundles.\\
-
+A lot of metric on probablity measures are obtained as
+\[d_{\mathcal F}(p,q) = \sup_{f\in \mathcal F} | \int f dp - \int f dq |\]
+\begin{itemize}
+\item $\mathcal F = \{f\in Lip \ : \  \| f\|_{Lip}\leq 1\}$ : Wasserstein,
+\item $\mathcal F = \{\chi_B \ : \ B\in B(\mathbb R)\}$ : total variation,
+\item $\mathcal F = \{\chi_{(-\infty , t]} \ : \ t\in \mathbb R \ \ : \ B\in B(\mathbb R)\}$ : Kolmogorov.
+\end{itemize}
 Banach algebras\\
 Introduce concrete $C^*$-algebras as closed selfadjoint subalgebras of $B(H)$.\\
 
@@ -72,9 +84,17 @@ Talk a little bit about nuclearity.
 
 Draw the Cayley graphs of $\Z$, $PSL(2,\Z)$, $\Z / (n) \ast \Z / (m)$ and Heisenberg.\\
 
-Use a software to get the first Caykey graphs of $PSL(2,\Z_p)$.\\
+Use a software to get the first Cayley graphs of $PSL(2,\Z_p)$.\\
+
+Can two non isomorphic groups have isomorphic Cayley graphs? Yes, take two finite groups of same cardinality, and use the whole group minus the identity as a generating subset.\\
 
 Show Milnor Svarc lemma.\\
+
+\begin{thm}
+Let $X$ be a proper geodesic metric space, and $G$ a group which acts on $X$ by isometries. If the action is proper and cocompact, then $G$ is finitely generated and the map
+\[G \rightarrow X ; g\mapsto g\cdot x\]
+is a quasi-isometry for any $x\in X$.
+\end{thm}
 
 Reproducing kernels.\\
 
