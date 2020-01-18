@@ -920,7 +920,9 @@ In the non  transitive case, one has
 \[ C^*_G(X) \cong \bigoplus_{s\in \Omega} C_r^*(G_s) \otimes C^*_u(X_s)\]
 with $\Omega$ a fundamental domain. When are $C_G^*(X)$ and $C^*_r(G)$ Morita equivalent?
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{A direct proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Let $G$ a countable discrete group acting on a metric space with bounded geometry $X$. Suppose 
 \[\sup_{x\in X} d(x,gx) <\infty \quad \forall g\in G.\]
@@ -933,18 +935,27 @@ The stabilizer of a point in the base space $\omega \in \beta X$ is
 \[St(\omega) = \{ (g,\alpha) \ | \ \phi_\omega(g)= \alpha\} = \{(g , [\omega, g])\} \cong G.\]
 If $K<G(X)$ is a subgroupoid inclusion, we can restrict the action, and the stabilizers become
 \[St^K(\omega) = \{ (g,\alpha) \ | \ \phi_\omega(g)= \alpha \in K\} \cong \phi_\omega^{-1}(K).\]
+Let $Z= \mathcal O(\omega)$ be the orbit for this action, and $Z_K$ the one for the restricted action.
+ 
 Now the Green-Julg isomorphism (extended to the transitive groupoid case by Muhly-Renault-Williams) gives that 
-\[ A\rtimes_r (G\times G(X)) \cong (A_x \rtimes_r G) \otimes \mathfrak K(l^2 X).\]
-Here the action is restricted to $X\times X$ so that it is transitive, and $x\in X \subset \beta X$. So for every $G\times G(X)$-algebra $A$, $BC(G\times G(X) , A) \iff BC(G, A_x) $, in particular 
-\[ BC(G, A ) \iff BC(G\times G(X) , C(\beta X)\otimes A).\]
-\[ BC(\phi^{-1}_\omega(K), A ) \iff BC(G\times K , C(\beta X)\otimes A).\]
+\[ A\rtimes_r (G\times G(X)) \cong (A_x \rtimes_r G) \otimes \mathfrak K(l^2 X)\]
+for any $C_0(Z)$-algebra $A$.\\
+%Here the action is restricted to $X\times X$ so that it is transitive, and $x\in X \subset \beta X$. 
+
+So for every $G\times G(X)$-algebra $A$, $BC(G\times G(X) , A) \iff BC(G, A_x) $, in particular 
+\[ BC(G, A ) \iff BC(G\times G(X) , C_0(Z)\otimes A).\]
+\[ BC(\phi^{-1}_\omega(K), A ) \iff BC(G\times K , C(Z_K)\otimes A).\]
 We can factorize the assembly map by a partial assembly, as to get the following commutative diagram
 \[\begin{tikzcd}
 KK^{G\times G(X)}(\underline E G\times \underline G(X), A ) \arrow{dr}{\mu_{G\times G(X)}}\arrow{r}{\mu_G^X } 
 		& KK^{G(X)}(\underline E G(X), A\rtimes_r G ) 	\arrow{d}{\mu_X}\\
 		& K(A\rtimes_r (G\times G(X))) \\ 
 \end{tikzcd}\]
-If $X$ satisfies the coarse Baum-Connes conjecture with coefficients in $A\rtimes_r G$ (say $X$ is CEH), then the vertical map is an isomorphism. This reduces the statement to know when the partial assembly is an isomorphism. 
+If $X$ satisfies the coarse Baum-Connes conjecture with coefficients in $A\rtimes_r G$ (say $X$ is CEH), then the vertical map is an isomorphism. This reduces the statement to know when the partial assembly is an isomorphism. \\
+
+First, if $\Lambda= \phi^{-1}_\omega(K)$, let us show that $\Lambda$ contains $G_\omega$ a subgroup of finite index. Let $W$ be a neighborhood of $w$, small enough that we can find a  finite cover of $K_W$ by bisections $U_i$, $i=1,N$, such that $W\subset U_i$ for every $i=1,N$. Let $\alpha_i $ be the corresponding partial homeomorphisms. Then 
+\[\Lambda = \coprod_{i=1,N} \{g \ : \ [\omega , g ] = [\omega, \alpha_i]\},\]
+each subset on the right hand side being a coset of $\Lambda_0 = \{g \ : \ [\omega , g ] = [\omega, id] \}$. As $\Lambda_0< G_\omega$ and $[\Lambda : \Lambda_0] =N$, it is clear that $[\Lambda : G_\omega]$ is finite.  
 
 \begin{prop}
 If all the subgroups of $G$ which contain a stabilizer of the action of $G$ on $X$ as a subgroup of finite index satisfy the Baum-Connes conjecture with coeeficients, then the partial assembly map is an isomorphism.
@@ -971,7 +982,7 @@ KK^{G}(\underline E G, A ) \arrow{d}{\mu_{G}}\arrow{r}{\mu_X}
 		& KK^{H}(\underline E H, X^*(A)\rtimes_r G ) 	\arrow{d}{\mu_H}\\
 	K(A\rtimes_r G) \arrow{r}	& K(X^*(A)\rtimes_r G \rtimes_r H) \\ 
 \end{tikzcd}\]
-with a big ?\\
+with a big ? Maybe: this diagram is always commutative, with vertical isomorphisms if $X$ is a Morita equivalence.\\
 
 There should be also a result of the type: if $G$ acts transitively, which a metrically proper orbit which fiberly coarsely embeds and stabilizer satisfying the maximal Baum-Connes, then $G$ satisfies the maximal Baum-Connes conjecture.
 
