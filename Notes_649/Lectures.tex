@@ -1,8 +1,9 @@
 \section{Lecture 1}
 
-Metric spaces
-Cayley graphs
+Metric spaces\\
+Cayley graphs\\
 
+Ref: chapter 1 of Nowak, Yu, Large Scale geometry.
 \section{Lecture 2}
 
 What kind of morphisms should we use between metric spaces? We would like to find maps that capture the large scale geometric information between spaces.\\
@@ -73,7 +74,15 @@ where $e_x(x') = 1_{x=x'}$. Then
 \[ \langle \phi(x) , \phi(y)\rangle = \sum_{x,y} e_x(x')e_y(y') k(x',y') = k(x,y). \] 
 \end{proof}
 
+Ref: Chapter 1 and 5 of Nowak, Yu, Large scale geometry.
+
 \section{Lecture 3}
+
+Last time we defined coarse embeddings and quasi-isometries. An interesting example of a coarse embedding that may not be a quasi isometriy is the inclusion of a subgroup $H$ into a group $G$.
+
+To see that, consider the Baumslag Solitar group 
+\[G =BS(1,2) = \langle a, b \  : b^{-1}ab = a^2 \rangle ,\]
+and let $H = \langle a \rangle \cong \Z$. One sees that, whereas $l_H(a^n) = n$, the relation $a^{2^n} = b^{-n}a b^n$ ensures that $l_G(a^{2^n}) \leq 2n+ 1$, so that $l(a^n)$ is of the same order as $log_2(n)$. 
 
 \subsection{Kernels}
 
@@ -162,7 +171,9 @@ The composition $\phi_n\circ q_n$
 
 Remark: the converse does not hold: the free group on $n$ generators is a-T-menable, and any finitely generated group is a quotient of a $\mathbb F_n$, so we get a coarse embedding
 \[X(G) \rightarrow X(\mathbb F_n)\]
-so that the converse to the last proposition would imply that any box space is (CEH). But any infinite residually finite property (T) group contradicts this, $SL(3,\Z)$ for instance.
+so that the converse to the last proposition would imply that any box space is (CEH). But any infinite residually finite property (T) group contradicts this, $SL(3,\Z)$ for instance.\\
+
+Ref: Chapter 5 and 6 of Nowak, Yu, Large scale geometry, and Appendix C of Bekka, Valette, Kazdhan Property (T)
 
 \section{Lecture 4}
 
@@ -172,4 +183,6 @@ GNS construction $\phi(g) = \langle v,\pi(g)v\rangle$, i.e. $\phi(s^{-1}t) = \la
 
 $G$ is a-T-menable (metrically proper action by affine isometries on a real Hilbert space) iff there exists a $G$-equivariant proper negative type function on $G$.\\
 
-Consequence: there is a homotopy between the trivial representation and the regular representation.
+Consequence: there is a homotopy between the trivial representation and the regular representation.\\
+
+Gelfand Raikov theorem

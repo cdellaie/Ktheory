@@ -8,3 +8,5 @@ Articles/QuantumGroups/main_QG.blg
 *.bbl
 Articles/QuantumGroups/main_QG.aux
 *.gz
+*.out
+*.aux
