@@ -1,0 +1,175 @@
+\section{Lecture 1}
+
+Metric spaces
+Cayley graphs
+
+\section{Lecture 2}
+
+What kind of morphisms should we use between metric spaces? We would like to find maps that capture the large scale geometric information between spaces.\\
+
+We already have seen that isometries, i.e. maps $f : X\rightarrow Y$ such that $d(f(x),f(y)) = d(x,y)$ are too rigid. For instance, we would like to say that two Cayley graphs of the same finitely generated group look the same from far away. 
+
+\begin{definition}
+A quasi-isometry between metric spaces is a map $f : X\rightarrow Y$ such that there exist $L,C>0$ satisfying
+\[\frac{1}{L} d(x,y) - C \leq d(f(x),f(y)) \leq L d(x,y) + C \quad \forall x,y \in X,\]
+and there exists $r>0$ such that 
+\[Y = \cup_{x\in X} B(f(x), r).\]
+\end{definition}
+
+Example: $(G,d_S)$ and $(G,d_T)$ are quasi-isometric. (Proof in class)\\
+
+An action of a discrete group $G$ on $X$ is properly discontinuous if for every compact subset $K\subset X$
+\[ | \{ g\in G  \ : \ gK \cap K \neq \emptyset \} | <\infty.\]
+
+\begin{thm}
+Let $X$ be a proper geodesic space, and $G$ a discrete group acting on $X$ by isometries. If the action is properly discontinuous and cocompact then $G$ is finitely generated and is quasi-isometric to $X$.
+\end{thm} 
+
+$S = \{ g \ : \ B(x_0, r)\cap B(gx_0,r)\neq \emptyset \}$.
+
+Applications: 
+\begin{itemize}
+\item[$\bullet$] if $M$ is a compact Riemannian manifold and $G=\pi_1(M)$, then $G$ and the universal cover of $M$ are quasi-isometric (with the lifted $G$-invariant metric)
+\item[$\bullet$] $PSL(2, \Z)$ is quasi-isometric to the upper-half plane with the hyperbolic metric $\frac{dx^2+dy^2}{y}$, hence to $\mathbb F_2$. The first point gives the generators.\\
+\end{itemize}
+
+Coarse maps and coarse embedding: definitions.\\
+
+\begin{prop}
+Any metric space admits an isometric embedding into a Banach space.
+\end{prop}
+
+$\phi(x) : X\rightarrow l^\infty (X) ;  s \mapsto d(s,x) - d(s,x_0)$.\\
+
+We will be interested in the following question: when does a space a coarse embedding into a real Hilbert space?\\
+
+Some examples of Hilbert spaces: $l^2(X)$, $l^2(X,H)$, $L^2(\Omega, \mu)$, random variable with second moments with $E(XY)$.\\
+
+Definition of Hilbert spaces\\
+
+A remark: the inner product can have a non-trivial null-space, Cauchy Schwartz still holds. In particular, the null-space will be a subspace and inner product is definite on the quotient. The \textit{separation-completion} of a real vector space $V$ will be 
+\[H = \overline{V /N }^{\| .\|}.\]
+It is a real Hilbert space.\\
+ 
+Example: we have seen that $\Z^n$ is quasi-isometric to $\R^n$ with the Manhatthan metric, itself quasi-isometric to the Euclidean metric so $Z^n$ is CEH. Indeed
+\[\sum_{i=1}^n |x_i | = \langle x,\epsilon\rangle \leq \| x\|_2 \|\epsilon \|_2 = \sqrt{n} \| x\|_2 .\]
+Also: trees are CEH, $l^1(\mathbb N)$ is CEH. (Proofs)\\
+
+Definition: positive definite kernels.\\
+
+Example: Let $\phi: X\rightarrow H$ be any map. Then $k(x,y) = \langle \phi(x) , \phi(y)\rangle $ is a pdk.
+
+\begin{thm}
+Let $k: X\times X \rightarrow \R$ be a positive definite kernel. Then there exists a real Hilbert space and a map $\phi: X \rightarrow H$ such that 
+\[k(x,y) = \langle \phi(x) , \phi(y)\rangle  \quad \forall x,y \in X.\]
+\end{thm}
+
+\begin{proof}
+Let $V$ be the linear space of finitely supported real functions on $X$. Define
+\[ \langle f , g \rangle = \sum_{x,y} f(x)f(y) k(x,y) \quad \forall x,y\in X.\]
+It might happen than this inner-product has a nullspace. Let $H$ be the separation-completion of $V$.
+Define \[\phi : X\rightarrow H ; x \mapsto e_x\]
+where $e_x(x') = 1_{x=x'}$. Then
+\[ \langle \phi(x) , \phi(y)\rangle = \sum_{x,y} e_x(x')e_y(y') k(x',y') = k(x,y). \] 
+\end{proof}
+
+\section{Lecture 3}
+
+\subsection{Kernels}
+
+A symmetric kernel on $X$ is a function $k: X\times X \rightarrow \R $ such that $k(x,y) = k(y,x)$. It is
+\begin{itemize}
+\item[$\bullet$] of positive type if for every finite subsets $F \subset X$
+\[\langle v , K_F v \rangle \geq 0 \quad \forall v \in l^2(F).\] 
+\item[$\bullet$] of conditionally negative type if for every finite subsets $F \subset X$
+\[\langle v , K_F v \rangle \leq 0 \quad \forall v \in l^2(F)\text{ s.t. }\sum_{x\in F} v_x = 0.\] 
+\end{itemize}
+
+Examples: constants are (PT) and (CNT), for any map $f : X\rightarrow \R$, $k(x,y) =f(x)f(y)$ is (PT). If $k$ is (PT), $-k$ is (CNT). It is the conditionally that is here important, otherwise, it would be the opposite of being positive.\\
+
+Operations on kernels: (PT) and (CNT) both form a cone (stability by addition and multiplication by a positive scalar), they are closed for the topology of simple convergence and by Schur multiplication. \\
+
+Pb: show that Schur multiplication preserves (PT).\\
+
+\begin{prop}
+Let $k: X\times X\rightarrow \R $ be a positive type function on $X$ and $f(x)=\sum_n a_n z^n$ an entire function with positive coefficients. Then
+\[\sum_n a_n k(x,y)^n\]
+defines a positive type function. 
+\end{prop}
+
+\begin{thm} Schoenberg's lemma. Let $k: X\times X\rightarrow \R $ be a symmetric kernel on $X$. Then $k$ is (CNT) iff 
+\[\forall t> 0 , \exp (-tk(x,y))\]
+is of positive type.
+\end{thm}
+
+\begin{proof}
+If $e^{-tk(x,y)}$ is (PT) for every $t>0$, then 
+\[k(x,y) =\lim_{t\rightarrow 0} \frac{1-e^{-tk(x,y)}}{t}\]
+is (CNT).\\
+
+If $k(x,y)$ is (CNT), then there exists a real Hilbert space $H$ and a map $\phi: X \rightarrow H$ such that 
+\[k(x,y) = \| \phi(x) - \phi(y) \|^2 \quad \forall x,y \in X.\]
+Then
+\[e^{tk(x,y)} = e^{-t \| \phi(x) \|^2 } e^{-t \| \phi(y) \|^2 } e^{2t \langle \phi(x), \phi(y) \rangle } \]
+is a Schur product of a kernel of the type $f(x)f(y)$ with the exponential of a positive type, so it is positive. 
+\end{proof}
+
+Remark on the GNS construction.
+
+When $k(x,y)$ is (CNT) then the separation completion of 
+\[V = \{a : X\rightarrow \R \text{ finitely supported s.t. }\ : \ \sum_x a_x = 0\}\]
+with respect to the positive bilinear form 
+\[\langle a, b \rangle = -\frac{1}{2}\sum_{x,y} a_x b_x k(x,y) \]
+gives a real Hilbert space $H$ and map $\phi: X \rightarrow H$ such that 
+\[k(x,y) = \| \phi(x)-\phi(y) \|^2 \]
+and $span\{\phi(x) - \phi(x_0)\}_{x\in X} $ is dense in $H$, where $x_0$ is any fixed point.\\ 
+
+The couple $(H, \phi)$ is unique up to affine isomorphism: if $(K, \Psi)$ is another such couple, there exists a unique affine isomorphism $A: H \rightarrow K$ such that $\Psi =A\circ \phi $. 
+ 
+\subsection{Kernels and approximation properties}
+
+A function $\eta: X\times X \rightarrow \R$ is
+\begin{itemize}
+\item[$\bullet$] proper if $\eta^{-1}([-r,r])$ is an entourage for every $r>0$,
+\item[$\bullet$] $\sup_{(x,y)\in \Delta_R} | \eta(x,y) | < \infty$.
+\end{itemize}
+
+\begin{thm}
+Let $X$ be a countable discrete space with bounded geometry. Then the following are equivalent:
+\begin{itemize}
+\item[$\bullet$] X admits a coarse embedding into Hilbert space
+\item[$\bullet$] there exists a proper \text{conditionally negative} type function that is bounded on entourages.
+\end{itemize}
+\end{thm}
+
+First implication: $\eta(x,y) = \| \phi(x) - \phi(y)\|^2$.\\
+
+Definitions: $G$ residually finite w.r.t. $\mathcal N = \{N_n\}$, $q_n: G \rightarrow G_n = G/N_n$, box space
+\[X_{\mathcal N} = \coprod Cay(G_n, q_n(S)).\]
+Haagerup's property or a-T-menability.
+
+\begin{prop}
+If $X_{\mathcal N}$ is (CEH), then $G$ is a-T-menable.
+\end{prop}
+
+\begin{proof}
+By definition, we get a sequence of negative type functions 
+\[\phi_n : G_n \rightarrow H\]
+with 
+\[\rho_-(l_n(x)) \leq \phi_n(x) \leq \rho_+(l_n(g)).\]
+The composition $\phi_n\circ q_n$
+\end{proof}
+
+Remark: the converse does not hold: the free group on $n$ generators is a-T-menable, and any finitely generated group is a quotient of a $\mathbb F_n$, so we get a coarse embedding
+\[X(G) \rightarrow X(\mathbb F_n)\]
+so that the converse to the last proposition would imply that any box space is (CEH). But any infinite residually finite property (T) group contradicts this, $SL(3,\Z)$ for instance.
+
+\section{Lecture 4}
+
+Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
+\[\phi: G\rightarrow H \iff (H,\pi,v) \text{ GNS triple}.\] 
+GNS construction $\phi(g) = \langle v,\pi(g)v\rangle$, i.e. $\phi(s^{-1}t) = \langle \pi(s)v,\pi(t)v\rangle$ wich is positive. $\eta(g)= \|\pi(g)v -v\|$. \\
+
+$G$ is a-T-menable (metrically proper action by affine isometries on a real Hilbert space) iff there exists a $G$-equivariant proper negative type function on $G$.\\
+
+Consequence: there is a homotopy between the trivial representation and the regular representation.
