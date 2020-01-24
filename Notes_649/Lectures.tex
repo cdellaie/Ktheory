@@ -177,6 +177,91 @@ Ref: Chapter 5 and 6 of Nowak, Yu, Large scale geometry, and Appendix C of Bekka
 
 \section{Lecture 4}
 
+Definition of the Laplacian on a graph: for any Hilbert space $H$,
+\[(\Delta f)(x) = f(x) - \frac{1}{N_x}\sum_{y : (x,y)\in E} f(y)\quad \forall f\in l^2(X,H).\]
+On a finite graph, the Laplacian is a symmetric (or selfadjoint in the complex case) positive matrix with kernel the constant functions, and its orthogonal is 
+\[ker(\Delta)^\perp = \{ f\in l^2(X) \ : \ \sum_{x\in X} f(x) = 0\}.\]
+
+\subsection{Expanders}
+
+\begin{definition}
+An expander sequence is a sequence of finite graphs $X_n= (V_n, E_n)$ such that 
+\begin{itemize}
+\item[$\bullet$] $\lim_n |V_n| = +\infty $,
+\item[$\bullet$] $d=\sup_n deg(X_n)< \infty$,
+\item[$\bullet$] there exists a constant $c>0$ such that, for every $n$, $sp(\Delta_{X_n}) \subset \{0\} \cup (c,\infty)$.
+\end{itemize}
+\end{definition} 
+
+Out of an expander sequence, we build its \textit{coarse disjoint union}
+\[X = \coprod X_n\]
+which is the disjoint union as a set, endowed with a metric $d$ which restricts to the graph metric on any of the graphs, and such that $\lim_{i,j\rightarrow \infty} d(X_i,X_j)=+\infty$. It is $X$ that we call an expander.\\
+
+The last condition means that for every $f\in l^2(X,H)$ such that $\sum_{x\in X_n} f(x)=0$, the inequality
+\[\sum_{(x,y)\in E_n} \| f(x)-f(y) \|^2 \geq c \sum_{x\in X_n} \| f(x)\|^2    \]
+holds.
+
+\begin{thm}
+Expanders cannot admit a coarse embedding into Hilbert space.
+\end{thm}
+
+\begin{proof} 
+I think this proof is due to Higson. Let $f: X \rightarrow H$ be a coarse embedding. One gets vectors $f_n\in l^2(X_n,H)$ by restricting $f$ to $X_n$. We can translate each $f_n$ without changing the fact that it is a coarse embedding, so we can suppose $\sum_{x\in X_n} f_n(x)=0$, hence
+\[\sum_{(x,y)\in E_n} \| f_n(x)-f_n(y) \|^2 \geq c \sum_{x\in X_n} \| f(x_n)\|^2.\]
+The term on the left is less than $d |V_n| \rho_+^2(1)$ so that we get a inequality of the type
+\[\sum_{x\in X_n} \| f(x_n)\|^2 \leq A |V_n|\]
+with $A$ a constant independent of $n$. That is possible only if at least half of the terms are less than $2A$. But that is a contradiction with the properness of $f$, since it means that $f_n$ maps more than $\frac{|X_n|}{2}$ terms into $B(0,2A)$.\\	 
+\end{proof}
+
+We will understand better the following diagram
+\[\begin{tikzcd}
+\text{amenablity} \arrow{r}\arrow{d} & \text{a-T-menability} \arrow{d} \\
+\text{ property (A)} \arrow{r} & \text{ (CEH) }  
+\end{tikzcd}\]
+where the top row is a $G$-equivariant version of the bottom one, whereas the left side corresponds to finitely supported kernels, relaxed into a $c_0$ condition on the right. There is a parallel diagram with property (T), and we will see what should be a non-equivariant version of property (T). There is a way to restore equivariance by considering the \textit{coarse groupoid}.
+
+\subsection{GNS construction}
+
+We have seen that for any symmetric kernel $k: X\times X \rightarrow \R$ of positive type, there exists a pair $GNS(k)=(H,\phi)$ satisfying
+\begin{itemize}
+\item[$\bullet$] $H$ is a real Hilbert space,
+\item[$\bullet$] $\phi : X\rightarrow H$ is a map such that $\langle \phi(x),\phi(y) \rangle = k(x,y)$ and $span \{ \phi(x)\ : \ x\in X \} $ is dense in $H$. 
+\end{itemize}
+
+Moreover, the pair $(H,\phi)$ satisfies the following universal property: let $(K,\psi)$ be any other pair such that $\langle \psi(x),\psi(y) \rangle = k(x,y)$. Then there exists a unique linear isometry $T: H\rightarrow K$ such that $\psi = T \circ \phi$.\\
+
+Indeed, the identity 
+\[\langle \sum_i a_i \delta_{x_i}, \sum_j b_j \delta_{y_j} \rangle  = \sum_{i,j} a_i b_j k(x_i,_j) =\langle \sum_i a_i \psi(x_i), \sum_j b_j \psi(y_j) \rangle\]
+proves that the map $\sum_i a_i \delta_{x_i}\mapsto  \sum_i a_i \psi(x_i)$ extends to an isometry $T:H \rightarrow K $ satisfying $\psi = T \circ \phi$. Uniqueness is obvious.\\
+
+Now, say that $X=G$ is a group, and that the kernel is $G$-equivariant, i.e.
+\[k(gx,gy) = k(x,y)\quad \forall g,x,y\in G.\]
+Such a function is entirely determined by 
+\[\tilde k (g) = k(e,g),\]
+which is then what is called a positive type function on the group $G$.\\
+
+In this case, the GNS construction and its universal property allows to build a unitary representation. Indeed 
+\[\langle \phi(gx),\phi(gy) \rangle = k(gx,gy) = k(x,y)\] 
+ensures the existence of a unique linear isometry $\pi_g: H \rightarrow H$ such that $\phi(gx) = \pi_g \phi(x)$, $\forall g,x \in G$. The uniqueness also ensures that $\pi_s \pi_t = \pi_{st} $ and $\pi_e = id_H$. Together with symmetry ($\tilde k(g^{-1})=\tilde k(g)$), it implies that $\pi_g^*=\pi_{g^{-1}}$. So that, if $v= \phi(e)\in H$, we have that the GNS pair $(H,\phi)$ is actually equivalent to a triple $(H,\pi, v)$ where 
+\begin{itemize}
+\item[$\bullet$] $H$ is a real Hilbert space,
+\item[$\bullet$] $\pi : G\rightarrow U(H)$ is a unitary representation, 
+\item[$\bullet$] $v\in H$ is a vector,
+\end{itemize}
+such that $span \{ \pi_g (v)\}_{g\in G}$ is dense in $H$ (we say $v$ is \textit{cyclic} for $\pi$), and $\tilde k(g)=\langle v , \pi_g (v)\rangle$, for all $g\in G$.\\
+
+The triple $(H,\pi,v)$ is called the GNS triple associated to the positive type function $\tilde k$. It satisfies the following universal property: if $(K,\sigma , w)$ is any other triple such that $\tilde k(g)=\langle w , \sigma_g (w)\rangle$, then there exists a unique linear isometry $T: H\rightarrow K $ such that $Tv= w$ and $T\pi_g = \sigma_g T$.\\
+
+As a problem, show that the GNS triple of a cyclic representation is unitarily equivalent to the original representation, i.e. 
+\[GNS(\pi_{v,v}) \cong (H,\pi,v).\]  
+
+As a result, we get that the family of equivalence classes of cyclic representation is a set, isomorphic to the set of positive type functions on $G$.
+\[\{ \pi: G\rightarrow U(H) \text{ cyclic } \} / \sim \cong \{\phi : G \rightarrow \R \text{ positive type}\}.\] 
+
+We will see next time how we can use a natural topology on the space of bounded functions on $G$ to topologize the space of cyclic representations of $G$. (This will be equivalent to the Fell topology)
+
+\section{Lecture 5}
+
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
 \[\phi: G\rightarrow H \iff (H,\pi,v) \text{ GNS triple}.\] 
 GNS construction $\phi(g) = \langle v,\pi(g)v\rangle$, i.e. $\phi(s^{-1}t) = \langle \pi(s)v,\pi(t)v\rangle$ which is positive. $\eta(g)= \|\pi(g)v -v\|$. \\
