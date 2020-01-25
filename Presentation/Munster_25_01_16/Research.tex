@@ -784,7 +784,7 @@ The question is to see how far we can push that technique, here deducing the con
 
 Let $\Gamma$ acting on a real Hilbert space $H$ by affine isometries. There are two ways for the action to fail to be proper: having huge stabilizers, or having a bad orbit. We will focus on the first case. Suppose that every orbit $X_v= \Gamma \cdot v$ is proper and that the family $\{X_v\}_v$ uniformly coarsely embeds into a Hilbert space. Can we deduce the Baum-Connes conjecture for $\Gamma$? 
 
-\subsection{Breakdown of the argument of Herv\'e for extensions}
+\subsection{Breakdown of the argument of Herv\'e for extensions: Erik's take}
 
 Let $1 \rightarrow N \rightarrow G \rightarrow Q \rightarrow 1$ be a group extension. Suppose $Q$ is torsion free. The goal is to deduce the Baum-Connes conjecture for $G$ from the Baum-Connes conjecture for $N$ and $Q$.\\
 
@@ -812,6 +812,85 @@ commutes, and $\mu_{Q,C_0(Z)\rtimes_r G}$ is an isomorphism by hypothesis. The r
 Here is a nice application. It follows from this result that an extension of two a-T-menable groups with $Q$ being torsion free satisfies the Baum-Connes conjecture. Arzhantseva and Tessera build such an example that is not coarsely embeddable into Hilbert space.\\
 
 To adapt the argument, we want to replace that $Z$ $G$-coarsely embeds into a Hilbert space.
+
+\subsection{Breakdown of the argument of Herv\'e for extensions: my take}
+
+Herv\'e's proof has three ingredients:
+\begin{itemize}
+\item[$\bullet$] an extension of Green's isomorphism in $K$-homology. This is a result from his thesis, the study of Baum-Connes for groups acting on trees. It uses in a crucial way the restriction principle;
+\item[$\bullet$] a factorization of the assembly of a product via  a partial assembly map; 
+\item[$\bullet$] the restriction principle applied to the partial assembly map.
+\end{itemize}
+
+\subsubsection{Green's isomorphism}
+
+A nice way to see where Green's isomorphism is coming from is to look at the case of a discrete groupoid $G$. Choose a transverse set $\Omega \subset G^0$, meaning a subset which contains only one representant of each orbit on $G^0$ by left translation of $G$. For each of the points $x\in G.s$, where $s\in \Omega$, choose one element $s_x\in G$ with $d(s_x) = s$ and $t(s_x)= x$. Then $g\mapsto s_{y}^{-1}gs_{x} \ , \ (x,y)$ with $d(g)= x$ and $t(g)=y$ defines a groupoid isomorphism
+\[ G \rightarrow \coprod_{s\in \Omega} Stab(s) \times (X_s \times X_s) \]
+where $X_s =G\cdot s$ is the orbit of $s$. The inverse of the map is given by 
+\[g,(x,y) \mapsto s_y g s_x^{-1}.\]
+The right hand side is the disjoint union of the stabilizer subgroups by the pair groupoid on the corresponding orbits.\\
+
+Herv\'e's statement is as follows (okay, I pumped it up a little): for any discrete groupoid $G$ and any $G$-algebra $A$, there is a commutative diagram   
+\[\begin{tikzcd}
+\bigoplus_{s\in \Omega} KK^{Stab(s)}(\underline E G,A_s) \arrow{r}\arrow{d}{\bigoplus \mu_{G_s, A_s}} & KK^G (\underline E G, A) \arrow{d}{\mu_{G,A}} \\
+\bigoplus_{s\in \Omega} K(A_s \rtimes_G G_s)  \arrow{r} & K(A\rtimes_r G) \\
+\end{tikzcd}\]
+with horizontal isomorphisms given by:
+\begin{itemize}
+\item[$\bullet$] the induction map for the top row
+\[Ind_{Iso(G)}^G \]
+\item[$\bullet$] Green isomorphism in $K$-theory for the bottom row.
+\end{itemize}
+A particular consequence that Herv\'e points out is the stability of Baum-Connes by taking subgroups, which was ``oddly never proven before". A more interesting consequence for us is that for a group action $G$ on $X$,
+\[BC(G_s, A) \iff BC(G, A\otimes C_0(X_s))\]
+
+\subsubsection{Partial assembly maps}
+
+The nice trick used in the paper on extensions is the following: given a surjective group morphism $\phi: G \rightarrow Q$, one considers the action of $G\times Q$ on $Q$ given by 
+\[(g,q)\cdot x  =  \phi(g)xq^{-1}.\]
+The stabilizer of the neutral element is isomorphic to $G$:
+\[Stab(e_Q) = \{ (g,\phi(g)) \}\cong G .\]
+Moreover, when one only considers the restrcited action of $G\times F$, where $F<Q$ is a subgroup, then
+\[Stab_{G\times F}(e_Q) =\{ (g,\phi(g))\ : \ \phi(g)\in F \}\cong \phi^{-1}(F).\]
+Green's isomorphism allows to conclude, by the discussion above, that 
+\[BC(G,A) \iff BC(G\times Q , A\otimes c_0(Q))\]
+and 
+\[BC(\phi^{-1}(F),A) \iff BC(G\times F , A\otimes c_0(Q)),\]
+here the orbit is still $Q$ since $\phi$ is surjective, so $(G\times F)\cdot e_Q = Qe_Q F=Q$.\\
+
+Using a partial assembly map, one gets a  commutative diagram
+\[\begin{tikzcd}
+KK^{G\times Q}(\underline E G \times \underline E Q, A) \arrow{rd}{\mu_{G\times Q}}\arrow{r}{\mu_G^Q} & KK^Q(\underline E Q , A\rtimes_r G) \arrow{d}{\mu_Q} \\
+		& K(A\rtimes_r (G\times Q) )
+\end{tikzcd}\]
+Hence 
+\[BC(Q, A\rtimes_r G) + \mu_{G,A}^Q \implies BC(G\times Q , A).\]
+Combined with the previous discussion, it reduces to 
+\[BC(Q, (A\rtimes_r G)\otimes C_0(Q)) + \mu_{G,A\otimes C_0(Q)}^Q \implies BC(G , A).\]
+Supposing that $Q$ satisfies the Baum-Connes conjecture, it remains to understand when is the partial assembly map an isomorphism.
+
+\subsubsection{Restriction principle}
+
+The partial assembly map has a classifying space on the left side argument:
+\[\mu_{G,A}^Q : KK^{G\times Q}(\underline E G \times \underline E Q, A) \rightarrow KK^Q(\underline E Q , A\rtimes_r G),\]
+so the restrcition machinery reduces the statement to finite subgroups $F< Q$, i.e. if
+\[\mu_{G,A}^F : KK^{G\times F}(\underline E G \times U, A_{|F}) \rightarrow KK^F(U , A\rtimes_r G),\]
+is an isomorphism for all finite subgroups $F<Q$, then $\mu_{G,A}^Q$ is an isomorphism. The second assembly is equivalent to $\mu_{G\times F, A}$, which by the discussion above, is equivalent to $\mu_{\phi^{-1}(F),A}$. In the end, we get a necessary condition 
+\[BC(\phi^{-1}(F) ,A)\quad \forall F< Q \text{ finite } \implies \mu_{G,A}^Q.\]
+
+\subsubsection{Trees}
+
+Say now that $G$ acts on a tree $T$, so that we have a morphism
+\[\phi: G\rightarrow Isom(T),\]
+which we can restrict to its image $S= \phi(G)$ to reduce to the case of a surjective morphism. 
+\begin{itemize}
+\item[$\bullet$] when is it true that 
+	\[\underline E S = \cup_{d>0}P_d(T)?\]
+In this case, the assembly map for $G\times S$ factorizes through the partial assembly and the assembly
+\[ \lim_d KK^S(P_d(T), A\rtimes_r G) \rightarrow K(A\rtimes_r G\times S)\]
+which could be maybe rehrased in a nice property for the orbit, such as ``The orbit satsfies the coarse Baum-Connes conjecture $S$-equivariantly".   
+\item[$\bullet$] Is it true that having proper orbits and finite stabilizers is equivalent to a proper action? Can ``proper orbits'' be defined as a \textit{slice property}: for every $p\in X$, there is a $G$-invariant neighborhood $W$ which is induced by a subgroup $H$, i.e. $W\cong_G G\times_H U$. Here $H$ is not necessarily compact. 
+\end{itemize}
 
 \subsection{Argument for trees}
 
