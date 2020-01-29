@@ -119,7 +119,7 @@ is (CNT).\\
 If $k(x,y)$ is (CNT), then there exists a real Hilbert space $H$ and a map $\phi: X \rightarrow H$ such that 
 \[k(x,y) = \| \phi(x) - \phi(y) \|^2 \quad \forall x,y \in X.\]
 Then
-\[e^{tk(x,y)} = e^{-t \| \phi(x) \|^2 } e^{-t \| \phi(y) \|^2 } e^{2t \langle \phi(x), \phi(y) \rangle } \]
+\[e^{-tk(x,y)} = e^{-t \| \phi(x) \|^2 } e^{-t \| \phi(y) \|^2 } e^{2t \langle \phi(x), \phi(y) \rangle } \]
 is a Schur product of a kernel of the type $f(x)f(y)$ with the exponential of a positive type, so it is positive. 
 \end{proof}
 
@@ -299,6 +299,8 @@ Let $\phi_i$ converge to $\phi$ in the weak-$*$ topology. Let $F\subset G$ be fi
 which ensures that $\|\phi_i-\phi\|_{\infty, F}\leq \varepsilon$.
 \end{proof}
 
+Problem: Show that unireps separate points, i.e. for any $s\neq t$ in $G$, there exists a unirep $\pi$ such that $\pi(s)\neq \pi(t)$. \\
+
 Going back to a-T-menability.
 
 \begin{definition} We say that $G$ is a-T-menable, or has Haagerup's property, if there exists a (metrically) proper action of $G$ on a real Hilbert space by affine isometries, i.e there exists a group morphism 
@@ -329,9 +331,24 @@ An interesting consequence is the following.
 If $G$ is a-T-menable, there exists a continuous path of representations between the trivial representation and the quasi-regular representation $\lambda_{G/H}$ for some subgroup $H<G$.
 \end{prop}
 
-\begin{proof}
+\begin{proof} By Schoenberg's lemma, for every $t>0$, 
 \[\phi_t(g) = \exp(-t\eta(g))\]
+is of positive type. Let $\Psi$ be the characteristic function of $\{ g\ : \ \eta(g) = 0\}$. Let s show that $\phi_t$ converges uniformly on finite subsets to $\Psi$ as $t$ diverges to infinity. Let $F\subset G$ be finite, then its obvious isn't it?\\
+
+Claim: $H= \{ g\ : \ \eta(g) = 0\}$ is a subgroup of $G$. Indeed $\eta(e)=0$ and 
+\[\eta(s^{-1}t) \leq (\eta(s)+\eta(t))^2. \]
+
+\[\|a\|^2_\Psi = \sum_{x\in G/H} (\sum_{s\in xH} a_s)^2\]
+so that $N = \{a \ : \ \forall x\in G, \sum_{s\in xH} a_s = 0\}$ and
+\[V/N \cong span \{ \chi_{xH}\}_{x\in G} \]
+hence $H_{\Psi}\cong l^2(G/H)$ and $\pi_\Psi(g)\chi_{xH}= \chi_{gxH}$, $v_\Psi = \chi_{H}$, so that $GNS(\Psi)$ is isomorphic to the quasi-regular representation on $G/H$.\\	
+
+This gives $GNS(\phi_t)$ converges in the Fell's topology to $\lambda_{G/H}$.
 \end{proof} 
+
+References: Bekka, Valette, Property T (Annex C)\\
+Nowak Yu, Chapter on isometric actins on Banach spaces\\
+
 \section{Lecture 6}
 
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
