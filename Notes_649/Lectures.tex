@@ -261,6 +261,78 @@ As a result, we get that the family of equivalence classes of cyclic representat
 We will see next time how we can use a natural topology on the space of bounded functions on $G$ to topologize the space of cyclic representations of $G$. (This will be equivalent to the Fell topology)
 
 \section{Lecture 5}
+Recall that cyclic unitary representations corresponds to positive type functions on the group via the GNS construction. Cauchy-Schwartz ensures that
+\[|\phi(g) | = |\langle v_\phi , \pi_\phi(g)v_\phi \rangle | \leq \|v_\phi \|^2,\]
+hence $\phi\in l^\infty(G)$, and $\|\phi\|_\infty = |\phi(e)| =\|v_\phi \|^2$. But $(l^\infty(G), \|\cdot\|_\infty )$ is a Banach space. 
+\[\tilde G\cong \mathcal C :=\{\phi: G\rightarrow \R \text{ PT s.t. }\phi(e) = 1\}\] 
+Positive type functions form a cone closed w.r.t the topology of pointwise convergence, so the weak-$*$ topology. $\mathcal C$ is a closed convex subspace, so that Krein-Milman ensures that the set of extremal points is weak-$*$ dense in $\mathcal C$.
+
+\begin{prop}
+$Ext(\mathcal C)$ corresponds to the irreducible unitary representations via the GNS-construction.
+\end{prop}  
+ 
+This is an easy consequence of how the operations on positive type functions tranlate at the level of representations.
+\[GNS(t\phi)\cong (H_\phi, \pi_\phi, \sqrt{t}\cdot v_\phi)\]
+\[GNS(\phi_1+\phi_2)\cong (H_{\phi_1} \oplus H_{\phi_2}, \pi_{\phi_1}\oplus \pi_{\phi_2}, v_{\phi_1}\oplus v_{\phi_2})\]
+\[GNS(t\phi)\cong (H_{\phi_1} \otimes H_{\phi_2}, \pi_{\phi_1}\otimes \pi_{\phi_2}, v_{\phi_1}\otimes v_{\phi_2})\]
+
+The set of equivalence classes of unitary representations is endowed with the Fell topology: it is the topology of uniform convergence of coefficients on compact subsets. It corresponds exactly to the weak-$*$ toplogy on the space of normalized positive type functions.
+
+\begin{thm} [Raikov]
+The weak-$*$ topology and the topology of uniform convergence on compact subsets, i.e. for every net $\phi_i$ of positive type normalized functions 
+\[ \forall f \in l^1(G), \quad \lim_i\langle \phi_i , f\rangle = \langle \phi , f\rangle \iff \forall F\subset G\text{ finite}, \quad \lim_i\|\phi_i -\phi\|_{\infty , F} = 0 \] 
+\end{thm} 
+\begin{proof}
+Let $\phi_i$ converge uniformly on every finite subsets to $\phi$. Let $f\in l^1(G)$ and $\varepsilon>0$. There exists a finite subset $F\subset G$ such that 
+\[\sum_{g\in G-F} |f(g)| \leq \frac{\varepsilon}{4}\]
+and a rank $n$ such that 
+\[\forall i\geq n, \|\phi_i -\phi\|_{\infty , F} \leq \frac{\varepsilon }{2\sum_{F} |f(g)| }\]
+and 
+\[\begin{split}
+|\langle \phi - \phi_i , f \rangle | & \leq \|\phi_i -\phi\|_{\infty , F} \sum_{F} |f(g)|+2\sum_{G-F}|f(g)| \\
+				& \leq \varepsilon \\ 
+\end{split}\]
+So that $\phi_i$ converges to $\phi$ in the weak-$*$ topology.\\
+ 
+Let $\phi_i$ converge to $\phi$ in the weak-$*$ topology. Let $F\subset G$ be finite, and $\varepsilon>0$. Define $f=\chi_F\in l^1(G)$ and, up to changing the value of $f$ to $-1$, we get that, ultimately,  
+\[ |\phi(g)-\phi_i(g)|\leq \sum_{g\in F} |\phi(g)-\phi_i(g)| = \langle \phi - \phi_i , f \rangle   \leq \varepsilon \quad \forall g\in F\]
+which ensures that $\|\phi_i-\phi\|_{\infty, F}\leq \varepsilon$.
+\end{proof}
+
+Going back to a-T-menability.
+
+\begin{definition} We say that $G$ is a-T-menable, or has Haagerup's property, if there exists a (metrically) proper action of $G$ on a real Hilbert space by affine isometries, i.e there exists a group morphism 
+\[\alpha:\left\{\begin{array}{rcl} G & \rightarrow & Aff(H) \\ v & \mapsto & \alpha_g(v) = \pi_g(v)+b_g\end{array}\right.\] 
+with 
+\begin{itemize}
+\item[$\bullet$] $\pi: G \rightarrow U(H)$ is a unitary representation for $G$,
+\item[$\bullet$] $b: G\rightarrow H$ is a cocycle for $\pi$, meaning $b_{st} = \pi_s b_t+ b_s$, for every $s,t \in G$,
+\item[$\bullet$] $\alpha$ metrically proper, i.e. $\lim_{l(g)\rightarrow \infty} \|b_g\|^2 =\infty$.
+\end{itemize}
+\end{definition}
+Remarks:
+\begin{itemize}
+\item[$\bullet$] the cocycle relation ensures that $\alpha $ is a group morphism. In particular, it also yields 
+\[ \|b_s- b_t\|^2 = \| b_{s^{-1}t} \|^2 ,\]
+ensuring that $\phi(g)=\|b_g- b_e\|^2$ is a conditionally negative type function on $G$.
+\item[$\bullet$] 
+\end{itemize}
+
+\begin{thm} If $G$ is a-T-menable, then $G$ admits a coarse embedding into Hilbert space.
+\end{thm}
+\begin{proof}
+It suffices to show that $\phi(g)=\|b_g- b_e\|^2$ is proper, which is guaranted by the fact that $\lim_{l(g)\rightarrow \infty} \|b_g\|^2 =\infty$.\\
+\end{proof}
+
+An interesting consequence is the following. 
+\begin{prop}
+If $G$ is a-T-menable, there exists a continuous path of representations between the trivial representation and the quasi-regular representation $\lambda_{G/H}$ for some subgroup $H<G$.
+\end{prop}
+
+\begin{proof}
+\[\phi_t(g) = \exp(-t\eta(g))\]
+\end{proof} 
+\section{Lecture 6}
 
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
 \[\phi: G\rightarrow H \iff (H,\pi,v) \text{ GNS triple}.\] 
