@@ -351,6 +351,76 @@ Nowak Yu, Chapter on isometric actins on Banach spaces\\
 
 \section{Lecture 6}
 
+A last remark on affine actions of groups by isometries on Hilbert spaces. In the same way that a positive type kernel is equivalent to a Hilbert space $H$ and a map $\phi : X \rightarrow H$, there is an algebraic relation for cocyles: a cocycle for an isometric representation $G\rightarrow Aff(H)$ is equivalent to a negative type function $G\rightarrow \R$. Indeed, given such a cocycle $b: G \rightarrow H$,
+\[\phi(s^{-1}t) = \|b_s-b_t\|^2=\| b_{s^{-1}t}\|^2\]
+defines a negative type function, and the GNS representation associated to a CNT on $G$ will give a cocyle. Moreover, if the group is of bounded geometry, there is automatically a nondecreasing function $\rho_+$ such that $\|b_s-b_t\|\leq \rho_+(d(s,t))$, since 
+\[\phi(g) \leq \sup_{x\in B(e,r)} \phi(x) \quad \forall g : |g|\leq r, \]
+because the balls are finite. The only missing condition for $b$ to be a coarse embedding is the bound on the left hand side, which is equivalent to being proper. Notice that the opposite of a proper cocycle is any so called coboundary 
+\[b_g = v-\pi_g(v)\]
+which is bounded. In that case, $\alpha_g(v)=v$ is a constant representation.\\
+
+Then: discussion on the origin of amenability, i.e. the Banach Tarski paradox. Vitali's theorem: there exists measure define on the whole of $P(\R)$ such that $\mu([0,1]) = 1$ and which is $\sigma$-additive and invariant by translation, whence the need to introduce $\sigma$-algebras. In the other way, we can define finitely additive measures, which we can show to be equivalent to means.\\
+
+Let $X$ be a metric space, possibly endowed with an isometric action of $G$.
+
+\begin{definition}
+A mean on $X$ is a normalized ($m(1_X)=1$) positive ($m(f)\geq 0$ when $f\geq 0$) linear functional $m: l^\infty(X)\rightarrow \C$. We say that $m$ is $G$-invariant if 
+\[m(\alpha_g(f))=m(f) \quad \forall f\in l^\infty (X), g\in G.\] 
+\end{definition}
+
+A mean is automatically continuous of norm $1$, and is thus an element of the dual $l^\infty(X)^*$. The space of means is a convex that is compact for the weak-$*$ topology.
+
+\begin{definition}
+A group $G$ is amenable if any of these equivalent conditions are satisfied:
+\begin{itemize}
+\item[$\bullet$] there exists a $G$-invariant mean on $l^\infty(G)$,
+\item[$\bullet$] there exists a finitely additive measure on $G$, invariant by $G$-translation, 
+\item[$\bullet$] for all $\varepsilon>0, r>0$, there exists a finite subset $F \subset G$ such that 
+\[ \forall |g|\leq r, \frac{|F\Delta gF|}{|F|}< \varepsilon\]
+\item[$\bullet$] for all $\varepsilon>0, r>0$, there exists a finite subset $F \subset G$ such that
+\[\frac{|\partial_r F|}{|F|}<\varepsilon\]
+\end{itemize}
+\end{definition}
+
+The definition via means is powerful to show that the following are amenable.
+\begin{itemize}
+\item[$\bullet$] finite groups
+\[m(f)=\frac{1}{|G|}\sum_{g\in G} f(g),\]
+\item[$\bullet$] if $G$ is amenable, so is $G/N$ where $N$ is a normal subgroup. Define a map $l^{\infty}(G/N)\rightarrow l^\infty(G)$ by identifying functions on $G/N$ to functions on $G$ that are constant on cosets,
+\item[$\bullet$] abelian groups. Dualize the action of $G$ on $l^\infty(G)$ to the convex compact $K$ of means on $G$: we get affine maps $\tilde \alpha_g : K\rightarrow K$ for each $K$. By Kakutani's theor	em, they each have at least a fixed point. Since the affine maps commutes, the fixed points are stabilized so that for every finite subset $F\subset G$,
+\[\cap_F Fix(\tilde \alpha_g)\]
+is nonempty. Baire's theorem ensures that $\cap_G Fix(\tilde \alpha_g)$ is non-empty, so there exists a $G$-invariant mean.
+\end{itemize} 
+
+The implication from definition by Folner sets to the one by mean also uses a compactness argument: for any Folner set, define 
+\[m_F(f)= \frac{1}{|F|}\sum_{g\in F}f(g).\]
+Then $\{m_F\}$ is a bounded net in $K$ so that there exists an accumulation point which is easily shown to be an invariant mean.\\
+
+For extensions, amenability satifises the ``2 out of 3'' property. This implies, knowing that abelian groups are amenable, that solvable groups are amenable.\\
+
+The free group is not amenable. If a group is not amenable, then there is a constant $C>0$ such that 
+\[\frac{|\partial_r F|}{|F|}\geq C\]
+for every finite subset $F\subset G$. In particular
+\[|B(e,n)| = \prod_{k=1,n} (1 + \frac{|S(e,k)|}{|B(e,k)|}) \geq (1+C)^n.\]
+ In particular, subexponential growth implies amenability. So $\Z^n$ is amenable (not using that it is abelian).
+ 
+Next time:
+Hulancki-Reiter conidition for amenability, Property A and Higson-Roe condition (analog of Reiter), and kernel characterization 
+\begin{thm}
+X has property (A) iff for every $r>0, \varepsilon>0$, there exist $s>0$ and a positive type kernel $\phi: X\times X\rightarrow \R$ such that 
+\begin{itemize}
+\item[$\bullet$] $supp \ \phi \subset \Delta_s$,
+\item[$\bullet$] if $d(x,y)\leq r$, $|1-\phi(x,y)|<\varepsilon$.
+\end{itemize}
+\end{thm}
+Version for amenability: equivariance.\\
+
+Then: formulation in terms of Schur multipliers.
+
+References: Choimet, Queff\'elec, Analyse math\'ematiques, les grands th\'eor\`emes du XXe si\`ecle.\\
+Nowak Yu, Chapter on amenability\\
+
+\section{Lecture 7}
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
 \[\phi: G\rightarrow H \iff (H,\pi,v) \text{ GNS triple}.\] 
 GNS construction $\phi(g) = \langle v,\pi(g)v\rangle$, i.e. $\phi(s^{-1}t) = \langle \pi(s)v,\pi(t)v\rangle$ which is positive. $\eta(g)= \|\pi(g)v -v\|$. \\
