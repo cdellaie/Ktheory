@@ -421,6 +421,89 @@ References: Choimet, Queff\'elec, Analyse math\'ematiques, les grands th\'eor\`e
 Nowak Yu, Chapter on amenability\\
 
 \section{Lecture 7}
+
+Let us prove that amenability implies a-T-menability. For this we will use yet another characterization of amenablity, called the Hulanicki-Reiter condition.
+
+\begin{thm}
+$G$ is amenable iff for all $r>0,\varepsilon >0$, there exists a finitely supported function $f\in l^1(G)_{+,1}$ such that 
+\[ \| f -s\cdot f\|_1 \leq \varepsilon \quad \forall |s|\leq r. \]
+\end{thm}
+\begin{proof}
+If $G$ is amenable, let $F$ be a $(\varepsilon, r)$-Folner set. The function $f=\frac{1}{|F|}\chi_F$ satisfies the condition\\
+
+Let $f\in l^1(G)_{+,1}$ be as above. Up to a minor approximation, we can suppose $f$ is a step function with rational values: $f(x)\in \{0, \frac{1}{N}, ... , \frac{N-1}{N}, 1\}$. Define
+\[F = \{ (g,i) \ : \ i\leq f(g)\} \subset G\times \mathbb N,\]
+which is a grid under the graph of $f$, so that, as $f$ is a step function, 
+\[1 = \| f \|_1 = \frac{|F|}{N}\]
+and if $|s|\leq r$,
+\[\frac{|F\Delta sF|}{N} = \frac{|F\Delta sF|}{|F|}= \|f- s\cdot f\|_1 \leq \varepsilon\]
+so that $F$ is a $(\varepsilon, r)$-Folner set.
+\end{proof}
+
+Remark: we could have taken $f$ in $l^2(G)_{+,1}$. (Problem)
+
+\begin{cor}
+If $G$ is amenable, $G$ is a-T-menable.
+\end{cor}
+
+\begin{proof}
+For each $n$, choose $f_n\in l^2(G)_{+,1}$ a $(2^{-n},n)$-Hulanicki-Reiter function:
+\[\|f_n-s\cdot f_n\|_2 \leq \frac{1}{2^n} \quad \forall |s|\leq n.\]
+Define $\pi_g = \oplus \lambda_g$ the $l^2$-sum of the left regular representation on $\bigoplus_n l^2(G)$, and 
+\[b_g = \oplus_n (f_n - \lambda_g(f_n)).\]
+Then 
+\begin{itemize}
+\item[$\bullet$] $b_g$ is well defined in $l^2$,
+\[ \|b_g\|^2 = \sum_n \|f_n - g\cdot f_n\|^2 \leq \sum_{n= 1}^{|g|}\|f_n - g\cdot f_n\|^2 + \sum_{n\geq |g|+1} \frac{1}{4^n}. \]
+\item[$\bullet$] $b_g$ is a cocyle for $\pi_g$ (direct computation),
+\item[$\bullet$] $b_g$ is proper. Indeed for any $n$, there is a $N_n$ such that $\|f_n -s\cdot f_n\|^2 = 2$ if $|s|\geq N_n$. We can suppose $N_n$ to be increasing, and 
+\[\|b_g\|^2 \geq 2|\{n \ : \ N_n \leq |g|\}| \rightarrow +\infty.\]
+\end{itemize}
+\end{proof}
+
+In his 2000 paper in Inventiones Mathematicae, Guoliang Yu introduced the follwing property.
+
+\begin{definition}
+$X$ has property (A) iff for every positive numbers $\varepsilon, r >0$, there exist $s>0$ and a family of finite subsets $\{A_x\}_{x\in X}$ such that 
+\[\frac{|A_x \Delta A_y|}{|A_x\cap A_y|} \leq \varepsilon \quad \forall d(x,y)\leq r\]
+and $A_x\subset B(x,s)\times \mathbb N$.
+\end{definition}
+
+Show that property (A) is a coarse invariant.
+
+Examples:
+\begin{itemize}
+\item[$\bullet$] finite groups,
+\item[$\bullet$] amenable groups,
+\item[$\bullet$] trees.
+\end{itemize}
+
+In particular, $\mathbb F_n$ is a tree, so it has property (A), while it is not amenable.
+
+We have a analog of the Hulanicki-Reiter condition, called the Higson-Roe condition.
+
+\begin{thm} 
+$X$ has property (A) iff for every $r,\varepsilon>0$, there exist $s>0$ and $f:X\rightarrow l^1(X)_{+,1}$ such that 
+\[\|f(x)-f(y)\|_1 \leq \varepsilon \quad \forall d(x,y)\leq r\]
+and $\text{supp }f\subset B(x,s)$.
+\end{thm}
+
+\begin{proof}
+If $\{A_x\}$ is a family of subset as in the definition of property (A), then, if $A_x(y) = A_x \cap \{y\}\times \mathbb N$, then 
+\[f(x) = \frac{1}{|A_x|}\sum_y |A_x(y)|\delta_y \in l^1(X)_{+,1}\]
+satisfies the conditions.\\
+
+If $f: X\rightarrow l^1(X)_{+,1}$ as above is given, then, as for amenability, suppose that $f$ is a step function and define 
+\[A_x = \{(x,i)\ : \ i\leq f(x)\}\subset supp(f)\times \mathbb N \subset B(x,s)\times \mathbb N.\]
+Then $1 = \|f(x)\|_1= \frac{|A_x|}{N}$, and 
+\[\frac{|A_x\Delta A_y|}{|A_x\cap A_y|}\]  
+
+\[ \|f(x)-f(y)\|= \frac{1}{N}\sum ||A_x(z)|-|A_y(z)||  \]  
+\end{proof}
+
+References: Nowak-Yu, Chapter on property A
+
+\section{Lecture 8}
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
 \[\phi: G\rightarrow H \iff (H,\pi,v) \text{ GNS triple}.\] 
 GNS construction $\phi(g) = \langle v,\pi(g)v\rangle$, i.e. $\phi(s^{-1}t) = \langle \pi(s)v,\pi(t)v\rangle$ which is positive. $\eta(g)= \|\pi(g)v -v\|$. \\
