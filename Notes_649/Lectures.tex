@@ -504,6 +504,63 @@ Then $1 = \|f(x)\|_1= \frac{|A_x|}{N}$, and
 References: Nowak-Yu, Chapter on property A
 
 \section{Lecture 8}
+
+We finished the proof of the Higson Roe condition. We use the Higson Roe condition to show the following theorems.
+
+\begin{thm}
+If $G$ is an amenable group, it has property (A).
+\end{thm}
+
+\begin{proof}
+Let $\varepsilon >0, r>0$, and pick a Hulanicki-Reiter function $f\in l^2(G)_{+,1}$, finitely supported and $(\varepsilon, r)$-equivariant. Define $\tilde f (g) = \lambda_{g}^*(f)$. This defines a $(\varepsilon, r)$-Higson-Roe function for $\tilde f : G \rightarrow l^2(G)_{+,1}$.
+\end{proof}
+
+\begin{thm}
+If $X$ has property (A), it is coarsely embeddable into a Hilbert space.
+\end{thm}
+
+\begin{proof}
+Let $f_n : X \rightarrow l^2(X)_{+,1}$ be $(\varepsilon_n,r_n)$-Higson-Roe functions for $X$, with $\varepsilon_n = 2^{-n}$ and $r_n = n$. There exists $s_n>0$ such that $supp f_n(x)\subset B(x,s_n)$. We can suppose that $(s_n)_n$ increases and diverges to $+\infty$. Notice that
+\[\begin{split}
+\sum_n \|f_n(x) - f_n(y)\|^2 & \leq \sum_{n=0}^{d(x,y)} \|f_n(x) - f_n(y)\|^2 +\sum_{n\geq d(x,y)+1} \frac{1}{4^n} \\
+				& \leq \sum_{n=0}^{d(x,y)} \|f_n(x) - f_n(y)\|^2 + 2.\\
+\end{split}\]
+Fix $x_0\in X$. The inequality above says that  
+\[F(x) = \bigoplus_n (f_n(x) - f_n(x_0))\]
+is well defined as an element of $l^2(X \times \mathbb N)$. It also ensures that
+\[ \|F(x)-F(y)\|^2 \leq 2 d(x,y) +2.\]
+Moreover, if $d(x,y)> 2s_n$, $\|f_n(x) - f_n(y)\|^2 = 2$, so that 
+\[\|F(x)-F(y)\|^2 \geq | \{ n \ : \ 2s_n \leq  d(x,y)\} = \rho_-(d(x,y)),\]
+with $\lim \rho_- =\infty$, so that $F$ is a coarse embedding. 
+\end{proof}
+
+\subsection{Kernel characterization of property (A)}
+
+Definition of $\C_s[X]$ and $C^*_u(X)$, reminder on how to take the square root of a positive operator in a $C^*$-algebra, via polynomila approximation.
+
+\begin{thm}[Tu]
+$X$ has property (A) iff for every $\varepsilon> 0, r>0$, there exists a symmetric normalized positive type kernel $\phi : X\times X \rightarrow \R$ with finite propagation such that $\|1-\phi\|_{\infty, \Delta_r}<\varepsilon$. 
+\end{thm}
+
+\begin{proof}
+If $X$ has property (A), pick a Higson-Roe function $f: X\rightarrow l^2_{+,1}(X)$ and define $\phi(x,y)=\langle f(y), f(x)\rangle$. It satisfies all the coniditions of the theorem.\\
+
+Let $\varepsilon, r>0$ and $\phi$ be a kernel as above. Let $s= prop(\phi)$. Then
+\[(T\xi)(x)= \sum_{y\in X} \phi(x,y)\xi(y) \quad \forall \xi \in l^2(X)\]
+defines a bounded operator. Indeed, by the Cauchy-Schwartz inequality
+\[\begin{split}
+\langle \eta, T\xi \rangle & \leq \sum_{x,y} |\phi(x,y)| |\xi_y| |\eta_x| \\
+				& \leq \left( \sum_{x,y}|\phi(x,y)||\xi_y|^2\right)^{\frac{1}{2}}\cdot \left( \sum_{x,y} |\phi(x,y)| |\eta_x|^2 \right)^{\frac{1}{2}}\\
+				& \leq N(S) \|\xi \|\|\eta\|
+\end{split}\] 
+hence $\|T\|\leq N(S)$. Then let $P$ be a polynomial of degre $d$ such that $\|P(T)-T^2\|\leq \varepsilon$, and define $f: X\rightarrow l^2(X)$ by  
+\[f(x) = S\delta_x. \]
+This is a Higson Roe function for $X$.
+\end{proof}
+
+Discussion on examples: $\mathbb F_n$ and $SL(2,\Z)$ are a-T-menable, but not amenable. Property (T) together with a-T-menability implies finite. Hyperbolic groups have finite asymptotic dimension, hence property (A). So any infinite hyperbolic property (T) group, such as $Sp_{n,1}(\Z)$, has property (A) but is a-T-menable.  
+
+\section{Lecture 9}
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
 \[\phi: G\rightarrow H \iff (H,\pi,v) \text{ GNS triple}.\] 
 GNS construction $\phi(g) = \langle v,\pi(g)v\rangle$, i.e. $\phi(s^{-1}t) = \langle \pi(s)v,\pi(t)v\rangle$ which is positive. $\eta(g)= \|\pi(g)v -v\|$. \\
