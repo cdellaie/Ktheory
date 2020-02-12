@@ -558,9 +558,49 @@ hence $\|T\|\leq N(S)$. Then let $P$ be a polynomial of degre $d$ such that $\|P
 This is a Higson Roe function for $X$.
 \end{proof}
 
-Discussion on examples: $\mathbb F_n$ and $SL(2,\Z)$ are a-T-menable, but not amenable. Property (T) together with a-T-menability implies finite. Hyperbolic groups have finite asymptotic dimension, hence property (A). So any infinite hyperbolic property (T) group, such as $Sp_{n,1}(\Z)$, has property (A) but is a-T-menable.  
+Discussion on examples: $\mathbb F_n$ and $SL(2,\Z)$ are a-T-menable, but not amenable. Property (T) together with a-T-menability implies finite. Hyperbolic groups have finite asymptotic dimension, hence property (A). So any infinite hyperbolic property (T) group, such as $Sp_{n,1}(\Z)$, has property (A) but is not a-T-menable.  
 
 \section{Lecture 9}
+
+We first give a characterization of amenability in terms of positive type functions. 
+
+\begin{prop}
+$G$ is amenable iff for every $r> 0, \varepsilon>0$, there exists a finitely supported normalized positive type function $\phi : G \rightarrow \mathbb R$ such that $|1-\phi (g)|< \varepsilon , \forall |g|\leq r$.
+\end{prop}
+
+\begin{proof}
+If $G$ is amenable, let $f\in l^2(G)_{+,1}$ be a $(\varepsilon,r)$-Reiter's function, and define $\phi(g) = \langle f , g\cdot f\rangle$. Then $\phi$ is a positive type function that satisfies all the properties above.\\
+
+Any finitely supported normalized positive type function induces a finite propagation kernel, and thus a Schur multiplier 
+\[S_\phi : C^*_u(X) \rightarrow C^*_u(X).\]
+Pick a net of positive type functions as above for $\varepsilon = 2^{-n}$ and $r=n$. Then the restriction of $S_{\phi_n}$ to $l^\infty(G)$ gives a sequence from which we can extract a convergent subsequence to a mean. (details) 
+\end{proof}
+
+\begin{thm}
+Let $G$ be a finitely generated residually finite group. Then $G$ is amenable iff any box space $X_{\mathcal N}(G)$ has property (A).
+\end{thm}
+
+\begin{proof}
+A normalized finite propagation kernel on a coarse disjoint union $\coprod X_n$ has to ultimately stabilize the $X_n$, hence we get a sequence of positive type kernels
+\[k_n : X_n \times X_n \rightarrow \R \quad  \forall n \geq N.\]
+Define 
+\[\phi_n (g) =\frac{1}{|G_n|}\sum_{t\in G_n} k_n(t,tq_n(g)) \quad \forall g \in G.\]
+Then $\phi_n: G\rightarrow \R$ is a normalized positive type function on $G$. Take a converging subsequence. The key property to show that the limit is finitely supported and is close to $1$ is that there exists a rank such that the canonical projection $q_n : G\rightarrow G_n$ induces an isometry between $B_G(e,s)$ and $B_{G_n}(\hat e,s)$.  
+\end{proof}
+
+A property called \textit{fibred coarse embedding into Hilbert space} was defined by Chen, Wang and Yu in 2012 in their investigation of the maximal coarse Baum-Connes conjecture.It turns out that it is exactly the notion that was missing to characterize a-T-menability of the group w.r.t. the box space.
+
+\begin{thm}[Chen, Wang and Wang]
+Let $G$ be a finitely generated residually finite group. Then $G$ is a-T-menable iff any box space $X_{\mathcal N}(G)$ admits a fibred coarse embedding into Hilbert space.
+\end{thm}  
+
+Then: definition of almost invariant vector and property (T). Examples: finite groups have property (T), and amenable groups which have (T) are finite. (Reiter's conidtion shows that the left regular representation has almost invariant vectors).
+
+\begin{prop}
+Let $G$ be a discrete group with Haagerup's property. If $G$ has property (T). then $G$ is finite.
+\end{prop}
+
+\section{Lecture 10}
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
 \[\phi: G\rightarrow H \iff (H,\pi,v) \text{ GNS triple}.\] 
 GNS construction $\phi(g) = \langle v,\pi(g)v\rangle$, i.e. $\phi(s^{-1}t) = \langle \pi(s)v,\pi(t)v\rangle$ which is positive. $\eta(g)= \|\pi(g)v -v\|$. \\
@@ -569,4 +609,28 @@ $G$ is a-T-menable (metrically proper action by affine isometries on a real Hilb
 
 Consequence: there is a homotopy between the trivial representation and the regular representation.\\
 
-Gelfand Raikov theorem
+Gelfand Raikov theorem\\
+
+Do a table with the different definitions and their formulation: historical, kernels and positive functions, Schur multipliers, geometrical, representation theoretical.
+
+\begin{table}[h]
+\begin{tabular}{c|c|c|c|c|}
+\cline{2-5}
+                                                         & \textbf{Amenability} & \textbf{Haagerup} & \textbf{(A)}            & \textbf{(CEH)}  \\ \hline
+\multicolumn{1}{|l|}{\textbf{Geometrical}}                   &  $\forall \varepsilon, r>0, \exists F\subset G \text{ finite s.t. 	}\frac{|F\Delta s F|}{|F|}\leq \varepsilon$  &                   & $\forall \varepsilon, r>0, \exists \{A_x\}_{x\in X}, A_x\subset X\times \mathbb N \text{ finite s.t. 	}\frac{|A_x\Delta A_y|}{|A_x\cap A_y|}\leq \varepsilon \forall (x,y)\in \Delta_r$ and                 &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{Kernels}}                   &                     &                   &                      &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{Reiter's type}}                   &                     &                   &                      &                       \\ \hline
+\hline
+\end{tabular}
+\end{table} 
+
+\begin{table}[h]
+\begin{tabular}{c|c|c|}
+%\cline{2-5}
+                                                         & \textbf{(A)}            & \textbf{(CEH)}  \\ \hline
+\multicolumn{1}{|l|}{\textbf{Geometrical}}               & $\forall \varepsilon, r>0, \exists \{A_x\}_{x\in X}, A_x\subset X\times \mathbb N \text{ finite s.t. }\frac{|A_x\Delta A_y|}{|A_x\cap A_y|}\leq \varepsilon \forall (x,y)\in \Delta_r$ and &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{Kernels}}                   &                      &                       \\ \hline
+\multicolumn{1}{|l|}{\textbf{Reiter's type}}             &                      &                       \\ \hline
+\hline
+\end{tabular}
+\end{table} 
