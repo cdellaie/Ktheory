@@ -601,6 +601,55 @@ Let $G$ be a discrete group with Haagerup's property. If $G$ has property (T). t
 \end{prop}
 
 \section{Lecture 10}
+
+Today we will give different variations on the definition of property (T), with the goal of defining it for coarse spaces.\\
+
+For a unitary representation $\pi : G \rightarrow U(H)$, $H^\pi$ will denote the subspace of invariant vectors, and $H_\pi$ its orthogonal complement. They are both $G$-invariant subspaces, and thus subrepresentations. The notation $g\cdot \xi $ means $\pi(g)\xi$ for a vector $\xi \in H$ and an element $g\in G$. \\
+
+Let $\mathcal F$ be a family of unitary representations of a discrete group $G$. 
+
+\begin{definition} 
+We say that $G$ has property $(T)_{\mathcal F}$ if there exists a finite subset $F\subset G$ and a positive number $\varepsilon>0$ such that for every $\pi\in \mathcal F$, 
+\[\sup_{s\in F} \|s\cdot \xi - \xi\| >\varepsilon \quad \forall \xi \in H_\pi , \xi \ne 0\]
+\end{definition}
+
+Proof in class: when $\mathcal F$ is the family of all unitary representations, this definition is equivalent to the one we gave in the previous lecture.\\
+
+Let $G$ be finitely generated, and let $S$ be a symmetric finite generating set which does not contain $e_G$. Then the Laplacian $\Delta \in \C [G]$ associated to $S$ is 
+\[\begin{split}
+\Delta & = \frac{1}{2|S|}\sum_{s\in S} (s-1)^*(s-1) \\
+& = 1- \frac{1}{|S|}\sum_{s\in S}s
+\end{split}\]
+
+This element is algebraically positive, and thus its image in any unitary representation is a positive operator. Moreover, in $\pi : G\rightarrow U(H)$,
+\[ \langle \xi , \Delta \xi \rangle = \frac{1}{2|S|} \sum_{s\in S} \|s\cdot \xi - \xi\|^2 \]
+which entails that 
+\[Ker \Delta = H^\pi.\]
+If 
+\[\sup_{s\in S} \|s\cdot \xi - \xi\| >\varepsilon \quad \forall \xi \in H_\pi , \xi \ne 0,\] 
+then $sp(\pi(\Delta))\subset \{0\}\cup [c, \infty)$ for a constant $c>0$ that depends on $\varepsilon$. As a consequence, the projection $p$ onto the invariant vectors belongs to $C^*_\pi(G)= \overline{\pi(\C[G])}\subset B(H)$. Indeed, a priori $p = \chi_{\{0\}}(\Delta)\in B(H)$, where we used the Borel funcional calculus. But the spectral gap ensures that there exists a continuous function $f$ such that $f= \chi_{\{0\}}$ on the spectrum of $\pi(\Delta)$, so that $p=f(\Delta)$.\\
+
+A more advanced statement is that if $G$ has $(T)_{\mathcal F}$, then $p\in C^*_{\mathcal F}(G)$. \\
+
+Let $G$ be finitely generated and residually finite with respect to $\mathcal N$. Define $\mathcal F_{\mathcal N}$ to be the family of unitary representations that factorize through one of the finite quotients $G_i = G/ N_i$. Lubozky defined property $(\tau)_{\mathcal N}$ as what we called property $(T)_{\mathcal N}$.
+
+\begin{prop}
+If $G$ has $(\tau)_{\mathcal N}$, then the box space $X_{\mathcal N}= \coprod |G_i|$ is an expander. \end{prop}
+\begin{proof}
+Let $X_i$ be the finite graph $|G_i|$, and $\Delta_i = \Delta_{X_i}$. Of course, the degree of each graph is constant equal to $|S|$, and $\lim |X_i| = \infty$. Let us show that 
+\[sp(\Delta_i )\subset \{0\} \cup [c , \infty).\]
+Consider the representations $\pi_i : G\rightarrow U(l^2(X_i))$ given by first projecting to $G_i$, and then taking the left regular representation, i.e. $\pi_i = \lambda_{G_i}\circ q_i$. They are all in  $\mathcal F_{\mathcal N}$. By the discussion above, showing that $\pi_i(\Delta_G)= \Delta_i$ concludes the proof as the condition $\sup_{s\in S} \|s\cdot \xi - \xi\| >\varepsilon \quad \forall \xi \in H_\pi , \xi \ne 0$ implies $sp(\pi(\Delta))\subset \{0\}\cup [c, \infty)$ for a constant $c>0$ that depends only on the family $\mathcal F_{\mathcal N}$. This follows from the following computation:
+\[\begin{split}
+\pi_i(\Delta_G) & = \pi_i( 1 - \frac{1}{|S|}\sum_{s\in S}s )\\
+ & =id_{l^2G_i} - \frac{1}{|S|}\sum_{s\in S}\lambda_{G_i}(\overline s) \\  
+(\pi_i(\Delta_G)f)(x) & = f(x)-\frac{1}{|S|}\sum_{s\in S} f(\overline s x) \\
+						& = \frac{1}{|S|}\sum_{y\sim x }(f(x)-f(y))\\
+						&  = (\Delta_i f)(x)
+\end{split}\]
+\end{proof}
+
+How to define coarse property (T)? Definition of the inverse semi-group of partial translations.
+\section{Lecture 11}
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
 \[\phi: G\rightarrow H \iff (H,\pi,v) \text{ GNS triple}.\] 
 GNS construction $\phi(g) = \langle v,\pi(g)v\rangle$, i.e. $\phi(s^{-1}t) = \langle \pi(s)v,\pi(t)v\rangle$ which is positive. $\eta(g)= \|\pi(g)v -v\|$. \\
