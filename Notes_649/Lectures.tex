@@ -663,26 +663,58 @@ Gelfand Raikov theorem\\
 Do a table with the different definitions and their formulation: historical, kernels and positive functions, Schur multipliers, geometrical, representation theoretical.
 
 \begin{table}[h]
-\begin{tabular}{c|c|c|c|c|}
-\cline{2-5}
-                                                         & \textbf{Amenability} & \textbf{Haagerup} & \textbf{(A)}            & \textbf{(CEH)}  \\ \hline
-\multicolumn{1}{|l|}{\textbf{Geometrical}}                   &  $\forall \varepsilon, r>0, \exists F\subset G \text{ finite s.t. 	}\frac{|F\Delta s F|}{|F|}\leq \varepsilon$  &                   & $\forall \varepsilon, r>0, \exists \{A_x\}_{x\in X}, A_x\subset X\times \mathbb N \text{ finite s.t. 	}\frac{|A_x\Delta A_y|}{|A_x\cap A_y|}\leq \varepsilon \forall (x,y)\in \Delta_r$ and                 &                       \\ \hline
-\multicolumn{1}{|l|}{\textbf{Kernels}}                   &                     &                   &                      &                       \\ \hline
-\multicolumn{1}{|l|}{\textbf{Reiter's type}}                   &                     &                   &                      &                       \\ \hline
+\[\begin{array}{|c|c|c|}
 \hline
-\end{tabular}
+                                                     & \textbf{Amenability} & \textbf{Haagerup}   \\
+\hline
+\textbf{Geometrical} &  
+		\forall \varepsilon, r>0,   & 
+		\exists \alpha : G \rightarrow Aff(H)  \\ 
+			& \exists F\subset G \text{ finite s.t. }  & \text{ metrically proper} \\
+			& \frac{|F\Delta s F|}{|F|}\leq \varepsilon & \\
+\hline
+\textbf{Kernels} &
+		\forall \varepsilon, r>0, &
+		\exists \phi: G\rightarrow \R  \\
+			&\exists \phi: G \rightarrow \R \text{ finite support, PT s.t. } & \text{ CNT and proper} \\
+			& \|1-\phi\|_{\infty,B_r}\leq \varepsilon  & \\
+\hline
+\textbf{Hulanicki-Reiter} &
+		\forall \varepsilon, r>0, &
+		\\
+			&\exists f\in l^2(G)_{+,1}\text{ finite support s.t. } & \\
+		&  \|s\cdot f -f\|_2< \varepsilon , \forall |s|\leq r & \\
+\hline
+\end{array}\]
 \end{table} 
 
+%%%%%%%%%%%%%%%%%%%
 \begin{table}[h]
-\begin{tabular}{c|c|c|}
-%\cline{2-5}
-                                                         & \textbf{(A)}            & \textbf{(CEH)}  \\ \hline
-\multicolumn{1}{|l|}{\textbf{Geometrical}}               & $\forall \varepsilon, r>0, \exists \{A_x\}_{x\in X}, A_x\subset X\times \mathbb N \text{ finite s.t. }\frac{|A_x\Delta A_y|}{|A_x\cap A_y|}\leq \varepsilon \forall (x,y)\in \Delta_r$ and &                       \\ \hline
-\multicolumn{1}{|l|}{\textbf{Kernels}}                   &                      &                       \\ \hline
-\multicolumn{1}{|l|}{\textbf{Reiter's type}}             &                      &                       \\ \hline
+\[\begin{array}{|c|c|c|}
 \hline
-\end{tabular}
+                                                     &  \textbf{(A)}  & \textbf{(CEH)}    \\
+\hline
+\textbf{Geometrical} &  
+		\forall \varepsilon, r>0,   & 
+		\exists f: X \rightarrow H   \\ 
+			& \exists \{A_x\}_{x\in X}, A_x\subset X\times \mathbb N \text{ finite s.t. } &\text{coarse embedding} \\
+			& \frac{|A_x\Delta A_y|}{|A_x\cap A_y|}\leq \varepsilon \forall (x,y)\in \Delta_r & \\
+\hline
+\textbf{Kernels} &
+		\forall \varepsilon, r>0, &
+		\exists \phi: X\times X\rightarrow \R \text{ s.t. } \\
+			&\exists \phi: X\times X\rightarrow \R \text{ PT s.t. } & \text{ CNT and proper} \\
+			&supp(\phi)\subset \Delta_s \& \|1-\phi\|_{\infty,\Delta_r}\leq \varepsilon  & \\
+\hline
+\textbf{Higson-Roe} &
+		\forall \varepsilon, r>0, &
+		\\
+			&\exists s>0, f: X\rightarrow  l^2(X)_{+,1}\text{ s.t. } & \\
+		&   supp(f(x))\subset \Delta_s \& \|f(x) -f(y)\|_2\leq\varepsilon , \forall (x,y)\leq \Delta_r & \\
+\hline
+\end{array}\]
 \end{table} 
+%%%%%%%%%%%%%%%%%%%%
 
 \section{Problems}
 
@@ -731,18 +763,25 @@ Prove that the left regular representation of a discrete group $G$ cannot have a
 
 \subsection{$C^*$-algebras}
 
-Commutation relation. Show that the canonical commutation relation \[ pq-qp = 1\]
+\textbf{Commutation relation} Show that the canonical commutation relation \[ pq-qp = 1\]
 does not have a bounded representation. A way to refomulate that is: show that the unital $*$-algebra 
 \[ \C^*( p,q | pq-qp =1)\]
 does not have any $C^*$-completion.\\
 
-Classification of finite dimensional $C^*$-algebras. Let $A$ be a $C^*$-algebra, finite dimensional as a $\C$-vector space. Show there exist positive integers $n,k_1,...,k_n$ and a $*$-isomorphism
+\textbf{Classification of finite dimensional $C^*$-algebras} Let $A$ be a $C^*$-algebra, finite dimensional as a $\C$-vector space. Show there exist positive integers $n,k_1,...,k_n$ and a $*$-isomorphism
 \[A\cong \bigoplus_{i=1}^n M_{k_i}(\C).\]
 
-Let $G$ be a finte group. Describe the GNS theorem for $A=\C[G]$. Do it for compact groups.\\
+\textbf{Finite groups} Let $G$ be a finte group. Describe the GNS theorem for $A=\C[G]$. Do it for compact groups.\\
 
-How is Pontryagin duality and Gelfand's theorem on commutative $C^*$-algebra related?\\
+\textbf{Commutative groups} How is Pontryagin duality and Gelfand's theorem on commutative $C^*$-algebra related?\\
 
+\textbf{Fell's trick and Green's isomorphism}
+First show Fell's trick in a combinatorial manner, i.e. show that the permutation action of $G$ on itself absorb any action of $G$ on a set $X$. Use this to show that 
+\[\lambda_G \otimes \pi \cong \lambda_G \otimes 1\]
+Same for Green's isomorphism: show that $X\rtimes G \cong \coprod_{s\in \Omega} G_s\times (X_s\times X_s)$ and use it to prove
+\[C_0(X)\rtimes_r G \cong \bigoplus_{s\in \Omega} C^*_r(G_s)\otimes \mathfrak K(l^2(X_s)). \]
+
+\textbf{Roe algebras}
 Show that 
 \[C^*_u(G) \cong l^\infty(G)\rtimes_r G.\]
 
