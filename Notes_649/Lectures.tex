@@ -3,6 +3,11 @@
 Metric spaces\\
 Cayley graphs\\
 
+If a group $G$ is finitely generated, any finite generating $S$ subset defines a metric called the word metric $d_S$. The metric space $(G,d_S)$ is denoted by $|G|_S$. We always suppose the subsets to be symmetric and to not contain the neutral element. Two such metric are always linearly equivalent, and $|G|$ denotes the equivalence class of these metric spaces. To $|G|_S$ is associated a undirected graph, that is a metric one-dimensional complex. The vertex set is the group, $V= G$, whereas two vertices are connected by an edge if $d(s,t)=1$, which means in the word metric that $s^{-1}t\in S$.\\
+
+In the case when $G$ is residually finite with respect to $\mathcal N$, we can build the box space $X_{\mathcal N}$. Here $\mathcal N=\{N_i\}_i$ is a decreasing sequence of finite index normal subgroups of $G$ with rivial intersection. Fix a finite symmetric non-degenerate generating set $S$, and let $S_i$ be the image of $S$ in the finite quotient $G_i= G/N_i$. The box space is defined as the coarse disjoint union of the $|G_i|_{S_i}$,
+\[X_{\mathcal N} = \coprod_i |G_i|_{S_i}. \] 
+
 Ref: chapter 1 of Nowak, Yu, Large Scale geometry.
 \section{Lecture 2}
 
@@ -671,7 +676,7 @@ Do a table with the different definitions and their formulation: historical, ker
 		\forall \varepsilon, r>0,   & 
 		\exists \alpha : G \rightarrow Aff(H)  \\ 
 			& \exists F\subset G \text{ finite s.t. }  & \text{ metrically proper} \\
-			& \frac{|F\Delta s F|}{|F|}\leq \varepsilon & \\
+			& \frac{|F\Delta s F|}{|F|}\leq \varepsilon \quad \forall |s|\leq r & \\
 \hline
 \textbf{Kernels} &
 		\forall \varepsilon, r>0, &
@@ -683,7 +688,7 @@ Do a table with the different definitions and their formulation: historical, ker
 		\forall \varepsilon, r>0, &
 		\\
 			&\exists f\in l^2(G)_{+,1}\text{ finite support s.t. } & \\
-		&  \|s\cdot f -f\|_2< \varepsilon , \forall |s|\leq r & \\
+		&  \|s\cdot f -f\|_2< \varepsilon \quad \forall |s|\leq r & \\
 \hline
 \end{array}\]
 \end{table} 
@@ -692,19 +697,19 @@ Do a table with the different definitions and their formulation: historical, ker
 \begin{table}[h]
 \[\begin{array}{|c|c|c|}
 \hline
-                                                     &  \textbf{(A)}  & \textbf{(CEH)}    \\
+                                                     &  \textbf{Property (A)}  & \textbf{(CEH)}    \\
 \hline
 \textbf{Geometrical} &  
 		\forall \varepsilon, r>0,   & 
 		\exists f: X \rightarrow H   \\ 
 			& \exists \{A_x\}_{x\in X}, A_x\subset X\times \mathbb N \text{ finite s.t. } &\text{coarse embedding} \\
-			& \frac{|A_x\Delta A_y|}{|A_x\cap A_y|}\leq \varepsilon \forall (x,y)\in \Delta_r & \\
+			& \frac{|A_x\Delta A_y|}{|A_x\cap A_y|}\leq \varepsilon \quad \forall (x,y)\in \Delta_r & \\
 \hline
 \textbf{Kernels} &
 		\forall \varepsilon, r>0, &
 		\exists \phi: X\times X\rightarrow \R \text{ s.t. } \\
-			&\exists \phi: X\times X\rightarrow \R \text{ PT s.t. } & \text{ CNT and proper} \\
-			&supp(\phi)\subset \Delta_s \& \|1-\phi\|_{\infty,\Delta_r}\leq \varepsilon  & \\
+			&\exists \phi: X\times X\rightarrow \R \text{ PT s.t. } & \text{ CNT, proper and} \\
+			&supp(\phi)\subset \Delta_s \& \|1-\phi\|_{\infty,\Delta_r}\leq \varepsilon  & \text{ bounded on entourages}\\
 \hline
 \textbf{Higson-Roe} &
 		\forall \varepsilon, r>0, &
@@ -745,11 +750,13 @@ Let $R\subset X\times X$. Show that $R$ is an equivalence relation iff $\chi_R$ 
  
 Let $f=\sum_n a_n z^n$ be an entire function with $a_n\leq 0$, and let $k: X\times X\rightarrow \R$ be a symmetric positive kernel. Describe the $GNS$-representation associated to $\sum_n a_n k(x,y)^n$ in terms of $GNS(k)$.\\
 
+\textbf{Groups} \\
+
 Let $H<G$ be a subgroup. Show that $\phi(x)=\chi_H(g)= 1_{g\in H}$ defines a positive type function on $G$. Describe its GNS representation. (Hint: start with $H=1$)\\
 
 Give examples of amenable and a-T-menable groups. Give examples of property (A) and (CEH) metric spaces.\\ 
 
-Use the Hulanicki-Reiter conidition to prove that
+Use the Hulanicki-Reiter condition to prove that
 \begin{itemize}
 \item[$\bullet$] $\mathbb F_2$ is not amenable.
 \item[$\bullet$] amenabilty is invariant by quasi-isometry.	
@@ -760,6 +767,17 @@ Give a  metrically proper action of $\R^n$ by affine isometries on a real Hilber
 Show that if a group is acting properly on a tree, then it is a-T-menable.\\
 
 Prove that the left regular representation of a discrete group $G$ cannot have a non-zero invariant vector unless $G$ is finite.\\
+
+\textbf{Universal results} \\
+
+Show that a metric space $(X,d)$ admits an isometric embedding into a Hilbert space iff $\phi(x,y) = d(x,y)^2$ is a symmetric negative type kernel.\\
+
+Show that for any separable Banach space $E$, there exist
+\begin{itemize}
+\item[$\bullet$] a continuous injective linear map $E\rightarrow l^\infty$,
+\item[$\bullet$] a continuous surjective linear map $l^1 \rightarrow E$.   
+\end{itemize}
+This result shows that $l^1$ and $l^\infty$ are \text{universal}: any Banach space can be realized as a quotient and a subspace of these.
 
 \subsection{$C^*$-algebras}
 
