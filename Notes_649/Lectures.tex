@@ -711,7 +711,10 @@ Definition of the semigroup ring $\C[S]$: it is the $*$-algebra defined as $span
 The coarse structure of a bounded geometry metric space $X$ is the semigroup 
 \[\mathcal E_X =\{E\subset X\times X \ : \ \exists r>0. E\subset \Delta_r\},\]
 endowed with multiplication and involution
-\[E\circ F \quad E^*.\]
+\[E\circ F=\{(x,z) \ : \ \exists y \in X / (x,y)\in E \& (y,z)\in F \},\]
+\[ E^*=\{(x,y) \ : \ (y,x)\in E \}.\]
+Another notation
+\[diag(E) =\{(x,x) \ : \ (x,x)\in E  \}\]
 It is not an inverse semigroup!\\
 
 The partial translations of a bounded geometry metric space $X$ are the elements of 
@@ -750,7 +753,7 @@ In the case we look at a group $G$ (top row), and the metric space is $|G|$, the
 \text{Property (A)} \arrow[r,Rightarrow] & \text{(CEH)} \\
 \end{tikzcd}.\]
 If $G$ is residually finite, and $X= X_{\mathcal N}(G)$ is the associated box-space, then
-\[G \text{ has } (\tau)_{\mathcal N} \Rightarrow X \text{ is an expander}\]
+\[G \text{ has (T)} \Rightarrow G \text{ has } (\tau)_{\mathcal N} \Leftrightarrow X \text{ is an expander}\]
 
 \[\begin{tikzcd}
 G \text{ is amenable }  \arrow[r,Leftrightarrow]\arrow[dd,Rightarrow] & X \text{ has property (A)} \arrow[d,Rightarrow]\\
