@@ -687,6 +687,7 @@ An inverse semigroup $S$ is
 \item[$\bullet$] an involution $S\rightarrow S ; s\mapsto s^*$ satisfying
 \[s^*ss^* = s^* \quad ss^*s = s  \quad (st)^* =t^* s^*\quad \forall s,t \in S.\]
 \end{itemize}
+\end{definition}
 
 Examples:
 \begin{itemize}
@@ -729,7 +730,65 @@ Proof in class.\\
 
 Next time $\C[S(X)] \cong \C_u[X]$.
 
+\section{Lecture 12}
+
+\begin{prop}
+The left regular representation of the inverse semigroup of partial translations $S(X)$ establishes an isomorphism of $*$-algebras
+\[\C[S(X)] \cong \C_u[X].\]
+\end{prop}
+
+Proof in class.\\
+
+\textbf{Invariant vectors} Let $\pi: \C_u[X] \rightarrow B(H)$ be a $*$-representation. A vector $\xi\in H$ is invariant if 
+\[s\cdot \xi  = s^*s\cdot  \xi \quad\forall s \in S(X).\]
+The subspace of invariant vectors is denoted by $H^\pi$ and its orthogonal complement, the \textit{coinvariant} vectors, is denoted by $H_\pi$.
+
+\begin{prop}
+Let $\pi: \C_u[X] \rightarrow B(H)$ be a $*$-representation. Then 
+\[\xi \in H_\pi \Leftrightarrow a\cdot \xi = \phi(a) \cdot \xi \quad \forall a \in \C_u[X].\]
+\end{prop}
+
+Proof in class.\\
+
+For $a\in \C_u[X]$, $|a|_\infty = \sup_{x,y\in X} |a_{xy}|$. A controlled set is called \textit{generating} if 
+\[\forall F\in \mathcal E_X, \exists n\in \N , F\subset E^n.\]
+Remarks on generating sets. Example for a finitely generated groups and their box spaces when r.f. In that case
+\[E =\cup_{s\in S} graph(s)\]
+is a generating set. Here $s\in S$ is identified with the gloabally defined partial translation $X\rightarrow X ; x\mapsto s\cdot x $. \\
+
+What about a coarse disjoint union of finite graphs? If $d(X_i,X_j)=\infty$ when $i\neq j$, then we can do the same. (details) 
+
+\begin{definition}
+A bounded geometry space $X$ has geometric property (T) (also denoted by $(T)_{geom}$) if there exists a Kazdhan pair $(E,c)$ where 
+\begin{itemize}
+\item[$\bullet$] $E\in \mathcal E_X$ is a controlled generating set,
+\item[$\bullet$] $c>0$ is a positive constant,
+\end{itemize}
+such that, for every representation $\pi: \C_u[X] \rightarrow B(H)$, and every $\xi \in H_\pi$, there exists $a\in \C_E[X]$ such that 
+\[\|a\cdot \xi - \phi(a)\xi \| \geq c |a|_\infty \|\xi \|.\] 
 \end{definition}
+
+\textbf{Laplacians over discrete metric spaces}
+\[\Delta^Ef(x) = f(x) -\frac{1}{|E_x|} \sum_{y\in E_x} f(y). \]
+If $E$ is symmetric and $E = \coprod graph(s)$ with $dom(s)=X$, then 
+\[\delta^E = \frac{1}{2|S|}\sum_{s\in S} (s^*s-s)^*(s^*s-s).\]
+\begin{prop}
+\begin{itemize}
+\item[$\bullet$] $ker \Delta = H^\pi $
+\item[$\bullet$] $X$ has (T) iff there exists $c>0$, for every $\pi: \C_u[X] \rightarrow B(H)$, 
+\[sp(\pi(\Delta)) \subset \{0\}\cup [c,\infty).\]
+\end{itemize}
+\end{prop}
+
+\textbf{Application to expanders and box spaces}
+
+\begin{thm}[Willett-Yu]
+If $X$ has $(T)_{geom}$, $X$ is an expander.
+\end{thm}
+
+\begin{thm}[Willett-Yu]
+ $X_{\mathcal N}(G)$ has $(T)_{geom}$ iff $G$ has (T).
+\end{thm}
 
 \section{To do}
 
@@ -753,16 +812,20 @@ In the case we look at a group $G$ (top row), and the metric space is $|G|$, the
 \text{Property (A)} \arrow[r,Rightarrow] & \text{(CEH)} \\
 \end{tikzcd}.\]
 If $G$ is residually finite, and $X= X_{\mathcal N}(G)$ is the associated box-space, then
-\[G \text{ has (T)} \Rightarrow G \text{ has } (\tau)_{\mathcal N} \Leftrightarrow X \text{ is an expander}\]
-
 \[\begin{tikzcd}
 G \text{ is amenable }  \arrow[r,Leftrightarrow]\arrow[dd,Rightarrow] & X \text{ has property (A)} \arrow[d,Rightarrow]\\
 	& X \text{ is (CEH)}\arrow[d,Rightarrow] \\
 	G \text{ has Haagerup's property }\arrow[ur,Rightarrow]\arrow[r,Leftrightarrow] 	& X \text{ has a fibred (CEH)} \\
 \end{tikzcd}.\]
+and 
+\[\begin{tikzcd}
+G \text{ has (T)} \arrow[r,Rightarrow]\arrow[d,Leftrightarrow] & G \text{ has } (\tau)_{\mathcal N}\arrow[d,Leftrightarrow]\\
+X_{\mathcal N}(G) \text{ has geometric (T)}\arrow[r,Rightarrow] 	& X_{\mathcal N}(G)\text{ is an expander} \\
+\end{tikzcd}.\]
+It is still true in general that
+\[  X \text{ has } (T)_{geom}\Rightarrow X \text{ is an expander}\]
+even if it follows from the previous diagram of implications that a box space of an a-T-menable group with property $(\tau)_{\mathcal N}$ is an expander which does not have geometric (T). $SL(2,\Z)$ with the nested family of congruence subgroups $N_k : ker \ SL(2,\Z) \rightarrow SL(2,\Z / p^k )$ provide such an example.
 
-In general
-\[X \text{ is an expander} \Rightarrow X \text{ has } (T)_{geom}\]
 \begin{table}[h]
 \[\begin{array}{|c|c|c|}
 \hline
