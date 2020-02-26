@@ -847,6 +847,95 @@ If $X$ has $(T)_{geom}$, $X$ is an expander.
 \end{thm}
 
 Ref: Willet-Yu, Geometric property (T), Paterson, Inverse semigroups and their operator algebras, Dell'Aiera, Willet, Property T for groupoids.
+
+\section{Lecture 13}
+
+We call a bounded geometric space \textit{weakly monogenic} if there exists $E\in \mathcal E_X$ such that for every $E'\in \mathcal E_X$ there exists $n>0$ such that 
+\[E^n \backslash E'\]
+is finite. Such a $E$ is called \textit{weakly generating}.\\
+
+The crucial example is that of a coarse disjoint union of connected graphs, where we don't allow the distance to take infinite value. In particular, a box space of a finitely generated residually finite group is weakly monogenic.
+
+\begin{definition}
+Let $X$ be a weaky monogenic space. Then $X$ has property (T) if there exists a weakly generating $E \in \mathcal E_X$ and a constant $c>0$ such that, for every representation $\pi : \C_u [X]\rightarrow B(H)$ and every coinvariant vector $\xi \in H_\pi$, there exists $a\in \C_E[X]$ with $|a|_\infty\leq 1$ and 
+\[ \|a\cdot \xi - \phi(a)	\cdot \xi\| \geq \varepsilon \|\xi \|.\]
+\end{definition}
+
+Let $X=\coprod X_i$ be a coarse disjoint union of connected graph, with the path metric on each connected component. For $N>0$, define $X_{(N)} = \cup_{n=1,N} X_n$ and $E_N \in \mathcal E_X$ as
+\[E_N= X_{(N)}\times X_{(N)} \cup \Delta_1.\]
+The Laplacians $\Delta_N = \Delta^{(E_N)}$ satisfy the following:
+\begin{itemize}
+\item[$\bullet$] $\Delta_1$ is the direct sum of the graph Laplacians, $\Delta=\oplus \Delta_{X_n}$. It is the Laplacian associated to the coarse structure where the distance between the blocks is infinite, 
+\item[$\bullet$] $\Delta_N - \Delta \in \bigoplus_n \C_u[X_n]$ is finitely supported (inside the first $N$ boxes).
+\end{itemize} 
+
+\begin{prop}
+$X$ has geometric property (T) iff there exists $c>0$ such that
+\[\cap_N sp_{max}\Delta_N \subset \{0\}\cup (c , \infty). \]
+Not said in class: This is equivalent to 
+\[sp_{C(\partial X)\rtimes_{max} G(X)}\Delta \subset \{0\}\cup (c , \infty).\]
+\end{prop}
+
+The only point that is different from the previous lecture is the maximal spectrum.\\
+
+Every representation $\pi : \C_u[X]\rightarrow B(H)$ defines a $*$-norm on $\C_u[X]$ by 
+\[\|a\|_\pi = \|\pi(a)\| \quad \forall a\in \C_u[X]. \] 
+The $C^*$-algebra $C^*_\pi(X)$ is defined as the completion in the operator norm of $\pi(\C_u[X] )$ inside $B(H)$. A supremum of $*$-norm is a $*$-norm, so 
+\[\|a\|_{max} = \sup_{\pi } \| a \|_\pi\]
+is a $*$-norm (Not really. It works fine because $\|a\|_\pi \leq C(r) |a|_\infty, \forall a \in \C_r[X]$), where the supremum runs accross the family of all representations $\C_u[X]\rightarrow B(X)$. The \textit{maximal Roe algebra} $C^*_m(X)$ is the $C^*$-completion of $\C_u[X]$ with respect to $\|\cdot \|_{max}$.\\
+
+Here we allow $*$-norms to have a nullspace, and
+\[J_\pi = \{a\in C^*_{max}(X) \ : \|a\|_\pi = 0\}\]
+is an ideal of $C^*_m(X)$ such that 
+\[C^*_{m}(X)/J_\pi\cong C^*_\pi(X).\] 
+This fits into an exact sequence 
+\[ 0 \rightarrow J_\pi \rightarrow C^*_m(X) \rightarrow C^*_\pi(X)\rightarrow 0.\]
+
+Recall that if $A$ is a unital $C^*$-algebra and $a\in A$, its spectrum is the non-empty compact subset 
+\[\{\lambda \in \C \ : \ a-\lambda 1_A \text{ is not invertible}\}.\]
+The subset $sp_\pi(a)$ is the spectrum of $a$ inside $C^*_\pi(X)$ and $sp_{m}(a)$ si the spectrum of $a$ inside $C^*_m(X)$.
+
+\begin{prop}
+For every $a\in C^*_m(X)$,
+\[sp_m(a) = \cup_\pi sp_\pi(a).\]\end{prop}
+
+\begin{proof}
+In class.
+\end{proof}
+
+\begin{thm}[Willett-Yu]
+Let $G$ be a f.g. r.f. group and $X= X_{\mathcal N}(G)$ be a box space. Then $X$ has geometric property (T) iff $G$ has property (T).
+\end{thm}
+
+Here we are going to use the maximal crossed product by a group $G$. The only thing we need (for now), is that $A\rightarrow A\rtimes_m G$ is functorial with respect to $G$-equivariant u.c.p. maps, and preserves $*$-homomorphsims.
+
+\begin{proof}
+For any $n$,
+\[\phi_n(f) = \frac{1}{|G_n|}\sum_{x\in G_n} f(x)\]
+defines a $G$-invariant state on $l^\infty (X)$. Any cluster point at infinity (i.e. any $\lim_{\omega} \phi_n$ for $\omega \in \partial \beta \N$) defines a $G$-invariant state 
+\[\phi : l^\infty(X)/c_0(X)\rightarrow \C. \]
+Define $\iota: \C \rightarrow l^\infty(X)/c_0(X)  $ to be the inclusion of the unit: it is a $*$-homomorphism such that $\phi\circ \iota = id_\C$. Passing this relation to the functor $\cdot \rtimes_m G$, we get that 
+\[\iota_G : C^*_m(G)\rightarrow l^\infty(X)/c_0(X)\rtimes_m G \]
+is an injective $*$-morphism.\\
+
+If $J$ is the completion of $\bigoplus_n \C_u[X_n]$ inside $C^*_m(X)$, the $J$ is a closed ideal such that 
+\[C^*_m(X)/J \cong l^\infty(X)/c_0(X)\rtimes_m G .\] 
+
+As the spectrum does not depend on the ambient $C^*$-algebra, we get that 
+\[\begin{split}
+sp_{m} (\Delta_G) & = sp_{l^\infty(X)/c_0(X)\rtimes_m G} (\Delta_G) \\ 
+			& = sp_{C^*_m(X)/J} (\Delta) \\
+			& = \cap_N sp_{C^*_m(X)}(\Delta_N)\\
+\end{split}\]
+which ensures the result.
+\end{proof} 
+
+In particular, if $G$ has (T), then if has $(\tau)|{\mathcal N}$ so that $X_{\mathcal N}$ is an expander. In that case: geometric property (T) is stronger that being an expander, but is not equivalent. The inclusion remains true in the general case.
+
+\begin{thm}
+Let $X$ be a coarse disjoint union of finte connected graphs with uniformly bounded degree. Then if $X$ has geometric property (T), $X$ is an expander.
+\end{thm}
+
 \section{To do}
 
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
