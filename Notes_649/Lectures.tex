@@ -1141,16 +1141,15 @@ Use a software to get the first Cayley graphs of $PSL(2,\Z_p)$.\\
 
 Can two non isomorphic groups have isomorphic Cayley graphs? Yes, take two finite groups of same cardinality, and use the whole group minus the identity as a generating subset.\\
 
-Show Milnor Svarc lemma.\\
-
+\textbf{Milnor Svarc lemma} Show the following result, due to Milnor Svarc.  
 \begin{thm}
 Let $X$ be a proper geodesic metric space, and $G$ a group which acts on $X$ by isometries. If the action is proper and cocompact, then $G$ is finitely generated and the map
 \[G \rightarrow X ; g\mapsto g\cdot x\]
 is a quasi-isometry for any $x\in X$.
 \end{thm}
 
-Show that all metric spaces are embeddable into a Banach space. 
-\[x\mapsto d(x, *), X\rightarrow l^\infty (X)\]
+\textbf{Isometric embedding into $l^\infty$} Show that all metric spaces are embeddable into a Banach space. 
+\[x\mapsto d(x, *)-d(x_0, *), X\rightarrow l^\infty (X)\]
 
 \subsection{Kernels}
 
@@ -1163,7 +1162,7 @@ Let $f=\sum_n a_n z^n$ be an entire function with $a_n\leq 0$, and let $k: X\tim
 
 \textbf{Groups} \\
 
-Let $H<G$ be a subgroup. Show that $\phi(x)=\chi_H(g)= 1_{g\in H}$ defines a positive type function on $G$. Describe its GNS representation. (Hint: start with $H=1$)\\
+Let $H<G$ be a subgroup. Show that $\phi(g)=\chi_H(g)= 1_{g\in H}$ defines a positive type function on $G$. Describe its GNS representation. (Hint: start with $H=1$)\\
 
 Give examples of amenable and a-T-menable groups. Give examples of property (A) and (CEH) metric spaces.\\ 
 
@@ -1196,12 +1195,14 @@ This result shows that $l^1$ and $l^\infty$ are \text{universal}: any Banach spa
 \[Ad_{H}:\left\{\begin{array}{rcl} M_n(\C) & \rightarrow & M_n(\C) \\ a & \mapsto & [H,a] \end{array}\right.\]
 in terms of the spectrum of $H$. Solve the differential equation $a'(t) = [H,a(t)]$.\\
 
+\textbf{First isomorphism theorem} Let $\mathcal I $ be the pair groupoid on $\{0,1\}$. Show that for any groupoid $G$ and any $g\in G$, there exists a unique morphism $\phi: \mathcal I \rightarrow G $ such that $\phi((0,1))=g$. Show that the first isomorphism theorem fails for groupoids. 
+
 \subsection{$C^*$-algebras}
 
 \textbf{Commutation relation} Show that the canonical commutation relation \[ pq-qp = 1\]
 does not have a bounded representation. A way to refomulate that is: show that the unital $*$-algebra 
 \[ \C^*( p,q | pq-qp =1)\]
-does not have any $C^*$-completion.\\
+does not have any $C^*$-completion. Find a representation of $p$ and $q$ as operators on a Hilbert space, where one of them is allowed to be unbounded. \\
 
 \textbf{Classification of finite dimensional $C^*$-algebras} Let $A$ be a $C^*$-algebra, finite dimensional as a $\C$-vector space. Show there exist positive integers $n,k_1,...,k_n$ and a $*$-isomorphism
 \[A\cong \bigoplus_{i=1}^n M_{k_i}(\C).\]
