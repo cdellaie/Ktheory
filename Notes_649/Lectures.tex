@@ -999,7 +999,7 @@ where $q_k : \Gamma \rightarrow \Gamma_k$ is the quotient map.\\
 Problem: Show that a discrete groupoid admits a decomposition of the type 
 \[G \cong \coprod_{s\in \Omega} G_s \times (X_s \times X_s)\]
 
-\section{Lecture 14}
+\section{Lecture 15}
 
 If $G$ is a discrete groupoid, and $x\in G^0$, we denote by $G_x$ the group stabilizer of $x$, 
 \[G_x = \{g\in G \ : \ s(g)=r(g)=x\}\]
@@ -1042,10 +1042,98 @@ for $\phi\in S$ and $U\subset D(\phi)$ open subset.
 
 Next time: $G(S)$ is \'etale. What is $G(S)$ when $S$ is given by a group action? Also, this gives: the groupoid of an inverse semigroup, the coarse groupoid, the Weyl groupoid of a Cartan pair $(A,B)$.
 
+\section{Lecture 16}
+
+Reminder on representations of commutative $C^*$-algebras. A measurable field of Hilbert spaces $(\mu, \{H_x\}_{x\in X},\Gamma) $ is given by (Dixmier, A69) 
+\begin{itemize}
+\item[$\bullet$] $\mu$ is a Radon measure on $X$,
+\item[$\bullet$] for each $x\in X$, $H_x$ is a Hilbert space with inner-product $\langle \cdot , \cdot \rangle_x $,
+\item[$\bullet$] $\Gamma $ is a linear subspace of the Banach space $\prod_x H_x$ such that 
+\begin{enumerate}
+\item there exists a countable sequence $\xi_n \in \Gamma$ such that 
+\[\overline{span \{\xi_i(x)\}} = H_x \quad x\in X,\]
+\item for all $\xi \in \Gamma$, $x \mapsto \|\xi(x)\|_x$ is $\mu$-measurable,
+\item if $x\mapsto \langle \eta(x), \xi(x)\rangle_x$ is $\mu$-measurable for all $\xi \in \Gamma$, then $\eta\in \Gamma$. 
+\end{enumerate}
+\end{itemize}
+A measurable field give rise to an actual Hilbert space, the completion of the sections $\xi \in \Gamma$ such that 
+\[ \int_X \|\xi(x)\|^2 d\mu(x)<\infty\]
+with respect to the inner product 
+\[\langle \eta , \xi\rangle = \int_X \langle \eta(x), \xi(x)\rangle_xd\mu(x).\]
+This space is denoted by $L^2(X,\Gamma)$.	
+\begin{prop}
+For every $*$-homomorphism
+\[\phi : C_0(X) \rightarrow B(H)\]
+there exists a measurable field of Hilbert spaces $(\mu, \{H_x\}_{x\in X},\Gamma) $ over $X$ and a unitary isomorphism $U: H \rightarrow L^2(X,\Gamma)$ such that 
+\[\langle \xi ,\phi(f) \eta \rangle = \int_X f(x)\langle (U\xi )(x) ,(U\eta)(x) \rangle_x d\mu(x).\]
+\end{prop}
+
+We want to compare $*$-morphisms 
+\[\phi : C_c(G) \rightarrow B(H)\]
+to unitary representations of $G$, in the following sense.
+
+\begin{definition} Let $G$ be an \'etale groupoid. A unitary representation of $G$ is given by 
+\[ L=(\mu, \{H_x\},\Gamma, \{L(g)\}_{g\in G}) \]
+where:
+\begin{itemize}
+\item[$\bullet$] $\mu$ is a quasi-invariant Radon measure over $G^0$,
+\item[$\bullet$] $(\mu, \{H_x\}_{x\in G^0},\Gamma) $ is a measurable field of Hilbert spaces over $G^0$,
+\item[$\bullet$] $L(g) : H_{s(g)} \rightarrow H_{r(g)}$ are isometric isomorphisms such that
+\[L(gh)= L(g)L(h) \quad L(e_x)=id_{B(H_x)}\quad \forall (g,h)\in G^{(2)}, x\in G^0,\]
+and $g\mapsto \langle \xi_{r(g)} ,L(g) \eta_{s(g)} \rangle_{r(g)}$ is $\mu$-measurable.
+\end{itemize}
+\end{definition}
+
+Any such representation can be integrated, according to the formula
+\[\langle \xi ,\pi_L(f) \eta \rangle = \int_{G^0} \sum_{g\in G^x}f(g)\langle \xi_x ,L(g) \eta_{s(g)} \rangle_x D_g^{-\frac{1}{2}}d\mu(x),\]
+where $\xi,\eta \in L^2(G^0,\Gamma)=H_L$. We will abusely write
+\[\pi_L(f) =\int_{G^0} \sum_{g\in G^x}f(g)D_g^{-\frac{1}{2}}L(g)d\mu(x). \]
+
+To show that $\pi_L(f) \in B(H_L)$, one use the following lemma.
+
+\begin{lem}
+For any unitary representation of $G$, 
+\[\|\pi_L(f)\| \leq \|f\|_I \quad \forall f\in C_c(G).\]
+\end{lem}
+
+Here $\|f\|_I = \max (\|f\|_{I,r} , \|f\|_{I,s})$ where 
+\[\|f\|_{I,r} = \sup_{x\in G^0} \sum_{g\in G^x} |f(g)|\]
+and similarly for $\|f\|_{I,s}$. (Replace $G^x = r^{-1}(x)$ by $G_x$.)\\
+
+Problem: show that $\pi_L $ is a $*$-homomorphism.\\
+
+\begin{thm}[Renault]
+Let $G$ be an \'etale groupoid. For any $*$-homomorphism $\pi : C_c(G) \rightarrow B(H)$, there exists a unitary representation $L$ of $G$ and a isometric isomorphism $U: H \rightarrow H_L$ such that $\pi = U^*\pi_L U$. As a consequence, 
+\[\|\pi(f)\| \leq \|f\|_I \quad \forall f\in C_c(G).\]
+\end{thm}
+
+The proof of this theorem can be found in Jean Renault's thesis. It is long and difficult, we encourage the readers do check it by themselves	.\\
+
+The above theorem actually allows to define a lot of $C^*$-algebras for \'etale groupoids. Let $\mathcal F$ be a family of $*$-morphisms $C_c(G) \rightarrow B(H)$. Then 
+\[\|f\|_{\mathcal F} = \sup_{\pi \in \mathcal F} \|\pi(f)\| \quad \forall f\in C_c(G)\]
+is uniformly bounded by $\|f\|_I$, hence defines a $*$-norm on $C_c(G)$. Its completion w.r.t. $\|\cdot \|_{\mathcal F}$ is a $C^*$-algebra denoted by $C^*_{\mathcal F}(G)$.\\
+
+If $\|f\|_{\mathcal F_1} \leq \|f\|_{\mathcal F_2}$, the identity of $C_c(G)$ extends to a surjective $*$-homomorphism
+\[C^*_{\mathcal F_2}(G) \rightarrow C^*_{\mathcal F_1}(G).\]
+
+An interesting example of representations for $G$ is given by the regular one\textbf{s}. For each $x\in G^0$, define 
+\[\lambda(f)\xi = f\ast \xi \quad \forall f\in C_c(G), \xi \in l^2(G_x).\]
+
+We thus have at least two $C^*$-algebras associated to an \'etale groupoid:
+\begin{itemize}
+\item[$\bullet$] if $\mathcal F$ is the family of all $*$-representations of $C_c(G)$, the corresponding $C^*$-algebra is called the maximal $C^*$-algebra, denoted by $C^*_m(G)$;	
+\item[$\bullet$] if $\mathcal F=\{\lambda_x\}$ is the family of regular $*$-representations of $C_c(G)$, the corresponding $C^*$-algebra is called the reduced $C^*$-algebra, denoted by $C^*_r(G)$. Of course one gets a surjective $*$-morphism
+\[\lambda : C^*_m(G) \rightarrow C^*_r(G).\]
+\end{itemize}
+In the case of discrete groups, $C_r^*(G)\subset B(l^2 G)$. Here one has to use the theory of Hilbert modules to get 
+\[C_r^*(G)\subset \mathcal L_{C_0(G^0)}(L^2(G)).\]
+
+Ref: Renault's book(s) and Dixmier (Annex A69) for fields of Hilbert spaces.
+
 \section{To do}
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
 \[\phi: G\rightarrow H \iff (H,\pi,v) \text{ GNS triple}.\] 
-GNS construction $\phi(g) = \langle v,\pi(g)v\rangle$, i.e. $\phi(s^{-1}t) = \langle \pi(s)v,\pi(t)v\rangle$ which is positive. $\eta(g)= \|\pi(g)v -v\|$. \\
+GNS construction $\pi_L(g) = \langle v,\pi(g)v\rangle$, i.e. $\phi(s^{-1}t) = \langle \pi(s)v,\pi(t)v\rangle$ which is positive. $\eta(g)= \|\pi(g)v -v\|$. \\
 
 $G$ is a-T-menable (metrically proper action by affine isometries on a real Hilbert space) iff there exists a $G$-equivariant proper negative type function on $G$.\\
 
