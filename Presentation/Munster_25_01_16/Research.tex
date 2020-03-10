@@ -1153,6 +1153,73 @@ j_H \circ\mu_N^H(x) & = j_H([p_{N,X}]) \otimes j_H\circ j^H_N(X) \\
 %%%%%%%%%%%%%%
 \newpage
 
+\section{Higher assembly maps}
+
+In all this piece, $G$ is an \'etale groupoid, with base space $G^0$. The main goal is to prove a stability result of the Baum-Connes conjecture concerning extensions of groupoids. This generalizes previous results of the aurhor's advisor \cite{}. The new ingredient is the definition of an assembly map for every \textit{generalized morphism} of groupoids, which is natural. The restriction principle (refered as \text{Going-Down} in \cite{CEO)}) then gives a criteria to transfer the Baum-Connes conjecture from one groupoid to the other using nice morphisms. This technique gives a conceptual way of understanding several existing proofs (Baum-Connes for trees, extensions) while giving new results (non-proper actions by affine isometries on a Hilbert space).
+ 
+\subsection{Equivariant setting for $C^*$-algebras and Hilbert modules}
+Recall that a $G$-algebra $A$ is given by a 
+\begin{itemize}
+\item[$\bullet$] a $C^*$-algebra $A$, 
+\item[$\bullet$] a structure of $C_0(G^0)$-algebra on $A$, i.e. a non-degenerate $*$-morphism $\phi : C_0(G^0)\rightarrow Z(M(A)) $,
+\item[$\bullet$] an isomorphism $\alpha: s^* A \rightarrow r^* A$ of $C_0(G)$-algebras such that $\alpha_{gh} = \alpha_g \circ \alpha_h$ for every $(g,h)\in G^{(2)}$.
+\end{itemize} 
+
+Note that a $C(G^0)$-algebra $A$ defines a \textit{continuous field of $C^*$-algebra} $\mathcal A$ ( see \cite{}, Dixmier section ...), with fibres
+\[A_x = A/(\phi(I_x )A) \quad \forall x\in G^0,\]
+where $I_x= \{ f\in C_0(G^0) \ | \ f(x)=0\}$. Denote by $a_x$ the image of $a\in A$ under the quotient map $A\rightarrow A_x$. The $C_0(G^0)$-algebra $A$ is called continnous if 
+\[x \mapsto \|a_x\|_{A_x} \]
+is continuous for every $a\in A$. There is a correspondence between continuous $C_0(G^0)$-algebras and continuous fields. More precisely, one can rebuild $A$ from its $C^*$-algebra of sections
+\[A\cong C^*\{ s\in \Gamma_{\mathcal A} \ | \ x\mapsto \| s_x\| \in C_0(G^0)\}.\]  
+
+\subsection{Induced $G$-algebras and $G$-modules}
+
+Recall that LeGall defined in his thesis (\cite{LeGall}) induction for generalized morphisms of groupoids. A strict morphism betweem topological groupoids is a continuous functor. 
+
+\begin{definition}
+A \textit{generalised morphism}  from $H$ to $G$ is a triple
+\[(X,p,f)\]
+where:
+\begin{itemize}
+\item[$\bullet$] $X$ is a locally compact space,
+\item[$\bullet$] $p: X\rightarrow H^0$ is a continuous, open and surjective map, 
+\item[$\bullet$] a strict morphism $f: H_X \rightarrow G$.
+\end{itemize}
+\end{definition}
+
+For convenience, we denote by $X$ the generalized morphism $(X,p,f)$. If $A$ is a $H$-algebra, recall that $Ind_X (A)$ (\cite{Bonicke}\cite{DellBonicke}) is identified with the $C_0$-sections of 
+\[s\in \Gamma_b(X,p^*\mathcal A) \text{ s.t. } \alpha_g(s(x))= f(xg^{-1})  \text{ and } xG\rightarrow \|s(x)\| \in C_0(X/G) \]
+If the right $G$-action is proper, $B=Ind_X(A)$ is a $C_0(X/G)$-algebra, with fibers
+\[ B_{xG}  = \left( Ind_X(A) \right)_{xG} \cong A_{p(x)} \quad \forall x\in X.\]
+The action of $H$ is given by $\beta s^* B \rightarrow r^* B$
+\[\beta_h (s(x)) = s(h^{-1}x) \forall (x, h )\in X\times_{r,q} H.\]
+
+\begin{lem}
+If $A$ is a proper $G$-algebra and $X$ is proper, then $Ind_X(A)$ is a proper $H$-algebra.
+\end{lem}
+
+\begin{proof}
+Let $Z$ be a proper right-$G$-space, then 
+\[Ind_X(C_0(Z)) \cong C_0(\tilde Z)\] 
+with $\tilde Z$ being the quotient pull-back \[\tilde Z = X\times_{G^0} Z/G\] 
+where the $G$-action is $g\cdot (x,z) = (xg^{-1},gz)$.\\
+
+I have  a problem with the definitions: with the usual definitions of generalized morphisms, for each $(h,x)\in H\times_{H^0} X$, there exists a unique $\gamma(h,x)\in G^{p(x)}$ such that
+\[h\cdot x = x \cdot \gamma(h,x).\]
+Then if the action of $G$ on $Z$ is proper and the map $X\rightarrow H^0$ is proper, so is the induced space.
+\end{proof}
+
+For convenience, $Ind_X(A) = A_X$. Note: if $G$ is a group, and $X$ is the inclusion of the point, then $Ind_X$ is the crossed product functor. The induction map induces a natural transformation
+\[j_X : KK^G(A,B) \rightarrow KK^H(A_X,B_X)\]
+which preserves properness and $G$-compactness, so we get a map
+\[j_X : RK^G(\underline EG , A)\rightarrow RK^H(\underline H, A_X).\]
+
+\begin{lem}
+\[j_X\circ j_Y  = j_{X\circ Y}\]
+\end{lem}
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+\newpage
 \section{Topics class in Analysis}
 
 \subsection*{Title: Large scale geometry and operator algebras}
