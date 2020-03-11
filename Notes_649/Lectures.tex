@@ -1042,7 +1042,9 @@ for $\phi\in S$ and $U\subset D(\phi)$ open subset.
 
 Next time: $G(S)$ is \'etale. What is $G(S)$ when $S$ is given by a group action? Also, this gives: the groupoid of an inverse semigroup, the coarse groupoid, the Weyl groupoid of a Cartan pair $(A,B)$.
 
+%%%%%%%%%%%%%%%%%
 \section{Lecture 16}
+%%%%%%%%%%%%%%%%%
 
 Reminder on representations of commutative $C^*$-algebras. A measurable field of Hilbert spaces $(\mu, \{H_x\}_{x\in X},\Gamma) $ is given by (Dixmier, A69) 
 \begin{itemize}
@@ -1129,6 +1131,52 @@ In the case of discrete groups, $C_r^*(G)\subset B(l^2 G)$. Here one has to use 
 \[C_r^*(G)\subset \mathcal L_{C_0(G^0)}(L^2(G)).\]
 
 Ref: Renault's book(s) and Dixmier (Annex A69) for fields of Hilbert spaces.
+
+%%%%%%%%%%%%%%%%%
+\section{Lecture 17}
+%%%%%%%%%%%%%%%%%
+
+A $C^*$-algebra $A$ is said to have a groupoid model if there exists a topological groupoid $G$ and a family of $*$-representations $\mathcal F$ of $C_c(G)$ such that
+\[A\cong C^*_{\mathcal F}(G).\]
+
+Example of groupoid models:
+\begin{itemize}
+\item[$\bullet$] the Toeplitz algebra,
+\[\mathcal T = C^*\langle v  \ | \ v^*v = 1 \rangle .\]
+\item[$\bullet$] the Cuntz algebras 
+\[\mathcal O_d = C^*\langle s_1 , ... , s_d  \ | \ s_i^*s_i= 1 , \sum_i s_i s_i^* =1  \rangle .\]
+\item[$\bullet$] AF-algebras,
+\item[$\bullet$] Roe algebras.
+\end{itemize}
+
+Renault gave, following Kumijan, a characterization of groupoid $C^*$-algebras. The goal of the lectures to come is to explain the construction, which gives a complete equivalence between Cartan pairs and twist of essentially principal \'etale groupoids.\\
+
+If $B\subset A$ is a sub-$C^*$-algebra, then its normalizer is
+\[N_A(B) = \{ n \in A \ | \ nBn^* \ \& \ n^*Bn \subset B\}.\]
+It is stable by multiplication and adjoint, but not by addition. It is thus an involutive semigroup. \\
+
+Problem: Show that $N_f(B) = \{n \in N_A(B)\ | \ n^2 = 0\}$, with multiplication and adjoint, is an inverse semigroup.\\
+
+Remarks: if $A$ is unital and $1\in B$, then $n^*n$ and $nn^*$ are elements of $B$. This conclusion still holds if $B$ contains an approximate unit for $A$: 
+\[\exists u_i\in B , \forall a\in A, \lim_i\|au_i -a \| =\lim_i\|u_ia-a \| =0 .\]
+If $B$ is abelian, this will allow us, identifying $B$ with $C_0(X)$ for $X=\hat B$, to write $(n^*n)(x)$ or $(nn^*)(x)$ for $n\in N_A(B), x\in X$. Define then the following open subset of $X$:
+\[D(n)=\{x \in X \ | \ (n^*n)(x) > 0\}.\]
+
+\begin{lem}[Kumijan, 1986]
+Let $A$ be a separable $C^*$-algebra, and $B$ a commutative $C^*$-subalgebra that contains an approximate unit for $A$. Then, for every normalizer $n\in N_A(B)$, there exists a unique homeomorphism 
+\[\alpha_n :  D(n) \rightarrow D(n^*)\]
+such that \[(n^*fn)(x) = f(\alpha_n(x))\cdot (n^*n)(x) \quad \forall x \in D(n),\forall f\in B. \] 
+Moreover,\[\alpha_f = id_{D(f)}\quad \forall f\in B \quad \alpha_{nm} = \alpha_n \circ \alpha_m \quad\forall n,m \in N_A(B)\]
+in the sense of partial homeomorphism. 
+\end{lem}
+
+\begin{proof} In class. \end{proof}
+
+This lemma says that $S_A(B) =\{\alpha_n\}_{n\in N_A(B)}$ is a pseudogroup over $X=\hat B$. 
+
+\begin{definition}
+The \textit{Weyl groupoid} $G_A(B)$ of the inclusion $B\subset A$ is the groupoid of germs of the pseudogroup $S_A(B)$. 
+\end{definition}
 
 \section{To do}
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
@@ -1283,7 +1331,11 @@ This result shows that $l^1$ and $l^\infty$ are \text{universal}: any Banach spa
 \[Ad_{H}:\left\{\begin{array}{rcl} M_n(\C) & \rightarrow & M_n(\C) \\ a & \mapsto & [H,a] \end{array}\right.\]
 in terms of the spectrum of $H$. Solve the differential equation $a'(t) = [H,a(t)]$.\\
 
-\textbf{First isomorphism theorem} Let $\mathcal I $ be the pair groupoid on $\{0,1\}$. Show that for any groupoid $G$ and any $g\in G$, there exists a unique morphism $\phi: \mathcal I \rightarrow G $ such that $\phi((0,1))=g$. Show that the first isomorphism theorem fails for groupoids. 
+\textbf{First isomorphism theorem} Let $\mathcal I $ be the pair groupoid on $\{0,1\}$. Show that for any groupoid $G$ and any $g\in G$, there exists a unique morphism $\phi: \mathcal I \rightarrow G $ such that $\phi((0,1))=g$. Show that the first isomorphism theorem fails for groupoids. \\
+
+Show that $N_f(B) = \{n \in N_A(B)\ | \ n^2 = 0\}$, with multiplication and adjoint, is an inverse semigroup.\\
+
+Find groupoid models for the Topelitz and the Cuntz algebras. (Renault's note contains the answer)\\
 
 \subsection{$C^*$-algebras}
 
