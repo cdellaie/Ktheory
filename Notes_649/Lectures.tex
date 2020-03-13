@@ -1172,12 +1172,108 @@ in the sense of partial homeomorphism.
 
 \begin{proof} In class. \end{proof}
 
-This lemma says that $S_A(B) =\{\alpha_n\}_{n\in N_A(B)}$ is a pseudogroup over $X=\hat B$. 
+This lemma says that $S_A(B) =\{\alpha_n\}_{n\in N_A(B)}$ is a pseudogroup over $X=\hat B$, and that $n \mapsto \alpha_n$ defines a morphism
+\[\underline \alpha : N_A(B) \rightarrow S_A(B)\]
+of involutive semigroups.
 
 \begin{definition}
 The \textit{Weyl groupoid} $G_A(B)$ of the inclusion $B\subset A$ is the groupoid of germs of the pseudogroup $S_A(B)$. 
 \end{definition}
 
+
+%%%%%%%%%%%%%%%%%
+\section{Lecture 18}
+%%%%%%%%%%%%%%%%%
+
+Another construction: I thought about this to construct a semigroup acting on the spectrum of an abelian sub-$C^*$-algebra. We will have to check the details.\\
+
+Let $A$ be a separable $C^*$-algebra, with a faithful representation into $B(H)$, with $H$ a separable Hilbert space, containing an abelian $C^*$-subalgebra
+\[B \cong C_0(X) \subset A \subset B(H)\]
+with an approximate unit for $A$.\\
+
+Let 
+\[\begin{split}
+\mathcal P_A(B) & = N_A(B)\cap Pisom(H) \\
+		& = \{ v \in N_A(B) \ : \ v^*v \ \& \ vv^* \text{ are s.a. projections} \}.\\
+\end{split}\]
+Then, for such a $v$, denote the source and range projections by
+\[p = v^*v , \quad q= vv^*. \]
+Then the map $x \mapsto v^*xv$ determines an $*$-isomorphism $ad_v : B(qH)\rightarrow B(pH)$. \\
+
+For a self-adjoint projection $p\in B(H)$, let us denote by $I_p$ the $C^*$-subalgebra $B\cap B(pH)$. Then $I_p$ is a double-sided closed ideal in $B$, it thus corresponds to an open subset $U_p$ in $X$ via the Gelfand transform, i.e. $I_p\cong C_0(U_p)$. Intersection of $ad_v$ with $B$ gives a partial homeomorphism
+\[\alpha_v : U_p \rightarrow U_q\]
+such that $\alpha : \mathcal P \rightarrow Phomeo(X)$ is an inverse semigroup homomorphism.\\
+
+
+\begin{prop}[Renault] 
+If $B$ is a commutative $C^*$-algebra of $A$ containing an approximate unit for $A$, then 
+\[ker \ \underline \alpha  = B \iff B \text{ is MASA in } C^*(N_A(B)). \] 
+\end{prop}
+
+\begin{proof}
+We will show that 
+\[ker \ \underline \alpha  = N\cap B'.\]
+Indeed,
+\begin{itemize}
+\item[$\bullet$] If $n\in N\cap B'$, then $n^*f n = f (n^*n)$. Uniqueness of $\alpha_n$ ensures that $\alpha_n = id_{D(n)}$. 
+\item[$\bullet$] If $n\in N $ is in $ker \underline \alpha$, then 
+\[(n^*f n)(x) = f(x) (n^*n)(x) \quad \forall x\in D(n).\]
+Since for positive $f$, $0 \leq n^*f n \leq  |f| (n^*n)$, this inequality actually extends to the whole of $X$ so that $n^*f n = f (n^*n)$. But then
+\[\begin{split}
+( nf-fn )^* (nf-fn) & = f^* (n^*n ) f + n^* f^*f n - (n^*f^* n)f - f^* (n^*f n)   \\
+			& = 2 (n^*n)|f|^2 - 2 (n^*n) |f|^2 \\
+			& = 0 \\
+\end{split}\]
+so that $n\in B'$.
+\end{itemize}
+\end{proof}
+
+We will now spend some time on the inclusion $C_0(G^0)\subset C^*_r(G)$ for an \'etale groupoid $G$. First we need a classical lemma, whose proof can be found in Renault's notes.
+
+\begin{lem}
+If $G$ is \'etale, the inclusion $C_c(G)\rightarrow C_0(G)$ extends to a norm-decreasing linear map
+\[j : C^*_r(G)\rightarrow C_0(G).\]
+\end{lem}
+
+\begin{proof}
+In class.\end{proof}
+
+We denote by $S_G$ the inverse semigroup of open bisections. Recall that $G$ is called
+\begin{itemize}
+\item[$\bullet$] \textit{principal} if $G_x^x = \{e_x\}$ for every $x\in G^0$. 
+\item[$\bullet$] \textit{essentially principal} if 
+\[ \{x \in G^0 \ : \ G_x^x = \{e_x\} \}\] 
+is dense in $G^0$.
+\end{itemize}
+
+In these case, we can identify the normalizer of $C_0(G^0)$.
+
+\begin{prop}[Renault]
+If $G$ is essentially principal, then 
+\[N = \{a\in C^*_r (G) \ : \ supp \ j(a) \in S_G\}.\]
+\end{prop}
+
+\begin{proof}
+We will do the proof for the principal case, letting the reader extend the result to essentially principal. \\
+
+One has to look very closely at the following formula, for $a\in C_c(G),f\in C_0(G^0), x\in G^0$,
+\[\begin{split}
+(a^*fa) (x) & = \sum_{u\in G_x , v\in G^x_{r(u)}} \overline a(v^{-1}) f(r(u)) a(u) \\
+		& = \sum_{u\in G_x} | a(u)|^2 f(r(u))\\
+\end{split}\]
+The second line follows from the fact that, since $G$ is principal and $uv \ \& \ vu\in G_x^x$, $u$ and $v$ must be inverse of each other.\\
+
+Then, the formula ensures that 
+\begin{itemize}
+\item[$\bullet$] if $U = supp(a)\in S_G$, the sum only has at most one non zero term 
+\[(a^*fa) (x) = | a(s_{|U}^{-1})|^2 f(r(s_{|U}^{-1}(x))) = (a^*a)(x) f(\alpha_U(x)) ,\] 
+so $a\in N$ with $D(a)=U$ and $\alpha_a = \alpha_U$; 
+\item[$\bullet$] if $a\in N$, then
+\[f(\alpha_a(x)) = \sum_{u\in G_x} \frac{| a(u)|^2}{(a^*a)(x)} f(r(u))\]
+and the left hand side is a pure state $\delta_{\alpha_a(x)}$ that the right hand side expresses as a convex combination of pure states: only one coefficient is nonzero, and $a$ is supported in a bisection.	
+\end{itemize}
+\end{proof}
+  
 \section{To do}
 Positive type and conditionally negative type functions on groups: the $G$-equivariance gives a unitary (or orthogonal representation), i.e.
 \[\phi: G\rightarrow H \iff (H,\pi,v) \text{ GNS triple}.\] 
