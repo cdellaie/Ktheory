@@ -1,0 +1,131 @@
+\section{The Baum-Connes conjecture}
+
+This section offers a presentation of the different versions of the Baum-Connes conjecture. The author does not pretend to justify, prove the statements or be exhaustive. The goal is to provide some context for the papers that are suggested in the reading list. \\
+
+The Baum-Connes conjecture offers a way to hypothetically compute $K$-theory groups associated to $C^*$-algebras coming from groups, groupoids and metric spaces. It first appeared in \cite{BaumConnes} and was formulated in \cite{BaumConnesHigson}. There exist different kind of assembly maps:
+\begin{itemize}
+\item[$\bullet$] if $G$ is a discrete group (or an \'etale groupoid), and $A$ a $G$-algebra, then the assembly map is
+\[\mu_{G,A}: RK^G(\underline E G , A) \rightarrow K(A\rtimes_r G)\]
+and the Baum-Connes conjecture with coefficients in $A$ is the statement, denoted by $BC(G,A)$, that $\mu_{G,A}$ is an isomorphism,
+\item[$\bullet$] if $X$ is a discrete metric space with bounded geometry and $A$ a $C^*$-algebra, then the coarse assembly map is
+\[\mu_{X,A}: KX(X , A) \rightarrow K(C^*(X,A))\]
+and the coarse Baum-Connes conjecture with coefficients in $A$ is the statement, denoted by $BC(X,A)$, that $\mu_{X,A}$ is an isomorphism.
+\end{itemize}
+When the coefficients are omitted, they are implicitely chosen to be the complex numbers, and the conjecture \textit{with coefficients} means that the Baum-Connes assembly map is an isomorphism for every coefficient algebra. Be aware that $C^*(X)$ is the \textit{Roe algebra} of X, not the uniform Roe algebra. It sits in $B(l^2(X) \otimes l^2(\mathbb N))$. \\
+
+The conjecture with coefficients is known for instance in the following cases:
+\begin{itemize}
+\item[$\bullet$] a-T-menable groups \cite{HigsonKasparov} and a-T-menable groupoids \cite{Tu},
+\item[$\bullet$] hyperbolic groups \cite{LafforgueHyperbolic},
+\item[$\bullet$] CEH spaces \cite{Yu2}.
+\end{itemize} 
+In \cite{HLS}, surjectivity is shown to fail for the coarse Baum-Connes assembly map of an expander. (Other counterexamples for the conjecture with coefficients and for groupoids are built. The original conjecture is still open.)\\
+
+The different papers of Finn-Sell (\cite{FinnSell}, \cite{FinnSellFibred}) give an answer to as how far this last example fails. In order to understand this, we have to talk about the \textit{coarse groupoid}.\\
+
+The coarse groupoid is an \textit{ample} groupoid, i.e. \'etale with a Stonean base space, associated to any discrete bounded geometry metric space. Its two main features are that its approximation properties reflect the metric properties of the space, as shown in the following table
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\rowcolor[HTML]{DAE8FC} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{DAE8FC}\textbf{X}} & \multicolumn{1}{|c|}{\cellcolor[HTML]{DAE8FC}\textbf{G(X)}} \\ \hline
+FAD                                                      & FAD                                                        \\
+(T)\_\{geom\}                                            & (T)                                                        \\
+(A)                                                      & amenable                                                   \\
+(CEH)                                                    & a-T-menable              \\
+\hline                                 
+\end{tabular}
+\caption{Corresponding properties are equivalent}
+\end{table}
+and we have a natural $*$-isomorphism
+\[C^*(X,A) \cong l^\infty_A \rtimes_r G(X)\]
+where $l^\infty_A = l^\infty(X,A\otimes \mathfrak K)$.
+This isomorphism actually already happens at the level of $K$-homology and is intertwined by the assembly maps, i.e. there is a commutative diagramm
+\[\begin{tikzcd}
+KX(X,A) \arrow{r}{\mu_{X,A}} \arrow{d}{\cong}& K(C^*(X,A)) \arrow{d}{\cong}\\
+RK^{G(X)}(\underline E G(X) , l^\infty_A) \arrow{r}{\mu_{G(X),l^\infty_A}}  & K(l^\infty_A \rtimes_r G(X)) \\
+\end{tikzcd}\]
+with vertical isomorphisms. \\
+
+The base space of $G(X)$ is the Stone-\v{C}ech compactification $\beta X$ of $X$ (it can be realized as the spectrum of $l^\infty(X)$). It contains $X$ as a dense open subset and its complement $\partial \beta X$ is called the \textit{boundary at infinity} or just the boundary,
+\[\beta X = X \cup \partial \beta X.\]
+The \textit{boundary coarse groupoid} is defined by Finn-Sell to be 
+\[G(X)_{|\partial \beta X} = \{g \in G(X) \ : \ s(g) \& r(g) \in \partial \beta X\}.\]
+If one sets $c_0^A$ to be the ideal $c_0(X,A\otimes \mathfrak K )< l^\infty_A$ and
+\[A_\partial  : =l^\infty_A / c_0^A,\]
+Finn-Sell defines the boundary coarse Baum-Connes conjecture, $BC_\infty(X,A)$ to be the isomorphism of 
+\[\mu_{G(X)_{|\partial \beta X,A_\partial}}  : RK^{G(X)_{| \partial \beta X}}(\underline E G(X)_{\partial \beta X} , A_{\partial})\rightarrow  K(A_\partial \rtimes_r G(X)_{|\partial \beta X} ) .\]
+
+\begin{thm}[Finn-Sell \cite{FinnSellFibred}]
+If $X$ admits a fibred coarse embedding, then the boundary groupoid $G(X)_{|\partial \beta X}$ is a-T-menable. In particular, $BC_\infty(X,A)$ holds.
+\end{thm}
+
+Recall that if $G$ is a finitely generated residually finite group with respect to a decreasing nested family of finite index subgroups $\mathcal N$, and if $X=X_{\mathcal N}{G}$ is the associated bo space, we saw that
+\begin{itemize}
+\item[$\bullet$] $X$ has a fibred CEH iff $G$ is a-T-menable,
+\item[$\bullet$] $X$ is an expander iff $G$ has $(\tau)_{\mathcal N}$.
+\end{itemize}
+In particular, if one chooses a box space of an a-T-menable r.f. group, such as $G=SL(2,\Z)$ and $N_k = ker \ SL(2,\Z ) \rightarrow SL(2,\Z /p^k \Z)$ for $p$ a prime, then the boundary coarse Baum-Connes conjecture holds for the box space but its coarse assembly map is not surjective. \\
+
+A point worth mentionning is that the decomposition $\beta X = X \cup \partial \beta X$ is $G(X)$-invariant, so that the coarse groupoid is decomposed into two parts that satisfies the Baum-Connes conjecture in the case of a fibred coarse embedding ($G(X)_{|X} \cong X\times X$ is a proper groupoid so always satisfies the Baum-Connes conjecture). This can be explained as a failure of $K$-exactness.\\
+
+Indeed, 
+\[ 0 \rightarrow  c_0^A \rightarrow l^\infty_A \rightarrow A_\partial \rightarrow 0\]
+is a $G(X)$-equivariant exact sequence of $G(X)$-algebras. Equivariant $K$-homology being functorial, we get 
+\[\begin{tikzcd} 
+RK^{G(X)}(\underline E G(X) , c_0^A)  \arrow{r}\arrow{d}{\cong} &  RK^{G(X)}(\underline E G(X) , l^\infty_A) \arrow{r}\arrow{d}{\cong} & RK^{G(X)}(\underline E G(X) , A_\partial ) \arrow{d}{=}\\
+ RK^{X\times X}(pt , c_0^A) \arrow{r}& KX(X,A) \arrow{r} &  RK^{G(X)}(\underline E G(X) , A_\partial ) \\
+\end{tikzcd}.\]
+On the right hand side, we have a failure of exactness due to the existence of a Kazdhan like projection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
