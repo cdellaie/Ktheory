@@ -778,11 +778,19 @@ The other question is to show properly that some dynamical condition implies tha
 
 A motivating example.\\
 
-Let $\Gamma = SL(2, \Z)$ acting on the hyperbolic plane with all rational points added at infinity, $\mathbb H \cup \mathbb Q$. The stabilizer of any of the infinite points is $\Lambda \cong \Z$. If $X$ denotes the Cayley graph of $\Gamma$, with a new vertex added for each of these rational points $q$, and an edge connecting $q$ to any element in $\Gamma_q$, then $X$ is quasi-isometric to the subspace of the boundary points, which is the Farey graph, qi to a tree. We thus can use Oyono-Oyono's theorem to conclude that $\Gamma$ acts on a tree with amenable stabilizers, hence satisfies the Baum-Connes conjecture.\\
+Let $\Gamma = SL(2, \Z)$ acting on the hyperbolic plane with all rational points added at infinity, $\mathbb H \cup \mathbb Q$. The stabilizer of any of the infinite points is $\Lambda \cong \Z$. (The stabilizer of $\infty$ is the horizontal subgroup, and they are all conjugate.) If $X$ denotes the Cayley graph of $\Gamma$, with a new vertex added for each of these rational points $q$, and an edge connecting $q$ to any element in $\Gamma_q$, then $X$ is quasi-isometric to the subspace of the boundary points, which is the Farey graph, qi to a tree. We thus can use Oyono-Oyono's theorem to conclude that $\Gamma$ acts on a tree with amenable stabilizers, hence satisfies the Baum-Connes conjecture.\\
 
 The question is to see how far we can push that technique, here deducing the conjecture for $SL(2,\Z)$ from $\Z$. One can also look at $\Z^2$ acting on $\Z$ by translation by the first component.\\
 
-Let $\Gamma$ acting on a real Hilbert space $H$ by affine isometries. There are two ways for the action to fail to be proper: having huge stabilizers, or having a bad orbit. We will focus on the first case. Suppose that every orbit $X_v= \Gamma \cdot v$ is proper and that the family $\{X_v\}_v$ uniformly coarsely embeds into a Hilbert space. Can we deduce the Baum-Connes conjecture for $\Gamma$? 
+Let $\Gamma$ acting on a real Hilbert space $H$ by affine isometries. There are two ways for the action to fail to be proper: having huge stabilizers, or having a bad orbit. We will focus on the first case. Suppose that every orbit $X_v= \Gamma \cdot v$ is proper and that the family $\{X_v\}_v$ uniformly coarsely embeds into a Hilbert space. Can we deduce the Baum-Connes conjecture for $\Gamma$? \\
+
+Other examples:
+\begin{itemize}
+\item[$\bullet$] Let $\Lambda < G$ be finitely generated, relatively hyperbolic. Choose a generating set $B$ for $\Lambda$ and $S=B\cup R$ for $G$. The letters stand for \textit{blue} and \textit{red}. The Cayley graph of $G= \coprod g\Lambda$ can be seen as containing copies of $Cay(\Lambda, B)$, connected by red vertices. The relative hyperbolicity is, if I remember correctly, equivalent to the hyperbolicity of the graph obtained from this one by connecting each copy of the Cayley graph of $\Lambda$ to a point at infinity (the \textit{coning point}). This vertex has stabilizer $g\Lambda g^{-1}$. This is a non locally finite space that is called the \textit{coning} of the Cayley graph of $G$.
+\item[$\bullet$] let $\Lambda $ be the upper triangular matrices in $G=SL(2,\Z)$. Then if $X$ is the associated coning, the stabilizers are isomorphic to $\Z$. That's the example of the introduction.
+\item[$\bullet$] Let $M$ be the complement of the figure eight knot (more generally any hyperbolic manifold with one total cusp), and $G=\pi_1(M)$. The stabilizer is $\Z\oplus \Z$.
+\item[$\bullet$] Graph of pants of a complexity-2 surface. For hyperbolic 3-manifolds, the Teichm\"{u}ller space with the Weil-Petersson metric is quasi-isometric to the pants graph of $\Sigma$ (usually not hyperbolic as it will contain a copy of the Euclidean plane, but relatively hyperbolic?).
+\end{itemize}
 
 \subsection{Breakdown of the argument of Herv\'e for extensions: Erik's take}
 
