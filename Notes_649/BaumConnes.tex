@@ -79,8 +79,57 @@ RK^{G(X)}(\underline E G(X) , c_0^A)  \arrow{r}\arrow{d}{\cong} &  RK^{G(X)}(\un
 \end{tikzcd}.\]
 On the right hand side, we have a failure of exactness due to the existence of a Kazdhan like projection.
 
+\section{The left hand side}
+
+The domain of the assembly map is often said to be a classical object from algebraic topology.\\
+
+Intro to $KK$. A bit of history. $KK_1$ and extensions, and BDF. Talk about the extension associated to $(H,\pi,T)$.\\
+
+How to introduce KK? Use some $C^*$-algebra theory.
+\begin{itemize}
+\item[$\bullet$] extension semigroup. Fundamental results, ChoiEffros, Stinespring, Voiculescu following Kasparov. Examples: Topelitz, Pseudodiff and symbol, cones and suspensions, inverse of toeplit, etc.
+\item[$\bullet$] for even cycles, maybe follow HigsonRoe, $D^*(\pi) = \{ T\in B(H) \ : \ [T,a]\in \mathfrak K\}$, then a projection $p\in D^*(\pi)$ determines a Toeplitz extension by $\sigma_p(a)=\pi(pa)$.
+\end{itemize}
 
 
+\subsection{Equivariant $K$-homology}
+
+If $X$ is a proper $G$-space, $RK_*^G(X,A)$ is defined to be the inductive limit
+\[ \varinjlim_{Z} KK^G(C_0(Z),A)\]
+where $Z\subset X$ runs accross all $G$-compact $G$-proper subspaces of $X$.
+
+\subsection{The classifying space for proper actions}
+
+This is a universal spaces for proper $G$-spaces, in the sense that for any $G$-proper space $X$, there is a $G$-equivariant continuous map $X\rightarrow \underline EG$, unique up to homotopy. This means that there is a unique map 
+\[RK^G(X,A) \rightarrow RK^G(\underline EG,A).\]
+
+For discrete groups, we have a universal model for $\underline EG$ given by the Rips complex. Let $P_d(G)$ be the space of finitely supported probability measures on $G$, whose support has diameters bounded by $d$, endowed with the weak-$*$ topology. \\
+
+Problem: show that the action of $G$ by translation is proper and $G$-compact.\\
+
+Then $\varinjlim_d P_d(G)= \cup_d P_d(G)$ is a model for $G$.\\
+
+Indeed, let $c: X \rightarrow [0,1]$ be a cuttoff function, then 
+\[x \mapsto \sum_g c(g\cdot x)\delta_g\]
+provides the $G$-map $X\rightarrow \cup_d P_d(G)$. (Check this)\\
+
+Even if it gives a nice description of $RK^G(\underline EG,A)$ (any element is an element of some $KK^G(C_0(P_d(G)),A)$ for some $d$), this model is not nice enough for actual computations. Usually, one need a nice model for $\underline EG$ such as a finite $CW$-complex or a manifold. Here are some examples.
+
+\begin{itemize}
+\item[$\bullet$] if $G$ is torsion free, any proper action is free. In that case, $\underline EG$ coincides with the familiar $EG$, the universal cover of the classifying space $BG$. For instance, $\underline E \Z = E\Z \cong \R \rightarrow B\Z = \mathbb S^1$. In that case, 
+\[RK^G(\underline E G,A)\cong KK(C(BG),A),\]
+and if $A=\C$, we get that $K^{top}(G)\cong K^*(BG)$.\\
+
+\item[$\bullet$] if $G$ is a connected semisimple Lie group, and $K$ is a maximal compact subgroup, then the homogeneous space $G/K$ provides a model for $\underline E\Gamma$, for any cocompact subgroup $\Gamma <G$. For instance, if $\Gamma=PSL(2,\Z)< G =PSL(2,\R)$, $K$ can be taken to be $SO(2)$, and $\underline E\Gamma$ is realized by the hyperbolic plane.
+
+\item[$\bullet$] if a discrete group $G$ acts properly on a tree $X$, then its geometric realization $|X|$ is a model for $\underline EG$.
+\end{itemize}
+
+\section{Crossed products}
+
+Maybe that section has its natural place in a chapter on tensor products. Link with semidirect products of groups.
+
+Start the chapter with the general problem of computing $K$-theory groups of $C^*$-algebras. For crossed products: Pimsner Voiculescu. States the diferrent results including that for trees.
 
 
 
