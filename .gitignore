@@ -23,3 +23,6 @@ Admin/Analytic_CV/CVanalytic.aux
 Admin/Analytic_CV/CVanalytic.aux
 Admin/Analytic_CV/CVanalytic.blg
 Admin/CV/Resume.aux
+*.aux
+*.blg
+*.out

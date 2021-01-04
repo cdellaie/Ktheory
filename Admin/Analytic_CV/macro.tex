@@ -1,0 +1,140 @@
+%\usepackage[frenchb,british]{babel}
+\usepackage{verbatim}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathabx}
+%\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage[all]{xy}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{hyperref}
+
+\hypersetup{                    % parametrage des hyperliens
+    colorlinks=true,                % colorise les liens
+    breaklinks=true,                % permet les retours ?� la ligne pour les liens trop longs
+    urlcolor= blue,                 % couleur des hyperliens
+   linkcolor= blue,                % couleur des liens internes aux documents (index, figures, tableaux, equations,...)
+    citecolor= blue               % couleur des liens vers les references bibliographiques
+    }
+
+%Commandes
+
+%\theoremstyle{definition}
+
+\theoremstyle{plain}
+%\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition-theorem}[theorem]{Definition / Theorem}
+
+% without a number
+
+\newtheorem*{conjecture*}{Conjecture}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{corollary*}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{convention}[theorem]{Convention}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Hil}{\mathcal H}
+\newcommand{\Mn}{\mathcal M _n (\mathbb C)}
+%\newcommand{\K}{\mathbb K}
+\newcommand{\B}{\mathbb B}
+\newcommand{\Cat}{\mathbb B / \mathbb K}
+\newcommand{\G}{\mathcal G }
+
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\h}{\mathcal{H}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\Nc}{\mathcal{N}}
+\newcommand{\M}{\mathcal{M}}
+
+\newcommand{\Manoa}{M\=anoa}
+\newcommand{\Hawaii}{Hawai\kern.05em`\kern.05em\relax i}
+
+
+%\newtheorem{thm}[theorem]{Theorem}
+  \newtheorem{kor}[theorem]{Corollary}
+  \newtheorem{thmx}{Theorem}
+   \renewcommand{\thethmx}{\Alph{thmx}}
+  \newtheorem{corx}[thmx]{Corollary}
+  \newtheorem{prop}[theorem]{Proposition}
+  \newtheorem{quest}[theorem]{Question}
+ % \newtheorem{conjecture}[theorem]{Vermutung}
+  \theoremstyle{definition}
+ \newtheorem{defi}[theorem]{Definition}
+  \newtheorem{rem}[theorem]{Remark}
+  \newenvironment{beweis}%
+    {\begin{proof}[Beweis]}
+    {\end{proof}}
+  \newtheorem{ex}[theorem]{Example}
+    \newtheorem{exs}[theorem]{Examples}
+
+
+
+\newcommand{\norm}[1]{\lVert#1\rVert}   %Norm{} befehl
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\KK}{\mathrm{KK}}
+\newcommand{\RKK}{\mathcal{R}\mathrm{KK}}
+\newcommand{\Tor}{\mathrm{Tor}}
+\newcommand{\dad}{\mathrm{dad}}
+\newcommand{\asdim}{\mathrm{asdim}}
+\newcommand{\K}{\mathrm K}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\TT}{\mathbb T}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\lk}{\langle}
+\newcommand{\rk}{\rangle}
+\newcommand{\id}{\text{id}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\str}{{s\!\!\!}\times_{\!r}}
+
+\newcommand{\Gmod}{G\textrm{-}\mathbf{mod}}
+
+\setcounter{MaxMatrixCols}{19}
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows}
+\usepackage{hyperref}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

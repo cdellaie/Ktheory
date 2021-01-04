@@ -13,6 +13,9 @@
 %\theoremstyle{definition}
 \newtheorem{theorem}{Th\'eor\`eme}
 \newtheorem{thm}{Th\'eor\`eme}   
+
+\input{macro}
+
 \setlength\parindent{0pt}
 
 \pagestyle{empty}             
@@ -327,14 +330,79 @@ Dans mes travaux, j'utilise ces techniques pour \'etudier principalement des esp
 
 Les trois principales questions concernant la $K$-th\'eorie des $C^*$-alg\'ebres auxquelles je m'int\'eresse sont la conjecture de Baum-Connes, la formule de K\"unneth et la formule de coefficients universels. Nous pr\'esentons maintenant les travaux publi\'es. \`A noter: en cas de convocation, le candidat pr\'esentera au choix soit ses travaux sur la propri\'et\'e T, soit ceux sur la formule de K\"unneth.
 
+\subsection{Dynamic asymptotic dimension and Matui's HK conjecture}
+
+En préparation, disponible sur demande. Avec Christian B\"onicke, Jamie Gabe et Rufus Willett.\\
+
+Dans \cite{Guentner:2014aa}, Guentner, Willett et Yu ont introduit une notion de \textit{dimension asymptotique dynamique} qui généralise la dimension asymptotique de Gromov. Elle s'applique aux actions de groupes discrets par homéomorphismes sur des espaces localement compacts, et plus généralement aux groupoïdes localement compact et étales. 
+
+Cet article explore les implications de la dimension asymptotique dynamique sur l'homologie des groupoïdes et la $K$-théorie des $C^*$-algèbres de groupoïdes. 
+
+La théorie de l'homologie pour les groupoïdes définie par Crainic et Moerdijk \cite{Crainic2000} a générée un intérêt croissant depuis les travaux de Matui \cite{Matui2012}. Notre résultat principal est que tout groupoïde $\sigma$-compact, principal et ample $G$ de dimension asymptotique dynamique $dad(G)$ finie est de dimension homologique finie.
+\begin{thmx}
+$$ d=dad(G)<\infty \implies \forall n>d, H_n(G)=0$$
+et $H_d(G)$ est un groupe libre.
+\end{thmx}
+
+La preuve de ce résultat repose sur une description des groupes d'homologie en termes d'espaces simpliciaux munis d'une action de $G$. Cela permet de décrire ces groupes au moyen du foncteur Tor classique, situation naturelle analogue au cas des groupes. 
+
+\begin{thmx}
+Pour tout groupoïde ample $G$ tel que $G^0$ soit $\sigma$-compact, il existe un isomorphisme canonique 
+$$ H_*(G)\cong \text{Tor}_*^{\Z[G]}(\Z[G^0],\Z[G^0]).$$
+\end{thmx}
+
+Le premier résultat a des conséquences importantes pour la conjecture suivante, formulée par Matui dans \cite{Matui2016}.
+
+\begin{conjecture*}[HK]
+	Soit $G$ un groupoïde minimal essentiellement principal et ample. Alors
+	$$K_i(C_r^*(G))\cong \bigoplus_{n\geq 0}H_{2n+i}(G),\quad i=0,1$$
+\end{conjecture*}
+
+Bien que l'on doive un contre-exemple à Scarparo \cite{Scarparo2020} dans le cas où les groupes d'isotropie contiennent de la torsion, la conjecture a été confirmée dans le cas principal sans même la restriction de minimalité \cite{Farsi2019,Matui2016,Ortega2020,Yi20}. Grâce à une suite spectrale récemment contruite par Proietti et Yamashita \cite{Proietti2020}, nous confirmons la conjecture HK pour une large classe de groupoïdes de petite dimension.
+
+\begin{corx}
+	Soit $G$ un groupoïde principal, $\sigma$-compact, ample, de dimension asymptotique dynamique au plus $2$. Alors $G$ satisfait la conjecture HK, i.e.
+	$$K_0(C_r^*(G))\cong H_0(G)\oplus H_2(G),\quad K_1(C_r^*(G))\cong H_1(G).$$
+\end{corx}
+
+Dans la cas de la dimension $1$, ce résultat permet de classifier complètement les $C^*$-algèbres réduites de groupoïdes qui le satisfont. En effet, pour un groupoïde ample et principal, la dimension nucléaire de la $C^*$-algèbre réduite est bornée par la dimension asymptotique dynamique (\cite{Guentner:2014aa}), $C^*_r(G)$ est donc classifiable par l'invariant d'Elliot.   
+
+\begin{corx}
+	Soit $G$ un groupoïde principal, $\sigma$-compact, ample, de dimension asymptotique dynamique au plus $2$. Alors 
+	$$\mathrm{Ell}(C_r^*(G))=(H_0(G),H_0(G)^+,[1_{G^{(0)}}],H_1(G),M(G),p).$$
+\end{corx}
+
+Comme application, nous étudions des exemples en géométrie \textit{coarse}. Grâce au groupoïde coarse de \cite{SkTuYu}, nous obtenons un résultat qui n'apparaît pas dans la littérature (sauf pour le degré $0$, traité dans \cite{Ara2020}).
+
+\begin{thmx}\label{Thm:D}
+	Soit $X$ un espace métrique à géométrie bornée et $G(X)$ son groupoïde coarse. Il exist un isomorphisme canonique	
+    $$H_*(G(X))\cong H_*^{\mathrm{uf}}(X)$$
+	où le terme de droite est l'homologie uniformément finie de $X$, suivant Block and Weinberger \cite{Block1992}.
+\end{thmx}
+
+Comme la dimension asymptotique de $X$ au sens de Gromov coïncide avec $dad(G(X))$, une combinaison des résultats précédents donnent les corrolaires suivants, purement géométriques. 
+
+\begin{corx}
+	Soit $X$ un espace métrique à géométrie bornée. 
+	\begin{enumerate}
+		\item Si $\mathrm{asdim}(X)\leq 2$, alors
+		$$K_0(C_u^*(X))\cong H_0^{\mathrm{uf}}(X)\oplus H_2^{\mathrm{uf}}(X)\quad K_1(C_u^*(X))\cong H_1^{\mathrm{uf}}(X).$$
+		\item Si $\mathrm{asdim}(X)\leq 3$ et $X$ est non-moyennable, alors
+		$$K_0(C_u^*(X))\cong H_2^{\mathrm{uf}}(X)\quad K_1(C_u^*(X))\cong H_1^{\mathrm{uf}}(X)\oplus H_3^{\mathrm{uf}}(X).$$
+	\end{enumerate}
+\end{corx}
+
+
 \subsubsection*{Topological property T for groupoids} 
-Avec Rufus Willett. Preprint sur arxiv, novembre 2018. Soumis pour publication.\\
+Avec Rufus Willett. Soumis pour publication.\\
 
 La propri\'et\'e T est une condition sur les repr\'esentations unitaires d'un groupe. Elle a \'et\'e d\'efinie par Kazdhan \cite{kazhdan1967connection} en 1967 afin de prouver que certains r\'eseaux de certains groupes de Lie sont finiement engendr\'es. De fa\c{c}on inattendue, elle se r\'ev\'ela \^etre tr\`es fructueuse en th\'eorie des repr\'esentations et en alg\`ebres d'op\'erateurs. Citons par exemple la premi\`ere preuve non probabiliste par Margulis de l'existence de graphes expanseurs. L'aspect qui nous int\'eresse ici est que, si $\Gamma$ a la propri\'et\'e T, il existe un projecteur $p$ dans $C^*_r(\Gamma)$ (la projection de Kazdhan) dont les propri\'et\'es sont tr\'es exotiques. Il est la raison pour laquelle la propri\'et\'e T est rest\'ee pendant longtemps une obstruction \`a la conjecture de Baum-Connes (jusqu'aux travaux de Vincent Lafforgue \cite{lafforgue2002k} qui prouve la dite conjecture pour certains groupes ayant T). Partant de ce constat, Willett et Yu d\'efinissent dans \cite{WillettYu} un \textit{propri\'et\'e T g\'eom\'etrique} pour les espaces m\'etriques afin d'\'etudier ses liens avec la conjecture de Baum-Connes et les propri\'et\'es d'approximation.\\
 
 Le point de d\'epart de ce travail est le constat qu'\`a un espace m\'etrique $X$ peut \^etre associ\'e un groupo\"ide topologique $G(X)$, \'etale \`a base totalement discontinue, telle que les $C^*_u(X)$ et $C_r^*(G(X))$ soit naturellement isomorphes, et qui entrelacent les applications d'assemblages associ\'ees. Nous avons alors d\'efini une \textit{propri\'et\'e T topologique} pour les groupo\"ides topologiques. L'on montre bien entendu que cela g\'en\'eralise le cas des groupes et des espaces m\'etriques. L'article s'attaque ensuite \`a appliquer cette propri\'et\'e T dynamique \`a d'autres situations: il est par exemple prouv\'e qu'un groupe finiement engendr\'e r\'esiduellement fini a la propri\'et\'e $\tau$ (une condition pour fabriquer des graphes expanseurs) ssi un certain groupo\"ide a la propri\'et\'e T. La derni\`ere partie donne une condition sur un groupo\"ide ayant la propri\'et\'e T qui assure que sa $C^*$-alg\`ebre est non-exacte en $K$-th\'eorie. Cela est une propri\'et\'e tr\`es forte, qui a des applications pour la conjecture de Baum-Connes, \'etudi\'ees \`a la fin du papier. 
 
-\subsubsection*{Going-Down functors and the Künneth-formula for crossed products by ample groupoids} Avec Christian Bönicke. Preprint sur arxiv, octobre 2018. Soumis pour publication.\\
+\subsubsection*{Going-Down functors and the Künneth-formula for crossed products by ample groupoids}
+
+Transactions of the American Mathematical Society 372, no. 11 (2019): 8159-8194, avec Christian Bönicke.\\
 
 En topologie alg\'ebrique commutative, la formule de K\"unneth donne une mani\`ere de calculer la cohomologie d'un produit $H^*(X\times Y)$ en utilisant $H^*(X)$ et $H^*(Y)$. En passant au non-commutatif, la formule de K\"unneth \'etudie le calcul de $K_*(A \otimes B)$ en fonction de $K_*(A)$ et $K_*(B)$ ($\otimes$ est ici le produit tensoriel spatial). Plus pr\'ecisement, on dit que $A$ satisfait la formule de K\"unneth si une certaine application $\alpha_{A,B}: K(A)\otimes K(B) \rightarrow K(A\otimes B)$ est un isomorphisme pour toute $C^*$-alg\`ebre $B$ dont les groupes de $K$-th\'eorie sont libres ab\'eliens. Cette formule est v\'erifi\'ee pour une classe de $C^*$-alg\`ebres appel\'ees \textit{bootstrap} \cite{rosenberg1987kunneth}, et aussi pour les $C^*$-alg\'ebres de groupes moyennables (et m\^eme a-T-moyennables) \cite{BaumConnesHigson}\cite{TuThese}. \\
 
@@ -380,7 +448,7 @@ Je me consacre aussi \`a d'autres s\'eminaires. J'ai notamment donn\'e des expos
 Voici quelques th\`emes de recherche que je souhaiterais \'etudier dans les ann\'ees qui suivent. Je suis bien s\^ur ouvert \`a d'autres sujets si de futurs coll\`egues ou collaborateurs ont des suggestions.\\
 
 \begin{itemize} 
-\item[$\bullet$] Inspir\'es par la notion de \textit{dimension asymptotique} (Gromov, \cite{gromov1993asymptotic}) en th\'eorie g\'eom\'etrique des groupes, Guentner,  Willett et Yu d\'efinissent \cite{GWY} une dimension asymptotique dynamique, utile pour les actions topologiques de groupes et les espaces m\'etriques par exemple. Cette notion a d\'ej\`a \'et\'e appliqu\'ee en th\'eorie des $C^*$-alg\`ebres \cite{deeley2018nuclear} et en topologie des vari\'et\'es \cite{bartels2019farrell}. La d\'efinition est donn\'ee de mani\`ere g\'en\'erale pour tout groupo\"ide \'etale, et peut \^etre relax\'ee en \textit{complexit\'e finie}: en simplifiant, les groupo\"ides dont l'adh\'erence est compacte sont ``de complexit\'e nulle"; et un groupo\"ide est dit de complexit\'e finie si il peut \^etre localement d\'ecoup\'e en deux parties, et ce un nombre fini de fois, qui sont elles m\^emes de complexit\'e nulle. Dans le cas des actions de groupes (associ\'ees \`a un certain type de groupo\"ides), la conjecture de Baum-Connes a \'et\'e d\'emontr\'ee par Guentner, Willet et Yu \cite{GWY2}.\\
+\item[$\bullet$] Inspir\'es par la notion de \textit{dimension asymptotique} (Gromov, \cite{gromov1993asymptotic}) en th\'eorie g\'eom\'etrique des groupes, Guentner,  Willett et Yu d\'efinissent \cite{Guentner:2014aa} une dimension asymptotique dynamique, utile pour les actions topologiques de groupes et les espaces m\'etriques par exemple. Cette notion a d\'ej\`a \'et\'e appliqu\'ee en th\'eorie des $C^*$-alg\`ebres \cite{deeley2018nuclear} et en topologie des vari\'et\'es \cite{bartels2019farrell}. La d\'efinition est donn\'ee de mani\`ere g\'en\'erale pour tout groupo\"ide \'etale, et peut \^etre relax\'ee en \textit{complexit\'e finie}: en simplifiant, les groupo\"ides dont l'adh\'erence est compacte sont ``de complexit\'e nulle"; et un groupo\"ide est dit de complexit\'e finie si il peut \^etre localement d\'ecoup\'e en deux parties, et ce un nombre fini de fois, qui sont elles m\^emes de complexit\'e nulle. Dans le cas des actions de groupes (associ\'ees \`a un certain type de groupo\"ides), la conjecture de Baum-Connes a \'et\'e d\'emontr\'ee par Guentner, Willet et Yu \cite{GWY2}.\\
 
 \textbf{Projet:} D\'emontrer la conjecture de Baum-Connes pour les groupo\"ides \'etales de \textit{dimension asymptotique finie} (plus g\'en\'eralement de \textit{complexit\'e finie}).\\
 
@@ -390,7 +458,7 @@ La strat\'egie est ici claire pour la preuve: la classe de complexit\'e nulle sa
 
 \item[$\bullet$] Les \textit{conjectures de Matui} concernent la comparaison entre l'homologie et la $K$-th\'eorie de certains groupo\"ides topologiques \cite{matui2016topological}. Plus pr\'ecis\'ement, la conjecture HK pr\'evoit que si $G$ est un groupo\"ide \'etale essentiellement principal, minimal, dont l'espace des unit\'es est un Cantor, alors
 \[\bigoplus_{k\geq 0} H_{2k+i}(G) \cong K_i(C^*_r(G))\quad \forall i\in \{0,1\}.\]
-Dans le cas d'actions de groupe topologiques, ces hypoth\`eses correspondent \`a des actions par hom\'eomorphismes de groupes discrets sur des espaces de Cantor. Un r\'ecent contre-exemple \cite{scarparo2018homology} fait appara\^itre l'importance de l'isotropie comme obstruction. \\
+Dans le cas d'actions de groupe topologiques, ces hypoth\`eses correspondent \`a des actions par hom\'eomorphismes de groupes discrets sur des espaces de Cantor. Un r\'ecent contre-exemple \cite{Scarparo2020} fait appara\^itre l'importance de l'isotropie comme obstruction. \\
 
 \textbf{Projet:} \'Etudier la conjecture dans le cas des groupo\"ides associ\'es \`a des espaces m\'etriques. \\
 
